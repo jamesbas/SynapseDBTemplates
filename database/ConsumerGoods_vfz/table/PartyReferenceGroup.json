@@ -1,0 +1,177 @@
+{
+	"name": "PartyReferenceGroup",
+	"properties": {
+		"Name": "PartyReferenceGroup",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "PartyId",
+					"Description": "The unique identifier of a Party.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyReferenceGroup.cdm.json/PartyReferenceGroup",
+						"Name": "PartyId"
+					}
+				},
+				{
+					"Name": "ReferenceGroupId",
+					"Description": "The unique identifier of a Reference Group.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyReferenceGroup.cdm.json/PartyReferenceGroup",
+						"Name": "ReferenceGroupId"
+					}
+				},
+				{
+					"Name": "PeriodStartDate",
+					"Description": "The period start date for which the associated data is effective or 'as-of'.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyReferenceGroup.cdm.json/PartyReferenceGroup",
+						"Name": "PeriodStartDate"
+					}
+				},
+				{
+					"Name": "PeriodEndDate",
+					"Description": "The period end date for which the associated data is effective or 'as-of'.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyReferenceGroup.cdm.json/PartyReferenceGroup",
+						"Name": "PeriodEndDate"
+					}
+				},
+				{
+					"Name": "PartyReferenceGroupNote",
+					"Description": "A note, comment or additional information regarding the Party / Reference Group relationship.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyReferenceGroup.cdm.json/PartyReferenceGroup",
+						"Name": "PartyReferenceGroupNote"
+					}
+				}
+			],
+			"ColumnSetEntityName": "93a07e2a-4447-4627-a971-fc1c1e8fc57c",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/PartyReferenceGroup",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/PartyReferenceGroup",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"PartyId\":{\"entity\":\"PartyReferenceGroup.cdm.json/PartyReferenceGroup\",\"name\":\"PartyId\"},\"ReferenceGroupId\":{\"entity\":\"PartyReferenceGroup.cdm.json/PartyReferenceGroup\",\"name\":\"ReferenceGroupId\"},\"PeriodStartDate\":{\"entity\":\"PartyReferenceGroup.cdm.json/PartyReferenceGroup\",\"name\":\"PeriodStartDate\"},\"PeriodEndDate\":{\"entity\":\"PartyReferenceGroup.cdm.json/PartyReferenceGroup\",\"name\":\"PeriodEndDate\"},\"PartyReferenceGroupNote\":{\"entity\":\"PartyReferenceGroup.cdm.json/PartyReferenceGroup\",\"name\":\"PartyReferenceGroupNote\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"PartyReferenceGroup\",\"path\":\"PartyReferenceGroup.cdm.json/PartyReferenceGroup\"},\"description\":\"The Individual Reference Group characteristics defined for the associated period.\",\"primaryKey\":[\"PartyId\",\"ReferenceGroupId\",\"PeriodStartDate\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyReferenceGroup.cdm.json/PartyReferenceGroup\",\"name\":\"PartyId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a Party.\",\"isNullable\":false,\"name\":\"PartyId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyReferenceGroup.cdm.json/PartyReferenceGroup\",\"name\":\"ReferenceGroupId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Reference Group.\",\"isNullable\":false,\"name\":\"ReferenceGroupId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyReferenceGroup.cdm.json/PartyReferenceGroup\",\"name\":\"PeriodStartDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The period start date for which the associated data is effective or 'as-of'.\",\"isNullable\":false,\"name\":\"PeriodStartDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyReferenceGroup.cdm.json/PartyReferenceGroup\",\"name\":\"PeriodEndDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The period end date for which the associated data is effective or 'as-of'.\",\"isNullable\":true,\"name\":\"PeriodEndDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyReferenceGroup.cdm.json/PartyReferenceGroup\",\"name\":\"PartyReferenceGroupNote\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"A note, comment or additional information regarding the Party / Reference Group relationship.\",\"isNullable\":true,\"name\":\"PartyReferenceGroupNote\"}]}}}",
+			"Description": "The Individual Reference Group characteristics defined for the associated period.",
+			"DisplayFolderInfo": "{\"name\":\"Party\",\"colorCode\":\"#7D0F6C\"}",
+			"PrimaryKeys": "PartyId,ReferenceGroupId,PeriodStartDate",
+			"spark.sql.sources.provider": "csv",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"PartyId\",\"type\":\"long\",\"nullable\":false,\"metadata\":{}},{\"name\":\"ReferenceGroupId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PeriodStartDate\",\"type\":\"date\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PeriodEndDate\",\"type\":\"date\",\"nullable\":true,\"metadata\":{}},{\"name\":\"PartyReferenceGroupNote\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "9cd36220-88b1-4b02-955d-c8b8e3497b40",
+		"Description": "The Individual Reference Group characteristics defined for the associated period."
+	},
+	"type": "TABLE"
+}

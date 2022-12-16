@@ -1,0 +1,196 @@
+{
+	"name": "CustomerLegalActionContract",
+	"properties": {
+		"Name": "CustomerLegalActionContract",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "CustomerId",
+					"Description": "The unique identifier of a Customer.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "CustomerLegalActionContract.cdm.json/CustomerLegalActionContract",
+						"Name": "CustomerId"
+					}
+				},
+				{
+					"Name": "LegalActionId",
+					"Description": "The unique identifier of a Legal Action.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "CustomerLegalActionContract.cdm.json/CustomerLegalActionContract",
+						"Name": "LegalActionId"
+					}
+				},
+				{
+					"Name": "ContractId",
+					"Description": "The unique identifier of a Contract.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "CustomerLegalActionContract.cdm.json/CustomerLegalActionContract",
+						"Name": "ContractId"
+					}
+				},
+				{
+					"Name": "PeriodStartDate",
+					"Description": "The period start date associated with the customer legal action.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "CustomerLegalActionContract.cdm.json/CustomerLegalActionContract",
+						"Name": "PeriodStartDate"
+					}
+				},
+				{
+					"Name": "PeriodEndDate",
+					"Description": "The period end date associated with the customer legal action contract.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "CustomerLegalActionContract.cdm.json/CustomerLegalActionContract",
+						"Name": "PeriodEndDate"
+					}
+				},
+				{
+					"Name": "CustomerLegalActionContractNote",
+					"Description": "A note, comment or additional information regarding the customer legal action contract.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "CustomerLegalActionContract.cdm.json/CustomerLegalActionContract",
+						"Name": "CustomerLegalActionContractNote"
+					}
+				}
+			],
+			"ColumnSetEntityName": "9deca90d-c244-450a-9591-3c5550533147",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/CustomerLegalActionContract",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/CustomerLegalActionContract",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"CustomerId\":{\"entity\":\"CustomerLegalActionContract.cdm.json/CustomerLegalActionContract\",\"name\":\"CustomerId\"},\"LegalActionId\":{\"entity\":\"CustomerLegalActionContract.cdm.json/CustomerLegalActionContract\",\"name\":\"LegalActionId\"},\"ContractId\":{\"entity\":\"CustomerLegalActionContract.cdm.json/CustomerLegalActionContract\",\"name\":\"ContractId\"},\"PeriodStartDate\":{\"entity\":\"CustomerLegalActionContract.cdm.json/CustomerLegalActionContract\",\"name\":\"PeriodStartDate\"},\"PeriodEndDate\":{\"entity\":\"CustomerLegalActionContract.cdm.json/CustomerLegalActionContract\",\"name\":\"PeriodEndDate\"},\"CustomerLegalActionContractNote\":{\"entity\":\"CustomerLegalActionContract.cdm.json/CustomerLegalActionContract\",\"name\":\"CustomerLegalActionContractNote\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"CustomerLegalActionContract\",\"path\":\"CustomerLegalActionContract.cdm.json/CustomerLegalActionContract\"},\"description\":\"The contract(s) associated with a customer legal action.\",\"primaryKey\":[\"CustomerId\",\"LegalActionId\",\"ContractId\",\"PeriodStartDate\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"CustomerLegalActionContract.cdm.json/CustomerLegalActionContract\",\"name\":\"CustomerId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a Customer.\",\"isNullable\":false,\"name\":\"CustomerId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"CustomerLegalActionContract.cdm.json/CustomerLegalActionContract\",\"name\":\"LegalActionId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Legal Action.\",\"isNullable\":false,\"name\":\"LegalActionId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"CustomerLegalActionContract.cdm.json/CustomerLegalActionContract\",\"name\":\"ContractId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Contract.\",\"isNullable\":false,\"name\":\"ContractId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"CustomerLegalActionContract.cdm.json/CustomerLegalActionContract\",\"name\":\"PeriodStartDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The period start date associated with the customer legal action.\",\"isNullable\":false,\"name\":\"PeriodStartDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"CustomerLegalActionContract.cdm.json/CustomerLegalActionContract\",\"name\":\"PeriodEndDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The period end date associated with the customer legal action contract.\",\"isNullable\":true,\"name\":\"PeriodEndDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"CustomerLegalActionContract.cdm.json/CustomerLegalActionContract\",\"name\":\"CustomerLegalActionContractNote\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"A note, comment or additional information regarding the customer legal action contract.\",\"isNullable\":true,\"name\":\"CustomerLegalActionContractNote\"}]}}}",
+			"Description": "The contract(s) associated with a customer legal action.",
+			"DisplayFolderInfo": "{\"name\":\"Customer\",\"colorCode\":\"#022F22\"}",
+			"PrimaryKeys": "CustomerId,LegalActionId,ContractId,PeriodStartDate",
+			"spark.sql.sources.provider": "csv",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"CustomerId\",\"type\":\"long\",\"nullable\":false,\"metadata\":{}},{\"name\":\"LegalActionId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"ContractId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PeriodStartDate\",\"type\":\"date\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PeriodEndDate\",\"type\":\"date\",\"nullable\":true,\"metadata\":{}},{\"name\":\"CustomerLegalActionContractNote\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "4749d263-1047-4752-9ea3-0bdf7238b367",
+		"Description": "The contract(s) associated with a customer legal action."
+	},
+	"type": "TABLE"
+}

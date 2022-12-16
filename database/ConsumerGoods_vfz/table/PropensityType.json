@@ -1,0 +1,137 @@
+{
+	"name": "PropensityType",
+	"properties": {
+		"Name": "PropensityType",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "PropensityTypeId",
+					"Description": "The unique identifier of a Propensity Type.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PropensityType.cdm.json/PropensityType",
+						"Name": "PropensityTypeId"
+					}
+				},
+				{
+					"Name": "PropensityTypeName",
+					"Description": "The name of a Propensity Type.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 256,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PropensityType.cdm.json/PropensityType",
+						"Name": "PropensityTypeName"
+					}
+				},
+				{
+					"Name": "PropensityTypeDescription",
+					"Description": "The description of a Propensity Type.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PropensityType.cdm.json/PropensityType",
+						"Name": "PropensityTypeDescription"
+					}
+				}
+			],
+			"ColumnSetEntityName": "526b1c69-196b-4319-9777-7f6a7bcae896",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/PropensityType",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/PropensityType",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"PropensityTypeId\":{\"entity\":\"PropensityType.cdm.json/PropensityType\",\"name\":\"PropensityTypeId\"},\"PropensityTypeName\":{\"entity\":\"PropensityType.cdm.json/PropensityType\",\"name\":\"PropensityTypeName\"},\"PropensityTypeDescription\":{\"entity\":\"PropensityType.cdm.json/PropensityType\",\"name\":\"PropensityTypeDescription\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"PropensityType\",\"path\":\"PropensityType.cdm.json/PropensityType\"},\"description\":\"The type of the propensity or the likelihood to do something. \\n\\nEx:\\n- Purchase A Specific Product Type\\n- Pay\\n- Default\\n- Commit Fraud\\n- Comment\\n- Purchase\\n- Participate in Program\\n- Acquire New Technology\",\"primaryKey\":[\"PropensityTypeId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PropensityType.cdm.json/PropensityType\",\"name\":\"PropensityTypeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Propensity Type.\",\"isNullable\":false,\"name\":\"PropensityTypeId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PropensityType.cdm.json/PropensityType\",\"name\":\"PropensityTypeName\"},\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"The name of a Propensity Type.\",\"isNullable\":true,\"name\":\"PropensityTypeName\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PropensityType.cdm.json/PropensityType\",\"name\":\"PropensityTypeDescription\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"The description of a Propensity Type.\",\"isNullable\":true,\"name\":\"PropensityTypeDescription\"}]}}}",
+			"Description": "The type of the propensity or the likelihood to do something. \n\nEx:\n- Purchase A Specific Product Type\n- Pay\n- Default\n- Commit Fraud\n- Comment\n- Purchase\n- Participate in Program\n- Acquire New Technology",
+			"DisplayFolderInfo": "{\"name\":\"Party\",\"colorCode\":\"#7D0F6C\"}",
+			"PrimaryKeys": "PropensityTypeId",
+			"spark.sql.sources.provider": "csv",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"PropensityTypeId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PropensityTypeName\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"PropensityTypeDescription\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "9aa3d01d-431a-4f07-bcda-8fd8b87025f7",
+		"Description": "The type of the propensity or the likelihood to do something. \n\nEx:\n- Purchase A Specific Product Type\n- Pay\n- Default\n- Commit Fraud\n- Comment\n- Purchase\n- Participate in Program\n- Acquire New Technology"
+	},
+	"type": "TABLE"
+}

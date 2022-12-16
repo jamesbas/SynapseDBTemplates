@@ -1,0 +1,29 @@
+{
+	"name": "relationship-ainmsvdlzw",
+	"properties": {
+		"Name": "relationship-ainmsvdlzw",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "AssetType",
+		"ToTableName": "Asset",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "AssetTypeId",
+				"ToColumnName": "AssetTypeId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"AssetType.cdm.json/AssetType\",\"toEntity\":\"Asset.cdm.json/Asset\",\"joinPairs\":[{\"fromAttribute\":\"AssetTypeId\",\"toAttribute\":\"AssetTypeId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "67b472f7-6337-4b63-9dd8-b7002e57b5fe"
+	},
+	"type": "RELATIONSHIP"
+}

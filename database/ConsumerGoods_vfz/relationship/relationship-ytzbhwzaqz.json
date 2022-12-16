@@ -1,0 +1,29 @@
+{
+	"name": "relationship-ytzbhwzaqz",
+	"properties": {
+		"Name": "relationship-ytzbhwzaqz",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "PsychographicCriteriaType",
+		"ToTableName": "PsychographicCriteria",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "PsychographicCriteriaTypeId",
+				"ToColumnName": "PsychographicCriteriaTypeId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"PsychographicCriteriaType.cdm.json/PsychographicCriteriaType\",\"toEntity\":\"PsychographicCriteria.cdm.json/PsychographicCriteria\",\"joinPairs\":[{\"fromAttribute\":\"PsychographicCriteriaTypeId\",\"toAttribute\":\"PsychographicCriteriaTypeId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "7069faa6-228c-4293-a283-0b688c167d3e"
+	},
+	"type": "RELATIONSHIP"
+}

@@ -1,0 +1,29 @@
+{
+	"name": "relationship-ebgektlgip",
+	"properties": {
+		"Name": "relationship-ebgektlgip",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "Contract",
+		"ToTableName": "ConfidentialityAgreement",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "ContractId",
+				"ToColumnName": "ContractId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"Contract.cdm.json/Contract\",\"toEntity\":\"ConfidentialityAgreement.cdm.json/ConfidentialityAgreement\",\"joinPairs\":[{\"fromAttribute\":\"ContractId\",\"toAttribute\":\"ContractId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "f5448f9f-7460-4078-90ae-65aff11b2a4d"
+	},
+	"type": "RELATIONSHIP"
+}

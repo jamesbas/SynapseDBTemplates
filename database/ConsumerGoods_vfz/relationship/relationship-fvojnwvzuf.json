@@ -1,0 +1,29 @@
+{
+	"name": "relationship-fvojnwvzuf",
+	"properties": {
+		"Name": "relationship-fvojnwvzuf",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "Contract",
+		"ToTableName": "SecurityAgreement",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "ContractId",
+				"ToColumnName": "ContractId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"Contract.cdm.json/Contract\",\"toEntity\":\"SecurityAgreement.cdm.json/SecurityAgreement\",\"joinPairs\":[{\"fromAttribute\":\"ContractId\",\"toAttribute\":\"ContractId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "0956057f-c111-4c95-aed2-517a0e3cbbc0"
+	},
+	"type": "RELATIONSHIP"
+}

@@ -1,0 +1,156 @@
+{
+	"name": "AnzsicClass",
+	"properties": {
+		"Name": "AnzsicClass",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "AnzsicClassCode",
+					"Description": "The unique identifier of an ANZSIC Class.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 4,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "AnzsicClass.cdm.json/AnzsicClass",
+						"Name": "AnzsicClassCode"
+					}
+				},
+				{
+					"Name": "AnzsicClassName",
+					"Description": "The name of an ANZSIC Class.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 256,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "AnzsicClass.cdm.json/AnzsicClass",
+						"Name": "AnzsicClassName"
+					}
+				},
+				{
+					"Name": "AnzsicClassDescription",
+					"Description": "The description of an ANZSIC Class.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "AnzsicClass.cdm.json/AnzsicClass",
+						"Name": "AnzsicClassDescription"
+					}
+				},
+				{
+					"Name": "AnzsicGroupCode",
+					"Description": "The unique identifier of an ANZSIC Group.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 3,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "AnzsicClass.cdm.json/AnzsicClass",
+						"Name": "AnzsicGroupCode"
+					}
+				}
+			],
+			"ColumnSetEntityName": "632080ea-beba-4d5c-9228-def5f1846e9f",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/AnzsicClass",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/AnzsicClass",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"AnzsicClassCode\":{\"entity\":\"AnzsicClass.cdm.json/AnzsicClass\",\"name\":\"AnzsicClassCode\"},\"AnzsicClassName\":{\"entity\":\"AnzsicClass.cdm.json/AnzsicClass\",\"name\":\"AnzsicClassName\"},\"AnzsicClassDescription\":{\"entity\":\"AnzsicClass.cdm.json/AnzsicClass\",\"name\":\"AnzsicClassDescription\"},\"AnzsicGroupCode\":{\"entity\":\"AnzsicClass.cdm.json/AnzsicClass\",\"name\":\"AnzsicGroupCode\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"AnzsicClass\",\"path\":\"AnzsicClass.cdm.json/AnzsicClass\"},\"description\":\"The ANZSIC Class.\\n\\nThe ANZSIC contains a number of classes which are defined as undertaking combined activities.\",\"primaryKey\":[\"AnzsicClassCode\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"AnzsicClass.cdm.json/AnzsicClass\",\"name\":\"AnzsicClassCode\"},\"dataType\":\"decimal\",\"dataTypeLength\":4,\"description\":\"The unique identifier of an ANZSIC Class.\",\"isNullable\":false,\"scale\":0,\"name\":\"AnzsicClassCode\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"AnzsicClass.cdm.json/AnzsicClass\",\"name\":\"AnzsicClassName\"},\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"The name of an ANZSIC Class.\",\"isNullable\":true,\"name\":\"AnzsicClassName\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"AnzsicClass.cdm.json/AnzsicClass\",\"name\":\"AnzsicClassDescription\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"The description of an ANZSIC Class.\",\"isNullable\":true,\"name\":\"AnzsicClassDescription\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"AnzsicClass.cdm.json/AnzsicClass\",\"name\":\"AnzsicGroupCode\"},\"dataType\":\"decimal\",\"dataTypeLength\":3,\"description\":\"The unique identifier of an ANZSIC Group.\",\"isNullable\":true,\"scale\":0,\"name\":\"AnzsicGroupCode\"}]}}}",
+			"Description": "The ANZSIC Class.\n\nThe ANZSIC contains a number of classes which are defined as undertaking combined activities.",
+			"DisplayFolderInfo": "{\"name\":\"Party\",\"colorCode\":\"#7D0F6C\"}",
+			"PrimaryKeys": "AnzsicClassCode",
+			"spark.sql.sources.provider": "csv",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"AnzsicClassCode\",\"type\":\"decimal(4,0)\",\"nullable\":false,\"metadata\":{}},{\"name\":\"AnzsicClassName\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"AnzsicClassDescription\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"AnzsicGroupCode\",\"type\":\"decimal(3,0)\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "def7d1eb-b94e-4f7f-8fa6-30bb36f42de0",
+		"Description": "The ANZSIC Class.\n\nThe ANZSIC contains a number of classes which are defined as undertaking combined activities."
+	},
+	"type": "TABLE"
+}

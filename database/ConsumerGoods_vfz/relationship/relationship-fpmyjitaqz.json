@@ -1,0 +1,29 @@
+{
+	"name": "relationship-fpmyjitaqz",
+	"properties": {
+		"Name": "relationship-fpmyjitaqz",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "AssetCharacteristicType",
+		"ToTableName": "AssetCharacteristic",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "AssetCharacteristicTypeId",
+				"ToColumnName": "AssetCharacteristicTypeId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"AssetCharacteristicType.cdm.json/AssetCharacteristicType\",\"toEntity\":\"AssetCharacteristic.cdm.json/AssetCharacteristic\",\"joinPairs\":[{\"fromAttribute\":\"AssetCharacteristicTypeId\",\"toAttribute\":\"AssetCharacteristicTypeId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "dde82219-ea7a-4917-8e46-b065df5cebe9"
+	},
+	"type": "RELATIONSHIP"
+}

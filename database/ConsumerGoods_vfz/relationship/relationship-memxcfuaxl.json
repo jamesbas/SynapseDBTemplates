@@ -1,0 +1,29 @@
+{
+	"name": "relationship-memxcfuaxl",
+	"properties": {
+		"Name": "relationship-memxcfuaxl",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "Channel",
+		"ToTableName": "FinancialInstitution",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "ChannelId",
+				"ToColumnName": "ChannelId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"Channel.cdm.json/Channel\",\"toEntity\":\"FinancialInstitution.cdm.json/FinancialInstitution\",\"joinPairs\":[{\"fromAttribute\":\"ChannelId\",\"toAttribute\":\"ChannelId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "acabc586-18f0-4158-b9d0-9f64c8fb5e51"
+	},
+	"type": "RELATIONSHIP"
+}

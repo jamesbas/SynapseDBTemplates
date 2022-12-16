@@ -1,0 +1,137 @@
+{
+	"name": "DocumentCharacteristicType",
+	"properties": {
+		"Name": "DocumentCharacteristicType",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "DocumentCharacteristicTypeId",
+					"Description": "The unique identifier of a document characteristic type.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "DocumentCharacteristicType.cdm.json/DocumentCharacteristicType",
+						"Name": "DocumentCharacteristicTypeId"
+					}
+				},
+				{
+					"Name": "DocumentCharacteristicTypeName",
+					"Description": "The name of a document characteristic type.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 256,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "DocumentCharacteristicType.cdm.json/DocumentCharacteristicType",
+						"Name": "DocumentCharacteristicTypeName"
+					}
+				},
+				{
+					"Name": "DocumentCharacteristicTypeDescription",
+					"Description": "The description of a document characteristic type.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "DocumentCharacteristicType.cdm.json/DocumentCharacteristicType",
+						"Name": "DocumentCharacteristicTypeDescription"
+					}
+				}
+			],
+			"ColumnSetEntityName": "227a97c9-8578-4106-a4da-145b29cae4ac",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/DocumentCharacteristicType",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/DocumentCharacteristicType",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"DocumentCharacteristicTypeId\":{\"entity\":\"DocumentCharacteristicType.cdm.json/DocumentCharacteristicType\",\"name\":\"DocumentCharacteristicTypeId\"},\"DocumentCharacteristicTypeName\":{\"entity\":\"DocumentCharacteristicType.cdm.json/DocumentCharacteristicType\",\"name\":\"DocumentCharacteristicTypeName\"},\"DocumentCharacteristicTypeDescription\":{\"entity\":\"DocumentCharacteristicType.cdm.json/DocumentCharacteristicType\",\"name\":\"DocumentCharacteristicTypeDescription\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"DocumentCharacteristicType\",\"path\":\"DocumentCharacteristicType.cdm.json/DocumentCharacteristicType\"},\"description\":\"A characteristic of a document.\\n\\nEx.:\\n- Size\\n- Pixels\\nFor Images\\n- top view\\n- front view\\n- side view\\n- 45 degree view right\\n- 45 degree view left\",\"primaryKey\":[\"DocumentCharacteristicTypeId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"DocumentCharacteristicType.cdm.json/DocumentCharacteristicType\",\"name\":\"DocumentCharacteristicTypeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a document characteristic type.\",\"isNullable\":false,\"name\":\"DocumentCharacteristicTypeId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"DocumentCharacteristicType.cdm.json/DocumentCharacteristicType\",\"name\":\"DocumentCharacteristicTypeName\"},\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"The name of a document characteristic type.\",\"isNullable\":true,\"name\":\"DocumentCharacteristicTypeName\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"DocumentCharacteristicType.cdm.json/DocumentCharacteristicType\",\"name\":\"DocumentCharacteristicTypeDescription\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"The description of a document characteristic type.\",\"isNullable\":true,\"name\":\"DocumentCharacteristicTypeDescription\"}]}}}",
+			"Description": "A characteristic of a document.\n\nEx.:\n- Size\n- Pixels\nFor Images\n- top view\n- front view\n- side view\n- 45 degree view right\n- 45 degree view left",
+			"DisplayFolderInfo": "{\"name\":\"Document Management\",\"colorCode\":\"#001475\"}",
+			"PrimaryKeys": "DocumentCharacteristicTypeId",
+			"spark.sql.sources.provider": "csv",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"DocumentCharacteristicTypeId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"DocumentCharacteristicTypeName\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"DocumentCharacteristicTypeDescription\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "c449e966-5163-452f-98da-6dbdd564ea6c",
+		"Description": "A characteristic of a document.\n\nEx.:\n- Size\n- Pixels\nFor Images\n- top view\n- front view\n- side view\n- 45 degree view right\n- 45 degree view left"
+	},
+	"type": "TABLE"
+}

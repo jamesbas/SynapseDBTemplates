@@ -1,0 +1,137 @@
+{
+	"name": "VendorDocument",
+	"properties": {
+		"Name": "VendorDocument",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "VendorId",
+					"Description": "The unique identifier of a Vendor.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "VendorDocument.cdm.json/VendorDocument",
+						"Name": "VendorId"
+					}
+				},
+				{
+					"Name": "DocumentId",
+					"Description": "The unique identifier of a Document.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "VendorDocument.cdm.json/VendorDocument",
+						"Name": "DocumentId"
+					}
+				},
+				{
+					"Name": "VendorDocumentNote",
+					"Description": "A note, comment or additional information regarding the Vendor Document.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "VendorDocument.cdm.json/VendorDocument",
+						"Name": "VendorDocumentNote"
+					}
+				}
+			],
+			"ColumnSetEntityName": "0364905c-807c-4388-95a1-db90c0fa16b3",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/VendorDocument",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/VendorDocument",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"VendorId\":{\"entity\":\"VendorDocument.cdm.json/VendorDocument\",\"name\":\"VendorId\"},\"DocumentId\":{\"entity\":\"VendorDocument.cdm.json/VendorDocument\",\"name\":\"DocumentId\"},\"VendorDocumentNote\":{\"entity\":\"VendorDocument.cdm.json/VendorDocument\",\"name\":\"VendorDocumentNote\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"VendorDocument\",\"path\":\"VendorDocument.cdm.json/VendorDocument\"},\"description\":\"A document associated with the Vendor.\\n\\nIt is important to know what documentation is available related to customers, orders, service etc. as well as the location of that information.     \\n\\nInformation is a corporate asset when used properly and available for use by the widest appropriate numbers of users.\",\"primaryKey\":[\"VendorId\",\"DocumentId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"VendorDocument.cdm.json/VendorDocument\",\"name\":\"VendorId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a Vendor.\",\"isNullable\":false,\"name\":\"VendorId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"VendorDocument.cdm.json/VendorDocument\",\"name\":\"DocumentId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a Document.\",\"isNullable\":false,\"name\":\"DocumentId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"VendorDocument.cdm.json/VendorDocument\",\"name\":\"VendorDocumentNote\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"A note, comment or additional information regarding the Vendor Document.\",\"isNullable\":true,\"name\":\"VendorDocumentNote\"}]}}}",
+			"Description": "A document associated with the Vendor.\n\nIt is important to know what documentation is available related to customers, orders, service etc. as well as the location of that information.     \n\nInformation is a corporate asset when used properly and available for use by the widest appropriate numbers of users.",
+			"DisplayFolderInfo": "{\"name\":\"Vendor\",\"colorCode\":\"#1C508C\"}",
+			"PrimaryKeys": "VendorId,DocumentId",
+			"spark.sql.sources.provider": "csv",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"VendorId\",\"type\":\"long\",\"nullable\":false,\"metadata\":{}},{\"name\":\"DocumentId\",\"type\":\"long\",\"nullable\":false,\"metadata\":{}},{\"name\":\"VendorDocumentNote\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "c39b9c74-fcff-4044-a5c0-cea1cc52c0de",
+		"Description": "A document associated with the Vendor.\n\nIt is important to know what documentation is available related to customers, orders, service etc. as well as the location of that information.     \n\nInformation is a corporate asset when used properly and available for use by the widest appropriate numbers of users."
+	},
+	"type": "TABLE"
+}

@@ -1,0 +1,157 @@
+{
+	"name": "PartyEvent",
+	"properties": {
+		"Name": "PartyEvent",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "PartyId",
+					"Description": "The unique identifier of a Party.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyEvent.cdm.json/PartyEvent",
+						"Name": "PartyId"
+					}
+				},
+				{
+					"Name": "EventTypeId",
+					"Description": "The unique identifier of an Event Type.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyEvent.cdm.json/PartyEvent",
+						"Name": "EventTypeId"
+					}
+				},
+				{
+					"Name": "Timestamp",
+					"Description": "The timestamp of the associated Event.",
+					"OriginDataTypeName": {
+						"TypeName": "timestamp",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"TimestampFormat": "YYYY-MM-DD HH:MM:SS.fffffffff",
+							"HIVE_TYPE_STRING": "timestamp"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyEvent.cdm.json/PartyEvent",
+						"Name": "Timestamp"
+					}
+				},
+				{
+					"Name": "PartyEventNote",
+					"Description": "A note, comment or additional information regarding the party event.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyEvent.cdm.json/PartyEvent",
+						"Name": "PartyEventNote"
+					}
+				}
+			],
+			"ColumnSetEntityName": "9e219345-e409-46c9-bb6e-a6af21f29b02",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/PartyEvent",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/PartyEvent",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"PartyId\":{\"entity\":\"PartyEvent.cdm.json/PartyEvent\",\"name\":\"PartyId\"},\"EventTypeId\":{\"entity\":\"PartyEvent.cdm.json/PartyEvent\",\"name\":\"EventTypeId\"},\"Timestamp\":{\"entity\":\"PartyEvent.cdm.json/PartyEvent\",\"name\":\"Timestamp\"},\"PartyEventNote\":{\"entity\":\"PartyEvent.cdm.json/PartyEvent\",\"name\":\"PartyEventNote\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"PartyEvent\",\"path\":\"PartyEvent.cdm.json/PartyEvent\"},\"description\":\"An event which affects a party.\",\"primaryKey\":[\"PartyId\",\"EventTypeId\",\"Timestamp\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyEvent.cdm.json/PartyEvent\",\"name\":\"PartyId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a Party.\",\"isNullable\":false,\"name\":\"PartyId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyEvent.cdm.json/PartyEvent\",\"name\":\"EventTypeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of an Event Type.\",\"isNullable\":false,\"name\":\"EventTypeId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyEvent.cdm.json/PartyEvent\",\"name\":\"Timestamp\"},\"dataType\":\"timestamp\",\"description\":\"The timestamp of the associated Event.\",\"isNullable\":false,\"name\":\"Timestamp\",\"timestampFormat\":\"YYYY-MM-DD HH:MM:SS.fffffffff\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyEvent.cdm.json/PartyEvent\",\"name\":\"PartyEventNote\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"A note, comment or additional information regarding the party event.\",\"isNullable\":true,\"name\":\"PartyEventNote\"}]}}}",
+			"Description": "An event which affects a party.",
+			"DisplayFolderInfo": "{\"name\":\"Party\",\"colorCode\":\"#7D0F6C\"}",
+			"PrimaryKeys": "PartyId,EventTypeId,Timestamp",
+			"spark.sql.sources.provider": "csv",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"PartyId\",\"type\":\"long\",\"nullable\":false,\"metadata\":{}},{\"name\":\"EventTypeId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"Timestamp\",\"type\":\"timestamp\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PartyEventNote\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "714d8bbd-5f96-4eb5-b241-48b021ce17a7",
+		"Description": "An event which affects a party."
+	},
+	"type": "TABLE"
+}

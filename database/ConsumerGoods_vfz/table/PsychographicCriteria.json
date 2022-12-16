@@ -1,0 +1,156 @@
+{
+	"name": "PsychographicCriteria",
+	"properties": {
+		"Name": "PsychographicCriteria",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "PsychographicCriteriaId",
+					"Description": "The unique identifier of a Psychographic Criteria.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PsychographicCriteria.cdm.json/PsychographicCriteria",
+						"Name": "PsychographicCriteriaId"
+					}
+				},
+				{
+					"Name": "PsychographicCriteriaName",
+					"Description": "The name of the Psychographic Criteria.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 256,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PsychographicCriteria.cdm.json/PsychographicCriteria",
+						"Name": "PsychographicCriteriaName"
+					}
+				},
+				{
+					"Name": "PsychographicCriteriaDescription",
+					"Description": "The description of the Psychographic Criteria.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PsychographicCriteria.cdm.json/PsychographicCriteria",
+						"Name": "PsychographicCriteriaDescription"
+					}
+				},
+				{
+					"Name": "PsychographicCriteriaTypeId",
+					"Description": "The unique identifier of a Psychographic Criteria Type.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PsychographicCriteria.cdm.json/PsychographicCriteria",
+						"Name": "PsychographicCriteriaTypeId"
+					}
+				}
+			],
+			"ColumnSetEntityName": "47691101-1590-4c6e-9bdd-05e4b534500b",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/PsychographicCriteria",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/PsychographicCriteria",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"PsychographicCriteriaId\":{\"entity\":\"PsychographicCriteria.cdm.json/PsychographicCriteria\",\"name\":\"PsychographicCriteriaId\"},\"PsychographicCriteriaName\":{\"entity\":\"PsychographicCriteria.cdm.json/PsychographicCriteria\",\"name\":\"PsychographicCriteriaName\"},\"PsychographicCriteriaDescription\":{\"entity\":\"PsychographicCriteria.cdm.json/PsychographicCriteria\",\"name\":\"PsychographicCriteriaDescription\"},\"PsychographicCriteriaTypeId\":{\"entity\":\"PsychographicCriteria.cdm.json/PsychographicCriteria\",\"name\":\"PsychographicCriteriaTypeId\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"PsychographicCriteria\",\"path\":\"PsychographicCriteria.cdm.json/PsychographicCriteria\"},\"description\":\"Demographics are the average or typical characteristics of the people who buy products or services. They include age, income, education, status or type of occupation, region of country and household size. Demographics can also include the age of children, home ownership, home value and urban or rural location. \\n\\nPsychographics take demographics further by addressing people's lifestyles and behaviors - their values, interests and what they do - their 'lifestyles'.\\nPsychographic Segmentation is market segmentation defined in terms of psychographics.   \\n\\nThis type of segmentation is frequently used because of the strong relationship between activities, interests and opinions and products or services purchased.    \\n\\nLifestyle groups are typically defined in terms of its member activities, interests and opinions.  Consumption patterns relate to when, why, where, and how consumers purchase or acquire goods or services.\\n\\nThe psychographic characteristics of a market influence the 'marketing mix' strategy components introduced to that market and sales channels used to provide products to that market.\\n\\nThe Psychographic Criteria is the specific criteria or value that will be linked to a Market Segment.   \\n\\nThe following are examples:\\n\\nPsychographic Criteria:  Middle Class\\nPsychographic Criteria Type:  Social Class\\n\\nPsychographic Criteria:  Young, Upwardly-mobile, Professional \\nPsychographic Criteria Type: Lifestyle\\n\\nPsychographic Criteria:  Conservative\\nPsychographic Criteria Type:  Political Philosophy\",\"primaryKey\":[\"PsychographicCriteriaId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PsychographicCriteria.cdm.json/PsychographicCriteria\",\"name\":\"PsychographicCriteriaId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Psychographic Criteria.\",\"isNullable\":false,\"name\":\"PsychographicCriteriaId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PsychographicCriteria.cdm.json/PsychographicCriteria\",\"name\":\"PsychographicCriteriaName\"},\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"The name of the Psychographic Criteria.\",\"isNullable\":true,\"name\":\"PsychographicCriteriaName\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PsychographicCriteria.cdm.json/PsychographicCriteria\",\"name\":\"PsychographicCriteriaDescription\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"The description of the Psychographic Criteria.\",\"isNullable\":true,\"name\":\"PsychographicCriteriaDescription\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PsychographicCriteria.cdm.json/PsychographicCriteria\",\"name\":\"PsychographicCriteriaTypeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Psychographic Criteria Type.\",\"isNullable\":true,\"name\":\"PsychographicCriteriaTypeId\"}]}}}",
+			"Description": "Demographics are the average or typical characteristics of the people who buy products or services. They include age, income, education, status or type of occupation, region of country and household size. Demographics can also include the age of children, home ownership, home value and urban or rural location. \n\nPsychographics take demographics further by addressing people's lifestyles and behaviors - their values, interests and what they do - their 'lifestyles'.\nPsychographic Segmentation is market segmentation defined in terms of psychographics.   \n\nThis type of segmentation is frequently used because of the strong relationship between activities, interests and opinions and products or services purchased.    \n\nLifestyle groups are typically defined in terms of its member activities, interests and opinions.  Consumption patterns relate to when, why, where, and how consumers purchase or acquire goods or services.\n\nThe psychographic characteristics of a market influence the 'marketing mix' strategy components introduced to that market and sales channels used to provide products to that market.\n\nThe Psychographic Criteria is the specific criteria or value that will be linked to a Market Segment.   \n\nThe following are examples:\n\nPsychographic Criteria:  Middle Class\nPsychographic Criteria Type:  Social Class\n\nPsychographic Criteria:  Young, Upwardly-mobile, Professional \nPsychographic Criteria Type: Lifestyle\n\nPsychographic Criteria:  Conservative\nPsychographic Criteria Type:  Political Philosophy",
+			"DisplayFolderInfo": "{\"name\":\"Party\",\"colorCode\":\"#7D0F6C\"}",
+			"PrimaryKeys": "PsychographicCriteriaId",
+			"spark.sql.sources.provider": "csv",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"PsychographicCriteriaId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PsychographicCriteriaName\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"PsychographicCriteriaDescription\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"PsychographicCriteriaTypeId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "23f0d255-6b18-4517-a09b-58ad680991a9",
+		"Description": "Demographics are the average or typical characteristics of the people who buy products or services. They include age, income, education, status or type of occupation, region of country and household size. Demographics can also include the age of children, home ownership, home value and urban or rural location. \n\nPsychographics take demographics further by addressing people's lifestyles and behaviors - their values, interests and what they do - their 'lifestyles'.\nPsychographic Segmentation is market segmentation defined in terms of psychographics.   \n\nThis type of segmentation is frequently used because of the strong relationship between activities, interests and opinions and products or services purchased.    \n\nLifestyle groups are typically defined in terms of its member activities, interests and opinions.  Consumption patterns relate to when, why, where, and how consumers purchase or acquire goods or services.\n\nThe psychographic characteristics of a market influence the 'marketing mix' strategy components introduced to that market and sales channels used to provide products to that market.\n\nThe Psychographic Criteria is the specific criteria or value that will be linked to a Market Segment.   \n\nThe following are examples:\n\nPsychographic Criteria:  Middle Class\nPsychographic Criteria Type:  Social Class\n\nPsychographic Criteria:  Young, Upwardly-mobile, Professional \nPsychographic Criteria Type: Lifestyle\n\nPsychographic Criteria:  Conservative\nPsychographic Criteria Type:  Political Philosophy"
+	},
+	"type": "TABLE"
+}

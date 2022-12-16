@@ -1,0 +1,29 @@
+{
+	"name": "relationship-kfhzjnpflc",
+	"properties": {
+		"Name": "relationship-kfhzjnpflc",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "PartyContactPurpose",
+		"ToTableName": "PartyContactPurposeStatus",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "PartyId",
+				"ToColumnName": "PartyId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"PartyContactPurpose.cdm.json/PartyContactPurpose\",\"toEntity\":\"PartyContactPurposeStatus.cdm.json/PartyContactPurposeStatus\",\"joinPairs\":[{\"fromAttribute\":\"PartyId\",\"toAttribute\":\"PartyId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "efd85059-b5c4-48d4-a1a5-c686f641a1c0"
+	},
+	"type": "RELATIONSHIP"
+}

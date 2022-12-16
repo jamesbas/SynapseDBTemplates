@@ -1,0 +1,215 @@
+{
+	"name": "RebateAgreement",
+	"properties": {
+		"Name": "RebateAgreement",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "ContractId",
+					"Description": "The unique identifier of a Contract.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "RebateAgreement.cdm.json/RebateAgreement",
+						"Name": "ContractId"
+					}
+				},
+				{
+					"Name": "AgreementStartDate",
+					"Description": "The date that the Agreement becomes effective.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "RebateAgreement.cdm.json/RebateAgreement",
+						"Name": "AgreementStartDate"
+					}
+				},
+				{
+					"Name": "AgreementEndDate",
+					"Description": "The end date that of the Agreement.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "RebateAgreement.cdm.json/RebateAgreement",
+						"Name": "AgreementEndDate"
+					}
+				},
+				{
+					"Name": "MinimumPurchaseQuantity",
+					"Description": "The minimum quantity that must be purchased for the rebate to be applicable.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "RebateAgreement.cdm.json/RebateAgreement",
+						"Name": "MinimumPurchaseQuantity"
+					}
+				},
+				{
+					"Name": "MinimumPurchaseAmount",
+					"Description": "The minimum dollar value that must be purchased for the rebate to be applicable.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "RebateAgreement.cdm.json/RebateAgreement",
+						"Name": "MinimumPurchaseAmount"
+					}
+				},
+				{
+					"Name": "RebatePercentage",
+					"Description": "The percent of total purchases that are to be rebated should the minimum purchase thresholds be met during the agreement period.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 8,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "RebateAgreement.cdm.json/RebateAgreement",
+						"Name": "RebatePercentage"
+					}
+				},
+				{
+					"Name": "RebateRecipientIndicator",
+					"Description": "Indicates whether the company is acting as the potential rebate recipient or payor in the contract.",
+					"OriginDataTypeName": {
+						"TypeName": "boolean",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "boolean"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "RebateAgreement.cdm.json/RebateAgreement",
+						"Name": "RebateRecipientIndicator"
+					}
+				}
+			],
+			"ColumnSetEntityName": "ad729777-abc7-4b23-87f2-099ee9d79a29",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/RebateAgreement",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/RebateAgreement",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"ContractId\":{\"entity\":\"RebateAgreement.cdm.json/RebateAgreement\",\"name\":\"ContractId\"},\"AgreementStartDate\":{\"entity\":\"RebateAgreement.cdm.json/RebateAgreement\",\"name\":\"AgreementStartDate\"},\"AgreementEndDate\":{\"entity\":\"RebateAgreement.cdm.json/RebateAgreement\",\"name\":\"AgreementEndDate\"},\"MinimumPurchaseQuantity\":{\"entity\":\"RebateAgreement.cdm.json/RebateAgreement\",\"name\":\"MinimumPurchaseQuantity\"},\"MinimumPurchaseAmount\":{\"entity\":\"RebateAgreement.cdm.json/RebateAgreement\",\"name\":\"MinimumPurchaseAmount\"},\"RebatePercentage\":{\"entity\":\"RebateAgreement.cdm.json/RebateAgreement\",\"name\":\"RebatePercentage\"},\"RebateRecipientIndicator\":{\"entity\":\"RebateAgreement.cdm.json/RebateAgreement\",\"name\":\"RebateRecipientIndicator\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"RebateAgreement\",\"path\":\"RebateAgreement.cdm.json/RebateAgreement\"},\"description\":\"An agreement that defines the terms and conditions under which a rebate will be provided. This agreement typically defines the minimum purchase levels over a defined period required to receive the rebate.\",\"primaryKey\":[\"ContractId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"RebateAgreement.cdm.json/RebateAgreement\",\"name\":\"ContractId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Contract.\",\"isNullable\":false,\"name\":\"ContractId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"RebateAgreement.cdm.json/RebateAgreement\",\"name\":\"AgreementStartDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The date that the Agreement becomes effective.\",\"isNullable\":true,\"name\":\"AgreementStartDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"RebateAgreement.cdm.json/RebateAgreement\",\"name\":\"AgreementEndDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The end date that of the Agreement.\",\"isNullable\":true,\"name\":\"AgreementEndDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"RebateAgreement.cdm.json/RebateAgreement\",\"name\":\"MinimumPurchaseQuantity\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"The minimum quantity that must be purchased for the rebate to be applicable.\",\"isNullable\":true,\"scale\":2,\"name\":\"MinimumPurchaseQuantity\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"RebateAgreement.cdm.json/RebateAgreement\",\"name\":\"MinimumPurchaseAmount\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"The minimum dollar value that must be purchased for the rebate to be applicable.\",\"isNullable\":true,\"scale\":2,\"name\":\"MinimumPurchaseAmount\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"RebateAgreement.cdm.json/RebateAgreement\",\"name\":\"RebatePercentage\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"The percent of total purchases that are to be rebated should the minimum purchase thresholds be met during the agreement period.\",\"isNullable\":true,\"scale\":8,\"name\":\"RebatePercentage\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"RebateAgreement.cdm.json/RebateAgreement\",\"name\":\"RebateRecipientIndicator\"},\"dataType\":\"boolean\",\"description\":\"Indicates whether the company is acting as the potential rebate recipient or payor in the contract.\",\"isNullable\":true,\"name\":\"RebateRecipientIndicator\"}]}}}",
+			"Description": "An agreement that defines the terms and conditions under which a rebate will be provided. This agreement typically defines the minimum purchase levels over a defined period required to receive the rebate.",
+			"DisplayFolderInfo": "{\"name\":\"Contract\",\"colorCode\":\"#000F5C\"}",
+			"PrimaryKeys": "ContractId",
+			"spark.sql.sources.provider": "csv",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"ContractId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"AgreementStartDate\",\"type\":\"date\",\"nullable\":true,\"metadata\":{}},{\"name\":\"AgreementEndDate\",\"type\":\"date\",\"nullable\":true,\"metadata\":{}},{\"name\":\"MinimumPurchaseQuantity\",\"type\":\"decimal(18,2)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"MinimumPurchaseAmount\",\"type\":\"decimal(18,2)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"RebatePercentage\",\"type\":\"decimal(18,8)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"RebateRecipientIndicator\",\"type\":\"boolean\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "b0aba6f9-c894-44f5-a95b-c373908c642c",
+		"Description": "An agreement that defines the terms and conditions under which a rebate will be provided. This agreement typically defines the minimum purchase levels over a defined period required to receive the rebate."
+	},
+	"type": "TABLE"
+}

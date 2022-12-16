@@ -1,0 +1,29 @@
+{
+	"name": "relationship-qmseumwffp",
+	"properties": {
+		"Name": "relationship-qmseumwffp",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "Role",
+		"ToTableName": "PartyRelationship",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "RoleId",
+				"ToColumnName": "Party2RoleId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"Role.cdm.json/Role\",\"toEntity\":\"PartyRelationship.cdm.json/PartyRelationship\",\"joinPairs\":[{\"fromAttribute\":\"RoleId\",\"toAttribute\":\"Party2RoleId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "fa22e02a-1809-483f-9bf4-8c45257b8a43"
+	},
+	"type": "RELATIONSHIP"
+}

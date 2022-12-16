@@ -1,0 +1,29 @@
+{
+	"name": "relationship-yytregncah",
+	"properties": {
+		"Name": "relationship-yytregncah",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "AssociationType",
+		"ToTableName": "Association",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "AssociationTypeId",
+				"ToColumnName": "AssociationTypeId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"AssociationType.cdm.json/AssociationType\",\"toEntity\":\"Association.cdm.json/Association\",\"joinPairs\":[{\"fromAttribute\":\"AssociationTypeId\",\"toAttribute\":\"AssociationTypeId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "6d41c34b-aed4-4ef5-be02-6f24397398c9"
+	},
+	"type": "RELATIONSHIP"
+}

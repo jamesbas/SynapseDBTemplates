@@ -1,0 +1,215 @@
+{
+	"name": "PartyEmail",
+	"properties": {
+		"Name": "PartyEmail",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "PartyId",
+					"Description": "The unique identifier of a Party.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyEmail.cdm.json/PartyEmail",
+						"Name": "PartyId"
+					}
+				},
+				{
+					"Name": "EmailTypeId",
+					"Description": "The unique identifier of an Email Type.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyEmail.cdm.json/PartyEmail",
+						"Name": "EmailTypeId"
+					}
+				},
+				{
+					"Name": "EmailAddress",
+					"Description": "The Party email address.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 256,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyEmail.cdm.json/PartyEmail",
+						"Name": "EmailAddress"
+					}
+				},
+				{
+					"Name": "PeriodStartTimestamp",
+					"Description": "The period start timestamp that the information is valid or effective as of.",
+					"OriginDataTypeName": {
+						"TypeName": "timestamp",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"TimestampFormat": "YYYY-MM-DD HH:MM:SS.fffffffff",
+							"HIVE_TYPE_STRING": "timestamp"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyEmail.cdm.json/PartyEmail",
+						"Name": "PeriodStartTimestamp"
+					}
+				},
+				{
+					"Name": "PeriodEndTimestamp",
+					"Description": "The period end timestamp that the information is valid or effective as of.",
+					"OriginDataTypeName": {
+						"TypeName": "timestamp",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"TimestampFormat": "YYYY-MM-DD HH:MM:SS.fffffffff",
+							"HIVE_TYPE_STRING": "timestamp"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyEmail.cdm.json/PartyEmail",
+						"Name": "PeriodEndTimestamp"
+					}
+				},
+				{
+					"Name": "PreferenceId",
+					"Description": "The unique identifier of a Preference.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyEmail.cdm.json/PartyEmail",
+						"Name": "PreferenceId"
+					}
+				},
+				{
+					"Name": "PartyEmailNote",
+					"Description": "A note, comment or additional information regarding the party email address.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyEmail.cdm.json/PartyEmail",
+						"Name": "PartyEmailNote"
+					}
+				}
+			],
+			"ColumnSetEntityName": "6bbaeb7f-112f-4a6d-89ca-0a214c0c5e7d",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/PartyEmail",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/PartyEmail",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"PartyId\":{\"entity\":\"PartyEmail.cdm.json/PartyEmail\",\"name\":\"PartyId\"},\"EmailTypeId\":{\"entity\":\"PartyEmail.cdm.json/PartyEmail\",\"name\":\"EmailTypeId\"},\"EmailAddress\":{\"entity\":\"PartyEmail.cdm.json/PartyEmail\",\"name\":\"EmailAddress\"},\"PeriodStartTimestamp\":{\"entity\":\"PartyEmail.cdm.json/PartyEmail\",\"name\":\"PeriodStartTimestamp\"},\"PeriodEndTimestamp\":{\"entity\":\"PartyEmail.cdm.json/PartyEmail\",\"name\":\"PeriodEndTimestamp\"},\"PreferenceId\":{\"entity\":\"PartyEmail.cdm.json/PartyEmail\",\"name\":\"PreferenceId\"},\"PartyEmailNote\":{\"entity\":\"PartyEmail.cdm.json/PartyEmail\",\"name\":\"PartyEmailNote\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"PartyEmail\",\"path\":\"PartyEmail.cdm.json/PartyEmail\"},\"description\":\"The party email address(s) of the associated email type for the indicated period.\",\"primaryKey\":[\"PartyId\",\"EmailTypeId\",\"EmailAddress\",\"PeriodStartTimestamp\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyEmail.cdm.json/PartyEmail\",\"name\":\"PartyId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a Party.\",\"isNullable\":false,\"name\":\"PartyId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyEmail.cdm.json/PartyEmail\",\"name\":\"EmailTypeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of an Email Type.\",\"isNullable\":false,\"name\":\"EmailTypeId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyEmail.cdm.json/PartyEmail\",\"name\":\"EmailAddress\"},\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"The Party email address.\",\"isNullable\":false,\"name\":\"EmailAddress\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyEmail.cdm.json/PartyEmail\",\"name\":\"PeriodStartTimestamp\"},\"dataType\":\"timestamp\",\"description\":\"The period start timestamp that the information is valid or effective as of.\",\"isNullable\":false,\"name\":\"PeriodStartTimestamp\",\"timestampFormat\":\"YYYY-MM-DD HH:MM:SS.fffffffff\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyEmail.cdm.json/PartyEmail\",\"name\":\"PeriodEndTimestamp\"},\"dataType\":\"timestamp\",\"description\":\"The period end timestamp that the information is valid or effective as of.\",\"isNullable\":true,\"name\":\"PeriodEndTimestamp\",\"timestampFormat\":\"YYYY-MM-DD HH:MM:SS.fffffffff\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyEmail.cdm.json/PartyEmail\",\"name\":\"PreferenceId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Preference.\",\"isNullable\":true,\"name\":\"PreferenceId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyEmail.cdm.json/PartyEmail\",\"name\":\"PartyEmailNote\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"A note, comment or additional information regarding the party email address.\",\"isNullable\":true,\"name\":\"PartyEmailNote\"}]}}}",
+			"Description": "The party email address(s) of the associated email type for the indicated period.",
+			"DisplayFolderInfo": "{\"name\":\"Party\",\"colorCode\":\"#7D0F6C\"}",
+			"PrimaryKeys": "PartyId,EmailTypeId,EmailAddress,PeriodStartTimestamp",
+			"spark.sql.sources.provider": "csv",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"PartyId\",\"type\":\"long\",\"nullable\":false,\"metadata\":{}},{\"name\":\"EmailTypeId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"EmailAddress\",\"type\":\"string\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PeriodStartTimestamp\",\"type\":\"timestamp\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PeriodEndTimestamp\",\"type\":\"timestamp\",\"nullable\":true,\"metadata\":{}},{\"name\":\"PreferenceId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"PartyEmailNote\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "ee8bf312-412f-4f76-96fa-21a5d6135630",
+		"Description": "The party email address(s) of the associated email type for the indicated period."
+	},
+	"type": "TABLE"
+}

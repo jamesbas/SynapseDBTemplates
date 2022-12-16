@@ -1,0 +1,29 @@
+{
+	"name": "relationship-bbywluibrj",
+	"properties": {
+		"Name": "relationship-bbywluibrj",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "Item",
+		"ToTableName": "LearningEvent",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "ItemSku",
+				"ToColumnName": "ItemSku"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"Item.cdm.json/Item\",\"toEntity\":\"LearningEvent.cdm.json/LearningEvent\",\"joinPairs\":[{\"fromAttribute\":\"ItemSku\",\"toAttribute\":\"ItemSku\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "f4dbb46a-4cc3-432c-a076-10af2b686560"
+	},
+	"type": "RELATIONSHIP"
+}

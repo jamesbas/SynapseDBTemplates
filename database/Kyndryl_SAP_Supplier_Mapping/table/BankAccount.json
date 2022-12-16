@@ -1,0 +1,137 @@
+{
+	"name": "BankAccount",
+	"properties": {
+		"Name": "BankAccount",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Kyndryl_SAP_Supplier_Mapping",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "BankAccountId",
+					"Description": "The unique identifier of a Bank Account.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "BankAccount.cdm.json/BankAccount",
+						"Name": "BankAccountId"
+					}
+				},
+				{
+					"Name": "BankAccountToken",
+					"Description": "A token for a Bank Account is used to point to a secure (typically encrypted) location where details of the bank account can be found.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "BankAccount.cdm.json/BankAccount",
+						"Name": "BankAccountToken"
+					}
+				},
+				{
+					"Name": "BankAccountNote",
+					"Description": "A note, comment or additional information regarding the Bank Account.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "BankAccount.cdm.json/BankAccount",
+						"Name": "BankAccountNote"
+					}
+				}
+			],
+			"ColumnSetEntityName": "7ff19b48-f562-4db2-b3bd-edc4ff607e2a",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/Kyndryl_SAP_Supplier_Mapping/BankAccount",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/Kyndryl_SAP_Supplier_Mapping/BankAccount",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"BankAccountId\":{\"entity\":\"BankAccount.cdm.json/BankAccount\",\"name\":\"BankAccountId\"},\"BankAccountToken\":{\"entity\":\"BankAccount.cdm.json/BankAccount\",\"name\":\"BankAccountToken\"},\"BankAccountNote\":{\"entity\":\"BankAccount.cdm.json/BankAccount\",\"name\":\"BankAccountNote\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"BankAccount\",\"path\":\"BankAccount.cdm.json/BankAccount\"},\"description\":\"The Bank Account of a Customer or Customer Account.\",\"primaryKey\":[\"BankAccountId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"BankAccount.cdm.json/BankAccount\",\"name\":\"BankAccountId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Bank Account.\",\"isNullable\":false,\"name\":\"BankAccountId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"BankAccount.cdm.json/BankAccount\",\"name\":\"BankAccountToken\"},\"dataType\":\"integer\",\"description\":\"A token for a Bank Account is used to point to a secure (typically encrypted) location where details of the bank account can be found.\",\"isNullable\":false,\"name\":\"BankAccountToken\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"BankAccount.cdm.json/BankAccount\",\"name\":\"BankAccountNote\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"A note, comment or additional information regarding the Bank Account.\",\"isNullable\":true,\"name\":\"BankAccountNote\"}]}}}",
+			"Description": "The Bank Account of a Customer or Customer Account.",
+			"DisplayFolderInfo": "{\"name\":\"Transaction\",\"colorCode\":\"#961E84\"}",
+			"PrimaryKeys": "BankAccountId",
+			"spark.sql.sources.provider": "csv",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"BankAccountId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"BankAccountToken\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"BankAccountNote\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "25730b3e-37c5-40b1-a43f-0ddfbc9c52f0",
+		"Description": "The Bank Account of a Customer or Customer Account."
+	},
+	"type": "TABLE"
+}

@@ -1,0 +1,29 @@
+{
+	"name": "relationship-cwunzmrika",
+	"properties": {
+		"Name": "relationship-cwunzmrika",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "DemographicCriteria",
+		"ToTableName": "PartyDemographicCriteria",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "DemographicCriteriaId",
+				"ToColumnName": "DemographicCriteriaId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"DemographicCriteria.cdm.json/DemographicCriteria\",\"toEntity\":\"PartyDemographicCriteria.cdm.json/PartyDemographicCriteria\",\"joinPairs\":[{\"fromAttribute\":\"DemographicCriteriaId\",\"toAttribute\":\"DemographicCriteriaId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "26d5dd8f-3538-4007-8e91-96dd5416a0cb"
+	},
+	"type": "RELATIONSHIP"
+}

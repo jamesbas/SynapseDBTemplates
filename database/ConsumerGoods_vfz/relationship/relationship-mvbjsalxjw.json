@@ -1,0 +1,29 @@
+{
+	"name": "relationship-mvbjsalxjw",
+	"properties": {
+		"Name": "relationship-mvbjsalxjw",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "Language",
+		"ToTableName": "ScheduledLearningEvent",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "IsoLanguageId",
+				"ToColumnName": "IsoLanguageId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"Language.cdm.json/Language\",\"toEntity\":\"ScheduledLearningEvent.cdm.json/ScheduledLearningEvent\",\"joinPairs\":[{\"fromAttribute\":\"IsoLanguageId\",\"toAttribute\":\"IsoLanguageId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "e6bf2c7e-dc91-4402-9aaa-77f0ad6a7207"
+	},
+	"type": "RELATIONSHIP"
+}

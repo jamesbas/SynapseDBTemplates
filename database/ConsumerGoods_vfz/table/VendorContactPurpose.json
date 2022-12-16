@@ -1,0 +1,175 @@
+{
+	"name": "VendorContactPurpose",
+	"properties": {
+		"Name": "VendorContactPurpose",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "VendorId",
+					"Description": "The unique identifier of a Vendor.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "VendorContactPurpose.cdm.json/VendorContactPurpose",
+						"Name": "VendorId"
+					}
+				},
+				{
+					"Name": "ContactPurposeId",
+					"Description": "The unique identifier of the Contact Purpose.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "VendorContactPurpose.cdm.json/VendorContactPurpose",
+						"Name": "ContactPurposeId"
+					}
+				},
+				{
+					"Name": "ContactMethodId",
+					"Description": "The unique identifier of a Contact Method.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "VendorContactPurpose.cdm.json/VendorContactPurpose",
+						"Name": "ContactMethodId"
+					}
+				},
+				{
+					"Name": "OptInStatusTypeId",
+					"Description": "The unique identifier of an Opt-In Status Type.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "VendorContactPurpose.cdm.json/VendorContactPurpose",
+						"Name": "OptInStatusTypeId"
+					}
+				},
+				{
+					"Name": "VendorContactPurposeNote",
+					"Description": "A note, comment or additional information regarding the Vendor contact purpose.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "VendorContactPurpose.cdm.json/VendorContactPurpose",
+						"Name": "VendorContactPurposeNote"
+					}
+				}
+			],
+			"ColumnSetEntityName": "7bdf3d2e-18d0-45bb-82f7-cc852a373a0d",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/VendorContactPurpose",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/VendorContactPurpose",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"VendorId\":{\"entity\":\"VendorContactPurpose.cdm.json/VendorContactPurpose\",\"name\":\"VendorId\"},\"ContactPurposeId\":{\"entity\":\"VendorContactPurpose.cdm.json/VendorContactPurpose\",\"name\":\"ContactPurposeId\"},\"ContactMethodId\":{\"entity\":\"VendorContactPurpose.cdm.json/VendorContactPurpose\",\"name\":\"ContactMethodId\"},\"OptInStatusTypeId\":{\"entity\":\"VendorContactPurpose.cdm.json/VendorContactPurpose\",\"name\":\"OptInStatusTypeId\"},\"VendorContactPurposeNote\":{\"entity\":\"VendorContactPurpose.cdm.json/VendorContactPurpose\",\"name\":\"VendorContactPurposeNote\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"VendorContactPurpose\",\"path\":\"VendorContactPurpose.cdm.json/VendorContactPurpose\"},\"description\":\"A contact method by which the Vendor could be contacted regarding the intended contact purpose.\",\"primaryKey\":[\"VendorId\",\"ContactPurposeId\",\"ContactMethodId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"VendorContactPurpose.cdm.json/VendorContactPurpose\",\"name\":\"VendorId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a Vendor.\",\"isNullable\":false,\"name\":\"VendorId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"VendorContactPurpose.cdm.json/VendorContactPurpose\",\"name\":\"ContactPurposeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of the Contact Purpose.\",\"isNullable\":false,\"name\":\"ContactPurposeId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"VendorContactPurpose.cdm.json/VendorContactPurpose\",\"name\":\"ContactMethodId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Contact Method.\",\"isNullable\":false,\"name\":\"ContactMethodId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"VendorContactPurpose.cdm.json/VendorContactPurpose\",\"name\":\"OptInStatusTypeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of an Opt-In Status Type.\",\"isNullable\":true,\"name\":\"OptInStatusTypeId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"VendorContactPurpose.cdm.json/VendorContactPurpose\",\"name\":\"VendorContactPurposeNote\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"A note, comment or additional information regarding the Vendor contact purpose.\",\"isNullable\":true,\"name\":\"VendorContactPurposeNote\"}]}}}",
+			"Description": "A contact method by which the Vendor could be contacted regarding the intended contact purpose.",
+			"DisplayFolderInfo": "{\"name\":\"Vendor\",\"colorCode\":\"#1C508C\"}",
+			"PrimaryKeys": "VendorId,ContactPurposeId,ContactMethodId",
+			"spark.sql.sources.provider": "csv",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"VendorId\",\"type\":\"long\",\"nullable\":false,\"metadata\":{}},{\"name\":\"ContactPurposeId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"ContactMethodId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"OptInStatusTypeId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"VendorContactPurposeNote\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate"
+		},
+		"ObjectVersion": 2,
+		"ObjectId": "7064c588-03bc-48b8-9492-177faaa826b8",
+		"Description": "A contact method by which the Vendor could be contacted regarding the intended contact purpose."
+	},
+	"type": "TABLE"
+}

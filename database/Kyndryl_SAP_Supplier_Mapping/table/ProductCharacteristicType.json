@@ -1,0 +1,137 @@
+{
+	"name": "ProductCharacteristicType",
+	"properties": {
+		"Name": "ProductCharacteristicType",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Kyndryl_SAP_Supplier_Mapping",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "ProductCharacteristicTypeId",
+					"Description": "The unique identifier of a Product Characteristic Type.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ProductCharacteristicType.cdm.json/ProductCharacteristicType",
+						"Name": "ProductCharacteristicTypeId"
+					}
+				},
+				{
+					"Name": "ProductCharacteristicTypeName",
+					"Description": "The name of a Product Characteristic Type.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 256,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ProductCharacteristicType.cdm.json/ProductCharacteristicType",
+						"Name": "ProductCharacteristicTypeName"
+					}
+				},
+				{
+					"Name": "ProductCharacteristicTypeDescription",
+					"Description": "The description of a Product Characteristic Type.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ProductCharacteristicType.cdm.json/ProductCharacteristicType",
+						"Name": "ProductCharacteristicTypeDescription"
+					}
+				}
+			],
+			"ColumnSetEntityName": "d76ab6ca-b14e-4fa0-a56b-43c00ef63896",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/Kyndryl_SAP_Supplier_Mapping/ProductCharacteristicType",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/Kyndryl_SAP_Supplier_Mapping/ProductCharacteristicType",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"ProductCharacteristicTypeId\":{\"entity\":\"ProductCharacteristicType.cdm.json/ProductCharacteristicType\",\"name\":\"ProductCharacteristicTypeId\"},\"ProductCharacteristicTypeName\":{\"entity\":\"ProductCharacteristicType.cdm.json/ProductCharacteristicType\",\"name\":\"ProductCharacteristicTypeName\"},\"ProductCharacteristicTypeDescription\":{\"entity\":\"ProductCharacteristicType.cdm.json/ProductCharacteristicType\",\"name\":\"ProductCharacteristicTypeDescription\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"ProductCharacteristicType\",\"path\":\"ProductCharacteristicType.cdm.json/ProductCharacteristicType\"},\"description\":\"A characteristic that describes the associated product.\\n\\nEx:\\n- Reduced Calorie\\n- Light Food-Designated Product\\n- Low Cholesterol\\n- Vegan\\n- Waterproof\\n- Durable\\n- SPF30\",\"primaryKey\":[\"ProductCharacteristicTypeId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ProductCharacteristicType.cdm.json/ProductCharacteristicType\",\"name\":\"ProductCharacteristicTypeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Product Characteristic Type.\",\"isNullable\":false,\"name\":\"ProductCharacteristicTypeId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ProductCharacteristicType.cdm.json/ProductCharacteristicType\",\"name\":\"ProductCharacteristicTypeName\"},\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"The name of a Product Characteristic Type.\",\"isNullable\":true,\"name\":\"ProductCharacteristicTypeName\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ProductCharacteristicType.cdm.json/ProductCharacteristicType\",\"name\":\"ProductCharacteristicTypeDescription\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"The description of a Product Characteristic Type.\",\"isNullable\":true,\"name\":\"ProductCharacteristicTypeDescription\"}]}}}",
+			"Description": "A characteristic that describes the associated product.\n\nEx:\n- Reduced Calorie\n- Light Food-Designated Product\n- Low Cholesterol\n- Vegan\n- Waterproof\n- Durable\n- SPF30",
+			"DisplayFolderInfo": "{\"name\":\"Product\",\"colorCode\":\"#0C614C\"}",
+			"PrimaryKeys": "ProductCharacteristicTypeId",
+			"spark.sql.sources.provider": "csv",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"ProductCharacteristicTypeId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"ProductCharacteristicTypeName\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ProductCharacteristicTypeDescription\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "044bb512-aecb-4eb7-8f5f-f53b1707bdf7",
+		"Description": "A characteristic that describes the associated product.\n\nEx:\n- Reduced Calorie\n- Light Food-Designated Product\n- Low Cholesterol\n- Vegan\n- Waterproof\n- Durable\n- SPF30"
+	},
+	"type": "TABLE"
+}

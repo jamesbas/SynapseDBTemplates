@@ -1,0 +1,29 @@
+{
+	"name": "relationship-pzpmhouuxg",
+	"properties": {
+		"Name": "relationship-pzpmhouuxg",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "Party",
+		"ToTableName": "Tax",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "PartyId",
+				"ToColumnName": "TaxResponsiblePartyId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"Party.cdm.json/Party\",\"toEntity\":\"Tax.cdm.json/Tax\",\"joinPairs\":[{\"fromAttribute\":\"PartyId\",\"toAttribute\":\"TaxResponsiblePartyId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 2,
+		"ObjectId": "203e71fe-816c-492c-b004-8a48fb15db7e"
+	},
+	"type": "RELATIONSHIP"
+}

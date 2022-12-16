@@ -1,0 +1,137 @@
+{
+	"name": "VendorRelationshipType",
+	"properties": {
+		"Name": "VendorRelationshipType",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "VendorRelationshipTypeId",
+					"Description": "The unique identifier of a Vendor relationship type.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "VendorRelationshipType.cdm.json/VendorRelationshipType",
+						"Name": "VendorRelationshipTypeId"
+					}
+				},
+				{
+					"Name": "VendorRelationshipTypeName",
+					"Description": "The name of a Vendor relationship type.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 256,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "VendorRelationshipType.cdm.json/VendorRelationshipType",
+						"Name": "VendorRelationshipTypeName"
+					}
+				},
+				{
+					"Name": "VendorRelationshipTypeDescription",
+					"Description": "The description of a Vendor relationship type.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "VendorRelationshipType.cdm.json/VendorRelationshipType",
+						"Name": "VendorRelationshipTypeDescription"
+					}
+				}
+			],
+			"ColumnSetEntityName": "675057f0-0a22-4c44-a09e-d9ddc89d3c5f",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/VendorRelationshipType",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/VendorRelationshipType",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"VendorRelationshipTypeId\":{\"entity\":\"VendorRelationshipType.cdm.json/VendorRelationshipType\",\"name\":\"VendorRelationshipTypeId\"},\"VendorRelationshipTypeName\":{\"entity\":\"VendorRelationshipType.cdm.json/VendorRelationshipType\",\"name\":\"VendorRelationshipTypeName\"},\"VendorRelationshipTypeDescription\":{\"entity\":\"VendorRelationshipType.cdm.json/VendorRelationshipType\",\"name\":\"VendorRelationshipTypeDescription\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"VendorRelationshipType\",\"path\":\"VendorRelationshipType.cdm.json/VendorRelationshipType\"},\"description\":\"The nature of the relationship between the Vendors over the indicated period.\\n\\n Ex:\\n- Vendor replaced by Related Vendor\\n- Vendor is the parent of Related Vendor\\n- Vendor is a subsidiary of Related Vendor\\n- Vendor is a partner of Related Vendor\",\"primaryKey\":[\"VendorRelationshipTypeId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"VendorRelationshipType.cdm.json/VendorRelationshipType\",\"name\":\"VendorRelationshipTypeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Vendor relationship type.\",\"isNullable\":false,\"name\":\"VendorRelationshipTypeId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"VendorRelationshipType.cdm.json/VendorRelationshipType\",\"name\":\"VendorRelationshipTypeName\"},\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"The name of a Vendor relationship type.\",\"isNullable\":true,\"name\":\"VendorRelationshipTypeName\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"VendorRelationshipType.cdm.json/VendorRelationshipType\",\"name\":\"VendorRelationshipTypeDescription\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"The description of a Vendor relationship type.\",\"isNullable\":true,\"name\":\"VendorRelationshipTypeDescription\"}]}}}",
+			"Description": "The nature of the relationship between the Vendors over the indicated period.\n\n Ex:\n- Vendor replaced by Related Vendor\n- Vendor is the parent of Related Vendor\n- Vendor is a subsidiary of Related Vendor\n- Vendor is a partner of Related Vendor",
+			"DisplayFolderInfo": "{\"name\":\"Vendor\",\"colorCode\":\"#1C508C\"}",
+			"PrimaryKeys": "VendorRelationshipTypeId",
+			"spark.sql.sources.provider": "csv",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"VendorRelationshipTypeId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"VendorRelationshipTypeName\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"VendorRelationshipTypeDescription\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "9a85f6ea-99c3-4633-a5b3-7f9f3aeecb7e",
+		"Description": "The nature of the relationship between the Vendors over the indicated period.\n\n Ex:\n- Vendor replaced by Related Vendor\n- Vendor is the parent of Related Vendor\n- Vendor is a subsidiary of Related Vendor\n- Vendor is a partner of Related Vendor"
+	},
+	"type": "TABLE"
+}

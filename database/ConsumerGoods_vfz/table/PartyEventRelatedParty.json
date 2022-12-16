@@ -1,0 +1,195 @@
+{
+	"name": "PartyEventRelatedParty",
+	"properties": {
+		"Name": "PartyEventRelatedParty",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "PartyId",
+					"Description": "The unique identifier of a Party.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyEventRelatedParty.cdm.json/PartyEventRelatedParty",
+						"Name": "PartyId"
+					}
+				},
+				{
+					"Name": "EventTypeId",
+					"Description": "The unique identifier of an Event Type.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyEventRelatedParty.cdm.json/PartyEventRelatedParty",
+						"Name": "EventTypeId"
+					}
+				},
+				{
+					"Name": "Timestamp",
+					"Description": "The timestamp of the associated Party Event.\n\nEx:\nName = \"Bill Smith\"\nEvent Type = \"Birth Of Child\"\nTimestamp = \"08/24/08  09:15\"",
+					"OriginDataTypeName": {
+						"TypeName": "timestamp",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"TimestampFormat": "YYYY-MM-DD HH:MM:SS.fffffffff",
+							"HIVE_TYPE_STRING": "timestamp"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyEventRelatedParty.cdm.json/PartyEventRelatedParty",
+						"Name": "Timestamp"
+					}
+				},
+				{
+					"Name": "RelatedPartyId",
+					"Description": "The unique identifier of a Party.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyEventRelatedParty.cdm.json/PartyEventRelatedParty",
+						"Name": "RelatedPartyId"
+					}
+				},
+				{
+					"Name": "PartyEventPartyRelationshipTypeId",
+					"Description": "The unique identifier of a Party Event Party Relationship Type.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyEventRelatedParty.cdm.json/PartyEventRelatedParty",
+						"Name": "PartyEventPartyRelationshipTypeId"
+					}
+				},
+				{
+					"Name": "PartyEventPartyRelationshipNote",
+					"Description": "A note, comment or additional information regarding the Party Event - Party relationship.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyEventRelatedParty.cdm.json/PartyEventRelatedParty",
+						"Name": "PartyEventPartyRelationshipNote"
+					}
+				}
+			],
+			"ColumnSetEntityName": "3241f519-0be3-452d-8797-30ee8d212732",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/PartyEventRelatedParty",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/PartyEventRelatedParty",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"PartyId\":{\"entity\":\"PartyEventRelatedParty.cdm.json/PartyEventRelatedParty\",\"name\":\"PartyId\"},\"EventTypeId\":{\"entity\":\"PartyEventRelatedParty.cdm.json/PartyEventRelatedParty\",\"name\":\"EventTypeId\"},\"Timestamp\":{\"entity\":\"PartyEventRelatedParty.cdm.json/PartyEventRelatedParty\",\"name\":\"Timestamp\"},\"RelatedPartyId\":{\"entity\":\"PartyEventRelatedParty.cdm.json/PartyEventRelatedParty\",\"name\":\"RelatedPartyId\"},\"PartyEventPartyRelationshipTypeId\":{\"entity\":\"PartyEventRelatedParty.cdm.json/PartyEventRelatedParty\",\"name\":\"PartyEventPartyRelationshipTypeId\"},\"PartyEventPartyRelationshipNote\":{\"entity\":\"PartyEventRelatedParty.cdm.json/PartyEventRelatedParty\",\"name\":\"PartyEventPartyRelationshipNote\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"PartyEventRelatedParty\",\"path\":\"PartyEventRelatedParty.cdm.json/PartyEventRelatedParty\"},\"description\":\"A party having a relationship with the associated Party Event of the associated PARTY EVENT RELATIONSHIP TYPE.\\n\\nEx:\\nName = \\\"Bill Smith\\\"\\nEvent Type = \\\"Birth Of Child\\\"\\nTimestamp = \\\"08/24/08  09:15\\\"\\nMother = \\\"Sally Smith\\\"\\nName = \\\"Bill Smith\\\"\\nEvent Type = \\\"Birth Of Child\\\"\\nTimestamp = \\\"08/24/08  09:15\\\"\\nAttending Doctor = \\\"Paul Bloom MD\\\"\",\"primaryKey\":[\"PartyId\",\"EventTypeId\",\"Timestamp\",\"RelatedPartyId\",\"PartyEventPartyRelationshipTypeId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyEventRelatedParty.cdm.json/PartyEventRelatedParty\",\"name\":\"PartyId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a Party.\",\"isNullable\":false,\"name\":\"PartyId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyEventRelatedParty.cdm.json/PartyEventRelatedParty\",\"name\":\"EventTypeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of an Event Type.\",\"isNullable\":false,\"name\":\"EventTypeId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyEventRelatedParty.cdm.json/PartyEventRelatedParty\",\"name\":\"Timestamp\"},\"dataType\":\"timestamp\",\"description\":\"The timestamp of the associated Party Event.\\n\\nEx:\\nName = \\\"Bill Smith\\\"\\nEvent Type = \\\"Birth Of Child\\\"\\nTimestamp = \\\"08/24/08  09:15\\\"\",\"isNullable\":false,\"name\":\"Timestamp\",\"timestampFormat\":\"YYYY-MM-DD HH:MM:SS.fffffffff\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyEventRelatedParty.cdm.json/PartyEventRelatedParty\",\"name\":\"RelatedPartyId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a Party.\",\"isNullable\":false,\"name\":\"RelatedPartyId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyEventRelatedParty.cdm.json/PartyEventRelatedParty\",\"name\":\"PartyEventPartyRelationshipTypeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Party Event Party Relationship Type.\",\"isNullable\":false,\"name\":\"PartyEventPartyRelationshipTypeId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyEventRelatedParty.cdm.json/PartyEventRelatedParty\",\"name\":\"PartyEventPartyRelationshipNote\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"A note, comment or additional information regarding the Party Event - Party relationship.\",\"isNullable\":true,\"name\":\"PartyEventPartyRelationshipNote\"}]}}}",
+			"Description": "A party having a relationship with the associated Party Event of the associated PARTY EVENT RELATIONSHIP TYPE.\n\nEx:\nName = \"Bill Smith\"\nEvent Type = \"Birth Of Child\"\nTimestamp = \"08/24/08  09:15\"\nMother = \"Sally Smith\"\nName = \"Bill Smith\"\nEvent Type = \"Birth Of Child\"\nTimestamp = \"08/24/08  09:15\"\nAttending Doctor = \"Paul Bloom MD\"",
+			"DisplayFolderInfo": "{\"name\":\"Party\",\"colorCode\":\"#7D0F6C\"}",
+			"PrimaryKeys": "PartyId,EventTypeId,Timestamp,RelatedPartyId,PartyEventPartyRelationshipTypeId",
+			"spark.sql.sources.provider": "csv",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"PartyId\",\"type\":\"long\",\"nullable\":false,\"metadata\":{}},{\"name\":\"EventTypeId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"Timestamp\",\"type\":\"timestamp\",\"nullable\":false,\"metadata\":{}},{\"name\":\"RelatedPartyId\",\"type\":\"long\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PartyEventPartyRelationshipTypeId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PartyEventPartyRelationshipNote\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "b55865a9-80f3-4dd0-aa1e-f7240608f208",
+		"Description": "A party having a relationship with the associated Party Event of the associated PARTY EVENT RELATIONSHIP TYPE.\n\nEx:\nName = \"Bill Smith\"\nEvent Type = \"Birth Of Child\"\nTimestamp = \"08/24/08  09:15\"\nMother = \"Sally Smith\"\nName = \"Bill Smith\"\nEvent Type = \"Birth Of Child\"\nTimestamp = \"08/24/08  09:15\"\nAttending Doctor = \"Paul Bloom MD\""
+	},
+	"type": "TABLE"
+}

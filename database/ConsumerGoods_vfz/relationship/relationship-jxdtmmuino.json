@@ -1,0 +1,29 @@
+{
+	"name": "relationship-jxdtmmuino",
+	"properties": {
+		"Name": "relationship-jxdtmmuino",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "MinorityCategory",
+		"ToTableName": "PartyMinorityCategory",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "MinorityCategoryId",
+				"ToColumnName": "MinorityCategoryId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"MinorityCategory.cdm.json/MinorityCategory\",\"toEntity\":\"PartyMinorityCategory.cdm.json/PartyMinorityCategory\",\"joinPairs\":[{\"fromAttribute\":\"MinorityCategoryId\",\"toAttribute\":\"MinorityCategoryId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "5614e1e5-06f6-4ed6-a5d2-0ca06ad14ead"
+	},
+	"type": "RELATIONSHIP"
+}

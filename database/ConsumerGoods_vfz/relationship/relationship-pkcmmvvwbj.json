@@ -1,0 +1,29 @@
+{
+	"name": "relationship-pkcmmvvwbj",
+	"properties": {
+		"Name": "relationship-pkcmmvvwbj",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "AioLevel",
+		"ToTableName": "PartyOpinion",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "AioLevelId",
+				"ToColumnName": "AioLevelId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"AioLevel.cdm.json/AioLevel\",\"toEntity\":\"PartyOpinion.cdm.json/PartyOpinion\",\"joinPairs\":[{\"fromAttribute\":\"AioLevelId\",\"toAttribute\":\"AioLevelId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "b93c9b46-9a09-4c69-80a7-dcd1d8fd45ec"
+	},
+	"type": "RELATIONSHIP"
+}

@@ -1,0 +1,29 @@
+{
+	"name": "relationship-oykihdfelz",
+	"properties": {
+		"Name": "relationship-oykihdfelz",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "IdentificationType",
+		"ToTableName": "Identification",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "IdentificationTypeId",
+				"ToColumnName": "IdentificationTypeId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"IdentificationType.cdm.json/IdentificationType\",\"toEntity\":\"Identification.cdm.json/Identification\",\"joinPairs\":[{\"fromAttribute\":\"IdentificationTypeId\",\"toAttribute\":\"IdentificationTypeId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "ed011a43-71b3-427d-8826-6f1c8efd997d"
+	},
+	"type": "RELATIONSHIP"
+}

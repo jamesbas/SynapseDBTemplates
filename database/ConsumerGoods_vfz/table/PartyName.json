@@ -1,0 +1,196 @@
+{
+	"name": "PartyName",
+	"properties": {
+		"Name": "PartyName",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "PartyId",
+					"Description": "The unique identifier of a Party.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyName.cdm.json/PartyName",
+						"Name": "PartyId"
+					}
+				},
+				{
+					"Name": "PartyNameId",
+					"Description": "The unique identifier of a Party Name.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyName.cdm.json/PartyName",
+						"Name": "PartyNameId"
+					}
+				},
+				{
+					"Name": "NameUsageId",
+					"Description": "The unique identifier of a name usage.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyName.cdm.json/PartyName",
+						"Name": "NameUsageId"
+					}
+				},
+				{
+					"Name": "StartDate",
+					"Description": "The start date for which the name is effective or 'as-of'.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyName.cdm.json/PartyName",
+						"Name": "StartDate"
+					}
+				},
+				{
+					"Name": "EndDate",
+					"Description": "The end date for which the name is effective or 'as-of'.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyName.cdm.json/PartyName",
+						"Name": "EndDate"
+					}
+				},
+				{
+					"Name": "PartyNameNote",
+					"Description": "A note, comment or additional information regarding the party name.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyName.cdm.json/PartyName",
+						"Name": "PartyNameNote"
+					}
+				}
+			],
+			"ColumnSetEntityName": "591821c4-8297-4d1a-82ec-fae75f43b839",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/PartyName",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/PartyName",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"PartyId\":{\"entity\":\"PartyName.cdm.json/PartyName\",\"name\":\"PartyId\"},\"PartyNameId\":{\"entity\":\"PartyName.cdm.json/PartyName\",\"name\":\"PartyNameId\"},\"NameUsageId\":{\"entity\":\"PartyName.cdm.json/PartyName\",\"name\":\"NameUsageId\"},\"StartDate\":{\"entity\":\"PartyName.cdm.json/PartyName\",\"name\":\"StartDate\"},\"EndDate\":{\"entity\":\"PartyName.cdm.json/PartyName\",\"name\":\"EndDate\"},\"PartyNameNote\":{\"entity\":\"PartyName.cdm.json/PartyName\",\"name\":\"PartyNameNote\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"PartyName\",\"path\":\"PartyName.cdm.json/PartyName\"},\"description\":\"The names by which the party is known in various contexts or usages.\",\"primaryKey\":[\"PartyId\",\"PartyNameId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyName.cdm.json/PartyName\",\"name\":\"PartyId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a Party.\",\"isNullable\":false,\"name\":\"PartyId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyName.cdm.json/PartyName\",\"name\":\"PartyNameId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Party Name.\",\"isNullable\":false,\"name\":\"PartyNameId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyName.cdm.json/PartyName\",\"name\":\"NameUsageId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a name usage.\",\"isNullable\":false,\"name\":\"NameUsageId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyName.cdm.json/PartyName\",\"name\":\"StartDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The start date for which the name is effective or 'as-of'.\",\"isNullable\":true,\"name\":\"StartDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyName.cdm.json/PartyName\",\"name\":\"EndDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The end date for which the name is effective or 'as-of'.\",\"isNullable\":true,\"name\":\"EndDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyName.cdm.json/PartyName\",\"name\":\"PartyNameNote\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"A note, comment or additional information regarding the party name.\",\"isNullable\":true,\"name\":\"PartyNameNote\"}]}}}",
+			"Description": "The names by which the party is known in various contexts or usages.",
+			"DisplayFolderInfo": "{\"name\":\"Party\",\"colorCode\":\"#7D0F6C\"}",
+			"PrimaryKeys": "PartyId,PartyNameId",
+			"spark.sql.sources.provider": "csv",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"PartyId\",\"type\":\"long\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PartyNameId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"NameUsageId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"StartDate\",\"type\":\"date\",\"nullable\":true,\"metadata\":{}},{\"name\":\"EndDate\",\"type\":\"date\",\"nullable\":true,\"metadata\":{}},{\"name\":\"PartyNameNote\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "8af81fed-a1cd-4158-be5e-9cb3c1ebd057",
+		"Description": "The names by which the party is known in various contexts or usages."
+	},
+	"type": "TABLE"
+}

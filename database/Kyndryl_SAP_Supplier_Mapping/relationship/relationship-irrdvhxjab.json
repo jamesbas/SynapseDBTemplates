@@ -1,0 +1,29 @@
+{
+	"name": "relationship-irrdvhxjab",
+	"properties": {
+		"Name": "relationship-irrdvhxjab",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Kyndryl_SAP_Supplier_Mapping"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "ProductCharacteristicType",
+		"ToTableName": "ProductCharacteristic",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "ProductCharacteristicTypeId",
+				"ToColumnName": "ProductCharacteristicTypeId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"ProductCharacteristicType.cdm.json/ProductCharacteristicType\",\"toEntity\":\"ProductCharacteristic.cdm.json/ProductCharacteristic\",\"joinPairs\":[{\"fromAttribute\":\"ProductCharacteristicTypeId\",\"toAttribute\":\"ProductCharacteristicTypeId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "66a31e45-2c1e-423c-8c44-5271de4f8cd4"
+	},
+	"type": "RELATIONSHIP"
+}

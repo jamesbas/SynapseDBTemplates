@@ -1,0 +1,29 @@
+{
+	"name": "relationship-omkmarxyqj",
+	"properties": {
+		"Name": "relationship-omkmarxyqj",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Kyndryl_SAP_Supplier_Mapping"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "CustomerAccount",
+		"ToTableName": "CustomerAccount",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "CustomerAccountId",
+				"ToColumnName": "SubaccountOfCustomerAccountId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"CustomerAccount.cdm.json/CustomerAccount\",\"toEntity\":\"CustomerAccount.cdm.json/CustomerAccount\",\"joinPairs\":[{\"fromAttribute\":\"CustomerAccountId\",\"toAttribute\":\"SubaccountOfCustomerAccountId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "f47fa6e9-f1da-48e9-9800-f197e251add8"
+	},
+	"type": "RELATIONSHIP"
+}

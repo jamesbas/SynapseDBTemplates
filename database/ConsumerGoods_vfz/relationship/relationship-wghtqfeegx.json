@@ -1,0 +1,29 @@
+{
+	"name": "relationship-wghtqfeegx",
+	"properties": {
+		"Name": "relationship-wghtqfeegx",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "LearningEvent",
+		"ToTableName": "PartyLearningEvent",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "LearningEventId",
+				"ToColumnName": "LearningEventId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"LearningEvent.cdm.json/LearningEvent\",\"toEntity\":\"PartyLearningEvent.cdm.json/PartyLearningEvent\",\"joinPairs\":[{\"fromAttribute\":\"LearningEventId\",\"toAttribute\":\"LearningEventId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "c9281b2f-13d1-446e-a5ef-5320da76bbb0"
+	},
+	"type": "RELATIONSHIP"
+}

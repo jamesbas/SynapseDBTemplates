@@ -1,0 +1,29 @@
+{
+	"name": "relationship-ihdvqgbujs",
+	"properties": {
+		"Name": "relationship-ihdvqgbujs",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "Franchisee",
+		"ToTableName": "RoyaltyPayment",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "FranchiseeId",
+				"ToColumnName": "FranchiseeId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"Franchisee.cdm.json/Franchisee\",\"toEntity\":\"RoyaltyPayment.cdm.json/RoyaltyPayment\",\"joinPairs\":[{\"fromAttribute\":\"FranchiseeId\",\"toAttribute\":\"FranchiseeId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "228caf2b-3edb-4401-8e74-bcc0a494bbac"
+	},
+	"type": "RELATIONSHIP"
+}

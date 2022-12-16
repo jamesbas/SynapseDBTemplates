@@ -1,0 +1,156 @@
+{
+	"name": "EventType",
+	"properties": {
+		"Name": "EventType",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "EventTypeId",
+					"Description": "The unique identifier of an Event Type.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "EventType.cdm.json/EventType",
+						"Name": "EventTypeId"
+					}
+				},
+				{
+					"Name": "EventTypeName",
+					"Description": "The name of an Event Type.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 256,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "EventType.cdm.json/EventType",
+						"Name": "EventTypeName"
+					}
+				},
+				{
+					"Name": "EventTypeDescription",
+					"Description": "The description of an Event Type.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "EventType.cdm.json/EventType",
+						"Name": "EventTypeDescription"
+					}
+				},
+				{
+					"Name": "EventCategoryId",
+					"Description": "The unique identifier of an event category.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "EventType.cdm.json/EventType",
+						"Name": "EventCategoryId"
+					}
+				}
+			],
+			"ColumnSetEntityName": "380a1ed4-8fcf-4658-bcce-69ac462e04aa",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/EventType",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/EventType",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"EventTypeId\":{\"entity\":\"EventType.cdm.json/EventType\",\"name\":\"EventTypeId\"},\"EventTypeName\":{\"entity\":\"EventType.cdm.json/EventType\",\"name\":\"EventTypeName\"},\"EventTypeDescription\":{\"entity\":\"EventType.cdm.json/EventType\",\"name\":\"EventTypeDescription\"},\"EventCategoryId\":{\"entity\":\"EventType.cdm.json/EventType\",\"name\":\"EventCategoryId\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"EventType\",\"path\":\"EventType.cdm.json/EventType\"},\"description\":\"A categorization of events that can occur in conjunction with a party to create a 'history' of pre-defined events.\\n\\nEx:   \\nIndividual\\n- Birth of Child\\n- Death of Family Member\\n- Marriage\\n- Divorce\\n- Employment\\n- Loss of employment\\n- Purchase of home\\n- Purchase of vehicle\\n- Purchase of electric vehicle\\n\\nLegal Entity\\n- Incorporation\\n- Reorganization\\n- Bankruptcy filing\\n- Annual reports filing\\n- Audit\",\"primaryKey\":[\"EventTypeId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"EventType.cdm.json/EventType\",\"name\":\"EventTypeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of an Event Type.\",\"isNullable\":false,\"name\":\"EventTypeId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"EventType.cdm.json/EventType\",\"name\":\"EventTypeName\"},\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"The name of an Event Type.\",\"isNullable\":true,\"name\":\"EventTypeName\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"EventType.cdm.json/EventType\",\"name\":\"EventTypeDescription\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"The description of an Event Type.\",\"isNullable\":true,\"name\":\"EventTypeDescription\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"EventType.cdm.json/EventType\",\"name\":\"EventCategoryId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of an event category.\",\"isNullable\":true,\"name\":\"EventCategoryId\"}]}}}",
+			"Description": "A categorization of events that can occur in conjunction with a party to create a 'history' of pre-defined events.\n\nEx:   \nIndividual\n- Birth of Child\n- Death of Family Member\n- Marriage\n- Divorce\n- Employment\n- Loss of employment\n- Purchase of home\n- Purchase of vehicle\n- Purchase of electric vehicle\n\nLegal Entity\n- Incorporation\n- Reorganization\n- Bankruptcy filing\n- Annual reports filing\n- Audit",
+			"DisplayFolderInfo": "{\"name\":\"Party\",\"colorCode\":\"#7D0F6C\"}",
+			"PrimaryKeys": "EventTypeId",
+			"spark.sql.sources.provider": "csv",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"EventTypeId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"EventTypeName\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"EventTypeDescription\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"EventCategoryId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "175c5459-7121-468d-bbb6-60d0117e1e53",
+		"Description": "A categorization of events that can occur in conjunction with a party to create a 'history' of pre-defined events.\n\nEx:   \nIndividual\n- Birth of Child\n- Death of Family Member\n- Marriage\n- Divorce\n- Employment\n- Loss of employment\n- Purchase of home\n- Purchase of vehicle\n- Purchase of electric vehicle\n\nLegal Entity\n- Incorporation\n- Reorganization\n- Bankruptcy filing\n- Annual reports filing\n- Audit"
+	},
+	"type": "TABLE"
+}

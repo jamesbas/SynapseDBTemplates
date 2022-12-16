@@ -1,0 +1,137 @@
+{
+	"name": "NamePreference",
+	"properties": {
+		"Name": "NamePreference",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "NamePreferenceId",
+					"Description": "The unique identifier of a name preference.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "NamePreference.cdm.json/NamePreference",
+						"Name": "NamePreferenceId"
+					}
+				},
+				{
+					"Name": "NamePreferenceName",
+					"Description": "The name of a name preference.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 256,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "NamePreference.cdm.json/NamePreference",
+						"Name": "NamePreferenceName"
+					}
+				},
+				{
+					"Name": "NamePreferenceDescription",
+					"Description": "The description of a name preference.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "NamePreference.cdm.json/NamePreference",
+						"Name": "NamePreferenceDescription"
+					}
+				}
+			],
+			"ColumnSetEntityName": "677271ff-924e-4bcf-bc7f-8ac01c73686c",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/NamePreference",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/NamePreference",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"NamePreferenceId\":{\"entity\":\"NamePreference.cdm.json/NamePreference\",\"name\":\"NamePreferenceId\"},\"NamePreferenceName\":{\"entity\":\"NamePreference.cdm.json/NamePreference\",\"name\":\"NamePreferenceName\"},\"NamePreferenceDescription\":{\"entity\":\"NamePreference.cdm.json/NamePreference\",\"name\":\"NamePreferenceDescription\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"NamePreference\",\"path\":\"NamePreference.cdm.json/NamePreference\"},\"description\":\"A preference that is applied to a name and its usage.\\n\\nEx:\\n- Preferred\\n- First Alternate\\n- Second Alternate\\n- Not to be used\\n- N/A\",\"primaryKey\":[\"NamePreferenceId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"NamePreference.cdm.json/NamePreference\",\"name\":\"NamePreferenceId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a name preference.\",\"isNullable\":false,\"name\":\"NamePreferenceId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"NamePreference.cdm.json/NamePreference\",\"name\":\"NamePreferenceName\"},\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"The name of a name preference.\",\"isNullable\":true,\"name\":\"NamePreferenceName\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"NamePreference.cdm.json/NamePreference\",\"name\":\"NamePreferenceDescription\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"The description of a name preference.\",\"isNullable\":true,\"name\":\"NamePreferenceDescription\"}]}}}",
+			"Description": "A preference that is applied to a name and its usage.\n\nEx:\n- Preferred\n- First Alternate\n- Second Alternate\n- Not to be used\n- N/A",
+			"DisplayFolderInfo": "{\"name\":\"Party\",\"colorCode\":\"#7D0F6C\"}",
+			"PrimaryKeys": "NamePreferenceId",
+			"spark.sql.sources.provider": "csv",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"NamePreferenceId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"NamePreferenceName\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"NamePreferenceDescription\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "137e8bea-70e6-4204-9e89-705a8b8ca64f",
+		"Description": "A preference that is applied to a name and its usage.\n\nEx:\n- Preferred\n- First Alternate\n- Second Alternate\n- Not to be used\n- N/A"
+	},
+	"type": "TABLE"
+}

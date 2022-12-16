@@ -1,0 +1,29 @@
+{
+	"name": "relationship-bnphuzemcl",
+	"properties": {
+		"Name": "relationship-bnphuzemcl",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "SocialMediaPlatformUser",
+		"ToTableName": "PartySocialMediaPlatformUser",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "SocialMediaPlatformUserId",
+				"ToColumnName": "SocialMediaPlatformUserId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"SocialMediaPlatformUser.cdm.json/SocialMediaPlatformUser\",\"toEntity\":\"PartySocialMediaPlatformUser.cdm.json/PartySocialMediaPlatformUser\",\"joinPairs\":[{\"fromAttribute\":\"SocialMediaPlatformUserId\",\"toAttribute\":\"SocialMediaPlatformUserId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "6d5f3190-725d-454b-b2e0-9001183c221a"
+	},
+	"type": "RELATIONSHIP"
+}

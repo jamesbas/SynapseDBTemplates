@@ -1,0 +1,29 @@
+{
+	"name": "relationship-ujjfewybcq",
+	"properties": {
+		"Name": "relationship-ujjfewybcq",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "Country",
+		"ToTableName": "ConsumerGoodsProduct",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "CountryId",
+				"ToColumnName": "PrimaryCountryOfOriginCountryId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"Country.cdm.json/Country\",\"toEntity\":\"ConsumerGoodsProduct.cdm.json/ConsumerGoodsProduct\",\"joinPairs\":[{\"fromAttribute\":\"CountryId\",\"toAttribute\":\"PrimaryCountryOfOriginCountryId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 2,
+		"ObjectId": "db6c6c11-9851-4ab5-9a13-5b9eb8131a3d"
+	},
+	"type": "RELATIONSHIP"
+}

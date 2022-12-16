@@ -1,0 +1,29 @@
+{
+	"name": "relationship-kdbbsmfxbg",
+	"properties": {
+		"Name": "relationship-kdbbsmfxbg",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "CustomerLegalAction",
+		"ToTableName": "CustomerLegalActionContract",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "PeriodStartDate",
+				"ToColumnName": "PeriodStartDate"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"CustomerLegalAction.cdm.json/CustomerLegalAction\",\"toEntity\":\"CustomerLegalActionContract.cdm.json/CustomerLegalActionContract\",\"joinPairs\":[{\"fromAttribute\":\"PeriodStartDate\",\"toAttribute\":\"PeriodStartDate\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "bd26b46b-4dca-4a0e-9d25-87cb77d0d50b"
+	},
+	"type": "RELATIONSHIP"
+}

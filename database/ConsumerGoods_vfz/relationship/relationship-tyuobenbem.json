@@ -1,0 +1,29 @@
+{
+	"name": "relationship-tyuobenbem",
+	"properties": {
+		"Name": "relationship-tyuobenbem",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "BankAccount",
+		"ToTableName": "Payment",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "BankAccountId",
+				"ToColumnName": "BankAccountId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"BankAccount.cdm.json/BankAccount\",\"toEntity\":\"Payment.cdm.json/Payment\",\"joinPairs\":[{\"fromAttribute\":\"BankAccountId\",\"toAttribute\":\"BankAccountId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 2,
+		"ObjectId": "dc6a14e5-b7cc-4250-b2d0-1df6a44617bd"
+	},
+	"type": "RELATIONSHIP"
+}

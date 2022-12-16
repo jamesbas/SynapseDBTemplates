@@ -1,0 +1,29 @@
+{
+	"name": "relationship-yzsqorangd",
+	"properties": {
+		"Name": "relationship-yzsqorangd",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Kyndryl_SAP_Supplier_Mapping"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "Party",
+		"ToTableName": "Tax",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "PartyId",
+				"ToColumnName": "TaxResponsiblePartyId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"Party.cdm.json/Party\",\"toEntity\":\"Tax.cdm.json/Tax\",\"joinPairs\":[{\"fromAttribute\":\"PartyId\",\"toAttribute\":\"TaxResponsiblePartyId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "1268052a-9f3d-4bdf-a3a5-f3a243166dc8"
+	},
+	"type": "RELATIONSHIP"
+}

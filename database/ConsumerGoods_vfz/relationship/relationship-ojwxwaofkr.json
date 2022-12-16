@@ -1,0 +1,29 @@
+{
+	"name": "relationship-ojwxwaofkr",
+	"properties": {
+		"Name": "relationship-ojwxwaofkr",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "JobTitle",
+		"ToTableName": "PartyEmployment",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "JobTitleId",
+				"ToColumnName": "JobTitleId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"JobTitle.cdm.json/JobTitle\",\"toEntity\":\"PartyEmployment.cdm.json/PartyEmployment\",\"joinPairs\":[{\"fromAttribute\":\"JobTitleId\",\"toAttribute\":\"JobTitleId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "e8453a1c-aa54-40a1-a10b-38c7153172b0"
+	},
+	"type": "RELATIONSHIP"
+}

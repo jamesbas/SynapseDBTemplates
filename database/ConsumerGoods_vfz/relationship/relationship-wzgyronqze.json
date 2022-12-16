@@ -1,0 +1,29 @@
+{
+	"name": "relationship-wzgyronqze",
+	"properties": {
+		"Name": "relationship-wzgyronqze",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "Asset",
+		"ToTableName": "LeaseEquipment",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "AssetId",
+				"ToColumnName": "AssetId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"Asset.cdm.json/Asset\",\"toEntity\":\"LeaseEquipment.cdm.json/LeaseEquipment\",\"joinPairs\":[{\"fromAttribute\":\"AssetId\",\"toAttribute\":\"AssetId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "8db83a22-3501-480c-9da4-6ab1f5f854dd"
+	},
+	"type": "RELATIONSHIP"
+}

@@ -1,0 +1,29 @@
+{
+	"name": "relationship-uimoxqiquv",
+	"properties": {
+		"Name": "relationship-uimoxqiquv",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "VendorType",
+		"ToTableName": "Vendor",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "VendorTypeId",
+				"ToColumnName": "VendorTypeId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"VendorType.cdm.json/VendorType\",\"toEntity\":\"Vendor.cdm.json/Vendor\",\"joinPairs\":[{\"fromAttribute\":\"VendorTypeId\",\"toAttribute\":\"VendorTypeId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "5aa56904-1ceb-447a-9ba8-21c9ea0658a3"
+	},
+	"type": "RELATIONSHIP"
+}

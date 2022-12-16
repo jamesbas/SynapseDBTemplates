@@ -1,0 +1,29 @@
+{
+	"name": "relationship-agozogfkhb",
+	"properties": {
+		"Name": "relationship-agozogfkhb",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "SicIndustry",
+		"ToTableName": "DunBradstreetReport",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "SicIndustryCode",
+				"ToColumnName": "SicIndustryCode"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"SicIndustry.cdm.json/SicIndustry\",\"toEntity\":\"DunBradstreetReport.cdm.json/DunBradstreetReport\",\"joinPairs\":[{\"fromAttribute\":\"SicIndustryCode\",\"toAttribute\":\"SicIndustryCode\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "96c52692-c748-48d8-ba71-184d9748d6cf"
+	},
+	"type": "RELATIONSHIP"
+}

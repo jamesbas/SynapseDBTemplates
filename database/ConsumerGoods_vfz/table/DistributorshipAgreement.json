@@ -1,0 +1,520 @@
+{
+	"name": "DistributorshipAgreement",
+	"properties": {
+		"Name": "DistributorshipAgreement",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "ContractId",
+					"Description": "The unique identifier of a Contract.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "DistributorshipAgreement.cdm.json/DistributorshipAgreement",
+						"Name": "ContractId"
+					}
+				},
+				{
+					"Name": "AgreementDate",
+					"Description": "The date that the agreement is to become effective.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "DistributorshipAgreement.cdm.json/DistributorshipAgreement",
+						"Name": "AgreementDate"
+					}
+				},
+				{
+					"Name": "RightsGrantedSection",
+					"Description": "This section establishes the basic relationship between the parties essentially:\n\n-  The manufacturer appoints the distributor to distribute manufacturer's products in a predefined geographic area\n\n-  Manufacturer will not authorize other distributors to distribute products in that same geographic area.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "DistributorshipAgreement.cdm.json/DistributorshipAgreement",
+						"Name": "RightsGrantedSection"
+					}
+				},
+				{
+					"Name": "SalesTermsSection",
+					"Description": "This section establishes pricing and shipping terms for the distributor relationship.\n\n(1)  That the manufacturer will set prices \n\n(2)  It may be specified that some advance notice of pricing changes will be given to the distributor\n\n(3)  It is established who will pay for shipping from the manufacturer location and what the liabilities for damage or loss shall be to each party",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "DistributorshipAgreement.cdm.json/DistributorshipAgreement",
+						"Name": "SalesTermsSection"
+					}
+				},
+				{
+					"Name": "PaymentSection",
+					"Description": "This section establishes how payment by distributor to manufacturer shall be made, within what timeframe and defines any penalties for late payment.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "DistributorshipAgreement.cdm.json/DistributorshipAgreement",
+						"Name": "PaymentSection"
+					}
+				},
+				{
+					"Name": "MarketingPoliciesSection",
+					"Description": "This section establishes how marketing will be pursue and maintained by the distributor in terms of adequate inventory, dealer selection and sales procedures.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "DistributorshipAgreement.cdm.json/DistributorshipAgreement",
+						"Name": "MarketingPoliciesSection"
+					}
+				},
+				{
+					"Name": "DistributorDutiesSection",
+					"Description": "This section establishes obligations of the distributor to the manufacturer such as support services, marketing competing products, maintaining a display facility and training of sales personnel.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "DistributorshipAgreement.cdm.json/DistributorshipAgreement",
+						"Name": "DistributorDutiesSection"
+					}
+				},
+				{
+					"Name": "SalesAndMerchandisingPoliciesSection",
+					"Description": "This section establishes sales quotas, promotions, advertising and other issues related to sales of the products.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "DistributorshipAgreement.cdm.json/DistributorshipAgreement",
+						"Name": "SalesAndMerchandisingPoliciesSection"
+					}
+				},
+				{
+					"Name": "AdvertisingPoliciesSection",
+					"Description": "This section establishes the responsibilities of each party related to advertising of the products.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "DistributorshipAgreement.cdm.json/DistributorshipAgreement",
+						"Name": "AdvertisingPoliciesSection"
+					}
+				},
+				{
+					"Name": "ProductWarrantySection",
+					"Description": "This section establishes how defective products will be returned, adjustments made, replacement products provided, shipping costs handled and similar issues.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "DistributorshipAgreement.cdm.json/DistributorshipAgreement",
+						"Name": "ProductWarrantySection"
+					}
+				},
+				{
+					"Name": "IndemnificationSection",
+					"Description": "This section establishes how each party is responsible in case claims are made by third parties in the course of the agreement.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "DistributorshipAgreement.cdm.json/DistributorshipAgreement",
+						"Name": "IndemnificationSection"
+					}
+				},
+				{
+					"Name": "OrderProcessingSection",
+					"Description": "This section establishes how each party will fulfill orders.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "DistributorshipAgreement.cdm.json/DistributorshipAgreement",
+						"Name": "OrderProcessingSection"
+					}
+				},
+				{
+					"Name": "ReturnsPolicySection",
+					"Description": "This section establishes how returns by customers to distributor and distributor to manufacturer will be handled, prices adjusted, shipping reimbursed and similar issues.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "DistributorshipAgreement.cdm.json/DistributorshipAgreement",
+						"Name": "ReturnsPolicySection"
+					}
+				},
+				{
+					"Name": "FinancialPoliciesSection",
+					"Description": "This section establishes how distributor will pay manufacturer, in what time frame, what financial statements will be exchanges or available for inspection by the other party and how accounts will be reconciled.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "DistributorshipAgreement.cdm.json/DistributorshipAgreement",
+						"Name": "FinancialPoliciesSection"
+					}
+				},
+				{
+					"Name": "UseOfManufacturersNameSection",
+					"Description": "This section governs the use by the distributor of the manufacturer's name during and after the period of the agreement.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "DistributorshipAgreement.cdm.json/DistributorshipAgreement",
+						"Name": "UseOfManufacturersNameSection"
+					}
+				},
+				{
+					"Name": "RelationshipOfPartiesSection",
+					"Description": "This section establishes the true relationship between the distributor and manufacturer.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "DistributorshipAgreement.cdm.json/DistributorshipAgreement",
+						"Name": "RelationshipOfPartiesSection"
+					}
+				},
+				{
+					"Name": "TermAndTerminationSection",
+					"Description": "This section establishes the starting date and ending date for the distributor agreement.\n\nThis section also establishes the terms under which the agreement can be terminated prior to the ending date.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "DistributorshipAgreement.cdm.json/DistributorshipAgreement",
+						"Name": "TermAndTerminationSection"
+					}
+				},
+				{
+					"Name": "AgreementStartDate",
+					"Description": "The starting date of the agreement.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "DistributorshipAgreement.cdm.json/DistributorshipAgreement",
+						"Name": "AgreementStartDate"
+					}
+				},
+				{
+					"Name": "AgreementEndDate",
+					"Description": "The ending date of the agreement.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "DistributorshipAgreement.cdm.json/DistributorshipAgreement",
+						"Name": "AgreementEndDate"
+					}
+				},
+				{
+					"Name": "FinalAgreementSection",
+					"Description": "This section makes it clear that this is the final agreement between parties and replaces or supersedes any prior discussions or agreements.    \nAny amendments to this agreement must be made in writing.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "DistributorshipAgreement.cdm.json/DistributorshipAgreement",
+						"Name": "FinalAgreementSection"
+					}
+				},
+				{
+					"Name": "TerminationObligationsSection",
+					"Description": "This section establishes the distributors obligations when the agreement is terminated.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "DistributorshipAgreement.cdm.json/DistributorshipAgreement",
+						"Name": "TerminationObligationsSection"
+					}
+				},
+				{
+					"Name": "AcknowledgementsSection",
+					"Description": "This section states that each party accepts the terms of the agreement and that no promise or commitment was made by either party outside of the agreement.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "DistributorshipAgreement.cdm.json/DistributorshipAgreement",
+						"Name": "AcknowledgementsSection"
+					}
+				},
+				{
+					"Name": "AssignmentSection",
+					"Description": "This section forbids the distributor from assigning its interest or obligation to any third parties.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "DistributorshipAgreement.cdm.json/DistributorshipAgreement",
+						"Name": "AssignmentSection"
+					}
+				}
+			],
+			"ColumnSetEntityName": "54b50528-68fd-43e9-ac3c-537799b0bd64",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/DistributorshipAgreement",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/DistributorshipAgreement",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"ContractId\":{\"entity\":\"DistributorshipAgreement.cdm.json/DistributorshipAgreement\",\"name\":\"ContractId\"},\"AgreementDate\":{\"entity\":\"DistributorshipAgreement.cdm.json/DistributorshipAgreement\",\"name\":\"AgreementDate\"},\"RightsGrantedSection\":{\"entity\":\"DistributorshipAgreement.cdm.json/DistributorshipAgreement\",\"name\":\"RightsGrantedSection\"},\"SalesTermsSection\":{\"entity\":\"DistributorshipAgreement.cdm.json/DistributorshipAgreement\",\"name\":\"SalesTermsSection\"},\"PaymentSection\":{\"entity\":\"DistributorshipAgreement.cdm.json/DistributorshipAgreement\",\"name\":\"PaymentSection\"},\"MarketingPoliciesSection\":{\"entity\":\"DistributorshipAgreement.cdm.json/DistributorshipAgreement\",\"name\":\"MarketingPoliciesSection\"},\"DistributorDutiesSection\":{\"entity\":\"DistributorshipAgreement.cdm.json/DistributorshipAgreement\",\"name\":\"DistributorDutiesSection\"},\"SalesAndMerchandisingPoliciesSection\":{\"entity\":\"DistributorshipAgreement.cdm.json/DistributorshipAgreement\",\"name\":\"SalesAndMerchandisingPoliciesSection\"},\"AdvertisingPoliciesSection\":{\"entity\":\"DistributorshipAgreement.cdm.json/DistributorshipAgreement\",\"name\":\"AdvertisingPoliciesSection\"},\"ProductWarrantySection\":{\"entity\":\"DistributorshipAgreement.cdm.json/DistributorshipAgreement\",\"name\":\"ProductWarrantySection\"},\"IndemnificationSection\":{\"entity\":\"DistributorshipAgreement.cdm.json/DistributorshipAgreement\",\"name\":\"IndemnificationSection\"},\"OrderProcessingSection\":{\"entity\":\"DistributorshipAgreement.cdm.json/DistributorshipAgreement\",\"name\":\"OrderProcessingSection\"},\"ReturnsPolicySection\":{\"entity\":\"DistributorshipAgreement.cdm.json/DistributorshipAgreement\",\"name\":\"ReturnsPolicySection\"},\"FinancialPoliciesSection\":{\"entity\":\"DistributorshipAgreement.cdm.json/DistributorshipAgreement\",\"name\":\"FinancialPoliciesSection\"},\"UseOfManufacturersNameSection\":{\"entity\":\"DistributorshipAgreement.cdm.json/DistributorshipAgreement\",\"name\":\"UseOfManufacturersNameSection\"},\"RelationshipOfPartiesSection\":{\"entity\":\"DistributorshipAgreement.cdm.json/DistributorshipAgreement\",\"name\":\"RelationshipOfPartiesSection\"},\"TermAndTerminationSection\":{\"entity\":\"DistributorshipAgreement.cdm.json/DistributorshipAgreement\",\"name\":\"TermAndTerminationSection\"},\"AgreementStartDate\":{\"entity\":\"DistributorshipAgreement.cdm.json/DistributorshipAgreement\",\"name\":\"AgreementStartDate\"},\"AgreementEndDate\":{\"entity\":\"DistributorshipAgreement.cdm.json/DistributorshipAgreement\",\"name\":\"AgreementEndDate\"},\"FinalAgreementSection\":{\"entity\":\"DistributorshipAgreement.cdm.json/DistributorshipAgreement\",\"name\":\"FinalAgreementSection\"},\"TerminationObligationsSection\":{\"entity\":\"DistributorshipAgreement.cdm.json/DistributorshipAgreement\",\"name\":\"TerminationObligationsSection\"},\"AcknowledgementsSection\":{\"entity\":\"DistributorshipAgreement.cdm.json/DistributorshipAgreement\",\"name\":\"AcknowledgementsSection\"},\"AssignmentSection\":{\"entity\":\"DistributorshipAgreement.cdm.json/DistributorshipAgreement\",\"name\":\"AssignmentSection\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"DistributorshipAgreement\",\"path\":\"DistributorshipAgreement.cdm.json/DistributorshipAgreement\"},\"description\":\"This agreement provides a distributor with rights to distribute a manufacturer's goods within a predefined territory\",\"primaryKey\":[\"ContractId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"DistributorshipAgreement.cdm.json/DistributorshipAgreement\",\"name\":\"ContractId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Contract.\",\"isNullable\":false,\"name\":\"ContractId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"DistributorshipAgreement.cdm.json/DistributorshipAgreement\",\"name\":\"AgreementDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The date that the agreement is to become effective.\",\"isNullable\":true,\"name\":\"AgreementDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"DistributorshipAgreement.cdm.json/DistributorshipAgreement\",\"name\":\"RightsGrantedSection\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"This section establishes the basic relationship between the parties essentially:\\n\\n-  The manufacturer appoints the distributor to distribute manufacturer's products in a predefined geographic area\\n\\n-  Manufacturer will not authorize other distributors to distribute products in that same geographic area.\",\"isNullable\":true,\"name\":\"RightsGrantedSection\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"DistributorshipAgreement.cdm.json/DistributorshipAgreement\",\"name\":\"SalesTermsSection\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"This section establishes pricing and shipping terms for the distributor relationship.\\n\\n(1)  That the manufacturer will set prices \\n\\n(2)  It may be specified that some advance notice of pricing changes will be given to the distributor\\n\\n(3)  It is established who will pay for shipping from the manufacturer location and what the liabilities for damage or loss shall be to each party\",\"isNullable\":true,\"name\":\"SalesTermsSection\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"DistributorshipAgreement.cdm.json/DistributorshipAgreement\",\"name\":\"PaymentSection\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"This section establishes how payment by distributor to manufacturer shall be made, within what timeframe and defines any penalties for late payment.\",\"isNullable\":true,\"name\":\"PaymentSection\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"DistributorshipAgreement.cdm.json/DistributorshipAgreement\",\"name\":\"MarketingPoliciesSection\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"This section establishes how marketing will be pursue and maintained by the distributor in terms of adequate inventory, dealer selection and sales procedures.\",\"isNullable\":true,\"name\":\"MarketingPoliciesSection\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"DistributorshipAgreement.cdm.json/DistributorshipAgreement\",\"name\":\"DistributorDutiesSection\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"This section establishes obligations of the distributor to the manufacturer such as support services, marketing competing products, maintaining a display facility and training of sales personnel.\",\"isNullable\":true,\"name\":\"DistributorDutiesSection\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"DistributorshipAgreement.cdm.json/DistributorshipAgreement\",\"name\":\"SalesAndMerchandisingPoliciesSection\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"This section establishes sales quotas, promotions, advertising and other issues related to sales of the products.\",\"isNullable\":true,\"name\":\"SalesAndMerchandisingPoliciesSection\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"DistributorshipAgreement.cdm.json/DistributorshipAgreement\",\"name\":\"AdvertisingPoliciesSection\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"This section establishes the responsibilities of each party related to advertising of the products.\",\"isNullable\":true,\"name\":\"AdvertisingPoliciesSection\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"DistributorshipAgreement.cdm.json/DistributorshipAgreement\",\"name\":\"ProductWarrantySection\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"This section establishes how defective products will be returned, adjustments made, replacement products provided, shipping costs handled and similar issues.\",\"isNullable\":true,\"name\":\"ProductWarrantySection\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"DistributorshipAgreement.cdm.json/DistributorshipAgreement\",\"name\":\"IndemnificationSection\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"This section establishes how each party is responsible in case claims are made by third parties in the course of the agreement.\",\"isNullable\":true,\"name\":\"IndemnificationSection\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"DistributorshipAgreement.cdm.json/DistributorshipAgreement\",\"name\":\"OrderProcessingSection\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"This section establishes how each party will fulfill orders.\",\"isNullable\":true,\"name\":\"OrderProcessingSection\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"DistributorshipAgreement.cdm.json/DistributorshipAgreement\",\"name\":\"ReturnsPolicySection\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"This section establishes how returns by customers to distributor and distributor to manufacturer will be handled, prices adjusted, shipping reimbursed and similar issues.\",\"isNullable\":true,\"name\":\"ReturnsPolicySection\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"DistributorshipAgreement.cdm.json/DistributorshipAgreement\",\"name\":\"FinancialPoliciesSection\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"This section establishes how distributor will pay manufacturer, in what time frame, what financial statements will be exchanges or available for inspection by the other party and how accounts will be reconciled.\",\"isNullable\":true,\"name\":\"FinancialPoliciesSection\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"DistributorshipAgreement.cdm.json/DistributorshipAgreement\",\"name\":\"UseOfManufacturersNameSection\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"This section governs the use by the distributor of the manufacturer's name during and after the period of the agreement.\",\"isNullable\":true,\"name\":\"UseOfManufacturersNameSection\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"DistributorshipAgreement.cdm.json/DistributorshipAgreement\",\"name\":\"RelationshipOfPartiesSection\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"This section establishes the true relationship between the distributor and manufacturer.\",\"isNullable\":true,\"name\":\"RelationshipOfPartiesSection\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"DistributorshipAgreement.cdm.json/DistributorshipAgreement\",\"name\":\"TermAndTerminationSection\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"This section establishes the starting date and ending date for the distributor agreement.\\n\\nThis section also establishes the terms under which the agreement can be terminated prior to the ending date.\",\"isNullable\":true,\"name\":\"TermAndTerminationSection\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"DistributorshipAgreement.cdm.json/DistributorshipAgreement\",\"name\":\"AgreementStartDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The starting date of the agreement.\",\"isNullable\":true,\"name\":\"AgreementStartDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"DistributorshipAgreement.cdm.json/DistributorshipAgreement\",\"name\":\"AgreementEndDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The ending date of the agreement.\",\"isNullable\":true,\"name\":\"AgreementEndDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"DistributorshipAgreement.cdm.json/DistributorshipAgreement\",\"name\":\"FinalAgreementSection\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"This section makes it clear that this is the final agreement between parties and replaces or supersedes any prior discussions or agreements.    \\nAny amendments to this agreement must be made in writing.\",\"isNullable\":true,\"name\":\"FinalAgreementSection\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"DistributorshipAgreement.cdm.json/DistributorshipAgreement\",\"name\":\"TerminationObligationsSection\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"This section establishes the distributors obligations when the agreement is terminated.\",\"isNullable\":true,\"name\":\"TerminationObligationsSection\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"DistributorshipAgreement.cdm.json/DistributorshipAgreement\",\"name\":\"AcknowledgementsSection\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"This section states that each party accepts the terms of the agreement and that no promise or commitment was made by either party outside of the agreement.\",\"isNullable\":true,\"name\":\"AcknowledgementsSection\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"DistributorshipAgreement.cdm.json/DistributorshipAgreement\",\"name\":\"AssignmentSection\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"This section forbids the distributor from assigning its interest or obligation to any third parties.\",\"isNullable\":true,\"name\":\"AssignmentSection\"}]}}}",
+			"Description": "This agreement provides a distributor with rights to distribute a manufacturer's goods within a predefined territory",
+			"DisplayFolderInfo": "{\"name\":\"Contract\",\"colorCode\":\"#000F5C\"}",
+			"PrimaryKeys": "ContractId",
+			"spark.sql.sources.provider": "csv",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"ContractId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"AgreementDate\",\"type\":\"date\",\"nullable\":true,\"metadata\":{}},{\"name\":\"RightsGrantedSection\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"SalesTermsSection\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"PaymentSection\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"MarketingPoliciesSection\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"DistributorDutiesSection\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"SalesAndMerchandisingPoliciesSection\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"AdvertisingPoliciesSection\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ProductWarrantySection\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"IndemnificationSection\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"OrderProcessingSection\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ReturnsPolicySection\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"FinancialPoliciesSection\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"UseOfManufacturersNameSection\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"RelationshipOfPartiesSection\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"TermAndTerminationSection\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"AgreementStartDate\",\"type\":\"date\",\"nullable\":true,\"metadata\":{}},{\"name\":\"AgreementEndDate\",\"type\":\"date\",\"nullable\":true,\"metadata\":{}},{\"name\":\"FinalAgreementSection\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"TerminationObligationsSection\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"AcknowledgementsSection\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"AssignmentSection\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "bb2e3ad8-2682-49aa-8e80-f70acdb556ba",
+		"Description": "This agreement provides a distributor with rights to distribute a manufacturer's goods within a predefined territory"
+	},
+	"type": "TABLE"
+}

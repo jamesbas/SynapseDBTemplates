@@ -1,0 +1,175 @@
+{
+	"name": "PartyNamePrefix",
+	"properties": {
+		"Name": "PartyNamePrefix",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "PartyId",
+					"Description": "The unique identifier of a Party.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyNamePrefix.cdm.json/PartyNamePrefix",
+						"Name": "PartyId"
+					}
+				},
+				{
+					"Name": "PartyNameId",
+					"Description": "The unique identifier of a Party Name.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyNamePrefix.cdm.json/PartyNamePrefix",
+						"Name": "PartyNameId"
+					}
+				},
+				{
+					"Name": "NamePrefixId",
+					"Description": "The unique identifier of a Prefix.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyNamePrefix.cdm.json/PartyNamePrefix",
+						"Name": "NamePrefixId"
+					}
+				},
+				{
+					"Name": "PrefixOrderNumber",
+					"Description": "The ordering of the associated prefix.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyNamePrefix.cdm.json/PartyNamePrefix",
+						"Name": "PrefixOrderNumber"
+					}
+				},
+				{
+					"Name": "PartyNamePrefixNote",
+					"Description": "A note, comment or additional information regarding the party name prefix.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyNamePrefix.cdm.json/PartyNamePrefix",
+						"Name": "PartyNamePrefixNote"
+					}
+				}
+			],
+			"ColumnSetEntityName": "2846fb91-05af-4ca3-ab08-de9a2c6da30d",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/PartyNamePrefix",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/PartyNamePrefix",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"PartyId\":{\"entity\":\"PartyNamePrefix.cdm.json/PartyNamePrefix\",\"name\":\"PartyId\"},\"PartyNameId\":{\"entity\":\"PartyNamePrefix.cdm.json/PartyNamePrefix\",\"name\":\"PartyNameId\"},\"NamePrefixId\":{\"entity\":\"PartyNamePrefix.cdm.json/PartyNamePrefix\",\"name\":\"NamePrefixId\"},\"PrefixOrderNumber\":{\"entity\":\"PartyNamePrefix.cdm.json/PartyNamePrefix\",\"name\":\"PrefixOrderNumber\"},\"PartyNamePrefixNote\":{\"entity\":\"PartyNamePrefix.cdm.json/PartyNamePrefix\",\"name\":\"PartyNamePrefixNote\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"PartyNamePrefix\",\"path\":\"PartyNamePrefix.cdm.json/PartyNamePrefix\"},\"description\":\"The party name prefix(s) and it's ordering.\",\"primaryKey\":[\"PartyId\",\"PartyNameId\",\"NamePrefixId\",\"PrefixOrderNumber\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyNamePrefix.cdm.json/PartyNamePrefix\",\"name\":\"PartyId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a Party.\",\"isNullable\":false,\"name\":\"PartyId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyNamePrefix.cdm.json/PartyNamePrefix\",\"name\":\"PartyNameId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Party Name.\",\"isNullable\":false,\"name\":\"PartyNameId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyNamePrefix.cdm.json/PartyNamePrefix\",\"name\":\"NamePrefixId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Prefix.\",\"isNullable\":false,\"name\":\"NamePrefixId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyNamePrefix.cdm.json/PartyNamePrefix\",\"name\":\"PrefixOrderNumber\"},\"dataType\":\"integer\",\"description\":\"The ordering of the associated prefix.\",\"isNullable\":false,\"name\":\"PrefixOrderNumber\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyNamePrefix.cdm.json/PartyNamePrefix\",\"name\":\"PartyNamePrefixNote\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"A note, comment or additional information regarding the party name prefix.\",\"isNullable\":true,\"name\":\"PartyNamePrefixNote\"}]}}}",
+			"Description": "The party name prefix(s) and it's ordering.",
+			"DisplayFolderInfo": "{\"name\":\"Party\",\"colorCode\":\"#7D0F6C\"}",
+			"PrimaryKeys": "PartyId,PartyNameId,NamePrefixId,PrefixOrderNumber",
+			"spark.sql.sources.provider": "csv",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"PartyId\",\"type\":\"long\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PartyNameId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"NamePrefixId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PrefixOrderNumber\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PartyNamePrefixNote\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "d47d33e8-abac-4888-bd99-a3d44f72d5a3",
+		"Description": "The party name prefix(s) and it's ordering."
+	},
+	"type": "TABLE"
+}

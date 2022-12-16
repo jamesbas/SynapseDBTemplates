@@ -1,0 +1,137 @@
+{
+	"name": "CurrencyUsage",
+	"properties": {
+		"Name": "CurrencyUsage",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "CurrencyUsageId",
+					"Description": "The unique identifier of the Currency Usage.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "CurrencyUsage.cdm.json/CurrencyUsage",
+						"Name": "CurrencyUsageId"
+					}
+				},
+				{
+					"Name": "CurrencyUsageName",
+					"Description": "The name of the Currency Usage.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 256,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "CurrencyUsage.cdm.json/CurrencyUsage",
+						"Name": "CurrencyUsageName"
+					}
+				},
+				{
+					"Name": "CurrencyUsageDescription",
+					"Description": "The description of the Currency Usage.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "CurrencyUsage.cdm.json/CurrencyUsage",
+						"Name": "CurrencyUsageDescription"
+					}
+				}
+			],
+			"ColumnSetEntityName": "9d3cf6f9-cbbb-4a8b-bff4-c8f02ad30b73",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/CurrencyUsage",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/CurrencyUsage",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"CurrencyUsageId\":{\"entity\":\"CurrencyUsage.cdm.json/CurrencyUsage\",\"name\":\"CurrencyUsageId\"},\"CurrencyUsageName\":{\"entity\":\"CurrencyUsage.cdm.json/CurrencyUsage\",\"name\":\"CurrencyUsageName\"},\"CurrencyUsageDescription\":{\"entity\":\"CurrencyUsage.cdm.json/CurrencyUsage\",\"name\":\"CurrencyUsageDescription\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"CurrencyUsage\",\"path\":\"CurrencyUsage.cdm.json/CurrencyUsage\"},\"description\":\"A currency usage that may be defined for an individual or legal entity.\\n\\nEx:\\n- invoicing\\n- statements\\n- financial transactions\\n- payments\",\"primaryKey\":[\"CurrencyUsageId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"CurrencyUsage.cdm.json/CurrencyUsage\",\"name\":\"CurrencyUsageId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of the Currency Usage.\",\"isNullable\":false,\"name\":\"CurrencyUsageId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"CurrencyUsage.cdm.json/CurrencyUsage\",\"name\":\"CurrencyUsageName\"},\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"The name of the Currency Usage.\",\"isNullable\":true,\"name\":\"CurrencyUsageName\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"CurrencyUsage.cdm.json/CurrencyUsage\",\"name\":\"CurrencyUsageDescription\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"The description of the Currency Usage.\",\"isNullable\":true,\"name\":\"CurrencyUsageDescription\"}]}}}",
+			"Description": "A currency usage that may be defined for an individual or legal entity.\n\nEx:\n- invoicing\n- statements\n- financial transactions\n- payments",
+			"DisplayFolderInfo": "{\"name\":\"Party\",\"colorCode\":\"#7D0F6C\"}",
+			"PrimaryKeys": "CurrencyUsageId",
+			"spark.sql.sources.provider": "csv",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"CurrencyUsageId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"CurrencyUsageName\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"CurrencyUsageDescription\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "22a98d41-51b2-4972-8e4c-b8516ee64b03",
+		"Description": "A currency usage that may be defined for an individual or legal entity.\n\nEx:\n- invoicing\n- statements\n- financial transactions\n- payments"
+	},
+	"type": "TABLE"
+}

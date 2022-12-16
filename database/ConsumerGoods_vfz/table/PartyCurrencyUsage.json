@@ -1,0 +1,215 @@
+{
+	"name": "PartyCurrencyUsage",
+	"properties": {
+		"Name": "PartyCurrencyUsage",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "PartyId",
+					"Description": "The unique identifier of a Party.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyCurrencyUsage.cdm.json/PartyCurrencyUsage",
+						"Name": "PartyId"
+					}
+				},
+				{
+					"Name": "CurrencyUsageId",
+					"Description": "The unique identifier of the Currency Usage.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyCurrencyUsage.cdm.json/PartyCurrencyUsage",
+						"Name": "CurrencyUsageId"
+					}
+				},
+				{
+					"Name": "PreferenceId",
+					"Description": "The unique identifier of a Preference.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyCurrencyUsage.cdm.json/PartyCurrencyUsage",
+						"Name": "PreferenceId"
+					}
+				},
+				{
+					"Name": "PeriodStartTimestamp",
+					"Description": "The period start timestamp that the information is valid or effective as of.",
+					"OriginDataTypeName": {
+						"TypeName": "timestamp",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"TimestampFormat": "YYYY-MM-DD HH:MM:SS.fffffffff",
+							"HIVE_TYPE_STRING": "timestamp"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyCurrencyUsage.cdm.json/PartyCurrencyUsage",
+						"Name": "PeriodStartTimestamp"
+					}
+				},
+				{
+					"Name": "PeriodEndTimestamp",
+					"Description": "The period end timestamp that the information is valid or effective as of.",
+					"OriginDataTypeName": {
+						"TypeName": "timestamp",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"TimestampFormat": "YYYY-MM-DD HH:MM:SS.fffffffff",
+							"HIVE_TYPE_STRING": "timestamp"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyCurrencyUsage.cdm.json/PartyCurrencyUsage",
+						"Name": "PeriodEndTimestamp"
+					}
+				},
+				{
+					"Name": "IsoCurrencyCode",
+					"Description": "The ISO 4217 currency code.\n\nEx:\nCurrency Code = AED\nCurrency Name = Dirham\nCountry Name = United Arab Emirates",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 3,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyCurrencyUsage.cdm.json/PartyCurrencyUsage",
+						"Name": "IsoCurrencyCode"
+					}
+				},
+				{
+					"Name": "PartyCurrencyUsageNote",
+					"Description": "Notes or additional information regarding the Party Currency Usage and preferences.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyCurrencyUsage.cdm.json/PartyCurrencyUsage",
+						"Name": "PartyCurrencyUsageNote"
+					}
+				}
+			],
+			"ColumnSetEntityName": "85cbf263-f8e4-4a2a-b528-7b2a8f5a3d3e",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/PartyCurrencyUsage",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/PartyCurrencyUsage",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"PartyId\":{\"entity\":\"PartyCurrencyUsage.cdm.json/PartyCurrencyUsage\",\"name\":\"PartyId\"},\"CurrencyUsageId\":{\"entity\":\"PartyCurrencyUsage.cdm.json/PartyCurrencyUsage\",\"name\":\"CurrencyUsageId\"},\"PreferenceId\":{\"entity\":\"PartyCurrencyUsage.cdm.json/PartyCurrencyUsage\",\"name\":\"PreferenceId\"},\"PeriodStartTimestamp\":{\"entity\":\"PartyCurrencyUsage.cdm.json/PartyCurrencyUsage\",\"name\":\"PeriodStartTimestamp\"},\"PeriodEndTimestamp\":{\"entity\":\"PartyCurrencyUsage.cdm.json/PartyCurrencyUsage\",\"name\":\"PeriodEndTimestamp\"},\"IsoCurrencyCode\":{\"entity\":\"PartyCurrencyUsage.cdm.json/PartyCurrencyUsage\",\"name\":\"IsoCurrencyCode\"},\"PartyCurrencyUsageNote\":{\"entity\":\"PartyCurrencyUsage.cdm.json/PartyCurrencyUsage\",\"name\":\"PartyCurrencyUsageNote\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"PartyCurrencyUsage\",\"path\":\"PartyCurrencyUsage.cdm.json/PartyCurrencyUsage\"},\"description\":\"The Currency(s) and currency usage(s) that the party identifies or are identified as appropriate for various transactions or usage.\\n\\nEx:\\n\\n- Statements/US dollars\\n- Invoice/US dollars\\n- ADR Equity Investments/Euros/Primary Preference\\n- ADR Equity Investments/US dollars/Alternate Preference\",\"primaryKey\":[\"PartyId\",\"CurrencyUsageId\",\"PreferenceId\",\"PeriodStartTimestamp\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyCurrencyUsage.cdm.json/PartyCurrencyUsage\",\"name\":\"PartyId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a Party.\",\"isNullable\":false,\"name\":\"PartyId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyCurrencyUsage.cdm.json/PartyCurrencyUsage\",\"name\":\"CurrencyUsageId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of the Currency Usage.\",\"isNullable\":false,\"name\":\"CurrencyUsageId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyCurrencyUsage.cdm.json/PartyCurrencyUsage\",\"name\":\"PreferenceId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Preference.\",\"isNullable\":false,\"name\":\"PreferenceId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyCurrencyUsage.cdm.json/PartyCurrencyUsage\",\"name\":\"PeriodStartTimestamp\"},\"dataType\":\"timestamp\",\"description\":\"The period start timestamp that the information is valid or effective as of.\",\"isNullable\":false,\"name\":\"PeriodStartTimestamp\",\"timestampFormat\":\"YYYY-MM-DD HH:MM:SS.fffffffff\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyCurrencyUsage.cdm.json/PartyCurrencyUsage\",\"name\":\"PeriodEndTimestamp\"},\"dataType\":\"timestamp\",\"description\":\"The period end timestamp that the information is valid or effective as of.\",\"isNullable\":true,\"name\":\"PeriodEndTimestamp\",\"timestampFormat\":\"YYYY-MM-DD HH:MM:SS.fffffffff\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyCurrencyUsage.cdm.json/PartyCurrencyUsage\",\"name\":\"IsoCurrencyCode\"},\"dataType\":\"string\",\"dataTypeLength\":3,\"description\":\"The ISO 4217 currency code.\\n\\nEx:\\nCurrency Code = AED\\nCurrency Name = Dirham\\nCountry Name = United Arab Emirates\",\"isNullable\":false,\"name\":\"IsoCurrencyCode\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyCurrencyUsage.cdm.json/PartyCurrencyUsage\",\"name\":\"PartyCurrencyUsageNote\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"Notes or additional information regarding the Party Currency Usage and preferences.\",\"isNullable\":true,\"name\":\"PartyCurrencyUsageNote\"}]}}}",
+			"Description": "The Currency(s) and currency usage(s) that the party identifies or are identified as appropriate for various transactions or usage.\n\nEx:\n\n- Statements/US dollars\n- Invoice/US dollars\n- ADR Equity Investments/Euros/Primary Preference\n- ADR Equity Investments/US dollars/Alternate Preference",
+			"DisplayFolderInfo": "{\"name\":\"Party\",\"colorCode\":\"#7D0F6C\"}",
+			"PrimaryKeys": "PartyId,CurrencyUsageId,PreferenceId,PeriodStartTimestamp",
+			"spark.sql.sources.provider": "csv",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"PartyId\",\"type\":\"long\",\"nullable\":false,\"metadata\":{}},{\"name\":\"CurrencyUsageId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PreferenceId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PeriodStartTimestamp\",\"type\":\"timestamp\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PeriodEndTimestamp\",\"type\":\"timestamp\",\"nullable\":true,\"metadata\":{}},{\"name\":\"IsoCurrencyCode\",\"type\":\"string\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PartyCurrencyUsageNote\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "fe2d5c8e-9518-4efb-a62c-7214031bae96",
+		"Description": "The Currency(s) and currency usage(s) that the party identifies or are identified as appropriate for various transactions or usage.\n\nEx:\n\n- Statements/US dollars\n- Invoice/US dollars\n- ADR Equity Investments/Euros/Primary Preference\n- ADR Equity Investments/US dollars/Alternate Preference"
+	},
+	"type": "TABLE"
+}

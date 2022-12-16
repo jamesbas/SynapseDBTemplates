@@ -1,0 +1,29 @@
+{
+	"name": "relationship-mbxbdplfup",
+	"properties": {
+		"Name": "relationship-mbxbdplfup",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "Contract",
+		"ToTableName": "ValueAddedResellerAgreement",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "ContractId",
+				"ToColumnName": "ContractId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"Contract.cdm.json/Contract\",\"toEntity\":\"ValueAddedResellerAgreement.cdm.json/ValueAddedResellerAgreement\",\"joinPairs\":[{\"fromAttribute\":\"ContractId\",\"toAttribute\":\"ContractId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "936cb4df-afd2-4ce7-9518-1a87affa5d96"
+	},
+	"type": "RELATIONSHIP"
+}

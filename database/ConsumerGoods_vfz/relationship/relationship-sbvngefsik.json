@@ -1,0 +1,29 @@
+{
+	"name": "relationship-sbvngefsik",
+	"properties": {
+		"Name": "relationship-sbvngefsik",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "LanguageUsage",
+		"ToTableName": "PartyLanguageUsage",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "LanguageUsageId",
+				"ToColumnName": "LanguageUsageId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"LanguageUsage.cdm.json/LanguageUsage\",\"toEntity\":\"PartyLanguageUsage.cdm.json/PartyLanguageUsage\",\"joinPairs\":[{\"fromAttribute\":\"LanguageUsageId\",\"toAttribute\":\"LanguageUsageId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "4ed3b800-a180-4a98-a3bd-02fc60080571"
+	},
+	"type": "RELATIONSHIP"
+}

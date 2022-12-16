@@ -1,0 +1,29 @@
+{
+	"name": "relationship-inehuxjxfl",
+	"properties": {
+		"Name": "relationship-inehuxjxfl",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "TransportationRequirement",
+		"ToTableName": "PartyMeansOfTransportation",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "TransportationRequirementId",
+				"ToColumnName": "TransportationRequirementId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"TransportationRequirement.cdm.json/TransportationRequirement\",\"toEntity\":\"PartyMeansOfTransportation.cdm.json/PartyMeansOfTransportation\",\"joinPairs\":[{\"fromAttribute\":\"TransportationRequirementId\",\"toAttribute\":\"TransportationRequirementId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "aaa7ea8e-f001-4e04-9aec-43f4bd89ba9d"
+	},
+	"type": "RELATIONSHIP"
+}

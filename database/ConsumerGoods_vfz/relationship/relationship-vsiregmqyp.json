@@ -1,0 +1,29 @@
+{
+	"name": "relationship-vsiregmqyp",
+	"properties": {
+		"Name": "relationship-vsiregmqyp",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "CustomerType",
+		"ToTableName": "Customer",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "CustomerTypeId",
+				"ToColumnName": "CustomerTypeId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"CustomerType.cdm.json/CustomerType\",\"toEntity\":\"Customer.cdm.json/Customer\",\"joinPairs\":[{\"fromAttribute\":\"CustomerTypeId\",\"toAttribute\":\"CustomerTypeId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "c8c1d9a6-ac2b-4501-9838-2ab7f8206327"
+	},
+	"type": "RELATIONSHIP"
+}

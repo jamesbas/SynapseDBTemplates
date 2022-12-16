@@ -1,0 +1,29 @@
+{
+	"name": "relationship-yxwuugiyan",
+	"properties": {
+		"Name": "relationship-yxwuugiyan",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "MarketingProgram",
+		"ToTableName": "PartyProgram",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "MarketingProgramId",
+				"ToColumnName": "MarketingProgramId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"MarketingProgram.cdm.json/MarketingProgram\",\"toEntity\":\"PartyProgram.cdm.json/PartyProgram\",\"joinPairs\":[{\"fromAttribute\":\"MarketingProgramId\",\"toAttribute\":\"MarketingProgramId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "20fd78f0-0463-4cee-9232-d14d3cfec4c7"
+	},
+	"type": "RELATIONSHIP"
+}

@@ -1,0 +1,29 @@
+{
+	"name": "relationship-fdsckppcjw",
+	"properties": {
+		"Name": "relationship-fdsckppcjw",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "BiometricType",
+		"ToTableName": "PartyBiometric",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "BiometricTypeId",
+				"ToColumnName": "BiometricTypeId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"BiometricType.cdm.json/BiometricType\",\"toEntity\":\"PartyBiometric.cdm.json/PartyBiometric\",\"joinPairs\":[{\"fromAttribute\":\"BiometricTypeId\",\"toAttribute\":\"BiometricTypeId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "354eebff-4590-47bb-b97d-80221129d515"
+	},
+	"type": "RELATIONSHIP"
+}

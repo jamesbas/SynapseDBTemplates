@@ -1,0 +1,29 @@
+{
+	"name": "relationship-zcuholblca",
+	"properties": {
+		"Name": "relationship-zcuholblca",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "IndividualParty",
+		"ToTableName": "PartyFamilyLifeCycle",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "PartyId",
+				"ToColumnName": "PartyId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"IndividualParty.cdm.json/IndividualParty\",\"toEntity\":\"PartyFamilyLifeCycle.cdm.json/PartyFamilyLifeCycle\",\"joinPairs\":[{\"fromAttribute\":\"PartyId\",\"toAttribute\":\"PartyId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "67c3881e-fb76-4144-9134-7766586687f6"
+	},
+	"type": "RELATIONSHIP"
+}

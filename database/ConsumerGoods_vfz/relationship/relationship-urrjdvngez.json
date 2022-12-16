@@ -1,0 +1,29 @@
+{
+	"name": "relationship-urrjdvngez",
+	"properties": {
+		"Name": "relationship-urrjdvngez",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "Preference",
+		"ToTableName": "PartyEmail",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "PreferenceId",
+				"ToColumnName": "PreferenceId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"Preference.cdm.json/Preference\",\"toEntity\":\"PartyEmail.cdm.json/PartyEmail\",\"joinPairs\":[{\"fromAttribute\":\"PreferenceId\",\"toAttribute\":\"PreferenceId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "15e2ec92-d0a5-455f-9ad4-35267996e321"
+	},
+	"type": "RELATIONSHIP"
+}

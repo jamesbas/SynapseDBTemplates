@@ -1,0 +1,29 @@
+{
+	"name": "relationship-sbldaqnkvt",
+	"properties": {
+		"Name": "relationship-sbldaqnkvt",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "CustomerAccountPartyRelationshipType",
+		"ToTableName": "CustomerAccountRelatedParty",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "CustomerAccountPartyRelationshipTypeId",
+				"ToColumnName": "CustomerAccountPartyRelationshipTypeId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"CustomerAccountPartyRelationshipType.cdm.json/CustomerAccountPartyRelationshipType\",\"toEntity\":\"CustomerAccountRelatedParty.cdm.json/CustomerAccountRelatedParty\",\"joinPairs\":[{\"fromAttribute\":\"CustomerAccountPartyRelationshipTypeId\",\"toAttribute\":\"CustomerAccountPartyRelationshipTypeId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "006896da-1808-4e07-aacd-63284b7ce6ef"
+	},
+	"type": "RELATIONSHIP"
+}

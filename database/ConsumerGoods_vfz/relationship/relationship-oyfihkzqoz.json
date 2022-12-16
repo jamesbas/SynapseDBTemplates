@@ -1,0 +1,29 @@
+{
+	"name": "relationship-oyfihkzqoz",
+	"properties": {
+		"Name": "relationship-oyfihkzqoz",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "OccupationGroup",
+		"ToTableName": "PartyOccupationGroup",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "OccupationGroupId",
+				"ToColumnName": "OccupationGroupId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"OccupationGroup.cdm.json/OccupationGroup\",\"toEntity\":\"PartyOccupationGroup.cdm.json/PartyOccupationGroup\",\"joinPairs\":[{\"fromAttribute\":\"OccupationGroupId\",\"toAttribute\":\"OccupationGroupId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "c765ad3d-5a5f-4abc-879f-b299d1a3850b"
+	},
+	"type": "RELATIONSHIP"
+}

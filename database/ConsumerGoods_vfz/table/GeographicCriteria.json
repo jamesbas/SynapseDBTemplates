@@ -1,0 +1,156 @@
+{
+	"name": "GeographicCriteria",
+	"properties": {
+		"Name": "GeographicCriteria",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "GeographicCriteriaId",
+					"Description": "The unique identifier of a Geographic Criteria.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "GeographicCriteria.cdm.json/GeographicCriteria",
+						"Name": "GeographicCriteriaId"
+					}
+				},
+				{
+					"Name": "GeographicCriteriaName",
+					"Description": "The name of the Geographic Criteria.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 256,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "GeographicCriteria.cdm.json/GeographicCriteria",
+						"Name": "GeographicCriteriaName"
+					}
+				},
+				{
+					"Name": "GeographicCriteriaDescription",
+					"Description": "The description of the Geographic Criteria.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "GeographicCriteria.cdm.json/GeographicCriteria",
+						"Name": "GeographicCriteriaDescription"
+					}
+				},
+				{
+					"Name": "GeographicCriteriaTypeId",
+					"Description": "The unique identifier of a Geographic Criteria Type.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "GeographicCriteria.cdm.json/GeographicCriteria",
+						"Name": "GeographicCriteriaTypeId"
+					}
+				}
+			],
+			"ColumnSetEntityName": "0417d148-13fd-479f-a7e0-4ec4a0655560",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/GeographicCriteria",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/GeographicCriteria",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"GeographicCriteriaId\":{\"entity\":\"GeographicCriteria.cdm.json/GeographicCriteria\",\"name\":\"GeographicCriteriaId\"},\"GeographicCriteriaName\":{\"entity\":\"GeographicCriteria.cdm.json/GeographicCriteria\",\"name\":\"GeographicCriteriaName\"},\"GeographicCriteriaDescription\":{\"entity\":\"GeographicCriteria.cdm.json/GeographicCriteria\",\"name\":\"GeographicCriteriaDescription\"},\"GeographicCriteriaTypeId\":{\"entity\":\"GeographicCriteria.cdm.json/GeographicCriteria\",\"name\":\"GeographicCriteriaTypeId\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"GeographicCriteria\",\"path\":\"GeographicCriteria.cdm.json/GeographicCriteria\"},\"description\":\"Geographic Criteria Type is a means of classifying, grouping or categorizing specific Geographic Criteria at a higher level for analysis and presentation.\\n\\nThe Geographic Criteria Type is the larger classification to which the Geographic Criteria belongs.\\n\\nEx:\\nGeographic Criteria Type: US Region\\nGeographic Criteria: Southwest\\n\\nGeographic Criteria Type: ABCD County Type \\nGeographic Criteria: ABCD County Type A \\n\\nGeographic Criteria Type: City Size\\nGeographic Criteria: 50,000-100,000\\n\\nGeographic Criteria Type: Area Density \\nGeographic Criteria: Urban\\n\\nGeographic Criteria Type: Climate\\nGeographic Criteria: Tropical\\n\\nGeographic Criteria Type: Topology\\nGeographic Criteria: Desert\",\"primaryKey\":[\"GeographicCriteriaId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"GeographicCriteria.cdm.json/GeographicCriteria\",\"name\":\"GeographicCriteriaId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Geographic Criteria.\",\"isNullable\":false,\"name\":\"GeographicCriteriaId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"GeographicCriteria.cdm.json/GeographicCriteria\",\"name\":\"GeographicCriteriaName\"},\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"The name of the Geographic Criteria.\",\"isNullable\":true,\"name\":\"GeographicCriteriaName\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"GeographicCriteria.cdm.json/GeographicCriteria\",\"name\":\"GeographicCriteriaDescription\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"The description of the Geographic Criteria.\",\"isNullable\":true,\"name\":\"GeographicCriteriaDescription\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"GeographicCriteria.cdm.json/GeographicCriteria\",\"name\":\"GeographicCriteriaTypeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Geographic Criteria Type.\",\"isNullable\":true,\"name\":\"GeographicCriteriaTypeId\"}]}}}",
+			"Description": "Geographic Criteria Type is a means of classifying, grouping or categorizing specific Geographic Criteria at a higher level for analysis and presentation.\n\nThe Geographic Criteria Type is the larger classification to which the Geographic Criteria belongs.\n\nEx:\nGeographic Criteria Type: US Region\nGeographic Criteria: Southwest\n\nGeographic Criteria Type: ABCD County Type \nGeographic Criteria: ABCD County Type A \n\nGeographic Criteria Type: City Size\nGeographic Criteria: 50,000-100,000\n\nGeographic Criteria Type: Area Density \nGeographic Criteria: Urban\n\nGeographic Criteria Type: Climate\nGeographic Criteria: Tropical\n\nGeographic Criteria Type: Topology\nGeographic Criteria: Desert",
+			"DisplayFolderInfo": "{\"name\":\"Geography\",\"colorCode\":\"#630454\"}",
+			"PrimaryKeys": "GeographicCriteriaId",
+			"spark.sql.sources.provider": "csv",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"GeographicCriteriaId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"GeographicCriteriaName\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"GeographicCriteriaDescription\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"GeographicCriteriaTypeId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "5fc2bd0e-9d1f-4b8a-bf29-48c9eb080f6e",
+		"Description": "Geographic Criteria Type is a means of classifying, grouping or categorizing specific Geographic Criteria at a higher level for analysis and presentation.\n\nThe Geographic Criteria Type is the larger classification to which the Geographic Criteria belongs.\n\nEx:\nGeographic Criteria Type: US Region\nGeographic Criteria: Southwest\n\nGeographic Criteria Type: ABCD County Type \nGeographic Criteria: ABCD County Type A \n\nGeographic Criteria Type: City Size\nGeographic Criteria: 50,000-100,000\n\nGeographic Criteria Type: Area Density \nGeographic Criteria: Urban\n\nGeographic Criteria Type: Climate\nGeographic Criteria: Tropical\n\nGeographic Criteria Type: Topology\nGeographic Criteria: Desert"
+	},
+	"type": "TABLE"
+}

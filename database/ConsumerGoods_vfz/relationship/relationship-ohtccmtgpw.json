@@ -1,0 +1,29 @@
+{
+	"name": "relationship-ohtccmtgpw",
+	"properties": {
+		"Name": "relationship-ohtccmtgpw",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "ReferenceGroup",
+		"ToTableName": "PartyReferenceGroup",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "ReferenceGroupId",
+				"ToColumnName": "ReferenceGroupId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"ReferenceGroup.cdm.json/ReferenceGroup\",\"toEntity\":\"PartyReferenceGroup.cdm.json/PartyReferenceGroup\",\"joinPairs\":[{\"fromAttribute\":\"ReferenceGroupId\",\"toAttribute\":\"ReferenceGroupId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "ec68455b-16bc-4f56-8a73-d21b296bc172"
+	},
+	"type": "RELATIONSHIP"
+}

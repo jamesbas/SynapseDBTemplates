@@ -1,0 +1,29 @@
+{
+	"name": "relationship-gjsjailryh",
+	"properties": {
+		"Name": "relationship-gjsjailryh",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "Association",
+		"ToTableName": "PartyAssociation",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "AssociationId",
+				"ToColumnName": "AssociationId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"Association.cdm.json/Association\",\"toEntity\":\"PartyAssociation.cdm.json/PartyAssociation\",\"joinPairs\":[{\"fromAttribute\":\"AssociationId\",\"toAttribute\":\"AssociationId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "58108a40-5c00-4746-9d85-5fc849c6bf4b"
+	},
+	"type": "RELATIONSHIP"
+}

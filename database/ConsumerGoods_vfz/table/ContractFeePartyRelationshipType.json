@@ -1,0 +1,137 @@
+{
+	"name": "ContractFeePartyRelationshipType",
+	"properties": {
+		"Name": "ContractFeePartyRelationshipType",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "ContractFeePartyRelationshipTypeId",
+					"Description": "The unique identifier of a contract fee party relationship type.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ContractFeePartyRelationshipType.cdm.json/ContractFeePartyRelationshipType",
+						"Name": "ContractFeePartyRelationshipTypeId"
+					}
+				},
+				{
+					"Name": "ContractFeePartyRelationshipTypeName",
+					"Description": "The name of a contract fee party relationship type.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 256,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ContractFeePartyRelationshipType.cdm.json/ContractFeePartyRelationshipType",
+						"Name": "ContractFeePartyRelationshipTypeName"
+					}
+				},
+				{
+					"Name": "ContractFeePartyRelationshipTypeDescription",
+					"Description": "The description of a contract fee party relationship type.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ContractFeePartyRelationshipType.cdm.json/ContractFeePartyRelationshipType",
+						"Name": "ContractFeePartyRelationshipTypeDescription"
+					}
+				}
+			],
+			"ColumnSetEntityName": "39639288-0d9f-4227-961d-a19d58417657",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/ContractFeePartyRelationshipType",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/ContractFeePartyRelationshipType",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"ContractFeePartyRelationshipTypeId\":{\"entity\":\"ContractFeePartyRelationshipType.cdm.json/ContractFeePartyRelationshipType\",\"name\":\"ContractFeePartyRelationshipTypeId\"},\"ContractFeePartyRelationshipTypeName\":{\"entity\":\"ContractFeePartyRelationshipType.cdm.json/ContractFeePartyRelationshipType\",\"name\":\"ContractFeePartyRelationshipTypeName\"},\"ContractFeePartyRelationshipTypeDescription\":{\"entity\":\"ContractFeePartyRelationshipType.cdm.json/ContractFeePartyRelationshipType\",\"name\":\"ContractFeePartyRelationshipTypeDescription\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"ContractFeePartyRelationshipType\",\"path\":\"ContractFeePartyRelationshipType.cdm.json/ContractFeePartyRelationshipType\"},\"description\":\"The party(s) related to the contract fee.\\n\\nEx:\\n- Paid-by Party\\n- Paid-to Party\\n- Notice-to Party\\n- Notice-from Party\",\"primaryKey\":[\"ContractFeePartyRelationshipTypeId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ContractFeePartyRelationshipType.cdm.json/ContractFeePartyRelationshipType\",\"name\":\"ContractFeePartyRelationshipTypeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a contract fee party relationship type.\",\"isNullable\":false,\"name\":\"ContractFeePartyRelationshipTypeId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ContractFeePartyRelationshipType.cdm.json/ContractFeePartyRelationshipType\",\"name\":\"ContractFeePartyRelationshipTypeName\"},\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"The name of a contract fee party relationship type.\",\"isNullable\":true,\"name\":\"ContractFeePartyRelationshipTypeName\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ContractFeePartyRelationshipType.cdm.json/ContractFeePartyRelationshipType\",\"name\":\"ContractFeePartyRelationshipTypeDescription\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"The description of a contract fee party relationship type.\",\"isNullable\":true,\"name\":\"ContractFeePartyRelationshipTypeDescription\"}]}}}",
+			"Description": "The party(s) related to the contract fee.\n\nEx:\n- Paid-by Party\n- Paid-to Party\n- Notice-to Party\n- Notice-from Party",
+			"DisplayFolderInfo": "{\"name\":\"Contract\",\"colorCode\":\"#000F5C\"}",
+			"PrimaryKeys": "ContractFeePartyRelationshipTypeId",
+			"spark.sql.sources.provider": "csv",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"ContractFeePartyRelationshipTypeId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"ContractFeePartyRelationshipTypeName\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ContractFeePartyRelationshipTypeDescription\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "97095e23-766f-4d3f-bac9-f4c8ad7c438e",
+		"Description": "The party(s) related to the contract fee.\n\nEx:\n- Paid-by Party\n- Paid-to Party\n- Notice-to Party\n- Notice-from Party"
+	},
+	"type": "TABLE"
+}

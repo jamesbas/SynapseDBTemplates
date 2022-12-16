@@ -1,0 +1,29 @@
+{
+	"name": "relationship-zbedmmzhpq",
+	"properties": {
+		"Name": "relationship-zbedmmzhpq",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "TransportationMode",
+		"ToTableName": "PartyMeansOfTransportation",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "TransportationModeId",
+				"ToColumnName": "TransportationModeId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"TransportationMode.cdm.json/TransportationMode\",\"toEntity\":\"PartyMeansOfTransportation.cdm.json/PartyMeansOfTransportation\",\"joinPairs\":[{\"fromAttribute\":\"TransportationModeId\",\"toAttribute\":\"TransportationModeId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "486d7c77-a833-4bb3-a9e2-6f9796231e10"
+	},
+	"type": "RELATIONSHIP"
+}

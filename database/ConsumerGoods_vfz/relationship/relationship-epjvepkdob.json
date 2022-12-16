@@ -1,0 +1,29 @@
+{
+	"name": "relationship-epjvepkdob",
+	"properties": {
+		"Name": "relationship-epjvepkdob",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "OrganizationParty",
+		"ToTableName": "SocialOrganization",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "PartyId",
+				"ToColumnName": "PartyId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"OrganizationParty.cdm.json/OrganizationParty\",\"toEntity\":\"SocialOrganization.cdm.json/SocialOrganization\",\"joinPairs\":[{\"fromAttribute\":\"PartyId\",\"toAttribute\":\"PartyId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "17e643ea-1064-4cb1-bf01-435e4b34b974"
+	},
+	"type": "RELATIONSHIP"
+}

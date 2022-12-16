@@ -1,0 +1,29 @@
+{
+	"name": "relationship-jpuiydvlph",
+	"properties": {
+		"Name": "relationship-jpuiydvlph",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "IndividualParty",
+		"ToTableName": "PartySurveyQuestionResponse",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "PartyId",
+				"ToColumnName": "PartyId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"IndividualParty.cdm.json/IndividualParty\",\"toEntity\":\"PartySurveyQuestionResponse.cdm.json/PartySurveyQuestionResponse\",\"joinPairs\":[{\"fromAttribute\":\"PartyId\",\"toAttribute\":\"PartyId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "155da5ec-27d0-4730-97ee-ba5a1298c009"
+	},
+	"type": "RELATIONSHIP"
+}

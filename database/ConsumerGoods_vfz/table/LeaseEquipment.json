@@ -1,0 +1,214 @@
+{
+	"name": "LeaseEquipment",
+	"properties": {
+		"Name": "LeaseEquipment",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "ContractId",
+					"Description": "The unique identifier of a Contract.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "LeaseEquipment.cdm.json/LeaseEquipment",
+						"Name": "ContractId"
+					}
+				},
+				{
+					"Name": "AssetId",
+					"Description": "The unique identifier of an Asset.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "LeaseEquipment.cdm.json/LeaseEquipment",
+						"Name": "AssetId"
+					}
+				},
+				{
+					"Name": "EquipmentSerialNumber",
+					"Description": "The serial number of the equipment.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 30,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "LeaseEquipment.cdm.json/LeaseEquipment",
+						"Name": "EquipmentSerialNumber"
+					}
+				},
+				{
+					"Name": "EquipmentName",
+					"Description": "The name of the equipment.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 256,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "LeaseEquipment.cdm.json/LeaseEquipment",
+						"Name": "EquipmentName"
+					}
+				},
+				{
+					"Name": "EquipmentDescription",
+					"Description": "The description of the equipment including its operating status.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "LeaseEquipment.cdm.json/LeaseEquipment",
+						"Name": "EquipmentDescription"
+					}
+				},
+				{
+					"Name": "EquipmentPurchaseDate",
+					"Description": "The date that the Equipment was purchased.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "LeaseEquipment.cdm.json/LeaseEquipment",
+						"Name": "EquipmentPurchaseDate"
+					}
+				},
+				{
+					"Name": "EquipmentPurchaseCost",
+					"Description": "The purchase cost of the equipment.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "LeaseEquipment.cdm.json/LeaseEquipment",
+						"Name": "EquipmentPurchaseCost"
+					}
+				}
+			],
+			"ColumnSetEntityName": "fc0aa6f7-26fa-416c-b078-ded2728e3099",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/LeaseEquipment",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/LeaseEquipment",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"ContractId\":{\"entity\":\"LeaseEquipment.cdm.json/LeaseEquipment\",\"name\":\"ContractId\"},\"AssetId\":{\"entity\":\"LeaseEquipment.cdm.json/LeaseEquipment\",\"name\":\"AssetId\"},\"EquipmentSerialNumber\":{\"entity\":\"LeaseEquipment.cdm.json/LeaseEquipment\",\"name\":\"EquipmentSerialNumber\"},\"EquipmentName\":{\"entity\":\"LeaseEquipment.cdm.json/LeaseEquipment\",\"name\":\"EquipmentName\"},\"EquipmentDescription\":{\"entity\":\"LeaseEquipment.cdm.json/LeaseEquipment\",\"name\":\"EquipmentDescription\"},\"EquipmentPurchaseDate\":{\"entity\":\"LeaseEquipment.cdm.json/LeaseEquipment\",\"name\":\"EquipmentPurchaseDate\"},\"EquipmentPurchaseCost\":{\"entity\":\"LeaseEquipment.cdm.json/LeaseEquipment\",\"name\":\"EquipmentPurchaseCost\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"LeaseEquipment\",\"path\":\"LeaseEquipment.cdm.json/LeaseEquipment\"},\"description\":\"The equipment to be covered by the Equipment Lease.\",\"primaryKey\":[\"ContractId\",\"AssetId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"LeaseEquipment.cdm.json/LeaseEquipment\",\"name\":\"ContractId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Contract.\",\"isNullable\":false,\"name\":\"ContractId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"LeaseEquipment.cdm.json/LeaseEquipment\",\"name\":\"AssetId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of an Asset.\",\"isNullable\":false,\"name\":\"AssetId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"LeaseEquipment.cdm.json/LeaseEquipment\",\"name\":\"EquipmentSerialNumber\"},\"dataType\":\"string\",\"dataTypeLength\":30,\"description\":\"The serial number of the equipment.\",\"isNullable\":true,\"name\":\"EquipmentSerialNumber\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"LeaseEquipment.cdm.json/LeaseEquipment\",\"name\":\"EquipmentName\"},\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"The name of the equipment.\",\"isNullable\":true,\"name\":\"EquipmentName\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"LeaseEquipment.cdm.json/LeaseEquipment\",\"name\":\"EquipmentDescription\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"The description of the equipment including its operating status.\",\"isNullable\":true,\"name\":\"EquipmentDescription\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"LeaseEquipment.cdm.json/LeaseEquipment\",\"name\":\"EquipmentPurchaseDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The date that the Equipment was purchased.\",\"isNullable\":true,\"name\":\"EquipmentPurchaseDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"LeaseEquipment.cdm.json/LeaseEquipment\",\"name\":\"EquipmentPurchaseCost\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"The purchase cost of the equipment.\",\"isNullable\":true,\"scale\":2,\"name\":\"EquipmentPurchaseCost\"}]}}}",
+			"Description": "The equipment to be covered by the Equipment Lease.",
+			"DisplayFolderInfo": "{\"name\":\"Contract\",\"colorCode\":\"#000F5C\"}",
+			"PrimaryKeys": "ContractId,AssetId",
+			"spark.sql.sources.provider": "csv",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"ContractId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"AssetId\",\"type\":\"long\",\"nullable\":false,\"metadata\":{}},{\"name\":\"EquipmentSerialNumber\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"EquipmentName\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"EquipmentDescription\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"EquipmentPurchaseDate\",\"type\":\"date\",\"nullable\":true,\"metadata\":{}},{\"name\":\"EquipmentPurchaseCost\",\"type\":\"decimal(18,2)\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "127a02d6-f700-47d4-ae63-3caefb47ffea",
+		"Description": "The equipment to be covered by the Equipment Lease."
+	},
+	"type": "TABLE"
+}

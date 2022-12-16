@@ -1,0 +1,156 @@
+{
+	"name": "SicIndustry",
+	"properties": {
+		"Name": "SicIndustry",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "SicIndustryCode",
+					"Description": "The unique identifier of the SIC Industry.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 4,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "SicIndustry.cdm.json/SicIndustry",
+						"Name": "SicIndustryCode"
+					}
+				},
+				{
+					"Name": "SicIndustryName",
+					"Description": "The name of the SIC Industry.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 256,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "SicIndustry.cdm.json/SicIndustry",
+						"Name": "SicIndustryName"
+					}
+				},
+				{
+					"Name": "SicIndustryDescription",
+					"Description": "The description of the SIC Industry.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "SicIndustry.cdm.json/SicIndustry",
+						"Name": "SicIndustryDescription"
+					}
+				},
+				{
+					"Name": "SicIndustryGroupCode",
+					"Description": "The unique identifier of the SIC Industry Group.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 3,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "SicIndustry.cdm.json/SicIndustry",
+						"Name": "SicIndustryGroupCode"
+					}
+				}
+			],
+			"ColumnSetEntityName": "427caa04-16e9-4176-b888-e599b18e71b2",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/SicIndustry",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/SicIndustry",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"SicIndustryCode\":{\"entity\":\"SicIndustry.cdm.json/SicIndustry\",\"name\":\"SicIndustryCode\"},\"SicIndustryName\":{\"entity\":\"SicIndustry.cdm.json/SicIndustry\",\"name\":\"SicIndustryName\"},\"SicIndustryDescription\":{\"entity\":\"SicIndustry.cdm.json/SicIndustry\",\"name\":\"SicIndustryDescription\"},\"SicIndustryGroupCode\":{\"entity\":\"SicIndustry.cdm.json/SicIndustry\",\"name\":\"SicIndustryGroupCode\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"SicIndustry\",\"path\":\"SicIndustry.cdm.json/SicIndustry\"},\"description\":\"The SIC Industry.\",\"primaryKey\":[\"SicIndustryCode\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"SicIndustry.cdm.json/SicIndustry\",\"name\":\"SicIndustryCode\"},\"dataType\":\"decimal\",\"dataTypeLength\":4,\"description\":\"The unique identifier of the SIC Industry.\",\"isNullable\":false,\"scale\":0,\"name\":\"SicIndustryCode\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"SicIndustry.cdm.json/SicIndustry\",\"name\":\"SicIndustryName\"},\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"The name of the SIC Industry.\",\"isNullable\":true,\"name\":\"SicIndustryName\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"SicIndustry.cdm.json/SicIndustry\",\"name\":\"SicIndustryDescription\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"The description of the SIC Industry.\",\"isNullable\":true,\"name\":\"SicIndustryDescription\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"SicIndustry.cdm.json/SicIndustry\",\"name\":\"SicIndustryGroupCode\"},\"dataType\":\"decimal\",\"dataTypeLength\":3,\"description\":\"The unique identifier of the SIC Industry Group.\",\"isNullable\":true,\"scale\":0,\"name\":\"SicIndustryGroupCode\"}]}}}",
+			"Description": "The SIC Industry.",
+			"DisplayFolderInfo": "{\"name\":\"Party\",\"colorCode\":\"#7D0F6C\"}",
+			"PrimaryKeys": "SicIndustryCode",
+			"spark.sql.sources.provider": "csv",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"SicIndustryCode\",\"type\":\"decimal(4,0)\",\"nullable\":false,\"metadata\":{}},{\"name\":\"SicIndustryName\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"SicIndustryDescription\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"SicIndustryGroupCode\",\"type\":\"decimal(3,0)\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "2ebbf46c-aa4d-4d72-ba8d-91297c0ba79c",
+		"Description": "The SIC Industry."
+	},
+	"type": "TABLE"
+}

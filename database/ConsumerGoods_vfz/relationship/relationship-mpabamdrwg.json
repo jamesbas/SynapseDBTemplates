@@ -1,0 +1,29 @@
+{
+	"name": "relationship-mpabamdrwg",
+	"properties": {
+		"Name": "relationship-mpabamdrwg",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "Language",
+		"ToTableName": "LearningEvent",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "IsoLanguageId",
+				"ToColumnName": "IsoLanguageId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"Language.cdm.json/Language\",\"toEntity\":\"LearningEvent.cdm.json/LearningEvent\",\"joinPairs\":[{\"fromAttribute\":\"IsoLanguageId\",\"toAttribute\":\"IsoLanguageId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "48a8c659-0e15-418e-8645-beed064660d6"
+	},
+	"type": "RELATIONSHIP"
+}

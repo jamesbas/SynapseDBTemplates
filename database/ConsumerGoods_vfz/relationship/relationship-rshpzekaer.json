@@ -1,0 +1,29 @@
+{
+	"name": "relationship-rshpzekaer",
+	"properties": {
+		"Name": "relationship-rshpzekaer",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "IndividualParty",
+		"ToTableName": "PartySocialClass",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "PartyId",
+				"ToColumnName": "PartyId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"IndividualParty.cdm.json/IndividualParty\",\"toEntity\":\"PartySocialClass.cdm.json/PartySocialClass\",\"joinPairs\":[{\"fromAttribute\":\"PartyId\",\"toAttribute\":\"PartyId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "79e79149-7139-43e4-912a-def7559665e7"
+	},
+	"type": "RELATIONSHIP"
+}

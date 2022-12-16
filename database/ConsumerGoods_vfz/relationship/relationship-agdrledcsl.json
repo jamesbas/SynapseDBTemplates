@@ -1,0 +1,29 @@
+{
+	"name": "relationship-agdrledcsl",
+	"properties": {
+		"Name": "relationship-agdrledcsl",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "ContractSection",
+		"ToTableName": "ContractSectionClause",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "ContractSectionId",
+				"ToColumnName": "ContractSectionId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"ContractSection.cdm.json/ContractSection\",\"toEntity\":\"ContractSectionClause.cdm.json/ContractSectionClause\",\"joinPairs\":[{\"fromAttribute\":\"ContractSectionId\",\"toAttribute\":\"ContractSectionId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "17e4ee99-ab79-4416-b2aa-9999645f18e1"
+	},
+	"type": "RELATIONSHIP"
+}

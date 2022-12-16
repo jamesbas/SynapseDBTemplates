@@ -1,0 +1,29 @@
+{
+	"name": "relationship-jqiedusnsf",
+	"properties": {
+		"Name": "relationship-jqiedusnsf",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "Consent",
+		"ToTableName": "PartyConsent",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "ConsentId",
+				"ToColumnName": "ConsentId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"Consent.cdm.json/Consent\",\"toEntity\":\"PartyConsent.cdm.json/PartyConsent\",\"joinPairs\":[{\"fromAttribute\":\"ConsentId\",\"toAttribute\":\"ConsentId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "7f5f4233-ac4e-4f06-ae5d-211279a97ab9"
+	},
+	"type": "RELATIONSHIP"
+}

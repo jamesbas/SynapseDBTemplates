@@ -1,0 +1,29 @@
+{
+	"name": "relationship-zxdkdoyxwv",
+	"properties": {
+		"Name": "relationship-zxdkdoyxwv",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "EducationalInstitution",
+		"ToTableName": "PartyEducation",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "EducationalInstitutionId",
+				"ToColumnName": "EducationalInstitutionId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"EducationalInstitution.cdm.json/EducationalInstitution\",\"toEntity\":\"PartyEducation.cdm.json/PartyEducation\",\"joinPairs\":[{\"fromAttribute\":\"EducationalInstitutionId\",\"toAttribute\":\"EducationalInstitutionId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "be8d2f94-0965-4101-8f9e-8af4e231eabb"
+	},
+	"type": "RELATIONSHIP"
+}

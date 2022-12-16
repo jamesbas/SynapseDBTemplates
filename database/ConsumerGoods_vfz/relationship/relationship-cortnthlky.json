@@ -1,0 +1,29 @@
+{
+	"name": "relationship-cortnthlky",
+	"properties": {
+		"Name": "relationship-cortnthlky",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "ChurnReason",
+		"ToTableName": "PartyChurnPropensity",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "ChurnReasonId",
+				"ToColumnName": "ChurnReasonId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"ChurnReason.cdm.json/ChurnReason\",\"toEntity\":\"PartyChurnPropensity.cdm.json/PartyChurnPropensity\",\"joinPairs\":[{\"fromAttribute\":\"ChurnReasonId\",\"toAttribute\":\"ChurnReasonId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "cd35d06d-51e1-43e8-b903-14e75855b611"
+	},
+	"type": "RELATIONSHIP"
+}

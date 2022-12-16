@@ -1,0 +1,29 @@
+{
+	"name": "relationship-rvetzgxbby",
+	"properties": {
+		"Name": "relationship-rvetzgxbby",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "PurchaseOrder",
+		"ToTableName": "PurchaseOrderStatus",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "PoNumber",
+				"ToColumnName": "PoNumber"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"PurchaseOrder.cdm.json/PurchaseOrder\",\"toEntity\":\"PurchaseOrderStatus.cdm.json/PurchaseOrderStatus\",\"joinPairs\":[{\"fromAttribute\":\"PoNumber\",\"toAttribute\":\"PoNumber\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "182760d1-7f00-4361-83a9-78b633cbe031"
+	},
+	"type": "RELATIONSHIP"
+}

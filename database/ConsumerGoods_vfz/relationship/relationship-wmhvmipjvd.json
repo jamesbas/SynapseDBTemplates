@@ -1,0 +1,29 @@
+{
+	"name": "relationship-wmhvmipjvd",
+	"properties": {
+		"Name": "relationship-wmhvmipjvd",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "IndividualParty",
+		"ToTableName": "PartyWorkerClass",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "PartyId",
+				"ToColumnName": "PartyId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"IndividualParty.cdm.json/IndividualParty\",\"toEntity\":\"PartyWorkerClass.cdm.json/PartyWorkerClass\",\"joinPairs\":[{\"fromAttribute\":\"PartyId\",\"toAttribute\":\"PartyId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "90af5fd5-e420-4755-8b5b-7a6d05f1cd8a"
+	},
+	"type": "RELATIONSHIP"
+}

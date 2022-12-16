@@ -1,0 +1,175 @@
+{
+	"name": "IpAddress",
+	"properties": {
+		"Name": "IpAddress",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "IpAddress",
+					"Description": "(Internet Protocol number or address). A unique number consisting of 4 parts separated by dots, e.g. 165.113.245.2 \n\nEvery machine that is on the Internet has a unique IP address. If a machine does not have an IP number, it is not really on the Internet. Most machines also have one or more Domain Names that are easier for people to remember.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 32,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "IpAddress.cdm.json/IpAddress",
+						"Name": "IpAddress"
+					}
+				},
+				{
+					"Name": "PartyId",
+					"Description": "The unique identifier of a party.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "IpAddress.cdm.json/IpAddress",
+						"Name": "PartyId"
+					}
+				},
+				{
+					"Name": "IpAddressTypeId",
+					"Description": "The unique identifier of an IP Address Type.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "IpAddress.cdm.json/IpAddress",
+						"Name": "IpAddressTypeId"
+					}
+				},
+				{
+					"Name": "StaticIpAddressIndicator",
+					"Description": "Indicates that the IP address is a static IP address.\n\nBecause the numbers may be tedious to deal with, an IP address may also be assigned to a Host name, which may be easier to remember. Hostnames may be looked up to find IP addresses, and vice-versa. \n\nAt one time ISPs issued one IP address to each user. These are called static IP addresses. \n\nBecause there is a limited number of IP addresses and with increased usage of the internet ISPs now issue IP addresses in a dynamic fashion out of a pool of IP addresses (Using DHCP). These are referred to as dynamic IP addresses. This also limits the ability of the user to host websites, mail servers, ftp servers, etc. In addition to users connecting to the internet, with virtual hosting, a single machine can act like multiple machines (with multiple domain names and IP addresses).",
+					"OriginDataTypeName": {
+						"TypeName": "boolean",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "boolean"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "IpAddress.cdm.json/IpAddress",
+						"Name": "StaticIpAddressIndicator"
+					}
+				},
+				{
+					"Name": "DynamicIpAddressIndicator",
+					"Description": "Indicates that the IP address is a dynamic IP address.\n\nBecause the numbers may be tedious to deal with, an IP address may also be assigned to a Host name, which may be easier to remember. Hostnames may be looked up to find IP addresses, and vice-versa. \n\nAt one time ISPs issued one IP address to each user. These are called static IP addresses. \n\nBecause there is a limited number of IP addresses and with increased usage of the internet ISPs now issue IP addresses in a dynamic fashion out of a pool of IP addresses (Using DHCP). These are referred to as dynamic IP addresses. This also limits the ability of the user to host websites, mail servers, ftp servers, etc. In addition to users connecting to the internet, with virtual hosting, a single machine can act like multiple machines (with multiple domain names and IP addresses).",
+					"OriginDataTypeName": {
+						"TypeName": "boolean",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "boolean"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "IpAddress.cdm.json/IpAddress",
+						"Name": "DynamicIpAddressIndicator"
+					}
+				}
+			],
+			"ColumnSetEntityName": "ab811c2a-5ea1-42b6-8559-70c72afc440a",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/IpAddress",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/IpAddress",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"IpAddress\":{\"entity\":\"IpAddress.cdm.json/IpAddress\",\"name\":\"IpAddress\"},\"PartyId\":{\"entity\":\"IpAddress.cdm.json/IpAddress\",\"name\":\"PartyId\"},\"IpAddressTypeId\":{\"entity\":\"IpAddress.cdm.json/IpAddress\",\"name\":\"IpAddressTypeId\"},\"StaticIpAddressIndicator\":{\"entity\":\"IpAddress.cdm.json/IpAddress\",\"name\":\"StaticIpAddressIndicator\"},\"DynamicIpAddressIndicator\":{\"entity\":\"IpAddress.cdm.json/IpAddress\",\"name\":\"DynamicIpAddressIndicator\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"IpAddress\",\"path\":\"IpAddress.cdm.json/IpAddress\"},\"description\":\"An Internet Protocol (IP) address is a numerical identification (logical address) that is assigned to devices participating in a computer network utilizing the Internet Protocol for communication between its nodes.\",\"primaryKey\":[\"IpAddress\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"IpAddress.cdm.json/IpAddress\",\"name\":\"IpAddress\"},\"dataType\":\"string\",\"dataTypeLength\":32,\"description\":\"(Internet Protocol number or address). A unique number consisting of 4 parts separated by dots, e.g. 165.113.245.2 \\n\\nEvery machine that is on the Internet has a unique IP address. If a machine does not have an IP number, it is not really on the Internet. Most machines also have one or more Domain Names that are easier for people to remember.\",\"isNullable\":false,\"name\":\"IpAddress\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"IpAddress.cdm.json/IpAddress\",\"name\":\"PartyId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a party.\",\"isNullable\":true,\"name\":\"PartyId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"IpAddress.cdm.json/IpAddress\",\"name\":\"IpAddressTypeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of an IP Address Type.\",\"isNullable\":true,\"name\":\"IpAddressTypeId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"IpAddress.cdm.json/IpAddress\",\"name\":\"StaticIpAddressIndicator\"},\"dataType\":\"boolean\",\"description\":\"Indicates that the IP address is a static IP address.\\n\\nBecause the numbers may be tedious to deal with, an IP address may also be assigned to a Host name, which may be easier to remember. Hostnames may be looked up to find IP addresses, and vice-versa. \\n\\nAt one time ISPs issued one IP address to each user. These are called static IP addresses. \\n\\nBecause there is a limited number of IP addresses and with increased usage of the internet ISPs now issue IP addresses in a dynamic fashion out of a pool of IP addresses (Using DHCP). These are referred to as dynamic IP addresses. This also limits the ability of the user to host websites, mail servers, ftp servers, etc. In addition to users connecting to the internet, with virtual hosting, a single machine can act like multiple machines (with multiple domain names and IP addresses).\",\"isNullable\":true,\"name\":\"StaticIpAddressIndicator\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"IpAddress.cdm.json/IpAddress\",\"name\":\"DynamicIpAddressIndicator\"},\"dataType\":\"boolean\",\"description\":\"Indicates that the IP address is a dynamic IP address.\\n\\nBecause the numbers may be tedious to deal with, an IP address may also be assigned to a Host name, which may be easier to remember. Hostnames may be looked up to find IP addresses, and vice-versa. \\n\\nAt one time ISPs issued one IP address to each user. These are called static IP addresses. \\n\\nBecause there is a limited number of IP addresses and with increased usage of the internet ISPs now issue IP addresses in a dynamic fashion out of a pool of IP addresses (Using DHCP). These are referred to as dynamic IP addresses. This also limits the ability of the user to host websites, mail servers, ftp servers, etc. In addition to users connecting to the internet, with virtual hosting, a single machine can act like multiple machines (with multiple domain names and IP addresses).\",\"isNullable\":true,\"name\":\"DynamicIpAddressIndicator\"}]}}}",
+			"Description": "An Internet Protocol (IP) address is a numerical identification (logical address) that is assigned to devices participating in a computer network utilizing the Internet Protocol for communication between its nodes.",
+			"DisplayFolderInfo": "{\"name\":\"Customer Service & Contact Management\",\"colorCode\":\"#0064C1\"}",
+			"PrimaryKeys": "IpAddress",
+			"spark.sql.sources.provider": "csv",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"IpAddress\",\"type\":\"string\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PartyId\",\"type\":\"long\",\"nullable\":true,\"metadata\":{}},{\"name\":\"IpAddressTypeId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"StaticIpAddressIndicator\",\"type\":\"boolean\",\"nullable\":true,\"metadata\":{}},{\"name\":\"DynamicIpAddressIndicator\",\"type\":\"boolean\",\"nullable\":true,\"metadata\":{}}]}",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate"
+		},
+		"ObjectVersion": 2,
+		"ObjectId": "ec0b4d2a-2c06-4804-a43e-acefa839ae96",
+		"Description": "An Internet Protocol (IP) address is a numerical identification (logical address) that is assigned to devices participating in a computer network utilizing the Internet Protocol for communication between its nodes."
+	},
+	"type": "TABLE"
+}

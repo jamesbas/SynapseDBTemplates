@@ -1,0 +1,215 @@
+{
+	"name": "VendorEmail",
+	"properties": {
+		"Name": "VendorEmail",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "VendorId",
+					"Description": "The unique identifier of a Vendor.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "VendorEmail.cdm.json/VendorEmail",
+						"Name": "VendorId"
+					}
+				},
+				{
+					"Name": "EmailTypeId",
+					"Description": "The unique identifier of an Email Type.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "VendorEmail.cdm.json/VendorEmail",
+						"Name": "EmailTypeId"
+					}
+				},
+				{
+					"Name": "EmailAddress",
+					"Description": "The email address.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 256,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "VendorEmail.cdm.json/VendorEmail",
+						"Name": "EmailAddress"
+					}
+				},
+				{
+					"Name": "PeriodStartTimestamp",
+					"Description": "The period start timestamp that the information is valid or effective as of.",
+					"OriginDataTypeName": {
+						"TypeName": "timestamp",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"TimestampFormat": "YYYY-MM-DD HH:MM:SS.fffffffff",
+							"HIVE_TYPE_STRING": "timestamp"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "VendorEmail.cdm.json/VendorEmail",
+						"Name": "PeriodStartTimestamp"
+					}
+				},
+				{
+					"Name": "PeriodEndTimestamp",
+					"Description": "The period end timestamp that the information is valid or effective as of.",
+					"OriginDataTypeName": {
+						"TypeName": "timestamp",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"TimestampFormat": "YYYY-MM-DD HH:MM:SS.fffffffff",
+							"HIVE_TYPE_STRING": "timestamp"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "VendorEmail.cdm.json/VendorEmail",
+						"Name": "PeriodEndTimestamp"
+					}
+				},
+				{
+					"Name": "PreferenceId",
+					"Description": "The unique identifier of a Preference.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "VendorEmail.cdm.json/VendorEmail",
+						"Name": "PreferenceId"
+					}
+				},
+				{
+					"Name": "VendorEmailNote",
+					"Description": "A note, comment or additional information regarding the Vendor email address.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "VendorEmail.cdm.json/VendorEmail",
+						"Name": "VendorEmailNote"
+					}
+				}
+			],
+			"ColumnSetEntityName": "8c6aeaff-52d2-413d-9234-e87fefd2e367",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/VendorEmail",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/VendorEmail",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"VendorId\":{\"entity\":\"VendorEmail.cdm.json/VendorEmail\",\"name\":\"VendorId\"},\"EmailTypeId\":{\"entity\":\"VendorEmail.cdm.json/VendorEmail\",\"name\":\"EmailTypeId\"},\"EmailAddress\":{\"entity\":\"VendorEmail.cdm.json/VendorEmail\",\"name\":\"EmailAddress\"},\"PeriodStartTimestamp\":{\"entity\":\"VendorEmail.cdm.json/VendorEmail\",\"name\":\"PeriodStartTimestamp\"},\"PeriodEndTimestamp\":{\"entity\":\"VendorEmail.cdm.json/VendorEmail\",\"name\":\"PeriodEndTimestamp\"},\"PreferenceId\":{\"entity\":\"VendorEmail.cdm.json/VendorEmail\",\"name\":\"PreferenceId\"},\"VendorEmailNote\":{\"entity\":\"VendorEmail.cdm.json/VendorEmail\",\"name\":\"VendorEmailNote\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"VendorEmail\",\"path\":\"VendorEmail.cdm.json/VendorEmail\"},\"description\":\"The Vendor email address(s) of the associated email Type for the indicated period.\",\"primaryKey\":[\"VendorId\",\"EmailTypeId\",\"EmailAddress\",\"PeriodStartTimestamp\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"VendorEmail.cdm.json/VendorEmail\",\"name\":\"VendorId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a Vendor.\",\"isNullable\":false,\"name\":\"VendorId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"VendorEmail.cdm.json/VendorEmail\",\"name\":\"EmailTypeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of an Email Type.\",\"isNullable\":false,\"name\":\"EmailTypeId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"VendorEmail.cdm.json/VendorEmail\",\"name\":\"EmailAddress\"},\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"The email address.\",\"isNullable\":false,\"name\":\"EmailAddress\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"VendorEmail.cdm.json/VendorEmail\",\"name\":\"PeriodStartTimestamp\"},\"dataType\":\"timestamp\",\"description\":\"The period start timestamp that the information is valid or effective as of.\",\"isNullable\":false,\"name\":\"PeriodStartTimestamp\",\"timestampFormat\":\"YYYY-MM-DD HH:MM:SS.fffffffff\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"VendorEmail.cdm.json/VendorEmail\",\"name\":\"PeriodEndTimestamp\"},\"dataType\":\"timestamp\",\"description\":\"The period end timestamp that the information is valid or effective as of.\",\"isNullable\":true,\"name\":\"PeriodEndTimestamp\",\"timestampFormat\":\"YYYY-MM-DD HH:MM:SS.fffffffff\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"VendorEmail.cdm.json/VendorEmail\",\"name\":\"PreferenceId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Preference.\",\"isNullable\":true,\"name\":\"PreferenceId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"VendorEmail.cdm.json/VendorEmail\",\"name\":\"VendorEmailNote\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"A note, comment or additional information regarding the Vendor email address.\",\"isNullable\":true,\"name\":\"VendorEmailNote\"}]}}}",
+			"Description": "The Vendor email address(s) of the associated email Type for the indicated period.",
+			"DisplayFolderInfo": "{\"name\":\"Vendor\",\"colorCode\":\"#1C508C\"}",
+			"PrimaryKeys": "VendorId,EmailTypeId,EmailAddress,PeriodStartTimestamp",
+			"spark.sql.sources.provider": "csv",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"VendorId\",\"type\":\"long\",\"nullable\":false,\"metadata\":{}},{\"name\":\"EmailTypeId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"EmailAddress\",\"type\":\"string\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PeriodStartTimestamp\",\"type\":\"timestamp\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PeriodEndTimestamp\",\"type\":\"timestamp\",\"nullable\":true,\"metadata\":{}},{\"name\":\"PreferenceId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"VendorEmailNote\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "14dc669a-b964-4a68-9c5a-408737fad925",
+		"Description": "The Vendor email address(s) of the associated email Type for the indicated period."
+	},
+	"type": "TABLE"
+}

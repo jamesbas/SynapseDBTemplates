@@ -1,0 +1,29 @@
+{
+	"name": "relationship-voihigzewu",
+	"properties": {
+		"Name": "relationship-voihigzewu",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "Location",
+		"ToTableName": "VendorLocationGeographicCriteria",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "LocationId",
+				"ToColumnName": "LocationId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"Location.cdm.json/Location\",\"toEntity\":\"VendorLocationGeographicCriteria.cdm.json/VendorLocationGeographicCriteria\",\"joinPairs\":[{\"fromAttribute\":\"LocationId\",\"toAttribute\":\"LocationId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "57da889a-b88c-44f7-a088-9d37c492375c"
+	},
+	"type": "RELATIONSHIP"
+}

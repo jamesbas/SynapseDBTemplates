@@ -1,0 +1,156 @@
+{
+	"name": "SurveyQuestion",
+	"properties": {
+		"Name": "SurveyQuestion",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "SurveyId",
+					"Description": "The unique identifier of a Survey.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "SurveyQuestion.cdm.json/SurveyQuestion",
+						"Name": "SurveyId"
+					}
+				},
+				{
+					"Name": "QuestionId",
+					"Description": "The unique identifier of a Question.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "SurveyQuestion.cdm.json/SurveyQuestion",
+						"Name": "QuestionId"
+					}
+				},
+				{
+					"Name": "SurveyQuestionPositionNumber",
+					"Description": "The position of the question on the survey.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "SurveyQuestion.cdm.json/SurveyQuestion",
+						"Name": "SurveyQuestionPositionNumber"
+					}
+				},
+				{
+					"Name": "SurveyQuestionResponseRequiredIndicator",
+					"Description": "Indicates whether a response is required for the survey question.",
+					"OriginDataTypeName": {
+						"TypeName": "boolean",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "boolean"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "SurveyQuestion.cdm.json/SurveyQuestion",
+						"Name": "SurveyQuestionResponseRequiredIndicator"
+					}
+				}
+			],
+			"ColumnSetEntityName": "442d708e-4eee-46b3-84a1-5f527c87a08b",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/SurveyQuestion",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/SurveyQuestion",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"SurveyId\":{\"entity\":\"SurveyQuestion.cdm.json/SurveyQuestion\",\"name\":\"SurveyId\"},\"QuestionId\":{\"entity\":\"SurveyQuestion.cdm.json/SurveyQuestion\",\"name\":\"QuestionId\"},\"SurveyQuestionPositionNumber\":{\"entity\":\"SurveyQuestion.cdm.json/SurveyQuestion\",\"name\":\"SurveyQuestionPositionNumber\"},\"SurveyQuestionResponseRequiredIndicator\":{\"entity\":\"SurveyQuestion.cdm.json/SurveyQuestion\",\"name\":\"SurveyQuestionResponseRequiredIndicator\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"SurveyQuestion\",\"path\":\"SurveyQuestion.cdm.json/SurveyQuestion\"},\"description\":\"The question(s) included with the associated Survey.\\n\\nA question may be asked on one or more Surveys.   This enables the organization to ask the same question in many different scenarios and correlate the response by geography, individual, individual type, product, market, market segment or other criteria.\",\"primaryKey\":[\"SurveyId\",\"QuestionId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"SurveyQuestion.cdm.json/SurveyQuestion\",\"name\":\"SurveyId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Survey.\",\"isNullable\":false,\"name\":\"SurveyId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"SurveyQuestion.cdm.json/SurveyQuestion\",\"name\":\"QuestionId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Question.\",\"isNullable\":false,\"name\":\"QuestionId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"SurveyQuestion.cdm.json/SurveyQuestion\",\"name\":\"SurveyQuestionPositionNumber\"},\"dataType\":\"integer\",\"description\":\"The position of the question on the survey.\",\"isNullable\":true,\"name\":\"SurveyQuestionPositionNumber\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"SurveyQuestion.cdm.json/SurveyQuestion\",\"name\":\"SurveyQuestionResponseRequiredIndicator\"},\"dataType\":\"boolean\",\"description\":\"Indicates whether a response is required for the survey question.\",\"isNullable\":true,\"name\":\"SurveyQuestionResponseRequiredIndicator\"}]}}}",
+			"Description": "The question(s) included with the associated Survey.\n\nA question may be asked on one or more Surveys.   This enables the organization to ask the same question in many different scenarios and correlate the response by geography, individual, individual type, product, market, market segment or other criteria.",
+			"DisplayFolderInfo": "{\"name\":\"Customer Service & Contact Management\",\"colorCode\":\"#0064C1\"}",
+			"PrimaryKeys": "SurveyId,QuestionId",
+			"spark.sql.sources.provider": "csv",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"SurveyId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"QuestionId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"SurveyQuestionPositionNumber\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"SurveyQuestionResponseRequiredIndicator\",\"type\":\"boolean\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "aef50044-a87f-46d5-8bfe-6de42d6f6e3d",
+		"Description": "The question(s) included with the associated Survey.\n\nA question may be asked on one or more Surveys.   This enables the organization to ask the same question in many different scenarios and correlate the response by geography, individual, individual type, product, market, market segment or other criteria."
+	},
+	"type": "TABLE"
+}

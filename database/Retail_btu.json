@@ -1,0 +1,28 @@
+{
+	"name": "Retail_btu",
+	"properties": {
+		"Name": "Retail_btu",
+		"EntityType": "DATABASE",
+		"Description": "",
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"Properties": {
+			"DerivedModelDBInfo": "{\"ModelDirectives\":{\"BaseModel\":{\"Name\":\"Retail\",\"Version\":\"0.1.0\"}}}",
+			"IsSyMSCDMDatabase": true,
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate"
+		},
+		"Source": {
+			"Provider": "ADLS",
+			"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/Retail_btu",
+			"Properties": {
+				"FormatType": "csv",
+				"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage"
+			}
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "c66837d9-4f2b-40b5-9a75-c314b0d3b752"
+	},
+	"type": "DATABASE"
+}

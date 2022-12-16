@@ -1,0 +1,137 @@
+{
+	"name": "TransportationMode",
+	"properties": {
+		"Name": "TransportationMode",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "TransportationModeId",
+					"Description": "The unique identifier of a Transportation Mode.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "TransportationMode.cdm.json/TransportationMode",
+						"Name": "TransportationModeId"
+					}
+				},
+				{
+					"Name": "TransportationModeName",
+					"Description": "The name of a Transportation Mode.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 256,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "TransportationMode.cdm.json/TransportationMode",
+						"Name": "TransportationModeName"
+					}
+				},
+				{
+					"Name": "TransportationModeDescription",
+					"Description": "The description of a Transportation Mode.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "TransportationMode.cdm.json/TransportationMode",
+						"Name": "TransportationModeDescription"
+					}
+				}
+			],
+			"ColumnSetEntityName": "8726c430-864a-4e7a-84fc-8d201dbc4cab",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/TransportationMode",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/TransportationMode",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"TransportationModeId\":{\"entity\":\"TransportationMode.cdm.json/TransportationMode\",\"name\":\"TransportationModeId\"},\"TransportationModeName\":{\"entity\":\"TransportationMode.cdm.json/TransportationMode\",\"name\":\"TransportationModeName\"},\"TransportationModeDescription\":{\"entity\":\"TransportationMode.cdm.json/TransportationMode\",\"name\":\"TransportationModeDescription\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"TransportationMode\",\"path\":\"TransportationMode.cdm.json/TransportationMode\"},\"description\":\"The mode of transportation used for the associated transportation requirement.\\n\\nEx:\\n- Personal Automobile\\n- Rented Automobile\\n- Bus\\n- Train\\n- Airplane\\n- Foot (Walking)\\n- Moving Walkway\\n- Escalator\\n- Elevator\\n- Shuttle\\n- Mixed\",\"primaryKey\":[\"TransportationModeId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"TransportationMode.cdm.json/TransportationMode\",\"name\":\"TransportationModeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Transportation Mode.\",\"isNullable\":false,\"name\":\"TransportationModeId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"TransportationMode.cdm.json/TransportationMode\",\"name\":\"TransportationModeName\"},\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"The name of a Transportation Mode.\",\"isNullable\":true,\"name\":\"TransportationModeName\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"TransportationMode.cdm.json/TransportationMode\",\"name\":\"TransportationModeDescription\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"The description of a Transportation Mode.\",\"isNullable\":true,\"name\":\"TransportationModeDescription\"}]}}}",
+			"Description": "The mode of transportation used for the associated transportation requirement.\n\nEx:\n- Personal Automobile\n- Rented Automobile\n- Bus\n- Train\n- Airplane\n- Foot (Walking)\n- Moving Walkway\n- Escalator\n- Elevator\n- Shuttle\n- Mixed",
+			"DisplayFolderInfo": "{\"name\":\"Party\",\"colorCode\":\"#7D0F6C\"}",
+			"PrimaryKeys": "TransportationModeId",
+			"spark.sql.sources.provider": "csv",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"TransportationModeId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"TransportationModeName\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"TransportationModeDescription\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "ae21a9f2-4105-4120-8465-7a75c1e7f771",
+		"Description": "The mode of transportation used for the associated transportation requirement.\n\nEx:\n- Personal Automobile\n- Rented Automobile\n- Bus\n- Train\n- Airplane\n- Foot (Walking)\n- Moving Walkway\n- Escalator\n- Elevator\n- Shuttle\n- Mixed"
+	},
+	"type": "TABLE"
+}

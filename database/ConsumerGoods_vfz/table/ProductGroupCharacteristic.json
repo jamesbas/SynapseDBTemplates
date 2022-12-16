@@ -1,0 +1,196 @@
+{
+	"name": "ProductGroupCharacteristic",
+	"properties": {
+		"Name": "ProductGroupCharacteristic",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "ProductGroupId",
+					"Description": "The unique identifier of a Product Group.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ProductGroupCharacteristic.cdm.json/ProductGroupCharacteristic",
+						"Name": "ProductGroupId"
+					}
+				},
+				{
+					"Name": "ProductCharacteristicTypeId",
+					"Description": "The unique identifier of a Product Characteristic Type.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ProductGroupCharacteristic.cdm.json/ProductGroupCharacteristic",
+						"Name": "ProductCharacteristicTypeId"
+					}
+				},
+				{
+					"Name": "ProductGroupCharacteristicPeriodStartDate",
+					"Description": "The period start date for which the associated Product Group Characteristic is valid.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ProductGroupCharacteristic.cdm.json/ProductGroupCharacteristic",
+						"Name": "ProductGroupCharacteristicPeriodStartDate"
+					}
+				},
+				{
+					"Name": "ProductGroupCharacteristicPeriodEndDate",
+					"Description": "The period end date for which the associated Product Group Characteristic is valid.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ProductGroupCharacteristic.cdm.json/ProductGroupCharacteristic",
+						"Name": "ProductGroupCharacteristicPeriodEndDate"
+					}
+				},
+				{
+					"Name": "ProductGroupCharacteristic",
+					"Description": "The Product Group Characteristic.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 256,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ProductGroupCharacteristic.cdm.json/ProductGroupCharacteristic",
+						"Name": "ProductGroupCharacteristic"
+					}
+				},
+				{
+					"Name": "ProductGroupCharacteristicNote",
+					"Description": "A note, comment or additional information regarding the Product Group Characteristic",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ProductGroupCharacteristic.cdm.json/ProductGroupCharacteristic",
+						"Name": "ProductGroupCharacteristicNote"
+					}
+				}
+			],
+			"ColumnSetEntityName": "df24e931-90b4-4a2d-91fd-2bf6e63ad0b0",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/ProductGroupCharacteristic",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/ProductGroupCharacteristic",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"ProductGroupId\":{\"entity\":\"ProductGroupCharacteristic.cdm.json/ProductGroupCharacteristic\",\"name\":\"ProductGroupId\"},\"ProductCharacteristicTypeId\":{\"entity\":\"ProductGroupCharacteristic.cdm.json/ProductGroupCharacteristic\",\"name\":\"ProductCharacteristicTypeId\"},\"ProductGroupCharacteristicPeriodStartDate\":{\"entity\":\"ProductGroupCharacteristic.cdm.json/ProductGroupCharacteristic\",\"name\":\"ProductGroupCharacteristicPeriodStartDate\"},\"ProductGroupCharacteristicPeriodEndDate\":{\"entity\":\"ProductGroupCharacteristic.cdm.json/ProductGroupCharacteristic\",\"name\":\"ProductGroupCharacteristicPeriodEndDate\"},\"ProductGroupCharacteristic\":{\"entity\":\"ProductGroupCharacteristic.cdm.json/ProductGroupCharacteristic\",\"name\":\"ProductGroupCharacteristic\"},\"ProductGroupCharacteristicNote\":{\"entity\":\"ProductGroupCharacteristic.cdm.json/ProductGroupCharacteristic\",\"name\":\"ProductGroupCharacteristicNote\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"ProductGroupCharacteristic\",\"path\":\"ProductGroupCharacteristic.cdm.json/ProductGroupCharacteristic\"},\"description\":\"The characteristic(s)  that describe or characterize the associated product group.\",\"primaryKey\":[\"ProductGroupId\",\"ProductCharacteristicTypeId\",\"ProductGroupCharacteristicPeriodStartDate\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ProductGroupCharacteristic.cdm.json/ProductGroupCharacteristic\",\"name\":\"ProductGroupId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Product Group.\",\"isNullable\":false,\"name\":\"ProductGroupId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ProductGroupCharacteristic.cdm.json/ProductGroupCharacteristic\",\"name\":\"ProductCharacteristicTypeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Product Characteristic Type.\",\"isNullable\":false,\"name\":\"ProductCharacteristicTypeId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ProductGroupCharacteristic.cdm.json/ProductGroupCharacteristic\",\"name\":\"ProductGroupCharacteristicPeriodStartDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The period start date for which the associated Product Group Characteristic is valid.\",\"isNullable\":false,\"name\":\"ProductGroupCharacteristicPeriodStartDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ProductGroupCharacteristic.cdm.json/ProductGroupCharacteristic\",\"name\":\"ProductGroupCharacteristicPeriodEndDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The period end date for which the associated Product Group Characteristic is valid.\",\"isNullable\":true,\"name\":\"ProductGroupCharacteristicPeriodEndDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ProductGroupCharacteristic.cdm.json/ProductGroupCharacteristic\",\"name\":\"ProductGroupCharacteristic\"},\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"The Product Group Characteristic.\",\"isNullable\":false,\"name\":\"ProductGroupCharacteristic\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ProductGroupCharacteristic.cdm.json/ProductGroupCharacteristic\",\"name\":\"ProductGroupCharacteristicNote\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"A note, comment or additional information regarding the Product Group Characteristic\",\"isNullable\":true,\"name\":\"ProductGroupCharacteristicNote\"}]}}}",
+			"Description": "The characteristic(s)  that describe or characterize the associated product group.",
+			"DisplayFolderInfo": "{\"name\":\"Product\",\"colorCode\":\"#0C614C\"}",
+			"PrimaryKeys": "ProductGroupId,ProductCharacteristicTypeId,ProductGroupCharacteristicPeriodStartDate",
+			"spark.sql.sources.provider": "csv",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"ProductGroupId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"ProductCharacteristicTypeId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"ProductGroupCharacteristicPeriodStartDate\",\"type\":\"date\",\"nullable\":false,\"metadata\":{}},{\"name\":\"ProductGroupCharacteristicPeriodEndDate\",\"type\":\"date\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ProductGroupCharacteristic\",\"type\":\"string\",\"nullable\":false,\"metadata\":{}},{\"name\":\"ProductGroupCharacteristicNote\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "7b4373a3-0e4d-4986-826b-d711bbd4e048",
+		"Description": "The characteristic(s)  that describe or characterize the associated product group."
+	},
+	"type": "TABLE"
+}

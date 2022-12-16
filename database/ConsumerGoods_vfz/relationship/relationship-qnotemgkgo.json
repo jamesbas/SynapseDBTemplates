@@ -1,0 +1,29 @@
+{
+	"name": "relationship-qnotemgkgo",
+	"properties": {
+		"Name": "relationship-qnotemgkgo",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "ContractFeePartyRelationshipType",
+		"ToTableName": "ContractFeePaymentRelatedParty",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "ContractFeePartyRelationshipTypeId",
+				"ToColumnName": "ContractFeePartyRelationshipTypeId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"ContractFeePartyRelationshipType.cdm.json/ContractFeePartyRelationshipType\",\"toEntity\":\"ContractFeePaymentRelatedParty.cdm.json/ContractFeePaymentRelatedParty\",\"joinPairs\":[{\"fromAttribute\":\"ContractFeePartyRelationshipTypeId\",\"toAttribute\":\"ContractFeePartyRelationshipTypeId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "db70e7b8-666e-4abe-ade5-ff427f8822ae"
+	},
+	"type": "RELATIONSHIP"
+}

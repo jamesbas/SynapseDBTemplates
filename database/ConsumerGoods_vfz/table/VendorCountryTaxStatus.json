@@ -1,0 +1,196 @@
+{
+	"name": "VendorCountryTaxStatus",
+	"properties": {
+		"Name": "VendorCountryTaxStatus",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "VendorId",
+					"Description": "The unique identifier of a Vendor.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "VendorCountryTaxStatus.cdm.json/VendorCountryTaxStatus",
+						"Name": "VendorId"
+					}
+				},
+				{
+					"Name": "CountryId",
+					"Description": "The unique identifier of the Country.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "VendorCountryTaxStatus.cdm.json/VendorCountryTaxStatus",
+						"Name": "CountryId"
+					}
+				},
+				{
+					"Name": "PeriodStartDate",
+					"Description": "The period start date for which the associated D&B data is effective or 'as-of'.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "VendorCountryTaxStatus.cdm.json/VendorCountryTaxStatus",
+						"Name": "PeriodStartDate"
+					}
+				},
+				{
+					"Name": "PeriodEndDate",
+					"Description": "The period end date for which the associated D&B data is effective or 'as-of'.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "VendorCountryTaxStatus.cdm.json/VendorCountryTaxStatus",
+						"Name": "PeriodEndDate"
+					}
+				},
+				{
+					"Name": "TaxStatusId",
+					"Description": "The unique identifier of a tax status.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "VendorCountryTaxStatus.cdm.json/VendorCountryTaxStatus",
+						"Name": "TaxStatusId"
+					}
+				},
+				{
+					"Name": "VendorCountryTaxStatusNote",
+					"Description": "Notes, comments or additional information regarding the Vendor Country Tax Status.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "VendorCountryTaxStatus.cdm.json/VendorCountryTaxStatus",
+						"Name": "VendorCountryTaxStatusNote"
+					}
+				}
+			],
+			"ColumnSetEntityName": "99f10571-a9cb-4cef-b79d-5446e6978b6b",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/VendorCountryTaxStatus",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/VendorCountryTaxStatus",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"VendorId\":{\"entity\":\"VendorCountryTaxStatus.cdm.json/VendorCountryTaxStatus\",\"name\":\"VendorId\"},\"CountryId\":{\"entity\":\"VendorCountryTaxStatus.cdm.json/VendorCountryTaxStatus\",\"name\":\"CountryId\"},\"PeriodStartDate\":{\"entity\":\"VendorCountryTaxStatus.cdm.json/VendorCountryTaxStatus\",\"name\":\"PeriodStartDate\"},\"PeriodEndDate\":{\"entity\":\"VendorCountryTaxStatus.cdm.json/VendorCountryTaxStatus\",\"name\":\"PeriodEndDate\"},\"TaxStatusId\":{\"entity\":\"VendorCountryTaxStatus.cdm.json/VendorCountryTaxStatus\",\"name\":\"TaxStatusId\"},\"VendorCountryTaxStatusNote\":{\"entity\":\"VendorCountryTaxStatus.cdm.json/VendorCountryTaxStatus\",\"name\":\"VendorCountryTaxStatusNote\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"VendorCountryTaxStatus\",\"path\":\"VendorCountryTaxStatus.cdm.json/VendorCountryTaxStatus\"},\"description\":\"The status of the Vendor in the associated Country.\",\"primaryKey\":[\"VendorId\",\"CountryId\",\"PeriodStartDate\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"VendorCountryTaxStatus.cdm.json/VendorCountryTaxStatus\",\"name\":\"VendorId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a Vendor.\",\"isNullable\":false,\"name\":\"VendorId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"VendorCountryTaxStatus.cdm.json/VendorCountryTaxStatus\",\"name\":\"CountryId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of the Country.\",\"isNullable\":false,\"name\":\"CountryId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"VendorCountryTaxStatus.cdm.json/VendorCountryTaxStatus\",\"name\":\"PeriodStartDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The period start date for which the associated D&B data is effective or 'as-of'.\",\"isNullable\":false,\"name\":\"PeriodStartDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"VendorCountryTaxStatus.cdm.json/VendorCountryTaxStatus\",\"name\":\"PeriodEndDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The period end date for which the associated D&B data is effective or 'as-of'.\",\"isNullable\":true,\"name\":\"PeriodEndDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"VendorCountryTaxStatus.cdm.json/VendorCountryTaxStatus\",\"name\":\"TaxStatusId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a tax status.\",\"isNullable\":false,\"name\":\"TaxStatusId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"VendorCountryTaxStatus.cdm.json/VendorCountryTaxStatus\",\"name\":\"VendorCountryTaxStatusNote\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"Notes, comments or additional information regarding the Vendor Country Tax Status.\",\"isNullable\":true,\"name\":\"VendorCountryTaxStatusNote\"}]}}}",
+			"Description": "The status of the Vendor in the associated Country.",
+			"DisplayFolderInfo": "{\"name\":\"Vendor\",\"colorCode\":\"#1C508C\"}",
+			"PrimaryKeys": "VendorId,CountryId,PeriodStartDate",
+			"spark.sql.sources.provider": "csv",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"VendorId\",\"type\":\"long\",\"nullable\":false,\"metadata\":{}},{\"name\":\"CountryId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PeriodStartDate\",\"type\":\"date\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PeriodEndDate\",\"type\":\"date\",\"nullable\":true,\"metadata\":{}},{\"name\":\"TaxStatusId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"VendorCountryTaxStatusNote\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate"
+		},
+		"ObjectVersion": 2,
+		"ObjectId": "f622872d-a8c6-4884-bc62-e82d71624fcf",
+		"Description": "The status of the Vendor in the associated Country."
+	},
+	"type": "TABLE"
+}

@@ -1,0 +1,253 @@
+{
+	"name": "PartyTelephoneNumber",
+	"properties": {
+		"Name": "PartyTelephoneNumber",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "PartyId",
+					"Description": "The unique identifier of a Party.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyTelephoneNumber.cdm.json/PartyTelephoneNumber",
+						"Name": "PartyId"
+					}
+				},
+				{
+					"Name": "TelephoneNumberTypeId",
+					"Description": "The unique identifier of a Telephone Number.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyTelephoneNumber.cdm.json/PartyTelephoneNumber",
+						"Name": "TelephoneNumberTypeId"
+					}
+				},
+				{
+					"Name": "TelephoneNumber",
+					"Description": "A telephone number associated with a Party.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 15,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyTelephoneNumber.cdm.json/PartyTelephoneNumber",
+						"Name": "TelephoneNumber"
+					}
+				},
+				{
+					"Name": "PeriodStartTimestamp",
+					"Description": "The period start timestamp that the information is valid or effective as of.",
+					"OriginDataTypeName": {
+						"TypeName": "timestamp",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"TimestampFormat": "YYYY-MM-DD HH:MM:SS.fffffffff",
+							"HIVE_TYPE_STRING": "timestamp"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyTelephoneNumber.cdm.json/PartyTelephoneNumber",
+						"Name": "PeriodStartTimestamp"
+					}
+				},
+				{
+					"Name": "PeriodEndTimestamp",
+					"Description": "The period end timestamp that the information is valid or effective as of.",
+					"OriginDataTypeName": {
+						"TypeName": "timestamp",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"TimestampFormat": "YYYY-MM-DD HH:MM:SS.fffffffff",
+							"HIVE_TYPE_STRING": "timestamp"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyTelephoneNumber.cdm.json/PartyTelephoneNumber",
+						"Name": "PeriodEndTimestamp"
+					}
+				},
+				{
+					"Name": "PreferenceId",
+					"Description": "The unique identifier of a Preference.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyTelephoneNumber.cdm.json/PartyTelephoneNumber",
+						"Name": "PreferenceId"
+					}
+				},
+				{
+					"Name": "TelephoneNumberNote",
+					"Description": "A note, comment or additional information regarding the Party Telephone Number.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyTelephoneNumber.cdm.json/PartyTelephoneNumber",
+						"Name": "TelephoneNumberNote"
+					}
+				},
+				{
+					"Name": "LocationId",
+					"Description": "The unique identifier of a Location.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyTelephoneNumber.cdm.json/PartyTelephoneNumber",
+						"Name": "LocationId"
+					}
+				},
+				{
+					"Name": "TextCapableIndicator",
+					"Description": "Indicates whether the phone is capable of receiving text messages.",
+					"OriginDataTypeName": {
+						"TypeName": "boolean",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "boolean"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyTelephoneNumber.cdm.json/PartyTelephoneNumber",
+						"Name": "TextCapableIndicator"
+					}
+				}
+			],
+			"ColumnSetEntityName": "6ff56987-9e29-469b-bcf3-961f8c8ec7e8",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/PartyTelephoneNumber",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/PartyTelephoneNumber",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"PartyId\":{\"entity\":\"PartyTelephoneNumber.cdm.json/PartyTelephoneNumber\",\"name\":\"PartyId\"},\"TelephoneNumberTypeId\":{\"entity\":\"PartyTelephoneNumber.cdm.json/PartyTelephoneNumber\",\"name\":\"TelephoneNumberTypeId\"},\"TelephoneNumber\":{\"entity\":\"PartyTelephoneNumber.cdm.json/PartyTelephoneNumber\",\"name\":\"TelephoneNumber\"},\"PeriodStartTimestamp\":{\"entity\":\"PartyTelephoneNumber.cdm.json/PartyTelephoneNumber\",\"name\":\"PeriodStartTimestamp\"},\"PeriodEndTimestamp\":{\"entity\":\"PartyTelephoneNumber.cdm.json/PartyTelephoneNumber\",\"name\":\"PeriodEndTimestamp\"},\"PreferenceId\":{\"entity\":\"PartyTelephoneNumber.cdm.json/PartyTelephoneNumber\",\"name\":\"PreferenceId\"},\"TelephoneNumberNote\":{\"entity\":\"PartyTelephoneNumber.cdm.json/PartyTelephoneNumber\",\"name\":\"TelephoneNumberNote\"},\"LocationId\":{\"entity\":\"PartyTelephoneNumber.cdm.json/PartyTelephoneNumber\",\"name\":\"LocationId\"},\"TextCapableIndicator\":{\"entity\":\"PartyTelephoneNumber.cdm.json/PartyTelephoneNumber\",\"name\":\"TextCapableIndicator\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"PartyTelephoneNumber\",\"path\":\"PartyTelephoneNumber.cdm.json/PartyTelephoneNumber\"},\"description\":\"The party telephone number of the associated Telephone Number Type for the indicated period.\",\"primaryKey\":[\"PartyId\",\"TelephoneNumberTypeId\",\"TelephoneNumber\",\"PeriodStartTimestamp\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyTelephoneNumber.cdm.json/PartyTelephoneNumber\",\"name\":\"PartyId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a Party.\",\"isNullable\":false,\"name\":\"PartyId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyTelephoneNumber.cdm.json/PartyTelephoneNumber\",\"name\":\"TelephoneNumberTypeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Telephone Number.\",\"isNullable\":false,\"name\":\"TelephoneNumberTypeId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyTelephoneNumber.cdm.json/PartyTelephoneNumber\",\"name\":\"TelephoneNumber\"},\"dataType\":\"decimal\",\"dataTypeLength\":15,\"description\":\"A telephone number associated with a Party.\",\"isNullable\":false,\"scale\":0,\"name\":\"TelephoneNumber\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyTelephoneNumber.cdm.json/PartyTelephoneNumber\",\"name\":\"PeriodStartTimestamp\"},\"dataType\":\"timestamp\",\"description\":\"The period start timestamp that the information is valid or effective as of.\",\"isNullable\":false,\"name\":\"PeriodStartTimestamp\",\"timestampFormat\":\"YYYY-MM-DD HH:MM:SS.fffffffff\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyTelephoneNumber.cdm.json/PartyTelephoneNumber\",\"name\":\"PeriodEndTimestamp\"},\"dataType\":\"timestamp\",\"description\":\"The period end timestamp that the information is valid or effective as of.\",\"isNullable\":true,\"name\":\"PeriodEndTimestamp\",\"timestampFormat\":\"YYYY-MM-DD HH:MM:SS.fffffffff\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyTelephoneNumber.cdm.json/PartyTelephoneNumber\",\"name\":\"PreferenceId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Preference.\",\"isNullable\":true,\"name\":\"PreferenceId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyTelephoneNumber.cdm.json/PartyTelephoneNumber\",\"name\":\"TelephoneNumberNote\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"A note, comment or additional information regarding the Party Telephone Number.\",\"isNullable\":true,\"name\":\"TelephoneNumberNote\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyTelephoneNumber.cdm.json/PartyTelephoneNumber\",\"name\":\"LocationId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Location.\",\"isNullable\":true,\"name\":\"LocationId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyTelephoneNumber.cdm.json/PartyTelephoneNumber\",\"name\":\"TextCapableIndicator\"},\"dataType\":\"boolean\",\"description\":\"Indicates whether the phone is capable of receiving text messages.\",\"isNullable\":true,\"name\":\"TextCapableIndicator\"}]}}}",
+			"Description": "The party telephone number of the associated Telephone Number Type for the indicated period.",
+			"DisplayFolderInfo": "{\"name\":\"Party\",\"colorCode\":\"#7D0F6C\"}",
+			"PrimaryKeys": "PartyId,TelephoneNumberTypeId,TelephoneNumber,PeriodStartTimestamp",
+			"spark.sql.sources.provider": "csv",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"PartyId\",\"type\":\"long\",\"nullable\":false,\"metadata\":{}},{\"name\":\"TelephoneNumberTypeId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"TelephoneNumber\",\"type\":\"decimal(15,0)\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PeriodStartTimestamp\",\"type\":\"timestamp\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PeriodEndTimestamp\",\"type\":\"timestamp\",\"nullable\":true,\"metadata\":{}},{\"name\":\"PreferenceId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"TelephoneNumberNote\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"LocationId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"TextCapableIndicator\",\"type\":\"boolean\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "3660c988-6af2-417f-9897-51442c445975",
+		"Description": "The party telephone number of the associated Telephone Number Type for the indicated period."
+	},
+	"type": "TABLE"
+}

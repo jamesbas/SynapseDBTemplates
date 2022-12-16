@@ -1,0 +1,195 @@
+{
+	"name": "ContractFeeRelatedParty",
+	"properties": {
+		"Name": "ContractFeeRelatedParty",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "ContractId",
+					"Description": "The unique identifier of a Contract.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ContractFeeRelatedParty.cdm.json/ContractFeeRelatedParty",
+						"Name": "ContractId"
+					}
+				},
+				{
+					"Name": "ContractFeeTypeId",
+					"Description": "The unique identifier of a contract fee.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ContractFeeRelatedParty.cdm.json/ContractFeeRelatedParty",
+						"Name": "ContractFeeTypeId"
+					}
+				},
+				{
+					"Name": "ContractFeeTimestamp",
+					"Description": "The period start timestamp associated with the contract fee.",
+					"OriginDataTypeName": {
+						"TypeName": "timestamp",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"TimestampFormat": "YYYY-MM-DD HH:MM:SS.fffffffff",
+							"HIVE_TYPE_STRING": "timestamp"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ContractFeeRelatedParty.cdm.json/ContractFeeRelatedParty",
+						"Name": "ContractFeeTimestamp"
+					}
+				},
+				{
+					"Name": "PartyId",
+					"Description": "The unique identifier of a Party.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ContractFeeRelatedParty.cdm.json/ContractFeeRelatedParty",
+						"Name": "PartyId"
+					}
+				},
+				{
+					"Name": "ContractFeePartyRelationshipTypeId",
+					"Description": "The unique identifier of a contract fee party relationship type.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ContractFeeRelatedParty.cdm.json/ContractFeeRelatedParty",
+						"Name": "ContractFeePartyRelationshipTypeId"
+					}
+				},
+				{
+					"Name": "ContractFeePartyRelationshipNote",
+					"Description": "A note, comment or additional information regarding the Contract Fee - Party relationship.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ContractFeeRelatedParty.cdm.json/ContractFeeRelatedParty",
+						"Name": "ContractFeePartyRelationshipNote"
+					}
+				}
+			],
+			"ColumnSetEntityName": "4e63678b-03c2-43e6-813c-d1f03915fc12",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/ContractFeeRelatedParty",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/ContractFeeRelatedParty",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"ContractId\":{\"entity\":\"ContractFeeRelatedParty.cdm.json/ContractFeeRelatedParty\",\"name\":\"ContractId\"},\"ContractFeeTypeId\":{\"entity\":\"ContractFeeRelatedParty.cdm.json/ContractFeeRelatedParty\",\"name\":\"ContractFeeTypeId\"},\"ContractFeeTimestamp\":{\"entity\":\"ContractFeeRelatedParty.cdm.json/ContractFeeRelatedParty\",\"name\":\"ContractFeeTimestamp\"},\"PartyId\":{\"entity\":\"ContractFeeRelatedParty.cdm.json/ContractFeeRelatedParty\",\"name\":\"PartyId\"},\"ContractFeePartyRelationshipTypeId\":{\"entity\":\"ContractFeeRelatedParty.cdm.json/ContractFeeRelatedParty\",\"name\":\"ContractFeePartyRelationshipTypeId\"},\"ContractFeePartyRelationshipNote\":{\"entity\":\"ContractFeeRelatedParty.cdm.json/ContractFeeRelatedParty\",\"name\":\"ContractFeePartyRelationshipNote\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"ContractFeeRelatedParty\",\"path\":\"ContractFeeRelatedParty.cdm.json/ContractFeeRelatedParty\"},\"description\":\"The party(s) related to the contract fee.\",\"primaryKey\":[\"ContractId\",\"ContractFeeTypeId\",\"ContractFeeTimestamp\",\"PartyId\",\"ContractFeePartyRelationshipTypeId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ContractFeeRelatedParty.cdm.json/ContractFeeRelatedParty\",\"name\":\"ContractId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Contract.\",\"isNullable\":false,\"name\":\"ContractId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ContractFeeRelatedParty.cdm.json/ContractFeeRelatedParty\",\"name\":\"ContractFeeTypeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a contract fee.\",\"isNullable\":false,\"name\":\"ContractFeeTypeId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ContractFeeRelatedParty.cdm.json/ContractFeeRelatedParty\",\"name\":\"ContractFeeTimestamp\"},\"dataType\":\"timestamp\",\"description\":\"The period start timestamp associated with the contract fee.\",\"isNullable\":false,\"name\":\"ContractFeeTimestamp\",\"timestampFormat\":\"YYYY-MM-DD HH:MM:SS.fffffffff\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ContractFeeRelatedParty.cdm.json/ContractFeeRelatedParty\",\"name\":\"PartyId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a Party.\",\"isNullable\":false,\"name\":\"PartyId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ContractFeeRelatedParty.cdm.json/ContractFeeRelatedParty\",\"name\":\"ContractFeePartyRelationshipTypeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a contract fee party relationship type.\",\"isNullable\":false,\"name\":\"ContractFeePartyRelationshipTypeId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ContractFeeRelatedParty.cdm.json/ContractFeeRelatedParty\",\"name\":\"ContractFeePartyRelationshipNote\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"A note, comment or additional information regarding the Contract Fee - Party relationship.\",\"isNullable\":true,\"name\":\"ContractFeePartyRelationshipNote\"}]}}}",
+			"Description": "The party(s) related to the contract fee.",
+			"DisplayFolderInfo": "{\"name\":\"Contract\",\"colorCode\":\"#000F5C\"}",
+			"PrimaryKeys": "ContractId,ContractFeeTypeId,ContractFeeTimestamp,PartyId,ContractFeePartyRelationshipTypeId",
+			"spark.sql.sources.provider": "csv",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"ContractId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"ContractFeeTypeId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"ContractFeeTimestamp\",\"type\":\"timestamp\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PartyId\",\"type\":\"long\",\"nullable\":false,\"metadata\":{}},{\"name\":\"ContractFeePartyRelationshipTypeId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"ContractFeePartyRelationshipNote\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "b29746cb-2c57-40fb-88a9-e6e9947e4ac8",
+		"Description": "The party(s) related to the contract fee."
+	},
+	"type": "TABLE"
+}

@@ -1,0 +1,137 @@
+{
+	"name": "CustomerPartyRelationshipType",
+	"properties": {
+		"Name": "CustomerPartyRelationshipType",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "CustomerPartyRelationshipTypeId",
+					"Description": "The unique identifier of a customer party relationship type.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "CustomerPartyRelationshipType.cdm.json/CustomerPartyRelationshipType",
+						"Name": "CustomerPartyRelationshipTypeId"
+					}
+				},
+				{
+					"Name": "CustomerPartyRelationshipTypeName",
+					"Description": "The name of a Customer Party relationship type.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 256,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "CustomerPartyRelationshipType.cdm.json/CustomerPartyRelationshipType",
+						"Name": "CustomerPartyRelationshipTypeName"
+					}
+				},
+				{
+					"Name": "CustomerPartyRelationshipTypeDescription",
+					"Description": "The description of a customer party relationship type.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "CustomerPartyRelationshipType.cdm.json/CustomerPartyRelationshipType",
+						"Name": "CustomerPartyRelationshipTypeDescription"
+					}
+				}
+			],
+			"ColumnSetEntityName": "56021e44-1ef4-40d8-b81c-c891ba184351",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/CustomerPartyRelationshipType",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/CustomerPartyRelationshipType",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"CustomerPartyRelationshipTypeId\":{\"entity\":\"CustomerPartyRelationshipType.cdm.json/CustomerPartyRelationshipType\",\"name\":\"CustomerPartyRelationshipTypeId\"},\"CustomerPartyRelationshipTypeName\":{\"entity\":\"CustomerPartyRelationshipType.cdm.json/CustomerPartyRelationshipType\",\"name\":\"CustomerPartyRelationshipTypeName\"},\"CustomerPartyRelationshipTypeDescription\":{\"entity\":\"CustomerPartyRelationshipType.cdm.json/CustomerPartyRelationshipType\",\"name\":\"CustomerPartyRelationshipTypeDescription\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"CustomerPartyRelationshipType\",\"path\":\"CustomerPartyRelationshipType.cdm.json/CustomerPartyRelationshipType\"},\"description\":\"The nature of the relationship between a customer and a related party.\\n\\nEx:\\n- Company - parent company \\n- Company - subsidiary company \\n- Company - company Shipping Agent\\n- Company - related-company\\n- Individual - Employer\\n- Individual - Family Member\\n- Customer Referral\\n- National Jurisdiction\\n- State Jurisdiction\\n- Provincial Jurisdiction\\n- Customer - Travel Agent\",\"primaryKey\":[\"CustomerPartyRelationshipTypeId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"CustomerPartyRelationshipType.cdm.json/CustomerPartyRelationshipType\",\"name\":\"CustomerPartyRelationshipTypeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a customer party relationship type.\",\"isNullable\":false,\"name\":\"CustomerPartyRelationshipTypeId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"CustomerPartyRelationshipType.cdm.json/CustomerPartyRelationshipType\",\"name\":\"CustomerPartyRelationshipTypeName\"},\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"The name of a Customer Party relationship type.\",\"isNullable\":true,\"name\":\"CustomerPartyRelationshipTypeName\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"CustomerPartyRelationshipType.cdm.json/CustomerPartyRelationshipType\",\"name\":\"CustomerPartyRelationshipTypeDescription\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"The description of a customer party relationship type.\",\"isNullable\":true,\"name\":\"CustomerPartyRelationshipTypeDescription\"}]}}}",
+			"Description": "The nature of the relationship between a customer and a related party.\n\nEx:\n- Company - parent company \n- Company - subsidiary company \n- Company - company Shipping Agent\n- Company - related-company\n- Individual - Employer\n- Individual - Family Member\n- Customer Referral\n- National Jurisdiction\n- State Jurisdiction\n- Provincial Jurisdiction\n- Customer - Travel Agent",
+			"DisplayFolderInfo": "{\"name\":\"Customer\",\"colorCode\":\"#022F22\"}",
+			"PrimaryKeys": "CustomerPartyRelationshipTypeId",
+			"spark.sql.sources.provider": "csv",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"CustomerPartyRelationshipTypeId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"CustomerPartyRelationshipTypeName\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"CustomerPartyRelationshipTypeDescription\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "15d68783-a256-4d82-ac56-adf6385cb67f",
+		"Description": "The nature of the relationship between a customer and a related party.\n\nEx:\n- Company - parent company \n- Company - subsidiary company \n- Company - company Shipping Agent\n- Company - related-company\n- Individual - Employer\n- Individual - Family Member\n- Customer Referral\n- National Jurisdiction\n- State Jurisdiction\n- Provincial Jurisdiction\n- Customer - Travel Agent"
+	},
+	"type": "TABLE"
+}

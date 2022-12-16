@@ -1,0 +1,29 @@
+{
+	"name": "relationship-kdrakjozdn",
+	"properties": {
+		"Name": "relationship-kdrakjozdn",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "Interest",
+		"ToTableName": "PartyInterest",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "InterestId",
+				"ToColumnName": "InterestId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"Interest.cdm.json/Interest\",\"toEntity\":\"PartyInterest.cdm.json/PartyInterest\",\"joinPairs\":[{\"fromAttribute\":\"InterestId\",\"toAttribute\":\"InterestId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "9ef04cf0-ad5a-4031-8a6a-2db5bcf1a06d"
+	},
+	"type": "RELATIONSHIP"
+}

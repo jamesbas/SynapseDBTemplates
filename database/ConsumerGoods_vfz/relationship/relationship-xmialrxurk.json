@@ -1,0 +1,29 @@
+{
+	"name": "relationship-xmialrxurk",
+	"properties": {
+		"Name": "relationship-xmialrxurk",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "HouseholdIncomeSource",
+		"ToTableName": "HouseholdMemberIncome",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "HouseholdIncomeSourceId",
+				"ToColumnName": "HouseholdIncomeSourceId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"HouseholdIncomeSource.cdm.json/HouseholdIncomeSource\",\"toEntity\":\"HouseholdMemberIncome.cdm.json/HouseholdMemberIncome\",\"joinPairs\":[{\"fromAttribute\":\"HouseholdIncomeSourceId\",\"toAttribute\":\"HouseholdIncomeSourceId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "d9c38d69-d999-40be-9ce6-b975900c2676"
+	},
+	"type": "RELATIONSHIP"
+}

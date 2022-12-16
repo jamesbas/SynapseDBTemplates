@@ -1,0 +1,29 @@
+{
+	"name": "relationship-gidzvyngjq",
+	"properties": {
+		"Name": "relationship-gidzvyngjq",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "ContractDateType",
+		"ToTableName": "ContractDate",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "ContractDateTypeId",
+				"ToColumnName": "ContractDateTypeId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"ContractDateType.cdm.json/ContractDateType\",\"toEntity\":\"ContractDate.cdm.json/ContractDate\",\"joinPairs\":[{\"fromAttribute\":\"ContractDateTypeId\",\"toAttribute\":\"ContractDateTypeId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "79f04851-f98f-4d4f-b41f-a923407236b5"
+	},
+	"type": "RELATIONSHIP"
+}

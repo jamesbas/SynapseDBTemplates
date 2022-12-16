@@ -1,0 +1,29 @@
+{
+	"name": "relationship-ycmlzmywbt",
+	"properties": {
+		"Name": "relationship-ycmlzmywbt",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "MarketingCampaign",
+		"ToTableName": "MarketingEvent",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "MarketingCampaignId",
+				"ToColumnName": "MarketingCampaignId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"MarketingCampaign.cdm.json/MarketingCampaign\",\"toEntity\":\"MarketingEvent.cdm.json/MarketingEvent\",\"joinPairs\":[{\"fromAttribute\":\"MarketingCampaignId\",\"toAttribute\":\"MarketingCampaignId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "6b701558-7a31-4f4f-b4bb-371019e3d4da"
+	},
+	"type": "RELATIONSHIP"
+}

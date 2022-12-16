@@ -1,0 +1,29 @@
+{
+	"name": "relationship-ibghclnkoj",
+	"properties": {
+		"Name": "relationship-ibghclnkoj",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "ContractDeliveryMethod",
+		"ToTableName": "ContractPartyDelivery",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "ContractDeliveryMethodId",
+				"ToColumnName": "ContractDeliveryMethodId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"ContractDeliveryMethod.cdm.json/ContractDeliveryMethod\",\"toEntity\":\"ContractPartyDelivery.cdm.json/ContractPartyDelivery\",\"joinPairs\":[{\"fromAttribute\":\"ContractDeliveryMethodId\",\"toAttribute\":\"ContractDeliveryMethodId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "e34ce961-d15a-4b82-ae46-5d98258f8797"
+	},
+	"type": "RELATIONSHIP"
+}

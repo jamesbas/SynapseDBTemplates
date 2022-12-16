@@ -1,0 +1,137 @@
+{
+	"name": "CustomerType",
+	"properties": {
+		"Name": "CustomerType",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "CustomerTypeId",
+					"Description": "The unique identifier of a Customer Type.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "CustomerType.cdm.json/CustomerType",
+						"Name": "CustomerTypeId"
+					}
+				},
+				{
+					"Name": "CustomerTypeName",
+					"Description": "The name of the Customer Type.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 256,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "CustomerType.cdm.json/CustomerType",
+						"Name": "CustomerTypeName"
+					}
+				},
+				{
+					"Name": "CustomerTypeDescription",
+					"Description": "The description of the Customer Type.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "CustomerType.cdm.json/CustomerType",
+						"Name": "CustomerTypeDescription"
+					}
+				}
+			],
+			"ColumnSetEntityName": "d264bc4c-5ec2-48bc-b77c-a4b127a88f15",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/CustomerType",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/CustomerType",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"CustomerTypeId\":{\"entity\":\"CustomerType.cdm.json/CustomerType\",\"name\":\"CustomerTypeId\"},\"CustomerTypeName\":{\"entity\":\"CustomerType.cdm.json/CustomerType\",\"name\":\"CustomerTypeName\"},\"CustomerTypeDescription\":{\"entity\":\"CustomerType.cdm.json/CustomerType\",\"name\":\"CustomerTypeDescription\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"CustomerType\",\"path\":\"CustomerType.cdm.json/CustomerType\"},\"description\":\"A categorization of customers based upon common characteristics or similar criteria.\\n\\nEx:\\n- Individual\\n- Legal Entity\",\"primaryKey\":[\"CustomerTypeId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"CustomerType.cdm.json/CustomerType\",\"name\":\"CustomerTypeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Customer Type.\",\"isNullable\":false,\"name\":\"CustomerTypeId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"CustomerType.cdm.json/CustomerType\",\"name\":\"CustomerTypeName\"},\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"The name of the Customer Type.\",\"isNullable\":true,\"name\":\"CustomerTypeName\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"CustomerType.cdm.json/CustomerType\",\"name\":\"CustomerTypeDescription\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"The description of the Customer Type.\",\"isNullable\":true,\"name\":\"CustomerTypeDescription\"}]}}}",
+			"Description": "A categorization of customers based upon common characteristics or similar criteria.\n\nEx:\n- Individual\n- Legal Entity",
+			"DisplayFolderInfo": "{\"name\":\"Customer\",\"colorCode\":\"#022F22\"}",
+			"PrimaryKeys": "CustomerTypeId",
+			"spark.sql.sources.provider": "csv",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"CustomerTypeId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"CustomerTypeName\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"CustomerTypeDescription\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "494c43e2-a236-4e02-9ae7-ae4080aeb303",
+		"Description": "A categorization of customers based upon common characteristics or similar criteria.\n\nEx:\n- Individual\n- Legal Entity"
+	},
+	"type": "TABLE"
+}

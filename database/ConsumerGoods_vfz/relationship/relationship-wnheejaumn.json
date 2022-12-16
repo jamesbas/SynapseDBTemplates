@@ -1,0 +1,29 @@
+{
+	"name": "relationship-wnheejaumn",
+	"properties": {
+		"Name": "relationship-wnheejaumn",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "FranchiseAgreement",
+		"ToTableName": "FranchiseExclusiveTerritory",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "ContractId",
+				"ToColumnName": "ContractId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"FranchiseAgreement.cdm.json/FranchiseAgreement\",\"toEntity\":\"FranchiseExclusiveTerritory.cdm.json/FranchiseExclusiveTerritory\",\"joinPairs\":[{\"fromAttribute\":\"ContractId\",\"toAttribute\":\"ContractId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "7477a5a9-473c-4971-975f-c048dd955073"
+	},
+	"type": "RELATIONSHIP"
+}

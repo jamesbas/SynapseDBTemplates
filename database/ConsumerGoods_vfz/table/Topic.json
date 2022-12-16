@@ -1,0 +1,137 @@
+{
+	"name": "Topic",
+	"properties": {
+		"Name": "Topic",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "TopicId",
+					"Description": "The unique identifier of the Topic.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Topic.cdm.json/Topic",
+						"Name": "TopicId"
+					}
+				},
+				{
+					"Name": "TopicName",
+					"Description": "The name of the Topic.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 256,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Topic.cdm.json/Topic",
+						"Name": "TopicName"
+					}
+				},
+				{
+					"Name": "TopicDescription",
+					"Description": "The description of the Topic.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Topic.cdm.json/Topic",
+						"Name": "TopicDescription"
+					}
+				}
+			],
+			"ColumnSetEntityName": "28de44e8-d921-4f87-8807-68d1bddcdc3f",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/Topic",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/Topic",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"TopicId\":{\"entity\":\"Topic.cdm.json/Topic\",\"name\":\"TopicId\"},\"TopicName\":{\"entity\":\"Topic.cdm.json/Topic\",\"name\":\"TopicName\"},\"TopicDescription\":{\"entity\":\"Topic.cdm.json/Topic\",\"name\":\"TopicDescription\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"Topic\",\"path\":\"Topic.cdm.json/Topic\"},\"description\":\"The topic addressed by census data.\\n\\nEx.:\\n- Population and Dwelling Counts\\n- Age \\n- Marital Status\\n- Family Structure\\n- Household Type\\n- Language\",\"primaryKey\":[\"TopicId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Topic.cdm.json/Topic\",\"name\":\"TopicId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of the Topic.\",\"isNullable\":false,\"name\":\"TopicId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Topic.cdm.json/Topic\",\"name\":\"TopicName\"},\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"The name of the Topic.\",\"isNullable\":false,\"name\":\"TopicName\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Topic.cdm.json/Topic\",\"name\":\"TopicDescription\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"The description of the Topic.\",\"isNullable\":false,\"name\":\"TopicDescription\"}]}}}",
+			"Description": "The topic addressed by census data.\n\nEx.:\n- Population and Dwelling Counts\n- Age \n- Marital Status\n- Family Structure\n- Household Type\n- Language",
+			"DisplayFolderInfo": "{\"name\":\"Geography\",\"colorCode\":\"#630454\"}",
+			"PrimaryKeys": "TopicId",
+			"spark.sql.sources.provider": "csv",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"TopicId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"TopicName\",\"type\":\"string\",\"nullable\":false,\"metadata\":{}},{\"name\":\"TopicDescription\",\"type\":\"string\",\"nullable\":false,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "4a5f0968-603f-48ac-a154-d712cc05b153",
+		"Description": "The topic addressed by census data.\n\nEx.:\n- Population and Dwelling Counts\n- Age \n- Marital Status\n- Family Structure\n- Household Type\n- Language"
+	},
+	"type": "TABLE"
+}

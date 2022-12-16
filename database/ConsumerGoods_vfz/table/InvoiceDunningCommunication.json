@@ -1,0 +1,290 @@
+{
+	"name": "InvoiceDunningCommunication",
+	"properties": {
+		"Name": "InvoiceDunningCommunication",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "CommunicationId",
+					"Description": "The unique identifier of the Dunning Letter.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "InvoiceDunningCommunication.cdm.json/InvoiceDunningCommunication",
+						"Name": "CommunicationId"
+					}
+				},
+				{
+					"Name": "Date",
+					"Description": "The date of the Order Dunning Letter.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "InvoiceDunningCommunication.cdm.json/InvoiceDunningCommunication",
+						"Name": "Date"
+					}
+				},
+				{
+					"Name": "CustomerAccountId",
+					"Description": "The unique identifier of a Customer Account.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "InvoiceDunningCommunication.cdm.json/InvoiceDunningCommunication",
+						"Name": "CustomerAccountId"
+					}
+				},
+				{
+					"Name": "Text",
+					"Description": "The text/contents of the Dunning Letter.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "InvoiceDunningCommunication.cdm.json/InvoiceDunningCommunication",
+						"Name": "Text"
+					}
+				},
+				{
+					"Name": "ResponsibleEmployeeId",
+					"Description": "The Employee responsible for the Dunning Letter.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "InvoiceDunningCommunication.cdm.json/InvoiceDunningCommunication",
+						"Name": "ResponsibleEmployeeId"
+					}
+				},
+				{
+					"Name": "DunningAmount",
+					"Description": "The amount referred to in the Dunning Communication.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "InvoiceDunningCommunication.cdm.json/InvoiceDunningCommunication",
+						"Name": "DunningAmount"
+					}
+				},
+				{
+					"Name": "ResultedInFullPaymentIndicator",
+					"Description": "Indicates that the Dunning Letter resulted in full payment of the outstanding amount.",
+					"OriginDataTypeName": {
+						"TypeName": "boolean",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "boolean"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "InvoiceDunningCommunication.cdm.json/InvoiceDunningCommunication",
+						"Name": "ResultedInFullPaymentIndicator"
+					}
+				},
+				{
+					"Name": "ResultedInPartialPaymentIndicator",
+					"Description": "Indicates that the Dunning Letter resulted in partial payment of the outstanding amount.",
+					"OriginDataTypeName": {
+						"TypeName": "boolean",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "boolean"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "InvoiceDunningCommunication.cdm.json/InvoiceDunningCommunication",
+						"Name": "ResultedInPartialPaymentIndicator"
+					}
+				},
+				{
+					"Name": "InvoiceId",
+					"Description": "The unique identifier of an Invoice.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "InvoiceDunningCommunication.cdm.json/InvoiceDunningCommunication",
+						"Name": "InvoiceId"
+					}
+				},
+				{
+					"Name": "CommunicationMethodId",
+					"Description": "The unique identifier of a Communication Method.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "InvoiceDunningCommunication.cdm.json/InvoiceDunningCommunication",
+						"Name": "CommunicationMethodId"
+					}
+				},
+				{
+					"Name": "DunningCommunicationNote",
+					"Description": "A note, comment or additional information regarding the Dunning communication.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "InvoiceDunningCommunication.cdm.json/InvoiceDunningCommunication",
+						"Name": "DunningCommunicationNote"
+					}
+				}
+			],
+			"ColumnSetEntityName": "b44aa1fb-3ccd-47f5-9931-76295e326675",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/InvoiceDunningCommunication",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/InvoiceDunningCommunication",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"CommunicationId\":{\"entity\":\"InvoiceDunningCommunication.cdm.json/InvoiceDunningCommunication\",\"name\":\"CommunicationId\"},\"Date\":{\"entity\":\"InvoiceDunningCommunication.cdm.json/InvoiceDunningCommunication\",\"name\":\"Date\"},\"CustomerAccountId\":{\"entity\":\"InvoiceDunningCommunication.cdm.json/InvoiceDunningCommunication\",\"name\":\"CustomerAccountId\"},\"Text\":{\"entity\":\"InvoiceDunningCommunication.cdm.json/InvoiceDunningCommunication\",\"name\":\"Text\"},\"ResponsibleEmployeeId\":{\"entity\":\"InvoiceDunningCommunication.cdm.json/InvoiceDunningCommunication\",\"name\":\"ResponsibleEmployeeId\"},\"DunningAmount\":{\"entity\":\"InvoiceDunningCommunication.cdm.json/InvoiceDunningCommunication\",\"name\":\"DunningAmount\"},\"ResultedInFullPaymentIndicator\":{\"entity\":\"InvoiceDunningCommunication.cdm.json/InvoiceDunningCommunication\",\"name\":\"ResultedInFullPaymentIndicator\"},\"ResultedInPartialPaymentIndicator\":{\"entity\":\"InvoiceDunningCommunication.cdm.json/InvoiceDunningCommunication\",\"name\":\"ResultedInPartialPaymentIndicator\"},\"InvoiceId\":{\"entity\":\"InvoiceDunningCommunication.cdm.json/InvoiceDunningCommunication\",\"name\":\"InvoiceId\"},\"CommunicationMethodId\":{\"entity\":\"InvoiceDunningCommunication.cdm.json/InvoiceDunningCommunication\",\"name\":\"CommunicationMethodId\"},\"DunningCommunicationNote\":{\"entity\":\"InvoiceDunningCommunication.cdm.json/InvoiceDunningCommunication\",\"name\":\"DunningCommunicationNote\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"InvoiceDunningCommunication\",\"path\":\"InvoiceDunningCommunication.cdm.json/InvoiceDunningCommunication\"},\"description\":\"A communication sent to the Customer/Customer Account for non-payment of the invoice.\",\"primaryKey\":[\"CommunicationId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"InvoiceDunningCommunication.cdm.json/InvoiceDunningCommunication\",\"name\":\"CommunicationId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of the Dunning Letter.\",\"isNullable\":false,\"name\":\"CommunicationId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"InvoiceDunningCommunication.cdm.json/InvoiceDunningCommunication\",\"name\":\"Date\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The date of the Order Dunning Letter.\",\"isNullable\":false,\"name\":\"Date\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"InvoiceDunningCommunication.cdm.json/InvoiceDunningCommunication\",\"name\":\"CustomerAccountId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a Customer Account.\",\"isNullable\":false,\"name\":\"CustomerAccountId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"InvoiceDunningCommunication.cdm.json/InvoiceDunningCommunication\",\"name\":\"Text\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"The text/contents of the Dunning Letter.\",\"isNullable\":true,\"name\":\"Text\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"InvoiceDunningCommunication.cdm.json/InvoiceDunningCommunication\",\"name\":\"ResponsibleEmployeeId\"},\"dataType\":\"integer\",\"description\":\"The Employee responsible for the Dunning Letter.\",\"isNullable\":true,\"name\":\"ResponsibleEmployeeId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"InvoiceDunningCommunication.cdm.json/InvoiceDunningCommunication\",\"name\":\"DunningAmount\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"The amount referred to in the Dunning Communication.\",\"isNullable\":true,\"scale\":2,\"name\":\"DunningAmount\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"InvoiceDunningCommunication.cdm.json/InvoiceDunningCommunication\",\"name\":\"ResultedInFullPaymentIndicator\"},\"dataType\":\"boolean\",\"description\":\"Indicates that the Dunning Letter resulted in full payment of the outstanding amount.\",\"isNullable\":true,\"name\":\"ResultedInFullPaymentIndicator\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"InvoiceDunningCommunication.cdm.json/InvoiceDunningCommunication\",\"name\":\"ResultedInPartialPaymentIndicator\"},\"dataType\":\"boolean\",\"description\":\"Indicates that the Dunning Letter resulted in partial payment of the outstanding amount.\",\"isNullable\":true,\"name\":\"ResultedInPartialPaymentIndicator\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"InvoiceDunningCommunication.cdm.json/InvoiceDunningCommunication\",\"name\":\"InvoiceId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of an Invoice.\",\"isNullable\":true,\"name\":\"InvoiceId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"InvoiceDunningCommunication.cdm.json/InvoiceDunningCommunication\",\"name\":\"CommunicationMethodId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Communication Method.\",\"isNullable\":true,\"name\":\"CommunicationMethodId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"InvoiceDunningCommunication.cdm.json/InvoiceDunningCommunication\",\"name\":\"DunningCommunicationNote\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"A note, comment or additional information regarding the Dunning communication.\",\"isNullable\":true,\"name\":\"DunningCommunicationNote\"}]}}}",
+			"Description": "A communication sent to the Customer/Customer Account for non-payment of the invoice.",
+			"DisplayFolderInfo": "{\"name\":\"Order\",\"colorCode\":\"#7062A8\"}",
+			"PrimaryKeys": "CommunicationId",
+			"spark.sql.sources.provider": "csv",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"CommunicationId\",\"type\":\"long\",\"nullable\":false,\"metadata\":{}},{\"name\":\"Date\",\"type\":\"date\",\"nullable\":false,\"metadata\":{}},{\"name\":\"CustomerAccountId\",\"type\":\"long\",\"nullable\":false,\"metadata\":{}},{\"name\":\"Text\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ResponsibleEmployeeId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"DunningAmount\",\"type\":\"decimal(18,2)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ResultedInFullPaymentIndicator\",\"type\":\"boolean\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ResultedInPartialPaymentIndicator\",\"type\":\"boolean\",\"nullable\":true,\"metadata\":{}},{\"name\":\"InvoiceId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"CommunicationMethodId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"DunningCommunicationNote\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "4b799aef-6c26-4e1b-8f22-516fcda60e2f",
+		"Description": "A communication sent to the Customer/Customer Account for non-payment of the invoice."
+	},
+	"type": "TABLE"
+}

@@ -1,0 +1,29 @@
+{
+	"name": "relationship-atxyzughbh",
+	"properties": {
+		"Name": "relationship-atxyzughbh",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "AnzsicClass",
+		"ToTableName": "LegalEntityParty",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "AnzsicClassCode",
+				"ToColumnName": "AnzsicClassCode"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"AnzsicClass.cdm.json/AnzsicClass\",\"toEntity\":\"LegalEntityParty.cdm.json/LegalEntityParty\",\"joinPairs\":[{\"fromAttribute\":\"AnzsicClassCode\",\"toAttribute\":\"AnzsicClassCode\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "1d64367c-723a-4999-81f0-ddce4fccb2ee"
+	},
+	"type": "RELATIONSHIP"
+}

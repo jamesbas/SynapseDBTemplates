@@ -1,0 +1,137 @@
+{
+	"name": "NameComponentType",
+	"properties": {
+		"Name": "NameComponentType",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "NameComponentTypeId",
+					"Description": "The unique identifier of a Name Component Type.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "NameComponentType.cdm.json/NameComponentType",
+						"Name": "NameComponentTypeId"
+					}
+				},
+				{
+					"Name": "NameComponentTypeName",
+					"Description": "The name of a Name Component Type.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 256,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "NameComponentType.cdm.json/NameComponentType",
+						"Name": "NameComponentTypeName"
+					}
+				},
+				{
+					"Name": "NameComponentTypeDescription",
+					"Description": "The description of a Name Component Type.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "NameComponentType.cdm.json/NameComponentType",
+						"Name": "NameComponentTypeDescription"
+					}
+				}
+			],
+			"ColumnSetEntityName": "e8918ca7-0975-4c3f-bdc8-0821fcf69505",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/NameComponentType",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/NameComponentType",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"NameComponentTypeId\":{\"entity\":\"NameComponentType.cdm.json/NameComponentType\",\"name\":\"NameComponentTypeId\"},\"NameComponentTypeName\":{\"entity\":\"NameComponentType.cdm.json/NameComponentType\",\"name\":\"NameComponentTypeName\"},\"NameComponentTypeDescription\":{\"entity\":\"NameComponentType.cdm.json/NameComponentType\",\"name\":\"NameComponentTypeDescription\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"NameComponentType\",\"path\":\"NameComponentType.cdm.json/NameComponentType\"},\"description\":\"The type or usage of the name component. \\n\\nEx:\\n- First Name\\n- Middle Name\\n- Last Name\\n- Given Name\\n- Surname\\n- Family Name\\n- Nickname\\n- First Name Initial\\n- Middle Name Initial\\n- Religious Forename\",\"primaryKey\":[\"NameComponentTypeId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"NameComponentType.cdm.json/NameComponentType\",\"name\":\"NameComponentTypeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Name Component Type.\",\"isNullable\":false,\"name\":\"NameComponentTypeId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"NameComponentType.cdm.json/NameComponentType\",\"name\":\"NameComponentTypeName\"},\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"The name of a Name Component Type.\",\"isNullable\":true,\"name\":\"NameComponentTypeName\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"NameComponentType.cdm.json/NameComponentType\",\"name\":\"NameComponentTypeDescription\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"The description of a Name Component Type.\",\"isNullable\":true,\"name\":\"NameComponentTypeDescription\"}]}}}",
+			"Description": "The type or usage of the name component. \n\nEx:\n- First Name\n- Middle Name\n- Last Name\n- Given Name\n- Surname\n- Family Name\n- Nickname\n- First Name Initial\n- Middle Name Initial\n- Religious Forename",
+			"DisplayFolderInfo": "{\"name\":\"Party\",\"colorCode\":\"#7D0F6C\"}",
+			"PrimaryKeys": "NameComponentTypeId",
+			"spark.sql.sources.provider": "csv",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"NameComponentTypeId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"NameComponentTypeName\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"NameComponentTypeDescription\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "c5a22285-870a-4a1e-83d9-c8407f17e1bb",
+		"Description": "The type or usage of the name component. \n\nEx:\n- First Name\n- Middle Name\n- Last Name\n- Given Name\n- Surname\n- Family Name\n- Nickname\n- First Name Initial\n- Middle Name Initial\n- Religious Forename"
+	},
+	"type": "TABLE"
+}

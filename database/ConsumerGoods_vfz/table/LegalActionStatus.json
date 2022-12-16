@@ -1,0 +1,137 @@
+{
+	"name": "LegalActionStatus",
+	"properties": {
+		"Name": "LegalActionStatus",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "LegalActionStatusId",
+					"Description": "The unique identifier of a Legal Action Status.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "LegalActionStatus.cdm.json/LegalActionStatus",
+						"Name": "LegalActionStatusId"
+					}
+				},
+				{
+					"Name": "LegalActionStatusName",
+					"Description": "The name of a Legal Action Status.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 256,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "LegalActionStatus.cdm.json/LegalActionStatus",
+						"Name": "LegalActionStatusName"
+					}
+				},
+				{
+					"Name": "LegalActionStatusDescription",
+					"Description": "The description of a Legal Action Status.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "LegalActionStatus.cdm.json/LegalActionStatus",
+						"Name": "LegalActionStatusDescription"
+					}
+				}
+			],
+			"ColumnSetEntityName": "1c523f43-4e67-4251-919a-6a2711f0a693",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/LegalActionStatus",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/LegalActionStatus",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"LegalActionStatusId\":{\"entity\":\"LegalActionStatus.cdm.json/LegalActionStatus\",\"name\":\"LegalActionStatusId\"},\"LegalActionStatusName\":{\"entity\":\"LegalActionStatus.cdm.json/LegalActionStatus\",\"name\":\"LegalActionStatusName\"},\"LegalActionStatusDescription\":{\"entity\":\"LegalActionStatus.cdm.json/LegalActionStatus\",\"name\":\"LegalActionStatusDescription\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"LegalActionStatus\",\"path\":\"LegalActionStatus.cdm.json/LegalActionStatus\"},\"description\":\"The status of the Legal Action.\\n\\nEx:\\n- Filed\\n- Pending\\n- In Court\\n- Resolved\",\"primaryKey\":[\"LegalActionStatusId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"LegalActionStatus.cdm.json/LegalActionStatus\",\"name\":\"LegalActionStatusId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Legal Action Status.\",\"isNullable\":false,\"name\":\"LegalActionStatusId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"LegalActionStatus.cdm.json/LegalActionStatus\",\"name\":\"LegalActionStatusName\"},\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"The name of a Legal Action Status.\",\"isNullable\":true,\"name\":\"LegalActionStatusName\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"LegalActionStatus.cdm.json/LegalActionStatus\",\"name\":\"LegalActionStatusDescription\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"The description of a Legal Action Status.\",\"isNullable\":true,\"name\":\"LegalActionStatusDescription\"}]}}}",
+			"Description": "The status of the Legal Action.\n\nEx:\n- Filed\n- Pending\n- In Court\n- Resolved",
+			"DisplayFolderInfo": "{\"name\":\"Party\",\"colorCode\":\"#7D0F6C\"}",
+			"PrimaryKeys": "LegalActionStatusId",
+			"spark.sql.sources.provider": "csv",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"LegalActionStatusId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"LegalActionStatusName\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"LegalActionStatusDescription\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "d0ed2f62-7380-4d14-b94b-4daa4afabab5",
+		"Description": "The status of the Legal Action.\n\nEx:\n- Filed\n- Pending\n- In Court\n- Resolved"
+	},
+	"type": "TABLE"
+}

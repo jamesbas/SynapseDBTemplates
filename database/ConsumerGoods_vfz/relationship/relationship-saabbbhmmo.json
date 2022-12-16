@@ -1,0 +1,29 @@
+{
+	"name": "relationship-saabbbhmmo",
+	"properties": {
+		"Name": "relationship-saabbbhmmo",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "DunBradstreetReport",
+		"ToTableName": "PartyDunBradstreetReport",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "DunsNumber",
+				"ToColumnName": "DunsNumber"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"DunBradstreetReport.cdm.json/DunBradstreetReport\",\"toEntity\":\"PartyDunBradstreetReport.cdm.json/PartyDunBradstreetReport\",\"joinPairs\":[{\"fromAttribute\":\"DunsNumber\",\"toAttribute\":\"DunsNumber\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "8512c05d-dbb0-4505-85c9-c8082907c824"
+	},
+	"type": "RELATIONSHIP"
+}

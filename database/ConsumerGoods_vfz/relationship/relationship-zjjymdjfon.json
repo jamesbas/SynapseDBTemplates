@@ -1,0 +1,29 @@
+{
+	"name": "relationship-zjjymdjfon",
+	"properties": {
+		"Name": "relationship-zjjymdjfon",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "FranchiseAgreement",
+		"ToTableName": "FranchiseAgreementTerm",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "ContractId",
+				"ToColumnName": "ContractId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"FranchiseAgreement.cdm.json/FranchiseAgreement\",\"toEntity\":\"FranchiseAgreementTerm.cdm.json/FranchiseAgreementTerm\",\"joinPairs\":[{\"fromAttribute\":\"ContractId\",\"toAttribute\":\"ContractId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "fd1895a6-933d-4dca-bdab-f435343bf7f3"
+	},
+	"type": "RELATIONSHIP"
+}

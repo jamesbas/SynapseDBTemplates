@@ -1,0 +1,29 @@
+{
+	"name": "relationship-zdahqifzrf",
+	"properties": {
+		"Name": "relationship-zdahqifzrf",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "ContractAddendum",
+		"ToTableName": "ContractAddendumSection",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "ContractAddendumId",
+				"ToColumnName": "ContractAddendumId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"ContractAddendum.cdm.json/ContractAddendum\",\"toEntity\":\"ContractAddendumSection.cdm.json/ContractAddendumSection\",\"joinPairs\":[{\"fromAttribute\":\"ContractAddendumId\",\"toAttribute\":\"ContractAddendumId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "16bc8aee-fa85-40da-8a06-134772d56ac7"
+	},
+	"type": "RELATIONSHIP"
+}

@@ -1,0 +1,137 @@
+{
+	"name": "HousingUnitType",
+	"properties": {
+		"Name": "HousingUnitType",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "HousingUnitTypeId",
+					"Description": "The unique identifier of a Housing Unit Type.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "HousingUnitType.cdm.json/HousingUnitType",
+						"Name": "HousingUnitTypeId"
+					}
+				},
+				{
+					"Name": "HousingUnitTypeName",
+					"Description": "The name of the Housing Unit Type.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 256,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "HousingUnitType.cdm.json/HousingUnitType",
+						"Name": "HousingUnitTypeName"
+					}
+				},
+				{
+					"Name": "HousingUnitTypeDescription",
+					"Description": "The description of the Housing Unit Type.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "HousingUnitType.cdm.json/HousingUnitType",
+						"Name": "HousingUnitTypeDescription"
+					}
+				}
+			],
+			"ColumnSetEntityName": "45e8749e-738d-400c-89f3-a2116e3f7e34",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/HousingUnitType",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/HousingUnitType",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"HousingUnitTypeId\":{\"entity\":\"HousingUnitType.cdm.json/HousingUnitType\",\"name\":\"HousingUnitTypeId\"},\"HousingUnitTypeName\":{\"entity\":\"HousingUnitType.cdm.json/HousingUnitType\",\"name\":\"HousingUnitTypeName\"},\"HousingUnitTypeDescription\":{\"entity\":\"HousingUnitType.cdm.json/HousingUnitType\",\"name\":\"HousingUnitTypeDescription\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"HousingUnitType\",\"path\":\"HousingUnitType.cdm.json/HousingUnitType\"},\"description\":\"The type of housing in which an individual or household member lives.\\n\\nEx:\\n-  Single family home\\n-  Shared family home\\n-  Single family condominium\\n-  Shared family condominium\\n-  Rented apartment\\n-  Rented single family home\\n-  Private home\\n-  Institution\\n-  Correctional\\n-  Nursing Home\\n-  Mental Hospital\\n-  Other Institution\\n-  College Dormitory\\n-  Military Quarters\\n-  Homeless Shelter\",\"primaryKey\":[\"HousingUnitTypeId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"HousingUnitType.cdm.json/HousingUnitType\",\"name\":\"HousingUnitTypeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Housing Unit Type.\",\"isNullable\":false,\"name\":\"HousingUnitTypeId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"HousingUnitType.cdm.json/HousingUnitType\",\"name\":\"HousingUnitTypeName\"},\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"The name of the Housing Unit Type.\",\"isNullable\":true,\"name\":\"HousingUnitTypeName\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"HousingUnitType.cdm.json/HousingUnitType\",\"name\":\"HousingUnitTypeDescription\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"The description of the Housing Unit Type.\",\"isNullable\":true,\"name\":\"HousingUnitTypeDescription\"}]}}}",
+			"Description": "The type of housing in which an individual or household member lives.\n\nEx:\n-  Single family home\n-  Shared family home\n-  Single family condominium\n-  Shared family condominium\n-  Rented apartment\n-  Rented single family home\n-  Private home\n-  Institution\n-  Correctional\n-  Nursing Home\n-  Mental Hospital\n-  Other Institution\n-  College Dormitory\n-  Military Quarters\n-  Homeless Shelter",
+			"DisplayFolderInfo": "{\"name\":\"Party\",\"colorCode\":\"#7D0F6C\"}",
+			"PrimaryKeys": "HousingUnitTypeId",
+			"spark.sql.sources.provider": "csv",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"HousingUnitTypeId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"HousingUnitTypeName\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"HousingUnitTypeDescription\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "70376c24-9f1a-48a7-ba27-a6dfecfb454c",
+		"Description": "The type of housing in which an individual or household member lives.\n\nEx:\n-  Single family home\n-  Shared family home\n-  Single family condominium\n-  Shared family condominium\n-  Rented apartment\n-  Rented single family home\n-  Private home\n-  Institution\n-  Correctional\n-  Nursing Home\n-  Mental Hospital\n-  Other Institution\n-  College Dormitory\n-  Military Quarters\n-  Homeless Shelter"
+	},
+	"type": "TABLE"
+}

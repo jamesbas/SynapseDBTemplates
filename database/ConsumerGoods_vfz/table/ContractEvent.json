@@ -1,0 +1,157 @@
+{
+	"name": "ContractEvent",
+	"properties": {
+		"Name": "ContractEvent",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "ContractId",
+					"Description": "The unique identifier of a Contract.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ContractEvent.cdm.json/ContractEvent",
+						"Name": "ContractId"
+					}
+				},
+				{
+					"Name": "ContractEventTypeId",
+					"Description": "The unique identifier of a Contract Event Type.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ContractEvent.cdm.json/ContractEvent",
+						"Name": "ContractEventTypeId"
+					}
+				},
+				{
+					"Name": "ContractEventTimestamp",
+					"Description": "The timestamp of the contract event.",
+					"OriginDataTypeName": {
+						"TypeName": "timestamp",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"TimestampFormat": "YYYY-MM-DD HH:MM:SS.fffffffff",
+							"HIVE_TYPE_STRING": "timestamp"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ContractEvent.cdm.json/ContractEvent",
+						"Name": "ContractEventTimestamp"
+					}
+				},
+				{
+					"Name": "ContractEventNote",
+					"Description": "A note, comment or additional information regarding the contract event.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ContractEvent.cdm.json/ContractEvent",
+						"Name": "ContractEventNote"
+					}
+				}
+			],
+			"ColumnSetEntityName": "73e278d9-1ce2-44dc-9813-99ec0c8ba31f",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/ContractEvent",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/ContractEvent",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"ContractId\":{\"entity\":\"ContractEvent.cdm.json/ContractEvent\",\"name\":\"ContractId\"},\"ContractEventTypeId\":{\"entity\":\"ContractEvent.cdm.json/ContractEvent\",\"name\":\"ContractEventTypeId\"},\"ContractEventTimestamp\":{\"entity\":\"ContractEvent.cdm.json/ContractEvent\",\"name\":\"ContractEventTimestamp\"},\"ContractEventNote\":{\"entity\":\"ContractEvent.cdm.json/ContractEvent\",\"name\":\"ContractEventNote\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"ContractEvent\",\"path\":\"ContractEvent.cdm.json/ContractEvent\"},\"description\":\"The significant event(s) associated with the contract.\",\"primaryKey\":[\"ContractId\",\"ContractEventTypeId\",\"ContractEventTimestamp\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ContractEvent.cdm.json/ContractEvent\",\"name\":\"ContractId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Contract.\",\"isNullable\":false,\"name\":\"ContractId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ContractEvent.cdm.json/ContractEvent\",\"name\":\"ContractEventTypeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Contract Event Type.\",\"isNullable\":false,\"name\":\"ContractEventTypeId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ContractEvent.cdm.json/ContractEvent\",\"name\":\"ContractEventTimestamp\"},\"dataType\":\"timestamp\",\"description\":\"The timestamp of the contract event.\",\"isNullable\":false,\"name\":\"ContractEventTimestamp\",\"timestampFormat\":\"YYYY-MM-DD HH:MM:SS.fffffffff\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ContractEvent.cdm.json/ContractEvent\",\"name\":\"ContractEventNote\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"A note, comment or additional information regarding the contract event.\",\"isNullable\":true,\"name\":\"ContractEventNote\"}]}}}",
+			"Description": "The significant event(s) associated with the contract.",
+			"DisplayFolderInfo": "{\"name\":\"Contract\",\"colorCode\":\"#000F5C\"}",
+			"PrimaryKeys": "ContractId,ContractEventTypeId,ContractEventTimestamp",
+			"spark.sql.sources.provider": "csv",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"ContractId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"ContractEventTypeId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"ContractEventTimestamp\",\"type\":\"timestamp\",\"nullable\":false,\"metadata\":{}},{\"name\":\"ContractEventNote\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "f1884f13-3b66-417b-aaf4-098677587ede",
+		"Description": "The significant event(s) associated with the contract."
+	},
+	"type": "TABLE"
+}

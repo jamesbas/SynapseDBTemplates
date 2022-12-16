@@ -1,0 +1,29 @@
+{
+	"name": "relationship-coyehngows",
+	"properties": {
+		"Name": "relationship-coyehngows",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "LegalEntityParty",
+		"ToTableName": "PartyMinorityCategory",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "PartyId",
+				"ToColumnName": "PartyId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"LegalEntityParty.cdm.json/LegalEntityParty\",\"toEntity\":\"PartyMinorityCategory.cdm.json/PartyMinorityCategory\",\"joinPairs\":[{\"fromAttribute\":\"PartyId\",\"toAttribute\":\"PartyId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "e80bbfb8-0d8b-418e-b51e-3de60ac943ba"
+	},
+	"type": "RELATIONSHIP"
+}

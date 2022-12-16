@@ -1,0 +1,312 @@
+{
+	"name": "RelatedPartyAuthenticationMethod",
+	"properties": {
+		"Name": "RelatedPartyAuthenticationMethod",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "RelatedPartyId",
+					"Description": "The unique identifier of a Party.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "RelatedPartyAuthenticationMethod.cdm.json/RelatedPartyAuthenticationMethod",
+						"Name": "RelatedPartyId"
+					}
+				},
+				{
+					"Name": "RelatedPartyAuthenticationMethodId",
+					"Description": "The unique identifier of a Related Party Authentication Method.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "RelatedPartyAuthenticationMethod.cdm.json/RelatedPartyAuthenticationMethod",
+						"Name": "RelatedPartyAuthenticationMethodId"
+					}
+				},
+				{
+					"Name": "RelatedPartyAuthenticationMethodPeriodStartTimestamp",
+					"Description": "The period start timestamp that the related party is associated with the authentication method.",
+					"OriginDataTypeName": {
+						"TypeName": "timestamp",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"TimestampFormat": "YYYY-MM-DD HH:MM:SS.fffffffff",
+							"HIVE_TYPE_STRING": "timestamp"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "RelatedPartyAuthenticationMethod.cdm.json/RelatedPartyAuthenticationMethod",
+						"Name": "RelatedPartyAuthenticationMethodPeriodStartTimestamp"
+					}
+				},
+				{
+					"Name": "RelatedPartyAuthenticationMethodPeriodEndTimestamp",
+					"Description": "The period end timestamp that the related party is associated with the authentication method.",
+					"OriginDataTypeName": {
+						"TypeName": "timestamp",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"TimestampFormat": "YYYY-MM-DD HH:MM:SS.fffffffff",
+							"HIVE_TYPE_STRING": "timestamp"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "RelatedPartyAuthenticationMethod.cdm.json/RelatedPartyAuthenticationMethod",
+						"Name": "RelatedPartyAuthenticationMethodPeriodEndTimestamp"
+					}
+				},
+				{
+					"Name": "AuthenticationMethodId",
+					"Description": "The unique identifier of an Authentication Method.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "RelatedPartyAuthenticationMethod.cdm.json/RelatedPartyAuthenticationMethod",
+						"Name": "AuthenticationMethodId"
+					}
+				},
+				{
+					"Name": "PartyAuthenticationMethodRelationshipNote",
+					"Description": "A note, comment or additional information regarding the Party Authentication Method relationship.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "RelatedPartyAuthenticationMethod.cdm.json/RelatedPartyAuthenticationMethod",
+						"Name": "PartyAuthenticationMethodRelationshipNote"
+					}
+				},
+				{
+					"Name": "PartyId",
+					"Description": "The unique identifier of a Party.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "RelatedPartyAuthenticationMethod.cdm.json/RelatedPartyAuthenticationMethod",
+						"Name": "PartyId"
+					}
+				},
+				{
+					"Name": "SecurityQuestionNumber",
+					"Description": "The number associated with the order in which the question is asked for the purpose of identification.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "RelatedPartyAuthenticationMethod.cdm.json/RelatedPartyAuthenticationMethod",
+						"Name": "SecurityQuestionNumber"
+					}
+				},
+				{
+					"Name": "IdentificationId",
+					"Description": "The unique identifier of the identification.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "RelatedPartyAuthenticationMethod.cdm.json/RelatedPartyAuthenticationMethod",
+						"Name": "IdentificationId"
+					}
+				},
+				{
+					"Name": "PeriodStartTimestamp",
+					"Description": "The period start timestamp that the party is associated with the security question.",
+					"OriginDataTypeName": {
+						"TypeName": "timestamp",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"TimestampFormat": "YYYY-MM-DD HH:MM:SS.fffffffff",
+							"HIVE_TYPE_STRING": "timestamp"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "RelatedPartyAuthenticationMethod.cdm.json/RelatedPartyAuthenticationMethod",
+						"Name": "PeriodStartTimestamp"
+					}
+				},
+				{
+					"Name": "BiometricTypeId",
+					"Description": "The unique identifier of a biometric type.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "RelatedPartyAuthenticationMethod.cdm.json/RelatedPartyAuthenticationMethod",
+						"Name": "BiometricTypeId"
+					}
+				},
+				{
+					"Name": "Timestamp",
+					"Description": "The timestamp that the associated information is reported, recorded or effective as-of.",
+					"OriginDataTypeName": {
+						"TypeName": "timestamp",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"TimestampFormat": "YYYY-MM-DD HH:MM:SS.fffffffff",
+							"HIVE_TYPE_STRING": "timestamp"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "RelatedPartyAuthenticationMethod.cdm.json/RelatedPartyAuthenticationMethod",
+						"Name": "Timestamp"
+					}
+				}
+			],
+			"ColumnSetEntityName": "66d2ab49-24b2-49dd-9139-c665f41890a7",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/RelatedPartyAuthenticationMethod",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/RelatedPartyAuthenticationMethod",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"RelatedPartyId\":{\"entity\":\"RelatedPartyAuthenticationMethod.cdm.json/RelatedPartyAuthenticationMethod\",\"name\":\"RelatedPartyId\"},\"RelatedPartyAuthenticationMethodId\":{\"entity\":\"RelatedPartyAuthenticationMethod.cdm.json/RelatedPartyAuthenticationMethod\",\"name\":\"RelatedPartyAuthenticationMethodId\"},\"RelatedPartyAuthenticationMethodPeriodStartTimestamp\":{\"entity\":\"RelatedPartyAuthenticationMethod.cdm.json/RelatedPartyAuthenticationMethod\",\"name\":\"RelatedPartyAuthenticationMethodPeriodStartTimestamp\"},\"RelatedPartyAuthenticationMethodPeriodEndTimestamp\":{\"entity\":\"RelatedPartyAuthenticationMethod.cdm.json/RelatedPartyAuthenticationMethod\",\"name\":\"RelatedPartyAuthenticationMethodPeriodEndTimestamp\"},\"AuthenticationMethodId\":{\"entity\":\"RelatedPartyAuthenticationMethod.cdm.json/RelatedPartyAuthenticationMethod\",\"name\":\"AuthenticationMethodId\"},\"PartyAuthenticationMethodRelationshipNote\":{\"entity\":\"RelatedPartyAuthenticationMethod.cdm.json/RelatedPartyAuthenticationMethod\",\"name\":\"PartyAuthenticationMethodRelationshipNote\"},\"PartyId\":{\"entity\":\"RelatedPartyAuthenticationMethod.cdm.json/RelatedPartyAuthenticationMethod\",\"name\":\"PartyId\"},\"SecurityQuestionNumber\":{\"entity\":\"RelatedPartyAuthenticationMethod.cdm.json/RelatedPartyAuthenticationMethod\",\"name\":\"SecurityQuestionNumber\"},\"IdentificationId\":{\"entity\":\"RelatedPartyAuthenticationMethod.cdm.json/RelatedPartyAuthenticationMethod\",\"name\":\"IdentificationId\"},\"PeriodStartTimestamp\":{\"entity\":\"RelatedPartyAuthenticationMethod.cdm.json/RelatedPartyAuthenticationMethod\",\"name\":\"PeriodStartTimestamp\"},\"BiometricTypeId\":{\"entity\":\"RelatedPartyAuthenticationMethod.cdm.json/RelatedPartyAuthenticationMethod\",\"name\":\"BiometricTypeId\"},\"Timestamp\":{\"entity\":\"RelatedPartyAuthenticationMethod.cdm.json/RelatedPartyAuthenticationMethod\",\"name\":\"Timestamp\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"RelatedPartyAuthenticationMethod\",\"path\":\"RelatedPartyAuthenticationMethod.cdm.json/RelatedPartyAuthenticationMethod\"},\"description\":\"A method that can be used to authenticate a related party with a particular relationship to the party. Note that not all identification, security questions or biometrics may be considered suitable or sufficient for related party authentication.\",\"primaryKey\":[\"RelatedPartyId\",\"RelatedPartyAuthenticationMethodId\",\"RelatedPartyAuthenticationMethodPeriodStartTimestamp\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"RelatedPartyAuthenticationMethod.cdm.json/RelatedPartyAuthenticationMethod\",\"name\":\"RelatedPartyId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a Party.\",\"isNullable\":false,\"name\":\"RelatedPartyId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"RelatedPartyAuthenticationMethod.cdm.json/RelatedPartyAuthenticationMethod\",\"name\":\"RelatedPartyAuthenticationMethodId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Related Party Authentication Method.\",\"isNullable\":false,\"name\":\"RelatedPartyAuthenticationMethodId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"RelatedPartyAuthenticationMethod.cdm.json/RelatedPartyAuthenticationMethod\",\"name\":\"RelatedPartyAuthenticationMethodPeriodStartTimestamp\"},\"dataType\":\"timestamp\",\"description\":\"The period start timestamp that the related party is associated with the authentication method.\",\"isNullable\":false,\"name\":\"RelatedPartyAuthenticationMethodPeriodStartTimestamp\",\"timestampFormat\":\"YYYY-MM-DD HH:MM:SS.fffffffff\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"RelatedPartyAuthenticationMethod.cdm.json/RelatedPartyAuthenticationMethod\",\"name\":\"RelatedPartyAuthenticationMethodPeriodEndTimestamp\"},\"dataType\":\"timestamp\",\"description\":\"The period end timestamp that the related party is associated with the authentication method.\",\"isNullable\":true,\"name\":\"RelatedPartyAuthenticationMethodPeriodEndTimestamp\",\"timestampFormat\":\"YYYY-MM-DD HH:MM:SS.fffffffff\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"RelatedPartyAuthenticationMethod.cdm.json/RelatedPartyAuthenticationMethod\",\"name\":\"AuthenticationMethodId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of an Authentication Method.\",\"isNullable\":true,\"name\":\"AuthenticationMethodId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"RelatedPartyAuthenticationMethod.cdm.json/RelatedPartyAuthenticationMethod\",\"name\":\"PartyAuthenticationMethodRelationshipNote\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"A note, comment or additional information regarding the Party Authentication Method relationship.\",\"isNullable\":true,\"name\":\"PartyAuthenticationMethodRelationshipNote\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"RelatedPartyAuthenticationMethod.cdm.json/RelatedPartyAuthenticationMethod\",\"name\":\"PartyId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a Party.\",\"isNullable\":true,\"name\":\"PartyId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"RelatedPartyAuthenticationMethod.cdm.json/RelatedPartyAuthenticationMethod\",\"name\":\"SecurityQuestionNumber\"},\"dataType\":\"integer\",\"description\":\"The number associated with the order in which the question is asked for the purpose of identification.\",\"isNullable\":true,\"name\":\"SecurityQuestionNumber\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"RelatedPartyAuthenticationMethod.cdm.json/RelatedPartyAuthenticationMethod\",\"name\":\"IdentificationId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of the identification.\",\"isNullable\":true,\"name\":\"IdentificationId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"RelatedPartyAuthenticationMethod.cdm.json/RelatedPartyAuthenticationMethod\",\"name\":\"PeriodStartTimestamp\"},\"dataType\":\"timestamp\",\"description\":\"The period start timestamp that the party is associated with the security question.\",\"isNullable\":true,\"name\":\"PeriodStartTimestamp\",\"timestampFormat\":\"YYYY-MM-DD HH:MM:SS.fffffffff\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"RelatedPartyAuthenticationMethod.cdm.json/RelatedPartyAuthenticationMethod\",\"name\":\"BiometricTypeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a biometric type.\",\"isNullable\":true,\"name\":\"BiometricTypeId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"RelatedPartyAuthenticationMethod.cdm.json/RelatedPartyAuthenticationMethod\",\"name\":\"Timestamp\"},\"dataType\":\"timestamp\",\"description\":\"The timestamp that the associated information is reported, recorded or effective as-of.\",\"isNullable\":true,\"name\":\"Timestamp\",\"timestampFormat\":\"YYYY-MM-DD HH:MM:SS.fffffffff\"}]}}}",
+			"Description": "A method that can be used to authenticate a related party with a particular relationship to the party. Note that not all identification, security questions or biometrics may be considered suitable or sufficient for related party authentication.",
+			"DisplayFolderInfo": "{\"name\":\"Party\",\"colorCode\":\"#7D0F6C\"}",
+			"PrimaryKeys": "RelatedPartyId,RelatedPartyAuthenticationMethodId,RelatedPartyAuthenticationMethodPeriodStartTimestamp",
+			"spark.sql.sources.provider": "csv",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"RelatedPartyId\",\"type\":\"long\",\"nullable\":false,\"metadata\":{}},{\"name\":\"RelatedPartyAuthenticationMethodId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"RelatedPartyAuthenticationMethodPeriodStartTimestamp\",\"type\":\"timestamp\",\"nullable\":false,\"metadata\":{}},{\"name\":\"RelatedPartyAuthenticationMethodPeriodEndTimestamp\",\"type\":\"timestamp\",\"nullable\":true,\"metadata\":{}},{\"name\":\"AuthenticationMethodId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"PartyAuthenticationMethodRelationshipNote\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"PartyId\",\"type\":\"long\",\"nullable\":true,\"metadata\":{}},{\"name\":\"SecurityQuestionNumber\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"IdentificationId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"PeriodStartTimestamp\",\"type\":\"timestamp\",\"nullable\":true,\"metadata\":{}},{\"name\":\"BiometricTypeId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"Timestamp\",\"type\":\"timestamp\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "8b4faa2d-42fa-4a80-b0cd-05aeeb7f5e58",
+		"Description": "A method that can be used to authenticate a related party with a particular relationship to the party. Note that not all identification, security questions or biometrics may be considered suitable or sufficient for related party authentication."
+	},
+	"type": "TABLE"
+}

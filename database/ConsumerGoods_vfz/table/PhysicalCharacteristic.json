@@ -1,0 +1,137 @@
+{
+	"name": "PhysicalCharacteristic",
+	"properties": {
+		"Name": "PhysicalCharacteristic",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "PhysicalCharacteristicId",
+					"Description": "The unique identifier of a physical characteristic.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PhysicalCharacteristic.cdm.json/PhysicalCharacteristic",
+						"Name": "PhysicalCharacteristicId"
+					}
+				},
+				{
+					"Name": "PhysicalCharacteristicName",
+					"Description": "The name of a physical characteristic.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 256,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PhysicalCharacteristic.cdm.json/PhysicalCharacteristic",
+						"Name": "PhysicalCharacteristicName"
+					}
+				},
+				{
+					"Name": "PhysicalCharacteristicDescription",
+					"Description": "The description of a physical characteristic.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PhysicalCharacteristic.cdm.json/PhysicalCharacteristic",
+						"Name": "PhysicalCharacteristicDescription"
+					}
+				}
+			],
+			"ColumnSetEntityName": "53b702e7-98db-4a89-832b-af550b5e7240",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/PhysicalCharacteristic",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/PhysicalCharacteristic",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"PhysicalCharacteristicId\":{\"entity\":\"PhysicalCharacteristic.cdm.json/PhysicalCharacteristic\",\"name\":\"PhysicalCharacteristicId\"},\"PhysicalCharacteristicName\":{\"entity\":\"PhysicalCharacteristic.cdm.json/PhysicalCharacteristic\",\"name\":\"PhysicalCharacteristicName\"},\"PhysicalCharacteristicDescription\":{\"entity\":\"PhysicalCharacteristic.cdm.json/PhysicalCharacteristic\",\"name\":\"PhysicalCharacteristicDescription\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"PhysicalCharacteristic\",\"path\":\"PhysicalCharacteristic.cdm.json/PhysicalCharacteristic\"},\"description\":\"A physical characteristic that can be used to identify an individual.\\n\\nEx:\\n- Height\\n- Weight\\n- Eye Color\\n- Hair Color\\n- Body Type\\n- Tattoo\\n- Scar\",\"primaryKey\":[\"PhysicalCharacteristicId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PhysicalCharacteristic.cdm.json/PhysicalCharacteristic\",\"name\":\"PhysicalCharacteristicId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a physical characteristic.\",\"isNullable\":false,\"name\":\"PhysicalCharacteristicId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PhysicalCharacteristic.cdm.json/PhysicalCharacteristic\",\"name\":\"PhysicalCharacteristicName\"},\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"The name of a physical characteristic.\",\"isNullable\":true,\"name\":\"PhysicalCharacteristicName\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PhysicalCharacteristic.cdm.json/PhysicalCharacteristic\",\"name\":\"PhysicalCharacteristicDescription\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"The description of a physical characteristic.\",\"isNullable\":true,\"name\":\"PhysicalCharacteristicDescription\"}]}}}",
+			"Description": "A physical characteristic that can be used to identify an individual.\n\nEx:\n- Height\n- Weight\n- Eye Color\n- Hair Color\n- Body Type\n- Tattoo\n- Scar",
+			"DisplayFolderInfo": "{\"name\":\"Party\",\"colorCode\":\"#7D0F6C\"}",
+			"PrimaryKeys": "PhysicalCharacteristicId",
+			"spark.sql.sources.provider": "csv",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"PhysicalCharacteristicId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PhysicalCharacteristicName\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"PhysicalCharacteristicDescription\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "5f019da7-5b82-4f69-92fc-2b8f4368bd27",
+		"Description": "A physical characteristic that can be used to identify an individual.\n\nEx:\n- Height\n- Weight\n- Eye Color\n- Hair Color\n- Body Type\n- Tattoo\n- Scar"
+	},
+	"type": "TABLE"
+}

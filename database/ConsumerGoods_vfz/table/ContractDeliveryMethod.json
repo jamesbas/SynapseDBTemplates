@@ -1,0 +1,137 @@
+{
+	"name": "ContractDeliveryMethod",
+	"properties": {
+		"Name": "ContractDeliveryMethod",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "ContractDeliveryMethodId",
+					"Description": "The unique identifier of a contract delivery method.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ContractDeliveryMethod.cdm.json/ContractDeliveryMethod",
+						"Name": "ContractDeliveryMethodId"
+					}
+				},
+				{
+					"Name": "ContractDeliveryMethodName",
+					"Description": "The name of a contract delivery method.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 256,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ContractDeliveryMethod.cdm.json/ContractDeliveryMethod",
+						"Name": "ContractDeliveryMethodName"
+					}
+				},
+				{
+					"Name": "ContractDeliveryMethodDescription",
+					"Description": "The description of a contract delivery method.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ContractDeliveryMethod.cdm.json/ContractDeliveryMethod",
+						"Name": "ContractDeliveryMethodDescription"
+					}
+				}
+			],
+			"ColumnSetEntityName": "b8aab25c-5147-45cf-ba62-4eba9a39dc37",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/ContractDeliveryMethod",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/ContractDeliveryMethod",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"ContractDeliveryMethodId\":{\"entity\":\"ContractDeliveryMethod.cdm.json/ContractDeliveryMethod\",\"name\":\"ContractDeliveryMethodId\"},\"ContractDeliveryMethodName\":{\"entity\":\"ContractDeliveryMethod.cdm.json/ContractDeliveryMethod\",\"name\":\"ContractDeliveryMethodName\"},\"ContractDeliveryMethodDescription\":{\"entity\":\"ContractDeliveryMethod.cdm.json/ContractDeliveryMethod\",\"name\":\"ContractDeliveryMethodDescription\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"ContractDeliveryMethod\",\"path\":\"ContractDeliveryMethod.cdm.json/ContractDeliveryMethod\"},\"description\":\"The method by which the contract was delivered to the party.\\n\\nEx:\\n- Mail\\n- Registered Mail\\n- FedEx\\n- UPS\\n- Courier\",\"primaryKey\":[\"ContractDeliveryMethodId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ContractDeliveryMethod.cdm.json/ContractDeliveryMethod\",\"name\":\"ContractDeliveryMethodId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a contract delivery method.\",\"isNullable\":false,\"name\":\"ContractDeliveryMethodId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ContractDeliveryMethod.cdm.json/ContractDeliveryMethod\",\"name\":\"ContractDeliveryMethodName\"},\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"The name of a contract delivery method.\",\"isNullable\":true,\"name\":\"ContractDeliveryMethodName\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ContractDeliveryMethod.cdm.json/ContractDeliveryMethod\",\"name\":\"ContractDeliveryMethodDescription\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"The description of a contract delivery method.\",\"isNullable\":true,\"name\":\"ContractDeliveryMethodDescription\"}]}}}",
+			"Description": "The method by which the contract was delivered to the party.\n\nEx:\n- Mail\n- Registered Mail\n- FedEx\n- UPS\n- Courier",
+			"DisplayFolderInfo": "{\"name\":\"Contract\",\"colorCode\":\"#000F5C\"}",
+			"PrimaryKeys": "ContractDeliveryMethodId",
+			"spark.sql.sources.provider": "csv",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"ContractDeliveryMethodId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"ContractDeliveryMethodName\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ContractDeliveryMethodDescription\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "70f7ea84-bf2f-403f-859b-d452254d059d",
+		"Description": "The method by which the contract was delivered to the party.\n\nEx:\n- Mail\n- Registered Mail\n- FedEx\n- UPS\n- Courier"
+	},
+	"type": "TABLE"
+}

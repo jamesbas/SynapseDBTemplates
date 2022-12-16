@@ -1,0 +1,29 @@
+{
+	"name": "relationship-liqgkwdhoc",
+	"properties": {
+		"Name": "relationship-liqgkwdhoc",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "CommercialLeaseAgreement",
+		"ToTableName": "LeasePayment",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "ContractId",
+				"ToColumnName": "ContractId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"CommercialLeaseAgreement.cdm.json/CommercialLeaseAgreement\",\"toEntity\":\"LeasePayment.cdm.json/LeasePayment\",\"joinPairs\":[{\"fromAttribute\":\"ContractId\",\"toAttribute\":\"ContractId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "0fde5f00-62bd-467c-84ed-46f2f6b1e205"
+	},
+	"type": "RELATIONSHIP"
+}

@@ -1,0 +1,29 @@
+{
+	"name": "relationship-kejulueibj",
+	"properties": {
+		"Name": "relationship-kejulueibj",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "PartySecurityQuestion",
+		"ToTableName": "RelatedPartyAuthenticationMethod",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "SecurityQuestionNumber",
+				"ToColumnName": "SecurityQuestionNumber"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"PartySecurityQuestion.cdm.json/PartySecurityQuestion\",\"toEntity\":\"RelatedPartyAuthenticationMethod.cdm.json/RelatedPartyAuthenticationMethod\",\"joinPairs\":[{\"fromAttribute\":\"SecurityQuestionNumber\",\"toAttribute\":\"SecurityQuestionNumber\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "295e6ebb-4628-430b-a06a-9000c15f9da6"
+	},
+	"type": "RELATIONSHIP"
+}

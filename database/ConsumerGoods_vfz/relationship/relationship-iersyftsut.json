@@ -1,0 +1,29 @@
+{
+	"name": "relationship-iersyftsut",
+	"properties": {
+		"Name": "relationship-iersyftsut",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "AuthenticationMethod",
+		"ToTableName": "RelatedPartyAuthenticationMethod",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "AuthenticationMethodId",
+				"ToColumnName": "AuthenticationMethodId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"AuthenticationMethod.cdm.json/AuthenticationMethod\",\"toEntity\":\"RelatedPartyAuthenticationMethod.cdm.json/RelatedPartyAuthenticationMethod\",\"joinPairs\":[{\"fromAttribute\":\"AuthenticationMethodId\",\"toAttribute\":\"AuthenticationMethodId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "107d81f6-0d01-4b85-a7a4-110cadf0ba4f"
+	},
+	"type": "RELATIONSHIP"
+}

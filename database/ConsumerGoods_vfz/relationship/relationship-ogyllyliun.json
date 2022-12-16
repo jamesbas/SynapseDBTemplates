@@ -1,0 +1,29 @@
+{
+	"name": "relationship-ogyllyliun",
+	"properties": {
+		"Name": "relationship-ogyllyliun",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "PropensityRating",
+		"ToTableName": "PartyPropensity",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "PropensityRatingId",
+				"ToColumnName": "PropensityRatingId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"PropensityRating.cdm.json/PropensityRating\",\"toEntity\":\"PartyPropensity.cdm.json/PartyPropensity\",\"joinPairs\":[{\"fromAttribute\":\"PropensityRatingId\",\"toAttribute\":\"PropensityRatingId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "d1b857e5-8f68-4753-a3a3-27e461791ea6"
+	},
+	"type": "RELATIONSHIP"
+}

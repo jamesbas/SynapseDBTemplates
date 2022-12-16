@@ -1,0 +1,29 @@
+{
+	"name": "relationship-apfppfolip",
+	"properties": {
+		"Name": "relationship-apfppfolip",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "Identification",
+		"ToTableName": "VendorIdentification",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "IdentificationId",
+				"ToColumnName": "IdentificationId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"Identification.cdm.json/Identification\",\"toEntity\":\"VendorIdentification.cdm.json/VendorIdentification\",\"joinPairs\":[{\"fromAttribute\":\"IdentificationId\",\"toAttribute\":\"IdentificationId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "506892d4-9445-421c-af72-a943fe3f4ea3"
+	},
+	"type": "RELATIONSHIP"
+}

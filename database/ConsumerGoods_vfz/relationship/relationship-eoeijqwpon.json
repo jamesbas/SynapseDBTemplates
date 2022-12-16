@@ -1,0 +1,29 @@
+{
+	"name": "relationship-eoeijqwpon",
+	"properties": {
+		"Name": "relationship-eoeijqwpon",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "ContactMethod",
+		"ToTableName": "VendorContactPurpose",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "ContactMethodId",
+				"ToColumnName": "ContactMethodId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"ContactMethod.cdm.json/ContactMethod\",\"toEntity\":\"VendorContactPurpose.cdm.json/VendorContactPurpose\",\"joinPairs\":[{\"fromAttribute\":\"ContactMethodId\",\"toAttribute\":\"ContactMethodId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 2,
+		"ObjectId": "c62bf347-9ce2-4cfe-aeb8-c11bdfe36bc1"
+	},
+	"type": "RELATIONSHIP"
+}

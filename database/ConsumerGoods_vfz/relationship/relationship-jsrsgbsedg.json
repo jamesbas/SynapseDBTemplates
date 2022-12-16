@@ -1,0 +1,29 @@
+{
+	"name": "relationship-jsrsgbsedg",
+	"properties": {
+		"Name": "relationship-jsrsgbsedg",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "EquipmentLease",
+		"ToTableName": "LeaseEquipment",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "ContractId",
+				"ToColumnName": "ContractId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"EquipmentLease.cdm.json/EquipmentLease\",\"toEntity\":\"LeaseEquipment.cdm.json/LeaseEquipment\",\"joinPairs\":[{\"fromAttribute\":\"ContractId\",\"toAttribute\":\"ContractId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "08594c59-8267-412d-8096-be548fa38ba3"
+	},
+	"type": "RELATIONSHIP"
+}

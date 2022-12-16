@@ -1,0 +1,156 @@
+{
+	"name": "DocumentCharacteristic",
+	"properties": {
+		"Name": "DocumentCharacteristic",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "DocumentId",
+					"Description": "The unique identifier of a Document.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "DocumentCharacteristic.cdm.json/DocumentCharacteristic",
+						"Name": "DocumentId"
+					}
+				},
+				{
+					"Name": "DocumentCharacteristicTypeId",
+					"Description": "The unique identifier of a document characteristic type.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "DocumentCharacteristic.cdm.json/DocumentCharacteristic",
+						"Name": "DocumentCharacteristicTypeId"
+					}
+				},
+				{
+					"Name": "DocumentCharacteristicValue",
+					"Description": "The value associated with the document characteristic.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 20,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "DocumentCharacteristic.cdm.json/DocumentCharacteristic",
+						"Name": "DocumentCharacteristicValue"
+					}
+				},
+				{
+					"Name": "DocumentCharacteristicNote",
+					"Description": "A note, comment or additional information regarding the Document Characteristic.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "DocumentCharacteristic.cdm.json/DocumentCharacteristic",
+						"Name": "DocumentCharacteristicNote"
+					}
+				}
+			],
+			"ColumnSetEntityName": "94d55eb7-9ef6-45fa-b253-626cb03431ca",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/DocumentCharacteristic",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/DocumentCharacteristic",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"DocumentId\":{\"entity\":\"DocumentCharacteristic.cdm.json/DocumentCharacteristic\",\"name\":\"DocumentId\"},\"DocumentCharacteristicTypeId\":{\"entity\":\"DocumentCharacteristic.cdm.json/DocumentCharacteristic\",\"name\":\"DocumentCharacteristicTypeId\"},\"DocumentCharacteristicValue\":{\"entity\":\"DocumentCharacteristic.cdm.json/DocumentCharacteristic\",\"name\":\"DocumentCharacteristicValue\"},\"DocumentCharacteristicNote\":{\"entity\":\"DocumentCharacteristic.cdm.json/DocumentCharacteristic\",\"name\":\"DocumentCharacteristicNote\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"DocumentCharacteristic\",\"path\":\"DocumentCharacteristic.cdm.json/DocumentCharacteristic\"},\"description\":\"The amount / percentage of the document that is of the given color.\",\"primaryKey\":[\"DocumentId\",\"DocumentCharacteristicTypeId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"DocumentCharacteristic.cdm.json/DocumentCharacteristic\",\"name\":\"DocumentId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a Document.\",\"isNullable\":false,\"name\":\"DocumentId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"DocumentCharacteristic.cdm.json/DocumentCharacteristic\",\"name\":\"DocumentCharacteristicTypeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a document characteristic type.\",\"isNullable\":false,\"name\":\"DocumentCharacteristicTypeId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"DocumentCharacteristic.cdm.json/DocumentCharacteristic\",\"name\":\"DocumentCharacteristicValue\"},\"dataType\":\"string\",\"dataTypeLength\":20,\"description\":\"The value associated with the document characteristic.\",\"isNullable\":true,\"name\":\"DocumentCharacteristicValue\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"DocumentCharacteristic.cdm.json/DocumentCharacteristic\",\"name\":\"DocumentCharacteristicNote\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"A note, comment or additional information regarding the Document Characteristic.\",\"isNullable\":true,\"name\":\"DocumentCharacteristicNote\"}]}}}",
+			"Description": "The amount / percentage of the document that is of the given color.",
+			"DisplayFolderInfo": "{\"name\":\"Document Management\",\"colorCode\":\"#001475\"}",
+			"PrimaryKeys": "DocumentId,DocumentCharacteristicTypeId",
+			"spark.sql.sources.provider": "csv",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"DocumentId\",\"type\":\"long\",\"nullable\":false,\"metadata\":{}},{\"name\":\"DocumentCharacteristicTypeId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"DocumentCharacteristicValue\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"DocumentCharacteristicNote\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "a29f7ceb-1c44-41fe-9290-7ee10ce88677",
+		"Description": "The amount / percentage of the document that is of the given color."
+	},
+	"type": "TABLE"
+}

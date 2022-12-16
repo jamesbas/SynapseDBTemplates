@@ -1,0 +1,137 @@
+{
+	"name": "ManufacturerCustomerExclusion",
+	"properties": {
+		"Name": "ManufacturerCustomerExclusion",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "ContractId",
+					"Description": "The unique identifier of a Contract.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ManufacturerCustomerExclusion.cdm.json/ManufacturerCustomerExclusion",
+						"Name": "ContractId"
+					}
+				},
+				{
+					"Name": "CustomerId",
+					"Description": "The unique identifier of a Customer.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ManufacturerCustomerExclusion.cdm.json/ManufacturerCustomerExclusion",
+						"Name": "CustomerId"
+					}
+				},
+				{
+					"Name": "Notes",
+					"Description": "Comments, notes or additional information regarding the Customer exclusion from the Distributorship Agreements.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ManufacturerCustomerExclusion.cdm.json/ManufacturerCustomerExclusion",
+						"Name": "Notes"
+					}
+				}
+			],
+			"ColumnSetEntityName": "9a24fd14-94b1-4dcc-b0eb-f59168fc99ea",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/ManufacturerCustomerExclusion",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/ManufacturerCustomerExclusion",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"ContractId\":{\"entity\":\"ManufacturerCustomerExclusion.cdm.json/ManufacturerCustomerExclusion\",\"name\":\"ContractId\"},\"CustomerId\":{\"entity\":\"ManufacturerCustomerExclusion.cdm.json/ManufacturerCustomerExclusion\",\"name\":\"CustomerId\"},\"Notes\":{\"entity\":\"ManufacturerCustomerExclusion.cdm.json/ManufacturerCustomerExclusion\",\"name\":\"Notes\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"ManufacturerCustomerExclusion\",\"path\":\"ManufacturerCustomerExclusion.cdm.json/ManufacturerCustomerExclusion\"},\"description\":\"Specific Customers that are excluded from the agreement and may be dealt with directly by the manufacturer.\",\"primaryKey\":[\"ContractId\",\"CustomerId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ManufacturerCustomerExclusion.cdm.json/ManufacturerCustomerExclusion\",\"name\":\"ContractId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Contract.\",\"isNullable\":false,\"name\":\"ContractId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ManufacturerCustomerExclusion.cdm.json/ManufacturerCustomerExclusion\",\"name\":\"CustomerId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a Customer.\",\"isNullable\":false,\"name\":\"CustomerId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ManufacturerCustomerExclusion.cdm.json/ManufacturerCustomerExclusion\",\"name\":\"Notes\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"Comments, notes or additional information regarding the Customer exclusion from the Distributorship Agreements.\",\"isNullable\":true,\"name\":\"Notes\"}]}}}",
+			"Description": "Specific Customers that are excluded from the agreement and may be dealt with directly by the manufacturer.",
+			"DisplayFolderInfo": "{\"name\":\"Contract\",\"colorCode\":\"#000F5C\"}",
+			"PrimaryKeys": "ContractId,CustomerId",
+			"spark.sql.sources.provider": "csv",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"ContractId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"CustomerId\",\"type\":\"long\",\"nullable\":false,\"metadata\":{}},{\"name\":\"Notes\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "6e011245-a628-4a4e-bc60-66f6c15ea8b3",
+		"Description": "Specific Customers that are excluded from the agreement and may be dealt with directly by the manufacturer."
+	},
+	"type": "TABLE"
+}

@@ -1,0 +1,29 @@
+{
+	"name": "relationship-ubabmeceah",
+	"properties": {
+		"Name": "relationship-ubabmeceah",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "Location",
+		"ToTableName": "DoNotMailRegistryLocation",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "LocationId",
+				"ToColumnName": "LocationId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"Location.cdm.json/Location\",\"toEntity\":\"DoNotMailRegistryLocation.cdm.json/DoNotMailRegistryLocation\",\"joinPairs\":[{\"fromAttribute\":\"LocationId\",\"toAttribute\":\"LocationId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "b5a9c059-3d2b-4591-8b97-8f502685b4f5"
+	},
+	"type": "RELATIONSHIP"
+}

@@ -1,0 +1,29 @@
+{
+	"name": "relationship-uocqohjeku",
+	"properties": {
+		"Name": "relationship-uocqohjeku",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "GeographicCriteria",
+		"ToTableName": "VendorLocationGeographicCriteria",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "GeographicCriteriaId",
+				"ToColumnName": "GeographicCriteriaId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"GeographicCriteria.cdm.json/GeographicCriteria\",\"toEntity\":\"VendorLocationGeographicCriteria.cdm.json/VendorLocationGeographicCriteria\",\"joinPairs\":[{\"fromAttribute\":\"GeographicCriteriaId\",\"toAttribute\":\"GeographicCriteriaId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "16017cff-518e-438b-af75-2e34954a4d4e"
+	},
+	"type": "RELATIONSHIP"
+}

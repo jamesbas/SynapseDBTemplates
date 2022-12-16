@@ -1,0 +1,196 @@
+{
+	"name": "RelatedParty",
+	"properties": {
+		"Name": "RelatedParty",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "PartyId",
+					"Description": "The unique identifier of a Party.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "RelatedParty.cdm.json/RelatedParty",
+						"Name": "PartyId"
+					}
+				},
+				{
+					"Name": "RelatedPartyId",
+					"Description": "The unique identifier of a Party.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "RelatedParty.cdm.json/RelatedParty",
+						"Name": "RelatedPartyId"
+					}
+				},
+				{
+					"Name": "PartyRelationshipTypeId",
+					"Description": "The unique identifier of a Party Relationship Type.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "RelatedParty.cdm.json/RelatedParty",
+						"Name": "PartyRelationshipTypeId"
+					}
+				},
+				{
+					"Name": "PartyRelationshipPeriodStartTimestamp",
+					"Description": "The period starting timestamp that the party relationship is defined or identified.",
+					"OriginDataTypeName": {
+						"TypeName": "timestamp",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"TimestampFormat": "YYYY-MM-DD HH:MM:SS.fffffffff",
+							"HIVE_TYPE_STRING": "timestamp"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "RelatedParty.cdm.json/RelatedParty",
+						"Name": "PartyRelationshipPeriodStartTimestamp"
+					}
+				},
+				{
+					"Name": "PartyRelationshipPeriodEndTimestamp",
+					"Description": "The period ending timestamp that the party relationship is defined or identified.",
+					"OriginDataTypeName": {
+						"TypeName": "timestamp",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"TimestampFormat": "YYYY-MM-DD HH:MM:SS.fffffffff",
+							"HIVE_TYPE_STRING": "timestamp"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "RelatedParty.cdm.json/RelatedParty",
+						"Name": "PartyRelationshipPeriodEndTimestamp"
+					}
+				},
+				{
+					"Name": "PartyRelationshipNote",
+					"Description": "A note, comment or additional information regarding the Party Relationship.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "RelatedParty.cdm.json/RelatedParty",
+						"Name": "PartyRelationshipNote"
+					}
+				}
+			],
+			"ColumnSetEntityName": "34c27199-bea7-41ee-9065-d1876d24cae0",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/RelatedParty",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/RelatedParty",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"PartyId\":{\"entity\":\"RelatedParty.cdm.json/RelatedParty\",\"name\":\"PartyId\"},\"RelatedPartyId\":{\"entity\":\"RelatedParty.cdm.json/RelatedParty\",\"name\":\"RelatedPartyId\"},\"PartyRelationshipTypeId\":{\"entity\":\"RelatedParty.cdm.json/RelatedParty\",\"name\":\"PartyRelationshipTypeId\"},\"PartyRelationshipPeriodStartTimestamp\":{\"entity\":\"RelatedParty.cdm.json/RelatedParty\",\"name\":\"PartyRelationshipPeriodStartTimestamp\"},\"PartyRelationshipPeriodEndTimestamp\":{\"entity\":\"RelatedParty.cdm.json/RelatedParty\",\"name\":\"PartyRelationshipPeriodEndTimestamp\"},\"PartyRelationshipNote\":{\"entity\":\"RelatedParty.cdm.json/RelatedParty\",\"name\":\"PartyRelationshipNote\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"RelatedParty\",\"path\":\"RelatedParty.cdm.json/RelatedParty\"},\"description\":\"The relationship between two parties during the associated period.\",\"primaryKey\":[\"PartyId\",\"RelatedPartyId\",\"PartyRelationshipTypeId\",\"PartyRelationshipPeriodStartTimestamp\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"RelatedParty.cdm.json/RelatedParty\",\"name\":\"PartyId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a Party.\",\"isNullable\":false,\"name\":\"PartyId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"RelatedParty.cdm.json/RelatedParty\",\"name\":\"RelatedPartyId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a Party.\",\"isNullable\":false,\"name\":\"RelatedPartyId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"RelatedParty.cdm.json/RelatedParty\",\"name\":\"PartyRelationshipTypeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Party Relationship Type.\",\"isNullable\":false,\"name\":\"PartyRelationshipTypeId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"RelatedParty.cdm.json/RelatedParty\",\"name\":\"PartyRelationshipPeriodStartTimestamp\"},\"dataType\":\"timestamp\",\"description\":\"The period starting timestamp that the party relationship is defined or identified.\",\"isNullable\":false,\"name\":\"PartyRelationshipPeriodStartTimestamp\",\"timestampFormat\":\"YYYY-MM-DD HH:MM:SS.fffffffff\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"RelatedParty.cdm.json/RelatedParty\",\"name\":\"PartyRelationshipPeriodEndTimestamp\"},\"dataType\":\"timestamp\",\"description\":\"The period ending timestamp that the party relationship is defined or identified.\",\"isNullable\":true,\"name\":\"PartyRelationshipPeriodEndTimestamp\",\"timestampFormat\":\"YYYY-MM-DD HH:MM:SS.fffffffff\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"RelatedParty.cdm.json/RelatedParty\",\"name\":\"PartyRelationshipNote\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"A note, comment or additional information regarding the Party Relationship.\",\"isNullable\":true,\"name\":\"PartyRelationshipNote\"}]}}}",
+			"Description": "The relationship between two parties during the associated period.",
+			"DisplayFolderInfo": "{\"name\":\"Party\",\"colorCode\":\"#7D0F6C\"}",
+			"PrimaryKeys": "PartyId,RelatedPartyId,PartyRelationshipTypeId,PartyRelationshipPeriodStartTimestamp",
+			"spark.sql.sources.provider": "csv",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"PartyId\",\"type\":\"long\",\"nullable\":false,\"metadata\":{}},{\"name\":\"RelatedPartyId\",\"type\":\"long\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PartyRelationshipTypeId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PartyRelationshipPeriodStartTimestamp\",\"type\":\"timestamp\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PartyRelationshipPeriodEndTimestamp\",\"type\":\"timestamp\",\"nullable\":true,\"metadata\":{}},{\"name\":\"PartyRelationshipNote\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "173efaee-8ed6-471f-b899-e2efbeb20751",
+		"Description": "The relationship between two parties during the associated period."
+	},
+	"type": "TABLE"
+}

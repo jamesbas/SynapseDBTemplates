@@ -1,0 +1,137 @@
+{
+	"name": "LeaseType",
+	"properties": {
+		"Name": "LeaseType",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "LeaseTypeId",
+					"Description": "The unique identifier of a lease type.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "LeaseType.cdm.json/LeaseType",
+						"Name": "LeaseTypeId"
+					}
+				},
+				{
+					"Name": "LeaseTypeName",
+					"Description": "The name of a lease type.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 256,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "LeaseType.cdm.json/LeaseType",
+						"Name": "LeaseTypeName"
+					}
+				},
+				{
+					"Name": "LeaseTypeDescription",
+					"Description": "The description of a lease type.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "LeaseType.cdm.json/LeaseType",
+						"Name": "LeaseTypeDescription"
+					}
+				}
+			],
+			"ColumnSetEntityName": "655cc626-3c78-4245-a259-52fdabd76129",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/LeaseType",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/LeaseType",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"LeaseTypeId\":{\"entity\":\"LeaseType.cdm.json/LeaseType\",\"name\":\"LeaseTypeId\"},\"LeaseTypeName\":{\"entity\":\"LeaseType.cdm.json/LeaseType\",\"name\":\"LeaseTypeName\"},\"LeaseTypeDescription\":{\"entity\":\"LeaseType.cdm.json/LeaseType\",\"name\":\"LeaseTypeDescription\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"LeaseType\",\"path\":\"LeaseType.cdm.json/LeaseType\"},\"description\":\"The type of commercial lease arrangement.\\n\\nEx:\\n- Percentage Lease\\n- Net Lease\\n- Double Net Lease\\n- Triple Net Lease\\n- Fully Serviced Lease (Gross Lease)\\n\\nWhere:\\n\\nPercentage Lease\\nBase Rent + Percent of Monthly Sales\\n\\nNet Lease\\nIn additional to rent, tenant pays some or all of taxes, insurance, or maintenance.\\n\\nDouble Net Lease\\nTenant pays rent + taxes and insurance.\\n\\nTriple Net Lease\\nTenant pays rent + taxes, insurance, and maintenance.\\n\\nFully Serviced Lease (Gross Lease)\\nLandlord directly pays all or most usual costs. These costs are often passed on to tenant in rent as a \\\"Load Factor.\\\"\",\"primaryKey\":[\"LeaseTypeId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"LeaseType.cdm.json/LeaseType\",\"name\":\"LeaseTypeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a lease type.\",\"isNullable\":false,\"name\":\"LeaseTypeId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"LeaseType.cdm.json/LeaseType\",\"name\":\"LeaseTypeName\"},\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"The name of a lease type.\",\"isNullable\":true,\"name\":\"LeaseTypeName\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"LeaseType.cdm.json/LeaseType\",\"name\":\"LeaseTypeDescription\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"The description of a lease type.\",\"isNullable\":true,\"name\":\"LeaseTypeDescription\"}]}}}",
+			"Description": "The type of commercial lease arrangement.\n\nEx:\n- Percentage Lease\n- Net Lease\n- Double Net Lease\n- Triple Net Lease\n- Fully Serviced Lease (Gross Lease)\n\nWhere:\n\nPercentage Lease\nBase Rent + Percent of Monthly Sales\n\nNet Lease\nIn additional to rent, tenant pays some or all of taxes, insurance, or maintenance.\n\nDouble Net Lease\nTenant pays rent + taxes and insurance.\n\nTriple Net Lease\nTenant pays rent + taxes, insurance, and maintenance.\n\nFully Serviced Lease (Gross Lease)\nLandlord directly pays all or most usual costs. These costs are often passed on to tenant in rent as a \"Load Factor.\"",
+			"DisplayFolderInfo": "{\"name\":\"Contract\",\"colorCode\":\"#000F5C\"}",
+			"PrimaryKeys": "LeaseTypeId",
+			"spark.sql.sources.provider": "csv",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"LeaseTypeId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"LeaseTypeName\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"LeaseTypeDescription\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "7df97c10-f77c-43a9-acc4-227641959763",
+		"Description": "The type of commercial lease arrangement.\n\nEx:\n- Percentage Lease\n- Net Lease\n- Double Net Lease\n- Triple Net Lease\n- Fully Serviced Lease (Gross Lease)\n\nWhere:\n\nPercentage Lease\nBase Rent + Percent of Monthly Sales\n\nNet Lease\nIn additional to rent, tenant pays some or all of taxes, insurance, or maintenance.\n\nDouble Net Lease\nTenant pays rent + taxes and insurance.\n\nTriple Net Lease\nTenant pays rent + taxes, insurance, and maintenance.\n\nFully Serviced Lease (Gross Lease)\nLandlord directly pays all or most usual costs. These costs are often passed on to tenant in rent as a \"Load Factor.\""
+	},
+	"type": "TABLE"
+}

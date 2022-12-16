@@ -1,0 +1,29 @@
+{
+	"name": "relationship-whrmatdhpk",
+	"properties": {
+		"Name": "relationship-whrmatdhpk",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "Role",
+		"ToTableName": "PartyRoleEvent",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "RoleId",
+				"ToColumnName": "RoleId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"Role.cdm.json/Role\",\"toEntity\":\"PartyRoleEvent.cdm.json/PartyRoleEvent\",\"joinPairs\":[{\"fromAttribute\":\"RoleId\",\"toAttribute\":\"RoleId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "07c5471b-0d91-4e66-be67-5c48df0e841c"
+	},
+	"type": "RELATIONSHIP"
+}

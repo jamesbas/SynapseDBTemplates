@@ -1,0 +1,29 @@
+{
+	"name": "relationship-edhjeitxlf",
+	"properties": {
+		"Name": "relationship-edhjeitxlf",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "DemographicCriteriaType",
+		"ToTableName": "DemographicCriteria",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "DemographicCriteriaTypeId",
+				"ToColumnName": "DemographicCriteriaTypeId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"DemographicCriteriaType.cdm.json/DemographicCriteriaType\",\"toEntity\":\"DemographicCriteria.cdm.json/DemographicCriteria\",\"joinPairs\":[{\"fromAttribute\":\"DemographicCriteriaTypeId\",\"toAttribute\":\"DemographicCriteriaTypeId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "03b90ae8-1eae-4b6c-90e7-12c6b9ccde43"
+	},
+	"type": "RELATIONSHIP"
+}

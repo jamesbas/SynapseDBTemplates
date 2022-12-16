@@ -1,0 +1,215 @@
+{
+	"name": "VendorSalesTerm",
+	"properties": {
+		"Name": "VendorSalesTerm",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "VendorId",
+					"Description": "The unique identifier of a Vendor.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "VendorSalesTerm.cdm.json/VendorSalesTerm",
+						"Name": "VendorId"
+					}
+				},
+				{
+					"Name": "SalesTermId",
+					"Description": "The unique identifier of a Sales Term.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "VendorSalesTerm.cdm.json/VendorSalesTerm",
+						"Name": "SalesTermId"
+					}
+				},
+				{
+					"Name": "MinimumTransactionAmount",
+					"Description": "The minimum transaction amount in the associated transaction range for which the associated Sales Term(s) are offered or extended.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "VendorSalesTerm.cdm.json/VendorSalesTerm",
+						"Name": "MinimumTransactionAmount"
+					}
+				},
+				{
+					"Name": "MaximumTransactionAmount",
+					"Description": "The maximum transaction amount in the associated transaction range for which the associated Sales Term(s) are offered or extended.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "VendorSalesTerm.cdm.json/VendorSalesTerm",
+						"Name": "MaximumTransactionAmount"
+					}
+				},
+				{
+					"Name": "PeriodStartDate",
+					"Description": "The period start date for which the associated data is effective.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "VendorSalesTerm.cdm.json/VendorSalesTerm",
+						"Name": "PeriodStartDate"
+					}
+				},
+				{
+					"Name": "PeriodEndDate",
+					"Description": "The period end date for which the associated data is effective.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "VendorSalesTerm.cdm.json/VendorSalesTerm",
+						"Name": "PeriodEndDate"
+					}
+				},
+				{
+					"Name": "VendorSalesTermNote",
+					"Description": "A note, comment or additional information regarding the Vendor sales term.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "VendorSalesTerm.cdm.json/VendorSalesTerm",
+						"Name": "VendorSalesTermNote"
+					}
+				}
+			],
+			"ColumnSetEntityName": "30938da0-3a89-459e-ad20-61a22f9ddff4",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/VendorSalesTerm",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/VendorSalesTerm",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"VendorId\":{\"entity\":\"VendorSalesTerm.cdm.json/VendorSalesTerm\",\"name\":\"VendorId\"},\"SalesTermId\":{\"entity\":\"VendorSalesTerm.cdm.json/VendorSalesTerm\",\"name\":\"SalesTermId\"},\"MinimumTransactionAmount\":{\"entity\":\"VendorSalesTerm.cdm.json/VendorSalesTerm\",\"name\":\"MinimumTransactionAmount\"},\"MaximumTransactionAmount\":{\"entity\":\"VendorSalesTerm.cdm.json/VendorSalesTerm\",\"name\":\"MaximumTransactionAmount\"},\"PeriodStartDate\":{\"entity\":\"VendorSalesTerm.cdm.json/VendorSalesTerm\",\"name\":\"PeriodStartDate\"},\"PeriodEndDate\":{\"entity\":\"VendorSalesTerm.cdm.json/VendorSalesTerm\",\"name\":\"PeriodEndDate\"},\"VendorSalesTermNote\":{\"entity\":\"VendorSalesTerm.cdm.json/VendorSalesTerm\",\"name\":\"VendorSalesTermNote\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"VendorSalesTerm\",\"path\":\"VendorSalesTerm.cdm.json/VendorSalesTerm\"},\"description\":\"The Sales Term(s) that are offered or provided to the Vendor for purchases/transactions of the associated amounts during the indicated period.\",\"primaryKey\":[\"VendorId\",\"SalesTermId\",\"MinimumTransactionAmount\",\"MaximumTransactionAmount\",\"PeriodStartDate\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"VendorSalesTerm.cdm.json/VendorSalesTerm\",\"name\":\"VendorId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a Vendor.\",\"isNullable\":false,\"name\":\"VendorId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"VendorSalesTerm.cdm.json/VendorSalesTerm\",\"name\":\"SalesTermId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Sales Term.\",\"isNullable\":false,\"name\":\"SalesTermId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"VendorSalesTerm.cdm.json/VendorSalesTerm\",\"name\":\"MinimumTransactionAmount\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"The minimum transaction amount in the associated transaction range for which the associated Sales Term(s) are offered or extended.\",\"isNullable\":false,\"scale\":2,\"name\":\"MinimumTransactionAmount\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"VendorSalesTerm.cdm.json/VendorSalesTerm\",\"name\":\"MaximumTransactionAmount\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"The maximum transaction amount in the associated transaction range for which the associated Sales Term(s) are offered or extended.\",\"isNullable\":false,\"scale\":2,\"name\":\"MaximumTransactionAmount\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"VendorSalesTerm.cdm.json/VendorSalesTerm\",\"name\":\"PeriodStartDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The period start date for which the associated data is effective.\",\"isNullable\":false,\"name\":\"PeriodStartDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"VendorSalesTerm.cdm.json/VendorSalesTerm\",\"name\":\"PeriodEndDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The period end date for which the associated data is effective.\",\"isNullable\":true,\"name\":\"PeriodEndDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"VendorSalesTerm.cdm.json/VendorSalesTerm\",\"name\":\"VendorSalesTermNote\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"A note, comment or additional information regarding the Vendor sales term.\",\"isNullable\":true,\"name\":\"VendorSalesTermNote\"}]}}}",
+			"Description": "The Sales Term(s) that are offered or provided to the Vendor for purchases/transactions of the associated amounts during the indicated period.",
+			"DisplayFolderInfo": "{\"name\":\"Vendor\",\"colorCode\":\"#1C508C\"}",
+			"PrimaryKeys": "VendorId,SalesTermId,MinimumTransactionAmount,MaximumTransactionAmount,PeriodStartDate",
+			"spark.sql.sources.provider": "csv",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"VendorId\",\"type\":\"long\",\"nullable\":false,\"metadata\":{}},{\"name\":\"SalesTermId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"MinimumTransactionAmount\",\"type\":\"decimal(18,2)\",\"nullable\":false,\"metadata\":{}},{\"name\":\"MaximumTransactionAmount\",\"type\":\"decimal(18,2)\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PeriodStartDate\",\"type\":\"date\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PeriodEndDate\",\"type\":\"date\",\"nullable\":true,\"metadata\":{}},{\"name\":\"VendorSalesTermNote\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "e4c42e36-3988-4afe-afd8-af3ba75ef655",
+		"Description": "The Sales Term(s) that are offered or provided to the Vendor for purchases/transactions of the associated amounts during the indicated period."
+	},
+	"type": "TABLE"
+}

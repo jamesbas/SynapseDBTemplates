@@ -1,0 +1,29 @@
+{
+	"name": "relationship-acuclqdegy",
+	"properties": {
+		"Name": "relationship-acuclqdegy",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "PsychographicCriteria",
+		"ToTableName": "PartyPsychographicCriteria",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "PsychographicCriteriaId",
+				"ToColumnName": "PsychographicCriteriaId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"PsychographicCriteria.cdm.json/PsychographicCriteria\",\"toEntity\":\"PartyPsychographicCriteria.cdm.json/PartyPsychographicCriteria\",\"joinPairs\":[{\"fromAttribute\":\"PsychographicCriteriaId\",\"toAttribute\":\"PsychographicCriteriaId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "7e7d3a7e-a7f7-4b9e-888b-7d0be60036a0"
+	},
+	"type": "RELATIONSHIP"
+}

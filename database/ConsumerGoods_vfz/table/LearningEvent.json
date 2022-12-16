@@ -1,0 +1,460 @@
+{
+	"name": "LearningEvent",
+	"properties": {
+		"Name": "LearningEvent",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "LearningEventId",
+					"Description": "The unique identifier of a Learning Event.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "LearningEvent.cdm.json/LearningEvent",
+						"Name": "LearningEventId"
+					}
+				},
+				{
+					"Name": "LearningEventName",
+					"Description": "The name of the Learning Event.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 256,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "LearningEvent.cdm.json/LearningEvent",
+						"Name": "LearningEventName"
+					}
+				},
+				{
+					"Name": "LearningEventDescription",
+					"Description": "The description of the Learning Event.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "LearningEvent.cdm.json/LearningEvent",
+						"Name": "LearningEventDescription"
+					}
+				},
+				{
+					"Name": "LearningEventObjectivesStatement",
+					"Description": "A statement of the objectives to be achieved by the Learning Event.\n\nThe nature of this statement is typically applicable for including in a course catalog.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "LearningEvent.cdm.json/LearningEvent",
+						"Name": "LearningEventObjectivesStatement"
+					}
+				},
+				{
+					"Name": "StandardLearningEventFee",
+					"Description": "The standard fee in the associated currency for the Learning Event.\n\nCourses offered at various locations have adjustments made based upon the cost of offering the Learning Event at that location based upon the Standard Learning Event Fee.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "LearningEvent.cdm.json/LearningEvent",
+						"Name": "StandardLearningEventFee"
+					}
+				},
+				{
+					"Name": "CertificationExpirationPeriod",
+					"Description": "The number of years that the Learning Event may be applied to the associated Curriculum before it must be retaken.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 3,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "LearningEvent.cdm.json/LearningEvent",
+						"Name": "CertificationExpirationPeriod"
+					}
+				},
+				{
+					"Name": "RecommendedMinimumNumberAttendees",
+					"Description": "The minimum number of attendees required to schedule and present the Learning Event.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "LearningEvent.cdm.json/LearningEvent",
+						"Name": "RecommendedMinimumNumberAttendees"
+					}
+				},
+				{
+					"Name": "RecommendedMaximumNumberAttendees",
+					"Description": "The maximum number of attendees allowed for the Learning Event.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "LearningEvent.cdm.json/LearningEvent",
+						"Name": "RecommendedMaximumNumberAttendees"
+					}
+				},
+				{
+					"Name": "TargetNumberAttendees",
+					"Description": "The target or optimum number of attendees for presentation of the Learning Event.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "LearningEvent.cdm.json/LearningEvent",
+						"Name": "TargetNumberAttendees"
+					}
+				},
+				{
+					"Name": "PlannedMinimumLearningEventHourDuration",
+					"Description": "The planned minimum duration in hours in which the Learning Event can be presented.   \n\nThe number of hours will translate into some number of 'days' based upon the organizations work hours, training policy and staff decisions regarding optimum training schedules.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "LearningEvent.cdm.json/LearningEvent",
+						"Name": "PlannedMinimumLearningEventHourDuration"
+					}
+				},
+				{
+					"Name": "PlannedMaximumLearningEventHourDuration",
+					"Description": "The planned maximum duration in hours in which the Learning Event can be presented.   \n\nThe number of hours will translate into some number of 'days' based upon the organizations work hours, training policy and staff decisions regarding optimum training schedules.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "LearningEvent.cdm.json/LearningEvent",
+						"Name": "PlannedMaximumLearningEventHourDuration"
+					}
+				},
+				{
+					"Name": "TargetLearningEventHourDuration",
+					"Description": "The optimum duration in hours in which the Learning Event should be presented.   \n\nThe number of hours will translate into some number of 'days' based upon the organizations work hours, training policy and staff decisions regarding optimum training schedules.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "LearningEvent.cdm.json/LearningEvent",
+						"Name": "TargetLearningEventHourDuration"
+					}
+				},
+				{
+					"Name": "PlannedCostToProduceLearningEventPerLocation",
+					"Description": "The target cost in currency to present the complete Learning Event at a location.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "LearningEvent.cdm.json/LearningEvent",
+						"Name": "PlannedCostToProduceLearningEventPerLocation"
+					}
+				},
+				{
+					"Name": "PlannedCostToProduceLearningEventPerIndividual",
+					"Description": "The target cost in currency to present the Learning Event per Individual at a standard location.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "LearningEvent.cdm.json/LearningEvent",
+						"Name": "PlannedCostToProduceLearningEventPerIndividual"
+					}
+				},
+				{
+					"Name": "LearningEventClassificationId",
+					"Description": "The unique identifier of the Learning Event Classification.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "LearningEvent.cdm.json/LearningEvent",
+						"Name": "LearningEventClassificationId"
+					}
+				},
+				{
+					"Name": "LearningEventOfferingStatusId",
+					"Description": "The unique identifier of the Learning Event Offering Status.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "LearningEvent.cdm.json/LearningEvent",
+						"Name": "LearningEventOfferingStatusId"
+					}
+				},
+				{
+					"Name": "IsoLanguageId",
+					"Description": "The unique identifier of an ISO Language.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "LearningEvent.cdm.json/LearningEvent",
+						"Name": "IsoLanguageId"
+					}
+				},
+				{
+					"Name": "RegisteredDomainName",
+					"Description": "The registered domain name.\n\nEx:\n    Domain name: www.example.net\n    Registered domain name: example.net",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 253,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "LearningEvent.cdm.json/LearningEvent",
+						"Name": "RegisteredDomainName"
+					}
+				},
+				{
+					"Name": "LearningEventTypeId",
+					"Description": "The unique identifier of the Learning Event Type.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "LearningEvent.cdm.json/LearningEvent",
+						"Name": "LearningEventTypeId"
+					}
+				},
+				{
+					"Name": "ItemSku",
+					"Description": "The Stock Keeping Unit identifier, which is typically used for inventory-related activities.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 40,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "LearningEvent.cdm.json/LearningEvent",
+						"Name": "ItemSku"
+					}
+				}
+			],
+			"ColumnSetEntityName": "7598889b-a514-471e-8cbc-5f8f76cf039d",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/LearningEvent",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/LearningEvent",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"LearningEventId\":{\"entity\":\"LearningEvent.cdm.json/LearningEvent\",\"name\":\"LearningEventId\"},\"LearningEventName\":{\"entity\":\"LearningEvent.cdm.json/LearningEvent\",\"name\":\"LearningEventName\"},\"LearningEventDescription\":{\"entity\":\"LearningEvent.cdm.json/LearningEvent\",\"name\":\"LearningEventDescription\"},\"LearningEventObjectivesStatement\":{\"entity\":\"LearningEvent.cdm.json/LearningEvent\",\"name\":\"LearningEventObjectivesStatement\"},\"StandardLearningEventFee\":{\"entity\":\"LearningEvent.cdm.json/LearningEvent\",\"name\":\"StandardLearningEventFee\"},\"CertificationExpirationPeriod\":{\"entity\":\"LearningEvent.cdm.json/LearningEvent\",\"name\":\"CertificationExpirationPeriod\"},\"RecommendedMinimumNumberAttendees\":{\"entity\":\"LearningEvent.cdm.json/LearningEvent\",\"name\":\"RecommendedMinimumNumberAttendees\"},\"RecommendedMaximumNumberAttendees\":{\"entity\":\"LearningEvent.cdm.json/LearningEvent\",\"name\":\"RecommendedMaximumNumberAttendees\"},\"TargetNumberAttendees\":{\"entity\":\"LearningEvent.cdm.json/LearningEvent\",\"name\":\"TargetNumberAttendees\"},\"PlannedMinimumLearningEventHourDuration\":{\"entity\":\"LearningEvent.cdm.json/LearningEvent\",\"name\":\"PlannedMinimumLearningEventHourDuration\"},\"PlannedMaximumLearningEventHourDuration\":{\"entity\":\"LearningEvent.cdm.json/LearningEvent\",\"name\":\"PlannedMaximumLearningEventHourDuration\"},\"TargetLearningEventHourDuration\":{\"entity\":\"LearningEvent.cdm.json/LearningEvent\",\"name\":\"TargetLearningEventHourDuration\"},\"PlannedCostToProduceLearningEventPerLocation\":{\"entity\":\"LearningEvent.cdm.json/LearningEvent\",\"name\":\"PlannedCostToProduceLearningEventPerLocation\"},\"PlannedCostToProduceLearningEventPerIndividual\":{\"entity\":\"LearningEvent.cdm.json/LearningEvent\",\"name\":\"PlannedCostToProduceLearningEventPerIndividual\"},\"LearningEventClassificationId\":{\"entity\":\"LearningEvent.cdm.json/LearningEvent\",\"name\":\"LearningEventClassificationId\"},\"LearningEventOfferingStatusId\":{\"entity\":\"LearningEvent.cdm.json/LearningEvent\",\"name\":\"LearningEventOfferingStatusId\"},\"IsoLanguageId\":{\"entity\":\"LearningEvent.cdm.json/LearningEvent\",\"name\":\"IsoLanguageId\"},\"RegisteredDomainName\":{\"entity\":\"LearningEvent.cdm.json/LearningEvent\",\"name\":\"RegisteredDomainName\"},\"LearningEventTypeId\":{\"entity\":\"LearningEvent.cdm.json/LearningEvent\",\"name\":\"LearningEventTypeId\"},\"ItemSku\":{\"entity\":\"LearningEvent.cdm.json/LearningEvent\",\"name\":\"ItemSku\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"LearningEvent\",\"path\":\"LearningEvent.cdm.json/LearningEvent\"},\"description\":\"A seminar, training course, human enhancement event or similar event that may be characterized by the business organization as being for 'training', 'learning' or 'improvement' of internal staff, individuals, the public or some other readily identifiable segment of interest to the business organization.\",\"primaryKey\":[\"LearningEventId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"LearningEvent.cdm.json/LearningEvent\",\"name\":\"LearningEventId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Learning Event.\",\"isNullable\":false,\"name\":\"LearningEventId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"LearningEvent.cdm.json/LearningEvent\",\"name\":\"LearningEventName\"},\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"The name of the Learning Event.\",\"isNullable\":true,\"name\":\"LearningEventName\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"LearningEvent.cdm.json/LearningEvent\",\"name\":\"LearningEventDescription\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"The description of the Learning Event.\",\"isNullable\":true,\"name\":\"LearningEventDescription\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"LearningEvent.cdm.json/LearningEvent\",\"name\":\"LearningEventObjectivesStatement\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"A statement of the objectives to be achieved by the Learning Event.\\n\\nThe nature of this statement is typically applicable for including in a course catalog.\",\"isNullable\":true,\"name\":\"LearningEventObjectivesStatement\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"LearningEvent.cdm.json/LearningEvent\",\"name\":\"StandardLearningEventFee\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"The standard fee in the associated currency for the Learning Event.\\n\\nCourses offered at various locations have adjustments made based upon the cost of offering the Learning Event at that location based upon the Standard Learning Event Fee.\",\"isNullable\":true,\"scale\":2,\"name\":\"StandardLearningEventFee\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"LearningEvent.cdm.json/LearningEvent\",\"name\":\"CertificationExpirationPeriod\"},\"dataType\":\"decimal\",\"dataTypeLength\":3,\"description\":\"The number of years that the Learning Event may be applied to the associated Curriculum before it must be retaken.\",\"isNullable\":true,\"scale\":0,\"name\":\"CertificationExpirationPeriod\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"LearningEvent.cdm.json/LearningEvent\",\"name\":\"RecommendedMinimumNumberAttendees\"},\"dataType\":\"integer\",\"description\":\"The minimum number of attendees required to schedule and present the Learning Event.\",\"isNullable\":true,\"name\":\"RecommendedMinimumNumberAttendees\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"LearningEvent.cdm.json/LearningEvent\",\"name\":\"RecommendedMaximumNumberAttendees\"},\"dataType\":\"integer\",\"description\":\"The maximum number of attendees allowed for the Learning Event.\",\"isNullable\":true,\"name\":\"RecommendedMaximumNumberAttendees\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"LearningEvent.cdm.json/LearningEvent\",\"name\":\"TargetNumberAttendees\"},\"dataType\":\"integer\",\"description\":\"The target or optimum number of attendees for presentation of the Learning Event.\",\"isNullable\":true,\"name\":\"TargetNumberAttendees\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"LearningEvent.cdm.json/LearningEvent\",\"name\":\"PlannedMinimumLearningEventHourDuration\"},\"dataType\":\"integer\",\"description\":\"The planned minimum duration in hours in which the Learning Event can be presented.   \\n\\nThe number of hours will translate into some number of 'days' based upon the organizations work hours, training policy and staff decisions regarding optimum training schedules.\",\"isNullable\":true,\"name\":\"PlannedMinimumLearningEventHourDuration\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"LearningEvent.cdm.json/LearningEvent\",\"name\":\"PlannedMaximumLearningEventHourDuration\"},\"dataType\":\"integer\",\"description\":\"The planned maximum duration in hours in which the Learning Event can be presented.   \\n\\nThe number of hours will translate into some number of 'days' based upon the organizations work hours, training policy and staff decisions regarding optimum training schedules.\",\"isNullable\":true,\"name\":\"PlannedMaximumLearningEventHourDuration\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"LearningEvent.cdm.json/LearningEvent\",\"name\":\"TargetLearningEventHourDuration\"},\"dataType\":\"integer\",\"description\":\"The optimum duration in hours in which the Learning Event should be presented.   \\n\\nThe number of hours will translate into some number of 'days' based upon the organizations work hours, training policy and staff decisions regarding optimum training schedules.\",\"isNullable\":true,\"name\":\"TargetLearningEventHourDuration\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"LearningEvent.cdm.json/LearningEvent\",\"name\":\"PlannedCostToProduceLearningEventPerLocation\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"The target cost in currency to present the complete Learning Event at a location.\",\"isNullable\":true,\"scale\":2,\"name\":\"PlannedCostToProduceLearningEventPerLocation\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"LearningEvent.cdm.json/LearningEvent\",\"name\":\"PlannedCostToProduceLearningEventPerIndividual\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"The target cost in currency to present the Learning Event per Individual at a standard location.\",\"isNullable\":true,\"scale\":2,\"name\":\"PlannedCostToProduceLearningEventPerIndividual\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"LearningEvent.cdm.json/LearningEvent\",\"name\":\"LearningEventClassificationId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of the Learning Event Classification.\",\"isNullable\":true,\"name\":\"LearningEventClassificationId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"LearningEvent.cdm.json/LearningEvent\",\"name\":\"LearningEventOfferingStatusId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of the Learning Event Offering Status.\",\"isNullable\":true,\"name\":\"LearningEventOfferingStatusId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"LearningEvent.cdm.json/LearningEvent\",\"name\":\"IsoLanguageId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of an ISO Language.\",\"isNullable\":true,\"name\":\"IsoLanguageId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"LearningEvent.cdm.json/LearningEvent\",\"name\":\"RegisteredDomainName\"},\"dataType\":\"string\",\"dataTypeLength\":253,\"description\":\"The registered domain name.\\n\\nEx:\\n    Domain name: www.example.net\\n    Registered domain name: example.net\",\"isNullable\":true,\"name\":\"RegisteredDomainName\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"LearningEvent.cdm.json/LearningEvent\",\"name\":\"LearningEventTypeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of the Learning Event Type.\",\"isNullable\":true,\"name\":\"LearningEventTypeId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"LearningEvent.cdm.json/LearningEvent\",\"name\":\"ItemSku\"},\"dataType\":\"string\",\"dataTypeLength\":40,\"description\":\"The Stock Keeping Unit identifier, which is typically used for inventory-related activities.\",\"isNullable\":true,\"name\":\"ItemSku\"}]}}}",
+			"Description": "A seminar, training course, human enhancement event or similar event that may be characterized by the business organization as being for 'training', 'learning' or 'improvement' of internal staff, individuals, the public or some other readily identifiable segment of interest to the business organization.",
+			"DisplayFolderInfo": "{\"name\":\"Training & Education\",\"colorCode\":\"#F775C5\"}",
+			"PrimaryKeys": "LearningEventId",
+			"spark.sql.sources.provider": "csv",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"LearningEventId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"LearningEventName\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"LearningEventDescription\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"LearningEventObjectivesStatement\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"StandardLearningEventFee\",\"type\":\"decimal(18,2)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"CertificationExpirationPeriod\",\"type\":\"decimal(3,0)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"RecommendedMinimumNumberAttendees\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"RecommendedMaximumNumberAttendees\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"TargetNumberAttendees\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"PlannedMinimumLearningEventHourDuration\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"PlannedMaximumLearningEventHourDuration\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"TargetLearningEventHourDuration\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"PlannedCostToProduceLearningEventPerLocation\",\"type\":\"decimal(18,2)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"PlannedCostToProduceLearningEventPerIndividual\",\"type\":\"decimal(18,2)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"LearningEventClassificationId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"LearningEventOfferingStatusId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"IsoLanguageId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"RegisteredDomainName\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"LearningEventTypeId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ItemSku\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "c7f8308e-5d47-4672-8952-797e9ea94bd9",
+		"Description": "A seminar, training course, human enhancement event or similar event that may be characterized by the business organization as being for 'training', 'learning' or 'improvement' of internal staff, individuals, the public or some other readily identifiable segment of interest to the business organization."
+	},
+	"type": "TABLE"
+}

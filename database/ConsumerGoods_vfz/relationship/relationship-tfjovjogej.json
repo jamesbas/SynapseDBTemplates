@@ -1,0 +1,29 @@
+{
+	"name": "relationship-tfjovjogej",
+	"properties": {
+		"Name": "relationship-tfjovjogej",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "ContactMethod",
+		"ToTableName": "PartyContactPurpose",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "ContactMethodId",
+				"ToColumnName": "ContactMethodId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"ContactMethod.cdm.json/ContactMethod\",\"toEntity\":\"PartyContactPurpose.cdm.json/PartyContactPurpose\",\"joinPairs\":[{\"fromAttribute\":\"ContactMethodId\",\"toAttribute\":\"ContactMethodId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "59ad05ee-f771-4c88-a2e0-673d98839484"
+	},
+	"type": "RELATIONSHIP"
+}

@@ -1,0 +1,137 @@
+{
+	"name": "NameUsage",
+	"properties": {
+		"Name": "NameUsage",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "NameUsageId",
+					"Description": "The unique identifier of a name usage.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "NameUsage.cdm.json/NameUsage",
+						"Name": "NameUsageId"
+					}
+				},
+				{
+					"Name": "NameUsageName",
+					"Description": "The name of a name usage.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 256,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "NameUsage.cdm.json/NameUsage",
+						"Name": "NameUsageName"
+					}
+				},
+				{
+					"Name": "NameUsageDescription",
+					"Description": "The description of a name usage.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "NameUsage.cdm.json/NameUsage",
+						"Name": "NameUsageDescription"
+					}
+				}
+			],
+			"ColumnSetEntityName": "8c4bfae9-a8f8-40b9-9ee6-dce9705d8ea4",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/NameUsage",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/NameUsage",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"NameUsageId\":{\"entity\":\"NameUsage.cdm.json/NameUsage\",\"name\":\"NameUsageId\"},\"NameUsageName\":{\"entity\":\"NameUsage.cdm.json/NameUsage\",\"name\":\"NameUsageName\"},\"NameUsageDescription\":{\"entity\":\"NameUsage.cdm.json/NameUsage\",\"name\":\"NameUsageDescription\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"NameUsage\",\"path\":\"NameUsage.cdm.json/NameUsage\"},\"description\":\"A usage or classification of names based on their function or application.\\n\\nEx:\\n- US legal name\\n- Westernized name\\n- Correspondence-To Name\\n- Military Name\\n- Professional Name\\n- Chinese Family Name\",\"primaryKey\":[\"NameUsageId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"NameUsage.cdm.json/NameUsage\",\"name\":\"NameUsageId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a name usage.\",\"isNullable\":false,\"name\":\"NameUsageId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"NameUsage.cdm.json/NameUsage\",\"name\":\"NameUsageName\"},\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"The name of a name usage.\",\"isNullable\":true,\"name\":\"NameUsageName\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"NameUsage.cdm.json/NameUsage\",\"name\":\"NameUsageDescription\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"The description of a name usage.\",\"isNullable\":true,\"name\":\"NameUsageDescription\"}]}}}",
+			"Description": "A usage or classification of names based on their function or application.\n\nEx:\n- US legal name\n- Westernized name\n- Correspondence-To Name\n- Military Name\n- Professional Name\n- Chinese Family Name",
+			"DisplayFolderInfo": "{\"name\":\"Party\",\"colorCode\":\"#7D0F6C\"}",
+			"PrimaryKeys": "NameUsageId",
+			"spark.sql.sources.provider": "csv",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"NameUsageId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"NameUsageName\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"NameUsageDescription\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "0bad9275-c58c-4b61-8705-15be6ce87fdb",
+		"Description": "A usage or classification of names based on their function or application.\n\nEx:\n- US legal name\n- Westernized name\n- Correspondence-To Name\n- Military Name\n- Professional Name\n- Chinese Family Name"
+	},
+	"type": "TABLE"
+}

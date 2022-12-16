@@ -1,0 +1,29 @@
+{
+	"name": "relationship-rplemprrqn",
+	"properties": {
+		"Name": "relationship-rplemprrqn",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "ContractFeePayment",
+		"ToTableName": "ContractFeePaymentRelatedParty",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "ContractFeeTimestamp",
+				"ToColumnName": "ContractFeeTimestamp"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"ContractFeePayment.cdm.json/ContractFeePayment\",\"toEntity\":\"ContractFeePaymentRelatedParty.cdm.json/ContractFeePaymentRelatedParty\",\"joinPairs\":[{\"fromAttribute\":\"ContractFeeTimestamp\",\"toAttribute\":\"ContractFeeTimestamp\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "915f1530-7939-4b5f-8af7-7707cc0f5038"
+	},
+	"type": "RELATIONSHIP"
+}

@@ -1,0 +1,118 @@
+{
+	"name": "SocialOrganization",
+	"properties": {
+		"Name": "SocialOrganization",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "PartyId",
+					"Description": "The unique identifier of a Party.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "SocialOrganization.cdm.json/SocialOrganization",
+						"Name": "PartyId"
+					}
+				},
+				{
+					"Name": "SocialOrganizationMissionStatement",
+					"Description": "A statement defining the social organization's mission statement or overall goals/objectives.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "SocialOrganization.cdm.json/SocialOrganization",
+						"Name": "SocialOrganizationMissionStatement"
+					}
+				}
+			],
+			"ColumnSetEntityName": "c478c8fd-a986-4567-a10a-703ff3e38ae1",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/SocialOrganization",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/SocialOrganization",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"PartyId\":{\"entity\":\"SocialOrganization.cdm.json/SocialOrganization\",\"name\":\"PartyId\"},\"SocialOrganizationMissionStatement\":{\"entity\":\"SocialOrganization.cdm.json/SocialOrganization\",\"name\":\"SocialOrganizationMissionStatement\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"SocialOrganization\",\"path\":\"SocialOrganization.cdm.json/SocialOrganization\"},\"description\":\"An organization that pursues common interests or goals and has an internal organizational structure supported by common administrative policies, beliefs or practices.\",\"primaryKey\":[\"PartyId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"SocialOrganization.cdm.json/SocialOrganization\",\"name\":\"PartyId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a Party.\",\"isNullable\":false,\"name\":\"PartyId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"SocialOrganization.cdm.json/SocialOrganization\",\"name\":\"SocialOrganizationMissionStatement\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"A statement defining the social organization's mission statement or overall goals/objectives.\",\"isNullable\":true,\"name\":\"SocialOrganizationMissionStatement\"}]}}}",
+			"Description": "An organization that pursues common interests or goals and has an internal organizational structure supported by common administrative policies, beliefs or practices.",
+			"DisplayFolderInfo": "{\"name\":\"Party\",\"colorCode\":\"#7D0F6C\"}",
+			"PrimaryKeys": "PartyId",
+			"spark.sql.sources.provider": "csv",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"PartyId\",\"type\":\"long\",\"nullable\":false,\"metadata\":{}},{\"name\":\"SocialOrganizationMissionStatement\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "26db383d-f947-465f-9b53-70abfb00d620",
+		"Description": "An organization that pursues common interests or goals and has an internal organizational structure supported by common administrative policies, beliefs or practices."
+	},
+	"type": "TABLE"
+}

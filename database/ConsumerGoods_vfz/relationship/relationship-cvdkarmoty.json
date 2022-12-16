@@ -1,0 +1,29 @@
+{
+	"name": "relationship-cvdkarmoty",
+	"properties": {
+		"Name": "relationship-cvdkarmoty",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "PartyRelationshipType",
+		"ToTableName": "RelatedParty",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "PartyRelationshipTypeId",
+				"ToColumnName": "PartyRelationshipTypeId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"PartyRelationshipType.cdm.json/PartyRelationshipType\",\"toEntity\":\"RelatedParty.cdm.json/RelatedParty\",\"joinPairs\":[{\"fromAttribute\":\"PartyRelationshipTypeId\",\"toAttribute\":\"PartyRelationshipTypeId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "6ff23231-51ad-4077-a5ee-ae58ca18ab7a"
+	},
+	"type": "RELATIONSHIP"
+}

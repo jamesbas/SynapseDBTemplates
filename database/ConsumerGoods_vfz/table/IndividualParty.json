@@ -1,0 +1,234 @@
+{
+	"name": "IndividualParty",
+	"properties": {
+		"Name": "IndividualParty",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "PartyId",
+					"Description": "The unique identifier of a Party.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "IndividualParty.cdm.json/IndividualParty",
+						"Name": "PartyId"
+					}
+				},
+				{
+					"Name": "IndividualPartyName",
+					"Description": "The name of the individual party.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 256,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "IndividualParty.cdm.json/IndividualParty",
+						"Name": "IndividualPartyName"
+					}
+				},
+				{
+					"Name": "DateOfBirth",
+					"Description": "The date of birth of the individual.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "IndividualParty.cdm.json/IndividualParty",
+						"Name": "DateOfBirth"
+					}
+				},
+				{
+					"Name": "DateOfDeath",
+					"Description": "The date of death of the individual party.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "IndividualParty.cdm.json/IndividualParty",
+						"Name": "DateOfDeath"
+					}
+				},
+				{
+					"Name": "SexId",
+					"Description": "The unique identifier of a Sex.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "IndividualParty.cdm.json/IndividualParty",
+						"Name": "SexId"
+					}
+				},
+				{
+					"Name": "GenderId",
+					"Description": "The unique identifier of a Gender.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "IndividualParty.cdm.json/IndividualParty",
+						"Name": "GenderId"
+					}
+				},
+				{
+					"Name": "EthnicCategoryId",
+					"Description": "The unique identifier of an Ethnic Category.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "IndividualParty.cdm.json/IndividualParty",
+						"Name": "EthnicCategoryId"
+					}
+				},
+				{
+					"Name": "RacialCategoryId",
+					"Description": "The unique identifier of a Racial Category.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "IndividualParty.cdm.json/IndividualParty",
+						"Name": "RacialCategoryId"
+					}
+				}
+			],
+			"ColumnSetEntityName": "19910302-dad7-4113-9cee-8f10fa84f93f",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/IndividualParty",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/IndividualParty",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"PartyId\":{\"entity\":\"IndividualParty.cdm.json/IndividualParty\",\"name\":\"PartyId\"},\"IndividualPartyName\":{\"entity\":\"IndividualParty.cdm.json/IndividualParty\",\"name\":\"IndividualPartyName\"},\"DateOfBirth\":{\"entity\":\"IndividualParty.cdm.json/IndividualParty\",\"name\":\"DateOfBirth\"},\"DateOfDeath\":{\"entity\":\"IndividualParty.cdm.json/IndividualParty\",\"name\":\"DateOfDeath\"},\"SexId\":{\"entity\":\"IndividualParty.cdm.json/IndividualParty\",\"name\":\"SexId\"},\"GenderId\":{\"entity\":\"IndividualParty.cdm.json/IndividualParty\",\"name\":\"GenderId\"},\"EthnicCategoryId\":{\"entity\":\"IndividualParty.cdm.json/IndividualParty\",\"name\":\"EthnicCategoryId\"},\"RacialCategoryId\":{\"entity\":\"IndividualParty.cdm.json/IndividualParty\",\"name\":\"RacialCategoryId\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"IndividualParty\",\"path\":\"IndividualParty.cdm.json/IndividualParty\"},\"description\":\"An individual party (male/female)\",\"primaryKey\":[\"PartyId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"IndividualParty.cdm.json/IndividualParty\",\"name\":\"PartyId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a Party.\",\"isNullable\":false,\"name\":\"PartyId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"IndividualParty.cdm.json/IndividualParty\",\"name\":\"IndividualPartyName\"},\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"The name of the individual party.\",\"isNullable\":true,\"name\":\"IndividualPartyName\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"IndividualParty.cdm.json/IndividualParty\",\"name\":\"DateOfBirth\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The date of birth of the individual.\",\"isNullable\":true,\"name\":\"DateOfBirth\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"IndividualParty.cdm.json/IndividualParty\",\"name\":\"DateOfDeath\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The date of death of the individual party.\",\"isNullable\":true,\"name\":\"DateOfDeath\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"IndividualParty.cdm.json/IndividualParty\",\"name\":\"SexId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Sex.\",\"isNullable\":true,\"name\":\"SexId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"IndividualParty.cdm.json/IndividualParty\",\"name\":\"GenderId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Gender.\",\"isNullable\":true,\"name\":\"GenderId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"IndividualParty.cdm.json/IndividualParty\",\"name\":\"EthnicCategoryId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of an Ethnic Category.\",\"isNullable\":true,\"name\":\"EthnicCategoryId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"IndividualParty.cdm.json/IndividualParty\",\"name\":\"RacialCategoryId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Racial Category.\",\"isNullable\":true,\"name\":\"RacialCategoryId\"}]}}}",
+			"Description": "An individual party (male/female)",
+			"DisplayFolderInfo": "{\"name\":\"Party\",\"colorCode\":\"#7D0F6C\"}",
+			"PrimaryKeys": "PartyId",
+			"spark.sql.sources.provider": "csv",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"PartyId\",\"type\":\"long\",\"nullable\":false,\"metadata\":{}},{\"name\":\"IndividualPartyName\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"DateOfBirth\",\"type\":\"date\",\"nullable\":true,\"metadata\":{}},{\"name\":\"DateOfDeath\",\"type\":\"date\",\"nullable\":true,\"metadata\":{}},{\"name\":\"SexId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"GenderId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"EthnicCategoryId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"RacialCategoryId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}}]}",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate"
+		},
+		"ObjectVersion": 2,
+		"ObjectId": "c5739545-c300-49e8-807e-1998e774abc7",
+		"Description": "An individual party (male/female)"
+	},
+	"type": "TABLE"
+}

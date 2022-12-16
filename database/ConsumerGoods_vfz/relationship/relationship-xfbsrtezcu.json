@@ -1,0 +1,29 @@
+{
+	"name": "relationship-xfbsrtezcu",
+	"properties": {
+		"Name": "relationship-xfbsrtezcu",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "Sex",
+		"ToTableName": "Employee",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "SexId",
+				"ToColumnName": "SexId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"Sex.cdm.json/Sex\",\"toEntity\":\"Employee.cdm.json/Employee\",\"joinPairs\":[{\"fromAttribute\":\"SexId\",\"toAttribute\":\"SexId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "e2cddebc-d376-4d84-90a9-7e1a1dbc59f2"
+	},
+	"type": "RELATIONSHIP"
+}

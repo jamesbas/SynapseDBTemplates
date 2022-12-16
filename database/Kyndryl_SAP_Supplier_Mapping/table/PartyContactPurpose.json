@@ -1,0 +1,175 @@
+{
+	"name": "PartyContactPurpose",
+	"properties": {
+		"Name": "PartyContactPurpose",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Kyndryl_SAP_Supplier_Mapping",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "PartyId",
+					"Description": "The unique identifier of a Party.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyContactPurpose.cdm.json/PartyContactPurpose",
+						"Name": "PartyId"
+					}
+				},
+				{
+					"Name": "ContactPurposeId",
+					"Description": "The unique identifier of the Contact Purpose.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyContactPurpose.cdm.json/PartyContactPurpose",
+						"Name": "ContactPurposeId"
+					}
+				},
+				{
+					"Name": "ContactMethodId",
+					"Description": "The unique identifier of a Contact Method.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyContactPurpose.cdm.json/PartyContactPurpose",
+						"Name": "ContactMethodId"
+					}
+				},
+				{
+					"Name": "OptInStatusTypeId",
+					"Description": "The unique identifier of an Opt-In Status Type.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyContactPurpose.cdm.json/PartyContactPurpose",
+						"Name": "OptInStatusTypeId"
+					}
+				},
+				{
+					"Name": "PartyContactPurposeNote",
+					"Description": "A note, comment or additional information regarding the party contact purpose.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyContactPurpose.cdm.json/PartyContactPurpose",
+						"Name": "PartyContactPurposeNote"
+					}
+				}
+			],
+			"ColumnSetEntityName": "efbf7046-8fd6-4828-87ef-dc3121c9e91a",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/Kyndryl_SAP_Supplier_Mapping/PartyContactPurpose",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/Kyndryl_SAP_Supplier_Mapping/PartyContactPurpose",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"PartyId\":{\"entity\":\"PartyContactPurpose.cdm.json/PartyContactPurpose\",\"name\":\"PartyId\"},\"ContactPurposeId\":{\"entity\":\"PartyContactPurpose.cdm.json/PartyContactPurpose\",\"name\":\"ContactPurposeId\"},\"ContactMethodId\":{\"entity\":\"PartyContactPurpose.cdm.json/PartyContactPurpose\",\"name\":\"ContactMethodId\"},\"OptInStatusTypeId\":{\"entity\":\"PartyContactPurpose.cdm.json/PartyContactPurpose\",\"name\":\"OptInStatusTypeId\"},\"PartyContactPurposeNote\":{\"entity\":\"PartyContactPurpose.cdm.json/PartyContactPurpose\",\"name\":\"PartyContactPurposeNote\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"PartyContactPurpose\",\"path\":\"PartyContactPurpose.cdm.json/PartyContactPurpose\"},\"description\":\"The contact method by which the party would prefer to be contacted regarding the intended contact purpose.\",\"primaryKey\":[\"PartyId\",\"ContactPurposeId\",\"ContactMethodId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyContactPurpose.cdm.json/PartyContactPurpose\",\"name\":\"PartyId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a Party.\",\"isNullable\":false,\"name\":\"PartyId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyContactPurpose.cdm.json/PartyContactPurpose\",\"name\":\"ContactPurposeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of the Contact Purpose.\",\"isNullable\":false,\"name\":\"ContactPurposeId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyContactPurpose.cdm.json/PartyContactPurpose\",\"name\":\"ContactMethodId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Contact Method.\",\"isNullable\":false,\"name\":\"ContactMethodId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyContactPurpose.cdm.json/PartyContactPurpose\",\"name\":\"OptInStatusTypeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of an Opt-In Status Type.\",\"isNullable\":true,\"name\":\"OptInStatusTypeId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyContactPurpose.cdm.json/PartyContactPurpose\",\"name\":\"PartyContactPurposeNote\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"A note, comment or additional information regarding the party contact purpose.\",\"isNullable\":true,\"name\":\"PartyContactPurposeNote\"}]}}}",
+			"Description": "The contact method by which the party would prefer to be contacted regarding the intended contact purpose.",
+			"DisplayFolderInfo": "{\"name\":\"Party\",\"colorCode\":\"#7D0F6C\"}",
+			"PrimaryKeys": "PartyId,ContactPurposeId,ContactMethodId",
+			"spark.sql.sources.provider": "csv",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"PartyId\",\"type\":\"long\",\"nullable\":false,\"metadata\":{}},{\"name\":\"ContactPurposeId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"ContactMethodId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"OptInStatusTypeId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"PartyContactPurposeNote\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "3cb9ea13-f48b-46b5-9d49-b6244e381395",
+		"Description": "The contact method by which the party would prefer to be contacted regarding the intended contact purpose."
+	},
+	"type": "TABLE"
+}

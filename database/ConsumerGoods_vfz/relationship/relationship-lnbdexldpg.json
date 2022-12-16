@@ -1,0 +1,29 @@
+{
+	"name": "relationship-lnbdexldpg",
+	"properties": {
+		"Name": "relationship-lnbdexldpg",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "Payment",
+		"ToTableName": "ContractFeePayment",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "PaymentId",
+				"ToColumnName": "PaymentId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"Payment.cdm.json/Payment\",\"toEntity\":\"ContractFeePayment.cdm.json/ContractFeePayment\",\"joinPairs\":[{\"fromAttribute\":\"PaymentId\",\"toAttribute\":\"PaymentId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "0824bccf-8948-4536-b85c-858d5f8d5f3b"
+	},
+	"type": "RELATIONSHIP"
+}

@@ -1,0 +1,156 @@
+{
+	"name": "SocialMediaPlatform",
+	"properties": {
+		"Name": "SocialMediaPlatform",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "SocialMediaPlatformId",
+					"Description": "The unique identifier of a Social Media Platform.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "SocialMediaPlatform.cdm.json/SocialMediaPlatform",
+						"Name": "SocialMediaPlatformId"
+					}
+				},
+				{
+					"Name": "SocialMediaPlatformName",
+					"Description": "The name of the Social Media Platform.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 256,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "SocialMediaPlatform.cdm.json/SocialMediaPlatform",
+						"Name": "SocialMediaPlatformName"
+					}
+				},
+				{
+					"Name": "SocialMediaPlatformDescription",
+					"Description": "The description of the Social Media Platform.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "SocialMediaPlatform.cdm.json/SocialMediaPlatform",
+						"Name": "SocialMediaPlatformDescription"
+					}
+				},
+				{
+					"Name": "HomePageUrl",
+					"Description": "The home page URL for the associated social media platform.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2083,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "SocialMediaPlatform.cdm.json/SocialMediaPlatform",
+						"Name": "HomePageUrl"
+					}
+				}
+			],
+			"ColumnSetEntityName": "6299325e-4fbc-4037-bde0-114c8533984c",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/SocialMediaPlatform",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/SocialMediaPlatform",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"SocialMediaPlatformId\":{\"entity\":\"SocialMediaPlatform.cdm.json/SocialMediaPlatform\",\"name\":\"SocialMediaPlatformId\"},\"SocialMediaPlatformName\":{\"entity\":\"SocialMediaPlatform.cdm.json/SocialMediaPlatform\",\"name\":\"SocialMediaPlatformName\"},\"SocialMediaPlatformDescription\":{\"entity\":\"SocialMediaPlatform.cdm.json/SocialMediaPlatform\",\"name\":\"SocialMediaPlatformDescription\"},\"HomePageUrl\":{\"entity\":\"SocialMediaPlatform.cdm.json/SocialMediaPlatform\",\"name\":\"HomePageUrl\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"SocialMediaPlatform\",\"path\":\"SocialMediaPlatform.cdm.json/SocialMediaPlatform\"},\"description\":\"A social media platform is a type of software or technology that enables users to build, integrate or facilitate community interaction and user-generated content. \\n\\nEx:\\n- Facebook\\n- LinkedIn\\n- Twitter\",\"primaryKey\":[\"SocialMediaPlatformId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"SocialMediaPlatform.cdm.json/SocialMediaPlatform\",\"name\":\"SocialMediaPlatformId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Social Media Platform.\",\"isNullable\":false,\"name\":\"SocialMediaPlatformId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"SocialMediaPlatform.cdm.json/SocialMediaPlatform\",\"name\":\"SocialMediaPlatformName\"},\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"The name of the Social Media Platform.\",\"isNullable\":true,\"name\":\"SocialMediaPlatformName\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"SocialMediaPlatform.cdm.json/SocialMediaPlatform\",\"name\":\"SocialMediaPlatformDescription\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"The description of the Social Media Platform.\",\"isNullable\":true,\"name\":\"SocialMediaPlatformDescription\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"SocialMediaPlatform.cdm.json/SocialMediaPlatform\",\"name\":\"HomePageUrl\"},\"dataType\":\"string\",\"dataTypeLength\":2083,\"description\":\"The home page URL for the associated social media platform.\",\"isNullable\":true,\"name\":\"HomePageUrl\"}]}}}",
+			"Description": "A social media platform is a type of software or technology that enables users to build, integrate or facilitate community interaction and user-generated content. \n\nEx:\n- Facebook\n- LinkedIn\n- Twitter",
+			"DisplayFolderInfo": "{\"name\":\"Customer Service & Contact Management\",\"colorCode\":\"#0064C1\"}",
+			"PrimaryKeys": "SocialMediaPlatformId",
+			"spark.sql.sources.provider": "csv",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"SocialMediaPlatformId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"SocialMediaPlatformName\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"SocialMediaPlatformDescription\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"HomePageUrl\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "2754721e-b049-419c-8fa5-cc5be5eef9cc",
+		"Description": "A social media platform is a type of software or technology that enables users to build, integrate or facilitate community interaction and user-generated content. \n\nEx:\n- Facebook\n- LinkedIn\n- Twitter"
+	},
+	"type": "TABLE"
+}

@@ -1,0 +1,29 @@
+{
+	"name": "relationship-uhrbmwepny",
+	"properties": {
+		"Name": "relationship-uhrbmwepny",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "Vendor",
+		"ToTableName": "RelatedVendor",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "VendorId",
+				"ToColumnName": "RelatedVendorId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"Vendor.cdm.json/Vendor\",\"toEntity\":\"RelatedVendor.cdm.json/RelatedVendor\",\"joinPairs\":[{\"fromAttribute\":\"VendorId\",\"toAttribute\":\"RelatedVendorId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "39dc3017-5374-4853-89ef-b99998c27fa1"
+	},
+	"type": "RELATIONSHIP"
+}

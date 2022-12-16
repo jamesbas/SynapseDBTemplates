@@ -1,0 +1,29 @@
+{
+	"name": "relationship-udjkrpqfgo",
+	"properties": {
+		"Name": "relationship-udjkrpqfgo",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "Religion",
+		"ToTableName": "PartyReligion",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "ReligionId",
+				"ToColumnName": "ReligionId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"Religion.cdm.json/Religion\",\"toEntity\":\"PartyReligion.cdm.json/PartyReligion\",\"joinPairs\":[{\"fromAttribute\":\"ReligionId\",\"toAttribute\":\"ReligionId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "43c92396-efd0-41db-8741-a30351b38b1a"
+	},
+	"type": "RELATIONSHIP"
+}

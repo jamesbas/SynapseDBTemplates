@@ -1,0 +1,29 @@
+{
+	"name": "relationship-sylarmkoja",
+	"properties": {
+		"Name": "relationship-sylarmkoja",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "PartyOrganizationPartyRelationshipType",
+		"ToTableName": "PartyOrganizationRelatedParty",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "PartyOrganizationPartyRelationshipTypeId",
+				"ToColumnName": "PartyOrganizationPartyRelationshipTypeId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"PartyOrganizationPartyRelationshipType.cdm.json/PartyOrganizationPartyRelationshipType\",\"toEntity\":\"PartyOrganizationRelatedParty.cdm.json/PartyOrganizationRelatedParty\",\"joinPairs\":[{\"fromAttribute\":\"PartyOrganizationPartyRelationshipTypeId\",\"toAttribute\":\"PartyOrganizationPartyRelationshipTypeId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "1973f194-a657-43ff-b497-2183a811712e"
+	},
+	"type": "RELATIONSHIP"
+}

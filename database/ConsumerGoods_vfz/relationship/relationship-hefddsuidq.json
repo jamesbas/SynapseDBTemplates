@@ -1,0 +1,29 @@
+{
+	"name": "relationship-hefddsuidq",
+	"properties": {
+		"Name": "relationship-hefddsuidq",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "TelephoneNumberType",
+		"ToTableName": "VendorTelephoneNumber",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "TelephoneNumberTypeId",
+				"ToColumnName": "TelephoneNumberTypeId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"TelephoneNumberType.cdm.json/TelephoneNumberType\",\"toEntity\":\"VendorTelephoneNumber.cdm.json/VendorTelephoneNumber\",\"joinPairs\":[{\"fromAttribute\":\"TelephoneNumberTypeId\",\"toAttribute\":\"TelephoneNumberTypeId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "9e1d00ad-f8df-4e0e-b352-59a10a4351d7"
+	},
+	"type": "RELATIONSHIP"
+}

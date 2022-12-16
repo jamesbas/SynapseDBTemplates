@@ -1,0 +1,29 @@
+{
+	"name": "relationship-kvhcusrudu",
+	"properties": {
+		"Name": "relationship-kvhcusrudu",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "FranchiseAgreement",
+		"ToTableName": "FranchiseAgreementStandard",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "ContractId",
+				"ToColumnName": "ContractId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"FranchiseAgreement.cdm.json/FranchiseAgreement\",\"toEntity\":\"FranchiseAgreementStandard.cdm.json/FranchiseAgreementStandard\",\"joinPairs\":[{\"fromAttribute\":\"ContractId\",\"toAttribute\":\"ContractId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "77006be7-e47b-4323-87fa-b958dfcb5e71"
+	},
+	"type": "RELATIONSHIP"
+}

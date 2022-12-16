@@ -1,0 +1,137 @@
+{
+	"name": "PurchaseOrderType",
+	"properties": {
+		"Name": "PurchaseOrderType",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "PurchaseOrderTypeId",
+					"Description": "The unique identifier of a Purchase Order Type.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PurchaseOrderType.cdm.json/PurchaseOrderType",
+						"Name": "PurchaseOrderTypeId"
+					}
+				},
+				{
+					"Name": "PurchaseOrderTypeName",
+					"Description": "The name of a Purchase Order Type.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 256,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PurchaseOrderType.cdm.json/PurchaseOrderType",
+						"Name": "PurchaseOrderTypeName"
+					}
+				},
+				{
+					"Name": "PurchaseOrderTypeDescription",
+					"Description": "The description of a Purchase Order Type.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PurchaseOrderType.cdm.json/PurchaseOrderType",
+						"Name": "PurchaseOrderTypeDescription"
+					}
+				}
+			],
+			"ColumnSetEntityName": "56173161-a62d-4151-985f-ffbbdd5cc59b",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/PurchaseOrderType",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/PurchaseOrderType",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"PurchaseOrderTypeId\":{\"entity\":\"PurchaseOrderType.cdm.json/PurchaseOrderType\",\"name\":\"PurchaseOrderTypeId\"},\"PurchaseOrderTypeName\":{\"entity\":\"PurchaseOrderType.cdm.json/PurchaseOrderType\",\"name\":\"PurchaseOrderTypeName\"},\"PurchaseOrderTypeDescription\":{\"entity\":\"PurchaseOrderType.cdm.json/PurchaseOrderType\",\"name\":\"PurchaseOrderTypeDescription\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"PurchaseOrderType\",\"path\":\"PurchaseOrderType.cdm.json/PurchaseOrderType\"},\"description\":\"A categorization of purchase order based on common function, application or usage.\\n\\nEx:\\n- Standard Purchase Order\\n- Blanket Purchase Agreement\\n- Blanket Release\\n- Contract Purchase Agreement\\n- Planned Purchase Order\\n- Scheduled Release\",\"primaryKey\":[\"PurchaseOrderTypeId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PurchaseOrderType.cdm.json/PurchaseOrderType\",\"name\":\"PurchaseOrderTypeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Purchase Order Type.\",\"isNullable\":false,\"name\":\"PurchaseOrderTypeId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PurchaseOrderType.cdm.json/PurchaseOrderType\",\"name\":\"PurchaseOrderTypeName\"},\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"The name of a Purchase Order Type.\",\"isNullable\":true,\"name\":\"PurchaseOrderTypeName\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PurchaseOrderType.cdm.json/PurchaseOrderType\",\"name\":\"PurchaseOrderTypeDescription\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"The description of a Purchase Order Type.\",\"isNullable\":true,\"name\":\"PurchaseOrderTypeDescription\"}]}}}",
+			"Description": "A categorization of purchase order based on common function, application or usage.\n\nEx:\n- Standard Purchase Order\n- Blanket Purchase Agreement\n- Blanket Release\n- Contract Purchase Agreement\n- Planned Purchase Order\n- Scheduled Release",
+			"DisplayFolderInfo": "{\"name\":\"Purchasing\",\"colorCode\":\"#005A61\"}",
+			"PrimaryKeys": "PurchaseOrderTypeId",
+			"spark.sql.sources.provider": "csv",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"PurchaseOrderTypeId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PurchaseOrderTypeName\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"PurchaseOrderTypeDescription\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "c8286b95-b9b4-4369-8905-942cfe789c7f",
+		"Description": "A categorization of purchase order based on common function, application or usage.\n\nEx:\n- Standard Purchase Order\n- Blanket Purchase Agreement\n- Blanket Release\n- Contract Purchase Agreement\n- Planned Purchase Order\n- Scheduled Release"
+	},
+	"type": "TABLE"
+}

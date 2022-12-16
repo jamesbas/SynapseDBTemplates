@@ -1,0 +1,215 @@
+{
+	"name": "VendorContactPurposeStatus",
+	"properties": {
+		"Name": "VendorContactPurposeStatus",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "VendorId",
+					"Description": "The unique identifier of a Vendor.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "VendorContactPurposeStatus.cdm.json/VendorContactPurposeStatus",
+						"Name": "VendorId"
+					}
+				},
+				{
+					"Name": "ContactPurposeId",
+					"Description": "The unique identifier of the Contact Purpose.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "VendorContactPurposeStatus.cdm.json/VendorContactPurposeStatus",
+						"Name": "ContactPurposeId"
+					}
+				},
+				{
+					"Name": "ContactMethodId",
+					"Description": "The unique identifier of a Contact Method.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "VendorContactPurposeStatus.cdm.json/VendorContactPurposeStatus",
+						"Name": "ContactMethodId"
+					}
+				},
+				{
+					"Name": "PeriodStartDate",
+					"Description": "The period start date for which the associated data is effective or 'as-of'.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "VendorContactPurposeStatus.cdm.json/VendorContactPurposeStatus",
+						"Name": "PeriodStartDate"
+					}
+				},
+				{
+					"Name": "PeriodEndDate",
+					"Description": "The period end date for which the associated data is effective or 'as-of'.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "VendorContactPurposeStatus.cdm.json/VendorContactPurposeStatus",
+						"Name": "PeriodEndDate"
+					}
+				},
+				{
+					"Name": "OptInStatusTypeId",
+					"Description": "The unique identifier of an Opt-In Status Type.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "VendorContactPurposeStatus.cdm.json/VendorContactPurposeStatus",
+						"Name": "OptInStatusTypeId"
+					}
+				},
+				{
+					"Name": "VendorContactPurposeStatusNote",
+					"Description": "A note, comment or additional information regarding the Vendor contact purpose status.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "VendorContactPurposeStatus.cdm.json/VendorContactPurposeStatus",
+						"Name": "VendorContactPurposeStatusNote"
+					}
+				}
+			],
+			"ColumnSetEntityName": "0bfe2918-9ecb-4924-b8e3-187776977db6",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/VendorContactPurposeStatus",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/VendorContactPurposeStatus",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"VendorId\":{\"entity\":\"VendorContactPurposeStatus.cdm.json/VendorContactPurposeStatus\",\"name\":\"VendorId\"},\"ContactPurposeId\":{\"entity\":\"VendorContactPurposeStatus.cdm.json/VendorContactPurposeStatus\",\"name\":\"ContactPurposeId\"},\"ContactMethodId\":{\"entity\":\"VendorContactPurposeStatus.cdm.json/VendorContactPurposeStatus\",\"name\":\"ContactMethodId\"},\"PeriodStartDate\":{\"entity\":\"VendorContactPurposeStatus.cdm.json/VendorContactPurposeStatus\",\"name\":\"PeriodStartDate\"},\"PeriodEndDate\":{\"entity\":\"VendorContactPurposeStatus.cdm.json/VendorContactPurposeStatus\",\"name\":\"PeriodEndDate\"},\"OptInStatusTypeId\":{\"entity\":\"VendorContactPurposeStatus.cdm.json/VendorContactPurposeStatus\",\"name\":\"OptInStatusTypeId\"},\"VendorContactPurposeStatusNote\":{\"entity\":\"VendorContactPurposeStatus.cdm.json/VendorContactPurposeStatus\",\"name\":\"VendorContactPurposeStatusNote\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"VendorContactPurposeStatus\",\"path\":\"VendorContactPurposeStatus.cdm.json/VendorContactPurposeStatus\"},\"description\":\"The status of the Vendor contact purpose.\",\"primaryKey\":[\"VendorId\",\"ContactPurposeId\",\"ContactMethodId\",\"PeriodStartDate\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"VendorContactPurposeStatus.cdm.json/VendorContactPurposeStatus\",\"name\":\"VendorId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a Vendor.\",\"isNullable\":false,\"name\":\"VendorId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"VendorContactPurposeStatus.cdm.json/VendorContactPurposeStatus\",\"name\":\"ContactPurposeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of the Contact Purpose.\",\"isNullable\":false,\"name\":\"ContactPurposeId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"VendorContactPurposeStatus.cdm.json/VendorContactPurposeStatus\",\"name\":\"ContactMethodId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Contact Method.\",\"isNullable\":false,\"name\":\"ContactMethodId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"VendorContactPurposeStatus.cdm.json/VendorContactPurposeStatus\",\"name\":\"PeriodStartDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The period start date for which the associated data is effective or 'as-of'.\",\"isNullable\":false,\"name\":\"PeriodStartDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"VendorContactPurposeStatus.cdm.json/VendorContactPurposeStatus\",\"name\":\"PeriodEndDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The period end date for which the associated data is effective or 'as-of'.\",\"isNullable\":true,\"name\":\"PeriodEndDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"VendorContactPurposeStatus.cdm.json/VendorContactPurposeStatus\",\"name\":\"OptInStatusTypeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of an Opt-In Status Type.\",\"isNullable\":true,\"name\":\"OptInStatusTypeId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"VendorContactPurposeStatus.cdm.json/VendorContactPurposeStatus\",\"name\":\"VendorContactPurposeStatusNote\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"A note, comment or additional information regarding the Vendor contact purpose status.\",\"isNullable\":true,\"name\":\"VendorContactPurposeStatusNote\"}]}}}",
+			"Description": "The status of the Vendor contact purpose.",
+			"DisplayFolderInfo": "{\"name\":\"Vendor\",\"colorCode\":\"#1C508C\"}",
+			"PrimaryKeys": "VendorId,ContactPurposeId,ContactMethodId,PeriodStartDate",
+			"spark.sql.sources.provider": "csv",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"VendorId\",\"type\":\"long\",\"nullable\":false,\"metadata\":{}},{\"name\":\"ContactPurposeId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"ContactMethodId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PeriodStartDate\",\"type\":\"date\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PeriodEndDate\",\"type\":\"date\",\"nullable\":true,\"metadata\":{}},{\"name\":\"OptInStatusTypeId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"VendorContactPurposeStatusNote\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate"
+		},
+		"ObjectVersion": 2,
+		"ObjectId": "1b7a7852-f303-4395-914a-074d7545a8cc",
+		"Description": "The status of the Vendor contact purpose."
+	},
+	"type": "TABLE"
+}

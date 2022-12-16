@@ -1,0 +1,29 @@
+{
+	"name": "relationship-twzseudwzw",
+	"properties": {
+		"Name": "relationship-twzseudwzw",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "WorkerClass",
+		"ToTableName": "PartyWorkerClass",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "WorkerClassId",
+				"ToColumnName": "WorkerClassId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"WorkerClass.cdm.json/WorkerClass\",\"toEntity\":\"PartyWorkerClass.cdm.json/PartyWorkerClass\",\"joinPairs\":[{\"fromAttribute\":\"WorkerClassId\",\"toAttribute\":\"WorkerClassId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "173e52ef-2225-41dc-9d16-86b8be16fece"
+	},
+	"type": "RELATIONSHIP"
+}

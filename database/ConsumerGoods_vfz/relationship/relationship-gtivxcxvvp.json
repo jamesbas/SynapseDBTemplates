@@ -1,0 +1,29 @@
+{
+	"name": "relationship-gtivxcxvvp",
+	"properties": {
+		"Name": "relationship-gtivxcxvvp",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "LearningEventType",
+		"ToTableName": "LearningEvent",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "LearningEventTypeId",
+				"ToColumnName": "LearningEventTypeId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"LearningEventType.cdm.json/LearningEventType\",\"toEntity\":\"LearningEvent.cdm.json/LearningEvent\",\"joinPairs\":[{\"fromAttribute\":\"LearningEventTypeId\",\"toAttribute\":\"LearningEventTypeId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "413061ac-0595-4456-8cb5-6e3282d93acf"
+	},
+	"type": "RELATIONSHIP"
+}

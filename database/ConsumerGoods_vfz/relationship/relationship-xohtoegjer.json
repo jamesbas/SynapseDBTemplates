@@ -1,0 +1,29 @@
+{
+	"name": "relationship-xohtoegjer",
+	"properties": {
+		"Name": "relationship-xohtoegjer",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "ContractAddendum",
+		"ToTableName": "ContractAddendumSectionClause",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "ContractAddendumId",
+				"ToColumnName": "ContractAddendumId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"ContractAddendum.cdm.json/ContractAddendum\",\"toEntity\":\"ContractAddendumSectionClause.cdm.json/ContractAddendumSectionClause\",\"joinPairs\":[{\"fromAttribute\":\"ContractAddendumId\",\"toAttribute\":\"ContractAddendumId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "c0db40fb-c3c8-45d1-afb2-4825965f6a24"
+	},
+	"type": "RELATIONSHIP"
+}

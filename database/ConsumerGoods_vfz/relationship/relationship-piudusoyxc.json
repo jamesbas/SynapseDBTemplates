@@ -1,0 +1,29 @@
+{
+	"name": "relationship-piudusoyxc",
+	"properties": {
+		"Name": "relationship-piudusoyxc",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "MarketType",
+		"ToTableName": "Market",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "MarketTypeId",
+				"ToColumnName": "MarketTypeId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"MarketType.cdm.json/MarketType\",\"toEntity\":\"Market.cdm.json/Market\",\"joinPairs\":[{\"fromAttribute\":\"MarketTypeId\",\"toAttribute\":\"MarketTypeId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "8331277f-18e4-4ad7-aa44-dd5a0f90a17e"
+	},
+	"type": "RELATIONSHIP"
+}

@@ -1,0 +1,29 @@
+{
+	"name": "relationship-kxyeqgujoj",
+	"properties": {
+		"Name": "relationship-kxyeqgujoj",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "Employer",
+		"ToTableName": "PartyEmployment",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "EmployerId",
+				"ToColumnName": "EmployerId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"Employer.cdm.json/Employer\",\"toEntity\":\"PartyEmployment.cdm.json/PartyEmployment\",\"joinPairs\":[{\"fromAttribute\":\"EmployerId\",\"toAttribute\":\"EmployerId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "c0804190-33e4-47d0-a526-9813a57bdaf1"
+	},
+	"type": "RELATIONSHIP"
+}

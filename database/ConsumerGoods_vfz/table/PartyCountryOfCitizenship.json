@@ -1,0 +1,196 @@
+{
+	"name": "PartyCountryOfCitizenship",
+	"properties": {
+		"Name": "PartyCountryOfCitizenship",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "PartyId",
+					"Description": "The unique identifier of a Party.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyCountryOfCitizenship.cdm.json/PartyCountryOfCitizenship",
+						"Name": "PartyId"
+					}
+				},
+				{
+					"Name": "CountryId",
+					"Description": "The unique identifier of the Country.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyCountryOfCitizenship.cdm.json/PartyCountryOfCitizenship",
+						"Name": "CountryId"
+					}
+				},
+				{
+					"Name": "PeriodStartDate",
+					"Description": "The period start date for which the associated D&B data is effective or 'as-of'.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyCountryOfCitizenship.cdm.json/PartyCountryOfCitizenship",
+						"Name": "PeriodStartDate"
+					}
+				},
+				{
+					"Name": "PeriodEndDate",
+					"Description": "The period end date for which the associated D&B data is effective or 'as-of'.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyCountryOfCitizenship.cdm.json/PartyCountryOfCitizenship",
+						"Name": "PeriodEndDate"
+					}
+				},
+				{
+					"Name": "CitizenshipTypeId",
+					"Description": "The unique identifier of a citizenship type.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyCountryOfCitizenship.cdm.json/PartyCountryOfCitizenship",
+						"Name": "CitizenshipTypeId"
+					}
+				},
+				{
+					"Name": "PartyCountryOfCitizenshipNote",
+					"Description": "A note, comment or additional information regarding the Party Country Of Citizenship.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyCountryOfCitizenship.cdm.json/PartyCountryOfCitizenship",
+						"Name": "PartyCountryOfCitizenshipNote"
+					}
+				}
+			],
+			"ColumnSetEntityName": "688319e2-5311-48e1-9f33-be6061be8ab4",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/PartyCountryOfCitizenship",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/PartyCountryOfCitizenship",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"PartyId\":{\"entity\":\"PartyCountryOfCitizenship.cdm.json/PartyCountryOfCitizenship\",\"name\":\"PartyId\"},\"CountryId\":{\"entity\":\"PartyCountryOfCitizenship.cdm.json/PartyCountryOfCitizenship\",\"name\":\"CountryId\"},\"PeriodStartDate\":{\"entity\":\"PartyCountryOfCitizenship.cdm.json/PartyCountryOfCitizenship\",\"name\":\"PeriodStartDate\"},\"PeriodEndDate\":{\"entity\":\"PartyCountryOfCitizenship.cdm.json/PartyCountryOfCitizenship\",\"name\":\"PeriodEndDate\"},\"CitizenshipTypeId\":{\"entity\":\"PartyCountryOfCitizenship.cdm.json/PartyCountryOfCitizenship\",\"name\":\"CitizenshipTypeId\"},\"PartyCountryOfCitizenshipNote\":{\"entity\":\"PartyCountryOfCitizenship.cdm.json/PartyCountryOfCitizenship\",\"name\":\"PartyCountryOfCitizenshipNote\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"PartyCountryOfCitizenship\",\"path\":\"PartyCountryOfCitizenship.cdm.json/PartyCountryOfCitizenship\"},\"description\":\"The country of citizenship of the individual as of the associated time.\\n\\nThis answers the question \\\"What country(s) does the individual have citizenship for?\\\"\",\"primaryKey\":[\"PartyId\",\"CountryId\",\"PeriodStartDate\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyCountryOfCitizenship.cdm.json/PartyCountryOfCitizenship\",\"name\":\"PartyId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a Party.\",\"isNullable\":false,\"name\":\"PartyId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyCountryOfCitizenship.cdm.json/PartyCountryOfCitizenship\",\"name\":\"CountryId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of the Country.\",\"isNullable\":false,\"name\":\"CountryId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyCountryOfCitizenship.cdm.json/PartyCountryOfCitizenship\",\"name\":\"PeriodStartDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The period start date for which the associated D&B data is effective or 'as-of'.\",\"isNullable\":false,\"name\":\"PeriodStartDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyCountryOfCitizenship.cdm.json/PartyCountryOfCitizenship\",\"name\":\"PeriodEndDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The period end date for which the associated D&B data is effective or 'as-of'.\",\"isNullable\":true,\"name\":\"PeriodEndDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyCountryOfCitizenship.cdm.json/PartyCountryOfCitizenship\",\"name\":\"CitizenshipTypeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a citizenship type.\",\"isNullable\":true,\"name\":\"CitizenshipTypeId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyCountryOfCitizenship.cdm.json/PartyCountryOfCitizenship\",\"name\":\"PartyCountryOfCitizenshipNote\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"A note, comment or additional information regarding the Party Country Of Citizenship.\",\"isNullable\":true,\"name\":\"PartyCountryOfCitizenshipNote\"}]}}}",
+			"Description": "The country of citizenship of the individual as of the associated time.\n\nThis answers the question \"What country(s) does the individual have citizenship for?\"",
+			"DisplayFolderInfo": "{\"name\":\"Party\",\"colorCode\":\"#7D0F6C\"}",
+			"PrimaryKeys": "PartyId,CountryId,PeriodStartDate",
+			"spark.sql.sources.provider": "csv",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"PartyId\",\"type\":\"long\",\"nullable\":false,\"metadata\":{}},{\"name\":\"CountryId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PeriodStartDate\",\"type\":\"date\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PeriodEndDate\",\"type\":\"date\",\"nullable\":true,\"metadata\":{}},{\"name\":\"CitizenshipTypeId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"PartyCountryOfCitizenshipNote\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "88d870c6-4c08-4ab0-86bf-494d8566733f",
+		"Description": "The country of citizenship of the individual as of the associated time.\n\nThis answers the question \"What country(s) does the individual have citizenship for?\""
+	},
+	"type": "TABLE"
+}

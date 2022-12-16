@@ -1,0 +1,137 @@
+{
+	"name": "FabricCharacteristic",
+	"properties": {
+		"Name": "FabricCharacteristic",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "FabricId",
+					"Description": "The unique identifier of a Fabric.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "FabricCharacteristic.cdm.json/FabricCharacteristic",
+						"Name": "FabricId"
+					}
+				},
+				{
+					"Name": "FabricCharacteristicTypeId",
+					"Description": "The unique identifier of a fabric characteristic type.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "FabricCharacteristic.cdm.json/FabricCharacteristic",
+						"Name": "FabricCharacteristicTypeId"
+					}
+				},
+				{
+					"Name": "FabricCharacteristicNote",
+					"Description": "A note, comment or additional information regarding the fabric characteristic.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "FabricCharacteristic.cdm.json/FabricCharacteristic",
+						"Name": "FabricCharacteristicNote"
+					}
+				}
+			],
+			"ColumnSetEntityName": "b721dae7-1c4a-46a1-93b1-c159e6926417",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/FabricCharacteristic",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/FabricCharacteristic",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"FabricId\":{\"entity\":\"FabricCharacteristic.cdm.json/FabricCharacteristic\",\"name\":\"FabricId\"},\"FabricCharacteristicTypeId\":{\"entity\":\"FabricCharacteristic.cdm.json/FabricCharacteristic\",\"name\":\"FabricCharacteristicTypeId\"},\"FabricCharacteristicNote\":{\"entity\":\"FabricCharacteristic.cdm.json/FabricCharacteristic\",\"name\":\"FabricCharacteristicNote\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"FabricCharacteristic\",\"path\":\"FabricCharacteristic.cdm.json/FabricCharacteristic\"},\"description\":\"The fabric characteristics that describe or characterize the associated fabric.\",\"primaryKey\":[\"FabricId\",\"FabricCharacteristicTypeId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"FabricCharacteristic.cdm.json/FabricCharacteristic\",\"name\":\"FabricId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Fabric.\",\"isNullable\":false,\"name\":\"FabricId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"FabricCharacteristic.cdm.json/FabricCharacteristic\",\"name\":\"FabricCharacteristicTypeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a fabric characteristic type.\",\"isNullable\":false,\"name\":\"FabricCharacteristicTypeId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"FabricCharacteristic.cdm.json/FabricCharacteristic\",\"name\":\"FabricCharacteristicNote\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"A note, comment or additional information regarding the fabric characteristic.\",\"isNullable\":true,\"name\":\"FabricCharacteristicNote\"}]}}}",
+			"Description": "The fabric characteristics that describe or characterize the associated fabric.",
+			"DisplayFolderInfo": "{\"name\":\"Product\",\"colorCode\":\"#0C614C\"}",
+			"PrimaryKeys": "FabricId,FabricCharacteristicTypeId",
+			"spark.sql.sources.provider": "csv",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"FabricId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"FabricCharacteristicTypeId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"FabricCharacteristicNote\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "f6ba6e32-9cfc-4751-bffe-d2f752e85b7b",
+		"Description": "The fabric characteristics that describe or characterize the associated fabric."
+	},
+	"type": "TABLE"
+}

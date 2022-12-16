@@ -1,0 +1,29 @@
+{
+	"name": "relationship-eaiugfvbmf",
+	"properties": {
+		"Name": "relationship-eaiugfvbmf",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "LegalEntityForm",
+		"ToTableName": "Vendor",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "LegalEntityFormId",
+				"ToColumnName": "LegalEntityFormId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"LegalEntityForm.cdm.json/LegalEntityForm\",\"toEntity\":\"Vendor.cdm.json/Vendor\",\"joinPairs\":[{\"fromAttribute\":\"LegalEntityFormId\",\"toAttribute\":\"LegalEntityFormId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "31901e55-352d-4157-b195-99c798c2104d"
+	},
+	"type": "RELATIONSHIP"
+}

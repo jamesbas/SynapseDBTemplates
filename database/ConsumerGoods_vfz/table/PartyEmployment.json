@@ -1,0 +1,272 @@
+{
+	"name": "PartyEmployment",
+	"properties": {
+		"Name": "PartyEmployment",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "PartyId",
+					"Description": "The unique identifier of a Party.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyEmployment.cdm.json/PartyEmployment",
+						"Name": "PartyId"
+					}
+				},
+				{
+					"Name": "EmployerId",
+					"Description": "The unique identifier of an Employer.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyEmployment.cdm.json/PartyEmployment",
+						"Name": "EmployerId"
+					}
+				},
+				{
+					"Name": "JobTitleId",
+					"Description": "The unique identifier of a Job Title.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyEmployment.cdm.json/PartyEmployment",
+						"Name": "JobTitleId"
+					}
+				},
+				{
+					"Name": "PeriodStartDate",
+					"Description": "The period start date of the associated Employment position.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyEmployment.cdm.json/PartyEmployment",
+						"Name": "PeriodStartDate"
+					}
+				},
+				{
+					"Name": "PeriodEndDate",
+					"Description": "The period end date of the associated Employment position.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyEmployment.cdm.json/PartyEmployment",
+						"Name": "PeriodEndDate"
+					}
+				},
+				{
+					"Name": "EmploymentPositionTypeId",
+					"Description": "The unique identifier of an Employment Position.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyEmployment.cdm.json/PartyEmployment",
+						"Name": "EmploymentPositionTypeId"
+					}
+				},
+				{
+					"Name": "AnnualSalaryAmount",
+					"Description": "The estimated annual salary of the individual customer in the position.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyEmployment.cdm.json/PartyEmployment",
+						"Name": "AnnualSalaryAmount"
+					}
+				},
+				{
+					"Name": "EmploymentNote",
+					"Description": "Notes, comments or additional information regarding the associated employment.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyEmployment.cdm.json/PartyEmployment",
+						"Name": "EmploymentNote"
+					}
+				},
+				{
+					"Name": "EmploymentClassificationId",
+					"Description": "The unique identifier of an Employment Classification.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyEmployment.cdm.json/PartyEmployment",
+						"Name": "EmploymentClassificationId"
+					}
+				},
+				{
+					"Name": "EmploymentStatusId",
+					"Description": "The unique identifier of an Employment Status.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyEmployment.cdm.json/PartyEmployment",
+						"Name": "EmploymentStatusId"
+					}
+				}
+			],
+			"ColumnSetEntityName": "d2a83495-82d4-49d5-bc2e-340fc44737fe",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/PartyEmployment",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/PartyEmployment",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"PartyId\":{\"entity\":\"PartyEmployment.cdm.json/PartyEmployment\",\"name\":\"PartyId\"},\"EmployerId\":{\"entity\":\"PartyEmployment.cdm.json/PartyEmployment\",\"name\":\"EmployerId\"},\"JobTitleId\":{\"entity\":\"PartyEmployment.cdm.json/PartyEmployment\",\"name\":\"JobTitleId\"},\"PeriodStartDate\":{\"entity\":\"PartyEmployment.cdm.json/PartyEmployment\",\"name\":\"PeriodStartDate\"},\"PeriodEndDate\":{\"entity\":\"PartyEmployment.cdm.json/PartyEmployment\",\"name\":\"PeriodEndDate\"},\"EmploymentPositionTypeId\":{\"entity\":\"PartyEmployment.cdm.json/PartyEmployment\",\"name\":\"EmploymentPositionTypeId\"},\"AnnualSalaryAmount\":{\"entity\":\"PartyEmployment.cdm.json/PartyEmployment\",\"name\":\"AnnualSalaryAmount\"},\"EmploymentNote\":{\"entity\":\"PartyEmployment.cdm.json/PartyEmployment\",\"name\":\"EmploymentNote\"},\"EmploymentClassificationId\":{\"entity\":\"PartyEmployment.cdm.json/PartyEmployment\",\"name\":\"EmploymentClassificationId\"},\"EmploymentStatusId\":{\"entity\":\"PartyEmployment.cdm.json/PartyEmployment\",\"name\":\"EmploymentStatusId\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"PartyEmployment\",\"path\":\"PartyEmployment.cdm.json/PartyEmployment\"},\"description\":\"The Employment held by the Individual during the associated period.\",\"primaryKey\":[\"PartyId\",\"EmployerId\",\"JobTitleId\",\"PeriodStartDate\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyEmployment.cdm.json/PartyEmployment\",\"name\":\"PartyId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a Party.\",\"isNullable\":false,\"name\":\"PartyId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyEmployment.cdm.json/PartyEmployment\",\"name\":\"EmployerId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of an Employer.\",\"isNullable\":false,\"name\":\"EmployerId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyEmployment.cdm.json/PartyEmployment\",\"name\":\"JobTitleId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Job Title.\",\"isNullable\":false,\"name\":\"JobTitleId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyEmployment.cdm.json/PartyEmployment\",\"name\":\"PeriodStartDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The period start date of the associated Employment position.\",\"isNullable\":false,\"name\":\"PeriodStartDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyEmployment.cdm.json/PartyEmployment\",\"name\":\"PeriodEndDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The period end date of the associated Employment position.\",\"isNullable\":false,\"name\":\"PeriodEndDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyEmployment.cdm.json/PartyEmployment\",\"name\":\"EmploymentPositionTypeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of an Employment Position.\",\"isNullable\":true,\"name\":\"EmploymentPositionTypeId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyEmployment.cdm.json/PartyEmployment\",\"name\":\"AnnualSalaryAmount\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"The estimated annual salary of the individual customer in the position.\",\"isNullable\":true,\"scale\":2,\"name\":\"AnnualSalaryAmount\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyEmployment.cdm.json/PartyEmployment\",\"name\":\"EmploymentNote\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"Notes, comments or additional information regarding the associated employment.\",\"isNullable\":true,\"name\":\"EmploymentNote\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyEmployment.cdm.json/PartyEmployment\",\"name\":\"EmploymentClassificationId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of an Employment Classification.\",\"isNullable\":true,\"name\":\"EmploymentClassificationId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyEmployment.cdm.json/PartyEmployment\",\"name\":\"EmploymentStatusId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of an Employment Status.\",\"isNullable\":true,\"name\":\"EmploymentStatusId\"}]}}}",
+			"Description": "The Employment held by the Individual during the associated period.",
+			"DisplayFolderInfo": "{\"name\":\"Party\",\"colorCode\":\"#7D0F6C\"}",
+			"PrimaryKeys": "PartyId,EmployerId,JobTitleId,PeriodStartDate",
+			"spark.sql.sources.provider": "csv",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"PartyId\",\"type\":\"long\",\"nullable\":false,\"metadata\":{}},{\"name\":\"EmployerId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"JobTitleId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PeriodStartDate\",\"type\":\"date\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PeriodEndDate\",\"type\":\"date\",\"nullable\":false,\"metadata\":{}},{\"name\":\"EmploymentPositionTypeId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"AnnualSalaryAmount\",\"type\":\"decimal(18,2)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"EmploymentNote\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"EmploymentClassificationId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"EmploymentStatusId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "266655b6-394d-46b0-8b71-f1f569c35324",
+		"Description": "The Employment held by the Individual during the associated period."
+	},
+	"type": "TABLE"
+}

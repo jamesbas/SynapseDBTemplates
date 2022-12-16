@@ -1,0 +1,29 @@
+{
+	"name": "relationship-totpbeequd",
+	"properties": {
+		"Name": "relationship-totpbeequd",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "Cluster",
+		"ToTableName": "ClusterParty",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "ClusterId",
+				"ToColumnName": "ClusterId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"Cluster.cdm.json/Cluster\",\"toEntity\":\"ClusterParty.cdm.json/ClusterParty\",\"joinPairs\":[{\"fromAttribute\":\"ClusterId\",\"toAttribute\":\"ClusterId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "44a1c928-9e63-488b-ba05-cb38378d6b1e"
+	},
+	"type": "RELATIONSHIP"
+}

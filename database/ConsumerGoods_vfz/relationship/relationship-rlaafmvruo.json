@@ -1,0 +1,29 @@
+{
+	"name": "relationship-rlaafmvruo",
+	"properties": {
+		"Name": "relationship-rlaafmvruo",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "Role",
+		"ToTableName": "PartyRelationshipEvent",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "RoleId",
+				"ToColumnName": "Party2RoleId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"Role.cdm.json/Role\",\"toEntity\":\"PartyRelationshipEvent.cdm.json/PartyRelationshipEvent\",\"joinPairs\":[{\"fromAttribute\":\"RoleId\",\"toAttribute\":\"Party2RoleId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "297f47b0-1b61-4e7b-a222-4615b8f7a16e"
+	},
+	"type": "RELATIONSHIP"
+}

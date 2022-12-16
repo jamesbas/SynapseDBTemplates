@@ -1,0 +1,137 @@
+{
+	"name": "Sex",
+	"properties": {
+		"Name": "Sex",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "SexId",
+					"Description": "The unique identifier of a Sex.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Sex.cdm.json/Sex",
+						"Name": "SexId"
+					}
+				},
+				{
+					"Name": "SexName",
+					"Description": "The name of the Sex.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 256,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Sex.cdm.json/Sex",
+						"Name": "SexName"
+					}
+				},
+				{
+					"Name": "SexDescription",
+					"Description": "The description of the Sex.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Sex.cdm.json/Sex",
+						"Name": "SexDescription"
+					}
+				}
+			],
+			"ColumnSetEntityName": "a0a9deb4-5595-43dc-9a63-bbc82b25b1e4",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/Sex",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/Sex",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"SexId\":{\"entity\":\"Sex.cdm.json/Sex\",\"name\":\"SexId\"},\"SexName\":{\"entity\":\"Sex.cdm.json/Sex\",\"name\":\"SexName\"},\"SexDescription\":{\"entity\":\"Sex.cdm.json/Sex\",\"name\":\"SexDescription\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"Sex\",\"path\":\"Sex.cdm.json/Sex\"},\"description\":\"The biological makeup of an individual's reproductive anatomy or secondary sex characteristics.\\n\\nEx.:\\n- Male\\n- Female\\n- Intersex\\n- Hermaphrodite \\n- Indeterminate\",\"primaryKey\":[\"SexId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Sex.cdm.json/Sex\",\"name\":\"SexId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Sex.\",\"isNullable\":false,\"name\":\"SexId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Sex.cdm.json/Sex\",\"name\":\"SexName\"},\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"The name of the Sex.\",\"isNullable\":true,\"name\":\"SexName\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Sex.cdm.json/Sex\",\"name\":\"SexDescription\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"The description of the Sex.\",\"isNullable\":true,\"name\":\"SexDescription\"}]}}}",
+			"Description": "The biological makeup of an individual's reproductive anatomy or secondary sex characteristics.\n\nEx.:\n- Male\n- Female\n- Intersex\n- Hermaphrodite \n- Indeterminate",
+			"DisplayFolderInfo": "{\"name\":\"Party\",\"colorCode\":\"#7D0F6C\"}",
+			"PrimaryKeys": "SexId",
+			"spark.sql.sources.provider": "csv",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"SexId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"SexName\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"SexDescription\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "5005afca-f232-49a0-99d7-1268fbadb2bb",
+		"Description": "The biological makeup of an individual's reproductive anatomy or secondary sex characteristics.\n\nEx.:\n- Male\n- Female\n- Intersex\n- Hermaphrodite \n- Indeterminate"
+	},
+	"type": "TABLE"
+}

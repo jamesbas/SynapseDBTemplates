@@ -1,0 +1,29 @@
+{
+	"name": "relationship-fygaxssbmm",
+	"properties": {
+		"Name": "relationship-fygaxssbmm",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "Franchisee",
+		"ToTableName": "Channel",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "FranchiseeId",
+				"ToColumnName": "FranchiseeId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"Franchisee.cdm.json/Franchisee\",\"toEntity\":\"Channel.cdm.json/Channel\",\"joinPairs\":[{\"fromAttribute\":\"FranchiseeId\",\"toAttribute\":\"FranchiseeId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "affe8f3b-362d-4793-8888-440d2fb8a340"
+	},
+	"type": "RELATIONSHIP"
+}

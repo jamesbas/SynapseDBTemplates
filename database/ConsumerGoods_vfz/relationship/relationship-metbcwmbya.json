@@ -1,0 +1,29 @@
+{
+	"name": "relationship-metbcwmbya",
+	"properties": {
+		"Name": "relationship-metbcwmbya",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "ValueAddedResellerAgreement",
+		"ToTableName": "VarLicensedProduct",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "ContractId",
+				"ToColumnName": "ContractId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"ValueAddedResellerAgreement.cdm.json/ValueAddedResellerAgreement\",\"toEntity\":\"VarLicensedProduct.cdm.json/VarLicensedProduct\",\"joinPairs\":[{\"fromAttribute\":\"ContractId\",\"toAttribute\":\"ContractId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "0c77763f-67d0-449d-ad9f-ae65802a8318"
+	},
+	"type": "RELATIONSHIP"
+}

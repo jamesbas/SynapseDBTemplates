@@ -1,0 +1,29 @@
+{
+	"name": "relationship-igzeeutjqe",
+	"properties": {
+		"Name": "relationship-igzeeutjqe",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "Country",
+		"ToTableName": "PartyCountryTaxStatus",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "CountryId",
+				"ToColumnName": "CountryId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"Country.cdm.json/Country\",\"toEntity\":\"PartyCountryTaxStatus.cdm.json/PartyCountryTaxStatus\",\"joinPairs\":[{\"fromAttribute\":\"CountryId\",\"toAttribute\":\"CountryId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 2,
+		"ObjectId": "1fecdc0b-ccc6-460d-b0cb-fcd303d8a530"
+	},
+	"type": "RELATIONSHIP"
+}

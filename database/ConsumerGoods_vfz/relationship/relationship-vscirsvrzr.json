@@ -1,0 +1,29 @@
+{
+	"name": "relationship-vscirsvrzr",
+	"properties": {
+		"Name": "relationship-vscirsvrzr",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "VendorGroup",
+		"ToTableName": "VendorGroupVendor",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "VendorGroupId",
+				"ToColumnName": "VendorGroupId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"VendorGroup.cdm.json/VendorGroup\",\"toEntity\":\"VendorGroupVendor.cdm.json/VendorGroupVendor\",\"joinPairs\":[{\"fromAttribute\":\"VendorGroupId\",\"toAttribute\":\"VendorGroupId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "c1bfc572-a50a-4bc5-be04-d7142c1ca364"
+	},
+	"type": "RELATIONSHIP"
+}

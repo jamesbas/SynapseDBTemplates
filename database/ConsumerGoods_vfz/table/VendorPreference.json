@@ -1,0 +1,137 @@
+{
+	"name": "VendorPreference",
+	"properties": {
+		"Name": "VendorPreference",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "VendorPreferenceId",
+					"Description": "The unique identifier of a Vendor Preference.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "VendorPreference.cdm.json/VendorPreference",
+						"Name": "VendorPreferenceId"
+					}
+				},
+				{
+					"Name": "VendorPreferenceName",
+					"Description": "The name of a Vendor Preference.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 256,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "VendorPreference.cdm.json/VendorPreference",
+						"Name": "VendorPreferenceName"
+					}
+				},
+				{
+					"Name": "VendorPreferenceDescription",
+					"Description": "The description of a Vendor Preference.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "VendorPreference.cdm.json/VendorPreference",
+						"Name": "VendorPreferenceDescription"
+					}
+				}
+			],
+			"ColumnSetEntityName": "4006bc9e-5688-4e44-a519-1ef83915ea39",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/VendorPreference",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/VendorPreference",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"VendorPreferenceId\":{\"entity\":\"VendorPreference.cdm.json/VendorPreference\",\"name\":\"VendorPreferenceId\"},\"VendorPreferenceName\":{\"entity\":\"VendorPreference.cdm.json/VendorPreference\",\"name\":\"VendorPreferenceName\"},\"VendorPreferenceDescription\":{\"entity\":\"VendorPreference.cdm.json/VendorPreference\",\"name\":\"VendorPreferenceDescription\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"VendorPreference\",\"path\":\"VendorPreference.cdm.json/VendorPreference\"},\"description\":\"The preference associated with the item vendor approval at the location.\\n\\nEx:\\n- Primary\\n- Secondary\\n- Alternate\",\"primaryKey\":[\"VendorPreferenceId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"VendorPreference.cdm.json/VendorPreference\",\"name\":\"VendorPreferenceId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Vendor Preference.\",\"isNullable\":false,\"name\":\"VendorPreferenceId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"VendorPreference.cdm.json/VendorPreference\",\"name\":\"VendorPreferenceName\"},\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"The name of a Vendor Preference.\",\"isNullable\":true,\"name\":\"VendorPreferenceName\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"VendorPreference.cdm.json/VendorPreference\",\"name\":\"VendorPreferenceDescription\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"The description of a Vendor Preference.\",\"isNullable\":true,\"name\":\"VendorPreferenceDescription\"}]}}}",
+			"Description": "The preference associated with the item vendor approval at the location.\n\nEx:\n- Primary\n- Secondary\n- Alternate",
+			"DisplayFolderInfo": "{\"name\":\"Vendor\",\"colorCode\":\"#1C508C\"}",
+			"PrimaryKeys": "VendorPreferenceId",
+			"spark.sql.sources.provider": "csv",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"VendorPreferenceId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"VendorPreferenceName\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"VendorPreferenceDescription\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "0f9689bd-3636-4fcc-a506-392035f4430b",
+		"Description": "The preference associated with the item vendor approval at the location.\n\nEx:\n- Primary\n- Secondary\n- Alternate"
+	},
+	"type": "TABLE"
+}

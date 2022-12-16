@@ -1,0 +1,29 @@
+{
+	"name": "relationship-qxeesxzvyt",
+	"properties": {
+		"Name": "relationship-qxeesxzvyt",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "PartyIdentification",
+		"ToTableName": "RelatedPartyAuthenticationMethod",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "PeriodStartTimestamp",
+				"ToColumnName": "PeriodStartTimestamp"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"PartyIdentification.cdm.json/PartyIdentification\",\"toEntity\":\"RelatedPartyAuthenticationMethod.cdm.json/RelatedPartyAuthenticationMethod\",\"joinPairs\":[{\"fromAttribute\":\"PeriodStartTimestamp\",\"toAttribute\":\"PeriodStartTimestamp\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "40428791-da5e-4902-86d4-8b1b5ab91ed0"
+	},
+	"type": "RELATIONSHIP"
+}

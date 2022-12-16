@@ -1,0 +1,29 @@
+{
+	"name": "relationship-jozaldhoei",
+	"properties": {
+		"Name": "relationship-jozaldhoei",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "Contract",
+		"ToTableName": "SoftwareLicenseAgreement",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "ContractId",
+				"ToColumnName": "ContractId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"Contract.cdm.json/Contract\",\"toEntity\":\"SoftwareLicenseAgreement.cdm.json/SoftwareLicenseAgreement\",\"joinPairs\":[{\"fromAttribute\":\"ContractId\",\"toAttribute\":\"ContractId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "909e7c5a-cc40-4189-aeb7-90917cd5731c"
+	},
+	"type": "RELATIONSHIP"
+}

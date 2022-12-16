@@ -1,0 +1,29 @@
+{
+	"name": "relationship-allmorusvu",
+	"properties": {
+		"Name": "relationship-allmorusvu",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "CustomerAccountStatusType",
+		"ToTableName": "CustomerAccountStatus",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "CustomerAccountStatusTypeId",
+				"ToColumnName": "CustomerAccountStatusTypeId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"CustomerAccountStatusType.cdm.json/CustomerAccountStatusType\",\"toEntity\":\"CustomerAccountStatus.cdm.json/CustomerAccountStatus\",\"joinPairs\":[{\"fromAttribute\":\"CustomerAccountStatusTypeId\",\"toAttribute\":\"CustomerAccountStatusTypeId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "85e5ce24-e156-481e-9cb8-3bfed762ad9b"
+	},
+	"type": "RELATIONSHIP"
+}

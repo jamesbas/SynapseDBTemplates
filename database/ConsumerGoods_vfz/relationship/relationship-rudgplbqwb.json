@@ -1,0 +1,29 @@
+{
+	"name": "relationship-rudgplbqwb",
+	"properties": {
+		"Name": "relationship-rudgplbqwb",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "OrganizationParty",
+		"ToTableName": "OrganizationPartyRelationship",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "PartyId",
+				"ToColumnName": "PartyId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"OrganizationParty.cdm.json/OrganizationParty\",\"toEntity\":\"OrganizationPartyRelationship.cdm.json/OrganizationPartyRelationship\",\"joinPairs\":[{\"fromAttribute\":\"PartyId\",\"toAttribute\":\"PartyId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "37db3fa9-f66b-45a1-adb6-957260a9359b"
+	},
+	"type": "RELATIONSHIP"
+}

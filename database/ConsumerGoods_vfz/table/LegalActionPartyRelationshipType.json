@@ -1,0 +1,137 @@
+{
+	"name": "LegalActionPartyRelationshipType",
+	"properties": {
+		"Name": "LegalActionPartyRelationshipType",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "LegalActionPartyRelationshipTypeId",
+					"Description": "The unique identifier of a Legal Action Party Relationship Type.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "LegalActionPartyRelationshipType.cdm.json/LegalActionPartyRelationshipType",
+						"Name": "LegalActionPartyRelationshipTypeId"
+					}
+				},
+				{
+					"Name": "LegalActionPartyRelationshipTypeName",
+					"Description": "The name of a Legal Action Party Relationship Type.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 256,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "LegalActionPartyRelationshipType.cdm.json/LegalActionPartyRelationshipType",
+						"Name": "LegalActionPartyRelationshipTypeName"
+					}
+				},
+				{
+					"Name": "LegalActionPartyRelationshipTypeDescription",
+					"Description": "The description of a Legal Action Party Relationship Type.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "LegalActionPartyRelationshipType.cdm.json/LegalActionPartyRelationshipType",
+						"Name": "LegalActionPartyRelationshipTypeDescription"
+					}
+				}
+			],
+			"ColumnSetEntityName": "083f27d3-6a33-46d4-aa8f-384f76b7c33d",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/LegalActionPartyRelationshipType",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/LegalActionPartyRelationshipType",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"LegalActionPartyRelationshipTypeId\":{\"entity\":\"LegalActionPartyRelationshipType.cdm.json/LegalActionPartyRelationshipType\",\"name\":\"LegalActionPartyRelationshipTypeId\"},\"LegalActionPartyRelationshipTypeName\":{\"entity\":\"LegalActionPartyRelationshipType.cdm.json/LegalActionPartyRelationshipType\",\"name\":\"LegalActionPartyRelationshipTypeName\"},\"LegalActionPartyRelationshipTypeDescription\":{\"entity\":\"LegalActionPartyRelationshipType.cdm.json/LegalActionPartyRelationshipType\",\"name\":\"LegalActionPartyRelationshipTypeDescription\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"LegalActionPartyRelationshipType\",\"path\":\"LegalActionPartyRelationshipType.cdm.json/LegalActionPartyRelationshipType\"},\"description\":\"The nature of the relationship between the legal action and related party.\\n\\nEx:\\n- Defendant\\n- Plaintiff\\n- Defendant Attorney\",\"primaryKey\":[\"LegalActionPartyRelationshipTypeId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"LegalActionPartyRelationshipType.cdm.json/LegalActionPartyRelationshipType\",\"name\":\"LegalActionPartyRelationshipTypeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Legal Action Party Relationship Type.\",\"isNullable\":false,\"name\":\"LegalActionPartyRelationshipTypeId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"LegalActionPartyRelationshipType.cdm.json/LegalActionPartyRelationshipType\",\"name\":\"LegalActionPartyRelationshipTypeName\"},\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"The name of a Legal Action Party Relationship Type.\",\"isNullable\":true,\"name\":\"LegalActionPartyRelationshipTypeName\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"LegalActionPartyRelationshipType.cdm.json/LegalActionPartyRelationshipType\",\"name\":\"LegalActionPartyRelationshipTypeDescription\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"The description of a Legal Action Party Relationship Type.\",\"isNullable\":true,\"name\":\"LegalActionPartyRelationshipTypeDescription\"}]}}}",
+			"Description": "The nature of the relationship between the legal action and related party.\n\nEx:\n- Defendant\n- Plaintiff\n- Defendant Attorney",
+			"DisplayFolderInfo": "{\"name\":\"Party\",\"colorCode\":\"#7D0F6C\"}",
+			"PrimaryKeys": "LegalActionPartyRelationshipTypeId",
+			"spark.sql.sources.provider": "csv",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"LegalActionPartyRelationshipTypeId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"LegalActionPartyRelationshipTypeName\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"LegalActionPartyRelationshipTypeDescription\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "56c7bb85-5831-468d-94a5-f88caf880e80",
+		"Description": "The nature of the relationship between the legal action and related party.\n\nEx:\n- Defendant\n- Plaintiff\n- Defendant Attorney"
+	},
+	"type": "TABLE"
+}

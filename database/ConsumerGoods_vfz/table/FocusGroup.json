@@ -1,0 +1,137 @@
+{
+	"name": "FocusGroup",
+	"properties": {
+		"Name": "FocusGroup",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "FocusGroupId",
+					"Description": "The unique identifier of the Focus Group.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "FocusGroup.cdm.json/FocusGroup",
+						"Name": "FocusGroupId"
+					}
+				},
+				{
+					"Name": "FocusGroupName",
+					"Description": "The name of the Focus Group.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 256,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "FocusGroup.cdm.json/FocusGroup",
+						"Name": "FocusGroupName"
+					}
+				},
+				{
+					"Name": "FocusGroupDescription",
+					"Description": "The description of the Focus Group.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "FocusGroup.cdm.json/FocusGroup",
+						"Name": "FocusGroupDescription"
+					}
+				}
+			],
+			"ColumnSetEntityName": "80847015-9318-42b8-877f-6f834f35fc92",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/FocusGroup",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/FocusGroup",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"FocusGroupId\":{\"entity\":\"FocusGroup.cdm.json/FocusGroup\",\"name\":\"FocusGroupId\"},\"FocusGroupName\":{\"entity\":\"FocusGroup.cdm.json/FocusGroup\",\"name\":\"FocusGroupName\"},\"FocusGroupDescription\":{\"entity\":\"FocusGroup.cdm.json/FocusGroup\",\"name\":\"FocusGroupDescription\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"FocusGroup\",\"path\":\"FocusGroup.cdm.json/FocusGroup\"},\"description\":\"A special interest group that focuses upon a specific Product or Product usage.\\n\\nFocus Groups are most often manufacturer-sponsored groups designed to provide feedback directly to the manufacturer regarding their products prior to product mass marketing.\",\"primaryKey\":[\"FocusGroupId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"FocusGroup.cdm.json/FocusGroup\",\"name\":\"FocusGroupId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of the Focus Group.\",\"isNullable\":false,\"name\":\"FocusGroupId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"FocusGroup.cdm.json/FocusGroup\",\"name\":\"FocusGroupName\"},\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"The name of the Focus Group.\",\"isNullable\":true,\"name\":\"FocusGroupName\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"FocusGroup.cdm.json/FocusGroup\",\"name\":\"FocusGroupDescription\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"The description of the Focus Group.\",\"isNullable\":true,\"name\":\"FocusGroupDescription\"}]}}}",
+			"Description": "A special interest group that focuses upon a specific Product or Product usage.\n\nFocus Groups are most often manufacturer-sponsored groups designed to provide feedback directly to the manufacturer regarding their products prior to product mass marketing.",
+			"DisplayFolderInfo": "{\"name\":\"Party\",\"colorCode\":\"#7D0F6C\"}",
+			"PrimaryKeys": "FocusGroupId",
+			"spark.sql.sources.provider": "csv",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"FocusGroupId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"FocusGroupName\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"FocusGroupDescription\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "6903eed3-05e9-4a52-b30b-d94f3bafca56",
+		"Description": "A special interest group that focuses upon a specific Product or Product usage.\n\nFocus Groups are most often manufacturer-sponsored groups designed to provide feedback directly to the manufacturer regarding their products prior to product mass marketing."
+	},
+	"type": "TABLE"
+}

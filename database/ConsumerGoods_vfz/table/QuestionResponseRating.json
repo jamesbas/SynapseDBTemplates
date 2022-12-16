@@ -1,0 +1,137 @@
+{
+	"name": "QuestionResponseRating",
+	"properties": {
+		"Name": "QuestionResponseRating",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "QuestionResponseRatingId",
+					"Description": "The unique identifier of a Question Response Rating.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "QuestionResponseRating.cdm.json/QuestionResponseRating",
+						"Name": "QuestionResponseRatingId"
+					}
+				},
+				{
+					"Name": "QuestionResponseRatingName",
+					"Description": "The name of the Question Response Rating.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 256,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "QuestionResponseRating.cdm.json/QuestionResponseRating",
+						"Name": "QuestionResponseRatingName"
+					}
+				},
+				{
+					"Name": "QuestionResponseRatingDescription",
+					"Description": "The description of a Question Response Rating.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "QuestionResponseRating.cdm.json/QuestionResponseRating",
+						"Name": "QuestionResponseRatingDescription"
+					}
+				}
+			],
+			"ColumnSetEntityName": "9473e7e2-3a94-48dc-8148-31b8ee7330ac",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/QuestionResponseRating",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/QuestionResponseRating",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"QuestionResponseRatingId\":{\"entity\":\"QuestionResponseRating.cdm.json/QuestionResponseRating\",\"name\":\"QuestionResponseRatingId\"},\"QuestionResponseRatingName\":{\"entity\":\"QuestionResponseRating.cdm.json/QuestionResponseRating\",\"name\":\"QuestionResponseRatingName\"},\"QuestionResponseRatingDescription\":{\"entity\":\"QuestionResponseRating.cdm.json/QuestionResponseRating\",\"name\":\"QuestionResponseRatingDescription\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"QuestionResponseRating\",\"path\":\"QuestionResponseRating.cdm.json/QuestionResponseRating\"},\"description\":\"A rating or ranking that is associated with Survey Questions.\\n\\nEx:\\n-  Not Applicable\\n-  Did Not Respond / Ignored\\n-  Outstanding\\n-  Above average\\n-  Adequate\\n-  Poor\\n-  Yes\\n-  No\\n-  Highly satisfied\\n-  Satisfied\\n-  Dissatisfied\\n\\nImplementation Note:\\n\\nStrive to keep the number of rating codes to a minimum (<10) if possible.\",\"primaryKey\":[\"QuestionResponseRatingId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"QuestionResponseRating.cdm.json/QuestionResponseRating\",\"name\":\"QuestionResponseRatingId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Question Response Rating.\",\"isNullable\":false,\"name\":\"QuestionResponseRatingId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"QuestionResponseRating.cdm.json/QuestionResponseRating\",\"name\":\"QuestionResponseRatingName\"},\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"The name of the Question Response Rating.\",\"isNullable\":true,\"name\":\"QuestionResponseRatingName\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"QuestionResponseRating.cdm.json/QuestionResponseRating\",\"name\":\"QuestionResponseRatingDescription\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"The description of a Question Response Rating.\",\"isNullable\":true,\"name\":\"QuestionResponseRatingDescription\"}]}}}",
+			"Description": "A rating or ranking that is associated with Survey Questions.\n\nEx:\n-  Not Applicable\n-  Did Not Respond / Ignored\n-  Outstanding\n-  Above average\n-  Adequate\n-  Poor\n-  Yes\n-  No\n-  Highly satisfied\n-  Satisfied\n-  Dissatisfied\n\nImplementation Note:\n\nStrive to keep the number of rating codes to a minimum (<10) if possible.",
+			"DisplayFolderInfo": "{\"name\":\"Customer Service & Contact Management\",\"colorCode\":\"#0064C1\"}",
+			"PrimaryKeys": "QuestionResponseRatingId",
+			"spark.sql.sources.provider": "csv",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"QuestionResponseRatingId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"QuestionResponseRatingName\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"QuestionResponseRatingDescription\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "771e859f-75fb-474d-8732-59e3fb25b632",
+		"Description": "A rating or ranking that is associated with Survey Questions.\n\nEx:\n-  Not Applicable\n-  Did Not Respond / Ignored\n-  Outstanding\n-  Above average\n-  Adequate\n-  Poor\n-  Yes\n-  No\n-  Highly satisfied\n-  Satisfied\n-  Dissatisfied\n\nImplementation Note:\n\nStrive to keep the number of rating codes to a minimum (<10) if possible."
+	},
+	"type": "TABLE"
+}

@@ -1,0 +1,29 @@
+{
+	"name": "relationship-chaybjdpkp",
+	"properties": {
+		"Name": "relationship-chaybjdpkp",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "PhysicalCharacteristic",
+		"ToTableName": "PartyPhysicalCharacteristic",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "PhysicalCharacteristicId",
+				"ToColumnName": "PhysicalCharacteristicId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"PhysicalCharacteristic.cdm.json/PhysicalCharacteristic\",\"toEntity\":\"PartyPhysicalCharacteristic.cdm.json/PartyPhysicalCharacteristic\",\"joinPairs\":[{\"fromAttribute\":\"PhysicalCharacteristicId\",\"toAttribute\":\"PhysicalCharacteristicId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "0e085dea-bf52-4c6b-acac-ab282935e385"
+	},
+	"type": "RELATIONSHIP"
+}

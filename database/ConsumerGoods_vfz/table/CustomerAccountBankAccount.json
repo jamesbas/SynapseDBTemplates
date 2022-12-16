@@ -1,0 +1,177 @@
+{
+	"name": "CustomerAccountBankAccount",
+	"properties": {
+		"Name": "CustomerAccountBankAccount",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "CustomerAccountId",
+					"Description": "The unique identifier of a Customer Account.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "CustomerAccountBankAccount.cdm.json/CustomerAccountBankAccount",
+						"Name": "CustomerAccountId"
+					}
+				},
+				{
+					"Name": "PeriodStartTimestamp",
+					"Description": "The period start timestamp for which the associated Bank Account(s) are associated with the Customer Account.",
+					"OriginDataTypeName": {
+						"TypeName": "timestamp",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"TimestampFormat": "YYYY-MM-DD HH:MM:SS.fffffffff",
+							"HIVE_TYPE_STRING": "timestamp"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "CustomerAccountBankAccount.cdm.json/CustomerAccountBankAccount",
+						"Name": "PeriodStartTimestamp"
+					}
+				},
+				{
+					"Name": "BankAccountId",
+					"Description": "The unique identifier of a Bank Account.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "CustomerAccountBankAccount.cdm.json/CustomerAccountBankAccount",
+						"Name": "BankAccountId"
+					}
+				},
+				{
+					"Name": "PeriodEndTimestamp",
+					"Description": "The period end timestamp for which the associated Bank Account(s) are associated with the Customer Account.",
+					"OriginDataTypeName": {
+						"TypeName": "timestamp",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"TimestampFormat": "YYYY-MM-DD HH:MM:SS.fffffffff",
+							"HIVE_TYPE_STRING": "timestamp"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "CustomerAccountBankAccount.cdm.json/CustomerAccountBankAccount",
+						"Name": "PeriodEndTimestamp"
+					}
+				},
+				{
+					"Name": "CustomerAccountBankAccountNote",
+					"Description": "A note, comment or additional information regarding the Customer Account Bank Account.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "CustomerAccountBankAccount.cdm.json/CustomerAccountBankAccount",
+						"Name": "CustomerAccountBankAccountNote"
+					}
+				}
+			],
+			"ColumnSetEntityName": "0be9aaaf-988f-4a2c-b670-0d27cf7bc608",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/CustomerAccountBankAccount",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/CustomerAccountBankAccount",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"CustomerAccountId\":{\"entity\":\"CustomerAccountBankAccount.cdm.json/CustomerAccountBankAccount\",\"name\":\"CustomerAccountId\"},\"PeriodStartTimestamp\":{\"entity\":\"CustomerAccountBankAccount.cdm.json/CustomerAccountBankAccount\",\"name\":\"PeriodStartTimestamp\"},\"BankAccountId\":{\"entity\":\"CustomerAccountBankAccount.cdm.json/CustomerAccountBankAccount\",\"name\":\"BankAccountId\"},\"PeriodEndTimestamp\":{\"entity\":\"CustomerAccountBankAccount.cdm.json/CustomerAccountBankAccount\",\"name\":\"PeriodEndTimestamp\"},\"CustomerAccountBankAccountNote\":{\"entity\":\"CustomerAccountBankAccount.cdm.json/CustomerAccountBankAccount\",\"name\":\"CustomerAccountBankAccountNote\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"CustomerAccountBankAccount\",\"path\":\"CustomerAccountBankAccount.cdm.json/CustomerAccountBankAccount\"},\"description\":\"The Bank Account(s) authorized for use by the Customer Account to purchase products, goods or services.\",\"primaryKey\":[\"CustomerAccountId\",\"PeriodStartTimestamp\",\"BankAccountId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"CustomerAccountBankAccount.cdm.json/CustomerAccountBankAccount\",\"name\":\"CustomerAccountId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a Customer Account.\",\"isNullable\":false,\"name\":\"CustomerAccountId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"CustomerAccountBankAccount.cdm.json/CustomerAccountBankAccount\",\"name\":\"PeriodStartTimestamp\"},\"dataType\":\"timestamp\",\"description\":\"The period start timestamp for which the associated Bank Account(s) are associated with the Customer Account.\",\"isNullable\":false,\"name\":\"PeriodStartTimestamp\",\"timestampFormat\":\"YYYY-MM-DD HH:MM:SS.fffffffff\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"CustomerAccountBankAccount.cdm.json/CustomerAccountBankAccount\",\"name\":\"BankAccountId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Bank Account.\",\"isNullable\":false,\"name\":\"BankAccountId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"CustomerAccountBankAccount.cdm.json/CustomerAccountBankAccount\",\"name\":\"PeriodEndTimestamp\"},\"dataType\":\"timestamp\",\"description\":\"The period end timestamp for which the associated Bank Account(s) are associated with the Customer Account.\",\"isNullable\":true,\"name\":\"PeriodEndTimestamp\",\"timestampFormat\":\"YYYY-MM-DD HH:MM:SS.fffffffff\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"CustomerAccountBankAccount.cdm.json/CustomerAccountBankAccount\",\"name\":\"CustomerAccountBankAccountNote\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"A note, comment or additional information regarding the Customer Account Bank Account.\",\"isNullable\":true,\"name\":\"CustomerAccountBankAccountNote\"}]}}}",
+			"Description": "The Bank Account(s) authorized for use by the Customer Account to purchase products, goods or services.",
+			"DisplayFolderInfo": "{\"name\":\"Customer Account\",\"colorCode\":\"#Ef6950\"}",
+			"PrimaryKeys": "CustomerAccountId,PeriodStartTimestamp,BankAccountId",
+			"spark.sql.sources.provider": "csv",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"CustomerAccountId\",\"type\":\"long\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PeriodStartTimestamp\",\"type\":\"timestamp\",\"nullable\":false,\"metadata\":{}},{\"name\":\"BankAccountId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PeriodEndTimestamp\",\"type\":\"timestamp\",\"nullable\":true,\"metadata\":{}},{\"name\":\"CustomerAccountBankAccountNote\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate"
+		},
+		"ObjectVersion": 2,
+		"ObjectId": "e8a91eb2-5c14-4910-8290-889be91a833c",
+		"Description": "The Bank Account(s) authorized for use by the Customer Account to purchase products, goods or services."
+	},
+	"type": "TABLE"
+}

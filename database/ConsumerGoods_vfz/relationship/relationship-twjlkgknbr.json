@@ -1,0 +1,29 @@
+{
+	"name": "relationship-twjlkgknbr",
+	"properties": {
+		"Name": "relationship-twjlkgknbr",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "ConsumerGoodsProduct",
+		"ToTableName": "LimitedWarranty",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "ProductId",
+				"ToColumnName": "ProductId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"ConsumerGoodsProduct.cdm.json/ConsumerGoodsProduct\",\"toEntity\":\"LimitedWarranty.cdm.json/LimitedWarranty\",\"joinPairs\":[{\"fromAttribute\":\"ProductId\",\"toAttribute\":\"ProductId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "6c67816a-fed2-44eb-98b2-d39568221d9a"
+	},
+	"type": "RELATIONSHIP"
+}

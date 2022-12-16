@@ -1,0 +1,29 @@
+{
+	"name": "relationship-jjkutoecvq",
+	"properties": {
+		"Name": "relationship-jjkutoecvq",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "ContractFee",
+		"ToTableName": "ContractFeePayment",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "ContractFeeTypeId",
+				"ToColumnName": "ContractFeeTypeId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"ContractFee.cdm.json/ContractFee\",\"toEntity\":\"ContractFeePayment.cdm.json/ContractFeePayment\",\"joinPairs\":[{\"fromAttribute\":\"ContractFeeTypeId\",\"toAttribute\":\"ContractFeeTypeId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "6cffa4c9-e928-4e7e-aea0-6d36464e8879"
+	},
+	"type": "RELATIONSHIP"
+}

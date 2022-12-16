@@ -1,0 +1,728 @@
+{
+	"name": "FranchiseAgreement",
+	"properties": {
+		"Name": "FranchiseAgreement",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "ContractId",
+					"Description": "The unique identifier of a Contract.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "FranchiseAgreement.cdm.json/FranchiseAgreement",
+						"Name": "ContractId"
+					}
+				},
+				{
+					"Name": "FranchiseName",
+					"Description": "The name of the franchise.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 256,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "FranchiseAgreement.cdm.json/FranchiseAgreement",
+						"Name": "FranchiseName"
+					}
+				},
+				{
+					"Name": "FranchiseTrademark",
+					"Description": "A distinctive name or symbol used to distinguish a particular product or service from others. It can be used exclusively by the owner, and no one else can use it without the owner's permission. Part of a franchise's value is the right to use a recognized trademark.",
+					"OriginDataTypeName": {
+						"TypeName": "binary",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "binary"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "FranchiseAgreement.cdm.json/FranchiseAgreement",
+						"Name": "FranchiseTrademark"
+					}
+				},
+				{
+					"Name": "FranchiseAgreementStartDate",
+					"Description": "The start date of the franchise agreement.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "FranchiseAgreement.cdm.json/FranchiseAgreement",
+						"Name": "FranchiseAgreementStartDate"
+					}
+				},
+				{
+					"Name": "FranchiseAgreementEndDate",
+					"Description": "The end date of the franchise agreement.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "FranchiseAgreement.cdm.json/FranchiseAgreement",
+						"Name": "FranchiseAgreementEndDate"
+					}
+				},
+				{
+					"Name": "FranchiseFeeAmount",
+					"Description": "The amount of the franchise fee.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "FranchiseAgreement.cdm.json/FranchiseAgreement",
+						"Name": "FranchiseFeeAmount"
+					}
+				},
+				{
+					"Name": "CapitalRequiredAmount",
+					"Description": "The amount of cash you are required to have available.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "FranchiseAgreement.cdm.json/FranchiseAgreement",
+						"Name": "CapitalRequiredAmount"
+					}
+				},
+				{
+					"Name": "InitialInvestmentAmount",
+					"Description": "Usually includes the franchise fee and the total investment amount including working capital required to commence operating a franchise.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "FranchiseAgreement.cdm.json/FranchiseAgreement",
+						"Name": "InitialInvestmentAmount"
+					}
+				},
+				{
+					"Name": "EquityInvestmentRequirementAmount",
+					"Description": "The amount available to be borrowed against your security property based on a formula calculated by the lending institution",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "FranchiseAgreement.cdm.json/FranchiseAgreement",
+						"Name": "EquityInvestmentRequirementAmount"
+					}
+				},
+				{
+					"Name": "RightToUseTradeNameSection",
+					"Description": "The contract section addressing the rights associated with the use of the trade name.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "FranchiseAgreement.cdm.json/FranchiseAgreement",
+						"Name": "RightToUseTradeNameSection"
+					}
+				},
+				{
+					"Name": "FranchiseeObligationsSection",
+					"Description": "The contract section addressing the franchisee obligations.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "FranchiseAgreement.cdm.json/FranchiseAgreement",
+						"Name": "FranchiseeObligationsSection"
+					}
+				},
+				{
+					"Name": "FranchisorObligationsSection",
+					"Description": "The contract section addressing the franchisor obligations.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "FranchiseAgreement.cdm.json/FranchiseAgreement",
+						"Name": "FranchisorObligationsSection"
+					}
+				},
+				{
+					"Name": "PremisesSection",
+					"Description": "The contract section addressing the use and maintenance of premises.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "FranchiseAgreement.cdm.json/FranchiseAgreement",
+						"Name": "PremisesSection"
+					}
+				},
+				{
+					"Name": "TerritorySection",
+					"Description": "The contract section addressing the sales and marketing territory rights.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "FranchiseAgreement.cdm.json/FranchiseAgreement",
+						"Name": "TerritorySection"
+					}
+				},
+				{
+					"Name": "FeesSection",
+					"Description": "The contract section addressing the fees associated with the franchise.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "FranchiseAgreement.cdm.json/FranchiseAgreement",
+						"Name": "FeesSection"
+					}
+				},
+				{
+					"Name": "RoyaltiesSection",
+					"Description": "The contract section addressing the royalties associated with the franchise.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "FranchiseAgreement.cdm.json/FranchiseAgreement",
+						"Name": "RoyaltiesSection"
+					}
+				},
+				{
+					"Name": "RenewalTermsSection",
+					"Description": "The contract section addressing the renewal terms associated with the franchise.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "FranchiseAgreement.cdm.json/FranchiseAgreement",
+						"Name": "RenewalTermsSection"
+					}
+				},
+				{
+					"Name": "StandardsSection",
+					"Description": "The contract section addressing the standards associated with the franchise.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "FranchiseAgreement.cdm.json/FranchiseAgreement",
+						"Name": "StandardsSection"
+					}
+				},
+				{
+					"Name": "RightsOfSaleSection",
+					"Description": "The contract section addressing the rights to sell franchise products and services.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "FranchiseAgreement.cdm.json/FranchiseAgreement",
+						"Name": "RightsOfSaleSection"
+					}
+				},
+				{
+					"Name": "PerformanceTargetsSection",
+					"Description": "The contract section addressing the sales targets associated with the franchise.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "FranchiseAgreement.cdm.json/FranchiseAgreement",
+						"Name": "PerformanceTargetsSection"
+					}
+				},
+				{
+					"Name": "TerminationSection",
+					"Description": "The contract section addressing the termination of the agreement.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "FranchiseAgreement.cdm.json/FranchiseAgreement",
+						"Name": "TerminationSection"
+					}
+				},
+				{
+					"Name": "NonCompeteSection",
+					"Description": "Prevents the franchisee from entering a similar line of business not only during the term of the agreement and renewal terms, but also for a period of time after the agreement ends unless prior approval has been received from the franchisor.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "FranchiseAgreement.cdm.json/FranchiseAgreement",
+						"Name": "NonCompeteSection"
+					}
+				},
+				{
+					"Name": "PercentageRentSection",
+					"Description": "A Lease may have a percentage rent fee clause, which means once a target sales figure has been reached, you will pay the landlord the greater of:\n\nthe amount determined by calculating a percentage of your gross sales i.e. 5% the regular monthly rent amount.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "FranchiseAgreement.cdm.json/FranchiseAgreement",
+						"Name": "PercentageRentSection"
+					}
+				},
+				{
+					"Name": "ProtectedTerritorySection",
+					"Description": "A designated area or geographic boundary granted to the franchisee by the terms of a franchise agreement. The franchisor agrees not to open another franchised or company owned business of a like or exact nature within the franchisees protected (assigned) territory.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "FranchiseAgreement.cdm.json/FranchiseAgreement",
+						"Name": "ProtectedTerritorySection"
+					}
+				},
+				{
+					"Name": "RulesOfOperationSection",
+					"Description": "Specific mandatory rules with which every franchisee and company outlet must comply. This document will change from time to time. By incorporation by reference in the franchise agreement, violation of the Rules of Operations allows the franchisor to cancel a franchise agreement.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "FranchiseAgreement.cdm.json/FranchiseAgreement",
+						"Name": "RulesOfOperationSection"
+					}
+				},
+				{
+					"Name": "MultipleUnitFranchiseAgreementIndicator",
+					"Description": "The franchisor awards the right to a franchisee to operate more than one unit within a defined area based on an agreed upon development schedule. If the franchisor decides to expand into a new geographical area which may be a city or province and does have the resources or staff to handle this growth themselves, a Master Franchise, Sub-franchise or an Area Development agreement is structured with a party who will use their resources to develop the franchise network by granting unit franchises to others or establish their own outlets, provide the training and local ongoing support.",
+					"OriginDataTypeName": {
+						"TypeName": "boolean",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "boolean"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "FranchiseAgreement.cdm.json/FranchiseAgreement",
+						"Name": "MultipleUnitFranchiseAgreementIndicator"
+					}
+				},
+				{
+					"Name": "JobFranchisingAgreementIndicator",
+					"Description": "The franchisee actually does the work that provides the service to their customers.",
+					"OriginDataTypeName": {
+						"TypeName": "boolean",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "boolean"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "FranchiseAgreement.cdm.json/FranchiseAgreement",
+						"Name": "JobFranchisingAgreementIndicator"
+					}
+				},
+				{
+					"Name": "ConversionFranchiseAgreementIndicator",
+					"Description": "A franchisor who allows existing businesses to convert to the franchisors brand for the purpose of being part of the franchised system.",
+					"OriginDataTypeName": {
+						"TypeName": "boolean",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "boolean"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "FranchiseAgreement.cdm.json/FranchiseAgreement",
+						"Name": "ConversionFranchiseAgreementIndicator"
+					}
+				},
+				{
+					"Name": "ConversionFranchiseIndicator",
+					"Description": "This is a franchise that permits existing businesses to join a national franchise system to use its recognized name and trademark and operating system.",
+					"OriginDataTypeName": {
+						"TypeName": "boolean",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "boolean"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "FranchiseAgreement.cdm.json/FranchiseAgreement",
+						"Name": "ConversionFranchiseIndicator"
+					}
+				},
+				{
+					"Name": "MasterFranchiseeAgreementIndicator",
+					"Description": "In master franchising, the franchisor grants the master franchisee the right to act as the franchisor in the target territory. The master franchisee may open his or her own outlets, sub-franchise or do both. The primary advantages to the franchisor of master licensing are: limited capital investment; tapping into the master franchisee's knowledge of the local market and only having to deal with one party.",
+					"OriginDataTypeName": {
+						"TypeName": "boolean",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "boolean"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "FranchiseAgreement.cdm.json/FranchiseAgreement",
+						"Name": "MasterFranchiseeAgreementIndicator"
+					}
+				},
+				{
+					"Name": "RegionalDevelopmentAgreementIndicator",
+					"Description": "a.k.a. Regional Franchisee, Regional Coordinator Franchisee; a franchise granted to develop or sell a person's franchise rights to a third party in a defined geographical area. A portion of the franchise fee is normally paid in advance for a certain minimum number of franchise outlets which may be activated by the Regional Franchisee or sold at a disclosed fee to an individual franchise buyer. This agreement normally awards a share of the initial full franchise fee and a percentage of the royalty payment.",
+					"OriginDataTypeName": {
+						"TypeName": "boolean",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "boolean"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "FranchiseAgreement.cdm.json/FranchiseAgreement",
+						"Name": "RegionalDevelopmentAgreementIndicator"
+					}
+				},
+				{
+					"Name": "ManagementFranchisingAgreementIndicator",
+					"Description": "The franchisee recruits, organizes and manages a team who provide the services",
+					"OriginDataTypeName": {
+						"TypeName": "boolean",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "boolean"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "FranchiseAgreement.cdm.json/FranchiseAgreement",
+						"Name": "ManagementFranchisingAgreementIndicator"
+					}
+				},
+				{
+					"Name": "FranchiseeId",
+					"Description": "The unique identifier of a Franchisee.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "FranchiseAgreement.cdm.json/FranchiseAgreement",
+						"Name": "FranchiseeId"
+					}
+				},
+				{
+					"Name": "FranchiseeTypeId",
+					"Description": "The unique identifier of a franchisee type.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "FranchiseAgreement.cdm.json/FranchiseAgreement",
+						"Name": "FranchiseeTypeId"
+					}
+				}
+			],
+			"ColumnSetEntityName": "f685b079-a1f9-4e54-bbfe-80743d48046d",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/FranchiseAgreement",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/FranchiseAgreement",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"ContractId\":{\"entity\":\"FranchiseAgreement.cdm.json/FranchiseAgreement\",\"name\":\"ContractId\"},\"FranchiseName\":{\"entity\":\"FranchiseAgreement.cdm.json/FranchiseAgreement\",\"name\":\"FranchiseName\"},\"FranchiseTrademark\":{\"entity\":\"FranchiseAgreement.cdm.json/FranchiseAgreement\",\"name\":\"FranchiseTrademark\"},\"FranchiseAgreementStartDate\":{\"entity\":\"FranchiseAgreement.cdm.json/FranchiseAgreement\",\"name\":\"FranchiseAgreementStartDate\"},\"FranchiseAgreementEndDate\":{\"entity\":\"FranchiseAgreement.cdm.json/FranchiseAgreement\",\"name\":\"FranchiseAgreementEndDate\"},\"FranchiseFeeAmount\":{\"entity\":\"FranchiseAgreement.cdm.json/FranchiseAgreement\",\"name\":\"FranchiseFeeAmount\"},\"CapitalRequiredAmount\":{\"entity\":\"FranchiseAgreement.cdm.json/FranchiseAgreement\",\"name\":\"CapitalRequiredAmount\"},\"InitialInvestmentAmount\":{\"entity\":\"FranchiseAgreement.cdm.json/FranchiseAgreement\",\"name\":\"InitialInvestmentAmount\"},\"EquityInvestmentRequirementAmount\":{\"entity\":\"FranchiseAgreement.cdm.json/FranchiseAgreement\",\"name\":\"EquityInvestmentRequirementAmount\"},\"RightToUseTradeNameSection\":{\"entity\":\"FranchiseAgreement.cdm.json/FranchiseAgreement\",\"name\":\"RightToUseTradeNameSection\"},\"FranchiseeObligationsSection\":{\"entity\":\"FranchiseAgreement.cdm.json/FranchiseAgreement\",\"name\":\"FranchiseeObligationsSection\"},\"FranchisorObligationsSection\":{\"entity\":\"FranchiseAgreement.cdm.json/FranchiseAgreement\",\"name\":\"FranchisorObligationsSection\"},\"PremisesSection\":{\"entity\":\"FranchiseAgreement.cdm.json/FranchiseAgreement\",\"name\":\"PremisesSection\"},\"TerritorySection\":{\"entity\":\"FranchiseAgreement.cdm.json/FranchiseAgreement\",\"name\":\"TerritorySection\"},\"FeesSection\":{\"entity\":\"FranchiseAgreement.cdm.json/FranchiseAgreement\",\"name\":\"FeesSection\"},\"RoyaltiesSection\":{\"entity\":\"FranchiseAgreement.cdm.json/FranchiseAgreement\",\"name\":\"RoyaltiesSection\"},\"RenewalTermsSection\":{\"entity\":\"FranchiseAgreement.cdm.json/FranchiseAgreement\",\"name\":\"RenewalTermsSection\"},\"StandardsSection\":{\"entity\":\"FranchiseAgreement.cdm.json/FranchiseAgreement\",\"name\":\"StandardsSection\"},\"RightsOfSaleSection\":{\"entity\":\"FranchiseAgreement.cdm.json/FranchiseAgreement\",\"name\":\"RightsOfSaleSection\"},\"PerformanceTargetsSection\":{\"entity\":\"FranchiseAgreement.cdm.json/FranchiseAgreement\",\"name\":\"PerformanceTargetsSection\"},\"TerminationSection\":{\"entity\":\"FranchiseAgreement.cdm.json/FranchiseAgreement\",\"name\":\"TerminationSection\"},\"NonCompeteSection\":{\"entity\":\"FranchiseAgreement.cdm.json/FranchiseAgreement\",\"name\":\"NonCompeteSection\"},\"PercentageRentSection\":{\"entity\":\"FranchiseAgreement.cdm.json/FranchiseAgreement\",\"name\":\"PercentageRentSection\"},\"ProtectedTerritorySection\":{\"entity\":\"FranchiseAgreement.cdm.json/FranchiseAgreement\",\"name\":\"ProtectedTerritorySection\"},\"RulesOfOperationSection\":{\"entity\":\"FranchiseAgreement.cdm.json/FranchiseAgreement\",\"name\":\"RulesOfOperationSection\"},\"MultipleUnitFranchiseAgreementIndicator\":{\"entity\":\"FranchiseAgreement.cdm.json/FranchiseAgreement\",\"name\":\"MultipleUnitFranchiseAgreementIndicator\"},\"JobFranchisingAgreementIndicator\":{\"entity\":\"FranchiseAgreement.cdm.json/FranchiseAgreement\",\"name\":\"JobFranchisingAgreementIndicator\"},\"ConversionFranchiseAgreementIndicator\":{\"entity\":\"FranchiseAgreement.cdm.json/FranchiseAgreement\",\"name\":\"ConversionFranchiseAgreementIndicator\"},\"ConversionFranchiseIndicator\":{\"entity\":\"FranchiseAgreement.cdm.json/FranchiseAgreement\",\"name\":\"ConversionFranchiseIndicator\"},\"MasterFranchiseeAgreementIndicator\":{\"entity\":\"FranchiseAgreement.cdm.json/FranchiseAgreement\",\"name\":\"MasterFranchiseeAgreementIndicator\"},\"RegionalDevelopmentAgreementIndicator\":{\"entity\":\"FranchiseAgreement.cdm.json/FranchiseAgreement\",\"name\":\"RegionalDevelopmentAgreementIndicator\"},\"ManagementFranchisingAgreementIndicator\":{\"entity\":\"FranchiseAgreement.cdm.json/FranchiseAgreement\",\"name\":\"ManagementFranchisingAgreementIndicator\"},\"FranchiseeId\":{\"entity\":\"FranchiseAgreement.cdm.json/FranchiseAgreement\",\"name\":\"FranchiseeId\"},\"FranchiseeTypeId\":{\"entity\":\"FranchiseAgreement.cdm.json/FranchiseAgreement\",\"name\":\"FranchiseeTypeId\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"FranchiseAgreement\",\"path\":\"FranchiseAgreement.cdm.json/FranchiseAgreement\"},\"description\":\"A written contract detailing the mutual responsibilities of franchisors and franchisees. It is usually for a several-year term, and when the term is up, the contract expires and must be renewed. Some state laws require the contract to be renewable at the franchisee's option. Usually a franchise agreement may not be sold, transferred, or otherwise assigned without the franchisor's permission.\\n\\nFranchise Contract\\n\\nThe legal agreement between the parties which sets out the terms under which the Franchisee will operate the business. The terms usually include the following:\\n\\n- The right to use the trade name\\n- The Franchisee's obligations\\n- The Franchisor's obligations\\n- The premises and the territory\\n- Length of Franchise contract\\n- Financial aspects such as initial franchisee fee and ongoing royalties\\n- Renewal terms\\n- Control of standards\\n- Rights of sale\\n- Performance targets\\n- Termination\\n- Effects of termination\",\"primaryKey\":[\"ContractId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"FranchiseAgreement.cdm.json/FranchiseAgreement\",\"name\":\"ContractId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Contract.\",\"isNullable\":false,\"name\":\"ContractId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"FranchiseAgreement.cdm.json/FranchiseAgreement\",\"name\":\"FranchiseName\"},\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"The name of the franchise.\",\"isNullable\":true,\"name\":\"FranchiseName\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"FranchiseAgreement.cdm.json/FranchiseAgreement\",\"name\":\"FranchiseTrademark\"},\"dataType\":\"binary\",\"description\":\"A distinctive name or symbol used to distinguish a particular product or service from others. It can be used exclusively by the owner, and no one else can use it without the owner's permission. Part of a franchise's value is the right to use a recognized trademark.\",\"isNullable\":true,\"name\":\"FranchiseTrademark\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"FranchiseAgreement.cdm.json/FranchiseAgreement\",\"name\":\"FranchiseAgreementStartDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The start date of the franchise agreement.\",\"isNullable\":true,\"name\":\"FranchiseAgreementStartDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"FranchiseAgreement.cdm.json/FranchiseAgreement\",\"name\":\"FranchiseAgreementEndDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The end date of the franchise agreement.\",\"isNullable\":true,\"name\":\"FranchiseAgreementEndDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"FranchiseAgreement.cdm.json/FranchiseAgreement\",\"name\":\"FranchiseFeeAmount\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"The amount of the franchise fee.\",\"isNullable\":true,\"scale\":2,\"name\":\"FranchiseFeeAmount\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"FranchiseAgreement.cdm.json/FranchiseAgreement\",\"name\":\"CapitalRequiredAmount\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"The amount of cash you are required to have available.\",\"isNullable\":true,\"scale\":2,\"name\":\"CapitalRequiredAmount\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"FranchiseAgreement.cdm.json/FranchiseAgreement\",\"name\":\"InitialInvestmentAmount\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"Usually includes the franchise fee and the total investment amount including working capital required to commence operating a franchise.\",\"isNullable\":true,\"scale\":2,\"name\":\"InitialInvestmentAmount\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"FranchiseAgreement.cdm.json/FranchiseAgreement\",\"name\":\"EquityInvestmentRequirementAmount\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"The amount available to be borrowed against your security property based on a formula calculated by the lending institution\",\"isNullable\":true,\"scale\":2,\"name\":\"EquityInvestmentRequirementAmount\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"FranchiseAgreement.cdm.json/FranchiseAgreement\",\"name\":\"RightToUseTradeNameSection\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"The contract section addressing the rights associated with the use of the trade name.\",\"isNullable\":true,\"name\":\"RightToUseTradeNameSection\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"FranchiseAgreement.cdm.json/FranchiseAgreement\",\"name\":\"FranchiseeObligationsSection\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"The contract section addressing the franchisee obligations.\",\"isNullable\":true,\"name\":\"FranchiseeObligationsSection\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"FranchiseAgreement.cdm.json/FranchiseAgreement\",\"name\":\"FranchisorObligationsSection\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"The contract section addressing the franchisor obligations.\",\"isNullable\":true,\"name\":\"FranchisorObligationsSection\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"FranchiseAgreement.cdm.json/FranchiseAgreement\",\"name\":\"PremisesSection\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"The contract section addressing the use and maintenance of premises.\",\"isNullable\":true,\"name\":\"PremisesSection\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"FranchiseAgreement.cdm.json/FranchiseAgreement\",\"name\":\"TerritorySection\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"The contract section addressing the sales and marketing territory rights.\",\"isNullable\":true,\"name\":\"TerritorySection\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"FranchiseAgreement.cdm.json/FranchiseAgreement\",\"name\":\"FeesSection\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"The contract section addressing the fees associated with the franchise.\",\"isNullable\":true,\"name\":\"FeesSection\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"FranchiseAgreement.cdm.json/FranchiseAgreement\",\"name\":\"RoyaltiesSection\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"The contract section addressing the royalties associated with the franchise.\",\"isNullable\":true,\"name\":\"RoyaltiesSection\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"FranchiseAgreement.cdm.json/FranchiseAgreement\",\"name\":\"RenewalTermsSection\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"The contract section addressing the renewal terms associated with the franchise.\",\"isNullable\":true,\"name\":\"RenewalTermsSection\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"FranchiseAgreement.cdm.json/FranchiseAgreement\",\"name\":\"StandardsSection\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"The contract section addressing the standards associated with the franchise.\",\"isNullable\":true,\"name\":\"StandardsSection\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"FranchiseAgreement.cdm.json/FranchiseAgreement\",\"name\":\"RightsOfSaleSection\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"The contract section addressing the rights to sell franchise products and services.\",\"isNullable\":true,\"name\":\"RightsOfSaleSection\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"FranchiseAgreement.cdm.json/FranchiseAgreement\",\"name\":\"PerformanceTargetsSection\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"The contract section addressing the sales targets associated with the franchise.\",\"isNullable\":true,\"name\":\"PerformanceTargetsSection\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"FranchiseAgreement.cdm.json/FranchiseAgreement\",\"name\":\"TerminationSection\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"The contract section addressing the termination of the agreement.\",\"isNullable\":true,\"name\":\"TerminationSection\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"FranchiseAgreement.cdm.json/FranchiseAgreement\",\"name\":\"NonCompeteSection\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"Prevents the franchisee from entering a similar line of business not only during the term of the agreement and renewal terms, but also for a period of time after the agreement ends unless prior approval has been received from the franchisor.\",\"isNullable\":true,\"name\":\"NonCompeteSection\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"FranchiseAgreement.cdm.json/FranchiseAgreement\",\"name\":\"PercentageRentSection\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"A Lease may have a percentage rent fee clause, which means once a target sales figure has been reached, you will pay the landlord the greater of:\\n\\nthe amount determined by calculating a percentage of your gross sales i.e. 5% the regular monthly rent amount.\",\"isNullable\":true,\"name\":\"PercentageRentSection\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"FranchiseAgreement.cdm.json/FranchiseAgreement\",\"name\":\"ProtectedTerritorySection\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"A designated area or geographic boundary granted to the franchisee by the terms of a franchise agreement. The franchisor agrees not to open another franchised or company owned business of a like or exact nature within the franchisees protected (assigned) territory.\",\"isNullable\":true,\"name\":\"ProtectedTerritorySection\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"FranchiseAgreement.cdm.json/FranchiseAgreement\",\"name\":\"RulesOfOperationSection\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"Specific mandatory rules with which every franchisee and company outlet must comply. This document will change from time to time. By incorporation by reference in the franchise agreement, violation of the Rules of Operations allows the franchisor to cancel a franchise agreement.\",\"isNullable\":true,\"name\":\"RulesOfOperationSection\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"FranchiseAgreement.cdm.json/FranchiseAgreement\",\"name\":\"MultipleUnitFranchiseAgreementIndicator\"},\"dataType\":\"boolean\",\"description\":\"The franchisor awards the right to a franchisee to operate more than one unit within a defined area based on an agreed upon development schedule. If the franchisor decides to expand into a new geographical area which may be a city or province and does have the resources or staff to handle this growth themselves, a Master Franchise, Sub-franchise or an Area Development agreement is structured with a party who will use their resources to develop the franchise network by granting unit franchises to others or establish their own outlets, provide the training and local ongoing support.\",\"isNullable\":true,\"name\":\"MultipleUnitFranchiseAgreementIndicator\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"FranchiseAgreement.cdm.json/FranchiseAgreement\",\"name\":\"JobFranchisingAgreementIndicator\"},\"dataType\":\"boolean\",\"description\":\"The franchisee actually does the work that provides the service to their customers.\",\"isNullable\":true,\"name\":\"JobFranchisingAgreementIndicator\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"FranchiseAgreement.cdm.json/FranchiseAgreement\",\"name\":\"ConversionFranchiseAgreementIndicator\"},\"dataType\":\"boolean\",\"description\":\"A franchisor who allows existing businesses to convert to the franchisors brand for the purpose of being part of the franchised system.\",\"isNullable\":true,\"name\":\"ConversionFranchiseAgreementIndicator\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"FranchiseAgreement.cdm.json/FranchiseAgreement\",\"name\":\"ConversionFranchiseIndicator\"},\"dataType\":\"boolean\",\"description\":\"This is a franchise that permits existing businesses to join a national franchise system to use its recognized name and trademark and operating system.\",\"isNullable\":true,\"name\":\"ConversionFranchiseIndicator\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"FranchiseAgreement.cdm.json/FranchiseAgreement\",\"name\":\"MasterFranchiseeAgreementIndicator\"},\"dataType\":\"boolean\",\"description\":\"In master franchising, the franchisor grants the master franchisee the right to act as the franchisor in the target territory. The master franchisee may open his or her own outlets, sub-franchise or do both. The primary advantages to the franchisor of master licensing are: limited capital investment; tapping into the master franchisee's knowledge of the local market and only having to deal with one party.\",\"isNullable\":true,\"name\":\"MasterFranchiseeAgreementIndicator\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"FranchiseAgreement.cdm.json/FranchiseAgreement\",\"name\":\"RegionalDevelopmentAgreementIndicator\"},\"dataType\":\"boolean\",\"description\":\"a.k.a. Regional Franchisee, Regional Coordinator Franchisee; a franchise granted to develop or sell a person's franchise rights to a third party in a defined geographical area. A portion of the franchise fee is normally paid in advance for a certain minimum number of franchise outlets which may be activated by the Regional Franchisee or sold at a disclosed fee to an individual franchise buyer. This agreement normally awards a share of the initial full franchise fee and a percentage of the royalty payment.\",\"isNullable\":true,\"name\":\"RegionalDevelopmentAgreementIndicator\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"FranchiseAgreement.cdm.json/FranchiseAgreement\",\"name\":\"ManagementFranchisingAgreementIndicator\"},\"dataType\":\"boolean\",\"description\":\"The franchisee recruits, organizes and manages a team who provide the services\",\"isNullable\":true,\"name\":\"ManagementFranchisingAgreementIndicator\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"FranchiseAgreement.cdm.json/FranchiseAgreement\",\"name\":\"FranchiseeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Franchisee.\",\"isNullable\":true,\"name\":\"FranchiseeId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"FranchiseAgreement.cdm.json/FranchiseAgreement\",\"name\":\"FranchiseeTypeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a franchisee type.\",\"isNullable\":true,\"name\":\"FranchiseeTypeId\"}]}}}",
+			"Description": "A written contract detailing the mutual responsibilities of franchisors and franchisees. It is usually for a several-year term, and when the term is up, the contract expires and must be renewed. Some state laws require the contract to be renewable at the franchisee's option. Usually a franchise agreement may not be sold, transferred, or otherwise assigned without the franchisor's permission.\n\nFranchise Contract\n\nThe legal agreement between the parties which sets out the terms under which the Franchisee will operate the business. The terms usually include the following:\n\n- The right to use the trade name\n- The Franchisee's obligations\n- The Franchisor's obligations\n- The premises and the territory\n- Length of Franchise contract\n- Financial aspects such as initial franchisee fee and ongoing royalties\n- Renewal terms\n- Control of standards\n- Rights of sale\n- Performance targets\n- Termination\n- Effects of termination",
+			"DisplayFolderInfo": "{\"name\":\"Contract\",\"colorCode\":\"#000F5C\"}",
+			"PrimaryKeys": "ContractId",
+			"spark.sql.sources.provider": "csv",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"ContractId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"FranchiseName\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"FranchiseTrademark\",\"type\":\"binary\",\"nullable\":true,\"metadata\":{}},{\"name\":\"FranchiseAgreementStartDate\",\"type\":\"date\",\"nullable\":true,\"metadata\":{}},{\"name\":\"FranchiseAgreementEndDate\",\"type\":\"date\",\"nullable\":true,\"metadata\":{}},{\"name\":\"FranchiseFeeAmount\",\"type\":\"decimal(18,2)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"CapitalRequiredAmount\",\"type\":\"decimal(18,2)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"InitialInvestmentAmount\",\"type\":\"decimal(18,2)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"EquityInvestmentRequirementAmount\",\"type\":\"decimal(18,2)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"RightToUseTradeNameSection\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"FranchiseeObligationsSection\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"FranchisorObligationsSection\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"PremisesSection\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"TerritorySection\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"FeesSection\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"RoyaltiesSection\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"RenewalTermsSection\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"StandardsSection\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"RightsOfSaleSection\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"PerformanceTargetsSection\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"TerminationSection\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"NonCompeteSection\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"PercentageRentSection\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ProtectedTerritorySection\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"RulesOfOperationSection\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"MultipleUnitFranchiseAgreementIndicator\",\"type\":\"boolean\",\"nullable\":true,\"metadata\":{}},{\"name\":\"JobFranchisingAgreementIndicator\",\"type\":\"boolean\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ConversionFranchiseAgreementIndicator\",\"type\":\"boolean\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ConversionFranchiseIndicator\",\"type\":\"boolean\",\"nullable\":true,\"metadata\":{}},{\"name\":\"MasterFranchiseeAgreementIndicator\",\"type\":\"boolean\",\"nullable\":true,\"metadata\":{}},{\"name\":\"RegionalDevelopmentAgreementIndicator\",\"type\":\"boolean\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ManagementFranchisingAgreementIndicator\",\"type\":\"boolean\",\"nullable\":true,\"metadata\":{}},{\"name\":\"FranchiseeId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"FranchiseeTypeId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "c514206c-a9da-4d9d-9d7d-fbf9087e9f30",
+		"Description": "A written contract detailing the mutual responsibilities of franchisors and franchisees. It is usually for a several-year term, and when the term is up, the contract expires and must be renewed. Some state laws require the contract to be renewable at the franchisee's option. Usually a franchise agreement may not be sold, transferred, or otherwise assigned without the franchisor's permission.\n\nFranchise Contract\n\nThe legal agreement between the parties which sets out the terms under which the Franchisee will operate the business. The terms usually include the following:\n\n- The right to use the trade name\n- The Franchisee's obligations\n- The Franchisor's obligations\n- The premises and the territory\n- Length of Franchise contract\n- Financial aspects such as initial franchisee fee and ongoing royalties\n- Renewal terms\n- Control of standards\n- Rights of sale\n- Performance targets\n- Termination\n- Effects of termination"
+	},
+	"type": "TABLE"
+}

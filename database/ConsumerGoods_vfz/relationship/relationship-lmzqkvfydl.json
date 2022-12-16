@@ -1,0 +1,29 @@
+{
+	"name": "relationship-lmzqkvfydl",
+	"properties": {
+		"Name": "relationship-lmzqkvfydl",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "FamilyLifeCycle",
+		"ToTableName": "PartyFamilyLifeCycle",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "FamilyLifeCycleId",
+				"ToColumnName": "FamilyLifeCycleId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"FamilyLifeCycle.cdm.json/FamilyLifeCycle\",\"toEntity\":\"PartyFamilyLifeCycle.cdm.json/PartyFamilyLifeCycle\",\"joinPairs\":[{\"fromAttribute\":\"FamilyLifeCycleId\",\"toAttribute\":\"FamilyLifeCycleId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "10249ba5-0571-4ec4-bca9-3cd65004143a"
+	},
+	"type": "RELATIONSHIP"
+}

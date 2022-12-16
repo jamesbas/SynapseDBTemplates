@@ -1,0 +1,215 @@
+{
+	"name": "ContractSectionClause",
+	"properties": {
+		"Name": "ContractSectionClause",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "ContractId",
+					"Description": "The unique identifier of a Contract.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ContractSectionClause.cdm.json/ContractSectionClause",
+						"Name": "ContractId"
+					}
+				},
+				{
+					"Name": "ContractSectionId",
+					"Description": "The unique identifier of a Contract Section.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ContractSectionClause.cdm.json/ContractSectionClause",
+						"Name": "ContractSectionId"
+					}
+				},
+				{
+					"Name": "ClauseId",
+					"Description": "The unique identifier of a Clause.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ContractSectionClause.cdm.json/ContractSectionClause",
+						"Name": "ClauseId"
+					}
+				},
+				{
+					"Name": "ClauseEffectiveDate",
+					"Description": "The date that the clause was first effective.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ContractSectionClause.cdm.json/ContractSectionClause",
+						"Name": "ClauseEffectiveDate"
+					}
+				},
+				{
+					"Name": "ClauseText",
+					"Description": "The text included in the clause.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ContractSectionClause.cdm.json/ContractSectionClause",
+						"Name": "ClauseText"
+					}
+				},
+				{
+					"Name": "ClauseEndDate",
+					"Description": "The date that the clause ceased being in effect.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ContractSectionClause.cdm.json/ContractSectionClause",
+						"Name": "ClauseEndDate"
+					}
+				},
+				{
+					"Name": "ClauseTypeId",
+					"Description": "The unique identifier of a Clause Type.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ContractSectionClause.cdm.json/ContractSectionClause",
+						"Name": "ClauseTypeId"
+					}
+				}
+			],
+			"ColumnSetEntityName": "7bf4e7f8-694b-48b1-a931-5d895c7eaea3",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/ContractSectionClause",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/ContractSectionClause",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"ContractId\":{\"entity\":\"ContractSectionClause.cdm.json/ContractSectionClause\",\"name\":\"ContractId\"},\"ContractSectionId\":{\"entity\":\"ContractSectionClause.cdm.json/ContractSectionClause\",\"name\":\"ContractSectionId\"},\"ClauseId\":{\"entity\":\"ContractSectionClause.cdm.json/ContractSectionClause\",\"name\":\"ClauseId\"},\"ClauseEffectiveDate\":{\"entity\":\"ContractSectionClause.cdm.json/ContractSectionClause\",\"name\":\"ClauseEffectiveDate\"},\"ClauseText\":{\"entity\":\"ContractSectionClause.cdm.json/ContractSectionClause\",\"name\":\"ClauseText\"},\"ClauseEndDate\":{\"entity\":\"ContractSectionClause.cdm.json/ContractSectionClause\",\"name\":\"ClauseEndDate\"},\"ClauseTypeId\":{\"entity\":\"ContractSectionClause.cdm.json/ContractSectionClause\",\"name\":\"ClauseTypeId\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"ContractSectionClause\",\"path\":\"ContractSectionClause.cdm.json/ContractSectionClause\"},\"description\":\"A clause in a contract section.\",\"primaryKey\":[\"ContractId\",\"ContractSectionId\",\"ClauseId\",\"ClauseEffectiveDate\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ContractSectionClause.cdm.json/ContractSectionClause\",\"name\":\"ContractId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Contract.\",\"isNullable\":false,\"name\":\"ContractId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ContractSectionClause.cdm.json/ContractSectionClause\",\"name\":\"ContractSectionId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Contract Section.\",\"isNullable\":false,\"name\":\"ContractSectionId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ContractSectionClause.cdm.json/ContractSectionClause\",\"name\":\"ClauseId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Clause.\",\"isNullable\":false,\"name\":\"ClauseId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ContractSectionClause.cdm.json/ContractSectionClause\",\"name\":\"ClauseEffectiveDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The date that the clause was first effective.\",\"isNullable\":false,\"name\":\"ClauseEffectiveDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ContractSectionClause.cdm.json/ContractSectionClause\",\"name\":\"ClauseText\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"The text included in the clause.\",\"isNullable\":true,\"name\":\"ClauseText\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ContractSectionClause.cdm.json/ContractSectionClause\",\"name\":\"ClauseEndDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The date that the clause ceased being in effect.\",\"isNullable\":true,\"name\":\"ClauseEndDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ContractSectionClause.cdm.json/ContractSectionClause\",\"name\":\"ClauseTypeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Clause Type.\",\"isNullable\":false,\"name\":\"ClauseTypeId\"}]}}}",
+			"Description": "A clause in a contract section.",
+			"DisplayFolderInfo": "{\"name\":\"Contract\",\"colorCode\":\"#000F5C\"}",
+			"PrimaryKeys": "ContractId,ContractSectionId,ClauseId,ClauseEffectiveDate",
+			"spark.sql.sources.provider": "csv",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"ContractId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"ContractSectionId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"ClauseId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"ClauseEffectiveDate\",\"type\":\"date\",\"nullable\":false,\"metadata\":{}},{\"name\":\"ClauseText\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ClauseEndDate\",\"type\":\"date\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ClauseTypeId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "3fc36593-5c1d-42b1-bec6-3c2f0846eb7f",
+		"Description": "A clause in a contract section."
+	},
+	"type": "TABLE"
+}

@@ -1,0 +1,29 @@
+{
+	"name": "relationship-crrmvyuyuc",
+	"properties": {
+		"Name": "relationship-crrmvyuyuc",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "GeographicCriteria",
+		"ToTableName": "PartyLocationGeographicCriteria",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "GeographicCriteriaId",
+				"ToColumnName": "GeographicCriteriaId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"GeographicCriteria.cdm.json/GeographicCriteria\",\"toEntity\":\"PartyLocationGeographicCriteria.cdm.json/PartyLocationGeographicCriteria\",\"joinPairs\":[{\"fromAttribute\":\"GeographicCriteriaId\",\"toAttribute\":\"GeographicCriteriaId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "2367b591-2e5e-49f3-b56c-c0bcaf29b803"
+	},
+	"type": "RELATIONSHIP"
+}

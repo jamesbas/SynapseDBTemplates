@@ -1,0 +1,29 @@
+{
+	"name": "relationship-fmppbslvuu",
+	"properties": {
+		"Name": "relationship-fmppbslvuu",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "SocialMediaPlatform",
+		"ToTableName": "SocialMediaPlatformUser",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "SocialMediaPlatformId",
+				"ToColumnName": "SocialMediaPlatformId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"SocialMediaPlatform.cdm.json/SocialMediaPlatform\",\"toEntity\":\"SocialMediaPlatformUser.cdm.json/SocialMediaPlatformUser\",\"joinPairs\":[{\"fromAttribute\":\"SocialMediaPlatformId\",\"toAttribute\":\"SocialMediaPlatformId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "cee4651f-e807-42f6-9c46-b565f270804c"
+	},
+	"type": "RELATIONSHIP"
+}

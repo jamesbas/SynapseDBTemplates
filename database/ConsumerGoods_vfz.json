@@ -1,0 +1,28 @@
+{
+	"name": "ConsumerGoods_vfz",
+	"properties": {
+		"Name": "ConsumerGoods_vfz",
+		"EntityType": "DATABASE",
+		"Description": "",
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"Properties": {
+			"DerivedModelDBInfo": "{\"ModelDirectives\":{\"BaseModel\":{\"Name\":\"ConsumerGoods\",\"Version\":\"1.1.0\"}}}",
+			"IsSyMSCDMDatabase": true,
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate"
+		},
+		"Source": {
+			"Provider": "ADLS",
+			"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz",
+			"Properties": {
+				"FormatType": "csv",
+				"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage"
+			}
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 2,
+		"ObjectId": "726e7710-6785-4bca-b35c-3747677124a0"
+	},
+	"type": "DATABASE"
+}

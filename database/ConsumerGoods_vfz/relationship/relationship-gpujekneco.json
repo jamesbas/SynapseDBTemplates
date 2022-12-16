@@ -1,0 +1,29 @@
+{
+	"name": "relationship-gpujekneco",
+	"properties": {
+		"Name": "relationship-gpujekneco",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "TaxStatus",
+		"ToTableName": "VendorCountryTaxStatus",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "TaxStatusId",
+				"ToColumnName": "TaxStatusId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"TaxStatus.cdm.json/TaxStatus\",\"toEntity\":\"VendorCountryTaxStatus.cdm.json/VendorCountryTaxStatus\",\"joinPairs\":[{\"fromAttribute\":\"TaxStatusId\",\"toAttribute\":\"TaxStatusId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 2,
+		"ObjectId": "d4aba70e-7271-40fa-97e2-4f982a4c9d07"
+	},
+	"type": "RELATIONSHIP"
+}

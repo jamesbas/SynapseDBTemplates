@@ -1,0 +1,29 @@
+{
+	"name": "relationship-euykiddteg",
+	"properties": {
+		"Name": "relationship-euykiddteg",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "FocusGroup",
+		"ToTableName": "FocusGroupParty",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "FocusGroupId",
+				"ToColumnName": "FocusGroupId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"FocusGroup.cdm.json/FocusGroup\",\"toEntity\":\"FocusGroupParty.cdm.json/FocusGroupParty\",\"joinPairs\":[{\"fromAttribute\":\"FocusGroupId\",\"toAttribute\":\"FocusGroupId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "6dd1544d-f431-404b-aa33-7214d4aa7125"
+	},
+	"type": "RELATIONSHIP"
+}

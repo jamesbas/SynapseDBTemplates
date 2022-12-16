@@ -1,0 +1,29 @@
+{
+	"name": "relationship-idntneohbf",
+	"properties": {
+		"Name": "relationship-idntneohbf",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "Gender",
+		"ToTableName": "IndividualCustomer",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "GenderId",
+				"ToColumnName": "GenderId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"Gender.cdm.json/Gender\",\"toEntity\":\"IndividualCustomer.cdm.json/IndividualCustomer\",\"joinPairs\":[{\"fromAttribute\":\"GenderId\",\"toAttribute\":\"GenderId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "69c8cb28-f89c-40eb-aaf5-79021e7692ec"
+	},
+	"type": "RELATIONSHIP"
+}

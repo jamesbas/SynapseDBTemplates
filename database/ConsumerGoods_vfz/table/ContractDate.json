@@ -1,0 +1,157 @@
+{
+	"name": "ContractDate",
+	"properties": {
+		"Name": "ContractDate",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "ContractId",
+					"Description": "The unique identifier of a Contract.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ContractDate.cdm.json/ContractDate",
+						"Name": "ContractId"
+					}
+				},
+				{
+					"Name": "ContractDateTypeId",
+					"Description": "The unique identifier of a Contract Date Type.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ContractDate.cdm.json/ContractDate",
+						"Name": "ContractDateTypeId"
+					}
+				},
+				{
+					"Name": "ContractDateTimestamp",
+					"Description": "The timestamp of the Contract Date Type for the Contract.",
+					"OriginDataTypeName": {
+						"TypeName": "timestamp",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"TimestampFormat": "YYYY-MM-DD HH:MM:SS.fffffffff",
+							"HIVE_TYPE_STRING": "timestamp"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ContractDate.cdm.json/ContractDate",
+						"Name": "ContractDateTimestamp"
+					}
+				},
+				{
+					"Name": "ContractDateNote",
+					"Description": "A note, comment or additional information regarding the Contract Date.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ContractDate.cdm.json/ContractDate",
+						"Name": "ContractDateNote"
+					}
+				}
+			],
+			"ColumnSetEntityName": "d0f7d8d3-5e84-4be8-b6ab-5b8462ecb66a",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/ContractDate",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/ContractDate",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"ContractId\":{\"entity\":\"ContractDate.cdm.json/ContractDate\",\"name\":\"ContractId\"},\"ContractDateTypeId\":{\"entity\":\"ContractDate.cdm.json/ContractDate\",\"name\":\"ContractDateTypeId\"},\"ContractDateTimestamp\":{\"entity\":\"ContractDate.cdm.json/ContractDate\",\"name\":\"ContractDateTimestamp\"},\"ContractDateNote\":{\"entity\":\"ContractDate.cdm.json/ContractDate\",\"name\":\"ContractDateNote\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"ContractDate\",\"path\":\"ContractDate.cdm.json/ContractDate\"},\"description\":\"A note, comment or associated information related to the Contract Date.\",\"primaryKey\":[\"ContractId\",\"ContractDateTypeId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ContractDate.cdm.json/ContractDate\",\"name\":\"ContractId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Contract.\",\"isNullable\":false,\"name\":\"ContractId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ContractDate.cdm.json/ContractDate\",\"name\":\"ContractDateTypeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Contract Date Type.\",\"isNullable\":false,\"name\":\"ContractDateTypeId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ContractDate.cdm.json/ContractDate\",\"name\":\"ContractDateTimestamp\"},\"dataType\":\"timestamp\",\"description\":\"The timestamp of the Contract Date Type for the Contract.\",\"isNullable\":true,\"name\":\"ContractDateTimestamp\",\"timestampFormat\":\"YYYY-MM-DD HH:MM:SS.fffffffff\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ContractDate.cdm.json/ContractDate\",\"name\":\"ContractDateNote\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"A note, comment or additional information regarding the Contract Date.\",\"isNullable\":true,\"name\":\"ContractDateNote\"}]}}}",
+			"Description": "A note, comment or associated information related to the Contract Date.",
+			"DisplayFolderInfo": "{\"name\":\"Contract\",\"colorCode\":\"#000F5C\"}",
+			"PrimaryKeys": "ContractId,ContractDateTypeId",
+			"spark.sql.sources.provider": "csv",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"ContractId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"ContractDateTypeId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"ContractDateTimestamp\",\"type\":\"timestamp\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ContractDateNote\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "a3378780-096d-45e1-949e-609e859a9aa0",
+		"Description": "A note, comment or associated information related to the Contract Date."
+	},
+	"type": "TABLE"
+}

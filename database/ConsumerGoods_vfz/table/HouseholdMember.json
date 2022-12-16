@@ -1,0 +1,234 @@
+{
+	"name": "HouseholdMember",
+	"properties": {
+		"Name": "HouseholdMember",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "HouseholdId",
+					"Description": "The unique identifier of a Household.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "HouseholdMember.cdm.json/HouseholdMember",
+						"Name": "HouseholdId"
+					}
+				},
+				{
+					"Name": "HouseholdMemberPartyId",
+					"Description": "The unique identifier of a Party.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "HouseholdMember.cdm.json/HouseholdMember",
+						"Name": "HouseholdMemberPartyId"
+					}
+				},
+				{
+					"Name": "HouseholdMemberPeriodStartDate",
+					"Description": "The period start date for which the party is a member of the household.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "HouseholdMember.cdm.json/HouseholdMember",
+						"Name": "HouseholdMemberPeriodStartDate"
+					}
+				},
+				{
+					"Name": "HouseholdMemberPeriodEndDate",
+					"Description": "The period end for which the party is a member of the household.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "HouseholdMember.cdm.json/HouseholdMember",
+						"Name": "HouseholdMemberPeriodEndDate"
+					}
+				},
+				{
+					"Name": "HouseholdIsPrimaryIndicator",
+					"Description": "Indicates whether the household is the primary household for the member.",
+					"OriginDataTypeName": {
+						"TypeName": "boolean",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "boolean"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "HouseholdMember.cdm.json/HouseholdMember",
+						"Name": "HouseholdIsPrimaryIndicator"
+					}
+				},
+				{
+					"Name": "IncomeProducingStatusId",
+					"Description": "The unique identifier of an Income Producing Status.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "HouseholdMember.cdm.json/HouseholdMember",
+						"Name": "IncomeProducingStatusId"
+					}
+				},
+				{
+					"Name": "CustomerId",
+					"Description": "The unique identifier of a Customer.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "HouseholdMember.cdm.json/HouseholdMember",
+						"Name": "CustomerId"
+					}
+				},
+				{
+					"Name": "HouseholdMembershipNote",
+					"Description": "A note, comment or additional information regarding the household membership.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "HouseholdMember.cdm.json/HouseholdMember",
+						"Name": "HouseholdMembershipNote"
+					}
+				}
+			],
+			"ColumnSetEntityName": "6589a8e9-02f6-49f1-90bb-d26f7dead1ed",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/HouseholdMember",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/HouseholdMember",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"HouseholdId\":{\"entity\":\"HouseholdMember.cdm.json/HouseholdMember\",\"name\":\"HouseholdId\"},\"HouseholdMemberPartyId\":{\"entity\":\"HouseholdMember.cdm.json/HouseholdMember\",\"name\":\"HouseholdMemberPartyId\"},\"HouseholdMemberPeriodStartDate\":{\"entity\":\"HouseholdMember.cdm.json/HouseholdMember\",\"name\":\"HouseholdMemberPeriodStartDate\"},\"HouseholdMemberPeriodEndDate\":{\"entity\":\"HouseholdMember.cdm.json/HouseholdMember\",\"name\":\"HouseholdMemberPeriodEndDate\"},\"HouseholdIsPrimaryIndicator\":{\"entity\":\"HouseholdMember.cdm.json/HouseholdMember\",\"name\":\"HouseholdIsPrimaryIndicator\"},\"IncomeProducingStatusId\":{\"entity\":\"HouseholdMember.cdm.json/HouseholdMember\",\"name\":\"IncomeProducingStatusId\"},\"CustomerId\":{\"entity\":\"HouseholdMember.cdm.json/HouseholdMember\",\"name\":\"CustomerId\"},\"HouseholdMembershipNote\":{\"entity\":\"HouseholdMember.cdm.json/HouseholdMember\",\"name\":\"HouseholdMembershipNote\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"HouseholdMember\",\"path\":\"HouseholdMember.cdm.json/HouseholdMember\"},\"description\":\"The specific members of the  Household for the indicated period.\",\"primaryKey\":[\"HouseholdId\",\"HouseholdMemberPartyId\",\"HouseholdMemberPeriodStartDate\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"HouseholdMember.cdm.json/HouseholdMember\",\"name\":\"HouseholdId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a Household.\",\"isNullable\":false,\"name\":\"HouseholdId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"HouseholdMember.cdm.json/HouseholdMember\",\"name\":\"HouseholdMemberPartyId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a Party.\",\"isNullable\":false,\"name\":\"HouseholdMemberPartyId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"HouseholdMember.cdm.json/HouseholdMember\",\"name\":\"HouseholdMemberPeriodStartDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The period start date for which the party is a member of the household.\",\"isNullable\":false,\"name\":\"HouseholdMemberPeriodStartDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"HouseholdMember.cdm.json/HouseholdMember\",\"name\":\"HouseholdMemberPeriodEndDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The period end for which the party is a member of the household.\",\"isNullable\":true,\"name\":\"HouseholdMemberPeriodEndDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"HouseholdMember.cdm.json/HouseholdMember\",\"name\":\"HouseholdIsPrimaryIndicator\"},\"dataType\":\"boolean\",\"description\":\"Indicates whether the household is the primary household for the member.\",\"isNullable\":true,\"name\":\"HouseholdIsPrimaryIndicator\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"HouseholdMember.cdm.json/HouseholdMember\",\"name\":\"IncomeProducingStatusId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of an Income Producing Status.\",\"isNullable\":true,\"name\":\"IncomeProducingStatusId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"HouseholdMember.cdm.json/HouseholdMember\",\"name\":\"CustomerId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a Customer.\",\"isNullable\":true,\"name\":\"CustomerId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"HouseholdMember.cdm.json/HouseholdMember\",\"name\":\"HouseholdMembershipNote\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"A note, comment or additional information regarding the household membership.\",\"isNullable\":true,\"name\":\"HouseholdMembershipNote\"}]}}}",
+			"Description": "The specific members of the  Household for the indicated period.",
+			"DisplayFolderInfo": "{\"name\":\"Party\",\"colorCode\":\"#7D0F6C\"}",
+			"PrimaryKeys": "HouseholdId,HouseholdMemberPartyId,HouseholdMemberPeriodStartDate",
+			"spark.sql.sources.provider": "csv",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"HouseholdId\",\"type\":\"long\",\"nullable\":false,\"metadata\":{}},{\"name\":\"HouseholdMemberPartyId\",\"type\":\"long\",\"nullable\":false,\"metadata\":{}},{\"name\":\"HouseholdMemberPeriodStartDate\",\"type\":\"date\",\"nullable\":false,\"metadata\":{}},{\"name\":\"HouseholdMemberPeriodEndDate\",\"type\":\"date\",\"nullable\":true,\"metadata\":{}},{\"name\":\"HouseholdIsPrimaryIndicator\",\"type\":\"boolean\",\"nullable\":true,\"metadata\":{}},{\"name\":\"IncomeProducingStatusId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"CustomerId\",\"type\":\"long\",\"nullable\":true,\"metadata\":{}},{\"name\":\"HouseholdMembershipNote\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "e1841995-4ade-456d-9bc5-72989e9fe204",
+		"Description": "The specific members of the  Household for the indicated period."
+	},
+	"type": "TABLE"
+}

@@ -1,0 +1,254 @@
+{
+	"name": "OfferOfEmployment",
+	"properties": {
+		"Name": "OfferOfEmployment",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "ContractId",
+					"Description": "The unique identifier of a Contract.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "OfferOfEmployment.cdm.json/OfferOfEmployment",
+						"Name": "ContractId"
+					}
+				},
+				{
+					"Name": "OfferDate",
+					"Description": "The date that the offer is extended.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "OfferOfEmployment.cdm.json/OfferOfEmployment",
+						"Name": "OfferDate"
+					}
+				},
+				{
+					"Name": "EmployeeLocationId",
+					"Description": "The unique identifier of a Location.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "OfferOfEmployment.cdm.json/OfferOfEmployment",
+						"Name": "EmployeeLocationId"
+					}
+				},
+				{
+					"Name": "TitleOfPosition",
+					"Description": "The title of the position being offered.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 16,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "OfferOfEmployment.cdm.json/OfferOfEmployment",
+						"Name": "TitleOfPosition"
+					}
+				},
+				{
+					"Name": "DescriptionOfPosition",
+					"Description": "A description of the position being offered.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "OfferOfEmployment.cdm.json/OfferOfEmployment",
+						"Name": "DescriptionOfPosition"
+					}
+				},
+				{
+					"Name": "JobStartDate",
+					"Description": "The date that the job will start.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "OfferOfEmployment.cdm.json/OfferOfEmployment",
+						"Name": "JobStartDate"
+					}
+				},
+				{
+					"Name": "JobPayRate",
+					"Description": "The rate of pay for the position.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "OfferOfEmployment.cdm.json/OfferOfEmployment",
+						"Name": "JobPayRate"
+					}
+				},
+				{
+					"Name": "DateOfferExpires",
+					"Description": "The date that the offer to prospective employee expires.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "OfferOfEmployment.cdm.json/OfferOfEmployment",
+						"Name": "DateOfferExpires"
+					}
+				},
+				{
+					"Name": "EmployerRepresentativeName",
+					"Description": "The name of the employer representative extending the job offer to the prospective employee.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 256,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "OfferOfEmployment.cdm.json/OfferOfEmployment",
+						"Name": "EmployerRepresentativeName"
+					}
+				}
+			],
+			"ColumnSetEntityName": "11d88ffe-fdc4-474a-b4d0-d435cb3b9a73",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/OfferOfEmployment",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/OfferOfEmployment",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"ContractId\":{\"entity\":\"OfferOfEmployment.cdm.json/OfferOfEmployment\",\"name\":\"ContractId\"},\"OfferDate\":{\"entity\":\"OfferOfEmployment.cdm.json/OfferOfEmployment\",\"name\":\"OfferDate\"},\"EmployeeLocationId\":{\"entity\":\"OfferOfEmployment.cdm.json/OfferOfEmployment\",\"name\":\"EmployeeLocationId\"},\"TitleOfPosition\":{\"entity\":\"OfferOfEmployment.cdm.json/OfferOfEmployment\",\"name\":\"TitleOfPosition\"},\"DescriptionOfPosition\":{\"entity\":\"OfferOfEmployment.cdm.json/OfferOfEmployment\",\"name\":\"DescriptionOfPosition\"},\"JobStartDate\":{\"entity\":\"OfferOfEmployment.cdm.json/OfferOfEmployment\",\"name\":\"JobStartDate\"},\"JobPayRate\":{\"entity\":\"OfferOfEmployment.cdm.json/OfferOfEmployment\",\"name\":\"JobPayRate\"},\"DateOfferExpires\":{\"entity\":\"OfferOfEmployment.cdm.json/OfferOfEmployment\",\"name\":\"DateOfferExpires\"},\"EmployerRepresentativeName\":{\"entity\":\"OfferOfEmployment.cdm.json/OfferOfEmployment\",\"name\":\"EmployerRepresentativeName\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"OfferOfEmployment\",\"path\":\"OfferOfEmployment.cdm.json/OfferOfEmployment\"},\"description\":\"The Offer of Employment makes a written offer of employment to a prospective employee.\",\"primaryKey\":[\"ContractId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"OfferOfEmployment.cdm.json/OfferOfEmployment\",\"name\":\"ContractId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Contract.\",\"isNullable\":false,\"name\":\"ContractId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"OfferOfEmployment.cdm.json/OfferOfEmployment\",\"name\":\"OfferDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The date that the offer is extended.\",\"isNullable\":true,\"name\":\"OfferDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"OfferOfEmployment.cdm.json/OfferOfEmployment\",\"name\":\"EmployeeLocationId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Location.\",\"isNullable\":false,\"name\":\"EmployeeLocationId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"OfferOfEmployment.cdm.json/OfferOfEmployment\",\"name\":\"TitleOfPosition\"},\"dataType\":\"string\",\"dataTypeLength\":16,\"description\":\"The title of the position being offered.\",\"isNullable\":true,\"name\":\"TitleOfPosition\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"OfferOfEmployment.cdm.json/OfferOfEmployment\",\"name\":\"DescriptionOfPosition\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"A description of the position being offered.\",\"isNullable\":true,\"name\":\"DescriptionOfPosition\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"OfferOfEmployment.cdm.json/OfferOfEmployment\",\"name\":\"JobStartDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The date that the job will start.\",\"isNullable\":true,\"name\":\"JobStartDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"OfferOfEmployment.cdm.json/OfferOfEmployment\",\"name\":\"JobPayRate\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"The rate of pay for the position.\",\"isNullable\":true,\"scale\":2,\"name\":\"JobPayRate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"OfferOfEmployment.cdm.json/OfferOfEmployment\",\"name\":\"DateOfferExpires\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The date that the offer to prospective employee expires.\",\"isNullable\":true,\"name\":\"DateOfferExpires\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"OfferOfEmployment.cdm.json/OfferOfEmployment\",\"name\":\"EmployerRepresentativeName\"},\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"The name of the employer representative extending the job offer to the prospective employee.\",\"isNullable\":true,\"name\":\"EmployerRepresentativeName\"}]}}}",
+			"Description": "The Offer of Employment makes a written offer of employment to a prospective employee.",
+			"DisplayFolderInfo": "{\"name\":\"Contract\",\"colorCode\":\"#000F5C\"}",
+			"PrimaryKeys": "ContractId",
+			"spark.sql.sources.provider": "csv",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"ContractId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"OfferDate\",\"type\":\"date\",\"nullable\":true,\"metadata\":{}},{\"name\":\"EmployeeLocationId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"TitleOfPosition\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"DescriptionOfPosition\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"JobStartDate\",\"type\":\"date\",\"nullable\":true,\"metadata\":{}},{\"name\":\"JobPayRate\",\"type\":\"decimal(18,2)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"DateOfferExpires\",\"type\":\"date\",\"nullable\":true,\"metadata\":{}},{\"name\":\"EmployerRepresentativeName\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "09c896db-9dea-4e67-a7ec-e9df86669655",
+		"Description": "The Offer of Employment makes a written offer of employment to a prospective employee."
+	},
+	"type": "TABLE"
+}

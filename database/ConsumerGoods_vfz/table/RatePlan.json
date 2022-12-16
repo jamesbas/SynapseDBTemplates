@@ -1,0 +1,309 @@
+{
+	"name": "RatePlan",
+	"properties": {
+		"Name": "RatePlan",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "RatePlanId",
+					"Description": "The unique identifier of a product.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "RatePlan.cdm.json/RatePlan",
+						"Name": "RatePlanId"
+					}
+				},
+				{
+					"Name": "RatePlanName",
+					"Description": "The common name or business name by which a Rate Plan is known.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 256,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "RatePlan.cdm.json/RatePlan",
+						"Name": "RatePlanName"
+					}
+				},
+				{
+					"Name": "RatePlanDescription",
+					"Description": "The description of a Rate Plan.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "RatePlan.cdm.json/RatePlan",
+						"Name": "RatePlanDescription"
+					}
+				},
+				{
+					"Name": "RatePlanEffectiveDate",
+					"Description": "The date that the Rate Plan is in effect.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "RatePlan.cdm.json/RatePlan",
+						"Name": "RatePlanEffectiveDate"
+					}
+				},
+				{
+					"Name": "RatePlanStrategyStatement",
+					"Description": "The strategy statement describing why the Rate Plan was created or conceived.\n\n- Who is it meant to cater to or attract?\n\n- What market or market segment is it intended to address?\n\n- What revenues are meant to be enhanced and by how much?\n\n- How does the Rate Plan increase competitiveness?",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "RatePlan.cdm.json/RatePlan",
+						"Name": "RatePlanStrategyStatement"
+					}
+				},
+				{
+					"Name": "RatePlanEligibilityStatement",
+					"Description": "A description of the eligibility requirements and restrictions that apply for the Rate Plan.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "RatePlan.cdm.json/RatePlan",
+						"Name": "RatePlanEligibilityStatement"
+					}
+				},
+				{
+					"Name": "BasicMonthlyCostAmount",
+					"Description": "The basic monthly charge for the Rate Plan before additional charges are applied.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "RatePlan.cdm.json/RatePlan",
+						"Name": "BasicMonthlyCostAmount"
+					}
+				},
+				{
+					"Name": "RatePlanCategoryId",
+					"Description": "The unique identifier of a Rate Plan Category.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "RatePlan.cdm.json/RatePlan",
+						"Name": "RatePlanCategoryId"
+					}
+				},
+				{
+					"Name": "StandardContractPeriod",
+					"Description": "The standard contract period expressed in days for which the Rate Plan is normally issued or sold.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "RatePlan.cdm.json/RatePlan",
+						"Name": "StandardContractPeriod"
+					}
+				},
+				{
+					"Name": "MinimumContractPeriod",
+					"Description": "The least amount of time for which a Rate Plan agreement is valid.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "RatePlan.cdm.json/RatePlan",
+						"Name": "MinimumContractPeriod"
+					}
+				},
+				{
+					"Name": "RatePlanStatusId",
+					"Description": "The unique identifier of a Rate Plan Status.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "RatePlan.cdm.json/RatePlan",
+						"Name": "RatePlanStatusId"
+					}
+				},
+				{
+					"Name": "RatePlanTypeId",
+					"Description": "The unique identifier of a Rate Plan Type.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "RatePlan.cdm.json/RatePlan",
+						"Name": "RatePlanTypeId"
+					}
+				}
+			],
+			"ColumnSetEntityName": "36802fdb-5b62-4930-8379-9e6d2d671d67",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/RatePlan",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/RatePlan",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"RatePlanId\":{\"entity\":\"RatePlan.cdm.json/RatePlan\",\"name\":\"RatePlanId\"},\"RatePlanName\":{\"entity\":\"RatePlan.cdm.json/RatePlan\",\"name\":\"RatePlanName\"},\"RatePlanDescription\":{\"entity\":\"RatePlan.cdm.json/RatePlan\",\"name\":\"RatePlanDescription\"},\"RatePlanEffectiveDate\":{\"entity\":\"RatePlan.cdm.json/RatePlan\",\"name\":\"RatePlanEffectiveDate\"},\"RatePlanStrategyStatement\":{\"entity\":\"RatePlan.cdm.json/RatePlan\",\"name\":\"RatePlanStrategyStatement\"},\"RatePlanEligibilityStatement\":{\"entity\":\"RatePlan.cdm.json/RatePlan\",\"name\":\"RatePlanEligibilityStatement\"},\"BasicMonthlyCostAmount\":{\"entity\":\"RatePlan.cdm.json/RatePlan\",\"name\":\"BasicMonthlyCostAmount\"},\"RatePlanCategoryId\":{\"entity\":\"RatePlan.cdm.json/RatePlan\",\"name\":\"RatePlanCategoryId\"},\"StandardContractPeriod\":{\"entity\":\"RatePlan.cdm.json/RatePlan\",\"name\":\"StandardContractPeriod\"},\"MinimumContractPeriod\":{\"entity\":\"RatePlan.cdm.json/RatePlan\",\"name\":\"MinimumContractPeriod\"},\"RatePlanStatusId\":{\"entity\":\"RatePlan.cdm.json/RatePlan\",\"name\":\"RatePlanStatusId\"},\"RatePlanTypeId\":{\"entity\":\"RatePlan.cdm.json/RatePlan\",\"name\":\"RatePlanTypeId\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"RatePlan\",\"path\":\"RatePlan.cdm.json/RatePlan\"},\"description\":\"A contract that describes the conditions of wireless service including all fees and usage allowances.\\n\\nA predefined tariff or billing structure for the billing of Special Services, Air Time and related Carrier services and products to Customers.\",\"primaryKey\":[\"RatePlanId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"RatePlan.cdm.json/RatePlan\",\"name\":\"RatePlanId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a product.\",\"isNullable\":false,\"name\":\"RatePlanId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"RatePlan.cdm.json/RatePlan\",\"name\":\"RatePlanName\"},\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"The common name or business name by which a Rate Plan is known.\",\"isNullable\":true,\"name\":\"RatePlanName\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"RatePlan.cdm.json/RatePlan\",\"name\":\"RatePlanDescription\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"The description of a Rate Plan.\",\"isNullable\":true,\"name\":\"RatePlanDescription\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"RatePlan.cdm.json/RatePlan\",\"name\":\"RatePlanEffectiveDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The date that the Rate Plan is in effect.\",\"isNullable\":true,\"name\":\"RatePlanEffectiveDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"RatePlan.cdm.json/RatePlan\",\"name\":\"RatePlanStrategyStatement\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"The strategy statement describing why the Rate Plan was created or conceived.\\n\\n- Who is it meant to cater to or attract?\\n\\n- What market or market segment is it intended to address?\\n\\n- What revenues are meant to be enhanced and by how much?\\n\\n- How does the Rate Plan increase competitiveness?\",\"isNullable\":false,\"name\":\"RatePlanStrategyStatement\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"RatePlan.cdm.json/RatePlan\",\"name\":\"RatePlanEligibilityStatement\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"A description of the eligibility requirements and restrictions that apply for the Rate Plan.\",\"isNullable\":true,\"name\":\"RatePlanEligibilityStatement\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"RatePlan.cdm.json/RatePlan\",\"name\":\"BasicMonthlyCostAmount\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"The basic monthly charge for the Rate Plan before additional charges are applied.\",\"isNullable\":true,\"scale\":2,\"name\":\"BasicMonthlyCostAmount\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"RatePlan.cdm.json/RatePlan\",\"name\":\"RatePlanCategoryId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Rate Plan Category.\",\"isNullable\":false,\"name\":\"RatePlanCategoryId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"RatePlan.cdm.json/RatePlan\",\"name\":\"StandardContractPeriod\"},\"dataType\":\"integer\",\"description\":\"The standard contract period expressed in days for which the Rate Plan is normally issued or sold.\",\"isNullable\":true,\"name\":\"StandardContractPeriod\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"RatePlan.cdm.json/RatePlan\",\"name\":\"MinimumContractPeriod\"},\"dataType\":\"integer\",\"description\":\"The least amount of time for which a Rate Plan agreement is valid.\",\"isNullable\":true,\"name\":\"MinimumContractPeriod\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"RatePlan.cdm.json/RatePlan\",\"name\":\"RatePlanStatusId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Rate Plan Status.\",\"isNullable\":false,\"name\":\"RatePlanStatusId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"RatePlan.cdm.json/RatePlan\",\"name\":\"RatePlanTypeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Rate Plan Type.\",\"isNullable\":true,\"name\":\"RatePlanTypeId\"}]}}}",
+			"Description": "A contract that describes the conditions of wireless service including all fees and usage allowances.\n\nA predefined tariff or billing structure for the billing of Special Services, Air Time and related Carrier services and products to Customers.",
+			"DisplayFolderInfo": "{\"name\":\"Contract\",\"colorCode\":\"#000F5C\"}",
+			"PrimaryKeys": "RatePlanId",
+			"spark.sql.sources.provider": "csv",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"RatePlanId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"RatePlanName\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"RatePlanDescription\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"RatePlanEffectiveDate\",\"type\":\"date\",\"nullable\":true,\"metadata\":{}},{\"name\":\"RatePlanStrategyStatement\",\"type\":\"string\",\"nullable\":false,\"metadata\":{}},{\"name\":\"RatePlanEligibilityStatement\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"BasicMonthlyCostAmount\",\"type\":\"decimal(18,2)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"RatePlanCategoryId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"StandardContractPeriod\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"MinimumContractPeriod\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"RatePlanStatusId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"RatePlanTypeId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "fd4ff080-8643-4c06-8393-3f79f5d9a1ba",
+		"Description": "A contract that describes the conditions of wireless service including all fees and usage allowances.\n\nA predefined tariff or billing structure for the billing of Special Services, Air Time and related Carrier services and products to Customers."
+	},
+	"type": "TABLE"
+}

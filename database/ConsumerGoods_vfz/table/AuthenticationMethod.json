@@ -1,0 +1,137 @@
+{
+	"name": "AuthenticationMethod",
+	"properties": {
+		"Name": "AuthenticationMethod",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "AuthenticationMethodId",
+					"Description": "The unique identifier of an Authentication Method.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "AuthenticationMethod.cdm.json/AuthenticationMethod",
+						"Name": "AuthenticationMethodId"
+					}
+				},
+				{
+					"Name": "AuthenticationMethodName",
+					"Description": "The name of an Authentication Method.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 256,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "AuthenticationMethod.cdm.json/AuthenticationMethod",
+						"Name": "AuthenticationMethodName"
+					}
+				},
+				{
+					"Name": "AuthenticationMethodDescription",
+					"Description": "The description of an Authentication Method.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "AuthenticationMethod.cdm.json/AuthenticationMethod",
+						"Name": "AuthenticationMethodDescription"
+					}
+				}
+			],
+			"ColumnSetEntityName": "40bf67a6-8742-4e61-9e03-cf590a15b7ae",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/AuthenticationMethod",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/AuthenticationMethod",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"AuthenticationMethodId\":{\"entity\":\"AuthenticationMethod.cdm.json/AuthenticationMethod\",\"name\":\"AuthenticationMethodId\"},\"AuthenticationMethodName\":{\"entity\":\"AuthenticationMethod.cdm.json/AuthenticationMethod\",\"name\":\"AuthenticationMethodName\"},\"AuthenticationMethodDescription\":{\"entity\":\"AuthenticationMethod.cdm.json/AuthenticationMethod\",\"name\":\"AuthenticationMethodDescription\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"AuthenticationMethod\",\"path\":\"AuthenticationMethod.cdm.json/AuthenticationMethod\"},\"description\":\"The method used to authenticate identity.\\n\\nEx:\\n- Identification\\n- Biometric\\n- Security Question(s)\",\"primaryKey\":[\"AuthenticationMethodId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"AuthenticationMethod.cdm.json/AuthenticationMethod\",\"name\":\"AuthenticationMethodId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of an Authentication Method.\",\"isNullable\":false,\"name\":\"AuthenticationMethodId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"AuthenticationMethod.cdm.json/AuthenticationMethod\",\"name\":\"AuthenticationMethodName\"},\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"The name of an Authentication Method.\",\"isNullable\":true,\"name\":\"AuthenticationMethodName\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"AuthenticationMethod.cdm.json/AuthenticationMethod\",\"name\":\"AuthenticationMethodDescription\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"The description of an Authentication Method.\",\"isNullable\":true,\"name\":\"AuthenticationMethodDescription\"}]}}}",
+			"Description": "The method used to authenticate identity.\n\nEx:\n- Identification\n- Biometric\n- Security Question(s)",
+			"DisplayFolderInfo": "{\"name\":\"Party\",\"colorCode\":\"#7D0F6C\"}",
+			"PrimaryKeys": "AuthenticationMethodId",
+			"spark.sql.sources.provider": "csv",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"AuthenticationMethodId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"AuthenticationMethodName\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"AuthenticationMethodDescription\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "52e2e782-8fa1-4e29-ae72-d61e24dc0a25",
+		"Description": "The method used to authenticate identity.\n\nEx:\n- Identification\n- Biometric\n- Security Question(s)"
+	},
+	"type": "TABLE"
+}

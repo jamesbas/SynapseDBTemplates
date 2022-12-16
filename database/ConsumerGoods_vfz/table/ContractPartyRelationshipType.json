@@ -1,0 +1,137 @@
+{
+	"name": "ContractPartyRelationshipType",
+	"properties": {
+		"Name": "ContractPartyRelationshipType",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "ContractPartyRelationshipTypeId",
+					"Description": "The unique identifier of a contract party relationship type.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ContractPartyRelationshipType.cdm.json/ContractPartyRelationshipType",
+						"Name": "ContractPartyRelationshipTypeId"
+					}
+				},
+				{
+					"Name": "ContractPartyRelationshipTypeName",
+					"Description": "The name of a contract party relationship type.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 256,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ContractPartyRelationshipType.cdm.json/ContractPartyRelationshipType",
+						"Name": "ContractPartyRelationshipTypeName"
+					}
+				},
+				{
+					"Name": "ContractPartyRelationshipTypeDescription",
+					"Description": "The description of a contract party relationship type.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ContractPartyRelationshipType.cdm.json/ContractPartyRelationshipType",
+						"Name": "ContractPartyRelationshipTypeDescription"
+					}
+				}
+			],
+			"ColumnSetEntityName": "12c0126e-780f-411e-aabb-741e3a43dc09",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/ContractPartyRelationshipType",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/ContractPartyRelationshipType",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"ContractPartyRelationshipTypeId\":{\"entity\":\"ContractPartyRelationshipType.cdm.json/ContractPartyRelationshipType\",\"name\":\"ContractPartyRelationshipTypeId\"},\"ContractPartyRelationshipTypeName\":{\"entity\":\"ContractPartyRelationshipType.cdm.json/ContractPartyRelationshipType\",\"name\":\"ContractPartyRelationshipTypeName\"},\"ContractPartyRelationshipTypeDescription\":{\"entity\":\"ContractPartyRelationshipType.cdm.json/ContractPartyRelationshipType\",\"name\":\"ContractPartyRelationshipTypeDescription\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"ContractPartyRelationshipType\",\"path\":\"ContractPartyRelationshipType.cdm.json/ContractPartyRelationshipType\"},\"description\":\"The nature of the relationship between the party and the contract or contractual process over the indicated period.\\n\\n Ex:\\n- Notice-To Party\\n- Party-to-Agreement Organization\\n- Party-to-Agreement Signature Party\\n- Contract Assigned-To Party\\n- Deliver-Contract-To Party\\n- Execution-Required-By Party\\n- Contract - Maintenance Party\\n- Contract - Negotiated-By Party\\n- Assignee\\n- Assignor\\n- Grantor\\n- Grantee\\n\\nwhere:\\n\\nGRANTOR: A person who grants or conveys lands, minerals, etc.\\n\\nGRANTEE: The person receiving the grant of lands, minerals, etc.\",\"primaryKey\":[\"ContractPartyRelationshipTypeId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ContractPartyRelationshipType.cdm.json/ContractPartyRelationshipType\",\"name\":\"ContractPartyRelationshipTypeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a contract party relationship type.\",\"isNullable\":false,\"name\":\"ContractPartyRelationshipTypeId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ContractPartyRelationshipType.cdm.json/ContractPartyRelationshipType\",\"name\":\"ContractPartyRelationshipTypeName\"},\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"The name of a contract party relationship type.\",\"isNullable\":true,\"name\":\"ContractPartyRelationshipTypeName\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ContractPartyRelationshipType.cdm.json/ContractPartyRelationshipType\",\"name\":\"ContractPartyRelationshipTypeDescription\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"The description of a contract party relationship type.\",\"isNullable\":true,\"name\":\"ContractPartyRelationshipTypeDescription\"}]}}}",
+			"Description": "The nature of the relationship between the party and the contract or contractual process over the indicated period.\n\n Ex:\n- Notice-To Party\n- Party-to-Agreement Organization\n- Party-to-Agreement Signature Party\n- Contract Assigned-To Party\n- Deliver-Contract-To Party\n- Execution-Required-By Party\n- Contract - Maintenance Party\n- Contract - Negotiated-By Party\n- Assignee\n- Assignor\n- Grantor\n- Grantee\n\nwhere:\n\nGRANTOR: A person who grants or conveys lands, minerals, etc.\n\nGRANTEE: The person receiving the grant of lands, minerals, etc.",
+			"DisplayFolderInfo": "{\"name\":\"Contract\",\"colorCode\":\"#000F5C\"}",
+			"PrimaryKeys": "ContractPartyRelationshipTypeId",
+			"spark.sql.sources.provider": "csv",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"ContractPartyRelationshipTypeId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"ContractPartyRelationshipTypeName\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ContractPartyRelationshipTypeDescription\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "7a1578c7-77cb-4552-8b51-3b4437c9ee34",
+		"Description": "The nature of the relationship between the party and the contract or contractual process over the indicated period.\n\n Ex:\n- Notice-To Party\n- Party-to-Agreement Organization\n- Party-to-Agreement Signature Party\n- Contract Assigned-To Party\n- Deliver-Contract-To Party\n- Execution-Required-By Party\n- Contract - Maintenance Party\n- Contract - Negotiated-By Party\n- Assignee\n- Assignor\n- Grantor\n- Grantee\n\nwhere:\n\nGRANTOR: A person who grants or conveys lands, minerals, etc.\n\nGRANTEE: The person receiving the grant of lands, minerals, etc."
+	},
+	"type": "TABLE"
+}

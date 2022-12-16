@@ -1,0 +1,196 @@
+{
+	"name": "PartyConsent",
+	"properties": {
+		"Name": "PartyConsent",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "PartyId",
+					"Description": "The unique identifier of a Party.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyConsent.cdm.json/PartyConsent",
+						"Name": "PartyId"
+					}
+				},
+				{
+					"Name": "ConsentId",
+					"Description": "The unique identifier of the Consent.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyConsent.cdm.json/PartyConsent",
+						"Name": "ConsentId"
+					}
+				},
+				{
+					"Name": "PeriodStartDate",
+					"Description": "The period start date for which the associated data is effective or 'as-of'.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyConsent.cdm.json/PartyConsent",
+						"Name": "PeriodStartDate"
+					}
+				},
+				{
+					"Name": "PeriodEndDate",
+					"Description": "The period end date for which the associated data is effective or 'as-of'.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyConsent.cdm.json/PartyConsent",
+						"Name": "PeriodEndDate"
+					}
+				},
+				{
+					"Name": "ProofOfConsentDocumentId",
+					"Description": "The unique identifier of a Document.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyConsent.cdm.json/PartyConsent",
+						"Name": "ProofOfConsentDocumentId"
+					}
+				},
+				{
+					"Name": "PartyConsentNote",
+					"Description": "A note, comment or additional information regarding the party consent.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyConsent.cdm.json/PartyConsent",
+						"Name": "PartyConsentNote"
+					}
+				}
+			],
+			"ColumnSetEntityName": "3fa65589-5f38-4f5f-8487-c9f8895c6a98",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/PartyConsent",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/PartyConsent",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"PartyId\":{\"entity\":\"PartyConsent.cdm.json/PartyConsent\",\"name\":\"PartyId\"},\"ConsentId\":{\"entity\":\"PartyConsent.cdm.json/PartyConsent\",\"name\":\"ConsentId\"},\"PeriodStartDate\":{\"entity\":\"PartyConsent.cdm.json/PartyConsent\",\"name\":\"PeriodStartDate\"},\"PeriodEndDate\":{\"entity\":\"PartyConsent.cdm.json/PartyConsent\",\"name\":\"PeriodEndDate\"},\"ProofOfConsentDocumentId\":{\"entity\":\"PartyConsent.cdm.json/PartyConsent\",\"name\":\"ProofOfConsentDocumentId\"},\"PartyConsentNote\":{\"entity\":\"PartyConsent.cdm.json/PartyConsent\",\"name\":\"PartyConsentNote\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"PartyConsent\",\"path\":\"PartyConsent.cdm.json/PartyConsent\"},\"description\":\"Consent provided by the party during the specified period.\",\"primaryKey\":[\"PartyId\",\"ConsentId\",\"PeriodStartDate\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyConsent.cdm.json/PartyConsent\",\"name\":\"PartyId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a Party.\",\"isNullable\":false,\"name\":\"PartyId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyConsent.cdm.json/PartyConsent\",\"name\":\"ConsentId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of the Consent.\",\"isNullable\":false,\"name\":\"ConsentId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyConsent.cdm.json/PartyConsent\",\"name\":\"PeriodStartDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The period start date for which the associated data is effective or 'as-of'.\",\"isNullable\":false,\"name\":\"PeriodStartDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyConsent.cdm.json/PartyConsent\",\"name\":\"PeriodEndDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The period end date for which the associated data is effective or 'as-of'.\",\"isNullable\":true,\"name\":\"PeriodEndDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyConsent.cdm.json/PartyConsent\",\"name\":\"ProofOfConsentDocumentId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a Document.\",\"isNullable\":true,\"name\":\"ProofOfConsentDocumentId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyConsent.cdm.json/PartyConsent\",\"name\":\"PartyConsentNote\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"A note, comment or additional information regarding the party consent.\",\"isNullable\":true,\"name\":\"PartyConsentNote\"}]}}}",
+			"Description": "Consent provided by the party during the specified period.",
+			"DisplayFolderInfo": "{\"name\":\"Party\",\"colorCode\":\"#7D0F6C\"}",
+			"PrimaryKeys": "PartyId,ConsentId,PeriodStartDate",
+			"spark.sql.sources.provider": "csv",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"PartyId\",\"type\":\"long\",\"nullable\":false,\"metadata\":{}},{\"name\":\"ConsentId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PeriodStartDate\",\"type\":\"date\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PeriodEndDate\",\"type\":\"date\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ProofOfConsentDocumentId\",\"type\":\"long\",\"nullable\":true,\"metadata\":{}},{\"name\":\"PartyConsentNote\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "81829db2-c79a-4d04-9c5a-1ee0c617f6fe",
+		"Description": "Consent provided by the party during the specified period."
+	},
+	"type": "TABLE"
+}

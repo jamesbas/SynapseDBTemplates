@@ -1,0 +1,253 @@
+{
+	"name": "VendorTelephoneNumber",
+	"properties": {
+		"Name": "VendorTelephoneNumber",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "VendorId",
+					"Description": "The unique identifier of a Vendor.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "VendorTelephoneNumber.cdm.json/VendorTelephoneNumber",
+						"Name": "VendorId"
+					}
+				},
+				{
+					"Name": "TelephoneNumberTypeId",
+					"Description": "The unique identifier of a Telephone Number.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "VendorTelephoneNumber.cdm.json/VendorTelephoneNumber",
+						"Name": "TelephoneNumberTypeId"
+					}
+				},
+				{
+					"Name": "TelephoneNumber",
+					"Description": "The complete, concatenated telephone number (area code + prefix + suffix + extension).",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 15,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "VendorTelephoneNumber.cdm.json/VendorTelephoneNumber",
+						"Name": "TelephoneNumber"
+					}
+				},
+				{
+					"Name": "PeriodStartTimestamp",
+					"Description": "The period start timestamp that the information is valid or effective as of.",
+					"OriginDataTypeName": {
+						"TypeName": "timestamp",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"TimestampFormat": "YYYY-MM-DD HH:MM:SS.fffffffff",
+							"HIVE_TYPE_STRING": "timestamp"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "VendorTelephoneNumber.cdm.json/VendorTelephoneNumber",
+						"Name": "PeriodStartTimestamp"
+					}
+				},
+				{
+					"Name": "PeriodEndTimestamp",
+					"Description": "The period end timestamp that the information is valid or effective as of.",
+					"OriginDataTypeName": {
+						"TypeName": "timestamp",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"TimestampFormat": "YYYY-MM-DD HH:MM:SS.fffffffff",
+							"HIVE_TYPE_STRING": "timestamp"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "VendorTelephoneNumber.cdm.json/VendorTelephoneNumber",
+						"Name": "PeriodEndTimestamp"
+					}
+				},
+				{
+					"Name": "PreferenceId",
+					"Description": "The unique identifier of a Preference.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "VendorTelephoneNumber.cdm.json/VendorTelephoneNumber",
+						"Name": "PreferenceId"
+					}
+				},
+				{
+					"Name": "TelephoneNumberNote",
+					"Description": "A note, comment or additional information regarding the Telephone Number.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "VendorTelephoneNumber.cdm.json/VendorTelephoneNumber",
+						"Name": "TelephoneNumberNote"
+					}
+				},
+				{
+					"Name": "LocationId",
+					"Description": "The unique identifier of a Location.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "VendorTelephoneNumber.cdm.json/VendorTelephoneNumber",
+						"Name": "LocationId"
+					}
+				},
+				{
+					"Name": "TextCapableIndicator",
+					"Description": "Indicates whether the phone is capable of receiving text messages.",
+					"OriginDataTypeName": {
+						"TypeName": "boolean",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "boolean"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "VendorTelephoneNumber.cdm.json/VendorTelephoneNumber",
+						"Name": "TextCapableIndicator"
+					}
+				}
+			],
+			"ColumnSetEntityName": "edbbe34d-e311-4719-b31f-f8f2261cbd8c",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/VendorTelephoneNumber",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/VendorTelephoneNumber",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"VendorId\":{\"entity\":\"VendorTelephoneNumber.cdm.json/VendorTelephoneNumber\",\"name\":\"VendorId\"},\"TelephoneNumberTypeId\":{\"entity\":\"VendorTelephoneNumber.cdm.json/VendorTelephoneNumber\",\"name\":\"TelephoneNumberTypeId\"},\"TelephoneNumber\":{\"entity\":\"VendorTelephoneNumber.cdm.json/VendorTelephoneNumber\",\"name\":\"TelephoneNumber\"},\"PeriodStartTimestamp\":{\"entity\":\"VendorTelephoneNumber.cdm.json/VendorTelephoneNumber\",\"name\":\"PeriodStartTimestamp\"},\"PeriodEndTimestamp\":{\"entity\":\"VendorTelephoneNumber.cdm.json/VendorTelephoneNumber\",\"name\":\"PeriodEndTimestamp\"},\"PreferenceId\":{\"entity\":\"VendorTelephoneNumber.cdm.json/VendorTelephoneNumber\",\"name\":\"PreferenceId\"},\"TelephoneNumberNote\":{\"entity\":\"VendorTelephoneNumber.cdm.json/VendorTelephoneNumber\",\"name\":\"TelephoneNumberNote\"},\"LocationId\":{\"entity\":\"VendorTelephoneNumber.cdm.json/VendorTelephoneNumber\",\"name\":\"LocationId\"},\"TextCapableIndicator\":{\"entity\":\"VendorTelephoneNumber.cdm.json/VendorTelephoneNumber\",\"name\":\"TextCapableIndicator\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"VendorTelephoneNumber\",\"path\":\"VendorTelephoneNumber.cdm.json/VendorTelephoneNumber\"},\"description\":\"The Vendor telephone number of the associated Telephone Number Type for the indicated period.\",\"primaryKey\":[\"VendorId\",\"TelephoneNumberTypeId\",\"TelephoneNumber\",\"PeriodStartTimestamp\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"VendorTelephoneNumber.cdm.json/VendorTelephoneNumber\",\"name\":\"VendorId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a Vendor.\",\"isNullable\":false,\"name\":\"VendorId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"VendorTelephoneNumber.cdm.json/VendorTelephoneNumber\",\"name\":\"TelephoneNumberTypeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Telephone Number.\",\"isNullable\":false,\"name\":\"TelephoneNumberTypeId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"VendorTelephoneNumber.cdm.json/VendorTelephoneNumber\",\"name\":\"TelephoneNumber\"},\"dataType\":\"decimal\",\"dataTypeLength\":15,\"description\":\"The complete, concatenated telephone number (area code + prefix + suffix + extension).\",\"isNullable\":false,\"scale\":0,\"name\":\"TelephoneNumber\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"VendorTelephoneNumber.cdm.json/VendorTelephoneNumber\",\"name\":\"PeriodStartTimestamp\"},\"dataType\":\"timestamp\",\"description\":\"The period start timestamp that the information is valid or effective as of.\",\"isNullable\":false,\"name\":\"PeriodStartTimestamp\",\"timestampFormat\":\"YYYY-MM-DD HH:MM:SS.fffffffff\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"VendorTelephoneNumber.cdm.json/VendorTelephoneNumber\",\"name\":\"PeriodEndTimestamp\"},\"dataType\":\"timestamp\",\"description\":\"The period end timestamp that the information is valid or effective as of.\",\"isNullable\":true,\"name\":\"PeriodEndTimestamp\",\"timestampFormat\":\"YYYY-MM-DD HH:MM:SS.fffffffff\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"VendorTelephoneNumber.cdm.json/VendorTelephoneNumber\",\"name\":\"PreferenceId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Preference.\",\"isNullable\":true,\"name\":\"PreferenceId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"VendorTelephoneNumber.cdm.json/VendorTelephoneNumber\",\"name\":\"TelephoneNumberNote\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"A note, comment or additional information regarding the Telephone Number.\",\"isNullable\":true,\"name\":\"TelephoneNumberNote\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"VendorTelephoneNumber.cdm.json/VendorTelephoneNumber\",\"name\":\"LocationId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Location.\",\"isNullable\":true,\"name\":\"LocationId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"VendorTelephoneNumber.cdm.json/VendorTelephoneNumber\",\"name\":\"TextCapableIndicator\"},\"dataType\":\"boolean\",\"description\":\"Indicates whether the phone is capable of receiving text messages.\",\"isNullable\":true,\"name\":\"TextCapableIndicator\"}]}}}",
+			"Description": "The Vendor telephone number of the associated Telephone Number Type for the indicated period.",
+			"DisplayFolderInfo": "{\"name\":\"Vendor\",\"colorCode\":\"#1C508C\"}",
+			"PrimaryKeys": "VendorId,TelephoneNumberTypeId,TelephoneNumber,PeriodStartTimestamp",
+			"spark.sql.sources.provider": "csv",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"VendorId\",\"type\":\"long\",\"nullable\":false,\"metadata\":{}},{\"name\":\"TelephoneNumberTypeId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"TelephoneNumber\",\"type\":\"decimal(15,0)\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PeriodStartTimestamp\",\"type\":\"timestamp\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PeriodEndTimestamp\",\"type\":\"timestamp\",\"nullable\":true,\"metadata\":{}},{\"name\":\"PreferenceId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"TelephoneNumberNote\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"LocationId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"TextCapableIndicator\",\"type\":\"boolean\",\"nullable\":true,\"metadata\":{}}]}",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate"
+		},
+		"ObjectVersion": 2,
+		"ObjectId": "4d4ec103-24a3-46ae-8e67-e1a2fe83709f",
+		"Description": "The Vendor telephone number of the associated Telephone Number Type for the indicated period."
+	},
+	"type": "TABLE"
+}

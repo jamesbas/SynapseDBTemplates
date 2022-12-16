@@ -1,0 +1,29 @@
+{
+	"name": "relationship-iaufgtynhb",
+	"properties": {
+		"Name": "relationship-iaufgtynhb",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "Payment",
+		"ToTableName": "LeasePayment",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "PaymentId",
+				"ToColumnName": "PaymentId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"Payment.cdm.json/Payment\",\"toEntity\":\"LeasePayment.cdm.json/LeasePayment\",\"joinPairs\":[{\"fromAttribute\":\"PaymentId\",\"toAttribute\":\"PaymentId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "10aa7b9f-89de-4801-a82e-352d43e77f54"
+	},
+	"type": "RELATIONSHIP"
+}

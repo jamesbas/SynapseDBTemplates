@@ -1,0 +1,29 @@
+{
+	"name": "relationship-wydabubiji",
+	"properties": {
+		"Name": "relationship-wydabubiji",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "HousingUnitType",
+		"ToTableName": "HouseholdLocation",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "HousingUnitTypeId",
+				"ToColumnName": "HousingUnitTypeId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"HousingUnitType.cdm.json/HousingUnitType\",\"toEntity\":\"HouseholdLocation.cdm.json/HouseholdLocation\",\"joinPairs\":[{\"fromAttribute\":\"HousingUnitTypeId\",\"toAttribute\":\"HousingUnitTypeId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "1f89a3e0-79df-4e43-aa75-8f89ad04df18"
+	},
+	"type": "RELATIONSHIP"
+}

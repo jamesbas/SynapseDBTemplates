@@ -1,0 +1,29 @@
+{
+	"name": "relationship-iprftufrrs",
+	"properties": {
+		"Name": "relationship-iprftufrrs",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "Party",
+		"ToTableName": "PartyRelationship",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "PartyId",
+				"ToColumnName": "Party2Id"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"Party.cdm.json/Party\",\"toEntity\":\"PartyRelationship.cdm.json/PartyRelationship\",\"joinPairs\":[{\"fromAttribute\":\"PartyId\",\"toAttribute\":\"Party2Id\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "ae249334-838f-410a-82ce-482f86a21a75"
+	},
+	"type": "RELATIONSHIP"
+}

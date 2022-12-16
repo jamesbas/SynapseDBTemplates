@@ -1,0 +1,29 @@
+{
+	"name": "relationship-fbmshpclfw",
+	"properties": {
+		"Name": "relationship-fbmshpclfw",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "LifestyleGroup",
+		"ToTableName": "PartyLifestyleGroup",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "LifestyleGroupId",
+				"ToColumnName": "LifestyleGroupId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"LifestyleGroup.cdm.json/LifestyleGroup\",\"toEntity\":\"PartyLifestyleGroup.cdm.json/PartyLifestyleGroup\",\"joinPairs\":[{\"fromAttribute\":\"LifestyleGroupId\",\"toAttribute\":\"LifestyleGroupId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "eccfef10-f25a-4a43-9ca8-cc43e0ba8869"
+	},
+	"type": "RELATIONSHIP"
+}

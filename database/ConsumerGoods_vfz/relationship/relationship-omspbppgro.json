@@ -1,0 +1,29 @@
+{
+	"name": "relationship-omspbppgro",
+	"properties": {
+		"Name": "relationship-omspbppgro",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "Party",
+		"ToTableName": "HouseholdMember",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "PartyId",
+				"ToColumnName": "HouseholdMemberPartyId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"Party.cdm.json/Party\",\"toEntity\":\"HouseholdMember.cdm.json/HouseholdMember\",\"joinPairs\":[{\"fromAttribute\":\"PartyId\",\"toAttribute\":\"HouseholdMemberPartyId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "bcff6f1d-b505-47ce-8fbc-7b2c360f59ea"
+	},
+	"type": "RELATIONSHIP"
+}

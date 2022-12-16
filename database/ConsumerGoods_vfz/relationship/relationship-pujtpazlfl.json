@@ -1,0 +1,29 @@
+{
+	"name": "relationship-pujtpazlfl",
+	"properties": {
+		"Name": "relationship-pujtpazlfl",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "Gender",
+		"ToTableName": "IndividualParty",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "GenderId",
+				"ToColumnName": "GenderId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"Gender.cdm.json/Gender\",\"toEntity\":\"IndividualParty.cdm.json/IndividualParty\",\"joinPairs\":[{\"fromAttribute\":\"GenderId\",\"toAttribute\":\"GenderId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "6508e982-aa7b-4b41-9374-931d504bdc4f"
+	},
+	"type": "RELATIONSHIP"
+}

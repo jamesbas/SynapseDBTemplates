@@ -1,0 +1,137 @@
+{
+	"name": "PartyAncestry",
+	"properties": {
+		"Name": "PartyAncestry",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "PartyId",
+					"Description": "The unique identifier of a Party.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyAncestry.cdm.json/PartyAncestry",
+						"Name": "PartyId"
+					}
+				},
+				{
+					"Name": "AncestryId",
+					"Description": "The unique identifier of an Ancestry.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyAncestry.cdm.json/PartyAncestry",
+						"Name": "AncestryId"
+					}
+				},
+				{
+					"Name": "PartyAncestryNote",
+					"Description": "Notes, comments or additional information regarding the Individual's ancestry.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyAncestry.cdm.json/PartyAncestry",
+						"Name": "PartyAncestryNote"
+					}
+				}
+			],
+			"ColumnSetEntityName": "c7e642c5-4176-4e71-a681-35008ac91f4f",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/PartyAncestry",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/PartyAncestry",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"PartyId\":{\"entity\":\"PartyAncestry.cdm.json/PartyAncestry\",\"name\":\"PartyId\"},\"AncestryId\":{\"entity\":\"PartyAncestry.cdm.json/PartyAncestry\",\"name\":\"AncestryId\"},\"PartyAncestryNote\":{\"entity\":\"PartyAncestry.cdm.json/PartyAncestry\",\"name\":\"PartyAncestryNote\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"PartyAncestry\",\"path\":\"PartyAncestry.cdm.json/PartyAncestry\"},\"description\":\"The ancestry(s) identified by or for the Individual.\\n\\nThe data on ancestry represent self-classification by people according to the ancestry group(s) with which they most closely identify. \\n\\nAncestry refers to a person's ethnic origin or descent, \\\"roots,\\\" or heritage or the place of birth of the person or the person's parents or ancestors before their arrival in the United States. \\n\\nSome ethnic identities, such as \\\"Egyptian\\\" or \\\"Polish\\\" can be traced to geographic areas outside the United States, while other ethnicities such as \\\"Pennsylvania Dutch\\\" or \\\"Cajun\\\" evolved in the United\\nStates. \\n\\nThe intent of ancestry is not to measure the degree of attachment the respondent had to a particular ethnicity. For example, a response of \\\"Irish\\\" might reflect total involvement in an \\\"Irish\\\" community or only a memory of ancestors several generations removed from the\\nindividual.\\n\\nNormally, 'multiple responses' are assigned to a single code:  \\\"French Canadian,\\\" \\\"Greek Cypriote,\\\" and \\\"Black Dutch\\\"\",\"primaryKey\":[\"PartyId\",\"AncestryId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyAncestry.cdm.json/PartyAncestry\",\"name\":\"PartyId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a Party.\",\"isNullable\":false,\"name\":\"PartyId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyAncestry.cdm.json/PartyAncestry\",\"name\":\"AncestryId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of an Ancestry.\",\"isNullable\":false,\"name\":\"AncestryId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyAncestry.cdm.json/PartyAncestry\",\"name\":\"PartyAncestryNote\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"Notes, comments or additional information regarding the Individual's ancestry.\",\"isNullable\":true,\"name\":\"PartyAncestryNote\"}]}}}",
+			"Description": "The ancestry(s) identified by or for the Individual.\n\nThe data on ancestry represent self-classification by people according to the ancestry group(s) with which they most closely identify. \n\nAncestry refers to a person's ethnic origin or descent, \"roots,\" or heritage or the place of birth of the person or the person's parents or ancestors before their arrival in the United States. \n\nSome ethnic identities, such as \"Egyptian\" or \"Polish\" can be traced to geographic areas outside the United States, while other ethnicities such as \"Pennsylvania Dutch\" or \"Cajun\" evolved in the United\nStates. \n\nThe intent of ancestry is not to measure the degree of attachment the respondent had to a particular ethnicity. For example, a response of \"Irish\" might reflect total involvement in an \"Irish\" community or only a memory of ancestors several generations removed from the\nindividual.\n\nNormally, 'multiple responses' are assigned to a single code:  \"French Canadian,\" \"Greek Cypriote,\" and \"Black Dutch\"",
+			"DisplayFolderInfo": "{\"name\":\"Party\",\"colorCode\":\"#7D0F6C\"}",
+			"PrimaryKeys": "PartyId,AncestryId",
+			"spark.sql.sources.provider": "csv",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"PartyId\",\"type\":\"long\",\"nullable\":false,\"metadata\":{}},{\"name\":\"AncestryId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PartyAncestryNote\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "7e61b8e8-1ea2-4f40-b23d-2a2c490a9445",
+		"Description": "The ancestry(s) identified by or for the Individual.\n\nThe data on ancestry represent self-classification by people according to the ancestry group(s) with which they most closely identify. \n\nAncestry refers to a person's ethnic origin or descent, \"roots,\" or heritage or the place of birth of the person or the person's parents or ancestors before their arrival in the United States. \n\nSome ethnic identities, such as \"Egyptian\" or \"Polish\" can be traced to geographic areas outside the United States, while other ethnicities such as \"Pennsylvania Dutch\" or \"Cajun\" evolved in the United\nStates. \n\nThe intent of ancestry is not to measure the degree of attachment the respondent had to a particular ethnicity. For example, a response of \"Irish\" might reflect total involvement in an \"Irish\" community or only a memory of ancestors several generations removed from the\nindividual.\n\nNormally, 'multiple responses' are assigned to a single code:  \"French Canadian,\" \"Greek Cypriote,\" and \"Black Dutch\""
+	},
+	"type": "TABLE"
+}

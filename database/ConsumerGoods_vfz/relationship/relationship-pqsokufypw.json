@@ -1,0 +1,29 @@
+{
+	"name": "relationship-pqsokufypw",
+	"properties": {
+		"Name": "relationship-pqsokufypw",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "MaritalStatus",
+		"ToTableName": "PartyMaritalStatus",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "MaritalStatusId",
+				"ToColumnName": "MaritalStatusId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"MaritalStatus.cdm.json/MaritalStatus\",\"toEntity\":\"PartyMaritalStatus.cdm.json/PartyMaritalStatus\",\"joinPairs\":[{\"fromAttribute\":\"MaritalStatusId\",\"toAttribute\":\"MaritalStatusId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "bd03fc37-d402-4467-8fe3-1d23a5f92753"
+	},
+	"type": "RELATIONSHIP"
+}

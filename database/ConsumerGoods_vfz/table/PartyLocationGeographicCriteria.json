@@ -1,0 +1,196 @@
+{
+	"name": "PartyLocationGeographicCriteria",
+	"properties": {
+		"Name": "PartyLocationGeographicCriteria",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "PartyId",
+					"Description": "The unique identifier of a Party.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyLocationGeographicCriteria.cdm.json/PartyLocationGeographicCriteria",
+						"Name": "PartyId"
+					}
+				},
+				{
+					"Name": "LocationId",
+					"Description": "The unique identifier of a Location.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyLocationGeographicCriteria.cdm.json/PartyLocationGeographicCriteria",
+						"Name": "LocationId"
+					}
+				},
+				{
+					"Name": "GeographicCriteriaId",
+					"Description": "The unique identifier of a Geographic Criteria.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyLocationGeographicCriteria.cdm.json/PartyLocationGeographicCriteria",
+						"Name": "GeographicCriteriaId"
+					}
+				},
+				{
+					"Name": "PeriodStartDate",
+					"Description": "The period start date for which the associated data is effective or 'as-of'.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyLocationGeographicCriteria.cdm.json/PartyLocationGeographicCriteria",
+						"Name": "PeriodStartDate"
+					}
+				},
+				{
+					"Name": "PeriodEndDate",
+					"Description": "The period end date for which the associated data is effective or 'as-of'.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyLocationGeographicCriteria.cdm.json/PartyLocationGeographicCriteria",
+						"Name": "PeriodEndDate"
+					}
+				},
+				{
+					"Name": "PartyLocationGeographicCriteriaNote",
+					"Description": "A note, comment or additional information related to Party Location Geographic Criteria.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyLocationGeographicCriteria.cdm.json/PartyLocationGeographicCriteria",
+						"Name": "PartyLocationGeographicCriteriaNote"
+					}
+				}
+			],
+			"ColumnSetEntityName": "4a9e314b-f86b-4236-bdd2-d247471682f5",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/PartyLocationGeographicCriteria",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/PartyLocationGeographicCriteria",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"PartyId\":{\"entity\":\"PartyLocationGeographicCriteria.cdm.json/PartyLocationGeographicCriteria\",\"name\":\"PartyId\"},\"LocationId\":{\"entity\":\"PartyLocationGeographicCriteria.cdm.json/PartyLocationGeographicCriteria\",\"name\":\"LocationId\"},\"GeographicCriteriaId\":{\"entity\":\"PartyLocationGeographicCriteria.cdm.json/PartyLocationGeographicCriteria\",\"name\":\"GeographicCriteriaId\"},\"PeriodStartDate\":{\"entity\":\"PartyLocationGeographicCriteria.cdm.json/PartyLocationGeographicCriteria\",\"name\":\"PeriodStartDate\"},\"PeriodEndDate\":{\"entity\":\"PartyLocationGeographicCriteria.cdm.json/PartyLocationGeographicCriteria\",\"name\":\"PeriodEndDate\"},\"PartyLocationGeographicCriteriaNote\":{\"entity\":\"PartyLocationGeographicCriteria.cdm.json/PartyLocationGeographicCriteria\",\"name\":\"PartyLocationGeographicCriteriaNote\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"PartyLocationGeographicCriteria\",\"path\":\"PartyLocationGeographicCriteria.cdm.json/PartyLocationGeographicCriteria\"},\"description\":\"The one or more geographic criteria that are assigned or linked to a Party Location and by which they are identified or qualified from a geographic perspective.\\n\\nThese criteria can change over a period of time and are represented with 'period start date/period end date' qualifications, which represented the best case for knowing this information.    If the data is only randomly sampled or recorded then you could use a single 'date' to identify its recording or effective as-of date.\\n\\nGeographic market segmentation is a technique for segmenting a market based upon common geographic variables.    \\n\\nSpecific Geographic Criteria are then assigned to parties in order to identify common characteristics that can be used for planning and analysis of the market segment.\\n\\nExamples of Geographic Criteria include urban, rural, Southwest and East Europe.\\n\\nThe business organization identifies a finite number of Geographic Criteria that are used to identify parties.   These criteria will be unique to each business organization and focus upon that organizations specific information requirements.\\n\\nThe Geographic Criteria Type is the larger classification to which the Geographic Criteria belongs.\\n\\nGeographic Criteria Type is a means of classifying, grouping or categorizing specific Geographic Criteria at a higher level for analysis and presentation.\\n\\nThe following are examples:\\n\\nGeographic Criteria Type: US Region\\nGeographic Criteria: Southwest\\n\\nGeographic Criteria Type: ABCD County Type \\nGeographic Criteria: ABCD County Type A \\n\\nGeographic Criteria Type: City Size\\nGeographic Criteria: 50,000-100,000\\n\\nGeographic Criteria Type: Area Density \\nGeographic Criteria: Urban\\n\\nGeographic Criteria Type: Climate\\nGeographic Criteria: Tropical\\n\\nGeographic Criteria Type: Topology\\nGeographic Criteria: Desert\",\"primaryKey\":[\"PartyId\",\"LocationId\",\"GeographicCriteriaId\",\"PeriodStartDate\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyLocationGeographicCriteria.cdm.json/PartyLocationGeographicCriteria\",\"name\":\"PartyId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a Party.\",\"isNullable\":false,\"name\":\"PartyId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyLocationGeographicCriteria.cdm.json/PartyLocationGeographicCriteria\",\"name\":\"LocationId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Location.\",\"isNullable\":false,\"name\":\"LocationId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyLocationGeographicCriteria.cdm.json/PartyLocationGeographicCriteria\",\"name\":\"GeographicCriteriaId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Geographic Criteria.\",\"isNullable\":false,\"name\":\"GeographicCriteriaId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyLocationGeographicCriteria.cdm.json/PartyLocationGeographicCriteria\",\"name\":\"PeriodStartDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The period start date for which the associated data is effective or 'as-of'.\",\"isNullable\":false,\"name\":\"PeriodStartDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyLocationGeographicCriteria.cdm.json/PartyLocationGeographicCriteria\",\"name\":\"PeriodEndDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The period end date for which the associated data is effective or 'as-of'.\",\"isNullable\":true,\"name\":\"PeriodEndDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyLocationGeographicCriteria.cdm.json/PartyLocationGeographicCriteria\",\"name\":\"PartyLocationGeographicCriteriaNote\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"A note, comment or additional information related to Party Location Geographic Criteria.\",\"isNullable\":true,\"name\":\"PartyLocationGeographicCriteriaNote\"}]}}}",
+			"Description": "The one or more geographic criteria that are assigned or linked to a Party Location and by which they are identified or qualified from a geographic perspective.\n\nThese criteria can change over a period of time and are represented with 'period start date/period end date' qualifications, which represented the best case for knowing this information.    If the data is only randomly sampled or recorded then you could use a single 'date' to identify its recording or effective as-of date.\n\nGeographic market segmentation is a technique for segmenting a market based upon common geographic variables.    \n\nSpecific Geographic Criteria are then assigned to parties in order to identify common characteristics that can be used for planning and analysis of the market segment.\n\nExamples of Geographic Criteria include urban, rural, Southwest and East Europe.\n\nThe business organization identifies a finite number of Geographic Criteria that are used to identify parties.   These criteria will be unique to each business organization and focus upon that organizations specific information requirements.\n\nThe Geographic Criteria Type is the larger classification to which the Geographic Criteria belongs.\n\nGeographic Criteria Type is a means of classifying, grouping or categorizing specific Geographic Criteria at a higher level for analysis and presentation.\n\nThe following are examples:\n\nGeographic Criteria Type: US Region\nGeographic Criteria: Southwest\n\nGeographic Criteria Type: ABCD County Type \nGeographic Criteria: ABCD County Type A \n\nGeographic Criteria Type: City Size\nGeographic Criteria: 50,000-100,000\n\nGeographic Criteria Type: Area Density \nGeographic Criteria: Urban\n\nGeographic Criteria Type: Climate\nGeographic Criteria: Tropical\n\nGeographic Criteria Type: Topology\nGeographic Criteria: Desert",
+			"DisplayFolderInfo": "{\"name\":\"Party\",\"colorCode\":\"#7D0F6C\"}",
+			"PrimaryKeys": "PartyId,LocationId,GeographicCriteriaId,PeriodStartDate",
+			"spark.sql.sources.provider": "csv",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"PartyId\",\"type\":\"long\",\"nullable\":false,\"metadata\":{}},{\"name\":\"LocationId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"GeographicCriteriaId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PeriodStartDate\",\"type\":\"date\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PeriodEndDate\",\"type\":\"date\",\"nullable\":true,\"metadata\":{}},{\"name\":\"PartyLocationGeographicCriteriaNote\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "6cb8b355-19e2-4d8a-a5ac-9fde7610fdd6",
+		"Description": "The one or more geographic criteria that are assigned or linked to a Party Location and by which they are identified or qualified from a geographic perspective.\n\nThese criteria can change over a period of time and are represented with 'period start date/period end date' qualifications, which represented the best case for knowing this information.    If the data is only randomly sampled or recorded then you could use a single 'date' to identify its recording or effective as-of date.\n\nGeographic market segmentation is a technique for segmenting a market based upon common geographic variables.    \n\nSpecific Geographic Criteria are then assigned to parties in order to identify common characteristics that can be used for planning and analysis of the market segment.\n\nExamples of Geographic Criteria include urban, rural, Southwest and East Europe.\n\nThe business organization identifies a finite number of Geographic Criteria that are used to identify parties.   These criteria will be unique to each business organization and focus upon that organizations specific information requirements.\n\nThe Geographic Criteria Type is the larger classification to which the Geographic Criteria belongs.\n\nGeographic Criteria Type is a means of classifying, grouping or categorizing specific Geographic Criteria at a higher level for analysis and presentation.\n\nThe following are examples:\n\nGeographic Criteria Type: US Region\nGeographic Criteria: Southwest\n\nGeographic Criteria Type: ABCD County Type \nGeographic Criteria: ABCD County Type A \n\nGeographic Criteria Type: City Size\nGeographic Criteria: 50,000-100,000\n\nGeographic Criteria Type: Area Density \nGeographic Criteria: Urban\n\nGeographic Criteria Type: Climate\nGeographic Criteria: Tropical\n\nGeographic Criteria Type: Topology\nGeographic Criteria: Desert"
+	},
+	"type": "TABLE"
+}

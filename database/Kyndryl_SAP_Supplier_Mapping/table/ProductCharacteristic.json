@@ -1,0 +1,196 @@
+{
+	"name": "ProductCharacteristic",
+	"properties": {
+		"Name": "ProductCharacteristic",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Kyndryl_SAP_Supplier_Mapping",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "ProductId",
+					"Description": "The unique identifier of a Product.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ProductCharacteristic.cdm.json/ProductCharacteristic",
+						"Name": "ProductId"
+					}
+				},
+				{
+					"Name": "ProductCharacteristicTypeId",
+					"Description": "The unique identifier of a Product Characteristic Type.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ProductCharacteristic.cdm.json/ProductCharacteristic",
+						"Name": "ProductCharacteristicTypeId"
+					}
+				},
+				{
+					"Name": "ProductCharacteristicPeriodStartDate",
+					"Description": "The period start date for which the associated Product Characteristic is valid.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ProductCharacteristic.cdm.json/ProductCharacteristic",
+						"Name": "ProductCharacteristicPeriodStartDate"
+					}
+				},
+				{
+					"Name": "ProductCharacteristicPeriodEndDate",
+					"Description": "The period end date for which the associated Product Characteristic is valid.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ProductCharacteristic.cdm.json/ProductCharacteristic",
+						"Name": "ProductCharacteristicPeriodEndDate"
+					}
+				},
+				{
+					"Name": "ProductCharacteristic",
+					"Description": "The Product Characteristic.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 256,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ProductCharacteristic.cdm.json/ProductCharacteristic",
+						"Name": "ProductCharacteristic"
+					}
+				},
+				{
+					"Name": "ProductCharacteristicNote",
+					"Description": "A note, comment or additional information regarding the Product Characteristic",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ProductCharacteristic.cdm.json/ProductCharacteristic",
+						"Name": "ProductCharacteristicNote"
+					}
+				}
+			],
+			"ColumnSetEntityName": "ff8abf65-cc73-4490-a658-edf183642d5e",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/Kyndryl_SAP_Supplier_Mapping/ProductCharacteristic",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/Kyndryl_SAP_Supplier_Mapping/ProductCharacteristic",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"ProductId\":{\"entity\":\"ProductCharacteristic.cdm.json/ProductCharacteristic\",\"name\":\"ProductId\"},\"ProductCharacteristicTypeId\":{\"entity\":\"ProductCharacteristic.cdm.json/ProductCharacteristic\",\"name\":\"ProductCharacteristicTypeId\"},\"ProductCharacteristicPeriodStartDate\":{\"entity\":\"ProductCharacteristic.cdm.json/ProductCharacteristic\",\"name\":\"ProductCharacteristicPeriodStartDate\"},\"ProductCharacteristicPeriodEndDate\":{\"entity\":\"ProductCharacteristic.cdm.json/ProductCharacteristic\",\"name\":\"ProductCharacteristicPeriodEndDate\"},\"ProductCharacteristic\":{\"entity\":\"ProductCharacteristic.cdm.json/ProductCharacteristic\",\"name\":\"ProductCharacteristic\"},\"ProductCharacteristicNote\":{\"entity\":\"ProductCharacteristic.cdm.json/ProductCharacteristic\",\"name\":\"ProductCharacteristicNote\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"ProductCharacteristic\",\"path\":\"ProductCharacteristic.cdm.json/ProductCharacteristic\"},\"description\":\"The characteristic(s)  that describe or characterize the associated product.\",\"primaryKey\":[\"ProductId\",\"ProductCharacteristicTypeId\",\"ProductCharacteristicPeriodStartDate\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ProductCharacteristic.cdm.json/ProductCharacteristic\",\"name\":\"ProductId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a Product.\",\"isNullable\":false,\"name\":\"ProductId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ProductCharacteristic.cdm.json/ProductCharacteristic\",\"name\":\"ProductCharacteristicTypeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Product Characteristic Type.\",\"isNullable\":false,\"name\":\"ProductCharacteristicTypeId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ProductCharacteristic.cdm.json/ProductCharacteristic\",\"name\":\"ProductCharacteristicPeriodStartDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The period start date for which the associated Product Characteristic is valid.\",\"isNullable\":false,\"name\":\"ProductCharacteristicPeriodStartDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ProductCharacteristic.cdm.json/ProductCharacteristic\",\"name\":\"ProductCharacteristicPeriodEndDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The period end date for which the associated Product Characteristic is valid.\",\"isNullable\":true,\"name\":\"ProductCharacteristicPeriodEndDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ProductCharacteristic.cdm.json/ProductCharacteristic\",\"name\":\"ProductCharacteristic\"},\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"The Product Characteristic.\",\"isNullable\":false,\"name\":\"ProductCharacteristic\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ProductCharacteristic.cdm.json/ProductCharacteristic\",\"name\":\"ProductCharacteristicNote\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"A note, comment or additional information regarding the Product Characteristic\",\"isNullable\":true,\"name\":\"ProductCharacteristicNote\"}]}}}",
+			"Description": "The characteristic(s)  that describe or characterize the associated product.",
+			"DisplayFolderInfo": "{\"name\":\"Product\",\"colorCode\":\"#0C614C\"}",
+			"PrimaryKeys": "ProductId,ProductCharacteristicTypeId,ProductCharacteristicPeriodStartDate",
+			"spark.sql.sources.provider": "csv",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"ProductId\",\"type\":\"long\",\"nullable\":false,\"metadata\":{}},{\"name\":\"ProductCharacteristicTypeId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"ProductCharacteristicPeriodStartDate\",\"type\":\"date\",\"nullable\":false,\"metadata\":{}},{\"name\":\"ProductCharacteristicPeriodEndDate\",\"type\":\"date\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ProductCharacteristic\",\"type\":\"string\",\"nullable\":false,\"metadata\":{}},{\"name\":\"ProductCharacteristicNote\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "6f7d0416-50ec-455f-a74d-ee5095a12e8f",
+		"Description": "The characteristic(s)  that describe or characterize the associated product."
+	},
+	"type": "TABLE"
+}

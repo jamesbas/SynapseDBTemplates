@@ -1,0 +1,137 @@
+{
+	"name": "CharacteristicType",
+	"properties": {
+		"Name": "CharacteristicType",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "CharacteristicTypeId",
+					"Description": "The unique identifier of a characteristic type.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "CharacteristicType.cdm.json/CharacteristicType",
+						"Name": "CharacteristicTypeId"
+					}
+				},
+				{
+					"Name": "CharacteristicTypeName",
+					"Description": "The name of a characteristic type.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 256,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "CharacteristicType.cdm.json/CharacteristicType",
+						"Name": "CharacteristicTypeName"
+					}
+				},
+				{
+					"Name": "CharacteristicTypeDescription",
+					"Description": "The description of a characteristic type.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "CharacteristicType.cdm.json/CharacteristicType",
+						"Name": "CharacteristicTypeDescription"
+					}
+				}
+			],
+			"ColumnSetEntityName": "1eb042be-8038-40a6-84a7-fd034ae16e15",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/CharacteristicType",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/CharacteristicType",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"CharacteristicTypeId\":{\"entity\":\"CharacteristicType.cdm.json/CharacteristicType\",\"name\":\"CharacteristicTypeId\"},\"CharacteristicTypeName\":{\"entity\":\"CharacteristicType.cdm.json/CharacteristicType\",\"name\":\"CharacteristicTypeName\"},\"CharacteristicTypeDescription\":{\"entity\":\"CharacteristicType.cdm.json/CharacteristicType\",\"name\":\"CharacteristicTypeDescription\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"CharacteristicType\",\"path\":\"CharacteristicType.cdm.json/CharacteristicType\"},\"description\":\"A characteristic that can be used to identify a customer.\\n\\nEx:\\n- Number Of Children\\n- Favorite Color\",\"primaryKey\":[\"CharacteristicTypeId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"CharacteristicType.cdm.json/CharacteristicType\",\"name\":\"CharacteristicTypeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a characteristic type.\",\"isNullable\":false,\"name\":\"CharacteristicTypeId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"CharacteristicType.cdm.json/CharacteristicType\",\"name\":\"CharacteristicTypeName\"},\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"The name of a characteristic type.\",\"isNullable\":true,\"name\":\"CharacteristicTypeName\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"CharacteristicType.cdm.json/CharacteristicType\",\"name\":\"CharacteristicTypeDescription\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"The description of a characteristic type.\",\"isNullable\":true,\"name\":\"CharacteristicTypeDescription\"}]}}}",
+			"Description": "A characteristic that can be used to identify a customer.\n\nEx:\n- Number Of Children\n- Favorite Color",
+			"DisplayFolderInfo": "{\"name\":\"Customer\",\"colorCode\":\"#022F22\"}",
+			"PrimaryKeys": "CharacteristicTypeId",
+			"spark.sql.sources.provider": "csv",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"CharacteristicTypeId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"CharacteristicTypeName\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"CharacteristicTypeDescription\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "bf47aa71-7e21-48a8-9762-a5cdb23aaabc",
+		"Description": "A characteristic that can be used to identify a customer.\n\nEx:\n- Number Of Children\n- Favorite Color"
+	},
+	"type": "TABLE"
+}

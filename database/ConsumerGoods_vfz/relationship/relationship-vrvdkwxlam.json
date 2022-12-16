@@ -1,0 +1,29 @@
+{
+	"name": "relationship-vrvdkwxlam",
+	"properties": {
+		"Name": "relationship-vrvdkwxlam",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "PropensityType",
+		"ToTableName": "PartyPropensity",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "PropensityTypeId",
+				"ToColumnName": "PropensityTypeId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"PropensityType.cdm.json/PropensityType\",\"toEntity\":\"PartyPropensity.cdm.json/PartyPropensity\",\"joinPairs\":[{\"fromAttribute\":\"PropensityTypeId\",\"toAttribute\":\"PropensityTypeId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "f6113763-5b91-4cf1-95e3-006532cf550d"
+	},
+	"type": "RELATIONSHIP"
+}

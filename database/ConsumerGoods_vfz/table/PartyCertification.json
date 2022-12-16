@@ -1,0 +1,196 @@
+{
+	"name": "PartyCertification",
+	"properties": {
+		"Name": "PartyCertification",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "PartyId",
+					"Description": "The unique identifier of a Party.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyCertification.cdm.json/PartyCertification",
+						"Name": "PartyId"
+					}
+				},
+				{
+					"Name": "CertificationId",
+					"Description": "The unique identifier of a Certification.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyCertification.cdm.json/PartyCertification",
+						"Name": "CertificationId"
+					}
+				},
+				{
+					"Name": "PartyCertificationStartDate",
+					"Description": "The date that the party certification was awarded.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyCertification.cdm.json/PartyCertification",
+						"Name": "PartyCertificationStartDate"
+					}
+				},
+				{
+					"Name": "PartyCertificationExpiryDate",
+					"Description": "The expiry date of the party certification that was awarded.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyCertification.cdm.json/PartyCertification",
+						"Name": "PartyCertificationExpiryDate"
+					}
+				},
+				{
+					"Name": "PartyCertificationNote",
+					"Description": "A note, comment or additional information regarding the party certification.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyCertification.cdm.json/PartyCertification",
+						"Name": "PartyCertificationNote"
+					}
+				},
+				{
+					"Name": "CertifiedByPartyId",
+					"Description": "The unique identifier of a Party.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyCertification.cdm.json/PartyCertification",
+						"Name": "CertifiedByPartyId"
+					}
+				}
+			],
+			"ColumnSetEntityName": "8b671449-daee-44d9-8194-8d370d2226af",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/PartyCertification",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/PartyCertification",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"PartyId\":{\"entity\":\"PartyCertification.cdm.json/PartyCertification\",\"name\":\"PartyId\"},\"CertificationId\":{\"entity\":\"PartyCertification.cdm.json/PartyCertification\",\"name\":\"CertificationId\"},\"PartyCertificationStartDate\":{\"entity\":\"PartyCertification.cdm.json/PartyCertification\",\"name\":\"PartyCertificationStartDate\"},\"PartyCertificationExpiryDate\":{\"entity\":\"PartyCertification.cdm.json/PartyCertification\",\"name\":\"PartyCertificationExpiryDate\"},\"PartyCertificationNote\":{\"entity\":\"PartyCertification.cdm.json/PartyCertification\",\"name\":\"PartyCertificationNote\"},\"CertifiedByPartyId\":{\"entity\":\"PartyCertification.cdm.json/PartyCertification\",\"name\":\"CertifiedByPartyId\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"PartyCertification\",\"path\":\"PartyCertification.cdm.json/PartyCertification\"},\"description\":\"The certification(s) held by the party.\",\"primaryKey\":[\"PartyId\",\"CertificationId\",\"PartyCertificationStartDate\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyCertification.cdm.json/PartyCertification\",\"name\":\"PartyId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a Party.\",\"isNullable\":false,\"name\":\"PartyId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyCertification.cdm.json/PartyCertification\",\"name\":\"CertificationId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Certification.\",\"isNullable\":false,\"name\":\"CertificationId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyCertification.cdm.json/PartyCertification\",\"name\":\"PartyCertificationStartDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The date that the party certification was awarded.\",\"isNullable\":false,\"name\":\"PartyCertificationStartDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyCertification.cdm.json/PartyCertification\",\"name\":\"PartyCertificationExpiryDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The expiry date of the party certification that was awarded.\",\"isNullable\":true,\"name\":\"PartyCertificationExpiryDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyCertification.cdm.json/PartyCertification\",\"name\":\"PartyCertificationNote\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"A note, comment or additional information regarding the party certification.\",\"isNullable\":true,\"name\":\"PartyCertificationNote\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyCertification.cdm.json/PartyCertification\",\"name\":\"CertifiedByPartyId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a Party.\",\"isNullable\":true,\"name\":\"CertifiedByPartyId\"}]}}}",
+			"Description": "The certification(s) held by the party.",
+			"DisplayFolderInfo": "{\"name\":\"Party\",\"colorCode\":\"#7D0F6C\"}",
+			"PrimaryKeys": "PartyId,CertificationId,PartyCertificationStartDate",
+			"spark.sql.sources.provider": "csv",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"PartyId\",\"type\":\"long\",\"nullable\":false,\"metadata\":{}},{\"name\":\"CertificationId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PartyCertificationStartDate\",\"type\":\"date\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PartyCertificationExpiryDate\",\"type\":\"date\",\"nullable\":true,\"metadata\":{}},{\"name\":\"PartyCertificationNote\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"CertifiedByPartyId\",\"type\":\"long\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "ec72ee65-49a7-4eb9-b289-2cd933d1a510",
+		"Description": "The certification(s) held by the party."
+	},
+	"type": "TABLE"
+}

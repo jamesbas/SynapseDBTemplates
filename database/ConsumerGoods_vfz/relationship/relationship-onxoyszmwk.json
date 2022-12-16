@@ -1,0 +1,29 @@
+{
+	"name": "relationship-onxoyszmwk",
+	"properties": {
+		"Name": "relationship-onxoyszmwk",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "SicIndustryGroup",
+		"ToTableName": "SicIndustry",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "SicIndustryGroupCode",
+				"ToColumnName": "SicIndustryGroupCode"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"SicIndustryGroup.cdm.json/SicIndustryGroup\",\"toEntity\":\"SicIndustry.cdm.json/SicIndustry\",\"joinPairs\":[{\"fromAttribute\":\"SicIndustryGroupCode\",\"toAttribute\":\"SicIndustryGroupCode\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "1bf14018-f50d-45e6-945f-b53635f8760a"
+	},
+	"type": "RELATIONSHIP"
+}

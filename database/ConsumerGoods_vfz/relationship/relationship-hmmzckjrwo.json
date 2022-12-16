@@ -1,0 +1,29 @@
+{
+	"name": "relationship-hmmzckjrwo",
+	"properties": {
+		"Name": "relationship-hmmzckjrwo",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "ContractSectionClause",
+		"ToTableName": "ContractAddendumSectionClause",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "ClauseEffectiveDate",
+				"ToColumnName": "ClauseEffectiveDate"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"ContractSectionClause.cdm.json/ContractSectionClause\",\"toEntity\":\"ContractAddendumSectionClause.cdm.json/ContractAddendumSectionClause\",\"joinPairs\":[{\"fromAttribute\":\"ClauseEffectiveDate\",\"toAttribute\":\"ClauseEffectiveDate\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "454dc7da-7b5d-46f3-9e64-09a238e6d45f"
+	},
+	"type": "RELATIONSHIP"
+}

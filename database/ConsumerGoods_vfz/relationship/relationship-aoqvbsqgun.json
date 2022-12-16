@@ -1,0 +1,29 @@
+{
+	"name": "relationship-aoqvbsqgun",
+	"properties": {
+		"Name": "relationship-aoqvbsqgun",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "Skill",
+		"ToTableName": "PartySkill",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "SkillId",
+				"ToColumnName": "SkillId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"Skill.cdm.json/Skill\",\"toEntity\":\"PartySkill.cdm.json/PartySkill\",\"joinPairs\":[{\"fromAttribute\":\"SkillId\",\"toAttribute\":\"SkillId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "c5114c57-e2f6-4649-895a-6897320824b5"
+	},
+	"type": "RELATIONSHIP"
+}

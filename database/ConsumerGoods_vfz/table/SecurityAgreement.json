@@ -1,0 +1,328 @@
+{
+	"name": "SecurityAgreement",
+	"properties": {
+		"Name": "SecurityAgreement",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "ContractId",
+					"Description": "The unique identifier of a Contract.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "SecurityAgreement.cdm.json/SecurityAgreement",
+						"Name": "ContractId"
+					}
+				},
+				{
+					"Name": "SecurityAgreementDate",
+					"Description": "The date that the agreement is become effective.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "SecurityAgreement.cdm.json/SecurityAgreement",
+						"Name": "SecurityAgreementDate"
+					}
+				},
+				{
+					"Name": "DefinitionsSection",
+					"Description": "The section of the contract that defines terms such as \"collateral\", \"obligations\" and so on.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "SecurityAgreement.cdm.json/SecurityAgreement",
+						"Name": "DefinitionsSection"
+					}
+				},
+				{
+					"Name": "SecurityInterestSection",
+					"Description": "This section grants property (collateral)  to the Secured Party to make sure that loan is repaid.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "SecurityAgreement.cdm.json/SecurityAgreement",
+						"Name": "SecurityInterestSection"
+					}
+				},
+				{
+					"Name": "InspectionSection",
+					"Description": "This section typically requires the borrower to maintain records of the collateral which the Secured Party may inspect at any time without notice.   The collateral may also be inspected at any time by the Secured Party.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "SecurityAgreement.cdm.json/SecurityAgreement",
+						"Name": "InspectionSection"
+					}
+				},
+				{
+					"Name": "RepresentationAndWarrantiesOfBorrowerSection",
+					"Description": "This section provides that the borrower must possess clear title to the Collateral and not use that same Collateral as security for another loan during the term of the agreement.  Typically the borrower must also keep Collateral free from any other liens.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "SecurityAgreement.cdm.json/SecurityAgreement",
+						"Name": "RepresentationAndWarrantiesOfBorrowerSection"
+					}
+				},
+				{
+					"Name": "CovenantsOfBorrowerSection",
+					"Description": "This section identifies the written covenants made by the Borrower to protect the Secured Party's interest in the Collateral.\n\n(1)  The location of the Collateral\n\n(2)  That only the Secured Party will have an interest in the Collateral\n\n(3)  That the borrower will defend against any claims for the Collateral by parties other than the Secured Party\n\n(4)  That the borrower will promptly pay all taxes and charges on the Collateral\n\n(5)  That the borrower endeavor to keep the Secured Party first in line with respects to any claims or interest in the Collateral.\n\n(6)  That the borrower is responsible for all expenses incurred by the Secured Party to maintain its security interest in the Collateral or obtain title to the Collateral.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "SecurityAgreement.cdm.json/SecurityAgreement",
+						"Name": "CovenantsOfBorrowerSection"
+					}
+				},
+				{
+					"Name": "DefaultsSection",
+					"Description": "This section establishes that the borrower is in default should they fail to perform any duty set forth in the agreement.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "SecurityAgreement.cdm.json/SecurityAgreement",
+						"Name": "DefaultsSection"
+					}
+				},
+				{
+					"Name": "DefaultRemediesSection",
+					"Description": "This section identifies remedies by the Secured Party should the borrower default on the terms of the agreement.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "SecurityAgreement.cdm.json/SecurityAgreement",
+						"Name": "DefaultRemediesSection"
+					}
+				},
+				{
+					"Name": "ApplicationOfProceedsSection",
+					"Description": "This section establishes in the event of default that proceeds from the sale of Collateral are applied to first repay any amount owed the Secured Party by the Borrower.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "SecurityAgreement.cdm.json/SecurityAgreement",
+						"Name": "ApplicationOfProceedsSection"
+					}
+				},
+				{
+					"Name": "NoticesSection",
+					"Description": "This section establishes how the parties are to formally notify each other regarding matters related to this agreement.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "SecurityAgreement.cdm.json/SecurityAgreement",
+						"Name": "NoticesSection"
+					}
+				},
+				{
+					"Name": "SeverabilitySection",
+					"Description": "This section attempts to keep the agreement in effect even if a court rules that a portion is invalid.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "SecurityAgreement.cdm.json/SecurityAgreement",
+						"Name": "SeverabilitySection"
+					}
+				},
+				{
+					"Name": "EntireAgreementSection",
+					"Description": "This section makes it clear that this is the final agreement between parties and replaces or supersedes any prior discussions or agreements.    Any amendments to this Agreement must be made in writing.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "SecurityAgreement.cdm.json/SecurityAgreement",
+						"Name": "EntireAgreementSection"
+					}
+				}
+			],
+			"ColumnSetEntityName": "de7380a4-b30b-422b-836b-84563fce7090",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/SecurityAgreement",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/SecurityAgreement",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"ContractId\":{\"entity\":\"SecurityAgreement.cdm.json/SecurityAgreement\",\"name\":\"ContractId\"},\"SecurityAgreementDate\":{\"entity\":\"SecurityAgreement.cdm.json/SecurityAgreement\",\"name\":\"SecurityAgreementDate\"},\"DefinitionsSection\":{\"entity\":\"SecurityAgreement.cdm.json/SecurityAgreement\",\"name\":\"DefinitionsSection\"},\"SecurityInterestSection\":{\"entity\":\"SecurityAgreement.cdm.json/SecurityAgreement\",\"name\":\"SecurityInterestSection\"},\"InspectionSection\":{\"entity\":\"SecurityAgreement.cdm.json/SecurityAgreement\",\"name\":\"InspectionSection\"},\"RepresentationAndWarrantiesOfBorrowerSection\":{\"entity\":\"SecurityAgreement.cdm.json/SecurityAgreement\",\"name\":\"RepresentationAndWarrantiesOfBorrowerSection\"},\"CovenantsOfBorrowerSection\":{\"entity\":\"SecurityAgreement.cdm.json/SecurityAgreement\",\"name\":\"CovenantsOfBorrowerSection\"},\"DefaultsSection\":{\"entity\":\"SecurityAgreement.cdm.json/SecurityAgreement\",\"name\":\"DefaultsSection\"},\"DefaultRemediesSection\":{\"entity\":\"SecurityAgreement.cdm.json/SecurityAgreement\",\"name\":\"DefaultRemediesSection\"},\"ApplicationOfProceedsSection\":{\"entity\":\"SecurityAgreement.cdm.json/SecurityAgreement\",\"name\":\"ApplicationOfProceedsSection\"},\"NoticesSection\":{\"entity\":\"SecurityAgreement.cdm.json/SecurityAgreement\",\"name\":\"NoticesSection\"},\"SeverabilitySection\":{\"entity\":\"SecurityAgreement.cdm.json/SecurityAgreement\",\"name\":\"SeverabilitySection\"},\"EntireAgreementSection\":{\"entity\":\"SecurityAgreement.cdm.json/SecurityAgreement\",\"name\":\"EntireAgreementSection\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"SecurityAgreement\",\"path\":\"SecurityAgreement.cdm.json/SecurityAgreement\"},\"description\":\"A Security Agreement allows a party borrowing money to give a security interest, collateral, in some tangible form of property.\",\"primaryKey\":[\"ContractId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"SecurityAgreement.cdm.json/SecurityAgreement\",\"name\":\"ContractId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Contract.\",\"isNullable\":false,\"name\":\"ContractId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"SecurityAgreement.cdm.json/SecurityAgreement\",\"name\":\"SecurityAgreementDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The date that the agreement is become effective.\",\"isNullable\":true,\"name\":\"SecurityAgreementDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"SecurityAgreement.cdm.json/SecurityAgreement\",\"name\":\"DefinitionsSection\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"The section of the contract that defines terms such as \\\"collateral\\\", \\\"obligations\\\" and so on.\",\"isNullable\":true,\"name\":\"DefinitionsSection\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"SecurityAgreement.cdm.json/SecurityAgreement\",\"name\":\"SecurityInterestSection\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"This section grants property (collateral)  to the Secured Party to make sure that loan is repaid.\",\"isNullable\":true,\"name\":\"SecurityInterestSection\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"SecurityAgreement.cdm.json/SecurityAgreement\",\"name\":\"InspectionSection\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"This section typically requires the borrower to maintain records of the collateral which the Secured Party may inspect at any time without notice.   The collateral may also be inspected at any time by the Secured Party.\",\"isNullable\":true,\"name\":\"InspectionSection\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"SecurityAgreement.cdm.json/SecurityAgreement\",\"name\":\"RepresentationAndWarrantiesOfBorrowerSection\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"This section provides that the borrower must possess clear title to the Collateral and not use that same Collateral as security for another loan during the term of the agreement.  Typically the borrower must also keep Collateral free from any other liens.\",\"isNullable\":true,\"name\":\"RepresentationAndWarrantiesOfBorrowerSection\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"SecurityAgreement.cdm.json/SecurityAgreement\",\"name\":\"CovenantsOfBorrowerSection\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"This section identifies the written covenants made by the Borrower to protect the Secured Party's interest in the Collateral.\\n\\n(1)  The location of the Collateral\\n\\n(2)  That only the Secured Party will have an interest in the Collateral\\n\\n(3)  That the borrower will defend against any claims for the Collateral by parties other than the Secured Party\\n\\n(4)  That the borrower will promptly pay all taxes and charges on the Collateral\\n\\n(5)  That the borrower endeavor to keep the Secured Party first in line with respects to any claims or interest in the Collateral.\\n\\n(6)  That the borrower is responsible for all expenses incurred by the Secured Party to maintain its security interest in the Collateral or obtain title to the Collateral.\",\"isNullable\":false,\"name\":\"CovenantsOfBorrowerSection\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"SecurityAgreement.cdm.json/SecurityAgreement\",\"name\":\"DefaultsSection\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"This section establishes that the borrower is in default should they fail to perform any duty set forth in the agreement.\",\"isNullable\":true,\"name\":\"DefaultsSection\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"SecurityAgreement.cdm.json/SecurityAgreement\",\"name\":\"DefaultRemediesSection\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"This section identifies remedies by the Secured Party should the borrower default on the terms of the agreement.\",\"isNullable\":true,\"name\":\"DefaultRemediesSection\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"SecurityAgreement.cdm.json/SecurityAgreement\",\"name\":\"ApplicationOfProceedsSection\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"This section establishes in the event of default that proceeds from the sale of Collateral are applied to first repay any amount owed the Secured Party by the Borrower.\",\"isNullable\":true,\"name\":\"ApplicationOfProceedsSection\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"SecurityAgreement.cdm.json/SecurityAgreement\",\"name\":\"NoticesSection\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"This section establishes how the parties are to formally notify each other regarding matters related to this agreement.\",\"isNullable\":true,\"name\":\"NoticesSection\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"SecurityAgreement.cdm.json/SecurityAgreement\",\"name\":\"SeverabilitySection\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"This section attempts to keep the agreement in effect even if a court rules that a portion is invalid.\",\"isNullable\":true,\"name\":\"SeverabilitySection\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"SecurityAgreement.cdm.json/SecurityAgreement\",\"name\":\"EntireAgreementSection\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"This section makes it clear that this is the final agreement between parties and replaces or supersedes any prior discussions or agreements.    Any amendments to this Agreement must be made in writing.\",\"isNullable\":true,\"name\":\"EntireAgreementSection\"}]}}}",
+			"Description": "A Security Agreement allows a party borrowing money to give a security interest, collateral, in some tangible form of property.",
+			"DisplayFolderInfo": "{\"name\":\"Contract\",\"colorCode\":\"#000F5C\"}",
+			"PrimaryKeys": "ContractId",
+			"spark.sql.sources.provider": "csv",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"ContractId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"SecurityAgreementDate\",\"type\":\"date\",\"nullable\":true,\"metadata\":{}},{\"name\":\"DefinitionsSection\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"SecurityInterestSection\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"InspectionSection\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"RepresentationAndWarrantiesOfBorrowerSection\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"CovenantsOfBorrowerSection\",\"type\":\"string\",\"nullable\":false,\"metadata\":{}},{\"name\":\"DefaultsSection\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"DefaultRemediesSection\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ApplicationOfProceedsSection\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"NoticesSection\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"SeverabilitySection\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"EntireAgreementSection\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "11be7f3c-8f38-4064-9f6f-042744309072",
+		"Description": "A Security Agreement allows a party borrowing money to give a security interest, collateral, in some tangible form of property."
+	},
+	"type": "TABLE"
+}

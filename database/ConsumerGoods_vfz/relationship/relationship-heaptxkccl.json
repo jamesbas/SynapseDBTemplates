@@ -1,0 +1,29 @@
+{
+	"name": "relationship-heaptxkccl",
+	"properties": {
+		"Name": "relationship-heaptxkccl",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "BankAccount",
+		"ToTableName": "CustomerAccountBankAccount",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "BankAccountId",
+				"ToColumnName": "BankAccountId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"BankAccount.cdm.json/BankAccount\",\"toEntity\":\"CustomerAccountBankAccount.cdm.json/CustomerAccountBankAccount\",\"joinPairs\":[{\"fromAttribute\":\"BankAccountId\",\"toAttribute\":\"BankAccountId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 2,
+		"ObjectId": "a8fd19ef-a696-4572-a73a-54e02b67b085"
+	},
+	"type": "RELATIONSHIP"
+}

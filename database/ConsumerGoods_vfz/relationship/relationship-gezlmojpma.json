@@ -1,0 +1,29 @@
+{
+	"name": "relationship-gezlmojpma",
+	"properties": {
+		"Name": "relationship-gezlmojpma",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "Topic",
+		"ToTableName": "Characteristic",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "TopicId",
+				"ToColumnName": "TopicId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"Topic.cdm.json/Topic\",\"toEntity\":\"Characteristic.cdm.json/Characteristic\",\"joinPairs\":[{\"fromAttribute\":\"TopicId\",\"toAttribute\":\"TopicId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "4afe3519-36ba-4547-9f79-c6ba3828c6bf"
+	},
+	"type": "RELATIONSHIP"
+}

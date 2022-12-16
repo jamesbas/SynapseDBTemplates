@@ -1,0 +1,137 @@
+{
+	"name": "LanguageUsage",
+	"properties": {
+		"Name": "LanguageUsage",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "LanguageUsageId",
+					"Description": "The unique identifier of the Language Usage.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "LanguageUsage.cdm.json/LanguageUsage",
+						"Name": "LanguageUsageId"
+					}
+				},
+				{
+					"Name": "LanguageUsageName",
+					"Description": "The name of the Language Usage.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 256,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "LanguageUsage.cdm.json/LanguageUsage",
+						"Name": "LanguageUsageName"
+					}
+				},
+				{
+					"Name": "LanguageUsageDescription",
+					"Description": "The description of the Language Usage.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "LanguageUsage.cdm.json/LanguageUsage",
+						"Name": "LanguageUsageDescription"
+					}
+				}
+			],
+			"ColumnSetEntityName": "90c54bd6-b467-4469-ac72-da1bfda50380",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/LanguageUsage",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/LanguageUsage",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"LanguageUsageId\":{\"entity\":\"LanguageUsage.cdm.json/LanguageUsage\",\"name\":\"LanguageUsageId\"},\"LanguageUsageName\":{\"entity\":\"LanguageUsage.cdm.json/LanguageUsage\",\"name\":\"LanguageUsageName\"},\"LanguageUsageDescription\":{\"entity\":\"LanguageUsage.cdm.json/LanguageUsage\",\"name\":\"LanguageUsageDescription\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"LanguageUsage\",\"path\":\"LanguageUsage.cdm.json/LanguageUsage\"},\"description\":\"The usage of the associated Language.\\n\\nEx:\\n- Documentation\\n- Reading\\n- Writing\\n- Conversation\\n- Business \\n- Billing\\n- Support / Customer Service\\n- Legal \\n- Business conversation\\n- Household \\n- Medical services\\n- Processing\\n- Reporting\",\"primaryKey\":[\"LanguageUsageId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"LanguageUsage.cdm.json/LanguageUsage\",\"name\":\"LanguageUsageId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of the Language Usage.\",\"isNullable\":false,\"name\":\"LanguageUsageId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"LanguageUsage.cdm.json/LanguageUsage\",\"name\":\"LanguageUsageName\"},\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"The name of the Language Usage.\",\"isNullable\":true,\"name\":\"LanguageUsageName\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"LanguageUsage.cdm.json/LanguageUsage\",\"name\":\"LanguageUsageDescription\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"The description of the Language Usage.\",\"isNullable\":true,\"name\":\"LanguageUsageDescription\"}]}}}",
+			"Description": "The usage of the associated Language.\n\nEx:\n- Documentation\n- Reading\n- Writing\n- Conversation\n- Business \n- Billing\n- Support / Customer Service\n- Legal \n- Business conversation\n- Household \n- Medical services\n- Processing\n- Reporting",
+			"DisplayFolderInfo": "{\"name\":\"Party\",\"colorCode\":\"#7D0F6C\"}",
+			"PrimaryKeys": "LanguageUsageId",
+			"spark.sql.sources.provider": "csv",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"LanguageUsageId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"LanguageUsageName\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"LanguageUsageDescription\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "c8bcebba-9235-4a60-a803-70e19cbb6bfe",
+		"Description": "The usage of the associated Language.\n\nEx:\n- Documentation\n- Reading\n- Writing\n- Conversation\n- Business \n- Billing\n- Support / Customer Service\n- Legal \n- Business conversation\n- Household \n- Medical services\n- Processing\n- Reporting"
+	},
+	"type": "TABLE"
+}

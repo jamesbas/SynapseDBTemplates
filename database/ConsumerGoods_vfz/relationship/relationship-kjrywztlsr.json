@@ -1,0 +1,29 @@
+{
+	"name": "relationship-kjrywztlsr",
+	"properties": {
+		"Name": "relationship-kjrywztlsr",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "SocialClass",
+		"ToTableName": "PartySocialClass",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "SocialClassId",
+				"ToColumnName": "SocialClassId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"SocialClass.cdm.json/SocialClass\",\"toEntity\":\"PartySocialClass.cdm.json/PartySocialClass\",\"joinPairs\":[{\"fromAttribute\":\"SocialClassId\",\"toAttribute\":\"SocialClassId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "36a8618b-9047-47ec-8d55-7eb6306805ec"
+	},
+	"type": "RELATIONSHIP"
+}

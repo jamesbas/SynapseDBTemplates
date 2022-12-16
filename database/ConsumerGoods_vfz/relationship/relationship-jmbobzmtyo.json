@@ -1,0 +1,29 @@
+{
+	"name": "relationship-jmbobzmtyo",
+	"properties": {
+		"Name": "relationship-jmbobzmtyo",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "AuthenticationMethod",
+		"ToTableName": "PartyAuthenticationMethod",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "AuthenticationMethodId",
+				"ToColumnName": "AuthenticationMethodId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"AuthenticationMethod.cdm.json/AuthenticationMethod\",\"toEntity\":\"PartyAuthenticationMethod.cdm.json/PartyAuthenticationMethod\",\"joinPairs\":[{\"fromAttribute\":\"AuthenticationMethodId\",\"toAttribute\":\"AuthenticationMethodId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "b983f5d1-8da8-4ce4-9451-9ab476466562"
+	},
+	"type": "RELATIONSHIP"
+}

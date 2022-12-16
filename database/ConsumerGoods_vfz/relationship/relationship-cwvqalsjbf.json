@@ -1,0 +1,29 @@
+{
+	"name": "relationship-cwvqalsjbf",
+	"properties": {
+		"Name": "relationship-cwvqalsjbf",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "ServiceLevelAgreementParameter",
+		"ToTableName": "ContractSlaParameter",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "ServiceLevelAgreementParameterId",
+				"ToColumnName": "ServiceLevelAgreementParameterId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"ServiceLevelAgreementParameter.cdm.json/ServiceLevelAgreementParameter\",\"toEntity\":\"ContractSlaParameter.cdm.json/ContractSlaParameter\",\"joinPairs\":[{\"fromAttribute\":\"ServiceLevelAgreementParameterId\",\"toAttribute\":\"ServiceLevelAgreementParameterId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "4bf6152a-832b-4b5d-82ad-20d877ac5afc"
+	},
+	"type": "RELATIONSHIP"
+}

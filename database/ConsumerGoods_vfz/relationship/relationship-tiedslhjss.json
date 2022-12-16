@@ -1,0 +1,29 @@
+{
+	"name": "relationship-tiedslhjss",
+	"properties": {
+		"Name": "relationship-tiedslhjss",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "AioLevel",
+		"ToTableName": "PartyInterest",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "AioLevelId",
+				"ToColumnName": "AioLevelId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"AioLevel.cdm.json/AioLevel\",\"toEntity\":\"PartyInterest.cdm.json/PartyInterest\",\"joinPairs\":[{\"fromAttribute\":\"AioLevelId\",\"toAttribute\":\"AioLevelId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "bd4c770f-59a1-462b-af59-652b3872839d"
+	},
+	"type": "RELATIONSHIP"
+}

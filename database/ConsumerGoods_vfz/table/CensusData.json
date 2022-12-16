@@ -1,0 +1,213 @@
+{
+	"name": "CensusData",
+	"properties": {
+		"Name": "CensusData",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "CanadaCensusId",
+					"Description": "The unique identifier of the Canada Census.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "CensusData.cdm.json/CensusData",
+						"Name": "CanadaCensusId"
+					}
+				},
+				{
+					"Name": "Geocode",
+					"Description": "The period end date for which the associated population is presented.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "CensusData.cdm.json/CensusData",
+						"Name": "Geocode"
+					}
+				},
+				{
+					"Name": "TopicId",
+					"Description": "The unique identifier of the Topic.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "CensusData.cdm.json/CensusData",
+						"Name": "TopicId"
+					}
+				},
+				{
+					"Name": "CharacteristicId",
+					"Description": "The unique identifier Characteristic.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "CensusData.cdm.json/CensusData",
+						"Name": "CharacteristicId"
+					}
+				},
+				{
+					"Name": "Total",
+					"Description": "The total number of responses that match the census data key.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "CensusData.cdm.json/CensusData",
+						"Name": "Total"
+					}
+				},
+				{
+					"Name": "TotalMale",
+					"Description": "The total number of responses from male respondents that match the census data key.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "CensusData.cdm.json/CensusData",
+						"Name": "TotalMale"
+					}
+				},
+				{
+					"Name": "TotalFemale",
+					"Description": "The total number of responses from female respondents that match the census data key.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "CensusData.cdm.json/CensusData",
+						"Name": "TotalFemale"
+					}
+				}
+			],
+			"ColumnSetEntityName": "712f41b4-2301-481d-a6e3-0ce1d1b8ddf1",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/CensusData",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/CensusData",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"CanadaCensusId\":{\"entity\":\"CensusData.cdm.json/CensusData\",\"name\":\"CanadaCensusId\"},\"Geocode\":{\"entity\":\"CensusData.cdm.json/CensusData\",\"name\":\"Geocode\"},\"TopicId\":{\"entity\":\"CensusData.cdm.json/CensusData\",\"name\":\"TopicId\"},\"CharacteristicId\":{\"entity\":\"CensusData.cdm.json/CensusData\",\"name\":\"CharacteristicId\"},\"Total\":{\"entity\":\"CensusData.cdm.json/CensusData\",\"name\":\"Total\"},\"TotalMale\":{\"entity\":\"CensusData.cdm.json/CensusData\",\"name\":\"TotalMale\"},\"TotalFemale\":{\"entity\":\"CensusData.cdm.json/CensusData\",\"name\":\"TotalFemale\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"CensusData\",\"path\":\"CensusData.cdm.json/CensusData\"},\"description\":\"The census data for the census year, geocode and characteristic.\",\"primaryKey\":[\"CanadaCensusId\",\"Geocode\",\"TopicId\",\"CharacteristicId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"CensusData.cdm.json/CensusData\",\"name\":\"CanadaCensusId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of the Canada Census.\",\"isNullable\":false,\"name\":\"CanadaCensusId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"CensusData.cdm.json/CensusData\",\"name\":\"Geocode\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"The period end date for which the associated population is presented.\",\"isNullable\":false,\"name\":\"Geocode\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"CensusData.cdm.json/CensusData\",\"name\":\"TopicId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of the Topic.\",\"isNullable\":false,\"name\":\"TopicId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"CensusData.cdm.json/CensusData\",\"name\":\"CharacteristicId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier Characteristic.\",\"isNullable\":false,\"name\":\"CharacteristicId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"CensusData.cdm.json/CensusData\",\"name\":\"Total\"},\"dataType\":\"integer\",\"description\":\"The total number of responses that match the census data key.\",\"isNullable\":true,\"name\":\"Total\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"CensusData.cdm.json/CensusData\",\"name\":\"TotalMale\"},\"dataType\":\"integer\",\"description\":\"The total number of responses from male respondents that match the census data key.\",\"isNullable\":true,\"name\":\"TotalMale\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"CensusData.cdm.json/CensusData\",\"name\":\"TotalFemale\"},\"dataType\":\"integer\",\"description\":\"The total number of responses from female respondents that match the census data key.\",\"isNullable\":true,\"name\":\"TotalFemale\"}]}}}",
+			"Description": "The census data for the census year, geocode and characteristic.",
+			"DisplayFolderInfo": "{\"name\":\"Geography\",\"colorCode\":\"#630454\"}",
+			"PrimaryKeys": "CanadaCensusId,Geocode,TopicId,CharacteristicId",
+			"spark.sql.sources.provider": "csv",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"CanadaCensusId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"Geocode\",\"type\":\"string\",\"nullable\":false,\"metadata\":{}},{\"name\":\"TopicId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"CharacteristicId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"Total\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"TotalMale\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"TotalFemale\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "ef77433d-54de-4441-8d25-9f43495b9663",
+		"Description": "The census data for the census year, geocode and characteristic."
+	},
+	"type": "TABLE"
+}

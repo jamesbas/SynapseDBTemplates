@@ -1,0 +1,29 @@
+{
+	"name": "relationship-avlcxpmaxk",
+	"properties": {
+		"Name": "relationship-avlcxpmaxk",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "Household",
+		"ToTableName": "RelatedHousehold",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "HouseholdId",
+				"ToColumnName": "RelatedHouseholdId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"Household.cdm.json/Household\",\"toEntity\":\"RelatedHousehold.cdm.json/RelatedHousehold\",\"joinPairs\":[{\"fromAttribute\":\"HouseholdId\",\"toAttribute\":\"RelatedHouseholdId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "585d13bb-3acf-4458-9bce-56af5279e199"
+	},
+	"type": "RELATIONSHIP"
+}

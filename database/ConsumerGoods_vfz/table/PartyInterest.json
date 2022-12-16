@@ -1,0 +1,176 @@
+{
+	"name": "PartyInterest",
+	"properties": {
+		"Name": "PartyInterest",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "PartyId",
+					"Description": "The unique identifier of a Party.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyInterest.cdm.json/PartyInterest",
+						"Name": "PartyId"
+					}
+				},
+				{
+					"Name": "InterestId",
+					"Description": "The unique identifier of an Interest.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyInterest.cdm.json/PartyInterest",
+						"Name": "InterestId"
+					}
+				},
+				{
+					"Name": "Date",
+					"Description": "The date that the associated information is reported, recorded or effective as-of.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyInterest.cdm.json/PartyInterest",
+						"Name": "Date"
+					}
+				},
+				{
+					"Name": "AioLevelId",
+					"Description": "The unique identifier of an AIO Level.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyInterest.cdm.json/PartyInterest",
+						"Name": "AioLevelId"
+					}
+				},
+				{
+					"Name": "PartyInterestNote",
+					"Description": "A note, comment or additional information related to the Interest that the Individual has acknowledged or reports.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyInterest.cdm.json/PartyInterest",
+						"Name": "PartyInterestNote"
+					}
+				}
+			],
+			"ColumnSetEntityName": "950e43bd-7538-4a68-b1d1-abd0525ebf2c",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/PartyInterest",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/PartyInterest",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"PartyId\":{\"entity\":\"PartyInterest.cdm.json/PartyInterest\",\"name\":\"PartyId\"},\"InterestId\":{\"entity\":\"PartyInterest.cdm.json/PartyInterest\",\"name\":\"InterestId\"},\"Date\":{\"entity\":\"PartyInterest.cdm.json/PartyInterest\",\"name\":\"Date\"},\"AioLevelId\":{\"entity\":\"PartyInterest.cdm.json/PartyInterest\",\"name\":\"AioLevelId\"},\"PartyInterestNote\":{\"entity\":\"PartyInterest.cdm.json/PartyInterest\",\"name\":\"PartyInterestNote\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"PartyInterest\",\"path\":\"PartyInterest.cdm.json/PartyInterest\"},\"description\":\"The Interest(s) that a specific Individual  has acknowledged was identified or recorded as of the indicated date.\\n\\nNote:\\nFor information of this type it makes most sense to simply record it as a 'date'  rather than a 'period start date/period end date', which would have very limited practical value.\\n\\nInterests tell us what the customer is interested in.    \\n\\nInterests are the quickest way capturing the customer.\\n\\nWhat interests the customer is what captures his imagination or ability to expend time with the business if it caters to these interests.\\n\\nActivities, Interests and Opinions are the foundation of Psychographics and Psychographic Segmentation.     \\n\\nActivities, Interests and Opinions equate to 'lifestyle'.    Activities, Interests and Opinions (AIO) are the basis for understanding consumer buying behavior as a function of their lifestyle.\\n\\nInterests describe what a consumer 'is interested in', such as family, home and community.\\n\\nEach organization will identify, define and track a specific set of AIO's to gather information about, define consumers and make decisions. \\n\\nEx:  \\n\\nInterest =  \\\"Professional Basketball\\\"\\nInterest Type = \\\"Sports\\\"\\n\\nInterest =  \\\"Gardening\\\"\\nInterest Type = \\\" Home Interests\\\"\\n\\nInterest =  \\\"Investing\\\"\\nInterest Type = \\\"Finance\\\"\\n\\nSales, marketing and advertising activities are often planned for or targeted at groups having or reporting specific interests.\",\"primaryKey\":[\"PartyId\",\"InterestId\",\"Date\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyInterest.cdm.json/PartyInterest\",\"name\":\"PartyId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a Party.\",\"isNullable\":false,\"name\":\"PartyId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyInterest.cdm.json/PartyInterest\",\"name\":\"InterestId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of an Interest.\",\"isNullable\":false,\"name\":\"InterestId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyInterest.cdm.json/PartyInterest\",\"name\":\"Date\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The date that the associated information is reported, recorded or effective as-of.\",\"isNullable\":false,\"name\":\"Date\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyInterest.cdm.json/PartyInterest\",\"name\":\"AioLevelId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of an AIO Level.\",\"isNullable\":true,\"name\":\"AioLevelId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyInterest.cdm.json/PartyInterest\",\"name\":\"PartyInterestNote\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"A note, comment or additional information related to the Interest that the Individual has acknowledged or reports.\",\"isNullable\":true,\"name\":\"PartyInterestNote\"}]}}}",
+			"Description": "The Interest(s) that a specific Individual  has acknowledged was identified or recorded as of the indicated date.\n\nNote:\nFor information of this type it makes most sense to simply record it as a 'date'  rather than a 'period start date/period end date', which would have very limited practical value.\n\nInterests tell us what the customer is interested in.    \n\nInterests are the quickest way capturing the customer.\n\nWhat interests the customer is what captures his imagination or ability to expend time with the business if it caters to these interests.\n\nActivities, Interests and Opinions are the foundation of Psychographics and Psychographic Segmentation.     \n\nActivities, Interests and Opinions equate to 'lifestyle'.    Activities, Interests and Opinions (AIO) are the basis for understanding consumer buying behavior as a function of their lifestyle.\n\nInterests describe what a consumer 'is interested in', such as family, home and community.\n\nEach organization will identify, define and track a specific set of AIO's to gather information about, define consumers and make decisions. \n\nEx:  \n\nInterest =  \"Professional Basketball\"\nInterest Type = \"Sports\"\n\nInterest =  \"Gardening\"\nInterest Type = \" Home Interests\"\n\nInterest =  \"Investing\"\nInterest Type = \"Finance\"\n\nSales, marketing and advertising activities are often planned for or targeted at groups having or reporting specific interests.",
+			"DisplayFolderInfo": "{\"name\":\"Party\",\"colorCode\":\"#7D0F6C\"}",
+			"PrimaryKeys": "PartyId,InterestId,Date",
+			"spark.sql.sources.provider": "csv",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"PartyId\",\"type\":\"long\",\"nullable\":false,\"metadata\":{}},{\"name\":\"InterestId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"Date\",\"type\":\"date\",\"nullable\":false,\"metadata\":{}},{\"name\":\"AioLevelId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"PartyInterestNote\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "ea3b1fc2-c66f-405b-97ad-aa4b9dfe5caa",
+		"Description": "The Interest(s) that a specific Individual  has acknowledged was identified or recorded as of the indicated date.\n\nNote:\nFor information of this type it makes most sense to simply record it as a 'date'  rather than a 'period start date/period end date', which would have very limited practical value.\n\nInterests tell us what the customer is interested in.    \n\nInterests are the quickest way capturing the customer.\n\nWhat interests the customer is what captures his imagination or ability to expend time with the business if it caters to these interests.\n\nActivities, Interests and Opinions are the foundation of Psychographics and Psychographic Segmentation.     \n\nActivities, Interests and Opinions equate to 'lifestyle'.    Activities, Interests and Opinions (AIO) are the basis for understanding consumer buying behavior as a function of their lifestyle.\n\nInterests describe what a consumer 'is interested in', such as family, home and community.\n\nEach organization will identify, define and track a specific set of AIO's to gather information about, define consumers and make decisions. \n\nEx:  \n\nInterest =  \"Professional Basketball\"\nInterest Type = \"Sports\"\n\nInterest =  \"Gardening\"\nInterest Type = \" Home Interests\"\n\nInterest =  \"Investing\"\nInterest Type = \"Finance\"\n\nSales, marketing and advertising activities are often planned for or targeted at groups having or reporting specific interests."
+	},
+	"type": "TABLE"
+}

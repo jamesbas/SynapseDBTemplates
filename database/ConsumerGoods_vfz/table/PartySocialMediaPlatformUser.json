@@ -1,0 +1,196 @@
+{
+	"name": "PartySocialMediaPlatformUser",
+	"properties": {
+		"Name": "PartySocialMediaPlatformUser",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "PartyId",
+					"Description": "The unique identifier of a Party.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartySocialMediaPlatformUser.cdm.json/PartySocialMediaPlatformUser",
+						"Name": "PartyId"
+					}
+				},
+				{
+					"Name": "SocialMediaPlatformId",
+					"Description": "The unique identifier of a Social Media Platform.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartySocialMediaPlatformUser.cdm.json/PartySocialMediaPlatformUser",
+						"Name": "SocialMediaPlatformId"
+					}
+				},
+				{
+					"Name": "SocialMediaPlatformUserId",
+					"Description": "The unique identifier of a Social Media Platform User.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartySocialMediaPlatformUser.cdm.json/PartySocialMediaPlatformUser",
+						"Name": "SocialMediaPlatformUserId"
+					}
+				},
+				{
+					"Name": "PeriodStartDate",
+					"Description": "The period start date for which the associated data is effective or 'as-of'.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartySocialMediaPlatformUser.cdm.json/PartySocialMediaPlatformUser",
+						"Name": "PeriodStartDate"
+					}
+				},
+				{
+					"Name": "PeriodEndDate",
+					"Description": "The period end date for which the associated data is effective or 'as-of'.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartySocialMediaPlatformUser.cdm.json/PartySocialMediaPlatformUser",
+						"Name": "PeriodEndDate"
+					}
+				},
+				{
+					"Name": "PartySocialMediaPlatformUserNote",
+					"Description": "A note, comment or additional information regarding the Party Social Media Platform User.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartySocialMediaPlatformUser.cdm.json/PartySocialMediaPlatformUser",
+						"Name": "PartySocialMediaPlatformUserNote"
+					}
+				}
+			],
+			"ColumnSetEntityName": "4434a8b9-5181-410d-921b-f0d66f8610a5",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/PartySocialMediaPlatformUser",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/PartySocialMediaPlatformUser",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"PartyId\":{\"entity\":\"PartySocialMediaPlatformUser.cdm.json/PartySocialMediaPlatformUser\",\"name\":\"PartyId\"},\"SocialMediaPlatformId\":{\"entity\":\"PartySocialMediaPlatformUser.cdm.json/PartySocialMediaPlatformUser\",\"name\":\"SocialMediaPlatformId\"},\"SocialMediaPlatformUserId\":{\"entity\":\"PartySocialMediaPlatformUser.cdm.json/PartySocialMediaPlatformUser\",\"name\":\"SocialMediaPlatformUserId\"},\"PeriodStartDate\":{\"entity\":\"PartySocialMediaPlatformUser.cdm.json/PartySocialMediaPlatformUser\",\"name\":\"PeriodStartDate\"},\"PeriodEndDate\":{\"entity\":\"PartySocialMediaPlatformUser.cdm.json/PartySocialMediaPlatformUser\",\"name\":\"PeriodEndDate\"},\"PartySocialMediaPlatformUserNote\":{\"entity\":\"PartySocialMediaPlatformUser.cdm.json/PartySocialMediaPlatformUser\",\"name\":\"PartySocialMediaPlatformUserNote\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"PartySocialMediaPlatformUser\",\"path\":\"PartySocialMediaPlatformUser.cdm.json/PartySocialMediaPlatformUser\"},\"description\":\"A Party which is represented as a user of a Social Media Platform.\",\"primaryKey\":[\"PartyId\",\"SocialMediaPlatformId\",\"SocialMediaPlatformUserId\",\"PeriodStartDate\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartySocialMediaPlatformUser.cdm.json/PartySocialMediaPlatformUser\",\"name\":\"PartyId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a Party.\",\"isNullable\":false,\"name\":\"PartyId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartySocialMediaPlatformUser.cdm.json/PartySocialMediaPlatformUser\",\"name\":\"SocialMediaPlatformId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Social Media Platform.\",\"isNullable\":false,\"name\":\"SocialMediaPlatformId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartySocialMediaPlatformUser.cdm.json/PartySocialMediaPlatformUser\",\"name\":\"SocialMediaPlatformUserId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Social Media Platform User.\",\"isNullable\":false,\"name\":\"SocialMediaPlatformUserId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartySocialMediaPlatformUser.cdm.json/PartySocialMediaPlatformUser\",\"name\":\"PeriodStartDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The period start date for which the associated data is effective or 'as-of'.\",\"isNullable\":false,\"name\":\"PeriodStartDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartySocialMediaPlatformUser.cdm.json/PartySocialMediaPlatformUser\",\"name\":\"PeriodEndDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The period end date for which the associated data is effective or 'as-of'.\",\"isNullable\":true,\"name\":\"PeriodEndDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartySocialMediaPlatformUser.cdm.json/PartySocialMediaPlatformUser\",\"name\":\"PartySocialMediaPlatformUserNote\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"A note, comment or additional information regarding the Party Social Media Platform User.\",\"isNullable\":true,\"name\":\"PartySocialMediaPlatformUserNote\"}]}}}",
+			"Description": "A Party which is represented as a user of a Social Media Platform.",
+			"DisplayFolderInfo": "{\"name\":\"Party\",\"colorCode\":\"#7D0F6C\"}",
+			"PrimaryKeys": "PartyId,SocialMediaPlatformId,SocialMediaPlatformUserId,PeriodStartDate",
+			"spark.sql.sources.provider": "csv",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"PartyId\",\"type\":\"long\",\"nullable\":false,\"metadata\":{}},{\"name\":\"SocialMediaPlatformId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"SocialMediaPlatformUserId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PeriodStartDate\",\"type\":\"date\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PeriodEndDate\",\"type\":\"date\",\"nullable\":true,\"metadata\":{}},{\"name\":\"PartySocialMediaPlatformUserNote\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "72a2cb05-5903-4b06-bbe0-bd6e0de60682",
+		"Description": "A Party which is represented as a user of a Social Media Platform."
+	},
+	"type": "TABLE"
+}

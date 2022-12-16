@@ -1,0 +1,137 @@
+{
+	"name": "AssetCharacteristicType",
+	"properties": {
+		"Name": "AssetCharacteristicType",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "AssetCharacteristicTypeId",
+					"Description": "The unique identifier of an asset characteristic type.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "AssetCharacteristicType.cdm.json/AssetCharacteristicType",
+						"Name": "AssetCharacteristicTypeId"
+					}
+				},
+				{
+					"Name": "AssetCharacteristicTypeName",
+					"Description": "The name of an asset characteristic type.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 256,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "AssetCharacteristicType.cdm.json/AssetCharacteristicType",
+						"Name": "AssetCharacteristicTypeName"
+					}
+				},
+				{
+					"Name": "AssetCharacteristicTypeDescription",
+					"Description": "The description of an asset characteristic type.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "AssetCharacteristicType.cdm.json/AssetCharacteristicType",
+						"Name": "AssetCharacteristicTypeDescription"
+					}
+				}
+			],
+			"ColumnSetEntityName": "81b343c2-f2ce-428b-a264-e49b7c0c5277",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/AssetCharacteristicType",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/AssetCharacteristicType",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"AssetCharacteristicTypeId\":{\"entity\":\"AssetCharacteristicType.cdm.json/AssetCharacteristicType\",\"name\":\"AssetCharacteristicTypeId\"},\"AssetCharacteristicTypeName\":{\"entity\":\"AssetCharacteristicType.cdm.json/AssetCharacteristicType\",\"name\":\"AssetCharacteristicTypeName\"},\"AssetCharacteristicTypeDescription\":{\"entity\":\"AssetCharacteristicType.cdm.json/AssetCharacteristicType\",\"name\":\"AssetCharacteristicTypeDescription\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"AssetCharacteristicType\",\"path\":\"AssetCharacteristicType.cdm.json/AssetCharacteristicType\"},\"description\":\"An asset characteristic.\\n\\nEx:\",\"primaryKey\":[\"AssetCharacteristicTypeId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"AssetCharacteristicType.cdm.json/AssetCharacteristicType\",\"name\":\"AssetCharacteristicTypeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of an asset characteristic type.\",\"isNullable\":false,\"name\":\"AssetCharacteristicTypeId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"AssetCharacteristicType.cdm.json/AssetCharacteristicType\",\"name\":\"AssetCharacteristicTypeName\"},\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"The name of an asset characteristic type.\",\"isNullable\":true,\"name\":\"AssetCharacteristicTypeName\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"AssetCharacteristicType.cdm.json/AssetCharacteristicType\",\"name\":\"AssetCharacteristicTypeDescription\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"The description of an asset characteristic type.\",\"isNullable\":true,\"name\":\"AssetCharacteristicTypeDescription\"}]}}}",
+			"Description": "An asset characteristic.\n\nEx:",
+			"DisplayFolderInfo": "{\"name\":\"Property & Equipment\",\"colorCode\":\"#005A61\"}",
+			"PrimaryKeys": "AssetCharacteristicTypeId",
+			"spark.sql.sources.provider": "csv",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"AssetCharacteristicTypeId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"AssetCharacteristicTypeName\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"AssetCharacteristicTypeDescription\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "8368fdd7-ea1f-416e-927d-f623175f7024",
+		"Description": "An asset characteristic.\n\nEx:"
+	},
+	"type": "TABLE"
+}

@@ -1,0 +1,29 @@
+{
+	"name": "relationship-vxbyxygcct",
+	"properties": {
+		"Name": "relationship-vxbyxygcct",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "CurrencyUsage",
+		"ToTableName": "PartyCurrencyUsage",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "CurrencyUsageId",
+				"ToColumnName": "CurrencyUsageId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"CurrencyUsage.cdm.json/CurrencyUsage\",\"toEntity\":\"PartyCurrencyUsage.cdm.json/PartyCurrencyUsage\",\"joinPairs\":[{\"fromAttribute\":\"CurrencyUsageId\",\"toAttribute\":\"CurrencyUsageId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "cca6cdd3-84f9-4ce5-8f06-b3d658e98ea4"
+	},
+	"type": "RELATIONSHIP"
+}

@@ -1,0 +1,29 @@
+{
+	"name": "relationship-ritsujxiwp",
+	"properties": {
+		"Name": "relationship-ritsujxiwp",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "DistributorshipAgreement",
+		"ToTableName": "ManufacturerCustomerExclusion",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "ContractId",
+				"ToColumnName": "ContractId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"DistributorshipAgreement.cdm.json/DistributorshipAgreement\",\"toEntity\":\"ManufacturerCustomerExclusion.cdm.json/ManufacturerCustomerExclusion\",\"joinPairs\":[{\"fromAttribute\":\"ContractId\",\"toAttribute\":\"ContractId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "b6b71ae2-2f0e-4bdd-ac61-a0752ed67a3f"
+	},
+	"type": "RELATIONSHIP"
+}

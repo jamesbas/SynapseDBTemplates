@@ -1,0 +1,177 @@
+{
+	"name": "PartyOrganizationCriteria",
+	"properties": {
+		"Name": "PartyOrganizationCriteria",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "PartyId",
+					"Description": "The unique identifier of a Party.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyOrganizationCriteria.cdm.json/PartyOrganizationCriteria",
+						"Name": "PartyId"
+					}
+				},
+				{
+					"Name": "OrganizationCriteriaId",
+					"Description": "The unique identifier of an Organization Criteria.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyOrganizationCriteria.cdm.json/PartyOrganizationCriteria",
+						"Name": "OrganizationCriteriaId"
+					}
+				},
+				{
+					"Name": "PeriodStartDate",
+					"Description": "The period start date for which the associated data is effective or 'as-of'.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyOrganizationCriteria.cdm.json/PartyOrganizationCriteria",
+						"Name": "PeriodStartDate"
+					}
+				},
+				{
+					"Name": "PeriodEndDate",
+					"Description": "The period end date for which the associated data is effective or 'as-of'.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyOrganizationCriteria.cdm.json/PartyOrganizationCriteria",
+						"Name": "PeriodEndDate"
+					}
+				},
+				{
+					"Name": "PartyOrganizationCriteriaNote",
+					"Description": "A note, comment or additional information related to Party Organization Criteria.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyOrganizationCriteria.cdm.json/PartyOrganizationCriteria",
+						"Name": "PartyOrganizationCriteriaNote"
+					}
+				}
+			],
+			"ColumnSetEntityName": "de50c8dd-5586-458b-91a1-1b7714e69ccd",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/PartyOrganizationCriteria",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/PartyOrganizationCriteria",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"PartyId\":{\"entity\":\"PartyOrganizationCriteria.cdm.json/PartyOrganizationCriteria\",\"name\":\"PartyId\"},\"OrganizationCriteriaId\":{\"entity\":\"PartyOrganizationCriteria.cdm.json/PartyOrganizationCriteria\",\"name\":\"OrganizationCriteriaId\"},\"PeriodStartDate\":{\"entity\":\"PartyOrganizationCriteria.cdm.json/PartyOrganizationCriteria\",\"name\":\"PeriodStartDate\"},\"PeriodEndDate\":{\"entity\":\"PartyOrganizationCriteria.cdm.json/PartyOrganizationCriteria\",\"name\":\"PeriodEndDate\"},\"PartyOrganizationCriteriaNote\":{\"entity\":\"PartyOrganizationCriteria.cdm.json/PartyOrganizationCriteria\",\"name\":\"PartyOrganizationCriteriaNote\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"PartyOrganizationCriteria\",\"path\":\"PartyOrganizationCriteria.cdm.json/PartyOrganizationCriteria\"},\"description\":\"The Activity(s) that a specific Individual has acknowledged was identified or recorded as of the indicated date.\\n\\nThese criteria can change over a period of time and are represented with 'period start date/period end date' qualifications, which represented the best case for knowing this information.    If the data is only randomly sampled or recorded then you could use a single 'date' to identify its recording or effective as-of date.\\n\\nOrganization Criteria are a means to identify what 'positions' or 'organizational responsibilities' an individual has.   \\n\\nAn organization can be defined for both professional organizations ('Employment') or the family organization (\\\"Housewife\\\")\\n\\nThe Organization Criteria Type is the larger classification to which the Organization Criteria belongs.\\n\\nThe following are examples:\\n\\nOrganization Criteria:   \\\"Housewife\\\"\\nOrganization Criteria Type:  \\\"Family\\\"\\n\\nOrganization Criteria:   \\\"Manager\\\"\\nOrganization Criteria Type:  \\\"Employment\\\"\\n\\nEach organization will identify, define and track a specific set of Organization Criteria to gather information about, define consumers and make decisions\",\"primaryKey\":[\"PartyId\",\"OrganizationCriteriaId\",\"PeriodStartDate\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyOrganizationCriteria.cdm.json/PartyOrganizationCriteria\",\"name\":\"PartyId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a Party.\",\"isNullable\":false,\"name\":\"PartyId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyOrganizationCriteria.cdm.json/PartyOrganizationCriteria\",\"name\":\"OrganizationCriteriaId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of an Organization Criteria.\",\"isNullable\":false,\"name\":\"OrganizationCriteriaId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyOrganizationCriteria.cdm.json/PartyOrganizationCriteria\",\"name\":\"PeriodStartDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The period start date for which the associated data is effective or 'as-of'.\",\"isNullable\":false,\"name\":\"PeriodStartDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyOrganizationCriteria.cdm.json/PartyOrganizationCriteria\",\"name\":\"PeriodEndDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The period end date for which the associated data is effective or 'as-of'.\",\"isNullable\":true,\"name\":\"PeriodEndDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyOrganizationCriteria.cdm.json/PartyOrganizationCriteria\",\"name\":\"PartyOrganizationCriteriaNote\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"A note, comment or additional information related to Party Organization Criteria.\",\"isNullable\":true,\"name\":\"PartyOrganizationCriteriaNote\"}]}}}",
+			"Description": "The Activity(s) that a specific Individual has acknowledged was identified or recorded as of the indicated date.\n\nThese criteria can change over a period of time and are represented with 'period start date/period end date' qualifications, which represented the best case for knowing this information.    If the data is only randomly sampled or recorded then you could use a single 'date' to identify its recording or effective as-of date.\n\nOrganization Criteria are a means to identify what 'positions' or 'organizational responsibilities' an individual has.   \n\nAn organization can be defined for both professional organizations ('Employment') or the family organization (\"Housewife\")\n\nThe Organization Criteria Type is the larger classification to which the Organization Criteria belongs.\n\nThe following are examples:\n\nOrganization Criteria:   \"Housewife\"\nOrganization Criteria Type:  \"Family\"\n\nOrganization Criteria:   \"Manager\"\nOrganization Criteria Type:  \"Employment\"\n\nEach organization will identify, define and track a specific set of Organization Criteria to gather information about, define consumers and make decisions",
+			"DisplayFolderInfo": "{\"name\":\"Party\",\"colorCode\":\"#7D0F6C\"}",
+			"PrimaryKeys": "PartyId,OrganizationCriteriaId,PeriodStartDate",
+			"spark.sql.sources.provider": "csv",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"PartyId\",\"type\":\"long\",\"nullable\":false,\"metadata\":{}},{\"name\":\"OrganizationCriteriaId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PeriodStartDate\",\"type\":\"date\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PeriodEndDate\",\"type\":\"date\",\"nullable\":true,\"metadata\":{}},{\"name\":\"PartyOrganizationCriteriaNote\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "7bb37e74-6153-4d44-85ed-e59958d96936",
+		"Description": "The Activity(s) that a specific Individual has acknowledged was identified or recorded as of the indicated date.\n\nThese criteria can change over a period of time and are represented with 'period start date/period end date' qualifications, which represented the best case for knowing this information.    If the data is only randomly sampled or recorded then you could use a single 'date' to identify its recording or effective as-of date.\n\nOrganization Criteria are a means to identify what 'positions' or 'organizational responsibilities' an individual has.   \n\nAn organization can be defined for both professional organizations ('Employment') or the family organization (\"Housewife\")\n\nThe Organization Criteria Type is the larger classification to which the Organization Criteria belongs.\n\nThe following are examples:\n\nOrganization Criteria:   \"Housewife\"\nOrganization Criteria Type:  \"Family\"\n\nOrganization Criteria:   \"Manager\"\nOrganization Criteria Type:  \"Employment\"\n\nEach organization will identify, define and track a specific set of Organization Criteria to gather information about, define consumers and make decisions"
+	},
+	"type": "TABLE"
+}

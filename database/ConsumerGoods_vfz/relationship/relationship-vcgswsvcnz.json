@@ -1,0 +1,29 @@
+{
+	"name": "relationship-vcgswsvcnz",
+	"properties": {
+		"Name": "relationship-vcgswsvcnz",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "IncomeProducingStatus",
+		"ToTableName": "HouseholdMember",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "IncomeProducingStatusId",
+				"ToColumnName": "IncomeProducingStatusId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"IncomeProducingStatus.cdm.json/IncomeProducingStatus\",\"toEntity\":\"HouseholdMember.cdm.json/HouseholdMember\",\"joinPairs\":[{\"fromAttribute\":\"IncomeProducingStatusId\",\"toAttribute\":\"IncomeProducingStatusId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "0864a094-9b44-4c33-a291-d482558300ff"
+	},
+	"type": "RELATIONSHIP"
+}

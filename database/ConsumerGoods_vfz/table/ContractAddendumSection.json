@@ -1,0 +1,176 @@
+{
+	"name": "ContractAddendumSection",
+	"properties": {
+		"Name": "ContractAddendumSection",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "ContractId",
+					"Description": "The unique identifier of a Contract.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ContractAddendumSection.cdm.json/ContractAddendumSection",
+						"Name": "ContractId"
+					}
+				},
+				{
+					"Name": "ContractAddendumId",
+					"Description": "The unique identifier of a Contract Addendum.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ContractAddendumSection.cdm.json/ContractAddendumSection",
+						"Name": "ContractAddendumId"
+					}
+				},
+				{
+					"Name": "ContractAddendumEffectiveTimestamp",
+					"Description": "The timestamp which the contract addendum became effective.",
+					"OriginDataTypeName": {
+						"TypeName": "timestamp",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"TimestampFormat": "YYYY-MM-DD HH:MM:SS.fffffffff",
+							"HIVE_TYPE_STRING": "timestamp"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ContractAddendumSection.cdm.json/ContractAddendumSection",
+						"Name": "ContractAddendumEffectiveTimestamp"
+					}
+				},
+				{
+					"Name": "ContractSectionId",
+					"Description": "The unique identifier of a Contract Section.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ContractAddendumSection.cdm.json/ContractAddendumSection",
+						"Name": "ContractSectionId"
+					}
+				},
+				{
+					"Name": "ContractAddendumSectionNote",
+					"Description": "A note, comment or additional information regarding the contract addendum section.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ContractAddendumSection.cdm.json/ContractAddendumSection",
+						"Name": "ContractAddendumSectionNote"
+					}
+				}
+			],
+			"ColumnSetEntityName": "62f4741e-4208-4324-a0cb-cbd542b42874",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/ContractAddendumSection",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/ContractAddendumSection",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"ContractId\":{\"entity\":\"ContractAddendumSection.cdm.json/ContractAddendumSection\",\"name\":\"ContractId\"},\"ContractAddendumId\":{\"entity\":\"ContractAddendumSection.cdm.json/ContractAddendumSection\",\"name\":\"ContractAddendumId\"},\"ContractAddendumEffectiveTimestamp\":{\"entity\":\"ContractAddendumSection.cdm.json/ContractAddendumSection\",\"name\":\"ContractAddendumEffectiveTimestamp\"},\"ContractSectionId\":{\"entity\":\"ContractAddendumSection.cdm.json/ContractAddendumSection\",\"name\":\"ContractSectionId\"},\"ContractAddendumSectionNote\":{\"entity\":\"ContractAddendumSection.cdm.json/ContractAddendumSection\",\"name\":\"ContractAddendumSectionNote\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"ContractAddendumSection\",\"path\":\"ContractAddendumSection.cdm.json/ContractAddendumSection\"},\"description\":\"A Contract Section that is referenced by the Contract Addendum.\",\"primaryKey\":[\"ContractId\",\"ContractAddendumId\",\"ContractAddendumEffectiveTimestamp\",\"ContractSectionId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ContractAddendumSection.cdm.json/ContractAddendumSection\",\"name\":\"ContractId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Contract.\",\"isNullable\":false,\"name\":\"ContractId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ContractAddendumSection.cdm.json/ContractAddendumSection\",\"name\":\"ContractAddendumId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Contract Addendum.\",\"isNullable\":false,\"name\":\"ContractAddendumId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ContractAddendumSection.cdm.json/ContractAddendumSection\",\"name\":\"ContractAddendumEffectiveTimestamp\"},\"dataType\":\"timestamp\",\"description\":\"The timestamp which the contract addendum became effective.\",\"isNullable\":false,\"name\":\"ContractAddendumEffectiveTimestamp\",\"timestampFormat\":\"YYYY-MM-DD HH:MM:SS.fffffffff\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ContractAddendumSection.cdm.json/ContractAddendumSection\",\"name\":\"ContractSectionId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Contract Section.\",\"isNullable\":false,\"name\":\"ContractSectionId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ContractAddendumSection.cdm.json/ContractAddendumSection\",\"name\":\"ContractAddendumSectionNote\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"A note, comment or additional information regarding the contract addendum section.\",\"isNullable\":true,\"name\":\"ContractAddendumSectionNote\"}]}}}",
+			"Description": "A Contract Section that is referenced by the Contract Addendum.",
+			"DisplayFolderInfo": "{\"name\":\"Contract\",\"colorCode\":\"#000F5C\"}",
+			"PrimaryKeys": "ContractId,ContractAddendumId,ContractAddendumEffectiveTimestamp,ContractSectionId",
+			"spark.sql.sources.provider": "csv",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"ContractId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"ContractAddendumId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"ContractAddendumEffectiveTimestamp\",\"type\":\"timestamp\",\"nullable\":false,\"metadata\":{}},{\"name\":\"ContractSectionId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"ContractAddendumSectionNote\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "497d4ed0-f1b3-4ac6-99e3-73d69eff4e00",
+		"Description": "A Contract Section that is referenced by the Contract Addendum."
+	},
+	"type": "TABLE"
+}

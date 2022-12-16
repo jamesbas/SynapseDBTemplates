@@ -1,0 +1,137 @@
+{
+	"name": "ContractAddendumType",
+	"properties": {
+		"Name": "ContractAddendumType",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "ContractAddendumTypeId",
+					"Description": "The unique identifier of a contract addendum type.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ContractAddendumType.cdm.json/ContractAddendumType",
+						"Name": "ContractAddendumTypeId"
+					}
+				},
+				{
+					"Name": "ContractAddendumTypeName",
+					"Description": "The name of a contract addendum type.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 256,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ContractAddendumType.cdm.json/ContractAddendumType",
+						"Name": "ContractAddendumTypeName"
+					}
+				},
+				{
+					"Name": "ContractAddendumTypeDescription",
+					"Description": "The description of a contract addendum type.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ContractAddendumType.cdm.json/ContractAddendumType",
+						"Name": "ContractAddendumTypeDescription"
+					}
+				}
+			],
+			"ColumnSetEntityName": "6845b133-b2b0-4658-8f37-ac71ecdf58c4",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/ContractAddendumType",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/ContractAddendumType",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"ContractAddendumTypeId\":{\"entity\":\"ContractAddendumType.cdm.json/ContractAddendumType\",\"name\":\"ContractAddendumTypeId\"},\"ContractAddendumTypeName\":{\"entity\":\"ContractAddendumType.cdm.json/ContractAddendumType\",\"name\":\"ContractAddendumTypeName\"},\"ContractAddendumTypeDescription\":{\"entity\":\"ContractAddendumType.cdm.json/ContractAddendumType\",\"name\":\"ContractAddendumTypeDescription\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"ContractAddendumType\",\"path\":\"ContractAddendumType.cdm.json/ContractAddendumType\"},\"description\":\"A categorization of contract addendum based on common characteristics.\\n\\nEx:\\n- Replaces Contract Section\\n- Modifies Contract Section\\n- Replaces Contract Section Clause\\n- Modifies Contract Section Clause\\n- Replaces Multiple Contract Sections\\n- Modifies Multiple Contract Section Clauses\",\"primaryKey\":[\"ContractAddendumTypeId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ContractAddendumType.cdm.json/ContractAddendumType\",\"name\":\"ContractAddendumTypeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a contract addendum type.\",\"isNullable\":false,\"name\":\"ContractAddendumTypeId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ContractAddendumType.cdm.json/ContractAddendumType\",\"name\":\"ContractAddendumTypeName\"},\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"The name of a contract addendum type.\",\"isNullable\":true,\"name\":\"ContractAddendumTypeName\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ContractAddendumType.cdm.json/ContractAddendumType\",\"name\":\"ContractAddendumTypeDescription\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"The description of a contract addendum type.\",\"isNullable\":true,\"name\":\"ContractAddendumTypeDescription\"}]}}}",
+			"Description": "A categorization of contract addendum based on common characteristics.\n\nEx:\n- Replaces Contract Section\n- Modifies Contract Section\n- Replaces Contract Section Clause\n- Modifies Contract Section Clause\n- Replaces Multiple Contract Sections\n- Modifies Multiple Contract Section Clauses",
+			"DisplayFolderInfo": "{\"name\":\"Contract\",\"colorCode\":\"#000F5C\"}",
+			"PrimaryKeys": "ContractAddendumTypeId",
+			"spark.sql.sources.provider": "csv",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"ContractAddendumTypeId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"ContractAddendumTypeName\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ContractAddendumTypeDescription\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "2a15c70c-7757-417f-abaf-b3d8bf76e396",
+		"Description": "A categorization of contract addendum based on common characteristics.\n\nEx:\n- Replaces Contract Section\n- Modifies Contract Section\n- Replaces Contract Section Clause\n- Modifies Contract Section Clause\n- Replaces Multiple Contract Sections\n- Modifies Multiple Contract Section Clauses"
+	},
+	"type": "TABLE"
+}

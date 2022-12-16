@@ -1,0 +1,29 @@
+{
+	"name": "relationship-ydhnmqhidq",
+	"properties": {
+		"Name": "relationship-ydhnmqhidq",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Kyndryl_SAP_Supplier_Mapping"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "PartyName",
+		"ToTableName": "PartyNameComponent",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "PartyNameId",
+				"ToColumnName": "PartyNameId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"PartyName.cdm.json/PartyName\",\"toEntity\":\"PartyNameComponent.cdm.json/PartyNameComponent\",\"joinPairs\":[{\"fromAttribute\":\"PartyNameId\",\"toAttribute\":\"PartyNameId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "eb22d31b-bef8-4911-a035-c0582f6ba520"
+	},
+	"type": "RELATIONSHIP"
+}

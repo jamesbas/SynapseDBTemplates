@@ -1,0 +1,137 @@
+{
+	"name": "RoleType",
+	"properties": {
+		"Name": "RoleType",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "RoleTypeId",
+					"Description": "The unique identifier of a Role Type.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "RoleType.cdm.json/RoleType",
+						"Name": "RoleTypeId"
+					}
+				},
+				{
+					"Name": "RoleTypeName",
+					"Description": "The name of a Role Type.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 256,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "RoleType.cdm.json/RoleType",
+						"Name": "RoleTypeName"
+					}
+				},
+				{
+					"Name": "RoleTypeDescription",
+					"Description": "The description of a Role Type.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "RoleType.cdm.json/RoleType",
+						"Name": "RoleTypeDescription"
+					}
+				}
+			],
+			"ColumnSetEntityName": "15c7e5f5-7419-4dc9-a157-ad75645e837c",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/RoleType",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/RoleType",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"RoleTypeId\":{\"entity\":\"RoleType.cdm.json/RoleType\",\"name\":\"RoleTypeId\"},\"RoleTypeName\":{\"entity\":\"RoleType.cdm.json/RoleType\",\"name\":\"RoleTypeName\"},\"RoleTypeDescription\":{\"entity\":\"RoleType.cdm.json/RoleType\",\"name\":\"RoleTypeDescription\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"RoleType\",\"path\":\"RoleType.cdm.json/RoleType\"},\"description\":\"A categorization of roles based on common characteristics, performed functions or similar criteria.\\n\\nEx:\\n- Employment Role\\n- Family Role\\n- Customer Role\\n- Shopfloor Manufacturing\\n- Manufacturing Planning\",\"primaryKey\":[\"RoleTypeId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"RoleType.cdm.json/RoleType\",\"name\":\"RoleTypeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Role Type.\",\"isNullable\":false,\"name\":\"RoleTypeId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"RoleType.cdm.json/RoleType\",\"name\":\"RoleTypeName\"},\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"The name of a Role Type.\",\"isNullable\":true,\"name\":\"RoleTypeName\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"RoleType.cdm.json/RoleType\",\"name\":\"RoleTypeDescription\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"The description of a Role Type.\",\"isNullable\":true,\"name\":\"RoleTypeDescription\"}]}}}",
+			"Description": "A categorization of roles based on common characteristics, performed functions or similar criteria.\n\nEx:\n- Employment Role\n- Family Role\n- Customer Role\n- Shopfloor Manufacturing\n- Manufacturing Planning",
+			"DisplayFolderInfo": "{\"name\":\"Party\",\"colorCode\":\"#7D0F6C\"}",
+			"PrimaryKeys": "RoleTypeId",
+			"spark.sql.sources.provider": "csv",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"RoleTypeId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"RoleTypeName\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"RoleTypeDescription\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "2fea2ca4-9594-445b-b800-a8e761a26d3d",
+		"Description": "A categorization of roles based on common characteristics, performed functions or similar criteria.\n\nEx:\n- Employment Role\n- Family Role\n- Customer Role\n- Shopfloor Manufacturing\n- Manufacturing Planning"
+	},
+	"type": "TABLE"
+}

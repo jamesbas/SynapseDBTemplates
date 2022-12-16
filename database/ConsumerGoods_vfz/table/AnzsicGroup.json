@@ -1,0 +1,156 @@
+{
+	"name": "AnzsicGroup",
+	"properties": {
+		"Name": "AnzsicGroup",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "AnzsicGroupCode",
+					"Description": "The unique identifier of an ANZSIC Group.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 3,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "AnzsicGroup.cdm.json/AnzsicGroup",
+						"Name": "AnzsicGroupCode"
+					}
+				},
+				{
+					"Name": "AnzsicGroupName",
+					"Description": "The name of an ANZSIC Group.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 256,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "AnzsicGroup.cdm.json/AnzsicGroup",
+						"Name": "AnzsicGroupName"
+					}
+				},
+				{
+					"Name": "AnzsicGroupDescription",
+					"Description": "The description of an ANZSIC Group.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "AnzsicGroup.cdm.json/AnzsicGroup",
+						"Name": "AnzsicGroupDescription"
+					}
+				},
+				{
+					"Name": "AnzsicSubdivisionCode",
+					"Description": "The unique identifier of an ANZSIC Subdivision.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 2,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "AnzsicGroup.cdm.json/AnzsicGroup",
+						"Name": "AnzsicSubdivisionCode"
+					}
+				}
+			],
+			"ColumnSetEntityName": "e6ca784e-bbcd-4466-a1e9-c9b79b763743",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/AnzsicGroup",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/AnzsicGroup",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"AnzsicGroupCode\":{\"entity\":\"AnzsicGroup.cdm.json/AnzsicGroup\",\"name\":\"AnzsicGroupCode\"},\"AnzsicGroupName\":{\"entity\":\"AnzsicGroup.cdm.json/AnzsicGroup\",\"name\":\"AnzsicGroupName\"},\"AnzsicGroupDescription\":{\"entity\":\"AnzsicGroup.cdm.json/AnzsicGroup\",\"name\":\"AnzsicGroupDescription\"},\"AnzsicSubdivisionCode\":{\"entity\":\"AnzsicGroup.cdm.json/AnzsicGroup\",\"name\":\"AnzsicSubdivisionCode\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"AnzsicGroup\",\"path\":\"AnzsicGroup.cdm.json/AnzsicGroup\"},\"description\":\"The ANZSIC Group\",\"primaryKey\":[\"AnzsicGroupCode\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"AnzsicGroup.cdm.json/AnzsicGroup\",\"name\":\"AnzsicGroupCode\"},\"dataType\":\"decimal\",\"dataTypeLength\":3,\"description\":\"The unique identifier of an ANZSIC Group.\",\"isNullable\":false,\"scale\":0,\"name\":\"AnzsicGroupCode\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"AnzsicGroup.cdm.json/AnzsicGroup\",\"name\":\"AnzsicGroupName\"},\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"The name of an ANZSIC Group.\",\"isNullable\":true,\"name\":\"AnzsicGroupName\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"AnzsicGroup.cdm.json/AnzsicGroup\",\"name\":\"AnzsicGroupDescription\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"The description of an ANZSIC Group.\",\"isNullable\":true,\"name\":\"AnzsicGroupDescription\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"AnzsicGroup.cdm.json/AnzsicGroup\",\"name\":\"AnzsicSubdivisionCode\"},\"dataType\":\"decimal\",\"dataTypeLength\":2,\"description\":\"The unique identifier of an ANZSIC Subdivision.\",\"isNullable\":true,\"scale\":0,\"name\":\"AnzsicSubdivisionCode\"}]}}}",
+			"Description": "The ANZSIC Group",
+			"DisplayFolderInfo": "{\"name\":\"Party\",\"colorCode\":\"#7D0F6C\"}",
+			"PrimaryKeys": "AnzsicGroupCode",
+			"spark.sql.sources.provider": "csv",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"AnzsicGroupCode\",\"type\":\"decimal(3,0)\",\"nullable\":false,\"metadata\":{}},{\"name\":\"AnzsicGroupName\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"AnzsicGroupDescription\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"AnzsicSubdivisionCode\",\"type\":\"decimal(2,0)\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "8b628fe6-26f6-49ef-a43a-bf519127b546",
+		"Description": "The ANZSIC Group"
+	},
+	"type": "TABLE"
+}

@@ -1,0 +1,29 @@
+{
+	"name": "relationship-trppiqlsnw",
+	"properties": {
+		"Name": "relationship-trppiqlsnw",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "RoleType",
+		"ToTableName": "Role",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "RoleTypeId",
+				"ToColumnName": "RoleTypeId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"RoleType.cdm.json/RoleType\",\"toEntity\":\"Role.cdm.json/Role\",\"joinPairs\":[{\"fromAttribute\":\"RoleTypeId\",\"toAttribute\":\"RoleTypeId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "5e7aa6e4-75fb-4c4f-9ed0-02f8f7e611d4"
+	},
+	"type": "RELATIONSHIP"
+}

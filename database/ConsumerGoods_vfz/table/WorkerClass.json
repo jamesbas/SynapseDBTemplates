@@ -1,0 +1,137 @@
+{
+	"name": "WorkerClass",
+	"properties": {
+		"Name": "WorkerClass",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "WorkerClassId",
+					"Description": "The unique identifier of a Worker Class.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "WorkerClass.cdm.json/WorkerClass",
+						"Name": "WorkerClassId"
+					}
+				},
+				{
+					"Name": "WorkerClassName",
+					"Description": "The name of the Worker Class.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 256,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "WorkerClass.cdm.json/WorkerClass",
+						"Name": "WorkerClassName"
+					}
+				},
+				{
+					"Name": "WorkerClassDescription",
+					"Description": "The description of the Worker Class.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "WorkerClass.cdm.json/WorkerClass",
+						"Name": "WorkerClassDescription"
+					}
+				}
+			],
+			"ColumnSetEntityName": "0e59f18b-9825-4717-8c0a-15bd61bb05f7",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/WorkerClass",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/WorkerClass",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"WorkerClassId\":{\"entity\":\"WorkerClass.cdm.json/WorkerClass\",\"name\":\"WorkerClassId\"},\"WorkerClassName\":{\"entity\":\"WorkerClass.cdm.json/WorkerClass\",\"name\":\"WorkerClassName\"},\"WorkerClassDescription\":{\"entity\":\"WorkerClass.cdm.json/WorkerClass\",\"name\":\"WorkerClassDescription\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"WorkerClass\",\"path\":\"WorkerClass.cdm.json/WorkerClass\"},\"description\":\"A classification of workers or occupations based upon common government-defined classifications:\\n\\nEx:\\n-  Private For-Profit Wage and Salary Worker\\n-  Private Not-For-Profit Wage and Salary Worker\\n-  Local Government Worker\\n-  State Government Worker\\n-  Federal Government Worker\\n-  Self-Employed Worker\\n-  Unpaid Family Worker\",\"primaryKey\":[\"WorkerClassId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"WorkerClass.cdm.json/WorkerClass\",\"name\":\"WorkerClassId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Worker Class.\",\"isNullable\":false,\"name\":\"WorkerClassId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"WorkerClass.cdm.json/WorkerClass\",\"name\":\"WorkerClassName\"},\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"The name of the Worker Class.\",\"isNullable\":true,\"name\":\"WorkerClassName\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"WorkerClass.cdm.json/WorkerClass\",\"name\":\"WorkerClassDescription\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"The description of the Worker Class.\",\"isNullable\":true,\"name\":\"WorkerClassDescription\"}]}}}",
+			"Description": "A classification of workers or occupations based upon common government-defined classifications:\n\nEx:\n-  Private For-Profit Wage and Salary Worker\n-  Private Not-For-Profit Wage and Salary Worker\n-  Local Government Worker\n-  State Government Worker\n-  Federal Government Worker\n-  Self-Employed Worker\n-  Unpaid Family Worker",
+			"DisplayFolderInfo": "{\"name\":\"Party\",\"colorCode\":\"#7D0F6C\"}",
+			"PrimaryKeys": "WorkerClassId",
+			"spark.sql.sources.provider": "csv",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"WorkerClassId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"WorkerClassName\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"WorkerClassDescription\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "67ce38dc-9c2b-4fdb-820f-325b878c0bd2",
+		"Description": "A classification of workers or occupations based upon common government-defined classifications:\n\nEx:\n-  Private For-Profit Wage and Salary Worker\n-  Private Not-For-Profit Wage and Salary Worker\n-  Local Government Worker\n-  State Government Worker\n-  Federal Government Worker\n-  Self-Employed Worker\n-  Unpaid Family Worker"
+	},
+	"type": "TABLE"
+}

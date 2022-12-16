@@ -1,0 +1,29 @@
+{
+	"name": "relationship-nimdyxzirt",
+	"properties": {
+		"Name": "relationship-nimdyxzirt",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "Party",
+		"ToTableName": "DoNotContactRegistry",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "PartyId",
+				"ToColumnName": "RegulatoryPartyId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"Party.cdm.json/Party\",\"toEntity\":\"DoNotContactRegistry.cdm.json/DoNotContactRegistry\",\"joinPairs\":[{\"fromAttribute\":\"PartyId\",\"toAttribute\":\"RegulatoryPartyId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "9c277c52-db55-48c7-9393-4bbe6ddbf696"
+	},
+	"type": "RELATIONSHIP"
+}

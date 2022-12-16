@@ -1,0 +1,29 @@
+{
+	"name": "relationship-xigxbqxtsa",
+	"properties": {
+		"Name": "relationship-xigxbqxtsa",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "OrganizationCriteriaType",
+		"ToTableName": "OrganizationCriteria",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "OrganizationCriteriaTypeId",
+				"ToColumnName": "OrganizationCriteriaTypeId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"OrganizationCriteriaType.cdm.json/OrganizationCriteriaType\",\"toEntity\":\"OrganizationCriteria.cdm.json/OrganizationCriteria\",\"joinPairs\":[{\"fromAttribute\":\"OrganizationCriteriaTypeId\",\"toAttribute\":\"OrganizationCriteriaTypeId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "487bf37a-6566-48b2-90cb-95d6c97d3c6c"
+	},
+	"type": "RELATIONSHIP"
+}

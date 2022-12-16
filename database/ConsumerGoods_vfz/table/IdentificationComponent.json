@@ -1,0 +1,291 @@
+{
+	"name": "IdentificationComponent",
+	"properties": {
+		"Name": "IdentificationComponent",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "IdentificationId",
+					"Description": "The unique identifier of the identification.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "IdentificationComponent.cdm.json/IdentificationComponent",
+						"Name": "IdentificationId"
+					}
+				},
+				{
+					"Name": "ComponentId",
+					"Description": "The unique identifier of the Component.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "IdentificationComponent.cdm.json/IdentificationComponent",
+						"Name": "ComponentId"
+					}
+				},
+				{
+					"Name": "IdentificationComponentInstalledTimestamp",
+					"Description": "The timestamp the badge component was installed in the identification.",
+					"OriginDataTypeName": {
+						"TypeName": "timestamp",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"TimestampFormat": "YYYY-MM-DD HH:MM:SS.fffffffff",
+							"HIVE_TYPE_STRING": "timestamp"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "IdentificationComponent.cdm.json/IdentificationComponent",
+						"Name": "IdentificationComponentInstalledTimestamp"
+					}
+				},
+				{
+					"Name": "IdentificationComponentRemovedTimestamp",
+					"Description": "The timestamp the badge component was removed from the identification.",
+					"OriginDataTypeName": {
+						"TypeName": "timestamp",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"TimestampFormat": "YYYY-MM-DD HH:MM:SS.fffffffff",
+							"HIVE_TYPE_STRING": "timestamp"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "IdentificationComponent.cdm.json/IdentificationComponent",
+						"Name": "IdentificationComponentRemovedTimestamp"
+					}
+				},
+				{
+					"Name": "IdentificationComponentNote",
+					"Description": "A note, comment or additional information regarding the identification component.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "IdentificationComponent.cdm.json/IdentificationComponent",
+						"Name": "IdentificationComponentNote"
+					}
+				},
+				{
+					"Name": "IdentificationComponentTypeId",
+					"Description": "The unique identifier of an Identification Component Type.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "IdentificationComponent.cdm.json/IdentificationComponent",
+						"Name": "IdentificationComponentTypeId"
+					}
+				},
+				{
+					"Name": "IrTagId",
+					"Description": "The unique identifier of an IR Tag.\n\nThe transmitter/receiver pair or transceiver plus the information storage mechanism attached to the object is referred to as the tag, transponder, electronic label, code plate and various other terms. \n\nAlthough transponder is technically the most accurate, the most common term and the one preferred by the Automatic Identification Manufacturers is tag.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "IdentificationComponent.cdm.json/IdentificationComponent",
+						"Name": "IrTagId"
+					}
+				},
+				{
+					"Name": "RfidTagId",
+					"Description": "The unique identifier of a RFID Tag.\n\nThe transmitter/receiver pair or transceiver plus the information storage mechanism attached to the object is referred to as the tag, transponder, electronic label, code plate and various other terms. \n\nAlthough transponder is technically the most accurate, the most common term and the one preferred by the Automatic Identification Manufacturers is tag.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "IdentificationComponent.cdm.json/IdentificationComponent",
+						"Name": "RfidTagId"
+					}
+				},
+				{
+					"Name": "BarCodeId",
+					"Description": "The unique identifier of a Bar Code.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "IdentificationComponent.cdm.json/IdentificationComponent",
+						"Name": "BarCodeId"
+					}
+				},
+				{
+					"Name": "RadiationDetectionDeviceId",
+					"Description": "The unique identifier of a Radiation Detection Device.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "IdentificationComponent.cdm.json/IdentificationComponent",
+						"Name": "RadiationDetectionDeviceId"
+					}
+				},
+				{
+					"Name": "PhotographId",
+					"Description": "The unique identifier of a photograph.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "IdentificationComponent.cdm.json/IdentificationComponent",
+						"Name": "PhotographId"
+					}
+				}
+			],
+			"ColumnSetEntityName": "62fee0f4-6ba8-4aa9-afd0-775fd77b663c",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/IdentificationComponent",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/IdentificationComponent",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"IdentificationId\":{\"entity\":\"IdentificationComponent.cdm.json/IdentificationComponent\",\"name\":\"IdentificationId\"},\"ComponentId\":{\"entity\":\"IdentificationComponent.cdm.json/IdentificationComponent\",\"name\":\"ComponentId\"},\"IdentificationComponentInstalledTimestamp\":{\"entity\":\"IdentificationComponent.cdm.json/IdentificationComponent\",\"name\":\"IdentificationComponentInstalledTimestamp\"},\"IdentificationComponentRemovedTimestamp\":{\"entity\":\"IdentificationComponent.cdm.json/IdentificationComponent\",\"name\":\"IdentificationComponentRemovedTimestamp\"},\"IdentificationComponentNote\":{\"entity\":\"IdentificationComponent.cdm.json/IdentificationComponent\",\"name\":\"IdentificationComponentNote\"},\"IdentificationComponentTypeId\":{\"entity\":\"IdentificationComponent.cdm.json/IdentificationComponent\",\"name\":\"IdentificationComponentTypeId\"},\"IrTagId\":{\"entity\":\"IdentificationComponent.cdm.json/IdentificationComponent\",\"name\":\"IrTagId\"},\"RfidTagId\":{\"entity\":\"IdentificationComponent.cdm.json/IdentificationComponent\",\"name\":\"RfidTagId\"},\"BarCodeId\":{\"entity\":\"IdentificationComponent.cdm.json/IdentificationComponent\",\"name\":\"BarCodeId\"},\"RadiationDetectionDeviceId\":{\"entity\":\"IdentificationComponent.cdm.json/IdentificationComponent\",\"name\":\"RadiationDetectionDeviceId\"},\"PhotographId\":{\"entity\":\"IdentificationComponent.cdm.json/IdentificationComponent\",\"name\":\"PhotographId\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"IdentificationComponent\",\"path\":\"IdentificationComponent.cdm.json/IdentificationComponent\"},\"description\":\"A component that is attached to or is part of the identification.\",\"primaryKey\":[\"IdentificationId\",\"ComponentId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"IdentificationComponent.cdm.json/IdentificationComponent\",\"name\":\"IdentificationId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of the identification.\",\"isNullable\":false,\"name\":\"IdentificationId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"IdentificationComponent.cdm.json/IdentificationComponent\",\"name\":\"ComponentId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of the Component.\",\"isNullable\":false,\"name\":\"ComponentId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"IdentificationComponent.cdm.json/IdentificationComponent\",\"name\":\"IdentificationComponentInstalledTimestamp\"},\"dataType\":\"timestamp\",\"description\":\"The timestamp the badge component was installed in the identification.\",\"isNullable\":true,\"name\":\"IdentificationComponentInstalledTimestamp\",\"timestampFormat\":\"YYYY-MM-DD HH:MM:SS.fffffffff\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"IdentificationComponent.cdm.json/IdentificationComponent\",\"name\":\"IdentificationComponentRemovedTimestamp\"},\"dataType\":\"timestamp\",\"description\":\"The timestamp the badge component was removed from the identification.\",\"isNullable\":true,\"name\":\"IdentificationComponentRemovedTimestamp\",\"timestampFormat\":\"YYYY-MM-DD HH:MM:SS.fffffffff\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"IdentificationComponent.cdm.json/IdentificationComponent\",\"name\":\"IdentificationComponentNote\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"A note, comment or additional information regarding the identification component.\",\"isNullable\":true,\"name\":\"IdentificationComponentNote\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"IdentificationComponent.cdm.json/IdentificationComponent\",\"name\":\"IdentificationComponentTypeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of an Identification Component Type.\",\"isNullable\":true,\"name\":\"IdentificationComponentTypeId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"IdentificationComponent.cdm.json/IdentificationComponent\",\"name\":\"IrTagId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of an IR Tag.\\n\\nThe transmitter/receiver pair or transceiver plus the information storage mechanism attached to the object is referred to as the tag, transponder, electronic label, code plate and various other terms. \\n\\nAlthough transponder is technically the most accurate, the most common term and the one preferred by the Automatic Identification Manufacturers is tag.\",\"isNullable\":true,\"name\":\"IrTagId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"IdentificationComponent.cdm.json/IdentificationComponent\",\"name\":\"RfidTagId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a RFID Tag.\\n\\nThe transmitter/receiver pair or transceiver plus the information storage mechanism attached to the object is referred to as the tag, transponder, electronic label, code plate and various other terms. \\n\\nAlthough transponder is technically the most accurate, the most common term and the one preferred by the Automatic Identification Manufacturers is tag.\",\"isNullable\":true,\"name\":\"RfidTagId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"IdentificationComponent.cdm.json/IdentificationComponent\",\"name\":\"BarCodeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Bar Code.\",\"isNullable\":true,\"name\":\"BarCodeId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"IdentificationComponent.cdm.json/IdentificationComponent\",\"name\":\"RadiationDetectionDeviceId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Radiation Detection Device.\",\"isNullable\":true,\"name\":\"RadiationDetectionDeviceId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"IdentificationComponent.cdm.json/IdentificationComponent\",\"name\":\"PhotographId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a photograph.\",\"isNullable\":true,\"name\":\"PhotographId\"}]}}}",
+			"Description": "A component that is attached to or is part of the identification.",
+			"DisplayFolderInfo": "{\"name\":\"Party\",\"colorCode\":\"#7D0F6C\"}",
+			"PrimaryKeys": "IdentificationId,ComponentId",
+			"spark.sql.sources.provider": "csv",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"IdentificationId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"ComponentId\",\"type\":\"long\",\"nullable\":false,\"metadata\":{}},{\"name\":\"IdentificationComponentInstalledTimestamp\",\"type\":\"timestamp\",\"nullable\":true,\"metadata\":{}},{\"name\":\"IdentificationComponentRemovedTimestamp\",\"type\":\"timestamp\",\"nullable\":true,\"metadata\":{}},{\"name\":\"IdentificationComponentNote\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"IdentificationComponentTypeId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"IrTagId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"RfidTagId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"BarCodeId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"RadiationDetectionDeviceId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"PhotographId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "2e205e4a-0446-4e69-b161-edd50e77ff3b",
+		"Description": "A component that is attached to or is part of the identification."
+	},
+	"type": "TABLE"
+}

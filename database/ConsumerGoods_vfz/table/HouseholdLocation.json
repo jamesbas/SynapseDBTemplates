@@ -1,0 +1,177 @@
+{
+	"name": "HouseholdLocation",
+	"properties": {
+		"Name": "HouseholdLocation",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "HouseholdId",
+					"Description": "The unique identifier of a Household.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "HouseholdLocation.cdm.json/HouseholdLocation",
+						"Name": "HouseholdId"
+					}
+				},
+				{
+					"Name": "LocationId",
+					"Description": "The unique identifier of a Location.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "HouseholdLocation.cdm.json/HouseholdLocation",
+						"Name": "LocationId"
+					}
+				},
+				{
+					"Name": "PeriodStartDate",
+					"Description": "The period start date during which the household is located at the Location.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "HouseholdLocation.cdm.json/HouseholdLocation",
+						"Name": "PeriodStartDate"
+					}
+				},
+				{
+					"Name": "PeriodEndDate",
+					"Description": "The period end date during which the household is located at the Location.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "HouseholdLocation.cdm.json/HouseholdLocation",
+						"Name": "PeriodEndDate"
+					}
+				},
+				{
+					"Name": "HousingUnitTypeId",
+					"Description": "The unique identifier of a Housing Unit Type.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "HouseholdLocation.cdm.json/HouseholdLocation",
+						"Name": "HousingUnitTypeId"
+					}
+				}
+			],
+			"ColumnSetEntityName": "15123f7f-9192-4403-8620-3eecacbd6f70",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/HouseholdLocation",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/HouseholdLocation",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"HouseholdId\":{\"entity\":\"HouseholdLocation.cdm.json/HouseholdLocation\",\"name\":\"HouseholdId\"},\"LocationId\":{\"entity\":\"HouseholdLocation.cdm.json/HouseholdLocation\",\"name\":\"LocationId\"},\"PeriodStartDate\":{\"entity\":\"HouseholdLocation.cdm.json/HouseholdLocation\",\"name\":\"PeriodStartDate\"},\"PeriodEndDate\":{\"entity\":\"HouseholdLocation.cdm.json/HouseholdLocation\",\"name\":\"PeriodEndDate\"},\"HousingUnitTypeId\":{\"entity\":\"HouseholdLocation.cdm.json/HouseholdLocation\",\"name\":\"HousingUnitTypeId\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"HouseholdLocation\",\"path\":\"HouseholdLocation.cdm.json/HouseholdLocation\"},\"description\":\"The location of the household as of the indicated period.\",\"primaryKey\":[\"HouseholdId\",\"LocationId\",\"PeriodStartDate\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"HouseholdLocation.cdm.json/HouseholdLocation\",\"name\":\"HouseholdId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a Household.\",\"isNullable\":false,\"name\":\"HouseholdId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"HouseholdLocation.cdm.json/HouseholdLocation\",\"name\":\"LocationId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Location.\",\"isNullable\":false,\"name\":\"LocationId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"HouseholdLocation.cdm.json/HouseholdLocation\",\"name\":\"PeriodStartDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The period start date during which the household is located at the Location.\",\"isNullable\":false,\"name\":\"PeriodStartDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"HouseholdLocation.cdm.json/HouseholdLocation\",\"name\":\"PeriodEndDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The period end date during which the household is located at the Location.\",\"isNullable\":true,\"name\":\"PeriodEndDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"HouseholdLocation.cdm.json/HouseholdLocation\",\"name\":\"HousingUnitTypeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Housing Unit Type.\",\"isNullable\":true,\"name\":\"HousingUnitTypeId\"}]}}}",
+			"Description": "The location of the household as of the indicated period.",
+			"DisplayFolderInfo": "{\"name\":\"Party\",\"colorCode\":\"#7D0F6C\"}",
+			"PrimaryKeys": "HouseholdId,LocationId,PeriodStartDate",
+			"spark.sql.sources.provider": "csv",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"HouseholdId\",\"type\":\"long\",\"nullable\":false,\"metadata\":{}},{\"name\":\"LocationId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PeriodStartDate\",\"type\":\"date\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PeriodEndDate\",\"type\":\"date\",\"nullable\":true,\"metadata\":{}},{\"name\":\"HousingUnitTypeId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "7eb25e56-f453-43e6-97db-26f23f517034",
+		"Description": "The location of the household as of the indicated period."
+	},
+	"type": "TABLE"
+}

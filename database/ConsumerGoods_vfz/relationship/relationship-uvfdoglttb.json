@@ -1,0 +1,29 @@
+{
+	"name": "relationship-uvfdoglttb",
+	"properties": {
+		"Name": "relationship-uvfdoglttb",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "Location",
+		"ToTableName": "PurchaseOrder",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "LocationId",
+				"ToColumnName": "ShipToLocationId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"Location.cdm.json/Location\",\"toEntity\":\"PurchaseOrder.cdm.json/PurchaseOrder\",\"joinPairs\":[{\"fromAttribute\":\"LocationId\",\"toAttribute\":\"ShipToLocationId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "963ae403-fee1-44e9-b13b-4ec8167af9d6"
+	},
+	"type": "RELATIONSHIP"
+}

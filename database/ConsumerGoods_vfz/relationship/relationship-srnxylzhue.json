@@ -1,0 +1,29 @@
+{
+	"name": "relationship-srnxylzhue",
+	"properties": {
+		"Name": "relationship-srnxylzhue",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "MarketingProgramType",
+		"ToTableName": "MarketingProgram",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "MarketingProgramTypeId",
+				"ToColumnName": "MarketingProgramTypeId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"MarketingProgramType.cdm.json/MarketingProgramType\",\"toEntity\":\"MarketingProgram.cdm.json/MarketingProgram\",\"joinPairs\":[{\"fromAttribute\":\"MarketingProgramTypeId\",\"toAttribute\":\"MarketingProgramTypeId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "f5d8316d-2b7f-4208-acb4-e1125d50a5a1"
+	},
+	"type": "RELATIONSHIP"
+}

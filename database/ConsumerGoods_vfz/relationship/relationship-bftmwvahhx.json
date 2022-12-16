@@ -1,0 +1,29 @@
+{
+	"name": "relationship-bftmwvahhx",
+	"properties": {
+		"Name": "relationship-bftmwvahhx",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "CreditStatus",
+		"ToTableName": "PartyCreditStatus",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "CreditStatusId",
+				"ToColumnName": "CreditStatusId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"CreditStatus.cdm.json/CreditStatus\",\"toEntity\":\"PartyCreditStatus.cdm.json/PartyCreditStatus\",\"joinPairs\":[{\"fromAttribute\":\"CreditStatusId\",\"toAttribute\":\"CreditStatusId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "a47a73c1-cb59-448c-98c0-c6857831ee35"
+	},
+	"type": "RELATIONSHIP"
+}

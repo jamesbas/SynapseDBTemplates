@@ -1,0 +1,29 @@
+{
+	"name": "relationship-wrbifmnebz",
+	"properties": {
+		"Name": "relationship-wrbifmnebz",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "Sex",
+		"ToTableName": "PartySex",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "SexId",
+				"ToColumnName": "SexId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"Sex.cdm.json/Sex\",\"toEntity\":\"PartySex.cdm.json/PartySex\",\"joinPairs\":[{\"fromAttribute\":\"SexId\",\"toAttribute\":\"SexId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "03776ac5-09c8-4ed1-8f18-4f184aaa5b0b"
+	},
+	"type": "RELATIONSHIP"
+}

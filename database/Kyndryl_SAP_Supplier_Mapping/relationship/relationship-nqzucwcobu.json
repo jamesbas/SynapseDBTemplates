@@ -1,0 +1,29 @@
+{
+	"name": "relationship-nqzucwcobu",
+	"properties": {
+		"Name": "relationship-nqzucwcobu",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Kyndryl_SAP_Supplier_Mapping"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "BankAccount",
+		"ToTableName": "CustomerAccountBankAccount",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "BankAccountId",
+				"ToColumnName": "BankAccountId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"BankAccount.cdm.json/BankAccount\",\"toEntity\":\"CustomerAccountBankAccount.cdm.json/CustomerAccountBankAccount\",\"joinPairs\":[{\"fromAttribute\":\"BankAccountId\",\"toAttribute\":\"BankAccountId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "a3644fa9-f7fb-45ac-9122-7f38eea8a592"
+	},
+	"type": "RELATIONSHIP"
+}

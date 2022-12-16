@@ -1,0 +1,196 @@
+{
+	"name": "PartyPropensity",
+	"properties": {
+		"Name": "PartyPropensity",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "PartyId",
+					"Description": "The unique identifier of a Party.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyPropensity.cdm.json/PartyPropensity",
+						"Name": "PartyId"
+					}
+				},
+				{
+					"Name": "PropensityTypeId",
+					"Description": "The unique identifier of a Propensity Type.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyPropensity.cdm.json/PartyPropensity",
+						"Name": "PropensityTypeId"
+					}
+				},
+				{
+					"Name": "PeriodStartDate",
+					"Description": "The period start date for which the associated data is effective or 'as-of'.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyPropensity.cdm.json/PartyPropensity",
+						"Name": "PeriodStartDate"
+					}
+				},
+				{
+					"Name": "PeriodEndDate",
+					"Description": "The period end date for which the associated data is effective or 'as-of'.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyPropensity.cdm.json/PartyPropensity",
+						"Name": "PeriodEndDate"
+					}
+				},
+				{
+					"Name": "PropensityRatingId",
+					"Description": "The unique identifier of a Propensity Rating.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyPropensity.cdm.json/PartyPropensity",
+						"Name": "PropensityRatingId"
+					}
+				},
+				{
+					"Name": "PartyPropensityNote",
+					"Description": "Notes, comments or additional information regarding the party propensity.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyPropensity.cdm.json/PartyPropensity",
+						"Name": "PartyPropensityNote"
+					}
+				}
+			],
+			"ColumnSetEntityName": "b36daa9d-67d2-44d6-933e-27fefd3b00da",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/PartyPropensity",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/PartyPropensity",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"PartyId\":{\"entity\":\"PartyPropensity.cdm.json/PartyPropensity\",\"name\":\"PartyId\"},\"PropensityTypeId\":{\"entity\":\"PartyPropensity.cdm.json/PartyPropensity\",\"name\":\"PropensityTypeId\"},\"PeriodStartDate\":{\"entity\":\"PartyPropensity.cdm.json/PartyPropensity\",\"name\":\"PeriodStartDate\"},\"PeriodEndDate\":{\"entity\":\"PartyPropensity.cdm.json/PartyPropensity\",\"name\":\"PeriodEndDate\"},\"PropensityRatingId\":{\"entity\":\"PartyPropensity.cdm.json/PartyPropensity\",\"name\":\"PropensityRatingId\"},\"PartyPropensityNote\":{\"entity\":\"PartyPropensity.cdm.json/PartyPropensity\",\"name\":\"PartyPropensityNote\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"PartyPropensity\",\"path\":\"PartyPropensity.cdm.json/PartyPropensity\"},\"description\":\"The propensity(ies) associated or exhibited by the party over time.\",\"primaryKey\":[\"PartyId\",\"PropensityTypeId\",\"PeriodStartDate\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyPropensity.cdm.json/PartyPropensity\",\"name\":\"PartyId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a Party.\",\"isNullable\":false,\"name\":\"PartyId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyPropensity.cdm.json/PartyPropensity\",\"name\":\"PropensityTypeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Propensity Type.\",\"isNullable\":false,\"name\":\"PropensityTypeId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyPropensity.cdm.json/PartyPropensity\",\"name\":\"PeriodStartDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The period start date for which the associated data is effective or 'as-of'.\",\"isNullable\":false,\"name\":\"PeriodStartDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyPropensity.cdm.json/PartyPropensity\",\"name\":\"PeriodEndDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The period end date for which the associated data is effective or 'as-of'.\",\"isNullable\":true,\"name\":\"PeriodEndDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyPropensity.cdm.json/PartyPropensity\",\"name\":\"PropensityRatingId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Propensity Rating.\",\"isNullable\":false,\"name\":\"PropensityRatingId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyPropensity.cdm.json/PartyPropensity\",\"name\":\"PartyPropensityNote\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"Notes, comments or additional information regarding the party propensity.\",\"isNullable\":true,\"name\":\"PartyPropensityNote\"}]}}}",
+			"Description": "The propensity(ies) associated or exhibited by the party over time.",
+			"DisplayFolderInfo": "{\"name\":\"Party\",\"colorCode\":\"#7D0F6C\"}",
+			"PrimaryKeys": "PartyId,PropensityTypeId,PeriodStartDate",
+			"spark.sql.sources.provider": "csv",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"PartyId\",\"type\":\"long\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PropensityTypeId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PeriodStartDate\",\"type\":\"date\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PeriodEndDate\",\"type\":\"date\",\"nullable\":true,\"metadata\":{}},{\"name\":\"PropensityRatingId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PartyPropensityNote\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "65c6509f-5885-442d-b54a-36bfc1135332",
+		"Description": "The propensity(ies) associated or exhibited by the party over time."
+	},
+	"type": "TABLE"
+}

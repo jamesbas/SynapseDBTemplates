@@ -1,0 +1,177 @@
+{
+	"name": "VendorGroupVendor",
+	"properties": {
+		"Name": "VendorGroupVendor",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Kyndryl_SAP_Supplier_Mapping",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "VendorId",
+					"Description": "The unique identifier of a Vendor.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "VendorGroupVendor.cdm.json/VendorGroupVendor",
+						"Name": "VendorId"
+					}
+				},
+				{
+					"Name": "VendorGroupId",
+					"Description": "The unique identifier of a Vendor Group.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "VendorGroupVendor.cdm.json/VendorGroupVendor",
+						"Name": "VendorGroupId"
+					}
+				},
+				{
+					"Name": "PeriodStartDate",
+					"Description": "The period start date of the vendor relationship.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "VendorGroupVendor.cdm.json/VendorGroupVendor",
+						"Name": "PeriodStartDate"
+					}
+				},
+				{
+					"Name": "PeriodEndDate",
+					"Description": "The period end date of the vendor relationship.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "VendorGroupVendor.cdm.json/VendorGroupVendor",
+						"Name": "PeriodEndDate"
+					}
+				},
+				{
+					"Name": "VendorGroupNote",
+					"Description": "A note, comment or additional information regarding the vendor group affiliation.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "VendorGroupVendor.cdm.json/VendorGroupVendor",
+						"Name": "VendorGroupNote"
+					}
+				}
+			],
+			"ColumnSetEntityName": "2f9e8e59-3271-49d1-9990-e636bb75f8c3",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/Kyndryl_SAP_Supplier_Mapping/VendorGroupVendor",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/Kyndryl_SAP_Supplier_Mapping/VendorGroupVendor",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"VendorId\":{\"entity\":\"VendorGroupVendor.cdm.json/VendorGroupVendor\",\"name\":\"VendorId\"},\"VendorGroupId\":{\"entity\":\"VendorGroupVendor.cdm.json/VendorGroupVendor\",\"name\":\"VendorGroupId\"},\"PeriodStartDate\":{\"entity\":\"VendorGroupVendor.cdm.json/VendorGroupVendor\",\"name\":\"PeriodStartDate\"},\"PeriodEndDate\":{\"entity\":\"VendorGroupVendor.cdm.json/VendorGroupVendor\",\"name\":\"PeriodEndDate\"},\"VendorGroupNote\":{\"entity\":\"VendorGroupVendor.cdm.json/VendorGroupVendor\",\"name\":\"VendorGroupNote\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"VendorGroupVendor\",\"path\":\"VendorGroupVendor.cdm.json/VendorGroupVendor\"},\"description\":\"The Vendor(s) that comprise or are members of the associated Vendor Group.\",\"primaryKey\":[\"VendorId\",\"VendorGroupId\",\"PeriodStartDate\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"VendorGroupVendor.cdm.json/VendorGroupVendor\",\"name\":\"VendorId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a Vendor.\",\"isNullable\":false,\"name\":\"VendorId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"VendorGroupVendor.cdm.json/VendorGroupVendor\",\"name\":\"VendorGroupId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Vendor Group.\",\"isNullable\":false,\"name\":\"VendorGroupId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"VendorGroupVendor.cdm.json/VendorGroupVendor\",\"name\":\"PeriodStartDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The period start date of the vendor relationship.\",\"isNullable\":false,\"name\":\"PeriodStartDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"VendorGroupVendor.cdm.json/VendorGroupVendor\",\"name\":\"PeriodEndDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The period end date of the vendor relationship.\",\"isNullable\":true,\"name\":\"PeriodEndDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"VendorGroupVendor.cdm.json/VendorGroupVendor\",\"name\":\"VendorGroupNote\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"A note, comment or additional information regarding the vendor group affiliation.\",\"isNullable\":true,\"name\":\"VendorGroupNote\"}]}}}",
+			"Description": "The Vendor(s) that comprise or are members of the associated Vendor Group.",
+			"DisplayFolderInfo": "{\"name\":\"Vendor\",\"colorCode\":\"#F775C5\"}",
+			"PrimaryKeys": "VendorId,VendorGroupId,PeriodStartDate",
+			"spark.sql.sources.provider": "csv",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"VendorId\",\"type\":\"long\",\"nullable\":false,\"metadata\":{}},{\"name\":\"VendorGroupId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PeriodStartDate\",\"type\":\"date\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PeriodEndDate\",\"type\":\"date\",\"nullable\":true,\"metadata\":{}},{\"name\":\"VendorGroupNote\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "9a6f0854-49ea-4326-931b-089a7715c3d6",
+		"Description": "The Vendor(s) that comprise or are members of the associated Vendor Group."
+	},
+	"type": "TABLE"
+}

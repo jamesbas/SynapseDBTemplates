@@ -1,0 +1,29 @@
+{
+	"name": "relationship-nlhisncggb",
+	"properties": {
+		"Name": "relationship-nlhisncggb",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "StudentStatus",
+		"ToTableName": "PartyEducation",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "StudentStatusId",
+				"ToColumnName": "StudentStatusId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"StudentStatus.cdm.json/StudentStatus\",\"toEntity\":\"PartyEducation.cdm.json/PartyEducation\",\"joinPairs\":[{\"fromAttribute\":\"StudentStatusId\",\"toAttribute\":\"StudentStatusId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "e0d862f0-31b3-4af3-91e6-ea37181d6ddd"
+	},
+	"type": "RELATIONSHIP"
+}

@@ -1,0 +1,29 @@
+{
+	"name": "relationship-ftzcpbqflr",
+	"properties": {
+		"Name": "relationship-ftzcpbqflr",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "PhysicalCharacteristic",
+		"ToTableName": "EmployeePhysicalCharacteristic",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "PhysicalCharacteristicId",
+				"ToColumnName": "PhysicalCharacteristicId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"PhysicalCharacteristic.cdm.json/PhysicalCharacteristic\",\"toEntity\":\"EmployeePhysicalCharacteristic.cdm.json/EmployeePhysicalCharacteristic\",\"joinPairs\":[{\"fromAttribute\":\"PhysicalCharacteristicId\",\"toAttribute\":\"PhysicalCharacteristicId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "48d14398-6792-4b51-8259-2705c333984c"
+	},
+	"type": "RELATIONSHIP"
+}

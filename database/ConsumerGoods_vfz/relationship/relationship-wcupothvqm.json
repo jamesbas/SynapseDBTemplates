@@ -1,0 +1,29 @@
+{
+	"name": "relationship-wcupothvqm",
+	"properties": {
+		"Name": "relationship-wcupothvqm",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "Party",
+		"ToTableName": "PartySocialMediaPlatformUser",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "PartyId",
+				"ToColumnName": "PartyId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"Party.cdm.json/Party\",\"toEntity\":\"PartySocialMediaPlatformUser.cdm.json/PartySocialMediaPlatformUser\",\"joinPairs\":[{\"fromAttribute\":\"PartyId\",\"toAttribute\":\"PartyId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "383489d8-a960-4f3d-a2c3-7ca4cbefb6dc"
+	},
+	"type": "RELATIONSHIP"
+}

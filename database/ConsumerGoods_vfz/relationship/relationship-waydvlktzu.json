@@ -1,0 +1,29 @@
+{
+	"name": "relationship-waydvlktzu",
+	"properties": {
+		"Name": "relationship-waydvlktzu",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "Market",
+		"ToTableName": "MarketSegment",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "MarketId",
+				"ToColumnName": "MarketId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"Market.cdm.json/Market\",\"toEntity\":\"MarketSegment.cdm.json/MarketSegment\",\"joinPairs\":[{\"fromAttribute\":\"MarketId\",\"toAttribute\":\"MarketId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "8828ccc8-860a-4a80-ae5d-90bafde6e052"
+	},
+	"type": "RELATIONSHIP"
+}

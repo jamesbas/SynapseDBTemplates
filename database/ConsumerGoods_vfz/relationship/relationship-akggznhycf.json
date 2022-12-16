@@ -1,0 +1,29 @@
+{
+	"name": "relationship-akggznhycf",
+	"properties": {
+		"Name": "relationship-akggznhycf",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "SicMajorGroup",
+		"ToTableName": "SicIndustryGroup",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "SicMajorGroupCode",
+				"ToColumnName": "SicMajorGroupCode"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"SicMajorGroup.cdm.json/SicMajorGroup\",\"toEntity\":\"SicIndustryGroup.cdm.json/SicIndustryGroup\",\"joinPairs\":[{\"fromAttribute\":\"SicMajorGroupCode\",\"toAttribute\":\"SicMajorGroupCode\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "7cd18820-6c55-4b78-8b30-8c3315ca807c"
+	},
+	"type": "RELATIONSHIP"
+}

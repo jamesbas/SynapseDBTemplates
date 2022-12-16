@@ -1,0 +1,29 @@
+{
+	"name": "relationship-uktvoffzoq",
+	"properties": {
+		"Name": "relationship-uktvoffzoq",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "GeographicCriteriaType",
+		"ToTableName": "GeographicCriteria",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "GeographicCriteriaTypeId",
+				"ToColumnName": "GeographicCriteriaTypeId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"GeographicCriteriaType.cdm.json/GeographicCriteriaType\",\"toEntity\":\"GeographicCriteria.cdm.json/GeographicCriteria\",\"joinPairs\":[{\"fromAttribute\":\"GeographicCriteriaTypeId\",\"toAttribute\":\"GeographicCriteriaTypeId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "bd8c7d6a-e078-4a16-8aaa-e2d54357f8ec"
+	},
+	"type": "RELATIONSHIP"
+}

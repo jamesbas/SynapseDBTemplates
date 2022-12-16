@@ -1,0 +1,29 @@
+{
+	"name": "relationship-jlyxfnpnjq",
+	"properties": {
+		"Name": "relationship-jlyxfnpnjq",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "LanguageProficiency",
+		"ToTableName": "PartyLanguageUsage",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "LanguageProficiencyId",
+				"ToColumnName": "LanguageProficiencyId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"LanguageProficiency.cdm.json/LanguageProficiency\",\"toEntity\":\"PartyLanguageUsage.cdm.json/PartyLanguageUsage\",\"joinPairs\":[{\"fromAttribute\":\"LanguageProficiencyId\",\"toAttribute\":\"LanguageProficiencyId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "4606cca1-866f-41d9-abb6-ea8472b36773"
+	},
+	"type": "RELATIONSHIP"
+}

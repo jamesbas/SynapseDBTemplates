@@ -1,0 +1,29 @@
+{
+	"name": "relationship-kvfmlnedes",
+	"properties": {
+		"Name": "relationship-kvfmlnedes",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "VendorContactPurpose",
+		"ToTableName": "VendorContactPurposeStatus",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "ContactPurposeId",
+				"ToColumnName": "ContactPurposeId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"VendorContactPurpose.cdm.json/VendorContactPurpose\",\"toEntity\":\"VendorContactPurposeStatus.cdm.json/VendorContactPurposeStatus\",\"joinPairs\":[{\"fromAttribute\":\"ContactPurposeId\",\"toAttribute\":\"ContactPurposeId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 2,
+		"ObjectId": "cac93a3d-caf5-4eb3-b416-6f4d5c9e79be"
+	},
+	"type": "RELATIONSHIP"
+}

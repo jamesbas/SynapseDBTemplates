@@ -1,0 +1,29 @@
+{
+	"name": "relationship-ujlcwchqxn",
+	"properties": {
+		"Name": "relationship-ujlcwchqxn",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "CitizenshipType",
+		"ToTableName": "PartyCountryOfCitizenship",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "CitizenshipTypeId",
+				"ToColumnName": "CitizenshipTypeId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"CitizenshipType.cdm.json/CitizenshipType\",\"toEntity\":\"PartyCountryOfCitizenship.cdm.json/PartyCountryOfCitizenship\",\"joinPairs\":[{\"fromAttribute\":\"CitizenshipTypeId\",\"toAttribute\":\"CitizenshipTypeId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "05f9ca91-4aa6-4ce5-b6f7-d662f04cd286"
+	},
+	"type": "RELATIONSHIP"
+}

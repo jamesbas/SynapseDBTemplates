@@ -1,0 +1,253 @@
+{
+	"name": "PartyRelationship",
+	"properties": {
+		"Name": "PartyRelationship",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "Party1Id",
+					"Description": "The unique identifier of a Party.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyRelationship.cdm.json/PartyRelationship",
+						"Name": "Party1Id"
+					}
+				},
+				{
+					"Name": "Party1RoleId",
+					"Description": "The unique identifier of a Role.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyRelationship.cdm.json/PartyRelationship",
+						"Name": "Party1RoleId"
+					}
+				},
+				{
+					"Name": "Party2Id",
+					"Description": "The unique identifier of a Party.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyRelationship.cdm.json/PartyRelationship",
+						"Name": "Party2Id"
+					}
+				},
+				{
+					"Name": "Party2RoleId",
+					"Description": "The unique identifier of a Role.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyRelationship.cdm.json/PartyRelationship",
+						"Name": "Party2RoleId"
+					}
+				},
+				{
+					"Name": "PartyRelationshipTypeId",
+					"Description": "The unique identifier of a Party Relationship Type.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyRelationship.cdm.json/PartyRelationship",
+						"Name": "PartyRelationshipTypeId"
+					}
+				},
+				{
+					"Name": "PartyRelationshipPeriodStartTimestamp",
+					"Description": "The period starting timestamp that the party relationship is defined or identified.",
+					"OriginDataTypeName": {
+						"TypeName": "timestamp",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"TimestampFormat": "YYYY-MM-DD HH:MM:SS.fffffffff",
+							"HIVE_TYPE_STRING": "timestamp"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyRelationship.cdm.json/PartyRelationship",
+						"Name": "PartyRelationshipPeriodStartTimestamp"
+					}
+				},
+				{
+					"Name": "PartyRelationshipPeriodEndTimestamp",
+					"Description": "The period ending timestamp that the party relationship is defined or identified.",
+					"OriginDataTypeName": {
+						"TypeName": "timestamp",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"TimestampFormat": "YYYY-MM-DD HH:MM:SS.fffffffff",
+							"HIVE_TYPE_STRING": "timestamp"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyRelationship.cdm.json/PartyRelationship",
+						"Name": "PartyRelationshipPeriodEndTimestamp"
+					}
+				},
+				{
+					"Name": "PartyRelationshipStatusId",
+					"Description": "The unique identifier of a Party Relationship Status.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyRelationship.cdm.json/PartyRelationship",
+						"Name": "PartyRelationshipStatusId"
+					}
+				},
+				{
+					"Name": "PartyRelationshipNote",
+					"Description": "A note, comment or additional information regarding the Party Relationship.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyRelationship.cdm.json/PartyRelationship",
+						"Name": "PartyRelationshipNote"
+					}
+				}
+			],
+			"ColumnSetEntityName": "dbc1d705-41d8-4978-9cb0-9540d7093faf",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/PartyRelationship",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/PartyRelationship",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"Party1Id\":{\"entity\":\"PartyRelationship.cdm.json/PartyRelationship\",\"name\":\"Party1Id\"},\"Party1RoleId\":{\"entity\":\"PartyRelationship.cdm.json/PartyRelationship\",\"name\":\"Party1RoleId\"},\"Party2Id\":{\"entity\":\"PartyRelationship.cdm.json/PartyRelationship\",\"name\":\"Party2Id\"},\"Party2RoleId\":{\"entity\":\"PartyRelationship.cdm.json/PartyRelationship\",\"name\":\"Party2RoleId\"},\"PartyRelationshipTypeId\":{\"entity\":\"PartyRelationship.cdm.json/PartyRelationship\",\"name\":\"PartyRelationshipTypeId\"},\"PartyRelationshipPeriodStartTimestamp\":{\"entity\":\"PartyRelationship.cdm.json/PartyRelationship\",\"name\":\"PartyRelationshipPeriodStartTimestamp\"},\"PartyRelationshipPeriodEndTimestamp\":{\"entity\":\"PartyRelationship.cdm.json/PartyRelationship\",\"name\":\"PartyRelationshipPeriodEndTimestamp\"},\"PartyRelationshipStatusId\":{\"entity\":\"PartyRelationship.cdm.json/PartyRelationship\",\"name\":\"PartyRelationshipStatusId\"},\"PartyRelationshipNote\":{\"entity\":\"PartyRelationship.cdm.json/PartyRelationship\",\"name\":\"PartyRelationshipNote\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"PartyRelationship\",\"path\":\"PartyRelationship.cdm.json/PartyRelationship\"},\"description\":\"The relationship between two parties each playing a specific role during the associated period.\\n\\nEx:\\nPARTY 1 = John Smith\\nROLE 1 = Customer\\nPARTY 2 = Mary Smith\\nROLE 2 = Customer\\nPARTY RELATIONSHIP TYPE = Marriage\\nPERIOD START DATE = 04/12/90\\nPERIOD END DATE = \\\" \\\"\\nPARTY RELATIONSHIP NOTE = Both parties are married customers\\n\\nPARTY 1 = John Thomas\\nROLE 1 = Customer\\nPARTY 2 = Bill Fredrickson\\nROLE 2 = Broker\\nPARTY RELATIONSHIP TYPE = Assigned Broker\\nPERIOD START DATE = 04/12/90\\nPERIOD END DATE = \\\" \\\"\\nPARTY RELATIONSHIP NOTE = Bill Fredickson is the broker assigned to John Thomas for the indicated period.\\n\\nPARTY 1 = John Stevens\\nROLE 1 = CFO\\nPARTY 2 = ABC Inc.\\nROLE 2 = Customer\\nPARTY RELATIONSHIP TYPE = Officer Of Corporate Customer\\nPERIOD START DATE = 04/12/90\\nPERIOD END DATE = \\\" \\\"\\nPARTY RELATIONSHIP NOTE = John Stevens is a corporate officer (CFO) of customer ABC Inc.\\n\\nPARTY 1 = Jane Davis\\nROLE 1 = Employee\\nPARTY 2 = ABC Inc.\\nROLE 2 = Employer\\nPARTY RELATIONSHIP TYPE = Employment\\nPERIOD START DATE = 04/12/90\\nPERIOD END DATE = \\\" \\\"\\nPARTY RELATIONSHIP NOTE = Jane Davis is employee  \\n\\nPARTY 1 = Chris Long\\nROLE 1 = Customer\\nPARTY 2 = ABC Inc.\\nROLE 2 = Company\\nPARTY RELATIONSHIP TYPE = Customer relationship\\nPERIOD START DATE = 04/12/90\\nPERIOD END DATE = \\\"07/12/98 \\\"\\nPARTY RELATIONSHIP STATUS = Inactive\\nPARTY RELATIONSHIP NOTE = Chris Long is an inactive customer.\",\"primaryKey\":[\"Party1Id\",\"Party1RoleId\",\"Party2Id\",\"Party2RoleId\",\"PartyRelationshipTypeId\",\"PartyRelationshipPeriodStartTimestamp\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyRelationship.cdm.json/PartyRelationship\",\"name\":\"Party1Id\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a Party.\",\"isNullable\":false,\"name\":\"Party1Id\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyRelationship.cdm.json/PartyRelationship\",\"name\":\"Party1RoleId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Role.\",\"isNullable\":false,\"name\":\"Party1RoleId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyRelationship.cdm.json/PartyRelationship\",\"name\":\"Party2Id\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a Party.\",\"isNullable\":false,\"name\":\"Party2Id\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyRelationship.cdm.json/PartyRelationship\",\"name\":\"Party2RoleId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Role.\",\"isNullable\":false,\"name\":\"Party2RoleId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyRelationship.cdm.json/PartyRelationship\",\"name\":\"PartyRelationshipTypeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Party Relationship Type.\",\"isNullable\":false,\"name\":\"PartyRelationshipTypeId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyRelationship.cdm.json/PartyRelationship\",\"name\":\"PartyRelationshipPeriodStartTimestamp\"},\"dataType\":\"timestamp\",\"description\":\"The period starting timestamp that the party relationship is defined or identified.\",\"isNullable\":false,\"name\":\"PartyRelationshipPeriodStartTimestamp\",\"timestampFormat\":\"YYYY-MM-DD HH:MM:SS.fffffffff\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyRelationship.cdm.json/PartyRelationship\",\"name\":\"PartyRelationshipPeriodEndTimestamp\"},\"dataType\":\"timestamp\",\"description\":\"The period ending timestamp that the party relationship is defined or identified.\",\"isNullable\":true,\"name\":\"PartyRelationshipPeriodEndTimestamp\",\"timestampFormat\":\"YYYY-MM-DD HH:MM:SS.fffffffff\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyRelationship.cdm.json/PartyRelationship\",\"name\":\"PartyRelationshipStatusId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Party Relationship Status.\",\"isNullable\":true,\"name\":\"PartyRelationshipStatusId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyRelationship.cdm.json/PartyRelationship\",\"name\":\"PartyRelationshipNote\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"A note, comment or additional information regarding the Party Relationship.\",\"isNullable\":true,\"name\":\"PartyRelationshipNote\"}]}}}",
+			"Description": "The relationship between two parties each playing a specific role during the associated period.\n\nEx:\nPARTY 1 = John Smith\nROLE 1 = Customer\nPARTY 2 = Mary Smith\nROLE 2 = Customer\nPARTY RELATIONSHIP TYPE = Marriage\nPERIOD START DATE = 04/12/90\nPERIOD END DATE = \" \"\nPARTY RELATIONSHIP NOTE = Both parties are married customers\n\nPARTY 1 = John Thomas\nROLE 1 = Customer\nPARTY 2 = Bill Fredrickson\nROLE 2 = Broker\nPARTY RELATIONSHIP TYPE = Assigned Broker\nPERIOD START DATE = 04/12/90\nPERIOD END DATE = \" \"\nPARTY RELATIONSHIP NOTE = Bill Fredickson is the broker assigned to John Thomas for the indicated period.\n\nPARTY 1 = John Stevens\nROLE 1 = CFO\nPARTY 2 = ABC Inc.\nROLE 2 = Customer\nPARTY RELATIONSHIP TYPE = Officer Of Corporate Customer\nPERIOD START DATE = 04/12/90\nPERIOD END DATE = \" \"\nPARTY RELATIONSHIP NOTE = John Stevens is a corporate officer (CFO) of customer ABC Inc.\n\nPARTY 1 = Jane Davis\nROLE 1 = Employee\nPARTY 2 = ABC Inc.\nROLE 2 = Employer\nPARTY RELATIONSHIP TYPE = Employment\nPERIOD START DATE = 04/12/90\nPERIOD END DATE = \" \"\nPARTY RELATIONSHIP NOTE = Jane Davis is employee  \n\nPARTY 1 = Chris Long\nROLE 1 = Customer\nPARTY 2 = ABC Inc.\nROLE 2 = Company\nPARTY RELATIONSHIP TYPE = Customer relationship\nPERIOD START DATE = 04/12/90\nPERIOD END DATE = \"07/12/98 \"\nPARTY RELATIONSHIP STATUS = Inactive\nPARTY RELATIONSHIP NOTE = Chris Long is an inactive customer.",
+			"DisplayFolderInfo": "{\"name\":\"Party\",\"colorCode\":\"#7D0F6C\"}",
+			"PrimaryKeys": "Party1Id,Party1RoleId,Party2Id,Party2RoleId,PartyRelationshipTypeId,PartyRelationshipPeriodStartTimestamp",
+			"spark.sql.sources.provider": "csv",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"Party1Id\",\"type\":\"long\",\"nullable\":false,\"metadata\":{}},{\"name\":\"Party1RoleId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"Party2Id\",\"type\":\"long\",\"nullable\":false,\"metadata\":{}},{\"name\":\"Party2RoleId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PartyRelationshipTypeId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PartyRelationshipPeriodStartTimestamp\",\"type\":\"timestamp\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PartyRelationshipPeriodEndTimestamp\",\"type\":\"timestamp\",\"nullable\":true,\"metadata\":{}},{\"name\":\"PartyRelationshipStatusId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"PartyRelationshipNote\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "94d6f099-b429-4c88-81fd-a3b7aa93b395",
+		"Description": "The relationship between two parties each playing a specific role during the associated period.\n\nEx:\nPARTY 1 = John Smith\nROLE 1 = Customer\nPARTY 2 = Mary Smith\nROLE 2 = Customer\nPARTY RELATIONSHIP TYPE = Marriage\nPERIOD START DATE = 04/12/90\nPERIOD END DATE = \" \"\nPARTY RELATIONSHIP NOTE = Both parties are married customers\n\nPARTY 1 = John Thomas\nROLE 1 = Customer\nPARTY 2 = Bill Fredrickson\nROLE 2 = Broker\nPARTY RELATIONSHIP TYPE = Assigned Broker\nPERIOD START DATE = 04/12/90\nPERIOD END DATE = \" \"\nPARTY RELATIONSHIP NOTE = Bill Fredickson is the broker assigned to John Thomas for the indicated period.\n\nPARTY 1 = John Stevens\nROLE 1 = CFO\nPARTY 2 = ABC Inc.\nROLE 2 = Customer\nPARTY RELATIONSHIP TYPE = Officer Of Corporate Customer\nPERIOD START DATE = 04/12/90\nPERIOD END DATE = \" \"\nPARTY RELATIONSHIP NOTE = John Stevens is a corporate officer (CFO) of customer ABC Inc.\n\nPARTY 1 = Jane Davis\nROLE 1 = Employee\nPARTY 2 = ABC Inc.\nROLE 2 = Employer\nPARTY RELATIONSHIP TYPE = Employment\nPERIOD START DATE = 04/12/90\nPERIOD END DATE = \" \"\nPARTY RELATIONSHIP NOTE = Jane Davis is employee  \n\nPARTY 1 = Chris Long\nROLE 1 = Customer\nPARTY 2 = ABC Inc.\nROLE 2 = Company\nPARTY RELATIONSHIP TYPE = Customer relationship\nPERIOD START DATE = 04/12/90\nPERIOD END DATE = \"07/12/98 \"\nPARTY RELATIONSHIP STATUS = Inactive\nPARTY RELATIONSHIP NOTE = Chris Long is an inactive customer."
+	},
+	"type": "TABLE"
+}

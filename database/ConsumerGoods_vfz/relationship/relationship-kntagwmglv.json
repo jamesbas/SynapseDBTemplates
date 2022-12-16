@@ -1,0 +1,29 @@
+{
+	"name": "relationship-kntagwmglv",
+	"properties": {
+		"Name": "relationship-kntagwmglv",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "HouseholdMember",
+		"ToTableName": "HouseholdMemberRole",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "HouseholdMemberPartyId",
+				"ToColumnName": "HouseholdMemberPartyId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"HouseholdMember.cdm.json/HouseholdMember\",\"toEntity\":\"HouseholdMemberRole.cdm.json/HouseholdMemberRole\",\"joinPairs\":[{\"fromAttribute\":\"HouseholdMemberPartyId\",\"toAttribute\":\"HouseholdMemberPartyId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "8f848d8a-f744-446a-aea4-55cc080c6f3a"
+	},
+	"type": "RELATIONSHIP"
+}

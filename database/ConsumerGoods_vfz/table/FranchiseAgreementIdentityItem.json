@@ -1,0 +1,137 @@
+{
+	"name": "FranchiseAgreementIdentityItem",
+	"properties": {
+		"Name": "FranchiseAgreementIdentityItem",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "FranchiseIdentityItemTypeId",
+					"Description": "The unique identifier of a franchise identity item type.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "FranchiseAgreementIdentityItem.cdm.json/FranchiseAgreementIdentityItem",
+						"Name": "FranchiseIdentityItemTypeId"
+					}
+				},
+				{
+					"Name": "ContractId",
+					"Description": "The unique identifier of a Contract.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "FranchiseAgreementIdentityItem.cdm.json/FranchiseAgreementIdentityItem",
+						"Name": "ContractId"
+					}
+				},
+				{
+					"Name": "FranchiseAgreementIdentityItemNote",
+					"Description": "A note, comment or additional information regarding a franchise agreement identity item.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "FranchiseAgreementIdentityItem.cdm.json/FranchiseAgreementIdentityItem",
+						"Name": "FranchiseAgreementIdentityItemNote"
+					}
+				}
+			],
+			"ColumnSetEntityName": "7e98c812-e497-415b-b009-2c5043925147",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/FranchiseAgreementIdentityItem",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/FranchiseAgreementIdentityItem",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"FranchiseIdentityItemTypeId\":{\"entity\":\"FranchiseAgreementIdentityItem.cdm.json/FranchiseAgreementIdentityItem\",\"name\":\"FranchiseIdentityItemTypeId\"},\"ContractId\":{\"entity\":\"FranchiseAgreementIdentityItem.cdm.json/FranchiseAgreementIdentityItem\",\"name\":\"ContractId\"},\"FranchiseAgreementIdentityItemNote\":{\"entity\":\"FranchiseAgreementIdentityItem.cdm.json/FranchiseAgreementIdentityItem\",\"name\":\"FranchiseAgreementIdentityItemNote\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"FranchiseAgreementIdentityItem\",\"path\":\"FranchiseAgreementIdentityItem.cdm.json/FranchiseAgreementIdentityItem\"},\"description\":\"The specific Identity Items that a Franchisee must use as specified in the Franchise Agreement.\",\"primaryKey\":[\"FranchiseIdentityItemTypeId\",\"ContractId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"FranchiseAgreementIdentityItem.cdm.json/FranchiseAgreementIdentityItem\",\"name\":\"FranchiseIdentityItemTypeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a franchise identity item type.\",\"isNullable\":false,\"name\":\"FranchiseIdentityItemTypeId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"FranchiseAgreementIdentityItem.cdm.json/FranchiseAgreementIdentityItem\",\"name\":\"ContractId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Contract.\",\"isNullable\":false,\"name\":\"ContractId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"FranchiseAgreementIdentityItem.cdm.json/FranchiseAgreementIdentityItem\",\"name\":\"FranchiseAgreementIdentityItemNote\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"A note, comment or additional information regarding a franchise agreement identity item.\",\"isNullable\":true,\"name\":\"FranchiseAgreementIdentityItemNote\"}]}}}",
+			"Description": "The specific Identity Items that a Franchisee must use as specified in the Franchise Agreement.",
+			"DisplayFolderInfo": "{\"name\":\"Contract\",\"colorCode\":\"#000F5C\"}",
+			"PrimaryKeys": "FranchiseIdentityItemTypeId,ContractId",
+			"spark.sql.sources.provider": "csv",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"FranchiseIdentityItemTypeId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"ContractId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"FranchiseAgreementIdentityItemNote\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "a364649d-7328-4d0c-af21-93dcf58b4732",
+		"Description": "The specific Identity Items that a Franchisee must use as specified in the Franchise Agreement."
+	},
+	"type": "TABLE"
+}

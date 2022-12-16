@@ -1,0 +1,29 @@
+{
+	"name": "relationship-uhzqonhidi",
+	"properties": {
+		"Name": "relationship-uhzqonhidi",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "ConsumerGoodsProduct",
+		"ToTableName": "AgreementForSaleOfGoodsProduct",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "ProductId",
+				"ToColumnName": "ProductId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"ConsumerGoodsProduct.cdm.json/ConsumerGoodsProduct\",\"toEntity\":\"AgreementForSaleOfGoodsProduct.cdm.json/AgreementForSaleOfGoodsProduct\",\"joinPairs\":[{\"fromAttribute\":\"ProductId\",\"toAttribute\":\"ProductId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "0ae0f8d0-4fc5-4d16-a648-bdaa51ba1a21"
+	},
+	"type": "RELATIONSHIP"
+}

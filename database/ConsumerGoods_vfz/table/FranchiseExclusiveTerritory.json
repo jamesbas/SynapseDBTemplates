@@ -1,0 +1,177 @@
+{
+	"name": "FranchiseExclusiveTerritory",
+	"properties": {
+		"Name": "FranchiseExclusiveTerritory",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "TerritoryId",
+					"Description": "The unique identifier of a Territory.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "FranchiseExclusiveTerritory.cdm.json/FranchiseExclusiveTerritory",
+						"Name": "TerritoryId"
+					}
+				},
+				{
+					"Name": "PeriodStartTimestamp",
+					"Description": "The period start timestamp that the franchise is granted exclusivity in the territory.",
+					"OriginDataTypeName": {
+						"TypeName": "timestamp",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"TimestampFormat": "YYYY-MM-DD HH:MM:SS.fffffffff",
+							"HIVE_TYPE_STRING": "timestamp"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "FranchiseExclusiveTerritory.cdm.json/FranchiseExclusiveTerritory",
+						"Name": "PeriodStartTimestamp"
+					}
+				},
+				{
+					"Name": "ContractId",
+					"Description": "The unique identifier of a Contract.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "FranchiseExclusiveTerritory.cdm.json/FranchiseExclusiveTerritory",
+						"Name": "ContractId"
+					}
+				},
+				{
+					"Name": "PeriodEndTimestamp",
+					"Description": "The period end timestamp that the franchise is granted exclusivity in the territory.",
+					"OriginDataTypeName": {
+						"TypeName": "timestamp",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"TimestampFormat": "YYYY-MM-DD HH:MM:SS.fffffffff",
+							"HIVE_TYPE_STRING": "timestamp"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "FranchiseExclusiveTerritory.cdm.json/FranchiseExclusiveTerritory",
+						"Name": "PeriodEndTimestamp"
+					}
+				},
+				{
+					"Name": "FranchiseExclusiveTerritoryNote",
+					"Description": "A note, comment or additional information regarding the franchise exclusive territory.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "FranchiseExclusiveTerritory.cdm.json/FranchiseExclusiveTerritory",
+						"Name": "FranchiseExclusiveTerritoryNote"
+					}
+				}
+			],
+			"ColumnSetEntityName": "d8181499-cb8a-422d-b69a-bc48e32fe0b9",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/FranchiseExclusiveTerritory",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/FranchiseExclusiveTerritory",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"TerritoryId\":{\"entity\":\"FranchiseExclusiveTerritory.cdm.json/FranchiseExclusiveTerritory\",\"name\":\"TerritoryId\"},\"PeriodStartTimestamp\":{\"entity\":\"FranchiseExclusiveTerritory.cdm.json/FranchiseExclusiveTerritory\",\"name\":\"PeriodStartTimestamp\"},\"ContractId\":{\"entity\":\"FranchiseExclusiveTerritory.cdm.json/FranchiseExclusiveTerritory\",\"name\":\"ContractId\"},\"PeriodEndTimestamp\":{\"entity\":\"FranchiseExclusiveTerritory.cdm.json/FranchiseExclusiveTerritory\",\"name\":\"PeriodEndTimestamp\"},\"FranchiseExclusiveTerritoryNote\":{\"entity\":\"FranchiseExclusiveTerritory.cdm.json/FranchiseExclusiveTerritory\",\"name\":\"FranchiseExclusiveTerritoryNote\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"FranchiseExclusiveTerritory\",\"path\":\"FranchiseExclusiveTerritory.cdm.json/FranchiseExclusiveTerritory\"},\"description\":\"Where the franchised business is to be operated from a single location the franchisee may receive exclusivity solely to that site or to a market area usually a set distance surrounding the location. In a mobile service business the franchisee may be awarded a geographical territory large enough to ensure growth potential. A franchise system can be impaired by having too many franchisees in one market where there may not be enough business to support them, but on the other hand a cluster of units where they are not directly competing can take advantage of the synergy that is created by dominating the market, keeping out the competition and benefiting from joint marketing promotions.\",\"primaryKey\":[\"TerritoryId\",\"PeriodStartTimestamp\",\"ContractId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"FranchiseExclusiveTerritory.cdm.json/FranchiseExclusiveTerritory\",\"name\":\"TerritoryId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Territory.\",\"isNullable\":false,\"name\":\"TerritoryId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"FranchiseExclusiveTerritory.cdm.json/FranchiseExclusiveTerritory\",\"name\":\"PeriodStartTimestamp\"},\"dataType\":\"timestamp\",\"description\":\"The period start timestamp that the franchise is granted exclusivity in the territory.\",\"isNullable\":false,\"name\":\"PeriodStartTimestamp\",\"timestampFormat\":\"YYYY-MM-DD HH:MM:SS.fffffffff\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"FranchiseExclusiveTerritory.cdm.json/FranchiseExclusiveTerritory\",\"name\":\"ContractId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Contract.\",\"isNullable\":false,\"name\":\"ContractId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"FranchiseExclusiveTerritory.cdm.json/FranchiseExclusiveTerritory\",\"name\":\"PeriodEndTimestamp\"},\"dataType\":\"timestamp\",\"description\":\"The period end timestamp that the franchise is granted exclusivity in the territory.\",\"isNullable\":true,\"name\":\"PeriodEndTimestamp\",\"timestampFormat\":\"YYYY-MM-DD HH:MM:SS.fffffffff\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"FranchiseExclusiveTerritory.cdm.json/FranchiseExclusiveTerritory\",\"name\":\"FranchiseExclusiveTerritoryNote\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"A note, comment or additional information regarding the franchise exclusive territory.\",\"isNullable\":true,\"name\":\"FranchiseExclusiveTerritoryNote\"}]}}}",
+			"Description": "Where the franchised business is to be operated from a single location the franchisee may receive exclusivity solely to that site or to a market area usually a set distance surrounding the location. In a mobile service business the franchisee may be awarded a geographical territory large enough to ensure growth potential. A franchise system can be impaired by having too many franchisees in one market where there may not be enough business to support them, but on the other hand a cluster of units where they are not directly competing can take advantage of the synergy that is created by dominating the market, keeping out the competition and benefiting from joint marketing promotions.",
+			"DisplayFolderInfo": "{\"name\":\"Contract\",\"colorCode\":\"#000F5C\"}",
+			"PrimaryKeys": "TerritoryId,PeriodStartTimestamp,ContractId",
+			"spark.sql.sources.provider": "csv",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"TerritoryId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PeriodStartTimestamp\",\"type\":\"timestamp\",\"nullable\":false,\"metadata\":{}},{\"name\":\"ContractId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PeriodEndTimestamp\",\"type\":\"timestamp\",\"nullable\":true,\"metadata\":{}},{\"name\":\"FranchiseExclusiveTerritoryNote\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "a55fb57b-4db4-4e91-ab05-01e5c2a9d7b8",
+		"Description": "Where the franchised business is to be operated from a single location the franchisee may receive exclusivity solely to that site or to a market area usually a set distance surrounding the location. In a mobile service business the franchisee may be awarded a geographical territory large enough to ensure growth potential. A franchise system can be impaired by having too many franchisees in one market where there may not be enough business to support them, but on the other hand a cluster of units where they are not directly competing can take advantage of the synergy that is created by dominating the market, keeping out the competition and benefiting from joint marketing promotions."
+	},
+	"type": "TABLE"
+}

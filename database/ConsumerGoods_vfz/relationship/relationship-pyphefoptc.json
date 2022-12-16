@@ -1,0 +1,29 @@
+{
+	"name": "relationship-pyphefoptc",
+	"properties": {
+		"Name": "relationship-pyphefoptc",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "Sex",
+		"ToTableName": "IndividualCustomer",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "SexId",
+				"ToColumnName": "SexId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"Sex.cdm.json/Sex\",\"toEntity\":\"IndividualCustomer.cdm.json/IndividualCustomer\",\"joinPairs\":[{\"fromAttribute\":\"SexId\",\"toAttribute\":\"SexId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "13ae18c1-9068-4f7a-9e06-ebb3d00ef829"
+	},
+	"type": "RELATIONSHIP"
+}

@@ -1,0 +1,177 @@
+{
+	"name": "PartyWorkerClass",
+	"properties": {
+		"Name": "PartyWorkerClass",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "PartyId",
+					"Description": "The unique identifier of a Party.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyWorkerClass.cdm.json/PartyWorkerClass",
+						"Name": "PartyId"
+					}
+				},
+				{
+					"Name": "WorkerClassId",
+					"Description": "The unique identifier of a Worker Class.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyWorkerClass.cdm.json/PartyWorkerClass",
+						"Name": "WorkerClassId"
+					}
+				},
+				{
+					"Name": "PeriodStartDate",
+					"Description": "The period start date for which the associated data is effective or 'as-of'.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyWorkerClass.cdm.json/PartyWorkerClass",
+						"Name": "PeriodStartDate"
+					}
+				},
+				{
+					"Name": "PeriodEndDate",
+					"Description": "The period end date for which the associated data is effective or 'as-of'.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyWorkerClass.cdm.json/PartyWorkerClass",
+						"Name": "PeriodEndDate"
+					}
+				},
+				{
+					"Name": "PartyWorkerClassNote",
+					"Description": "A note, comment or additional information regarding the Party / Worker Class relationship.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyWorkerClass.cdm.json/PartyWorkerClass",
+						"Name": "PartyWorkerClassNote"
+					}
+				}
+			],
+			"ColumnSetEntityName": "8da4cb80-1058-445d-8cde-1d83b03b50ac",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/PartyWorkerClass",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/PartyWorkerClass",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"PartyId\":{\"entity\":\"PartyWorkerClass.cdm.json/PartyWorkerClass\",\"name\":\"PartyId\"},\"WorkerClassId\":{\"entity\":\"PartyWorkerClass.cdm.json/PartyWorkerClass\",\"name\":\"WorkerClassId\"},\"PeriodStartDate\":{\"entity\":\"PartyWorkerClass.cdm.json/PartyWorkerClass\",\"name\":\"PeriodStartDate\"},\"PeriodEndDate\":{\"entity\":\"PartyWorkerClass.cdm.json/PartyWorkerClass\",\"name\":\"PeriodEndDate\"},\"PartyWorkerClassNote\":{\"entity\":\"PartyWorkerClass.cdm.json/PartyWorkerClass\",\"name\":\"PartyWorkerClassNote\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"PartyWorkerClass\",\"path\":\"PartyWorkerClass.cdm.json/PartyWorkerClass\"},\"description\":\"The Individual Worker Class characteristics defined for the associated period.\\n\\nEx:\\n-  Private For-Profit Wage and Salary Worker\\n-  Private Not-For-Profit Wage and Salary Worker\\n-  Local Government Worker\\n-  State Government Worker\\n-  Federal Government Worker\\n-  Self-Employed Worker\\n-  Unpaid Family Worker\",\"primaryKey\":[\"PartyId\",\"WorkerClassId\",\"PeriodStartDate\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyWorkerClass.cdm.json/PartyWorkerClass\",\"name\":\"PartyId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a Party.\",\"isNullable\":false,\"name\":\"PartyId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyWorkerClass.cdm.json/PartyWorkerClass\",\"name\":\"WorkerClassId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Worker Class.\",\"isNullable\":false,\"name\":\"WorkerClassId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyWorkerClass.cdm.json/PartyWorkerClass\",\"name\":\"PeriodStartDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The period start date for which the associated data is effective or 'as-of'.\",\"isNullable\":false,\"name\":\"PeriodStartDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyWorkerClass.cdm.json/PartyWorkerClass\",\"name\":\"PeriodEndDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The period end date for which the associated data is effective or 'as-of'.\",\"isNullable\":true,\"name\":\"PeriodEndDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyWorkerClass.cdm.json/PartyWorkerClass\",\"name\":\"PartyWorkerClassNote\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"A note, comment or additional information regarding the Party / Worker Class relationship.\",\"isNullable\":true,\"name\":\"PartyWorkerClassNote\"}]}}}",
+			"Description": "The Individual Worker Class characteristics defined for the associated period.\n\nEx:\n-  Private For-Profit Wage and Salary Worker\n-  Private Not-For-Profit Wage and Salary Worker\n-  Local Government Worker\n-  State Government Worker\n-  Federal Government Worker\n-  Self-Employed Worker\n-  Unpaid Family Worker",
+			"DisplayFolderInfo": "{\"name\":\"Party\",\"colorCode\":\"#7D0F6C\"}",
+			"PrimaryKeys": "PartyId,WorkerClassId,PeriodStartDate",
+			"spark.sql.sources.provider": "csv",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"PartyId\",\"type\":\"long\",\"nullable\":false,\"metadata\":{}},{\"name\":\"WorkerClassId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PeriodStartDate\",\"type\":\"date\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PeriodEndDate\",\"type\":\"date\",\"nullable\":true,\"metadata\":{}},{\"name\":\"PartyWorkerClassNote\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "c9f1d692-a6ae-4e9a-9895-909e1c5e52d9",
+		"Description": "The Individual Worker Class characteristics defined for the associated period.\n\nEx:\n-  Private For-Profit Wage and Salary Worker\n-  Private Not-For-Profit Wage and Salary Worker\n-  Local Government Worker\n-  State Government Worker\n-  Federal Government Worker\n-  Self-Employed Worker\n-  Unpaid Family Worker"
+	},
+	"type": "TABLE"
+}

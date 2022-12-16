@@ -1,0 +1,29 @@
+{
+	"name": "relationship-worifvblll",
+	"properties": {
+		"Name": "relationship-worifvblll",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "SocialMediaPlatformUser",
+		"ToTableName": "PartySocialMediaPlatformUser",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "SocialMediaPlatformId",
+				"ToColumnName": "SocialMediaPlatformId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"SocialMediaPlatformUser.cdm.json/SocialMediaPlatformUser\",\"toEntity\":\"PartySocialMediaPlatformUser.cdm.json/PartySocialMediaPlatformUser\",\"joinPairs\":[{\"fromAttribute\":\"SocialMediaPlatformId\",\"toAttribute\":\"SocialMediaPlatformId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "7aab1802-100a-4b1f-8c0e-3dc0338738c9"
+	},
+	"type": "RELATIONSHIP"
+}

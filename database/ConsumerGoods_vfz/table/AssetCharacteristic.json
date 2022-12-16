@@ -1,0 +1,177 @@
+{
+	"name": "AssetCharacteristic",
+	"properties": {
+		"Name": "AssetCharacteristic",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "AssetId",
+					"Description": "The unique identifier of an Asset.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "AssetCharacteristic.cdm.json/AssetCharacteristic",
+						"Name": "AssetId"
+					}
+				},
+				{
+					"Name": "AssetCharacteristicTypeId",
+					"Description": "The unique identifier of an asset characteristic type.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "AssetCharacteristic.cdm.json/AssetCharacteristic",
+						"Name": "AssetCharacteristicTypeId"
+					}
+				},
+				{
+					"Name": "PeriodStartTimestamp",
+					"Description": "The period start timestamp.",
+					"OriginDataTypeName": {
+						"TypeName": "timestamp",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"TimestampFormat": "YYYY-MM-DD HH:MM:SS.fffffffff",
+							"HIVE_TYPE_STRING": "timestamp"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "AssetCharacteristic.cdm.json/AssetCharacteristic",
+						"Name": "PeriodStartTimestamp"
+					}
+				},
+				{
+					"Name": "PeriodEndTimestamp",
+					"Description": "The period end timestamp.",
+					"OriginDataTypeName": {
+						"TypeName": "timestamp",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"TimestampFormat": "YYYY-MM-DD HH:MM:SS.fffffffff",
+							"HIVE_TYPE_STRING": "timestamp"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "AssetCharacteristic.cdm.json/AssetCharacteristic",
+						"Name": "PeriodEndTimestamp"
+					}
+				},
+				{
+					"Name": "AssetCharacteristicNote",
+					"Description": "A note, comment or additional information regarding the asset characteristic.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "AssetCharacteristic.cdm.json/AssetCharacteristic",
+						"Name": "AssetCharacteristicNote"
+					}
+				}
+			],
+			"ColumnSetEntityName": "b881cfb1-fa4f-4451-9442-885996be6061",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/AssetCharacteristic",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/AssetCharacteristic",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"AssetId\":{\"entity\":\"AssetCharacteristic.cdm.json/AssetCharacteristic\",\"name\":\"AssetId\"},\"AssetCharacteristicTypeId\":{\"entity\":\"AssetCharacteristic.cdm.json/AssetCharacteristic\",\"name\":\"AssetCharacteristicTypeId\"},\"PeriodStartTimestamp\":{\"entity\":\"AssetCharacteristic.cdm.json/AssetCharacteristic\",\"name\":\"PeriodStartTimestamp\"},\"PeriodEndTimestamp\":{\"entity\":\"AssetCharacteristic.cdm.json/AssetCharacteristic\",\"name\":\"PeriodEndTimestamp\"},\"AssetCharacteristicNote\":{\"entity\":\"AssetCharacteristic.cdm.json/AssetCharacteristic\",\"name\":\"AssetCharacteristicNote\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"AssetCharacteristic\",\"path\":\"AssetCharacteristic.cdm.json/AssetCharacteristic\"},\"description\":\"An asset characteristic describing it for the associated period.\",\"primaryKey\":[\"AssetId\",\"AssetCharacteristicTypeId\",\"PeriodStartTimestamp\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"AssetCharacteristic.cdm.json/AssetCharacteristic\",\"name\":\"AssetId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of an Asset.\",\"isNullable\":false,\"name\":\"AssetId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"AssetCharacteristic.cdm.json/AssetCharacteristic\",\"name\":\"AssetCharacteristicTypeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of an asset characteristic type.\",\"isNullable\":false,\"name\":\"AssetCharacteristicTypeId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"AssetCharacteristic.cdm.json/AssetCharacteristic\",\"name\":\"PeriodStartTimestamp\"},\"dataType\":\"timestamp\",\"description\":\"The period start timestamp.\",\"isNullable\":false,\"name\":\"PeriodStartTimestamp\",\"timestampFormat\":\"YYYY-MM-DD HH:MM:SS.fffffffff\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"AssetCharacteristic.cdm.json/AssetCharacteristic\",\"name\":\"PeriodEndTimestamp\"},\"dataType\":\"timestamp\",\"description\":\"The period end timestamp.\",\"isNullable\":true,\"name\":\"PeriodEndTimestamp\",\"timestampFormat\":\"YYYY-MM-DD HH:MM:SS.fffffffff\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"AssetCharacteristic.cdm.json/AssetCharacteristic\",\"name\":\"AssetCharacteristicNote\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"A note, comment or additional information regarding the asset characteristic.\",\"isNullable\":true,\"name\":\"AssetCharacteristicNote\"}]}}}",
+			"Description": "An asset characteristic describing it for the associated period.",
+			"DisplayFolderInfo": "{\"name\":\"Property & Equipment\",\"colorCode\":\"#005A61\"}",
+			"PrimaryKeys": "AssetId,AssetCharacteristicTypeId,PeriodStartTimestamp",
+			"spark.sql.sources.provider": "csv",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"AssetId\",\"type\":\"long\",\"nullable\":false,\"metadata\":{}},{\"name\":\"AssetCharacteristicTypeId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PeriodStartTimestamp\",\"type\":\"timestamp\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PeriodEndTimestamp\",\"type\":\"timestamp\",\"nullable\":true,\"metadata\":{}},{\"name\":\"AssetCharacteristicNote\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "6a558268-8ffc-4c25-9bb8-8129abc4582c",
+		"Description": "An asset characteristic describing it for the associated period."
+	},
+	"type": "TABLE"
+}

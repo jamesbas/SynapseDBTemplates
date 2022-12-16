@@ -1,0 +1,29 @@
+{
+	"name": "relationship-kndemochim",
+	"properties": {
+		"Name": "relationship-kndemochim",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "OptInStatusType",
+		"ToTableName": "VendorContactPurposeStatus",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "OptInStatusTypeId",
+				"ToColumnName": "OptInStatusTypeId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"OptInStatusType.cdm.json/OptInStatusType\",\"toEntity\":\"VendorContactPurposeStatus.cdm.json/VendorContactPurposeStatus\",\"joinPairs\":[{\"fromAttribute\":\"OptInStatusTypeId\",\"toAttribute\":\"OptInStatusTypeId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "81c8d78d-903f-4f2c-85ff-8a8a2381934b"
+	},
+	"type": "RELATIONSHIP"
+}

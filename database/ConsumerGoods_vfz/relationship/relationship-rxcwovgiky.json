@@ -1,0 +1,29 @@
+{
+	"name": "relationship-rxcwovgiky",
+	"properties": {
+		"Name": "relationship-rxcwovgiky",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "LeaseType",
+		"ToTableName": "CommercialLeaseAgreement",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "LeaseTypeId",
+				"ToColumnName": "LeaseTypeId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"LeaseType.cdm.json/LeaseType\",\"toEntity\":\"CommercialLeaseAgreement.cdm.json/CommercialLeaseAgreement\",\"joinPairs\":[{\"fromAttribute\":\"LeaseTypeId\",\"toAttribute\":\"LeaseTypeId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "0819a167-7b47-4118-8cbe-2f24884fc8b5"
+	},
+	"type": "RELATIONSHIP"
+}

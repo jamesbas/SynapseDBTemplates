@@ -1,0 +1,29 @@
+{
+	"name": "relationship-luhahgpkeg",
+	"properties": {
+		"Name": "relationship-luhahgpkeg",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "NaicsSector",
+		"ToTableName": "NaicsSubsector",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "NaicsSectorCode",
+				"ToColumnName": "NaicsSectorCode"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"NaicsSector.cdm.json/NaicsSector\",\"toEntity\":\"NaicsSubsector.cdm.json/NaicsSubsector\",\"joinPairs\":[{\"fromAttribute\":\"NaicsSectorCode\",\"toAttribute\":\"NaicsSectorCode\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "4b2e1911-ac38-446e-97be-f64505e74ae2"
+	},
+	"type": "RELATIONSHIP"
+}

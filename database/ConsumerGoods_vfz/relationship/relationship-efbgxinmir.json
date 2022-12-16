@@ -1,0 +1,29 @@
+{
+	"name": "relationship-efbgxinmir",
+	"properties": {
+		"Name": "relationship-efbgxinmir",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "TaxType",
+		"ToTableName": "Tax",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "TaxTypeId",
+				"ToColumnName": "TaxTypeId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"TaxType.cdm.json/TaxType\",\"toEntity\":\"Tax.cdm.json/Tax\",\"joinPairs\":[{\"fromAttribute\":\"TaxTypeId\",\"toAttribute\":\"TaxTypeId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 2,
+		"ObjectId": "4efc125e-75d1-4edb-82f1-9eb00a86065b"
+	},
+	"type": "RELATIONSHIP"
+}

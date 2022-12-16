@@ -1,0 +1,29 @@
+{
+	"name": "relationship-abmpkjjofp",
+	"properties": {
+		"Name": "relationship-abmpkjjofp",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "Opinion",
+		"ToTableName": "PartyOpinion",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "OpinionId",
+				"ToColumnName": "OpinionId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"Opinion.cdm.json/Opinion\",\"toEntity\":\"PartyOpinion.cdm.json/PartyOpinion\",\"joinPairs\":[{\"fromAttribute\":\"OpinionId\",\"toAttribute\":\"OpinionId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "67c8bcec-3dcb-4fd5-ad05-5018e4142eb6"
+	},
+	"type": "RELATIONSHIP"
+}

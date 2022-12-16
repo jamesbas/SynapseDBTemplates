@@ -1,0 +1,29 @@
+{
+	"name": "relationship-ycjvnbwlac",
+	"properties": {
+		"Name": "relationship-ycjvnbwlac",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "Consent",
+		"ToTableName": "ConsentDocument",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "ConsentId",
+				"ToColumnName": "ConsentId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"Consent.cdm.json/Consent\",\"toEntity\":\"ConsentDocument.cdm.json/ConsentDocument\",\"joinPairs\":[{\"fromAttribute\":\"ConsentId\",\"toAttribute\":\"ConsentId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "106bd505-ac02-4699-b306-63557ae65160"
+	},
+	"type": "RELATIONSHIP"
+}

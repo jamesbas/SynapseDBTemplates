@@ -1,0 +1,29 @@
+{
+	"name": "relationship-aywiarejja",
+	"properties": {
+		"Name": "relationship-aywiarejja",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "OrganizationParty",
+		"ToTableName": "OrganizationPartyRelatedParty",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "PartyId",
+				"ToColumnName": "PartyId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"OrganizationParty.cdm.json/OrganizationParty\",\"toEntity\":\"OrganizationPartyRelatedParty.cdm.json/OrganizationPartyRelatedParty\",\"joinPairs\":[{\"fromAttribute\":\"PartyId\",\"toAttribute\":\"PartyId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "5e4d30f7-17b6-4b0c-bf61-e73360e145a6"
+	},
+	"type": "RELATIONSHIP"
+}

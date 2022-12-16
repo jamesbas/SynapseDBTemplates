@@ -1,0 +1,29 @@
+{
+	"name": "relationship-itkdtmslgk",
+	"properties": {
+		"Name": "relationship-itkdtmslgk",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "Contract",
+		"ToTableName": "RatePlan",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "ContractId",
+				"ToColumnName": "RatePlanId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"Contract.cdm.json/Contract\",\"toEntity\":\"RatePlan.cdm.json/RatePlan\",\"joinPairs\":[{\"fromAttribute\":\"ContractId\",\"toAttribute\":\"RatePlanId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "6439bc95-e525-4cb6-80b7-0d638401deef"
+	},
+	"type": "RELATIONSHIP"
+}

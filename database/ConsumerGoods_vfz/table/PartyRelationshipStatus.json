@@ -1,0 +1,137 @@
+{
+	"name": "PartyRelationshipStatus",
+	"properties": {
+		"Name": "PartyRelationshipStatus",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "PartyRelationshipStatusId",
+					"Description": "The unique identifier of a Party Relationship Status.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyRelationshipStatus.cdm.json/PartyRelationshipStatus",
+						"Name": "PartyRelationshipStatusId"
+					}
+				},
+				{
+					"Name": "PartyRelationshipStatusName",
+					"Description": "The name of a Party Relationship Status.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 256,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyRelationshipStatus.cdm.json/PartyRelationshipStatus",
+						"Name": "PartyRelationshipStatusName"
+					}
+				},
+				{
+					"Name": "PartyRelationshipStatusDescription",
+					"Description": "The description of a Party Relationship Status.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyRelationshipStatus.cdm.json/PartyRelationshipStatus",
+						"Name": "PartyRelationshipStatusDescription"
+					}
+				}
+			],
+			"ColumnSetEntityName": "10f42063-7488-4b94-ae7c-be495200d0f7",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/PartyRelationshipStatus",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/PartyRelationshipStatus",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"PartyRelationshipStatusId\":{\"entity\":\"PartyRelationshipStatus.cdm.json/PartyRelationshipStatus\",\"name\":\"PartyRelationshipStatusId\"},\"PartyRelationshipStatusName\":{\"entity\":\"PartyRelationshipStatus.cdm.json/PartyRelationshipStatus\",\"name\":\"PartyRelationshipStatusName\"},\"PartyRelationshipStatusDescription\":{\"entity\":\"PartyRelationshipStatus.cdm.json/PartyRelationshipStatus\",\"name\":\"PartyRelationshipStatusDescription\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"PartyRelationshipStatus\",\"path\":\"PartyRelationshipStatus.cdm.json/PartyRelationshipStatus\"},\"description\":\"The current status of the Role played by the Party.\\n\\nEx:\\nRole = Customer\\nRole Status = Active Customer\\n \\nPARTY 1 = Chris Long\\nROLE 1 = Customer\\nPARTY 2 = ABC Inc.\\nROLE 2 = Company\\nPARTY RELATIONSHIP TYPE = Customer relationship\\nPERIOD START DATE = 04/12/90\\nPERIOD END DATE = \\\"07/12/98 \\\"\\nPARTY RELATIONSHIP STATUS = Inactive\\nPARTY RELATIONSHIP NOTE = Chris Long is an inactive customer.\",\"primaryKey\":[\"PartyRelationshipStatusId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyRelationshipStatus.cdm.json/PartyRelationshipStatus\",\"name\":\"PartyRelationshipStatusId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Party Relationship Status.\",\"isNullable\":false,\"name\":\"PartyRelationshipStatusId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyRelationshipStatus.cdm.json/PartyRelationshipStatus\",\"name\":\"PartyRelationshipStatusName\"},\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"The name of a Party Relationship Status.\",\"isNullable\":true,\"name\":\"PartyRelationshipStatusName\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyRelationshipStatus.cdm.json/PartyRelationshipStatus\",\"name\":\"PartyRelationshipStatusDescription\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"The description of a Party Relationship Status.\",\"isNullable\":true,\"name\":\"PartyRelationshipStatusDescription\"}]}}}",
+			"Description": "The current status of the Role played by the Party.\n\nEx:\nRole = Customer\nRole Status = Active Customer\n \nPARTY 1 = Chris Long\nROLE 1 = Customer\nPARTY 2 = ABC Inc.\nROLE 2 = Company\nPARTY RELATIONSHIP TYPE = Customer relationship\nPERIOD START DATE = 04/12/90\nPERIOD END DATE = \"07/12/98 \"\nPARTY RELATIONSHIP STATUS = Inactive\nPARTY RELATIONSHIP NOTE = Chris Long is an inactive customer.",
+			"DisplayFolderInfo": "{\"name\":\"Party\",\"colorCode\":\"#7D0F6C\"}",
+			"PrimaryKeys": "PartyRelationshipStatusId",
+			"spark.sql.sources.provider": "csv",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"PartyRelationshipStatusId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PartyRelationshipStatusName\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"PartyRelationshipStatusDescription\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "f470e80b-727e-414a-a152-dad3480f3dd2",
+		"Description": "The current status of the Role played by the Party.\n\nEx:\nRole = Customer\nRole Status = Active Customer\n \nPARTY 1 = Chris Long\nROLE 1 = Customer\nPARTY 2 = ABC Inc.\nROLE 2 = Company\nPARTY RELATIONSHIP TYPE = Customer relationship\nPERIOD START DATE = 04/12/90\nPERIOD END DATE = \"07/12/98 \"\nPARTY RELATIONSHIP STATUS = Inactive\nPARTY RELATIONSHIP NOTE = Chris Long is an inactive customer."
+	},
+	"type": "TABLE"
+}

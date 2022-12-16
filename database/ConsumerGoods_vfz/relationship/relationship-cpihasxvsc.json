@@ -1,0 +1,29 @@
+{
+	"name": "relationship-cpihasxvsc",
+	"properties": {
+		"Name": "relationship-cpihasxvsc",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "Location",
+		"ToTableName": "OfferOfEmployment",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "LocationId",
+				"ToColumnName": "EmployeeLocationId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"Location.cdm.json/Location\",\"toEntity\":\"OfferOfEmployment.cdm.json/OfferOfEmployment\",\"joinPairs\":[{\"fromAttribute\":\"LocationId\",\"toAttribute\":\"EmployeeLocationId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "1e68e29c-334c-4d73-a7f0-f4d0d1a9dbfb"
+	},
+	"type": "RELATIONSHIP"
+}

@@ -1,0 +1,157 @@
+{
+	"name": "PartyDunBradstreetReport",
+	"properties": {
+		"Name": "PartyDunBradstreetReport",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "PartyId",
+					"Description": "The unique identifier of a Party.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyDunBradstreetReport.cdm.json/PartyDunBradstreetReport",
+						"Name": "PartyId"
+					}
+				},
+				{
+					"Name": "DunsNumber",
+					"Description": "Dun & Bradstreet (D&B) provides a D-U-N-S Number, a unique nine digit identification number, for each physical location of your business.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 9,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyDunBradstreetReport.cdm.json/PartyDunBradstreetReport",
+						"Name": "DunsNumber"
+					}
+				},
+				{
+					"Name": "ReportPurchaseDate",
+					"Description": "The purchase date of the report.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyDunBradstreetReport.cdm.json/PartyDunBradstreetReport",
+						"Name": "ReportPurchaseDate"
+					}
+				},
+				{
+					"Name": "PartyDunBradstreetReportNote",
+					"Description": "Notes, comments or additional information regarding the Party Dun Bradstreet Report.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyDunBradstreetReport.cdm.json/PartyDunBradstreetReport",
+						"Name": "PartyDunBradstreetReportNote"
+					}
+				}
+			],
+			"ColumnSetEntityName": "927240e4-a162-410c-8a00-4b73b423747b",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/PartyDunBradstreetReport",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/PartyDunBradstreetReport",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"PartyId\":{\"entity\":\"PartyDunBradstreetReport.cdm.json/PartyDunBradstreetReport\",\"name\":\"PartyId\"},\"DunsNumber\":{\"entity\":\"PartyDunBradstreetReport.cdm.json/PartyDunBradstreetReport\",\"name\":\"DunsNumber\"},\"ReportPurchaseDate\":{\"entity\":\"PartyDunBradstreetReport.cdm.json/PartyDunBradstreetReport\",\"name\":\"ReportPurchaseDate\"},\"PartyDunBradstreetReportNote\":{\"entity\":\"PartyDunBradstreetReport.cdm.json/PartyDunBradstreetReport\",\"name\":\"PartyDunBradstreetReportNote\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"PartyDunBradstreetReport\",\"path\":\"PartyDunBradstreetReport.cdm.json/PartyDunBradstreetReport\"},\"description\":\"A Dun Bradstreet Report that is associated with a party.\",\"primaryKey\":[\"PartyId\",\"DunsNumber\",\"ReportPurchaseDate\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyDunBradstreetReport.cdm.json/PartyDunBradstreetReport\",\"name\":\"PartyId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a Party.\",\"isNullable\":false,\"name\":\"PartyId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyDunBradstreetReport.cdm.json/PartyDunBradstreetReport\",\"name\":\"DunsNumber\"},\"dataType\":\"decimal\",\"dataTypeLength\":9,\"description\":\"Dun & Bradstreet (D&B) provides a D-U-N-S Number, a unique nine digit identification number, for each physical location of your business.\",\"isNullable\":false,\"scale\":0,\"name\":\"DunsNumber\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyDunBradstreetReport.cdm.json/PartyDunBradstreetReport\",\"name\":\"ReportPurchaseDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The purchase date of the report.\",\"isNullable\":false,\"name\":\"ReportPurchaseDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyDunBradstreetReport.cdm.json/PartyDunBradstreetReport\",\"name\":\"PartyDunBradstreetReportNote\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"Notes, comments or additional information regarding the Party Dun Bradstreet Report.\",\"isNullable\":true,\"name\":\"PartyDunBradstreetReportNote\"}]}}}",
+			"Description": "A Dun Bradstreet Report that is associated with a party.",
+			"DisplayFolderInfo": "{\"name\":\"Party\",\"colorCode\":\"#7D0F6C\"}",
+			"PrimaryKeys": "PartyId,DunsNumber,ReportPurchaseDate",
+			"spark.sql.sources.provider": "csv",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"PartyId\",\"type\":\"long\",\"nullable\":false,\"metadata\":{}},{\"name\":\"DunsNumber\",\"type\":\"decimal(9,0)\",\"nullable\":false,\"metadata\":{}},{\"name\":\"ReportPurchaseDate\",\"type\":\"date\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PartyDunBradstreetReportNote\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "c77738da-6b0b-4d1b-9ed0-6f97e9027e6c",
+		"Description": "A Dun Bradstreet Report that is associated with a party."
+	},
+	"type": "TABLE"
+}

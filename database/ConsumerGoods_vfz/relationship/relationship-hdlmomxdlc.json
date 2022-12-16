@@ -1,0 +1,29 @@
+{
+	"name": "relationship-hdlmomxdlc",
+	"properties": {
+		"Name": "relationship-hdlmomxdlc",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "NaicsIndustry",
+		"ToTableName": "NaicsNationalIndustry",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "NaicsIndustryCode",
+				"ToColumnName": "NaicsIndustryCode"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"NaicsIndustry.cdm.json/NaicsIndustry\",\"toEntity\":\"NaicsNationalIndustry.cdm.json/NaicsNationalIndustry\",\"joinPairs\":[{\"fromAttribute\":\"NaicsIndustryCode\",\"toAttribute\":\"NaicsIndustryCode\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "c2b12b93-0f92-467d-b3e9-77c08f12566e"
+	},
+	"type": "RELATIONSHIP"
+}

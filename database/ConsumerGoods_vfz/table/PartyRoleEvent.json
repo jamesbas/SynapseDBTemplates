@@ -1,0 +1,176 @@
+{
+	"name": "PartyRoleEvent",
+	"properties": {
+		"Name": "PartyRoleEvent",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "PartyId",
+					"Description": "The unique identifier of a Party.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyRoleEvent.cdm.json/PartyRoleEvent",
+						"Name": "PartyId"
+					}
+				},
+				{
+					"Name": "RoleId",
+					"Description": "The unique identifier of a Role.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyRoleEvent.cdm.json/PartyRoleEvent",
+						"Name": "RoleId"
+					}
+				},
+				{
+					"Name": "EventTypeId",
+					"Description": "The unique identifier of a Event Type.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyRoleEvent.cdm.json/PartyRoleEvent",
+						"Name": "EventTypeId"
+					}
+				},
+				{
+					"Name": "Timestamp",
+					"Description": "The timestamp of the associated Event.",
+					"OriginDataTypeName": {
+						"TypeName": "timestamp",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"TimestampFormat": "YYYY-MM-DD HH:MM:SS.fffffffff",
+							"HIVE_TYPE_STRING": "timestamp"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyRoleEvent.cdm.json/PartyRoleEvent",
+						"Name": "Timestamp"
+					}
+				},
+				{
+					"Name": "PartyRoleEventNote",
+					"Description": "A note, comment or additional information regarding the party role event.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyRoleEvent.cdm.json/PartyRoleEvent",
+						"Name": "PartyRoleEventNote"
+					}
+				}
+			],
+			"ColumnSetEntityName": "b0d251d8-1f68-4419-b2ce-2f53f4a1df33",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/PartyRoleEvent",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/PartyRoleEvent",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"PartyId\":{\"entity\":\"PartyRoleEvent.cdm.json/PartyRoleEvent\",\"name\":\"PartyId\"},\"RoleId\":{\"entity\":\"PartyRoleEvent.cdm.json/PartyRoleEvent\",\"name\":\"RoleId\"},\"EventTypeId\":{\"entity\":\"PartyRoleEvent.cdm.json/PartyRoleEvent\",\"name\":\"EventTypeId\"},\"Timestamp\":{\"entity\":\"PartyRoleEvent.cdm.json/PartyRoleEvent\",\"name\":\"Timestamp\"},\"PartyRoleEventNote\":{\"entity\":\"PartyRoleEvent.cdm.json/PartyRoleEvent\",\"name\":\"PartyRoleEventNote\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"PartyRoleEvent\",\"path\":\"PartyRoleEvent.cdm.json/PartyRoleEvent\"},\"description\":\"An event which affects a party playing a role.\\n\\nEx:\\n\\nPARTY 1 = Kevin Bryson\\nROLE 1 = Customer\\nTIMESTAMP = 05/07/06\\nEVENT TYPE = Employment Layoff\\nPARTY ROLE EVENT NOTE = Kevin Bryson was laid off from his employment on 05/07/06.\",\"primaryKey\":[\"PartyId\",\"RoleId\",\"EventTypeId\",\"Timestamp\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyRoleEvent.cdm.json/PartyRoleEvent\",\"name\":\"PartyId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a Party.\",\"isNullable\":false,\"name\":\"PartyId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyRoleEvent.cdm.json/PartyRoleEvent\",\"name\":\"RoleId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Role.\",\"isNullable\":false,\"name\":\"RoleId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyRoleEvent.cdm.json/PartyRoleEvent\",\"name\":\"EventTypeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Event Type.\",\"isNullable\":false,\"name\":\"EventTypeId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyRoleEvent.cdm.json/PartyRoleEvent\",\"name\":\"Timestamp\"},\"dataType\":\"timestamp\",\"description\":\"The timestamp of the associated Event.\",\"isNullable\":false,\"name\":\"Timestamp\",\"timestampFormat\":\"YYYY-MM-DD HH:MM:SS.fffffffff\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyRoleEvent.cdm.json/PartyRoleEvent\",\"name\":\"PartyRoleEventNote\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"A note, comment or additional information regarding the party role event.\",\"isNullable\":true,\"name\":\"PartyRoleEventNote\"}]}}}",
+			"Description": "An event which affects a party playing a role.\n\nEx:\n\nPARTY 1 = Kevin Bryson\nROLE 1 = Customer\nTIMESTAMP = 05/07/06\nEVENT TYPE = Employment Layoff\nPARTY ROLE EVENT NOTE = Kevin Bryson was laid off from his employment on 05/07/06.",
+			"DisplayFolderInfo": "{\"name\":\"Party\",\"colorCode\":\"#7D0F6C\"}",
+			"PrimaryKeys": "PartyId,RoleId,EventTypeId,Timestamp",
+			"spark.sql.sources.provider": "csv",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"PartyId\",\"type\":\"long\",\"nullable\":false,\"metadata\":{}},{\"name\":\"RoleId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"EventTypeId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"Timestamp\",\"type\":\"timestamp\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PartyRoleEventNote\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "0644853e-6172-4672-ae77-fbc7c943b30e",
+		"Description": "An event which affects a party playing a role.\n\nEx:\n\nPARTY 1 = Kevin Bryson\nROLE 1 = Customer\nTIMESTAMP = 05/07/06\nEVENT TYPE = Employment Layoff\nPARTY ROLE EVENT NOTE = Kevin Bryson was laid off from his employment on 05/07/06."
+	},
+	"type": "TABLE"
+}

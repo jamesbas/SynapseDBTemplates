@@ -1,0 +1,137 @@
+{
+	"name": "CreditStatus",
+	"properties": {
+		"Name": "CreditStatus",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "CreditStatusId",
+					"Description": "The unique identifier of a Credit Status.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "CreditStatus.cdm.json/CreditStatus",
+						"Name": "CreditStatusId"
+					}
+				},
+				{
+					"Name": "CreditStatusName",
+					"Description": "The name of the Credit Status.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 256,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "CreditStatus.cdm.json/CreditStatus",
+						"Name": "CreditStatusName"
+					}
+				},
+				{
+					"Name": "CreditStatusDescription",
+					"Description": "The description of the Credit Status.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "CreditStatus.cdm.json/CreditStatus",
+						"Name": "CreditStatusDescription"
+					}
+				}
+			],
+			"ColumnSetEntityName": "13eda3ca-bbaa-48a5-b4b7-3fce674fb562",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/CreditStatus",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/CreditStatus",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"CreditStatusId\":{\"entity\":\"CreditStatus.cdm.json/CreditStatus\",\"name\":\"CreditStatusId\"},\"CreditStatusName\":{\"entity\":\"CreditStatus.cdm.json/CreditStatus\",\"name\":\"CreditStatusName\"},\"CreditStatusDescription\":{\"entity\":\"CreditStatus.cdm.json/CreditStatus\",\"name\":\"CreditStatusDescription\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"CreditStatus\",\"path\":\"CreditStatus.cdm.json/CreditStatus\"},\"description\":\"The Credit Status of the Party, Customer or Customer Account for the associated period.\\n\\nEx:\\n- Excellent / Pays On Time\\n- Above Average / Pays Within Acceptable Timeframe\\n- Average / Occasional Late Payments\\n- Below Average / Frequent Late Payments \\n- Poor / Delinquent Activity\\n- Restricted / Collections or Legal Action Pending Or In-process\\n- Unrated\",\"primaryKey\":[\"CreditStatusId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"CreditStatus.cdm.json/CreditStatus\",\"name\":\"CreditStatusId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Credit Status.\",\"isNullable\":false,\"name\":\"CreditStatusId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"CreditStatus.cdm.json/CreditStatus\",\"name\":\"CreditStatusName\"},\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"The name of the Credit Status.\",\"isNullable\":true,\"name\":\"CreditStatusName\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"CreditStatus.cdm.json/CreditStatus\",\"name\":\"CreditStatusDescription\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"The description of the Credit Status.\",\"isNullable\":true,\"name\":\"CreditStatusDescription\"}]}}}",
+			"Description": "The Credit Status of the Party, Customer or Customer Account for the associated period.\n\nEx:\n- Excellent / Pays On Time\n- Above Average / Pays Within Acceptable Timeframe\n- Average / Occasional Late Payments\n- Below Average / Frequent Late Payments \n- Poor / Delinquent Activity\n- Restricted / Collections or Legal Action Pending Or In-process\n- Unrated",
+			"DisplayFolderInfo": "{\"name\":\"Party\",\"colorCode\":\"#7D0F6C\"}",
+			"PrimaryKeys": "CreditStatusId",
+			"spark.sql.sources.provider": "csv",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"CreditStatusId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"CreditStatusName\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"CreditStatusDescription\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "d9451a68-a913-4bc8-8f1a-be73fd4ea8fc",
+		"Description": "The Credit Status of the Party, Customer or Customer Account for the associated period.\n\nEx:\n- Excellent / Pays On Time\n- Above Average / Pays Within Acceptable Timeframe\n- Average / Occasional Late Payments\n- Below Average / Frequent Late Payments \n- Poor / Delinquent Activity\n- Restricted / Collections or Legal Action Pending Or In-process\n- Unrated"
+	},
+	"type": "TABLE"
+}

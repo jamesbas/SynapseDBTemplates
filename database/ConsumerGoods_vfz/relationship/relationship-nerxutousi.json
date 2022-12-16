@@ -1,0 +1,29 @@
+{
+	"name": "relationship-nerxutousi",
+	"properties": {
+		"Name": "relationship-nerxutousi",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "FranchiseAgreement",
+		"ToTableName": "RoyaltyOwed",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "ContractId",
+				"ToColumnName": "ContractId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"FranchiseAgreement.cdm.json/FranchiseAgreement\",\"toEntity\":\"RoyaltyOwed.cdm.json/RoyaltyOwed\",\"joinPairs\":[{\"fromAttribute\":\"ContractId\",\"toAttribute\":\"ContractId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "2142119f-3f48-4255-b0d9-484c4c99ecde"
+	},
+	"type": "RELATIONSHIP"
+}

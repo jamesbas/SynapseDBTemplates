@@ -1,0 +1,29 @@
+{
+	"name": "relationship-arhaqxeroa",
+	"properties": {
+		"Name": "relationship-arhaqxeroa",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "SurveyQuestion",
+		"ToTableName": "PartySurveyQuestionResponse",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "QuestionId",
+				"ToColumnName": "QuestionId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"SurveyQuestion.cdm.json/SurveyQuestion\",\"toEntity\":\"PartySurveyQuestionResponse.cdm.json/PartySurveyQuestionResponse\",\"joinPairs\":[{\"fromAttribute\":\"QuestionId\",\"toAttribute\":\"QuestionId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "a51ce33d-1561-4bb2-b0d8-e3db7da965fa"
+	},
+	"type": "RELATIONSHIP"
+}

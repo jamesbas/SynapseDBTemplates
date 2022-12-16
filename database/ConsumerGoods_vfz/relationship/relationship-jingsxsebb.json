@@ -1,0 +1,29 @@
+{
+	"name": "relationship-jingsxsebb",
+	"properties": {
+		"Name": "relationship-jingsxsebb",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "Gender",
+		"ToTableName": "Employee",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "GenderId",
+				"ToColumnName": "GenderId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"Gender.cdm.json/Gender\",\"toEntity\":\"Employee.cdm.json/Employee\",\"joinPairs\":[{\"fromAttribute\":\"GenderId\",\"toAttribute\":\"GenderId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "f5609678-6131-4a95-995a-79d83cc585a4"
+	},
+	"type": "RELATIONSHIP"
+}

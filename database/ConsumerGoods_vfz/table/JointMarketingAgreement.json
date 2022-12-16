@@ -1,0 +1,271 @@
+{
+	"name": "JointMarketingAgreement",
+	"properties": {
+		"Name": "JointMarketingAgreement",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "ContractId",
+					"Description": "The unique identifier of a Contract.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "JointMarketingAgreement.cdm.json/JointMarketingAgreement",
+						"Name": "ContractId"
+					}
+				},
+				{
+					"Name": "AgreementDate",
+					"Description": "The date that the agreement is to become effective.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "JointMarketingAgreement.cdm.json/JointMarketingAgreement",
+						"Name": "AgreementDate"
+					}
+				},
+				{
+					"Name": "ProductSection",
+					"Description": "The product(s) that will be addressed by the joint marketing agreement.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "JointMarketingAgreement.cdm.json/JointMarketingAgreement",
+						"Name": "ProductSection"
+					}
+				},
+				{
+					"Name": "GeneralDutiesSection",
+					"Description": "The responsibilities of each party are specifically defined such as:\n\n-  Promotions\n-  Mailings\n-  Demo products\n-  Sample products",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "JointMarketingAgreement.cdm.json/JointMarketingAgreement",
+						"Name": "GeneralDutiesSection"
+					}
+				},
+				{
+					"Name": "SpecificDutiesSection",
+					"Description": "The specific responsibilities of each party adjunct to the general responsibilities specified in the General Duties Section.\n\nExamples:\n\n-  Cost sharing\n-  Training\n-  Advertising splits\n-  Press releases",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "JointMarketingAgreement.cdm.json/JointMarketingAgreement",
+						"Name": "SpecificDutiesSection"
+					}
+				},
+				{
+					"Name": "ConfidentialitySection",
+					"Description": "This section specifies that plans, customers etc. are confidential and neither party will disclose such information without written permission from the other party.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "JointMarketingAgreement.cdm.json/JointMarketingAgreement",
+						"Name": "ConfidentialitySection"
+					}
+				},
+				{
+					"Name": "ConflictingMarketingSection",
+					"Description": "This section specifies that neither party will form a similar joint marketing effort with a competitor within a specified time.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "JointMarketingAgreement.cdm.json/JointMarketingAgreement",
+						"Name": "ConflictingMarketingSection"
+					}
+				},
+				{
+					"Name": "TermAndAgreementTerminationSection",
+					"Description": "This section specifies the length of the agreement and the terms under which the agreement may be terminated.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "JointMarketingAgreement.cdm.json/JointMarketingAgreement",
+						"Name": "TermAndAgreementTerminationSection"
+					}
+				},
+				{
+					"Name": "SeverabilitySection",
+					"Description": "This section specifies that in the condition that a section of the agreement is found to be invalid, the rest of the agreement will be in effect.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "JointMarketingAgreement.cdm.json/JointMarketingAgreement",
+						"Name": "SeverabilitySection"
+					}
+				},
+				{
+					"Name": "AssignabilitySection",
+					"Description": "This section specifies whether or not either party may assign any or all rights or obligations under the contract to a third party.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "JointMarketingAgreement.cdm.json/JointMarketingAgreement",
+						"Name": "AssignabilitySection"
+					}
+				}
+			],
+			"ColumnSetEntityName": "103445d8-29d1-4929-aef0-aa5a167ecf1c",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/JointMarketingAgreement",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/JointMarketingAgreement",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"ContractId\":{\"entity\":\"JointMarketingAgreement.cdm.json/JointMarketingAgreement\",\"name\":\"ContractId\"},\"AgreementDate\":{\"entity\":\"JointMarketingAgreement.cdm.json/JointMarketingAgreement\",\"name\":\"AgreementDate\"},\"ProductSection\":{\"entity\":\"JointMarketingAgreement.cdm.json/JointMarketingAgreement\",\"name\":\"ProductSection\"},\"GeneralDutiesSection\":{\"entity\":\"JointMarketingAgreement.cdm.json/JointMarketingAgreement\",\"name\":\"GeneralDutiesSection\"},\"SpecificDutiesSection\":{\"entity\":\"JointMarketingAgreement.cdm.json/JointMarketingAgreement\",\"name\":\"SpecificDutiesSection\"},\"ConfidentialitySection\":{\"entity\":\"JointMarketingAgreement.cdm.json/JointMarketingAgreement\",\"name\":\"ConfidentialitySection\"},\"ConflictingMarketingSection\":{\"entity\":\"JointMarketingAgreement.cdm.json/JointMarketingAgreement\",\"name\":\"ConflictingMarketingSection\"},\"TermAndAgreementTerminationSection\":{\"entity\":\"JointMarketingAgreement.cdm.json/JointMarketingAgreement\",\"name\":\"TermAndAgreementTerminationSection\"},\"SeverabilitySection\":{\"entity\":\"JointMarketingAgreement.cdm.json/JointMarketingAgreement\",\"name\":\"SeverabilitySection\"},\"AssignabilitySection\":{\"entity\":\"JointMarketingAgreement.cdm.json/JointMarketingAgreement\",\"name\":\"AssignabilitySection\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"JointMarketingAgreement\",\"path\":\"JointMarketingAgreement.cdm.json/JointMarketingAgreement\"},\"description\":\"An agreement to jointly market or provide services in conjunction with a specific product(s).\",\"primaryKey\":[\"ContractId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"JointMarketingAgreement.cdm.json/JointMarketingAgreement\",\"name\":\"ContractId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Contract.\",\"isNullable\":false,\"name\":\"ContractId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"JointMarketingAgreement.cdm.json/JointMarketingAgreement\",\"name\":\"AgreementDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The date that the agreement is to become effective.\",\"isNullable\":true,\"name\":\"AgreementDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"JointMarketingAgreement.cdm.json/JointMarketingAgreement\",\"name\":\"ProductSection\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"The product(s) that will be addressed by the joint marketing agreement.\",\"isNullable\":true,\"name\":\"ProductSection\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"JointMarketingAgreement.cdm.json/JointMarketingAgreement\",\"name\":\"GeneralDutiesSection\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"The responsibilities of each party are specifically defined such as:\\n\\n-  Promotions\\n-  Mailings\\n-  Demo products\\n-  Sample products\",\"isNullable\":false,\"name\":\"GeneralDutiesSection\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"JointMarketingAgreement.cdm.json/JointMarketingAgreement\",\"name\":\"SpecificDutiesSection\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"The specific responsibilities of each party adjunct to the general responsibilities specified in the General Duties Section.\\n\\nExamples:\\n\\n-  Cost sharing\\n-  Training\\n-  Advertising splits\\n-  Press releases\",\"isNullable\":false,\"name\":\"SpecificDutiesSection\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"JointMarketingAgreement.cdm.json/JointMarketingAgreement\",\"name\":\"ConfidentialitySection\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"This section specifies that plans, customers etc. are confidential and neither party will disclose such information without written permission from the other party.\",\"isNullable\":true,\"name\":\"ConfidentialitySection\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"JointMarketingAgreement.cdm.json/JointMarketingAgreement\",\"name\":\"ConflictingMarketingSection\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"This section specifies that neither party will form a similar joint marketing effort with a competitor within a specified time.\",\"isNullable\":true,\"name\":\"ConflictingMarketingSection\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"JointMarketingAgreement.cdm.json/JointMarketingAgreement\",\"name\":\"TermAndAgreementTerminationSection\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"This section specifies the length of the agreement and the terms under which the agreement may be terminated.\",\"isNullable\":true,\"name\":\"TermAndAgreementTerminationSection\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"JointMarketingAgreement.cdm.json/JointMarketingAgreement\",\"name\":\"SeverabilitySection\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"This section specifies that in the condition that a section of the agreement is found to be invalid, the rest of the agreement will be in effect.\",\"isNullable\":true,\"name\":\"SeverabilitySection\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"JointMarketingAgreement.cdm.json/JointMarketingAgreement\",\"name\":\"AssignabilitySection\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"This section specifies whether or not either party may assign any or all rights or obligations under the contract to a third party.\",\"isNullable\":true,\"name\":\"AssignabilitySection\"}]}}}",
+			"Description": "An agreement to jointly market or provide services in conjunction with a specific product(s).",
+			"DisplayFolderInfo": "{\"name\":\"Contract\",\"colorCode\":\"#000F5C\"}",
+			"PrimaryKeys": "ContractId",
+			"spark.sql.sources.provider": "csv",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"ContractId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"AgreementDate\",\"type\":\"date\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ProductSection\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"GeneralDutiesSection\",\"type\":\"string\",\"nullable\":false,\"metadata\":{}},{\"name\":\"SpecificDutiesSection\",\"type\":\"string\",\"nullable\":false,\"metadata\":{}},{\"name\":\"ConfidentialitySection\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ConflictingMarketingSection\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"TermAndAgreementTerminationSection\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"SeverabilitySection\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"AssignabilitySection\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "02a57fb5-5b40-46f2-86a2-4d388b5a9102",
+		"Description": "An agreement to jointly market or provide services in conjunction with a specific product(s)."
+	},
+	"type": "TABLE"
+}

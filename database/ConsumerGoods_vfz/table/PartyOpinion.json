@@ -1,0 +1,176 @@
+{
+	"name": "PartyOpinion",
+	"properties": {
+		"Name": "PartyOpinion",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "PartyId",
+					"Description": "The unique identifier of a Party.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyOpinion.cdm.json/PartyOpinion",
+						"Name": "PartyId"
+					}
+				},
+				{
+					"Name": "OpinionId",
+					"Description": "The unique identifier of an Opinion.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyOpinion.cdm.json/PartyOpinion",
+						"Name": "OpinionId"
+					}
+				},
+				{
+					"Name": "Date",
+					"Description": "The date that the associated information is reported, recorded or effective as-of.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyOpinion.cdm.json/PartyOpinion",
+						"Name": "Date"
+					}
+				},
+				{
+					"Name": "AioLevelId",
+					"Description": "The unique identifier of an AIO Level.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyOpinion.cdm.json/PartyOpinion",
+						"Name": "AioLevelId"
+					}
+				},
+				{
+					"Name": "PartyOpinionNote",
+					"Description": "A note, comment, additional information regarding the associated Opinion that the Individual has acknowledged or reported.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyOpinion.cdm.json/PartyOpinion",
+						"Name": "PartyOpinionNote"
+					}
+				}
+			],
+			"ColumnSetEntityName": "02ae331d-7453-44a3-a05e-bfe6d98a33b0",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/PartyOpinion",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/PartyOpinion",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"PartyId\":{\"entity\":\"PartyOpinion.cdm.json/PartyOpinion\",\"name\":\"PartyId\"},\"OpinionId\":{\"entity\":\"PartyOpinion.cdm.json/PartyOpinion\",\"name\":\"OpinionId\"},\"Date\":{\"entity\":\"PartyOpinion.cdm.json/PartyOpinion\",\"name\":\"Date\"},\"AioLevelId\":{\"entity\":\"PartyOpinion.cdm.json/PartyOpinion\",\"name\":\"AioLevelId\"},\"PartyOpinionNote\":{\"entity\":\"PartyOpinion.cdm.json/PartyOpinion\",\"name\":\"PartyOpinionNote\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"PartyOpinion\",\"path\":\"PartyOpinion.cdm.json/PartyOpinion\"},\"description\":\"The Opinion(s) that a specific Individual has acknowledged was identified or recorded as of the indicated date.\\n\\nNote:\\nFor information of this type it makes most sense to simply record it as a 'date'  rather than a 'period start date/period end date', which would have very limited practical value.\\n\\nIf you understand what opinions customers hold you know what is important to them.\\n\\nActivities, Interests and Opinions are the foundation of Psychographics and Psychographic Segmentation.     \\n\\nActivities, Interests and Opinions equate to 'lifestyle'.    Activities, Interests and Opinions (AIO) are the basis for understanding consumer buying behavior as a function of their lifestyle.\\n\\nOpinions describe what a consumer 'believes in', such as politics, education or social issues.\\n\\nEx:\\n\\nOpinion = organic foods are healthier\\nOpinion Type = food\\n\\nOpinion = on-line banking is convenient\\nOpinion Type = bank services\\n\\nOpinion = stocks are risk investments\\nOpinion Type = Investing\\n\\nOpinion = cellular phone are safe to use\\nOpinion Type = cellular phone safety\\n\\nSales, marketing and advertising activities are often planned for or targeted at groups holding specific opinions.\\n\\nEach organization will identify, define and track a specific set of AIO's to gather information about, define consumers and make decisions.\\n\\nA wise strategy is to identify the opinions that are to be gathered and ask them to customers in one or more surveys.   This enables the business to gather information about opinions that the business has an interest in rather than allowing the customer to provide opinions that may be irrelevant to the business.\",\"primaryKey\":[\"PartyId\",\"OpinionId\",\"Date\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyOpinion.cdm.json/PartyOpinion\",\"name\":\"PartyId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a Party.\",\"isNullable\":false,\"name\":\"PartyId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyOpinion.cdm.json/PartyOpinion\",\"name\":\"OpinionId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of an Opinion.\",\"isNullable\":false,\"name\":\"OpinionId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyOpinion.cdm.json/PartyOpinion\",\"name\":\"Date\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The date that the associated information is reported, recorded or effective as-of.\",\"isNullable\":false,\"name\":\"Date\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyOpinion.cdm.json/PartyOpinion\",\"name\":\"AioLevelId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of an AIO Level.\",\"isNullable\":true,\"name\":\"AioLevelId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyOpinion.cdm.json/PartyOpinion\",\"name\":\"PartyOpinionNote\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"A note, comment, additional information regarding the associated Opinion that the Individual has acknowledged or reported.\",\"isNullable\":true,\"name\":\"PartyOpinionNote\"}]}}}",
+			"Description": "The Opinion(s) that a specific Individual has acknowledged was identified or recorded as of the indicated date.\n\nNote:\nFor information of this type it makes most sense to simply record it as a 'date'  rather than a 'period start date/period end date', which would have very limited practical value.\n\nIf you understand what opinions customers hold you know what is important to them.\n\nActivities, Interests and Opinions are the foundation of Psychographics and Psychographic Segmentation.     \n\nActivities, Interests and Opinions equate to 'lifestyle'.    Activities, Interests and Opinions (AIO) are the basis for understanding consumer buying behavior as a function of their lifestyle.\n\nOpinions describe what a consumer 'believes in', such as politics, education or social issues.\n\nEx:\n\nOpinion = organic foods are healthier\nOpinion Type = food\n\nOpinion = on-line banking is convenient\nOpinion Type = bank services\n\nOpinion = stocks are risk investments\nOpinion Type = Investing\n\nOpinion = cellular phone are safe to use\nOpinion Type = cellular phone safety\n\nSales, marketing and advertising activities are often planned for or targeted at groups holding specific opinions.\n\nEach organization will identify, define and track a specific set of AIO's to gather information about, define consumers and make decisions.\n\nA wise strategy is to identify the opinions that are to be gathered and ask them to customers in one or more surveys.   This enables the business to gather information about opinions that the business has an interest in rather than allowing the customer to provide opinions that may be irrelevant to the business.",
+			"DisplayFolderInfo": "{\"name\":\"Party\",\"colorCode\":\"#7D0F6C\"}",
+			"PrimaryKeys": "PartyId,OpinionId,Date",
+			"spark.sql.sources.provider": "csv",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"PartyId\",\"type\":\"long\",\"nullable\":false,\"metadata\":{}},{\"name\":\"OpinionId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"Date\",\"type\":\"date\",\"nullable\":false,\"metadata\":{}},{\"name\":\"AioLevelId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"PartyOpinionNote\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "ec2464a5-acaf-479b-a3b6-8511a49beb8f",
+		"Description": "The Opinion(s) that a specific Individual has acknowledged was identified or recorded as of the indicated date.\n\nNote:\nFor information of this type it makes most sense to simply record it as a 'date'  rather than a 'period start date/period end date', which would have very limited practical value.\n\nIf you understand what opinions customers hold you know what is important to them.\n\nActivities, Interests and Opinions are the foundation of Psychographics and Psychographic Segmentation.     \n\nActivities, Interests and Opinions equate to 'lifestyle'.    Activities, Interests and Opinions (AIO) are the basis for understanding consumer buying behavior as a function of their lifestyle.\n\nOpinions describe what a consumer 'believes in', such as politics, education or social issues.\n\nEx:\n\nOpinion = organic foods are healthier\nOpinion Type = food\n\nOpinion = on-line banking is convenient\nOpinion Type = bank services\n\nOpinion = stocks are risk investments\nOpinion Type = Investing\n\nOpinion = cellular phone are safe to use\nOpinion Type = cellular phone safety\n\nSales, marketing and advertising activities are often planned for or targeted at groups holding specific opinions.\n\nEach organization will identify, define and track a specific set of AIO's to gather information about, define consumers and make decisions.\n\nA wise strategy is to identify the opinions that are to be gathered and ask them to customers in one or more surveys.   This enables the business to gather information about opinions that the business has an interest in rather than allowing the customer to provide opinions that may be irrelevant to the business."
+	},
+	"type": "TABLE"
+}

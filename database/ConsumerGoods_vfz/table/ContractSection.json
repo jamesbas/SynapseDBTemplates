@@ -1,0 +1,175 @@
+{
+	"name": "ContractSection",
+	"properties": {
+		"Name": "ContractSection",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "ContractId",
+					"Description": "The unique identifier of a Contract.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ContractSection.cdm.json/ContractSection",
+						"Name": "ContractId"
+					}
+				},
+				{
+					"Name": "ContractSectionId",
+					"Description": "The unique identifier of a Contract Section.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ContractSection.cdm.json/ContractSection",
+						"Name": "ContractSectionId"
+					}
+				},
+				{
+					"Name": "ContractSectionName",
+					"Description": "The name of the Contract Section.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 256,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ContractSection.cdm.json/ContractSection",
+						"Name": "ContractSectionName"
+					}
+				},
+				{
+					"Name": "ContractSectionText",
+					"Description": "The text of the Contract Section.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ContractSection.cdm.json/ContractSection",
+						"Name": "ContractSectionText"
+					}
+				},
+				{
+					"Name": "ContractSectionTypeId",
+					"Description": "The unique identifier of a contract section.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ContractSection.cdm.json/ContractSection",
+						"Name": "ContractSectionTypeId"
+					}
+				}
+			],
+			"ColumnSetEntityName": "dbf0d160-1d51-4eb1-8940-a89dacc0274c",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/ContractSection",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/ContractSection",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"ContractId\":{\"entity\":\"ContractSection.cdm.json/ContractSection\",\"name\":\"ContractId\"},\"ContractSectionId\":{\"entity\":\"ContractSection.cdm.json/ContractSection\",\"name\":\"ContractSectionId\"},\"ContractSectionName\":{\"entity\":\"ContractSection.cdm.json/ContractSection\",\"name\":\"ContractSectionName\"},\"ContractSectionText\":{\"entity\":\"ContractSection.cdm.json/ContractSection\",\"name\":\"ContractSectionText\"},\"ContractSectionTypeId\":{\"entity\":\"ContractSection.cdm.json/ContractSection\",\"name\":\"ContractSectionTypeId\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"ContractSection\",\"path\":\"ContractSection.cdm.json/ContractSection\"},\"description\":\"A section or part of the contract that addresses specific issues or concerns that are not addressed as part of the master contract.\",\"primaryKey\":[\"ContractId\",\"ContractSectionId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ContractSection.cdm.json/ContractSection\",\"name\":\"ContractId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Contract.\",\"isNullable\":false,\"name\":\"ContractId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ContractSection.cdm.json/ContractSection\",\"name\":\"ContractSectionId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Contract Section.\",\"isNullable\":false,\"name\":\"ContractSectionId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ContractSection.cdm.json/ContractSection\",\"name\":\"ContractSectionName\"},\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"The name of the Contract Section.\",\"isNullable\":true,\"name\":\"ContractSectionName\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ContractSection.cdm.json/ContractSection\",\"name\":\"ContractSectionText\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"The text of the Contract Section.\",\"isNullable\":true,\"name\":\"ContractSectionText\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ContractSection.cdm.json/ContractSection\",\"name\":\"ContractSectionTypeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a contract section.\",\"isNullable\":true,\"name\":\"ContractSectionTypeId\"}]}}}",
+			"Description": "A section or part of the contract that addresses specific issues or concerns that are not addressed as part of the master contract.",
+			"DisplayFolderInfo": "{\"name\":\"Contract\",\"colorCode\":\"#000F5C\"}",
+			"PrimaryKeys": "ContractId,ContractSectionId",
+			"spark.sql.sources.provider": "csv",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"ContractId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"ContractSectionId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"ContractSectionName\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ContractSectionText\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ContractSectionTypeId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "45d566f3-6ca0-46c9-9a27-dd8ae6b0129a",
+		"Description": "A section or part of the contract that addresses specific issues or concerns that are not addressed as part of the master contract."
+	},
+	"type": "TABLE"
+}

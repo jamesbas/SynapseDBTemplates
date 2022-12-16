@@ -1,0 +1,176 @@
+{
+	"name": "PartyActivity",
+	"properties": {
+		"Name": "PartyActivity",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "PartyId",
+					"Description": "The unique identifier of a Party.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyActivity.cdm.json/PartyActivity",
+						"Name": "PartyId"
+					}
+				},
+				{
+					"Name": "ActivityId",
+					"Description": "The unique identifier of an Activity.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyActivity.cdm.json/PartyActivity",
+						"Name": "ActivityId"
+					}
+				},
+				{
+					"Name": "Date",
+					"Description": "The timestamp that the associated information is reported, recorded or effective as-of.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyActivity.cdm.json/PartyActivity",
+						"Name": "Date"
+					}
+				},
+				{
+					"Name": "AioLevelId",
+					"Description": "The unique identifier of an AIO Level.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyActivity.cdm.json/PartyActivity",
+						"Name": "AioLevelId"
+					}
+				},
+				{
+					"Name": "PartyActivityNote",
+					"Description": "A note, comment or additional information related to the Activity in which the Individual participates.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyActivity.cdm.json/PartyActivity",
+						"Name": "PartyActivityNote"
+					}
+				}
+			],
+			"ColumnSetEntityName": "bfadbcc8-f4a1-4d7e-b9d2-e6efe8896873",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/PartyActivity",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/PartyActivity",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"PartyId\":{\"entity\":\"PartyActivity.cdm.json/PartyActivity\",\"name\":\"PartyId\"},\"ActivityId\":{\"entity\":\"PartyActivity.cdm.json/PartyActivity\",\"name\":\"ActivityId\"},\"Date\":{\"entity\":\"PartyActivity.cdm.json/PartyActivity\",\"name\":\"Date\"},\"AioLevelId\":{\"entity\":\"PartyActivity.cdm.json/PartyActivity\",\"name\":\"AioLevelId\"},\"PartyActivityNote\":{\"entity\":\"PartyActivity.cdm.json/PartyActivity\",\"name\":\"PartyActivityNote\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"PartyActivity\",\"path\":\"PartyActivity.cdm.json/PartyActivity\"},\"description\":\"The Activity(s) that a specific Individual has acknowledged was identified or recorded as of the indicated date.\\n\\nNote:\\nFor information of this type it makes most sense to simply record it as a 'date'  rather than a 'period start date/period end date', which would have very limited practical value.\\n\\nActivities, Interests and Opinions are the foundation of Psychographics and Psychographic Segmentation.     Activities, Interests and Opinions equate to 'lifestyle'.    Activities, Interests and Opinions (AIO) are the basis for understanding consumer buying behavior as a function of their lifestyle.\\n\\nActivities are similar to interests.   The important difference is that customers may perform activities in which they have no 'interest' or 'passion'.   \\n\\nThe key for a business is to identify the activities that can be used to acquire customers, market to customers or achieve some similar business objective.\\n\\nActivities describe what a consumer 'does', such as occupation, hobbies, entertainment.\\n\\nEach organization will identify, define and track a specific set of AIO's to gather information about, define consumers and make decisions. \\n\\nExamples:\\n\\nActivity =  \\\"Cooking\\\"\\nActivity Type = \\\"Personal Interest\\\"\\n\\nActivity =  \\\"Golf\\\"\\nActivity Type = \\\"Personal Sports\\n\\nActivity =  \\\"Mutual Fund Investing\\\"\\nActivity Type = \\\"Finance\\\"\\n\\nSales, marketing and advertising activities are often planned for or targeted at groups involved in or interested in specific activities.\",\"primaryKey\":[\"PartyId\",\"ActivityId\",\"Date\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyActivity.cdm.json/PartyActivity\",\"name\":\"PartyId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a Party.\",\"isNullable\":false,\"name\":\"PartyId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyActivity.cdm.json/PartyActivity\",\"name\":\"ActivityId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of an Activity.\",\"isNullable\":false,\"name\":\"ActivityId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyActivity.cdm.json/PartyActivity\",\"name\":\"Date\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The timestamp that the associated information is reported, recorded or effective as-of.\",\"isNullable\":false,\"name\":\"Date\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyActivity.cdm.json/PartyActivity\",\"name\":\"AioLevelId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of an AIO Level.\",\"isNullable\":true,\"name\":\"AioLevelId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyActivity.cdm.json/PartyActivity\",\"name\":\"PartyActivityNote\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"A note, comment or additional information related to the Activity in which the Individual participates.\",\"isNullable\":true,\"name\":\"PartyActivityNote\"}]}}}",
+			"Description": "The Activity(s) that a specific Individual has acknowledged was identified or recorded as of the indicated date.\n\nNote:\nFor information of this type it makes most sense to simply record it as a 'date'  rather than a 'period start date/period end date', which would have very limited practical value.\n\nActivities, Interests and Opinions are the foundation of Psychographics and Psychographic Segmentation.     Activities, Interests and Opinions equate to 'lifestyle'.    Activities, Interests and Opinions (AIO) are the basis for understanding consumer buying behavior as a function of their lifestyle.\n\nActivities are similar to interests.   The important difference is that customers may perform activities in which they have no 'interest' or 'passion'.   \n\nThe key for a business is to identify the activities that can be used to acquire customers, market to customers or achieve some similar business objective.\n\nActivities describe what a consumer 'does', such as occupation, hobbies, entertainment.\n\nEach organization will identify, define and track a specific set of AIO's to gather information about, define consumers and make decisions. \n\nExamples:\n\nActivity =  \"Cooking\"\nActivity Type = \"Personal Interest\"\n\nActivity =  \"Golf\"\nActivity Type = \"Personal Sports\n\nActivity =  \"Mutual Fund Investing\"\nActivity Type = \"Finance\"\n\nSales, marketing and advertising activities are often planned for or targeted at groups involved in or interested in specific activities.",
+			"DisplayFolderInfo": "{\"name\":\"Party\",\"colorCode\":\"#7D0F6C\"}",
+			"PrimaryKeys": "PartyId,ActivityId,Date",
+			"spark.sql.sources.provider": "csv",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"PartyId\",\"type\":\"long\",\"nullable\":false,\"metadata\":{}},{\"name\":\"ActivityId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"Date\",\"type\":\"date\",\"nullable\":false,\"metadata\":{}},{\"name\":\"AioLevelId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"PartyActivityNote\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "45ad3835-c746-4ba8-beb8-5787a9e525f1",
+		"Description": "The Activity(s) that a specific Individual has acknowledged was identified or recorded as of the indicated date.\n\nNote:\nFor information of this type it makes most sense to simply record it as a 'date'  rather than a 'period start date/period end date', which would have very limited practical value.\n\nActivities, Interests and Opinions are the foundation of Psychographics and Psychographic Segmentation.     Activities, Interests and Opinions equate to 'lifestyle'.    Activities, Interests and Opinions (AIO) are the basis for understanding consumer buying behavior as a function of their lifestyle.\n\nActivities are similar to interests.   The important difference is that customers may perform activities in which they have no 'interest' or 'passion'.   \n\nThe key for a business is to identify the activities that can be used to acquire customers, market to customers or achieve some similar business objective.\n\nActivities describe what a consumer 'does', such as occupation, hobbies, entertainment.\n\nEach organization will identify, define and track a specific set of AIO's to gather information about, define consumers and make decisions. \n\nExamples:\n\nActivity =  \"Cooking\"\nActivity Type = \"Personal Interest\"\n\nActivity =  \"Golf\"\nActivity Type = \"Personal Sports\n\nActivity =  \"Mutual Fund Investing\"\nActivity Type = \"Finance\"\n\nSales, marketing and advertising activities are often planned for or targeted at groups involved in or interested in specific activities."
+	},
+	"type": "TABLE"
+}

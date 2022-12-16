@@ -1,0 +1,177 @@
+{
+	"name": "PartyDemographicCriteria",
+	"properties": {
+		"Name": "PartyDemographicCriteria",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "PartyId",
+					"Description": "The unique identifier of a Party.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyDemographicCriteria.cdm.json/PartyDemographicCriteria",
+						"Name": "PartyId"
+					}
+				},
+				{
+					"Name": "DemographicCriteriaId",
+					"Description": "The unique identifier of a Demographic Criteria.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyDemographicCriteria.cdm.json/PartyDemographicCriteria",
+						"Name": "DemographicCriteriaId"
+					}
+				},
+				{
+					"Name": "PeriodStartDate",
+					"Description": "The period start date for which the associated data is effective or 'as-of'.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyDemographicCriteria.cdm.json/PartyDemographicCriteria",
+						"Name": "PeriodStartDate"
+					}
+				},
+				{
+					"Name": "PeriodEndDate",
+					"Description": "The period end date for which the associated data is effective or 'as-of'.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyDemographicCriteria.cdm.json/PartyDemographicCriteria",
+						"Name": "PeriodEndDate"
+					}
+				},
+				{
+					"Name": "PartyDemographicCriteriaNote",
+					"Description": "A note, comment or additional information related to Party Demographic Criteria.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyDemographicCriteria.cdm.json/PartyDemographicCriteria",
+						"Name": "PartyDemographicCriteriaNote"
+					}
+				}
+			],
+			"ColumnSetEntityName": "e9209fe8-3ee3-4779-95ab-6486fee81489",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/PartyDemographicCriteria",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/PartyDemographicCriteria",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"PartyId\":{\"entity\":\"PartyDemographicCriteria.cdm.json/PartyDemographicCriteria\",\"name\":\"PartyId\"},\"DemographicCriteriaId\":{\"entity\":\"PartyDemographicCriteria.cdm.json/PartyDemographicCriteria\",\"name\":\"DemographicCriteriaId\"},\"PeriodStartDate\":{\"entity\":\"PartyDemographicCriteria.cdm.json/PartyDemographicCriteria\",\"name\":\"PeriodStartDate\"},\"PeriodEndDate\":{\"entity\":\"PartyDemographicCriteria.cdm.json/PartyDemographicCriteria\",\"name\":\"PeriodEndDate\"},\"PartyDemographicCriteriaNote\":{\"entity\":\"PartyDemographicCriteria.cdm.json/PartyDemographicCriteria\",\"name\":\"PartyDemographicCriteriaNote\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"PartyDemographicCriteria\",\"path\":\"PartyDemographicCriteria.cdm.json/PartyDemographicCriteria\"},\"description\":\"The one or more demographic criteria that are assigned or linked to an Individual and by which they may be identified, analyzed or aggregated.   \\n\\nThese criteria can change over a period of time and are represented with 'period start date/period end date' qualifications, which represented the best case for knowing this information.    If the data is only randomly sampled or recorded then you could use a single 'date' to identify its recording or effective as-of date.\\n\\nDemographics is the study of population composition based on socioeconomic variables including age, income, education, type of occupation, household size and so on.\\n\\nDemographic information is used to analyze consumer behavior because the products purchased, where, when, by, whom tend to be strongly correlated to similar demographic characteristics of the purchasing party.\\n\\nDemographic Segmentation is a marketing segmentation strategy based upon groups divided in demographic categories such as sex, age, occupation, religion, education level, race, nationality, income, family size etc.   \\n\\nDemographic segmentation is the most widely-used and popular segmentation method because of the availability and depth of available data from a wide variety of sources.\\n\\nExamples:\\n\\nDemographic Criteria:   Ages 20-25\\nDemographic Criteria Type:  Age\\n\\nDemographic Criteria:   Male, Female\\nDemographic Criteria Type:  Sex\\n\\nDemographic Criteria:   2-4\\nDemographic Criteria Type:  Family Size\\n\\nDemographic Criteria:   $15,000-$25,000\\nDemographic Criteria Type:  Income\\n\\nDemographic Criteria:  Manager\\nDemographic Criteria Type:  Occupation\\n\\nDemographic Criteria:   College graduate\\nDemographic Criteria Type:  Education  \\n\\nDemographic Criteria:    Protestant\\nDemographic Criteria Type:  Religion\\n\\nDemographic Criteria:  Asian\\nDemographic Criteria Type:  Race\\n\\nDemographic Criteria:    German\\nDemographic Criteria Type:  Nationality\\n\\nA Market Segment consists of one or more demographic criteria that are combined to create that market segment.\\n\\nEx: \\n\\nA Market Segment \\\"Affluent Professional German Managers\\\" could select the following Demographic Criteria for its composition:\\n\\nDemographic Criteria:    German\\nDemographic Criteria Type:  Nationality\\n\\nDemographic Criteria:    $75,000+\\nDemographic Criteria Type:  Income\\n\\nDemographic Criteria:    Manager\\nDemographic Criteria Type:  Occupation\",\"primaryKey\":[\"PartyId\",\"DemographicCriteriaId\",\"PeriodStartDate\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyDemographicCriteria.cdm.json/PartyDemographicCriteria\",\"name\":\"PartyId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a Party.\",\"isNullable\":false,\"name\":\"PartyId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyDemographicCriteria.cdm.json/PartyDemographicCriteria\",\"name\":\"DemographicCriteriaId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Demographic Criteria.\",\"isNullable\":false,\"name\":\"DemographicCriteriaId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyDemographicCriteria.cdm.json/PartyDemographicCriteria\",\"name\":\"PeriodStartDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The period start date for which the associated data is effective or 'as-of'.\",\"isNullable\":false,\"name\":\"PeriodStartDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyDemographicCriteria.cdm.json/PartyDemographicCriteria\",\"name\":\"PeriodEndDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The period end date for which the associated data is effective or 'as-of'.\",\"isNullable\":true,\"name\":\"PeriodEndDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyDemographicCriteria.cdm.json/PartyDemographicCriteria\",\"name\":\"PartyDemographicCriteriaNote\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"A note, comment or additional information related to Party Demographic Criteria.\",\"isNullable\":true,\"name\":\"PartyDemographicCriteriaNote\"}]}}}",
+			"Description": "The one or more demographic criteria that are assigned or linked to an Individual and by which they may be identified, analyzed or aggregated.   \n\nThese criteria can change over a period of time and are represented with 'period start date/period end date' qualifications, which represented the best case for knowing this information.    If the data is only randomly sampled or recorded then you could use a single 'date' to identify its recording or effective as-of date.\n\nDemographics is the study of population composition based on socioeconomic variables including age, income, education, type of occupation, household size and so on.\n\nDemographic information is used to analyze consumer behavior because the products purchased, where, when, by, whom tend to be strongly correlated to similar demographic characteristics of the purchasing party.\n\nDemographic Segmentation is a marketing segmentation strategy based upon groups divided in demographic categories such as sex, age, occupation, religion, education level, race, nationality, income, family size etc.   \n\nDemographic segmentation is the most widely-used and popular segmentation method because of the availability and depth of available data from a wide variety of sources.\n\nExamples:\n\nDemographic Criteria:   Ages 20-25\nDemographic Criteria Type:  Age\n\nDemographic Criteria:   Male, Female\nDemographic Criteria Type:  Sex\n\nDemographic Criteria:   2-4\nDemographic Criteria Type:  Family Size\n\nDemographic Criteria:   $15,000-$25,000\nDemographic Criteria Type:  Income\n\nDemographic Criteria:  Manager\nDemographic Criteria Type:  Occupation\n\nDemographic Criteria:   College graduate\nDemographic Criteria Type:  Education  \n\nDemographic Criteria:    Protestant\nDemographic Criteria Type:  Religion\n\nDemographic Criteria:  Asian\nDemographic Criteria Type:  Race\n\nDemographic Criteria:    German\nDemographic Criteria Type:  Nationality\n\nA Market Segment consists of one or more demographic criteria that are combined to create that market segment.\n\nEx: \n\nA Market Segment \"Affluent Professional German Managers\" could select the following Demographic Criteria for its composition:\n\nDemographic Criteria:    German\nDemographic Criteria Type:  Nationality\n\nDemographic Criteria:    $75,000+\nDemographic Criteria Type:  Income\n\nDemographic Criteria:    Manager\nDemographic Criteria Type:  Occupation",
+			"DisplayFolderInfo": "{\"name\":\"Party\",\"colorCode\":\"#7D0F6C\"}",
+			"PrimaryKeys": "PartyId,DemographicCriteriaId,PeriodStartDate",
+			"spark.sql.sources.provider": "csv",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"PartyId\",\"type\":\"long\",\"nullable\":false,\"metadata\":{}},{\"name\":\"DemographicCriteriaId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PeriodStartDate\",\"type\":\"date\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PeriodEndDate\",\"type\":\"date\",\"nullable\":true,\"metadata\":{}},{\"name\":\"PartyDemographicCriteriaNote\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "75dddef7-9173-46e8-97fa-887dc1335dee",
+		"Description": "The one or more demographic criteria that are assigned or linked to an Individual and by which they may be identified, analyzed or aggregated.   \n\nThese criteria can change over a period of time and are represented with 'period start date/period end date' qualifications, which represented the best case for knowing this information.    If the data is only randomly sampled or recorded then you could use a single 'date' to identify its recording or effective as-of date.\n\nDemographics is the study of population composition based on socioeconomic variables including age, income, education, type of occupation, household size and so on.\n\nDemographic information is used to analyze consumer behavior because the products purchased, where, when, by, whom tend to be strongly correlated to similar demographic characteristics of the purchasing party.\n\nDemographic Segmentation is a marketing segmentation strategy based upon groups divided in demographic categories such as sex, age, occupation, religion, education level, race, nationality, income, family size etc.   \n\nDemographic segmentation is the most widely-used and popular segmentation method because of the availability and depth of available data from a wide variety of sources.\n\nExamples:\n\nDemographic Criteria:   Ages 20-25\nDemographic Criteria Type:  Age\n\nDemographic Criteria:   Male, Female\nDemographic Criteria Type:  Sex\n\nDemographic Criteria:   2-4\nDemographic Criteria Type:  Family Size\n\nDemographic Criteria:   $15,000-$25,000\nDemographic Criteria Type:  Income\n\nDemographic Criteria:  Manager\nDemographic Criteria Type:  Occupation\n\nDemographic Criteria:   College graduate\nDemographic Criteria Type:  Education  \n\nDemographic Criteria:    Protestant\nDemographic Criteria Type:  Religion\n\nDemographic Criteria:  Asian\nDemographic Criteria Type:  Race\n\nDemographic Criteria:    German\nDemographic Criteria Type:  Nationality\n\nA Market Segment consists of one or more demographic criteria that are combined to create that market segment.\n\nEx: \n\nA Market Segment \"Affluent Professional German Managers\" could select the following Demographic Criteria for its composition:\n\nDemographic Criteria:    German\nDemographic Criteria Type:  Nationality\n\nDemographic Criteria:    $75,000+\nDemographic Criteria Type:  Income\n\nDemographic Criteria:    Manager\nDemographic Criteria Type:  Occupation"
+	},
+	"type": "TABLE"
+}

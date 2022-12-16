@@ -1,0 +1,29 @@
+{
+	"name": "relationship-kuquvlwrvp",
+	"properties": {
+		"Name": "relationship-kuquvlwrvp",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "ContractSectionClause",
+		"ToTableName": "ContractAddendumSectionClause",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "ContractSectionId",
+				"ToColumnName": "ContractSectionId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"ContractSectionClause.cdm.json/ContractSectionClause\",\"toEntity\":\"ContractAddendumSectionClause.cdm.json/ContractAddendumSectionClause\",\"joinPairs\":[{\"fromAttribute\":\"ContractSectionId\",\"toAttribute\":\"ContractSectionId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "31c3467f-a53d-47ac-b8ab-0b4bae9c414d"
+	},
+	"type": "RELATIONSHIP"
+}

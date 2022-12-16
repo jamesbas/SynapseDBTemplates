@@ -1,0 +1,29 @@
+{
+	"name": "relationship-vzfcolrltn",
+	"properties": {
+		"Name": "relationship-vzfcolrltn",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "EthnicCategory",
+		"ToTableName": "IndividualParty",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "EthnicCategoryId",
+				"ToColumnName": "EthnicCategoryId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"EthnicCategory.cdm.json/EthnicCategory\",\"toEntity\":\"IndividualParty.cdm.json/IndividualParty\",\"joinPairs\":[{\"fromAttribute\":\"EthnicCategoryId\",\"toAttribute\":\"EthnicCategoryId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "f87be154-7630-439a-a54a-c99c1cc7754a"
+	},
+	"type": "RELATIONSHIP"
+}

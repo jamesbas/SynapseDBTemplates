@@ -1,0 +1,177 @@
+{
+	"name": "PartyFamilyLifeCycle",
+	"properties": {
+		"Name": "PartyFamilyLifeCycle",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "PartyId",
+					"Description": "The unique identifier of a Party.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyFamilyLifeCycle.cdm.json/PartyFamilyLifeCycle",
+						"Name": "PartyId"
+					}
+				},
+				{
+					"Name": "FamilyLifeCycleId",
+					"Description": "The unique identifier of a Family Life Cycle.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyFamilyLifeCycle.cdm.json/PartyFamilyLifeCycle",
+						"Name": "FamilyLifeCycleId"
+					}
+				},
+				{
+					"Name": "PeriodStartDate",
+					"Description": "The period start date for which the associated data is effective or 'as-of'.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyFamilyLifeCycle.cdm.json/PartyFamilyLifeCycle",
+						"Name": "PeriodStartDate"
+					}
+				},
+				{
+					"Name": "PeriodEndDate",
+					"Description": "The period end date for which the associated data is effective or 'as-of'.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyFamilyLifeCycle.cdm.json/PartyFamilyLifeCycle",
+						"Name": "PeriodEndDate"
+					}
+				},
+				{
+					"Name": "PartyFamilyLifeCycleNote",
+					"Description": "A note, comment or additional information regarding the Party Family Life Cycle relationship.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyFamilyLifeCycle.cdm.json/PartyFamilyLifeCycle",
+						"Name": "PartyFamilyLifeCycleNote"
+					}
+				}
+			],
+			"ColumnSetEntityName": "6eac4a4b-3e29-4cf2-9471-424b87b0b0c9",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/PartyFamilyLifeCycle",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/PartyFamilyLifeCycle",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"PartyId\":{\"entity\":\"PartyFamilyLifeCycle.cdm.json/PartyFamilyLifeCycle\",\"name\":\"PartyId\"},\"FamilyLifeCycleId\":{\"entity\":\"PartyFamilyLifeCycle.cdm.json/PartyFamilyLifeCycle\",\"name\":\"FamilyLifeCycleId\"},\"PeriodStartDate\":{\"entity\":\"PartyFamilyLifeCycle.cdm.json/PartyFamilyLifeCycle\",\"name\":\"PeriodStartDate\"},\"PeriodEndDate\":{\"entity\":\"PartyFamilyLifeCycle.cdm.json/PartyFamilyLifeCycle\",\"name\":\"PeriodEndDate\"},\"PartyFamilyLifeCycleNote\":{\"entity\":\"PartyFamilyLifeCycle.cdm.json/PartyFamilyLifeCycle\",\"name\":\"PartyFamilyLifeCycleNote\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"PartyFamilyLifeCycle\",\"path\":\"PartyFamilyLifeCycle.cdm.json/PartyFamilyLifeCycle\"},\"description\":\"The Individual Family Life Cycle characteristic,\\n\\nThese criteria can change over a period of time and are represented with 'period start date/period end date' qualifications, which represented the best case for knowing this information.    If the data is only randomly sampled or recorded then you could use a single 'date' to identify its recording or effective as-of date.\\n\\nEx:\\n-  Bachelor \\n-  Newly married \\n-  Full nest I\\n-  Full nest II\\n-  Empty nest I\\n-  Empty nest II\\n- Solitary survivor/working\\n-  Solitary survivor/retired\\n-  Retired\",\"primaryKey\":[\"PartyId\",\"FamilyLifeCycleId\",\"PeriodStartDate\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyFamilyLifeCycle.cdm.json/PartyFamilyLifeCycle\",\"name\":\"PartyId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a Party.\",\"isNullable\":false,\"name\":\"PartyId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyFamilyLifeCycle.cdm.json/PartyFamilyLifeCycle\",\"name\":\"FamilyLifeCycleId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Family Life Cycle.\",\"isNullable\":false,\"name\":\"FamilyLifeCycleId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyFamilyLifeCycle.cdm.json/PartyFamilyLifeCycle\",\"name\":\"PeriodStartDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The period start date for which the associated data is effective or 'as-of'.\",\"isNullable\":false,\"name\":\"PeriodStartDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyFamilyLifeCycle.cdm.json/PartyFamilyLifeCycle\",\"name\":\"PeriodEndDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The period end date for which the associated data is effective or 'as-of'.\",\"isNullable\":true,\"name\":\"PeriodEndDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyFamilyLifeCycle.cdm.json/PartyFamilyLifeCycle\",\"name\":\"PartyFamilyLifeCycleNote\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"A note, comment or additional information regarding the Party Family Life Cycle relationship.\",\"isNullable\":true,\"name\":\"PartyFamilyLifeCycleNote\"}]}}}",
+			"Description": "The Individual Family Life Cycle characteristic,\n\nThese criteria can change over a period of time and are represented with 'period start date/period end date' qualifications, which represented the best case for knowing this information.    If the data is only randomly sampled or recorded then you could use a single 'date' to identify its recording or effective as-of date.\n\nEx:\n-  Bachelor \n-  Newly married \n-  Full nest I\n-  Full nest II\n-  Empty nest I\n-  Empty nest II\n- Solitary survivor/working\n-  Solitary survivor/retired\n-  Retired",
+			"DisplayFolderInfo": "{\"name\":\"Party\",\"colorCode\":\"#7D0F6C\"}",
+			"PrimaryKeys": "PartyId,FamilyLifeCycleId,PeriodStartDate",
+			"spark.sql.sources.provider": "csv",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"PartyId\",\"type\":\"long\",\"nullable\":false,\"metadata\":{}},{\"name\":\"FamilyLifeCycleId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PeriodStartDate\",\"type\":\"date\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PeriodEndDate\",\"type\":\"date\",\"nullable\":true,\"metadata\":{}},{\"name\":\"PartyFamilyLifeCycleNote\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "74ce7d0f-521a-41b6-a31e-a194c52d4680",
+		"Description": "The Individual Family Life Cycle characteristic,\n\nThese criteria can change over a period of time and are represented with 'period start date/period end date' qualifications, which represented the best case for knowing this information.    If the data is only randomly sampled or recorded then you could use a single 'date' to identify its recording or effective as-of date.\n\nEx:\n-  Bachelor \n-  Newly married \n-  Full nest I\n-  Full nest II\n-  Empty nest I\n-  Empty nest II\n- Solitary survivor/working\n-  Solitary survivor/retired\n-  Retired"
+	},
+	"type": "TABLE"
+}

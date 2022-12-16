@@ -1,0 +1,196 @@
+{
+	"name": "CustomerAccountRelatedParty",
+	"properties": {
+		"Name": "CustomerAccountRelatedParty",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "CustomerAccountId",
+					"Description": "The unique identifier of a Customer Account.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "CustomerAccountRelatedParty.cdm.json/CustomerAccountRelatedParty",
+						"Name": "CustomerAccountId"
+					}
+				},
+				{
+					"Name": "PartyId",
+					"Description": "The unique identifier of a Party.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "CustomerAccountRelatedParty.cdm.json/CustomerAccountRelatedParty",
+						"Name": "PartyId"
+					}
+				},
+				{
+					"Name": "CustomerAccountPartyRelationshipTypeId",
+					"Description": "The unique identifier of a Customer Account Party Relationship Type.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "CustomerAccountRelatedParty.cdm.json/CustomerAccountRelatedParty",
+						"Name": "CustomerAccountPartyRelationshipTypeId"
+					}
+				},
+				{
+					"Name": "PeriodStartTimestamp",
+					"Description": "The period start timestamp for which the Customer Account / Party relationship is valid or effective.",
+					"OriginDataTypeName": {
+						"TypeName": "timestamp",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"TimestampFormat": "YYYY-MM-DD HH:MM:SS.fffffffff",
+							"HIVE_TYPE_STRING": "timestamp"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "CustomerAccountRelatedParty.cdm.json/CustomerAccountRelatedParty",
+						"Name": "PeriodStartTimestamp"
+					}
+				},
+				{
+					"Name": "PeriodEndTimestamp",
+					"Description": "The period end timestamp for which the Customer Account / Party relationship is valid or effective.",
+					"OriginDataTypeName": {
+						"TypeName": "timestamp",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"TimestampFormat": "YYYY-MM-DD HH:MM:SS.fffffffff",
+							"HIVE_TYPE_STRING": "timestamp"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "CustomerAccountRelatedParty.cdm.json/CustomerAccountRelatedParty",
+						"Name": "PeriodEndTimestamp"
+					}
+				},
+				{
+					"Name": "CustomerAccountPartyRelationshipNote",
+					"Description": "A note, comment or additional information regarding the Customer Account / Party relationship.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "CustomerAccountRelatedParty.cdm.json/CustomerAccountRelatedParty",
+						"Name": "CustomerAccountPartyRelationshipNote"
+					}
+				}
+			],
+			"ColumnSetEntityName": "4bc98a26-a5cb-423b-bb5a-577b96413d89",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/CustomerAccountRelatedParty",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/CustomerAccountRelatedParty",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"CustomerAccountId\":{\"entity\":\"CustomerAccountRelatedParty.cdm.json/CustomerAccountRelatedParty\",\"name\":\"CustomerAccountId\"},\"PartyId\":{\"entity\":\"CustomerAccountRelatedParty.cdm.json/CustomerAccountRelatedParty\",\"name\":\"PartyId\"},\"CustomerAccountPartyRelationshipTypeId\":{\"entity\":\"CustomerAccountRelatedParty.cdm.json/CustomerAccountRelatedParty\",\"name\":\"CustomerAccountPartyRelationshipTypeId\"},\"PeriodStartTimestamp\":{\"entity\":\"CustomerAccountRelatedParty.cdm.json/CustomerAccountRelatedParty\",\"name\":\"PeriodStartTimestamp\"},\"PeriodEndTimestamp\":{\"entity\":\"CustomerAccountRelatedParty.cdm.json/CustomerAccountRelatedParty\",\"name\":\"PeriodEndTimestamp\"},\"CustomerAccountPartyRelationshipNote\":{\"entity\":\"CustomerAccountRelatedParty.cdm.json/CustomerAccountRelatedParty\",\"name\":\"CustomerAccountPartyRelationshipNote\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"CustomerAccountRelatedParty\",\"path\":\"CustomerAccountRelatedParty.cdm.json/CustomerAccountRelatedParty\"},\"description\":\"A party that has a relationship with a customer account over the indicated period.\",\"primaryKey\":[\"CustomerAccountId\",\"PartyId\",\"CustomerAccountPartyRelationshipTypeId\",\"PeriodStartTimestamp\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"CustomerAccountRelatedParty.cdm.json/CustomerAccountRelatedParty\",\"name\":\"CustomerAccountId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a Customer Account.\",\"isNullable\":false,\"name\":\"CustomerAccountId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"CustomerAccountRelatedParty.cdm.json/CustomerAccountRelatedParty\",\"name\":\"PartyId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a Party.\",\"isNullable\":false,\"name\":\"PartyId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"CustomerAccountRelatedParty.cdm.json/CustomerAccountRelatedParty\",\"name\":\"CustomerAccountPartyRelationshipTypeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Customer Account Party Relationship Type.\",\"isNullable\":false,\"name\":\"CustomerAccountPartyRelationshipTypeId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"CustomerAccountRelatedParty.cdm.json/CustomerAccountRelatedParty\",\"name\":\"PeriodStartTimestamp\"},\"dataType\":\"timestamp\",\"description\":\"The period start timestamp for which the Customer Account / Party relationship is valid or effective.\",\"isNullable\":false,\"name\":\"PeriodStartTimestamp\",\"timestampFormat\":\"YYYY-MM-DD HH:MM:SS.fffffffff\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"CustomerAccountRelatedParty.cdm.json/CustomerAccountRelatedParty\",\"name\":\"PeriodEndTimestamp\"},\"dataType\":\"timestamp\",\"description\":\"The period end timestamp for which the Customer Account / Party relationship is valid or effective.\",\"isNullable\":true,\"name\":\"PeriodEndTimestamp\",\"timestampFormat\":\"YYYY-MM-DD HH:MM:SS.fffffffff\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"CustomerAccountRelatedParty.cdm.json/CustomerAccountRelatedParty\",\"name\":\"CustomerAccountPartyRelationshipNote\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"A note, comment or additional information regarding the Customer Account / Party relationship.\",\"isNullable\":true,\"name\":\"CustomerAccountPartyRelationshipNote\"}]}}}",
+			"Description": "A party that has a relationship with a customer account over the indicated period.",
+			"DisplayFolderInfo": "{\"name\":\"Customer Account\",\"colorCode\":\"#Ef6950\"}",
+			"PrimaryKeys": "CustomerAccountId,PartyId,CustomerAccountPartyRelationshipTypeId,PeriodStartTimestamp",
+			"spark.sql.sources.provider": "csv",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"CustomerAccountId\",\"type\":\"long\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PartyId\",\"type\":\"long\",\"nullable\":false,\"metadata\":{}},{\"name\":\"CustomerAccountPartyRelationshipTypeId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PeriodStartTimestamp\",\"type\":\"timestamp\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PeriodEndTimestamp\",\"type\":\"timestamp\",\"nullable\":true,\"metadata\":{}},{\"name\":\"CustomerAccountPartyRelationshipNote\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "3b908831-c914-440a-a291-f4b088773805",
+		"Description": "A party that has a relationship with a customer account over the indicated period."
+	},
+	"type": "TABLE"
+}

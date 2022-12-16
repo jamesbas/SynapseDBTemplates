@@ -1,0 +1,29 @@
+{
+	"name": "relationship-osvyvlrsxq",
+	"properties": {
+		"Name": "relationship-osvyvlrsxq",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "AgreementForSaleOfGoods",
+		"ToTableName": "AgreementForSaleOfGoodsProduct",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "ContractId",
+				"ToColumnName": "ContractId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"AgreementForSaleOfGoods.cdm.json/AgreementForSaleOfGoods\",\"toEntity\":\"AgreementForSaleOfGoodsProduct.cdm.json/AgreementForSaleOfGoodsProduct\",\"joinPairs\":[{\"fromAttribute\":\"ContractId\",\"toAttribute\":\"ContractId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "54eab6d7-de24-4786-9f2c-74068fb7b0e2"
+	},
+	"type": "RELATIONSHIP"
+}

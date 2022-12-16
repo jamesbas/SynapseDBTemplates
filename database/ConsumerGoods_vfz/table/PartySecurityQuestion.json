@@ -1,0 +1,215 @@
+{
+	"name": "PartySecurityQuestion",
+	"properties": {
+		"Name": "PartySecurityQuestion",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "PartyId",
+					"Description": "The unique identifier of a Party.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartySecurityQuestion.cdm.json/PartySecurityQuestion",
+						"Name": "PartyId"
+					}
+				},
+				{
+					"Name": "SecurityQuestionNumber",
+					"Description": "The number associated with the order in which the question is asked for the purpose of identification.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartySecurityQuestion.cdm.json/PartySecurityQuestion",
+						"Name": "SecurityQuestionNumber"
+					}
+				},
+				{
+					"Name": "PeriodStartTimestamp",
+					"Description": "The period start timestamp that the party is associated with the security question.",
+					"OriginDataTypeName": {
+						"TypeName": "timestamp",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"TimestampFormat": "YYYY-MM-DD HH:MM:SS.fffffffff",
+							"HIVE_TYPE_STRING": "timestamp"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartySecurityQuestion.cdm.json/PartySecurityQuestion",
+						"Name": "PeriodStartTimestamp"
+					}
+				},
+				{
+					"Name": "PeriodEndTimestamp",
+					"Description": "The period end timestamp that the party is associated with the security question.",
+					"OriginDataTypeName": {
+						"TypeName": "timestamp",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"TimestampFormat": "YYYY-MM-DD HH:MM:SS.fffffffff",
+							"HIVE_TYPE_STRING": "timestamp"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartySecurityQuestion.cdm.json/PartySecurityQuestion",
+						"Name": "PeriodEndTimestamp"
+					}
+				},
+				{
+					"Name": "PartySecurityQuestion",
+					"Description": "The security question used to challenge the Party.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartySecurityQuestion.cdm.json/PartySecurityQuestion",
+						"Name": "PartySecurityQuestion"
+					}
+				},
+				{
+					"Name": "PartySecurityQuestionResponse",
+					"Description": "The response to the security question used to challenge the Party.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartySecurityQuestion.cdm.json/PartySecurityQuestion",
+						"Name": "PartySecurityQuestionResponse"
+					}
+				},
+				{
+					"Name": "PartySecurityQuestionNote",
+					"Description": "A note, comment or additional information regarding the Party Security Question.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartySecurityQuestion.cdm.json/PartySecurityQuestion",
+						"Name": "PartySecurityQuestionNote"
+					}
+				}
+			],
+			"ColumnSetEntityName": "ba532209-baf8-4eb2-a921-5d41a74eadd0",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/PartySecurityQuestion",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/PartySecurityQuestion",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"PartyId\":{\"entity\":\"PartySecurityQuestion.cdm.json/PartySecurityQuestion\",\"name\":\"PartyId\"},\"SecurityQuestionNumber\":{\"entity\":\"PartySecurityQuestion.cdm.json/PartySecurityQuestion\",\"name\":\"SecurityQuestionNumber\"},\"PeriodStartTimestamp\":{\"entity\":\"PartySecurityQuestion.cdm.json/PartySecurityQuestion\",\"name\":\"PeriodStartTimestamp\"},\"PeriodEndTimestamp\":{\"entity\":\"PartySecurityQuestion.cdm.json/PartySecurityQuestion\",\"name\":\"PeriodEndTimestamp\"},\"PartySecurityQuestion\":{\"entity\":\"PartySecurityQuestion.cdm.json/PartySecurityQuestion\",\"name\":\"PartySecurityQuestion\"},\"PartySecurityQuestionResponse\":{\"entity\":\"PartySecurityQuestion.cdm.json/PartySecurityQuestion\",\"name\":\"PartySecurityQuestionResponse\"},\"PartySecurityQuestionNote\":{\"entity\":\"PartySecurityQuestion.cdm.json/PartySecurityQuestion\",\"name\":\"PartySecurityQuestionNote\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"PartySecurityQuestion\",\"path\":\"PartySecurityQuestion.cdm.json/PartySecurityQuestion\"},\"description\":\"A security question and response that is used to verify the party's identity.\",\"primaryKey\":[\"PartyId\",\"SecurityQuestionNumber\",\"PeriodStartTimestamp\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartySecurityQuestion.cdm.json/PartySecurityQuestion\",\"name\":\"PartyId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a Party.\",\"isNullable\":false,\"name\":\"PartyId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartySecurityQuestion.cdm.json/PartySecurityQuestion\",\"name\":\"SecurityQuestionNumber\"},\"dataType\":\"integer\",\"description\":\"The number associated with the order in which the question is asked for the purpose of identification.\",\"isNullable\":false,\"name\":\"SecurityQuestionNumber\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartySecurityQuestion.cdm.json/PartySecurityQuestion\",\"name\":\"PeriodStartTimestamp\"},\"dataType\":\"timestamp\",\"description\":\"The period start timestamp that the party is associated with the security question.\",\"isNullable\":false,\"name\":\"PeriodStartTimestamp\",\"timestampFormat\":\"YYYY-MM-DD HH:MM:SS.fffffffff\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartySecurityQuestion.cdm.json/PartySecurityQuestion\",\"name\":\"PeriodEndTimestamp\"},\"dataType\":\"timestamp\",\"description\":\"The period end timestamp that the party is associated with the security question.\",\"isNullable\":true,\"name\":\"PeriodEndTimestamp\",\"timestampFormat\":\"YYYY-MM-DD HH:MM:SS.fffffffff\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartySecurityQuestion.cdm.json/PartySecurityQuestion\",\"name\":\"PartySecurityQuestion\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"The security question used to challenge the Party.\",\"isNullable\":true,\"name\":\"PartySecurityQuestion\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartySecurityQuestion.cdm.json/PartySecurityQuestion\",\"name\":\"PartySecurityQuestionResponse\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"The response to the security question used to challenge the Party.\",\"isNullable\":true,\"name\":\"PartySecurityQuestionResponse\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartySecurityQuestion.cdm.json/PartySecurityQuestion\",\"name\":\"PartySecurityQuestionNote\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"A note, comment or additional information regarding the Party Security Question.\",\"isNullable\":true,\"name\":\"PartySecurityQuestionNote\"}]}}}",
+			"Description": "A security question and response that is used to verify the party's identity.",
+			"DisplayFolderInfo": "{\"name\":\"Party\",\"colorCode\":\"#7D0F6C\"}",
+			"PrimaryKeys": "PartyId,SecurityQuestionNumber,PeriodStartTimestamp",
+			"spark.sql.sources.provider": "csv",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"PartyId\",\"type\":\"long\",\"nullable\":false,\"metadata\":{}},{\"name\":\"SecurityQuestionNumber\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PeriodStartTimestamp\",\"type\":\"timestamp\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PeriodEndTimestamp\",\"type\":\"timestamp\",\"nullable\":true,\"metadata\":{}},{\"name\":\"PartySecurityQuestion\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"PartySecurityQuestionResponse\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"PartySecurityQuestionNote\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "d8405445-2e96-433d-8c3b-1129275353db",
+		"Description": "A security question and response that is used to verify the party's identity."
+	},
+	"type": "TABLE"
+}

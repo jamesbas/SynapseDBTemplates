@@ -1,0 +1,29 @@
+{
+	"name": "relationship-gcrjgywrrg",
+	"properties": {
+		"Name": "relationship-gcrjgywrrg",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "CustomerLegalAction",
+		"ToTableName": "CustomerLegalActionContract",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "LegalActionId",
+				"ToColumnName": "LegalActionId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"CustomerLegalAction.cdm.json/CustomerLegalAction\",\"toEntity\":\"CustomerLegalActionContract.cdm.json/CustomerLegalActionContract\",\"joinPairs\":[{\"fromAttribute\":\"LegalActionId\",\"toAttribute\":\"LegalActionId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "e120148d-9512-4016-a35c-6cdb05a0936a"
+	},
+	"type": "RELATIONSHIP"
+}

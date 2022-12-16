@@ -1,0 +1,29 @@
+{
+	"name": "relationship-iodorchwjt",
+	"properties": {
+		"Name": "relationship-iodorchwjt",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "AnzsicGroup",
+		"ToTableName": "AnzsicClass",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "AnzsicGroupCode",
+				"ToColumnName": "AnzsicGroupCode"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"AnzsicGroup.cdm.json/AnzsicGroup\",\"toEntity\":\"AnzsicClass.cdm.json/AnzsicClass\",\"joinPairs\":[{\"fromAttribute\":\"AnzsicGroupCode\",\"toAttribute\":\"AnzsicGroupCode\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "e9afec4d-60fd-40e4-88d6-30240c3d0fc3"
+	},
+	"type": "RELATIONSHIP"
+}

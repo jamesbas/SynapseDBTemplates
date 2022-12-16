@@ -1,0 +1,29 @@
+{
+	"name": "relationship-rzradhknaq",
+	"properties": {
+		"Name": "relationship-rzradhknaq",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "PartyBiometric",
+		"ToTableName": "PartyAuthenticationMethod",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "BiometricTypeId",
+				"ToColumnName": "BiometricTypeId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"PartyBiometric.cdm.json/PartyBiometric\",\"toEntity\":\"PartyAuthenticationMethod.cdm.json/PartyAuthenticationMethod\",\"joinPairs\":[{\"fromAttribute\":\"BiometricTypeId\",\"toAttribute\":\"BiometricTypeId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "946a92e4-0c76-485a-85e2-43b08db83379"
+	},
+	"type": "RELATIONSHIP"
+}

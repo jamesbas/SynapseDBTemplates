@@ -1,0 +1,29 @@
+{
+	"name": "relationship-wbklnyuhyo",
+	"properties": {
+		"Name": "relationship-wbklnyuhyo",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "PartySecurityQuestion",
+		"ToTableName": "PartyAuthenticationMethod",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "SecurityQuestionNumber",
+				"ToColumnName": "SecurityQuestionNumber"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"PartySecurityQuestion.cdm.json/PartySecurityQuestion\",\"toEntity\":\"PartyAuthenticationMethod.cdm.json/PartyAuthenticationMethod\",\"joinPairs\":[{\"fromAttribute\":\"SecurityQuestionNumber\",\"toAttribute\":\"SecurityQuestionNumber\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "25a48a85-c666-4aef-8250-de79ec8c7a09"
+	},
+	"type": "RELATIONSHIP"
+}

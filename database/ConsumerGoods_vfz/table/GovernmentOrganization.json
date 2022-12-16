@@ -1,0 +1,118 @@
+{
+	"name": "GovernmentOrganization",
+	"properties": {
+		"Name": "GovernmentOrganization",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "PartyId",
+					"Description": "The unique identifier of a Party.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "GovernmentOrganization.cdm.json/GovernmentOrganization",
+						"Name": "PartyId"
+					}
+				},
+				{
+					"Name": "GovernmentOrganizationResponsibility",
+					"Description": "A statement defining the government organization's responsibility(s).",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "GovernmentOrganization.cdm.json/GovernmentOrganization",
+						"Name": "GovernmentOrganizationResponsibility"
+					}
+				}
+			],
+			"ColumnSetEntityName": "8ec7efe0-edbd-4401-95e5-b842ba8bbe45",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/GovernmentOrganization",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/GovernmentOrganization",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"PartyId\":{\"entity\":\"GovernmentOrganization.cdm.json/GovernmentOrganization\",\"name\":\"PartyId\"},\"GovernmentOrganizationResponsibility\":{\"entity\":\"GovernmentOrganization.cdm.json/GovernmentOrganization\",\"name\":\"GovernmentOrganizationResponsibility\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"GovernmentOrganization\",\"path\":\"GovernmentOrganization.cdm.json/GovernmentOrganization\"},\"description\":\"A government organization that is sponsored or supported by a government organization and has specific responsibilities or functional responsibilities.\",\"primaryKey\":[\"PartyId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"GovernmentOrganization.cdm.json/GovernmentOrganization\",\"name\":\"PartyId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a Party.\",\"isNullable\":false,\"name\":\"PartyId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"GovernmentOrganization.cdm.json/GovernmentOrganization\",\"name\":\"GovernmentOrganizationResponsibility\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"A statement defining the government organization's responsibility(s).\",\"isNullable\":true,\"name\":\"GovernmentOrganizationResponsibility\"}]}}}",
+			"Description": "A government organization that is sponsored or supported by a government organization and has specific responsibilities or functional responsibilities.",
+			"DisplayFolderInfo": "{\"name\":\"Party\",\"colorCode\":\"#7D0F6C\"}",
+			"PrimaryKeys": "PartyId",
+			"spark.sql.sources.provider": "csv",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"PartyId\",\"type\":\"long\",\"nullable\":false,\"metadata\":{}},{\"name\":\"GovernmentOrganizationResponsibility\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "b53d5c7d-b716-4950-aa61-6a17ae55765b",
+		"Description": "A government organization that is sponsored or supported by a government organization and has specific responsibilities or functional responsibilities."
+	},
+	"type": "TABLE"
+}

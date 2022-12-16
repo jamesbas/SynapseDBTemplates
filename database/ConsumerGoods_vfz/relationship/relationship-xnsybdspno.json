@@ -1,0 +1,29 @@
+{
+	"name": "relationship-xnsybdspno",
+	"properties": {
+		"Name": "relationship-xnsybdspno",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "Association",
+		"ToTableName": "VendorAssociation",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "AssociationId",
+				"ToColumnName": "AssociationId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"Association.cdm.json/Association\",\"toEntity\":\"VendorAssociation.cdm.json/VendorAssociation\",\"joinPairs\":[{\"fromAttribute\":\"AssociationId\",\"toAttribute\":\"AssociationId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 2,
+		"ObjectId": "ab2c2f4f-8b00-471b-96d2-4d89cc70b979"
+	},
+	"type": "RELATIONSHIP"
+}

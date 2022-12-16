@@ -1,0 +1,310 @@
+{
+	"name": "MarketingCampaign",
+	"properties": {
+		"Name": "MarketingCampaign",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "MarketingCampaignId",
+					"Description": "The unique identifier of a Marketing Campaign.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "MarketingCampaign.cdm.json/MarketingCampaign",
+						"Name": "MarketingCampaignId"
+					}
+				},
+				{
+					"Name": "MarketingCampaignName",
+					"Description": "The name of the Marketing Campaign.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 256,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "MarketingCampaign.cdm.json/MarketingCampaign",
+						"Name": "MarketingCampaignName"
+					}
+				},
+				{
+					"Name": "MarketingCampaignDescription",
+					"Description": "The description of the Marketing Campaign.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "MarketingCampaign.cdm.json/MarketingCampaign",
+						"Name": "MarketingCampaignDescription"
+					}
+				},
+				{
+					"Name": "MarketingCampaignObjectivesStatement",
+					"Description": "Goals to be accomplished by an organization's overall Marketing Campaign such as sales, market share, or profitability.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "MarketingCampaign.cdm.json/MarketingCampaign",
+						"Name": "MarketingCampaignObjectivesStatement"
+					}
+				},
+				{
+					"Name": "MarketingCampaignStrategyStatement",
+					"Description": "Strategy to be used by an organization's overall Marketing Campaign such as sales, market share, or profitability.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "MarketingCampaign.cdm.json/MarketingCampaign",
+						"Name": "MarketingCampaignStrategyStatement"
+					}
+				},
+				{
+					"Name": "MarketingCampaignStartDate",
+					"Description": "The start date of the Marketing Campaign.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "MarketingCampaign.cdm.json/MarketingCampaign",
+						"Name": "MarketingCampaignStartDate"
+					}
+				},
+				{
+					"Name": "MarketingCampaignEndDate",
+					"Description": "The end date of the Marketing Campaign.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "MarketingCampaign.cdm.json/MarketingCampaign",
+						"Name": "MarketingCampaignEndDate"
+					}
+				},
+				{
+					"Name": "TotalMarketingCampaignCostAmount",
+					"Description": "The total costs expended in relation with the associated Marketing Campaign.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "MarketingCampaign.cdm.json/MarketingCampaign",
+						"Name": "TotalMarketingCampaignCostAmount"
+					}
+				},
+				{
+					"Name": "TotalNumberManDaysExpended",
+					"Description": "The total number of man-days expended in association with the associated Marketing Campaign.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "MarketingCampaign.cdm.json/MarketingCampaign",
+						"Name": "TotalNumberManDaysExpended"
+					}
+				},
+				{
+					"Name": "MarketingCampaignNote",
+					"Description": "A note, comment or additional information regarding a Marketing Campaign.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "MarketingCampaign.cdm.json/MarketingCampaign",
+						"Name": "MarketingCampaignNote"
+					}
+				},
+				{
+					"Name": "ProductId",
+					"Description": "The unique identifier of a Product.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "MarketingCampaign.cdm.json/MarketingCampaign",
+						"Name": "ProductId"
+					}
+				},
+				{
+					"Name": "BrandId",
+					"Description": "The unique identifier of a Brand.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "MarketingCampaign.cdm.json/MarketingCampaign",
+						"Name": "BrandId"
+					}
+				}
+			],
+			"ColumnSetEntityName": "686fe367-4340-4698-adfa-1c3afd74380b",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/MarketingCampaign",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/MarketingCampaign",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"MarketingCampaignId\":{\"entity\":\"MarketingCampaign.cdm.json/MarketingCampaign\",\"name\":\"MarketingCampaignId\"},\"MarketingCampaignName\":{\"entity\":\"MarketingCampaign.cdm.json/MarketingCampaign\",\"name\":\"MarketingCampaignName\"},\"MarketingCampaignDescription\":{\"entity\":\"MarketingCampaign.cdm.json/MarketingCampaign\",\"name\":\"MarketingCampaignDescription\"},\"MarketingCampaignObjectivesStatement\":{\"entity\":\"MarketingCampaign.cdm.json/MarketingCampaign\",\"name\":\"MarketingCampaignObjectivesStatement\"},\"MarketingCampaignStrategyStatement\":{\"entity\":\"MarketingCampaign.cdm.json/MarketingCampaign\",\"name\":\"MarketingCampaignStrategyStatement\"},\"MarketingCampaignStartDate\":{\"entity\":\"MarketingCampaign.cdm.json/MarketingCampaign\",\"name\":\"MarketingCampaignStartDate\"},\"MarketingCampaignEndDate\":{\"entity\":\"MarketingCampaign.cdm.json/MarketingCampaign\",\"name\":\"MarketingCampaignEndDate\"},\"TotalMarketingCampaignCostAmount\":{\"entity\":\"MarketingCampaign.cdm.json/MarketingCampaign\",\"name\":\"TotalMarketingCampaignCostAmount\"},\"TotalNumberManDaysExpended\":{\"entity\":\"MarketingCampaign.cdm.json/MarketingCampaign\",\"name\":\"TotalNumberManDaysExpended\"},\"MarketingCampaignNote\":{\"entity\":\"MarketingCampaign.cdm.json/MarketingCampaign\",\"name\":\"MarketingCampaignNote\"},\"ProductId\":{\"entity\":\"MarketingCampaign.cdm.json/MarketingCampaign\",\"name\":\"ProductId\"},\"BrandId\":{\"entity\":\"MarketingCampaign.cdm.json/MarketingCampaign\",\"name\":\"BrandId\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"MarketingCampaign\",\"path\":\"MarketingCampaign.cdm.json/MarketingCampaign\"},\"description\":\"A Marketing Campaign is a planned series of Marketing Events designed to promote the sale of one or more Products/Services.\\n\\nNote:\\n\\nBecause Marketing Campaigns may support the sale of one or more Products, the actual Products promoted are done so at the Marketing Event level.\",\"primaryKey\":[\"MarketingCampaignId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"MarketingCampaign.cdm.json/MarketingCampaign\",\"name\":\"MarketingCampaignId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Marketing Campaign.\",\"isNullable\":false,\"name\":\"MarketingCampaignId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"MarketingCampaign.cdm.json/MarketingCampaign\",\"name\":\"MarketingCampaignName\"},\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"The name of the Marketing Campaign.\",\"isNullable\":true,\"name\":\"MarketingCampaignName\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"MarketingCampaign.cdm.json/MarketingCampaign\",\"name\":\"MarketingCampaignDescription\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"The description of the Marketing Campaign.\",\"isNullable\":true,\"name\":\"MarketingCampaignDescription\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"MarketingCampaign.cdm.json/MarketingCampaign\",\"name\":\"MarketingCampaignObjectivesStatement\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"Goals to be accomplished by an organization's overall Marketing Campaign such as sales, market share, or profitability.\",\"isNullable\":true,\"name\":\"MarketingCampaignObjectivesStatement\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"MarketingCampaign.cdm.json/MarketingCampaign\",\"name\":\"MarketingCampaignStrategyStatement\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"Strategy to be used by an organization's overall Marketing Campaign such as sales, market share, or profitability.\",\"isNullable\":true,\"name\":\"MarketingCampaignStrategyStatement\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"MarketingCampaign.cdm.json/MarketingCampaign\",\"name\":\"MarketingCampaignStartDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The start date of the Marketing Campaign.\",\"isNullable\":true,\"name\":\"MarketingCampaignStartDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"MarketingCampaign.cdm.json/MarketingCampaign\",\"name\":\"MarketingCampaignEndDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The end date of the Marketing Campaign.\",\"isNullable\":true,\"name\":\"MarketingCampaignEndDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"MarketingCampaign.cdm.json/MarketingCampaign\",\"name\":\"TotalMarketingCampaignCostAmount\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"The total costs expended in relation with the associated Marketing Campaign.\",\"isNullable\":true,\"scale\":2,\"name\":\"TotalMarketingCampaignCostAmount\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"MarketingCampaign.cdm.json/MarketingCampaign\",\"name\":\"TotalNumberManDaysExpended\"},\"dataType\":\"integer\",\"description\":\"The total number of man-days expended in association with the associated Marketing Campaign.\",\"isNullable\":true,\"name\":\"TotalNumberManDaysExpended\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"MarketingCampaign.cdm.json/MarketingCampaign\",\"name\":\"MarketingCampaignNote\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"A note, comment or additional information regarding a Marketing Campaign.\",\"isNullable\":true,\"name\":\"MarketingCampaignNote\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"MarketingCampaign.cdm.json/MarketingCampaign\",\"name\":\"ProductId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a Product.\",\"isNullable\":true,\"name\":\"ProductId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"MarketingCampaign.cdm.json/MarketingCampaign\",\"name\":\"BrandId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Brand.\",\"isNullable\":true,\"name\":\"BrandId\"}]}}}",
+			"Description": "A Marketing Campaign is a planned series of Marketing Events designed to promote the sale of one or more Products/Services.\n\nNote:\n\nBecause Marketing Campaigns may support the sale of one or more Products, the actual Products promoted are done so at the Marketing Event level.",
+			"DisplayFolderInfo": "{\"name\":\"Marketing & Advertising\",\"colorCode\":\"#823A16\"}",
+			"PrimaryKeys": "MarketingCampaignId",
+			"spark.sql.sources.provider": "csv",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"MarketingCampaignId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"MarketingCampaignName\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"MarketingCampaignDescription\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"MarketingCampaignObjectivesStatement\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"MarketingCampaignStrategyStatement\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"MarketingCampaignStartDate\",\"type\":\"date\",\"nullable\":true,\"metadata\":{}},{\"name\":\"MarketingCampaignEndDate\",\"type\":\"date\",\"nullable\":true,\"metadata\":{}},{\"name\":\"TotalMarketingCampaignCostAmount\",\"type\":\"decimal(18,2)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"TotalNumberManDaysExpended\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"MarketingCampaignNote\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ProductId\",\"type\":\"long\",\"nullable\":true,\"metadata\":{}},{\"name\":\"BrandId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "0e68835c-b7a0-43ef-9c1e-8a7b6cb08e37",
+		"Description": "A Marketing Campaign is a planned series of Marketing Events designed to promote the sale of one or more Products/Services.\n\nNote:\n\nBecause Marketing Campaigns may support the sale of one or more Products, the actual Products promoted are done so at the Marketing Event level."
+	},
+	"type": "TABLE"
+}

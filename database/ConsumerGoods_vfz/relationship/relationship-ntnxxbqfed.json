@@ -1,0 +1,29 @@
+{
+	"name": "relationship-ntnxxbqfed",
+	"properties": {
+		"Name": "relationship-ntnxxbqfed",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "PurchaseOrder",
+		"ToTableName": "Order",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "PoNumber",
+				"ToColumnName": "PoNumber"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"PurchaseOrder.cdm.json/PurchaseOrder\",\"toEntity\":\"Order.cdm.json/Order\",\"joinPairs\":[{\"fromAttribute\":\"PoNumber\",\"toAttribute\":\"PoNumber\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "fe1c131d-a994-4dee-bbf2-0ee5271c66c1"
+	},
+	"type": "RELATIONSHIP"
+}

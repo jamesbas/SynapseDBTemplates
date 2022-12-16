@@ -1,0 +1,215 @@
+{
+	"name": "Household",
+	"properties": {
+		"Name": "Household",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "HouseholdId",
+					"Description": "The unique identifier of a Household.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Household.cdm.json/Household",
+						"Name": "HouseholdId"
+					}
+				},
+				{
+					"Name": "HouseholdName",
+					"Description": "The name of a Household.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 256,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Household.cdm.json/Household",
+						"Name": "HouseholdName"
+					}
+				},
+				{
+					"Name": "HouseholdTypeId",
+					"Description": "The unique identifier of a Household Type.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Household.cdm.json/Household",
+						"Name": "HouseholdTypeId"
+					}
+				},
+				{
+					"Name": "HouseholdEstablishedDate",
+					"Description": "The date that the household was established.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Household.cdm.json/Household",
+						"Name": "HouseholdEstablishedDate"
+					}
+				},
+				{
+					"Name": "HouseholdTerminatedDate",
+					"Description": "The date that the household was terminated.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Household.cdm.json/Household",
+						"Name": "HouseholdTerminatedDate"
+					}
+				},
+				{
+					"Name": "HouseholdNote",
+					"Description": "A note, comment or additional information regarding the household.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Household.cdm.json/Household",
+						"Name": "HouseholdNote"
+					}
+				},
+				{
+					"Name": "PartyId",
+					"Description": "The unique identifier of a Party.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Household.cdm.json/Household",
+						"Name": "PartyId"
+					}
+				}
+			],
+			"ColumnSetEntityName": "06f186bf-acd3-4446-aa2a-bf690e507bfd",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/Household",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/Household",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"HouseholdId\":{\"entity\":\"Household.cdm.json/Household\",\"name\":\"HouseholdId\"},\"HouseholdName\":{\"entity\":\"Household.cdm.json/Household\",\"name\":\"HouseholdName\"},\"HouseholdTypeId\":{\"entity\":\"Household.cdm.json/Household\",\"name\":\"HouseholdTypeId\"},\"HouseholdEstablishedDate\":{\"entity\":\"Household.cdm.json/Household\",\"name\":\"HouseholdEstablishedDate\"},\"HouseholdTerminatedDate\":{\"entity\":\"Household.cdm.json/Household\",\"name\":\"HouseholdTerminatedDate\"},\"HouseholdNote\":{\"entity\":\"Household.cdm.json/Household\",\"name\":\"HouseholdNote\"},\"PartyId\":{\"entity\":\"Household.cdm.json/Household\",\"name\":\"PartyId\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"Household\",\"path\":\"Household.cdm.json/Household\"},\"description\":\"A household is established at a location and consists of one or more members.\\n\\nA household is a broader term than the family, it refers to any group of individuals living together in a common dwelling in which the individuals may or may not be related.\\n\\nA household consists of all the people who occupy a housing unit. A house, an apartment or other group of rooms, or a single room, is regarded as a housing unit when it is occupied or intended for occupancy as separate living quarters.\\n\\nA household includes the related family members and all the unrelated people, if any, such as lodgers, foster children, wards, or employees who share the housing unit. A person living alone in a housing unit, or a group of unrelated people sharing a housing unit such as partners or roomers, is also counted as a household\",\"primaryKey\":[\"HouseholdId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Household.cdm.json/Household\",\"name\":\"HouseholdId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a Household.\",\"isNullable\":false,\"name\":\"HouseholdId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Household.cdm.json/Household\",\"name\":\"HouseholdName\"},\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"The name of a Household.\",\"isNullable\":true,\"name\":\"HouseholdName\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Household.cdm.json/Household\",\"name\":\"HouseholdTypeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Household Type.\",\"isNullable\":true,\"name\":\"HouseholdTypeId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Household.cdm.json/Household\",\"name\":\"HouseholdEstablishedDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The date that the household was established.\",\"isNullable\":true,\"name\":\"HouseholdEstablishedDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Household.cdm.json/Household\",\"name\":\"HouseholdTerminatedDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The date that the household was terminated.\",\"isNullable\":true,\"name\":\"HouseholdTerminatedDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Household.cdm.json/Household\",\"name\":\"HouseholdNote\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"A note, comment or additional information regarding the household.\",\"isNullable\":true,\"name\":\"HouseholdNote\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Household.cdm.json/Household\",\"name\":\"PartyId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a Party.\",\"isNullable\":true,\"name\":\"PartyId\"}]}}}",
+			"Description": "A household is established at a location and consists of one or more members.\n\nA household is a broader term than the family, it refers to any group of individuals living together in a common dwelling in which the individuals may or may not be related.\n\nA household consists of all the people who occupy a housing unit. A house, an apartment or other group of rooms, or a single room, is regarded as a housing unit when it is occupied or intended for occupancy as separate living quarters.\n\nA household includes the related family members and all the unrelated people, if any, such as lodgers, foster children, wards, or employees who share the housing unit. A person living alone in a housing unit, or a group of unrelated people sharing a housing unit such as partners or roomers, is also counted as a household",
+			"DisplayFolderInfo": "{\"name\":\"Party\",\"colorCode\":\"#7D0F6C\"}",
+			"PrimaryKeys": "HouseholdId",
+			"spark.sql.sources.provider": "csv",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"HouseholdId\",\"type\":\"long\",\"nullable\":false,\"metadata\":{}},{\"name\":\"HouseholdName\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"HouseholdTypeId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"HouseholdEstablishedDate\",\"type\":\"date\",\"nullable\":true,\"metadata\":{}},{\"name\":\"HouseholdTerminatedDate\",\"type\":\"date\",\"nullable\":true,\"metadata\":{}},{\"name\":\"HouseholdNote\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"PartyId\",\"type\":\"long\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "fef787da-5ef1-411b-938f-65a79ece1fc2",
+		"Description": "A household is established at a location and consists of one or more members.\n\nA household is a broader term than the family, it refers to any group of individuals living together in a common dwelling in which the individuals may or may not be related.\n\nA household consists of all the people who occupy a housing unit. A house, an apartment or other group of rooms, or a single room, is regarded as a housing unit when it is occupied or intended for occupancy as separate living quarters.\n\nA household includes the related family members and all the unrelated people, if any, such as lodgers, foster children, wards, or employees who share the housing unit. A person living alone in a housing unit, or a group of unrelated people sharing a housing unit such as partners or roomers, is also counted as a household"
+	},
+	"type": "TABLE"
+}

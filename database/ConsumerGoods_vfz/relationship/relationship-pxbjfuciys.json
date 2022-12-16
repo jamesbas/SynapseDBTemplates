@@ -1,0 +1,29 @@
+{
+	"name": "relationship-pxbjfuciys",
+	"properties": {
+		"Name": "relationship-pxbjfuciys",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "PartyBiometric",
+		"ToTableName": "PartyAuthenticationMethod",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "Timestamp",
+				"ToColumnName": "Timestamp"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"PartyBiometric.cdm.json/PartyBiometric\",\"toEntity\":\"PartyAuthenticationMethod.cdm.json/PartyAuthenticationMethod\",\"joinPairs\":[{\"fromAttribute\":\"Timestamp\",\"toAttribute\":\"Timestamp\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "0b986621-6ccf-4650-aa4c-2610771a3fd5"
+	},
+	"type": "RELATIONSHIP"
+}

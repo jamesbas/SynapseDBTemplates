@@ -1,0 +1,29 @@
+{
+	"name": "relationship-dezhqvkrsw",
+	"properties": {
+		"Name": "relationship-dezhqvkrsw",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "CountryResidencyStatus",
+		"ToTableName": "PartyCountryOfResidence",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "CountryResidencyStatusId",
+				"ToColumnName": "CountryResidencyStatusId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"CountryResidencyStatus.cdm.json/CountryResidencyStatus\",\"toEntity\":\"PartyCountryOfResidence.cdm.json/PartyCountryOfResidence\",\"joinPairs\":[{\"fromAttribute\":\"CountryResidencyStatusId\",\"toAttribute\":\"CountryResidencyStatusId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "1043e20f-1ea9-489e-9840-fef1b796d2f0"
+	},
+	"type": "RELATIONSHIP"
+}

@@ -1,0 +1,137 @@
+{
+	"name": "EmploymentPositionType",
+	"properties": {
+		"Name": "EmploymentPositionType",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "EmploymentPositionTypeId",
+					"Description": "The unique identifier of an Employment Position Type.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "EmploymentPositionType.cdm.json/EmploymentPositionType",
+						"Name": "EmploymentPositionTypeId"
+					}
+				},
+				{
+					"Name": "EmploymentPositionTypeName",
+					"Description": "The name of an Employment Position Type.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 256,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "EmploymentPositionType.cdm.json/EmploymentPositionType",
+						"Name": "EmploymentPositionTypeName"
+					}
+				},
+				{
+					"Name": "EmploymentPositionTypeDescription",
+					"Description": "The description of an Employment Position Type.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "EmploymentPositionType.cdm.json/EmploymentPositionType",
+						"Name": "EmploymentPositionTypeDescription"
+					}
+				}
+			],
+			"ColumnSetEntityName": "676cbcb5-dab1-4cb4-9cd4-a4d974abf0ff",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/EmploymentPositionType",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/EmploymentPositionType",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"EmploymentPositionTypeId\":{\"entity\":\"EmploymentPositionType.cdm.json/EmploymentPositionType\",\"name\":\"EmploymentPositionTypeId\"},\"EmploymentPositionTypeName\":{\"entity\":\"EmploymentPositionType.cdm.json/EmploymentPositionType\",\"name\":\"EmploymentPositionTypeName\"},\"EmploymentPositionTypeDescription\":{\"entity\":\"EmploymentPositionType.cdm.json/EmploymentPositionType\",\"name\":\"EmploymentPositionTypeDescription\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"EmploymentPositionType\",\"path\":\"EmploymentPositionType.cdm.json/EmploymentPositionType\"},\"description\":\"A specific job responsibility or position held within the context of employment.\\n\\nEx:\\n- Executive\\n- Manager\\n- Manufacturing Worker\\n- Clerical\\n- Medical Doctor\",\"primaryKey\":[\"EmploymentPositionTypeId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"EmploymentPositionType.cdm.json/EmploymentPositionType\",\"name\":\"EmploymentPositionTypeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of an Employment Position Type.\",\"isNullable\":false,\"name\":\"EmploymentPositionTypeId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"EmploymentPositionType.cdm.json/EmploymentPositionType\",\"name\":\"EmploymentPositionTypeName\"},\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"The name of an Employment Position Type.\",\"isNullable\":true,\"name\":\"EmploymentPositionTypeName\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"EmploymentPositionType.cdm.json/EmploymentPositionType\",\"name\":\"EmploymentPositionTypeDescription\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"The description of an Employment Position Type.\",\"isNullable\":true,\"name\":\"EmploymentPositionTypeDescription\"}]}}}",
+			"Description": "A specific job responsibility or position held within the context of employment.\n\nEx:\n- Executive\n- Manager\n- Manufacturing Worker\n- Clerical\n- Medical Doctor",
+			"DisplayFolderInfo": "{\"name\":\"Human Resources & Payroll\",\"colorCode\":\"#EA279F\"}",
+			"PrimaryKeys": "EmploymentPositionTypeId",
+			"spark.sql.sources.provider": "csv",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"EmploymentPositionTypeId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"EmploymentPositionTypeName\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"EmploymentPositionTypeDescription\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "586570b8-93bc-4397-990e-0ee0f9a9d250",
+		"Description": "A specific job responsibility or position held within the context of employment.\n\nEx:\n- Executive\n- Manager\n- Manufacturing Worker\n- Clerical\n- Medical Doctor"
+	},
+	"type": "TABLE"
+}

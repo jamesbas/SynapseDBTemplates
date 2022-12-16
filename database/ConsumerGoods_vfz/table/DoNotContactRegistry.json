@@ -1,0 +1,213 @@
+{
+	"name": "DoNotContactRegistry",
+	"properties": {
+		"Name": "DoNotContactRegistry",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "DoNotContactRegistryId",
+					"Description": "The unique identifier of an Do Not Contact Registry.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "DoNotContactRegistry.cdm.json/DoNotContactRegistry",
+						"Name": "DoNotContactRegistryId"
+					}
+				},
+				{
+					"Name": "DoNotContactRegistryName",
+					"Description": "The name of the Do Not Contact Registry.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 256,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "DoNotContactRegistry.cdm.json/DoNotContactRegistry",
+						"Name": "DoNotContactRegistryName"
+					}
+				},
+				{
+					"Name": "DoNotContactRegistryDescription",
+					"Description": "The description of the Do Not Contact Registry.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "DoNotContactRegistry.cdm.json/DoNotContactRegistry",
+						"Name": "DoNotContactRegistryDescription"
+					}
+				},
+				{
+					"Name": "DoNotContactWebsite",
+					"Description": "The website used for collecting Do Not Contact information.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2083,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "DoNotContactRegistry.cdm.json/DoNotContactRegistry",
+						"Name": "DoNotContactWebsite"
+					}
+				},
+				{
+					"Name": "DoNotContactRegistryTypeId",
+					"Description": "The unique identifier of a Do Not Contact Registry Type.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "DoNotContactRegistry.cdm.json/DoNotContactRegistry",
+						"Name": "DoNotContactRegistryTypeId"
+					}
+				},
+				{
+					"Name": "RegulatoryPartyId",
+					"Description": "The unique identifier of a Party.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "DoNotContactRegistry.cdm.json/DoNotContactRegistry",
+						"Name": "RegulatoryPartyId"
+					}
+				},
+				{
+					"Name": "DoNotContactRegistryNote",
+					"Description": "A note, comment or additional information regarding the Do Not Contact Registry.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "DoNotContactRegistry.cdm.json/DoNotContactRegistry",
+						"Name": "DoNotContactRegistryNote"
+					}
+				}
+			],
+			"ColumnSetEntityName": "c1675736-8feb-4a41-b853-f727991f2036",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/DoNotContactRegistry",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/DoNotContactRegistry",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"DoNotContactRegistryId\":{\"entity\":\"DoNotContactRegistry.cdm.json/DoNotContactRegistry\",\"name\":\"DoNotContactRegistryId\"},\"DoNotContactRegistryName\":{\"entity\":\"DoNotContactRegistry.cdm.json/DoNotContactRegistry\",\"name\":\"DoNotContactRegistryName\"},\"DoNotContactRegistryDescription\":{\"entity\":\"DoNotContactRegistry.cdm.json/DoNotContactRegistry\",\"name\":\"DoNotContactRegistryDescription\"},\"DoNotContactWebsite\":{\"entity\":\"DoNotContactRegistry.cdm.json/DoNotContactRegistry\",\"name\":\"DoNotContactWebsite\"},\"DoNotContactRegistryTypeId\":{\"entity\":\"DoNotContactRegistry.cdm.json/DoNotContactRegistry\",\"name\":\"DoNotContactRegistryTypeId\"},\"RegulatoryPartyId\":{\"entity\":\"DoNotContactRegistry.cdm.json/DoNotContactRegistry\",\"name\":\"RegulatoryPartyId\"},\"DoNotContactRegistryNote\":{\"entity\":\"DoNotContactRegistry.cdm.json/DoNotContactRegistry\",\"name\":\"DoNotContactRegistryNote\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"DoNotContactRegistry\",\"path\":\"DoNotContactRegistry.cdm.json/DoNotContactRegistry\"},\"description\":\"A Registry containing a list of phone numbers, email addresses or addresses that do not wish to be contacted.\",\"primaryKey\":[\"DoNotContactRegistryId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"DoNotContactRegistry.cdm.json/DoNotContactRegistry\",\"name\":\"DoNotContactRegistryId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of an Do Not Contact Registry.\",\"isNullable\":false,\"name\":\"DoNotContactRegistryId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"DoNotContactRegistry.cdm.json/DoNotContactRegistry\",\"name\":\"DoNotContactRegistryName\"},\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"The name of the Do Not Contact Registry.\",\"isNullable\":true,\"name\":\"DoNotContactRegistryName\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"DoNotContactRegistry.cdm.json/DoNotContactRegistry\",\"name\":\"DoNotContactRegistryDescription\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"The description of the Do Not Contact Registry.\",\"isNullable\":true,\"name\":\"DoNotContactRegistryDescription\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"DoNotContactRegistry.cdm.json/DoNotContactRegistry\",\"name\":\"DoNotContactWebsite\"},\"dataType\":\"string\",\"dataTypeLength\":2083,\"description\":\"The website used for collecting Do Not Contact information.\",\"isNullable\":true,\"name\":\"DoNotContactWebsite\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"DoNotContactRegistry.cdm.json/DoNotContactRegistry\",\"name\":\"DoNotContactRegistryTypeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Do Not Contact Registry Type.\",\"isNullable\":true,\"name\":\"DoNotContactRegistryTypeId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"DoNotContactRegistry.cdm.json/DoNotContactRegistry\",\"name\":\"RegulatoryPartyId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a Party.\",\"isNullable\":true,\"name\":\"RegulatoryPartyId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"DoNotContactRegistry.cdm.json/DoNotContactRegistry\",\"name\":\"DoNotContactRegistryNote\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"A note, comment or additional information regarding the Do Not Contact Registry.\",\"isNullable\":true,\"name\":\"DoNotContactRegistryNote\"}]}}}",
+			"Description": "A Registry containing a list of phone numbers, email addresses or addresses that do not wish to be contacted.",
+			"DisplayFolderInfo": "{\"name\":\"Party\",\"colorCode\":\"#7D0F6C\"}",
+			"PrimaryKeys": "DoNotContactRegistryId",
+			"spark.sql.sources.provider": "csv",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"DoNotContactRegistryId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"DoNotContactRegistryName\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"DoNotContactRegistryDescription\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"DoNotContactWebsite\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"DoNotContactRegistryTypeId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"RegulatoryPartyId\",\"type\":\"long\",\"nullable\":true,\"metadata\":{}},{\"name\":\"DoNotContactRegistryNote\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "ac44c729-f1b2-4890-b77b-95bf9c104974",
+		"Description": "A Registry containing a list of phone numbers, email addresses or addresses that do not wish to be contacted."
+	},
+	"type": "TABLE"
+}

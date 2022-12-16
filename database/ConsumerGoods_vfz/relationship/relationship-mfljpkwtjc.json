@@ -1,0 +1,29 @@
+{
+	"name": "relationship-mfljpkwtjc",
+	"properties": {
+		"Name": "relationship-mfljpkwtjc",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "EmailType",
+		"ToTableName": "VendorEmail",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "EmailTypeId",
+				"ToColumnName": "EmailTypeId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"EmailType.cdm.json/EmailType\",\"toEntity\":\"VendorEmail.cdm.json/VendorEmail\",\"joinPairs\":[{\"fromAttribute\":\"EmailTypeId\",\"toAttribute\":\"EmailTypeId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "0852c478-eb4b-4634-9a83-86158f733792"
+	},
+	"type": "RELATIONSHIP"
+}

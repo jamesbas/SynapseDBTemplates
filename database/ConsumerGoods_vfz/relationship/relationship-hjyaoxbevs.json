@@ -1,0 +1,29 @@
+{
+	"name": "relationship-hjyaoxbevs",
+	"properties": {
+		"Name": "relationship-hjyaoxbevs",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "Contract",
+		"ToTableName": "OnlineAccessAndElectronicFundTransferAgreement",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "ContractId",
+				"ToColumnName": "ContractId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"Contract.cdm.json/Contract\",\"toEntity\":\"OnlineAccessAndElectronicFundTransferAgreement.cdm.json/OnlineAccessAndElectronicFundTransferAgreement\",\"joinPairs\":[{\"fromAttribute\":\"ContractId\",\"toAttribute\":\"ContractId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "0cbc2341-f7d5-4379-aea2-2eab89c302f9"
+	},
+	"type": "RELATIONSHIP"
+}

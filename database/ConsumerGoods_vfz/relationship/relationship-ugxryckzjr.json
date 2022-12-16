@@ -1,0 +1,29 @@
+{
+	"name": "relationship-ugxryckzjr",
+	"properties": {
+		"Name": "relationship-ugxryckzjr",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "Role",
+		"ToTableName": "PartyRole",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "RoleId",
+				"ToColumnName": "RoleId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"Role.cdm.json/Role\",\"toEntity\":\"PartyRole.cdm.json/PartyRole\",\"joinPairs\":[{\"fromAttribute\":\"RoleId\",\"toAttribute\":\"RoleId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "688ef67b-162a-4fe5-b501-db77bf7e7c77"
+	},
+	"type": "RELATIONSHIP"
+}

@@ -1,0 +1,29 @@
+{
+	"name": "relationship-rprwhmpehe",
+	"properties": {
+		"Name": "relationship-rprwhmpehe",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "Characteristic",
+		"ToTableName": "CensusData",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "CharacteristicId",
+				"ToColumnName": "CharacteristicId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"Characteristic.cdm.json/Characteristic\",\"toEntity\":\"CensusData.cdm.json/CensusData\",\"joinPairs\":[{\"fromAttribute\":\"CharacteristicId\",\"toAttribute\":\"CharacteristicId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "acecdd03-b0c0-4f25-95f9-949418ddc897"
+	},
+	"type": "RELATIONSHIP"
+}

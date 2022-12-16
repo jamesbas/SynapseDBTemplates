@@ -1,0 +1,29 @@
+{
+	"name": "relationship-dloauanvrc",
+	"properties": {
+		"Name": "relationship-dloauanvrc",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "LocationType",
+		"ToTableName": "VendorLocation",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "LocationTypeId",
+				"ToColumnName": "LocationTypeId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"LocationType.cdm.json/LocationType\",\"toEntity\":\"VendorLocation.cdm.json/VendorLocation\",\"joinPairs\":[{\"fromAttribute\":\"LocationTypeId\",\"toAttribute\":\"LocationTypeId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "69de1853-49a9-490c-b67b-10b2234206a4"
+	},
+	"type": "RELATIONSHIP"
+}

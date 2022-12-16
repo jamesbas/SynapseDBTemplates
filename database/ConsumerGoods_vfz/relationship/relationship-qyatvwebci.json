@@ -1,0 +1,29 @@
+{
+	"name": "relationship-qyatvwebci",
+	"properties": {
+		"Name": "relationship-qyatvwebci",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "EventCategory",
+		"ToTableName": "EventType",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "EventCategoryId",
+				"ToColumnName": "EventCategoryId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"EventCategory.cdm.json/EventCategory\",\"toEntity\":\"EventType.cdm.json/EventType\",\"joinPairs\":[{\"fromAttribute\":\"EventCategoryId\",\"toAttribute\":\"EventCategoryId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "3ebb774f-561a-4e40-9167-40c412fc75f2"
+	},
+	"type": "RELATIONSHIP"
+}

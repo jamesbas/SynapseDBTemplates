@@ -1,0 +1,175 @@
+{
+	"name": "ContractTerm",
+	"properties": {
+		"Name": "ContractTerm",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "ContractId",
+					"Description": "The unique identifier of a Contract.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ContractTerm.cdm.json/ContractTerm",
+						"Name": "ContractId"
+					}
+				},
+				{
+					"Name": "ContractTermTypeId",
+					"Description": "The unique identifier of a Contract Term Type.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ContractTerm.cdm.json/ContractTerm",
+						"Name": "ContractTermTypeId"
+					}
+				},
+				{
+					"Name": "ContractTermText",
+					"Description": "The text of the contract term.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ContractTerm.cdm.json/ContractTerm",
+						"Name": "ContractTermText"
+					}
+				},
+				{
+					"Name": "ContractTermUnits",
+					"Description": "The term unit associated with the associated contract term type.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ContractTerm.cdm.json/ContractTerm",
+						"Name": "ContractTermUnits"
+					}
+				},
+				{
+					"Name": "ContractTermNote",
+					"Description": "A note, comment or additional information regarding the contract term.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ContractTerm.cdm.json/ContractTerm",
+						"Name": "ContractTermNote"
+					}
+				}
+			],
+			"ColumnSetEntityName": "0de755ea-4453-4f84-884b-11c7bd977f23",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/ContractTerm",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/ContractTerm",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"ContractId\":{\"entity\":\"ContractTerm.cdm.json/ContractTerm\",\"name\":\"ContractId\"},\"ContractTermTypeId\":{\"entity\":\"ContractTerm.cdm.json/ContractTerm\",\"name\":\"ContractTermTypeId\"},\"ContractTermText\":{\"entity\":\"ContractTerm.cdm.json/ContractTerm\",\"name\":\"ContractTermText\"},\"ContractTermUnits\":{\"entity\":\"ContractTerm.cdm.json/ContractTerm\",\"name\":\"ContractTermUnits\"},\"ContractTermNote\":{\"entity\":\"ContractTerm.cdm.json/ContractTerm\",\"name\":\"ContractTermNote\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"ContractTerm\",\"path\":\"ContractTerm.cdm.json/ContractTerm\"},\"description\":\"The Contract Term(s) applied to the Contract.\",\"primaryKey\":[\"ContractId\",\"ContractTermTypeId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ContractTerm.cdm.json/ContractTerm\",\"name\":\"ContractId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Contract.\",\"isNullable\":false,\"name\":\"ContractId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ContractTerm.cdm.json/ContractTerm\",\"name\":\"ContractTermTypeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Contract Term Type.\",\"isNullable\":false,\"name\":\"ContractTermTypeId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ContractTerm.cdm.json/ContractTerm\",\"name\":\"ContractTermText\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"The text of the contract term.\",\"isNullable\":true,\"name\":\"ContractTermText\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ContractTerm.cdm.json/ContractTerm\",\"name\":\"ContractTermUnits\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"The term unit associated with the associated contract term type.\",\"isNullable\":true,\"scale\":2,\"name\":\"ContractTermUnits\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ContractTerm.cdm.json/ContractTerm\",\"name\":\"ContractTermNote\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"A note, comment or additional information regarding the contract term.\",\"isNullable\":true,\"name\":\"ContractTermNote\"}]}}}",
+			"Description": "The Contract Term(s) applied to the Contract.",
+			"DisplayFolderInfo": "{\"name\":\"Contract\",\"colorCode\":\"#000F5C\"}",
+			"PrimaryKeys": "ContractId,ContractTermTypeId",
+			"spark.sql.sources.provider": "csv",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"ContractId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"ContractTermTypeId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"ContractTermText\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ContractTermUnits\",\"type\":\"decimal(18,2)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ContractTermNote\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "d69e2751-5245-4b04-b508-fb86ee11d3a2",
+		"Description": "The Contract Term(s) applied to the Contract."
+	},
+	"type": "TABLE"
+}

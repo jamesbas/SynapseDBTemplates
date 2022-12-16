@@ -1,0 +1,156 @@
+{
+	"name": "VendorGroup",
+	"properties": {
+		"Name": "VendorGroup",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "VendorGroupId",
+					"Description": "The unique identifier of a Vendor Group.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "VendorGroup.cdm.json/VendorGroup",
+						"Name": "VendorGroupId"
+					}
+				},
+				{
+					"Name": "VendorGroupName",
+					"Description": "The name of a Vendor Group.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 256,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "VendorGroup.cdm.json/VendorGroup",
+						"Name": "VendorGroupName"
+					}
+				},
+				{
+					"Name": "VendorGroupDescription",
+					"Description": "The description of a Vendor Group.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "VendorGroup.cdm.json/VendorGroup",
+						"Name": "VendorGroupDescription"
+					}
+				},
+				{
+					"Name": "ClassificationAgencyPartyId",
+					"Description": "The unique identifier of a party.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "VendorGroup.cdm.json/VendorGroup",
+						"Name": "ClassificationAgencyPartyId"
+					}
+				}
+			],
+			"ColumnSetEntityName": "a8d40536-22a1-42bc-a592-6304a105bd72",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/VendorGroup",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/VendorGroup",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"VendorGroupId\":{\"entity\":\"VendorGroup.cdm.json/VendorGroup\",\"name\":\"VendorGroupId\"},\"VendorGroupName\":{\"entity\":\"VendorGroup.cdm.json/VendorGroup\",\"name\":\"VendorGroupName\"},\"VendorGroupDescription\":{\"entity\":\"VendorGroup.cdm.json/VendorGroup\",\"name\":\"VendorGroupDescription\"},\"ClassificationAgencyPartyId\":{\"entity\":\"VendorGroup.cdm.json/VendorGroup\",\"name\":\"ClassificationAgencyPartyId\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"VendorGroup\",\"path\":\"VendorGroup.cdm.json/VendorGroup\"},\"description\":\"An arbitrary grouping of Vendors\\n\\nEx:\\n- Sales\\n- Volume\\n- Geography\",\"primaryKey\":[\"VendorGroupId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"VendorGroup.cdm.json/VendorGroup\",\"name\":\"VendorGroupId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Vendor Group.\",\"isNullable\":false,\"name\":\"VendorGroupId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"VendorGroup.cdm.json/VendorGroup\",\"name\":\"VendorGroupName\"},\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"The name of a Vendor Group.\",\"isNullable\":true,\"name\":\"VendorGroupName\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"VendorGroup.cdm.json/VendorGroup\",\"name\":\"VendorGroupDescription\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"The description of a Vendor Group.\",\"isNullable\":true,\"name\":\"VendorGroupDescription\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"VendorGroup.cdm.json/VendorGroup\",\"name\":\"ClassificationAgencyPartyId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a party.\",\"isNullable\":true,\"name\":\"ClassificationAgencyPartyId\"}]}}}",
+			"Description": "An arbitrary grouping of Vendors\n\nEx:\n- Sales\n- Volume\n- Geography",
+			"DisplayFolderInfo": "{\"name\":\"Vendor\",\"colorCode\":\"#1C508C\"}",
+			"PrimaryKeys": "VendorGroupId",
+			"spark.sql.sources.provider": "csv",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"VendorGroupId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"VendorGroupName\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"VendorGroupDescription\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ClassificationAgencyPartyId\",\"type\":\"long\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "ded39b37-2042-42ca-9e5a-295e56436b80",
+		"Description": "An arbitrary grouping of Vendors\n\nEx:\n- Sales\n- Volume\n- Geography"
+	},
+	"type": "TABLE"
+}

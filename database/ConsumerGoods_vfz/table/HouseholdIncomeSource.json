@@ -1,0 +1,137 @@
+{
+	"name": "HouseholdIncomeSource",
+	"properties": {
+		"Name": "HouseholdIncomeSource",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "HouseholdIncomeSourceId",
+					"Description": "The unique identifier of the Household Income Source.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "HouseholdIncomeSource.cdm.json/HouseholdIncomeSource",
+						"Name": "HouseholdIncomeSourceId"
+					}
+				},
+				{
+					"Name": "HouseholdIncomeSourceName",
+					"Description": "The name of the Household Income Source.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 256,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "HouseholdIncomeSource.cdm.json/HouseholdIncomeSource",
+						"Name": "HouseholdIncomeSourceName"
+					}
+				},
+				{
+					"Name": "HouseholdIncomeSourceDescription",
+					"Description": "The description of the Household Income Source.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "HouseholdIncomeSource.cdm.json/HouseholdIncomeSource",
+						"Name": "HouseholdIncomeSourceDescription"
+					}
+				}
+			],
+			"ColumnSetEntityName": "fa8662e7-9d2a-40a3-a3e3-0dd2520987a5",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/HouseholdIncomeSource",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/HouseholdIncomeSource",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"HouseholdIncomeSourceId\":{\"entity\":\"HouseholdIncomeSource.cdm.json/HouseholdIncomeSource\",\"name\":\"HouseholdIncomeSourceId\"},\"HouseholdIncomeSourceName\":{\"entity\":\"HouseholdIncomeSource.cdm.json/HouseholdIncomeSource\",\"name\":\"HouseholdIncomeSourceName\"},\"HouseholdIncomeSourceDescription\":{\"entity\":\"HouseholdIncomeSource.cdm.json/HouseholdIncomeSource\",\"name\":\"HouseholdIncomeSourceDescription\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"HouseholdIncomeSource\",\"path\":\"HouseholdIncomeSource.cdm.json/HouseholdIncomeSource\"},\"description\":\"The source of the income achieved by the associated Household.\\n\\nEx:\\n-  With earnings\\n-  No earnings\\n-  With sage or salary income\\n-  With nonfarm self-employment income\\n-  With interest, dividend or net rental income\\n-  With social security income\\n-  With public assistance income\\n-  With retirement income\\n-  With other income\\n-  Shared household wage-earners\\n\\nNote:\\nThe Census Bureau does not count the following receipts as income: (1) capital gains people received (or losses they incur) from the sale of property, including stocks, bonds, a house, or a car (unless the person was engaged in the business of selling such property, in which case the CPS counts the net proceeds as income from self-employment); (2) withdrawals of bank deposits; (3)money borrowed; (4) tax refunds; (5) gifts; and (6) lump-sum inheritances or insurance payments.\",\"primaryKey\":[\"HouseholdIncomeSourceId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"HouseholdIncomeSource.cdm.json/HouseholdIncomeSource\",\"name\":\"HouseholdIncomeSourceId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of the Household Income Source.\",\"isNullable\":false,\"name\":\"HouseholdIncomeSourceId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"HouseholdIncomeSource.cdm.json/HouseholdIncomeSource\",\"name\":\"HouseholdIncomeSourceName\"},\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"The name of the Household Income Source.\",\"isNullable\":true,\"name\":\"HouseholdIncomeSourceName\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"HouseholdIncomeSource.cdm.json/HouseholdIncomeSource\",\"name\":\"HouseholdIncomeSourceDescription\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"The description of the Household Income Source.\",\"isNullable\":true,\"name\":\"HouseholdIncomeSourceDescription\"}]}}}",
+			"Description": "The source of the income achieved by the associated Household.\n\nEx:\n-  With earnings\n-  No earnings\n-  With sage or salary income\n-  With nonfarm self-employment income\n-  With interest, dividend or net rental income\n-  With social security income\n-  With public assistance income\n-  With retirement income\n-  With other income\n-  Shared household wage-earners\n\nNote:\nThe Census Bureau does not count the following receipts as income: (1) capital gains people received (or losses they incur) from the sale of property, including stocks, bonds, a house, or a car (unless the person was engaged in the business of selling such property, in which case the CPS counts the net proceeds as income from self-employment); (2) withdrawals of bank deposits; (3)money borrowed; (4) tax refunds; (5) gifts; and (6) lump-sum inheritances or insurance payments.",
+			"DisplayFolderInfo": "{\"name\":\"Party\",\"colorCode\":\"#7D0F6C\"}",
+			"PrimaryKeys": "HouseholdIncomeSourceId",
+			"spark.sql.sources.provider": "csv",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"HouseholdIncomeSourceId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"HouseholdIncomeSourceName\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"HouseholdIncomeSourceDescription\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "1d69d114-4270-40ae-8de7-9b30eb23a0e2",
+		"Description": "The source of the income achieved by the associated Household.\n\nEx:\n-  With earnings\n-  No earnings\n-  With sage or salary income\n-  With nonfarm self-employment income\n-  With interest, dividend or net rental income\n-  With social security income\n-  With public assistance income\n-  With retirement income\n-  With other income\n-  Shared household wage-earners\n\nNote:\nThe Census Bureau does not count the following receipts as income: (1) capital gains people received (or losses they incur) from the sale of property, including stocks, bonds, a house, or a car (unless the person was engaged in the business of selling such property, in which case the CPS counts the net proceeds as income from self-employment); (2) withdrawals of bank deposits; (3)money borrowed; (4) tax refunds; (5) gifts; and (6) lump-sum inheritances or insurance payments."
+	},
+	"type": "TABLE"
+}

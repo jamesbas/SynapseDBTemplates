@@ -1,0 +1,29 @@
+{
+	"name": "relationship-btxiomgivc",
+	"properties": {
+		"Name": "relationship-btxiomgivc",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "PartyType",
+		"ToTableName": "Party",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "PartyTypeId",
+				"ToColumnName": "PartyTypeId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"PartyType.cdm.json/PartyType\",\"toEntity\":\"Party.cdm.json/Party\",\"joinPairs\":[{\"fromAttribute\":\"PartyTypeId\",\"toAttribute\":\"PartyTypeId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "56eeca06-1001-4302-9d52-86d583b512ce"
+	},
+	"type": "RELATIONSHIP"
+}

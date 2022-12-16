@@ -1,0 +1,137 @@
+{
+	"name": "PartyEventPartyRelationshipType",
+	"properties": {
+		"Name": "PartyEventPartyRelationshipType",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "PartyEventPartyRelationshipTypeId",
+					"Description": "The unique identifier of a Party Event Party Relationship Type.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyEventPartyRelationshipType.cdm.json/PartyEventPartyRelationshipType",
+						"Name": "PartyEventPartyRelationshipTypeId"
+					}
+				},
+				{
+					"Name": "PartyEventPartyRelationshipTypeName",
+					"Description": "The name of a Party Event Party Relationship Type.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 256,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyEventPartyRelationshipType.cdm.json/PartyEventPartyRelationshipType",
+						"Name": "PartyEventPartyRelationshipTypeName"
+					}
+				},
+				{
+					"Name": "PartyEventPartyRelationshipTypeDescription",
+					"Description": "The description of a Party Event Party Relationship Type.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyEventPartyRelationshipType.cdm.json/PartyEventPartyRelationshipType",
+						"Name": "PartyEventPartyRelationshipTypeDescription"
+					}
+				}
+			],
+			"ColumnSetEntityName": "78142000-b64c-4c5e-9b5d-8491013f92f8",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/PartyEventPartyRelationshipType",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/PartyEventPartyRelationshipType",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"PartyEventPartyRelationshipTypeId\":{\"entity\":\"PartyEventPartyRelationshipType.cdm.json/PartyEventPartyRelationshipType\",\"name\":\"PartyEventPartyRelationshipTypeId\"},\"PartyEventPartyRelationshipTypeName\":{\"entity\":\"PartyEventPartyRelationshipType.cdm.json/PartyEventPartyRelationshipType\",\"name\":\"PartyEventPartyRelationshipTypeName\"},\"PartyEventPartyRelationshipTypeDescription\":{\"entity\":\"PartyEventPartyRelationshipType.cdm.json/PartyEventPartyRelationshipType\",\"name\":\"PartyEventPartyRelationshipTypeDescription\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"PartyEventPartyRelationshipType\",\"path\":\"PartyEventPartyRelationshipType.cdm.json/PartyEventPartyRelationshipType\"},\"description\":\"The nature of the relationship between the PARTY AND PARTY EVENT.\\n\\nEx:\\nMother = \\\"Sally Smith\\\"\\nAttending Doctor = \\\"Paul Bloom MD\\\"\",\"primaryKey\":[\"PartyEventPartyRelationshipTypeId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyEventPartyRelationshipType.cdm.json/PartyEventPartyRelationshipType\",\"name\":\"PartyEventPartyRelationshipTypeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Party Event Party Relationship Type.\",\"isNullable\":false,\"name\":\"PartyEventPartyRelationshipTypeId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyEventPartyRelationshipType.cdm.json/PartyEventPartyRelationshipType\",\"name\":\"PartyEventPartyRelationshipTypeName\"},\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"The name of a Party Event Party Relationship Type.\",\"isNullable\":true,\"name\":\"PartyEventPartyRelationshipTypeName\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyEventPartyRelationshipType.cdm.json/PartyEventPartyRelationshipType\",\"name\":\"PartyEventPartyRelationshipTypeDescription\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"The description of a Party Event Party Relationship Type.\",\"isNullable\":true,\"name\":\"PartyEventPartyRelationshipTypeDescription\"}]}}}",
+			"Description": "The nature of the relationship between the PARTY AND PARTY EVENT.\n\nEx:\nMother = \"Sally Smith\"\nAttending Doctor = \"Paul Bloom MD\"",
+			"DisplayFolderInfo": "{\"name\":\"Party\",\"colorCode\":\"#7D0F6C\"}",
+			"PrimaryKeys": "PartyEventPartyRelationshipTypeId",
+			"spark.sql.sources.provider": "csv",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"PartyEventPartyRelationshipTypeId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PartyEventPartyRelationshipTypeName\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"PartyEventPartyRelationshipTypeDescription\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "b5e587f8-90ef-4fad-842d-b76304b86dcc",
+		"Description": "The nature of the relationship between the PARTY AND PARTY EVENT.\n\nEx:\nMother = \"Sally Smith\"\nAttending Doctor = \"Paul Bloom MD\""
+	},
+	"type": "TABLE"
+}

@@ -1,0 +1,29 @@
+{
+	"name": "relationship-iqfmbqcznu",
+	"properties": {
+		"Name": "relationship-iqfmbqcznu",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "CertificationType",
+		"ToTableName": "Certification",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "CertificationTypeId",
+				"ToColumnName": "CertificationTypeId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"CertificationType.cdm.json/CertificationType\",\"toEntity\":\"Certification.cdm.json/Certification\",\"joinPairs\":[{\"fromAttribute\":\"CertificationTypeId\",\"toAttribute\":\"CertificationTypeId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "9a1b5683-da59-48d4-acda-69a5836fb4e6"
+	},
+	"type": "RELATIONSHIP"
+}

@@ -1,0 +1,176 @@
+{
+	"name": "PartyBiometric",
+	"properties": {
+		"Name": "PartyBiometric",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "PartyId",
+					"Description": "The unique identifier of a Party.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyBiometric.cdm.json/PartyBiometric",
+						"Name": "PartyId"
+					}
+				},
+				{
+					"Name": "BiometricTypeId",
+					"Description": "The unique identifier of a biometric type.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyBiometric.cdm.json/PartyBiometric",
+						"Name": "BiometricTypeId"
+					}
+				},
+				{
+					"Name": "Timestamp",
+					"Description": "The timestamp that the associated information is reported, recorded or effective as-of.",
+					"OriginDataTypeName": {
+						"TypeName": "timestamp",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"TimestampFormat": "YYYY-MM-DD HH:MM:SS.fffffffff",
+							"HIVE_TYPE_STRING": "timestamp"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyBiometric.cdm.json/PartyBiometric",
+						"Name": "Timestamp"
+					}
+				},
+				{
+					"Name": "PartyBiometricTemplate",
+					"Description": "The biometric template is the  pattern of a party of the associated biometric stored for matching. \n\nBioCert devices convert fingerprint information into mathematical templates, so actual fingerprint images are not stored and cannot be reconstructed based on template data.",
+					"OriginDataTypeName": {
+						"TypeName": "binary",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "binary"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyBiometric.cdm.json/PartyBiometric",
+						"Name": "PartyBiometricTemplate"
+					}
+				},
+				{
+					"Name": "PartyBiometricNote",
+					"Description": "A note, comment or additional information regarding the party biometric.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyBiometric.cdm.json/PartyBiometric",
+						"Name": "PartyBiometricNote"
+					}
+				}
+			],
+			"ColumnSetEntityName": "99d44c73-bc90-4dfc-9372-307fc2f8f09b",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/PartyBiometric",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/PartyBiometric",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"PartyId\":{\"entity\":\"PartyBiometric.cdm.json/PartyBiometric\",\"name\":\"PartyId\"},\"BiometricTypeId\":{\"entity\":\"PartyBiometric.cdm.json/PartyBiometric\",\"name\":\"BiometricTypeId\"},\"Timestamp\":{\"entity\":\"PartyBiometric.cdm.json/PartyBiometric\",\"name\":\"Timestamp\"},\"PartyBiometricTemplate\":{\"entity\":\"PartyBiometric.cdm.json/PartyBiometric\",\"name\":\"PartyBiometricTemplate\"},\"PartyBiometricNote\":{\"entity\":\"PartyBiometric.cdm.json/PartyBiometric\",\"name\":\"PartyBiometricNote\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"PartyBiometric\",\"path\":\"PartyBiometric.cdm.json/PartyBiometric\"},\"description\":\"The automatic recognition of individual parties based on unique combinations of measurable physical or behavioral characteristics. Examples include fingerprints, iris scanning, face and voice recognition, or hand geometry.\",\"primaryKey\":[\"PartyId\",\"BiometricTypeId\",\"Timestamp\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyBiometric.cdm.json/PartyBiometric\",\"name\":\"PartyId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a Party.\",\"isNullable\":false,\"name\":\"PartyId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyBiometric.cdm.json/PartyBiometric\",\"name\":\"BiometricTypeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a biometric type.\",\"isNullable\":false,\"name\":\"BiometricTypeId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyBiometric.cdm.json/PartyBiometric\",\"name\":\"Timestamp\"},\"dataType\":\"timestamp\",\"description\":\"The timestamp that the associated information is reported, recorded or effective as-of.\",\"isNullable\":false,\"name\":\"Timestamp\",\"timestampFormat\":\"YYYY-MM-DD HH:MM:SS.fffffffff\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyBiometric.cdm.json/PartyBiometric\",\"name\":\"PartyBiometricTemplate\"},\"dataType\":\"binary\",\"description\":\"The biometric template is the  pattern of a party of the associated biometric stored for matching. \\n\\nBioCert devices convert fingerprint information into mathematical templates, so actual fingerprint images are not stored and cannot be reconstructed based on template data.\",\"isNullable\":true,\"name\":\"PartyBiometricTemplate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyBiometric.cdm.json/PartyBiometric\",\"name\":\"PartyBiometricNote\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"A note, comment or additional information regarding the party biometric.\",\"isNullable\":true,\"name\":\"PartyBiometricNote\"}]}}}",
+			"Description": "The automatic recognition of individual parties based on unique combinations of measurable physical or behavioral characteristics. Examples include fingerprints, iris scanning, face and voice recognition, or hand geometry.",
+			"DisplayFolderInfo": "{\"name\":\"Party\",\"colorCode\":\"#7D0F6C\"}",
+			"PrimaryKeys": "PartyId,BiometricTypeId,Timestamp",
+			"spark.sql.sources.provider": "csv",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"PartyId\",\"type\":\"long\",\"nullable\":false,\"metadata\":{}},{\"name\":\"BiometricTypeId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"Timestamp\",\"type\":\"timestamp\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PartyBiometricTemplate\",\"type\":\"binary\",\"nullable\":true,\"metadata\":{}},{\"name\":\"PartyBiometricNote\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "87a4630e-5ba0-4d57-a2f1-8df772ce8a35",
+		"Description": "The automatic recognition of individual parties based on unique combinations of measurable physical or behavioral characteristics. Examples include fingerprints, iris scanning, face and voice recognition, or hand geometry."
+	},
+	"type": "TABLE"
+}

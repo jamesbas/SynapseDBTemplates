@@ -1,0 +1,214 @@
+{
+	"name": "SocialMediaPlatformUser",
+	"properties": {
+		"Name": "SocialMediaPlatformUser",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "SocialMediaPlatformId",
+					"Description": "The unique identifier of a Social Media Platform.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "SocialMediaPlatformUser.cdm.json/SocialMediaPlatformUser",
+						"Name": "SocialMediaPlatformId"
+					}
+				},
+				{
+					"Name": "SocialMediaPlatformUserId",
+					"Description": "The unique identifier of a Social Media Platform User.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "SocialMediaPlatformUser.cdm.json/SocialMediaPlatformUser",
+						"Name": "SocialMediaPlatformUserId"
+					}
+				},
+				{
+					"Name": "SocialMediaPlatformUserUsername",
+					"Description": "The username used by the user of the Social Media Platform.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 256,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "SocialMediaPlatformUser.cdm.json/SocialMediaPlatformUser",
+						"Name": "SocialMediaPlatformUserUsername"
+					}
+				},
+				{
+					"Name": "SocialMediaPlatformUserName",
+					"Description": "The name of the Social Media Platform User.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 256,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "SocialMediaPlatformUser.cdm.json/SocialMediaPlatformUser",
+						"Name": "SocialMediaPlatformUserName"
+					}
+				},
+				{
+					"Name": "SocialMediaPlatformUserSinceDate",
+					"Description": "The date that the user created a social media platform user account.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "SocialMediaPlatformUser.cdm.json/SocialMediaPlatformUser",
+						"Name": "SocialMediaPlatformUserSinceDate"
+					}
+				},
+				{
+					"Name": "SocialMediaPlatformUserInfluencerIndicator",
+					"Description": "Indicates whether the Social Media Platform User is an influencer.",
+					"OriginDataTypeName": {
+						"TypeName": "boolean",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "boolean"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "SocialMediaPlatformUser.cdm.json/SocialMediaPlatformUser",
+						"Name": "SocialMediaPlatformUserInfluencerIndicator"
+					}
+				},
+				{
+					"Name": "SocialMediaPlatformUserNote",
+					"Description": "A note, comment or additional information regarding the Social Media Platform User.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "SocialMediaPlatformUser.cdm.json/SocialMediaPlatformUser",
+						"Name": "SocialMediaPlatformUserNote"
+					}
+				}
+			],
+			"ColumnSetEntityName": "8572e19f-5b2b-4464-b154-27354ea597b7",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/SocialMediaPlatformUser",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/SocialMediaPlatformUser",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"SocialMediaPlatformId\":{\"entity\":\"SocialMediaPlatformUser.cdm.json/SocialMediaPlatformUser\",\"name\":\"SocialMediaPlatformId\"},\"SocialMediaPlatformUserId\":{\"entity\":\"SocialMediaPlatformUser.cdm.json/SocialMediaPlatformUser\",\"name\":\"SocialMediaPlatformUserId\"},\"SocialMediaPlatformUserUsername\":{\"entity\":\"SocialMediaPlatformUser.cdm.json/SocialMediaPlatformUser\",\"name\":\"SocialMediaPlatformUserUsername\"},\"SocialMediaPlatformUserName\":{\"entity\":\"SocialMediaPlatformUser.cdm.json/SocialMediaPlatformUser\",\"name\":\"SocialMediaPlatformUserName\"},\"SocialMediaPlatformUserSinceDate\":{\"entity\":\"SocialMediaPlatformUser.cdm.json/SocialMediaPlatformUser\",\"name\":\"SocialMediaPlatformUserSinceDate\"},\"SocialMediaPlatformUserInfluencerIndicator\":{\"entity\":\"SocialMediaPlatformUser.cdm.json/SocialMediaPlatformUser\",\"name\":\"SocialMediaPlatformUserInfluencerIndicator\"},\"SocialMediaPlatformUserNote\":{\"entity\":\"SocialMediaPlatformUser.cdm.json/SocialMediaPlatformUser\",\"name\":\"SocialMediaPlatformUserNote\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"SocialMediaPlatformUser\",\"path\":\"SocialMediaPlatformUser.cdm.json/SocialMediaPlatformUser\"},\"description\":\"A User of a Social Media Platform. Depending on the platform, a user can be used to represent an individual (party or customer), organization (party or customer), product, program, promotion or any other desired business object within the scope of an organization.\",\"primaryKey\":[\"SocialMediaPlatformId\",\"SocialMediaPlatformUserId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"SocialMediaPlatformUser.cdm.json/SocialMediaPlatformUser\",\"name\":\"SocialMediaPlatformId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Social Media Platform.\",\"isNullable\":false,\"name\":\"SocialMediaPlatformId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"SocialMediaPlatformUser.cdm.json/SocialMediaPlatformUser\",\"name\":\"SocialMediaPlatformUserId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Social Media Platform User.\",\"isNullable\":false,\"name\":\"SocialMediaPlatformUserId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"SocialMediaPlatformUser.cdm.json/SocialMediaPlatformUser\",\"name\":\"SocialMediaPlatformUserUsername\"},\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"The username used by the user of the Social Media Platform.\",\"isNullable\":true,\"name\":\"SocialMediaPlatformUserUsername\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"SocialMediaPlatformUser.cdm.json/SocialMediaPlatformUser\",\"name\":\"SocialMediaPlatformUserName\"},\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"The name of the Social Media Platform User.\",\"isNullable\":true,\"name\":\"SocialMediaPlatformUserName\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"SocialMediaPlatformUser.cdm.json/SocialMediaPlatformUser\",\"name\":\"SocialMediaPlatformUserSinceDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The date that the user created a social media platform user account.\",\"isNullable\":true,\"name\":\"SocialMediaPlatformUserSinceDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"SocialMediaPlatformUser.cdm.json/SocialMediaPlatformUser\",\"name\":\"SocialMediaPlatformUserInfluencerIndicator\"},\"dataType\":\"boolean\",\"description\":\"Indicates whether the Social Media Platform User is an influencer.\",\"isNullable\":true,\"name\":\"SocialMediaPlatformUserInfluencerIndicator\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"SocialMediaPlatformUser.cdm.json/SocialMediaPlatformUser\",\"name\":\"SocialMediaPlatformUserNote\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"A note, comment or additional information regarding the Social Media Platform User.\",\"isNullable\":true,\"name\":\"SocialMediaPlatformUserNote\"}]}}}",
+			"Description": "A User of a Social Media Platform. Depending on the platform, a user can be used to represent an individual (party or customer), organization (party or customer), product, program, promotion or any other desired business object within the scope of an organization.",
+			"DisplayFolderInfo": "{\"name\":\"Customer Service & Contact Management\",\"colorCode\":\"#0064C1\"}",
+			"PrimaryKeys": "SocialMediaPlatformId,SocialMediaPlatformUserId",
+			"spark.sql.sources.provider": "csv",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"SocialMediaPlatformId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"SocialMediaPlatformUserId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"SocialMediaPlatformUserUsername\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"SocialMediaPlatformUserName\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"SocialMediaPlatformUserSinceDate\",\"type\":\"date\",\"nullable\":true,\"metadata\":{}},{\"name\":\"SocialMediaPlatformUserInfluencerIndicator\",\"type\":\"boolean\",\"nullable\":true,\"metadata\":{}},{\"name\":\"SocialMediaPlatformUserNote\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "5b943084-035e-4290-884c-592a95771255",
+		"Description": "A User of a Social Media Platform. Depending on the platform, a user can be used to represent an individual (party or customer), organization (party or customer), product, program, promotion or any other desired business object within the scope of an organization."
+	},
+	"type": "TABLE"
+}

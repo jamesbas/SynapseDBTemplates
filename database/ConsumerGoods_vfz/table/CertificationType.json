@@ -1,0 +1,137 @@
+{
+	"name": "CertificationType",
+	"properties": {
+		"Name": "CertificationType",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "CertificationTypeId",
+					"Description": "The unique identifier of a Certification Type.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "CertificationType.cdm.json/CertificationType",
+						"Name": "CertificationTypeId"
+					}
+				},
+				{
+					"Name": "CertificationTypeName",
+					"Description": "The name of the Certification Type.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 256,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "CertificationType.cdm.json/CertificationType",
+						"Name": "CertificationTypeName"
+					}
+				},
+				{
+					"Name": "CertificationTypeDescription",
+					"Description": "The description of the Certification Type.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "CertificationType.cdm.json/CertificationType",
+						"Name": "CertificationTypeDescription"
+					}
+				}
+			],
+			"ColumnSetEntityName": "9b7f9d47-5e2c-4c47-b7e0-e3b7972eaa11",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/CertificationType",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/CertificationType",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"CertificationTypeId\":{\"entity\":\"CertificationType.cdm.json/CertificationType\",\"name\":\"CertificationTypeId\"},\"CertificationTypeName\":{\"entity\":\"CertificationType.cdm.json/CertificationType\",\"name\":\"CertificationTypeName\"},\"CertificationTypeDescription\":{\"entity\":\"CertificationType.cdm.json/CertificationType\",\"name\":\"CertificationTypeDescription\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"CertificationType\",\"path\":\"CertificationType.cdm.json/CertificationType\"},\"description\":\"A type of certification that may be assigned.\\n\\nEx:\\n-  Product Certification\\n-  Environmental Certification\\n-  Component Certification\\n-  Safety Certification\\n-  Operations Certification\\n-  Skill Authorization\\n-  Skill Certification\\n-  Degree\\n-  Certified\\n-  Authorized\",\"primaryKey\":[\"CertificationTypeId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"CertificationType.cdm.json/CertificationType\",\"name\":\"CertificationTypeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Certification Type.\",\"isNullable\":false,\"name\":\"CertificationTypeId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"CertificationType.cdm.json/CertificationType\",\"name\":\"CertificationTypeName\"},\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"The name of the Certification Type.\",\"isNullable\":true,\"name\":\"CertificationTypeName\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"CertificationType.cdm.json/CertificationType\",\"name\":\"CertificationTypeDescription\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"The description of the Certification Type.\",\"isNullable\":true,\"name\":\"CertificationTypeDescription\"}]}}}",
+			"Description": "A type of certification that may be assigned.\n\nEx:\n-  Product Certification\n-  Environmental Certification\n-  Component Certification\n-  Safety Certification\n-  Operations Certification\n-  Skill Authorization\n-  Skill Certification\n-  Degree\n-  Certified\n-  Authorized",
+			"DisplayFolderInfo": "{\"name\":\"Human Resources & Payroll\",\"colorCode\":\"#EA279F\"}",
+			"PrimaryKeys": "CertificationTypeId",
+			"spark.sql.sources.provider": "csv",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"CertificationTypeId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"CertificationTypeName\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"CertificationTypeDescription\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "e55f5e2f-9506-4756-b877-f74ef20826c4",
+		"Description": "A type of certification that may be assigned.\n\nEx:\n-  Product Certification\n-  Environmental Certification\n-  Component Certification\n-  Safety Certification\n-  Operations Certification\n-  Skill Authorization\n-  Skill Certification\n-  Degree\n-  Certified\n-  Authorized"
+	},
+	"type": "TABLE"
+}

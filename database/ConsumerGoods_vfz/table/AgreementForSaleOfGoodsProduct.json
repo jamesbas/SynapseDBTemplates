@@ -1,0 +1,137 @@
+{
+	"name": "AgreementForSaleOfGoodsProduct",
+	"properties": {
+		"Name": "AgreementForSaleOfGoodsProduct",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "ContractId",
+					"Description": "The unique identifier of a Contract.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "AgreementForSaleOfGoodsProduct.cdm.json/AgreementForSaleOfGoodsProduct",
+						"Name": "ContractId"
+					}
+				},
+				{
+					"Name": "ProductId",
+					"Description": "The unique identifier of a Product.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "AgreementForSaleOfGoodsProduct.cdm.json/AgreementForSaleOfGoodsProduct",
+						"Name": "ProductId"
+					}
+				},
+				{
+					"Name": "Quantity",
+					"Description": "The quantity of products (goods) addresses by the Agreement.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "AgreementForSaleOfGoodsProduct.cdm.json/AgreementForSaleOfGoodsProduct",
+						"Name": "Quantity"
+					}
+				}
+			],
+			"ColumnSetEntityName": "d9fb4c04-7130-45c2-90f2-579634df01de",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/AgreementForSaleOfGoodsProduct",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/AgreementForSaleOfGoodsProduct",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"ContractId\":{\"entity\":\"AgreementForSaleOfGoodsProduct.cdm.json/AgreementForSaleOfGoodsProduct\",\"name\":\"ContractId\"},\"ProductId\":{\"entity\":\"AgreementForSaleOfGoodsProduct.cdm.json/AgreementForSaleOfGoodsProduct\",\"name\":\"ProductId\"},\"Quantity\":{\"entity\":\"AgreementForSaleOfGoodsProduct.cdm.json/AgreementForSaleOfGoodsProduct\",\"name\":\"Quantity\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"AgreementForSaleOfGoodsProduct\",\"path\":\"AgreementForSaleOfGoodsProduct.cdm.json/AgreementForSaleOfGoodsProduct\"},\"description\":\"The product(s) covered under the Agreement For Sales Of Goods.\",\"primaryKey\":[\"ContractId\",\"ProductId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"AgreementForSaleOfGoodsProduct.cdm.json/AgreementForSaleOfGoodsProduct\",\"name\":\"ContractId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Contract.\",\"isNullable\":false,\"name\":\"ContractId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"AgreementForSaleOfGoodsProduct.cdm.json/AgreementForSaleOfGoodsProduct\",\"name\":\"ProductId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a Product.\",\"isNullable\":false,\"name\":\"ProductId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"AgreementForSaleOfGoodsProduct.cdm.json/AgreementForSaleOfGoodsProduct\",\"name\":\"Quantity\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"The quantity of products (goods) addresses by the Agreement.\",\"isNullable\":true,\"scale\":2,\"name\":\"Quantity\"}]}}}",
+			"Description": "The product(s) covered under the Agreement For Sales Of Goods.",
+			"DisplayFolderInfo": "{\"name\":\"Contract\",\"colorCode\":\"#000F5C\"}",
+			"PrimaryKeys": "ContractId,ProductId",
+			"spark.sql.sources.provider": "csv",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"ContractId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"ProductId\",\"type\":\"long\",\"nullable\":false,\"metadata\":{}},{\"name\":\"Quantity\",\"type\":\"decimal(18,2)\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "37a5a19d-1528-498d-b073-fbd09779846b",
+		"Description": "The product(s) covered under the Agreement For Sales Of Goods."
+	},
+	"type": "TABLE"
+}

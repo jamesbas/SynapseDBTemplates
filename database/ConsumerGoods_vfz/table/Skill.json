@@ -1,0 +1,137 @@
+{
+	"name": "Skill",
+	"properties": {
+		"Name": "Skill",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "SkillId",
+					"Description": "The unique identifier of a Skill.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Skill.cdm.json/Skill",
+						"Name": "SkillId"
+					}
+				},
+				{
+					"Name": "SkillName",
+					"Description": "The name of a Skill.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 256,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Skill.cdm.json/Skill",
+						"Name": "SkillName"
+					}
+				},
+				{
+					"Name": "SkillDescription",
+					"Description": "The description of a Skill.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Skill.cdm.json/Skill",
+						"Name": "SkillDescription"
+					}
+				}
+			],
+			"ColumnSetEntityName": "87caee0a-d5e8-4e94-aa3b-7f74800429d6",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/Skill",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/Skill",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"SkillId\":{\"entity\":\"Skill.cdm.json/Skill\",\"name\":\"SkillId\"},\"SkillName\":{\"entity\":\"Skill.cdm.json/Skill\",\"name\":\"SkillName\"},\"SkillDescription\":{\"entity\":\"Skill.cdm.json/Skill\",\"name\":\"SkillDescription\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"Skill\",\"path\":\"Skill.cdm.json/Skill\"},\"description\":\"A proficiency, facility or dexterity that is acquired or developed through training or experience.\\n\\nEx\\n- Telephone\\n- Dictaphone/Transcriber\\n- Forklift\\n- Hand tools\\n- Power tools\\n- Chemist\",\"primaryKey\":[\"SkillId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Skill.cdm.json/Skill\",\"name\":\"SkillId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Skill.\",\"isNullable\":false,\"name\":\"SkillId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Skill.cdm.json/Skill\",\"name\":\"SkillName\"},\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"The name of a Skill.\",\"isNullable\":true,\"name\":\"SkillName\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Skill.cdm.json/Skill\",\"name\":\"SkillDescription\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"The description of a Skill.\",\"isNullable\":true,\"name\":\"SkillDescription\"}]}}}",
+			"Description": "A proficiency, facility or dexterity that is acquired or developed through training or experience.\n\nEx\n- Telephone\n- Dictaphone/Transcriber\n- Forklift\n- Hand tools\n- Power tools\n- Chemist",
+			"DisplayFolderInfo": "{\"name\":\"Human Resources & Payroll\",\"colorCode\":\"#EA279F\"}",
+			"PrimaryKeys": "SkillId",
+			"spark.sql.sources.provider": "csv",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"SkillId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"SkillName\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"SkillDescription\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "88490a8f-ae5a-42d3-81ac-e6e175bdc25c",
+		"Description": "A proficiency, facility or dexterity that is acquired or developed through training or experience.\n\nEx\n- Telephone\n- Dictaphone/Transcriber\n- Forklift\n- Hand tools\n- Power tools\n- Chemist"
+	},
+	"type": "TABLE"
+}

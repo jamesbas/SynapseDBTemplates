@@ -1,0 +1,29 @@
+{
+	"name": "relationship-kepvvylthe",
+	"properties": {
+		"Name": "relationship-kepvvylthe",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "FocusGroup",
+		"ToTableName": "FocusGroupProduct",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "FocusGroupId",
+				"ToColumnName": "FocusGroupId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"FocusGroup.cdm.json/FocusGroup\",\"toEntity\":\"FocusGroupProduct.cdm.json/FocusGroupProduct\",\"joinPairs\":[{\"fromAttribute\":\"FocusGroupId\",\"toAttribute\":\"FocusGroupId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "d1d950e0-dd14-4f7f-9d3b-8368726b0765"
+	},
+	"type": "RELATIONSHIP"
+}

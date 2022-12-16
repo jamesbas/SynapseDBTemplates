@@ -1,0 +1,137 @@
+{
+	"name": "StudentStatus",
+	"properties": {
+		"Name": "StudentStatus",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "StudentStatusId",
+					"Description": "The unique identifier of an Attendance Status.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StudentStatus.cdm.json/StudentStatus",
+						"Name": "StudentStatusId"
+					}
+				},
+				{
+					"Name": "StudentStatusName",
+					"Description": "The name of an Attendance Status.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 256,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StudentStatus.cdm.json/StudentStatus",
+						"Name": "StudentStatusName"
+					}
+				},
+				{
+					"Name": "StudentStatusDescription",
+					"Description": "The description of an Attendance Status.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StudentStatus.cdm.json/StudentStatus",
+						"Name": "StudentStatusDescription"
+					}
+				}
+			],
+			"ColumnSetEntityName": "1c989035-f87a-4f21-b100-d7f2db6460b4",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/StudentStatus",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/StudentStatus",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"StudentStatusId\":{\"entity\":\"StudentStatus.cdm.json/StudentStatus\",\"name\":\"StudentStatusId\"},\"StudentStatusName\":{\"entity\":\"StudentStatus.cdm.json/StudentStatus\",\"name\":\"StudentStatusName\"},\"StudentStatusDescription\":{\"entity\":\"StudentStatus.cdm.json/StudentStatus\",\"name\":\"StudentStatusDescription\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"StudentStatus\",\"path\":\"StudentStatus.cdm.json/StudentStatus\"},\"description\":\"The student status of the Individual at the associated Educational Institution during the period defined.\\n\\nEx:\\n- Full-time student\\n- Part-time student\\n- Completed Successfully\\n- Completed With Honors\\n- Business-sponsored student\\n- Non-credit student\\n- Drop-out\",\"primaryKey\":[\"StudentStatusId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StudentStatus.cdm.json/StudentStatus\",\"name\":\"StudentStatusId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of an Attendance Status.\",\"isNullable\":false,\"name\":\"StudentStatusId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StudentStatus.cdm.json/StudentStatus\",\"name\":\"StudentStatusName\"},\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"The name of an Attendance Status.\",\"isNullable\":true,\"name\":\"StudentStatusName\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StudentStatus.cdm.json/StudentStatus\",\"name\":\"StudentStatusDescription\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"The description of an Attendance Status.\",\"isNullable\":true,\"name\":\"StudentStatusDescription\"}]}}}",
+			"Description": "The student status of the Individual at the associated Educational Institution during the period defined.\n\nEx:\n- Full-time student\n- Part-time student\n- Completed Successfully\n- Completed With Honors\n- Business-sponsored student\n- Non-credit student\n- Drop-out",
+			"DisplayFolderInfo": "{\"name\":\"Party\",\"colorCode\":\"#7D0F6C\"}",
+			"PrimaryKeys": "StudentStatusId",
+			"spark.sql.sources.provider": "csv",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"StudentStatusId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"StudentStatusName\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"StudentStatusDescription\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "54e0664a-34ab-4c06-babe-8d6c0c9984d4",
+		"Description": "The student status of the Individual at the associated Educational Institution during the period defined.\n\nEx:\n- Full-time student\n- Part-time student\n- Completed Successfully\n- Completed With Honors\n- Business-sponsored student\n- Non-credit student\n- Drop-out"
+	},
+	"type": "TABLE"
+}

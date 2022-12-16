@@ -1,0 +1,196 @@
+{
+	"name": "HouseholdMemberRole",
+	"properties": {
+		"Name": "HouseholdMemberRole",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "HouseholdId",
+					"Description": "The unique identifier of a Household.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "HouseholdMemberRole.cdm.json/HouseholdMemberRole",
+						"Name": "HouseholdId"
+					}
+				},
+				{
+					"Name": "HouseholdMemberPartyId",
+					"Description": "The unique identifier of a Party.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "HouseholdMemberRole.cdm.json/HouseholdMemberRole",
+						"Name": "HouseholdMemberPartyId"
+					}
+				},
+				{
+					"Name": "HouseholdMemberPeriodStartDate",
+					"Description": "The period start date for which the party performs the indicated household member role.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "HouseholdMemberRole.cdm.json/HouseholdMemberRole",
+						"Name": "HouseholdMemberPeriodStartDate"
+					}
+				},
+				{
+					"Name": "HouseholdRoleId",
+					"Description": "The unique identifier of a Household Role.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "HouseholdMemberRole.cdm.json/HouseholdMemberRole",
+						"Name": "HouseholdRoleId"
+					}
+				},
+				{
+					"Name": "PeriodEndDate",
+					"Description": "The period end date for which the party performs the indicated household member role.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "HouseholdMemberRole.cdm.json/HouseholdMemberRole",
+						"Name": "PeriodEndDate"
+					}
+				},
+				{
+					"Name": "HouseholdMemberRoleNote",
+					"Description": "A note, comment or additional information regarding the household member role.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "HouseholdMemberRole.cdm.json/HouseholdMemberRole",
+						"Name": "HouseholdMemberRoleNote"
+					}
+				}
+			],
+			"ColumnSetEntityName": "175c54de-8f25-4167-a309-11de7a7a7dae",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/HouseholdMemberRole",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/HouseholdMemberRole",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"HouseholdId\":{\"entity\":\"HouseholdMemberRole.cdm.json/HouseholdMemberRole\",\"name\":\"HouseholdId\"},\"HouseholdMemberPartyId\":{\"entity\":\"HouseholdMemberRole.cdm.json/HouseholdMemberRole\",\"name\":\"HouseholdMemberPartyId\"},\"HouseholdMemberPeriodStartDate\":{\"entity\":\"HouseholdMemberRole.cdm.json/HouseholdMemberRole\",\"name\":\"HouseholdMemberPeriodStartDate\"},\"HouseholdRoleId\":{\"entity\":\"HouseholdMemberRole.cdm.json/HouseholdMemberRole\",\"name\":\"HouseholdRoleId\"},\"PeriodEndDate\":{\"entity\":\"HouseholdMemberRole.cdm.json/HouseholdMemberRole\",\"name\":\"PeriodEndDate\"},\"HouseholdMemberRoleNote\":{\"entity\":\"HouseholdMemberRole.cdm.json/HouseholdMemberRole\",\"name\":\"HouseholdMemberRoleNote\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"HouseholdMemberRole\",\"path\":\"HouseholdMemberRole.cdm.json/HouseholdMemberRole\"},\"description\":\"The household role(s) performed by the household member during the indicated period.\",\"primaryKey\":[\"HouseholdId\",\"HouseholdMemberPartyId\",\"HouseholdMemberPeriodStartDate\",\"HouseholdRoleId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"HouseholdMemberRole.cdm.json/HouseholdMemberRole\",\"name\":\"HouseholdId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a Household.\",\"isNullable\":false,\"name\":\"HouseholdId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"HouseholdMemberRole.cdm.json/HouseholdMemberRole\",\"name\":\"HouseholdMemberPartyId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a Party.\",\"isNullable\":false,\"name\":\"HouseholdMemberPartyId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"HouseholdMemberRole.cdm.json/HouseholdMemberRole\",\"name\":\"HouseholdMemberPeriodStartDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The period start date for which the party performs the indicated household member role.\",\"isNullable\":false,\"name\":\"HouseholdMemberPeriodStartDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"HouseholdMemberRole.cdm.json/HouseholdMemberRole\",\"name\":\"HouseholdRoleId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Household Role.\",\"isNullable\":false,\"name\":\"HouseholdRoleId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"HouseholdMemberRole.cdm.json/HouseholdMemberRole\",\"name\":\"PeriodEndDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The period end date for which the party performs the indicated household member role.\",\"isNullable\":true,\"name\":\"PeriodEndDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"HouseholdMemberRole.cdm.json/HouseholdMemberRole\",\"name\":\"HouseholdMemberRoleNote\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"A note, comment or additional information regarding the household member role.\",\"isNullable\":true,\"name\":\"HouseholdMemberRoleNote\"}]}}}",
+			"Description": "The household role(s) performed by the household member during the indicated period.",
+			"DisplayFolderInfo": "{\"name\":\"Party\",\"colorCode\":\"#7D0F6C\"}",
+			"PrimaryKeys": "HouseholdId,HouseholdMemberPartyId,HouseholdMemberPeriodStartDate,HouseholdRoleId",
+			"spark.sql.sources.provider": "csv",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"HouseholdId\",\"type\":\"long\",\"nullable\":false,\"metadata\":{}},{\"name\":\"HouseholdMemberPartyId\",\"type\":\"long\",\"nullable\":false,\"metadata\":{}},{\"name\":\"HouseholdMemberPeriodStartDate\",\"type\":\"date\",\"nullable\":false,\"metadata\":{}},{\"name\":\"HouseholdRoleId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PeriodEndDate\",\"type\":\"date\",\"nullable\":true,\"metadata\":{}},{\"name\":\"HouseholdMemberRoleNote\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "849f698c-8203-4b7f-812e-e03d2e72430d",
+		"Description": "The household role(s) performed by the household member during the indicated period."
+	},
+	"type": "TABLE"
+}

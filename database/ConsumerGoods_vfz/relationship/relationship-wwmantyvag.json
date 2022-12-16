@@ -1,0 +1,29 @@
+{
+	"name": "relationship-wwmantyvag",
+	"properties": {
+		"Name": "relationship-wwmantyvag",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "PurchaseOrderType",
+		"ToTableName": "PurchaseOrder",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "PurchaseOrderTypeId",
+				"ToColumnName": "PurchaseOrderTypeId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"PurchaseOrderType.cdm.json/PurchaseOrderType\",\"toEntity\":\"PurchaseOrder.cdm.json/PurchaseOrder\",\"joinPairs\":[{\"fromAttribute\":\"PurchaseOrderTypeId\",\"toAttribute\":\"PurchaseOrderTypeId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "6c2fa6b2-6a50-47a3-beb6-378b76c20316"
+	},
+	"type": "RELATIONSHIP"
+}

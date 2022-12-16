@@ -1,0 +1,196 @@
+{
+	"name": "PartyCountryOfResidence",
+	"properties": {
+		"Name": "PartyCountryOfResidence",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "PartyId",
+					"Description": "The unique identifier of a Party.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyCountryOfResidence.cdm.json/PartyCountryOfResidence",
+						"Name": "PartyId"
+					}
+				},
+				{
+					"Name": "CountryId",
+					"Description": "The unique identifier of the Country.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyCountryOfResidence.cdm.json/PartyCountryOfResidence",
+						"Name": "CountryId"
+					}
+				},
+				{
+					"Name": "PeriodStartDate",
+					"Description": "The period start date for which the associated D&B data is effective or 'as-of'.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyCountryOfResidence.cdm.json/PartyCountryOfResidence",
+						"Name": "PeriodStartDate"
+					}
+				},
+				{
+					"Name": "PeriodEndDate",
+					"Description": "The period end date for which the associated D&B data is effective or 'as-of'.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyCountryOfResidence.cdm.json/PartyCountryOfResidence",
+						"Name": "PeriodEndDate"
+					}
+				},
+				{
+					"Name": "CountryResidencyStatusId",
+					"Description": "The unique identifier of a Country Residency Status.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyCountryOfResidence.cdm.json/PartyCountryOfResidence",
+						"Name": "CountryResidencyStatusId"
+					}
+				},
+				{
+					"Name": "PartyCountryOfResidencyNote",
+					"Description": "A note, comment or additional information regarding the party country of residency.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyCountryOfResidence.cdm.json/PartyCountryOfResidence",
+						"Name": "PartyCountryOfResidencyNote"
+					}
+				}
+			],
+			"ColumnSetEntityName": "53955933-1f21-466a-a3ae-166989fe91fb",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/PartyCountryOfResidence",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/PartyCountryOfResidence",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"PartyId\":{\"entity\":\"PartyCountryOfResidence.cdm.json/PartyCountryOfResidence\",\"name\":\"PartyId\"},\"CountryId\":{\"entity\":\"PartyCountryOfResidence.cdm.json/PartyCountryOfResidence\",\"name\":\"CountryId\"},\"PeriodStartDate\":{\"entity\":\"PartyCountryOfResidence.cdm.json/PartyCountryOfResidence\",\"name\":\"PeriodStartDate\"},\"PeriodEndDate\":{\"entity\":\"PartyCountryOfResidence.cdm.json/PartyCountryOfResidence\",\"name\":\"PeriodEndDate\"},\"CountryResidencyStatusId\":{\"entity\":\"PartyCountryOfResidence.cdm.json/PartyCountryOfResidence\",\"name\":\"CountryResidencyStatusId\"},\"PartyCountryOfResidencyNote\":{\"entity\":\"PartyCountryOfResidence.cdm.json/PartyCountryOfResidence\",\"name\":\"PartyCountryOfResidencyNote\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"PartyCountryOfResidence\",\"path\":\"PartyCountryOfResidence.cdm.json/PartyCountryOfResidence\"},\"description\":\"The country of residence of the individual as of the associated time.\\n\\nThis answers the question \\\"What country(s) does the individual have residence for?\\\"\",\"primaryKey\":[\"PartyId\",\"CountryId\",\"PeriodStartDate\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyCountryOfResidence.cdm.json/PartyCountryOfResidence\",\"name\":\"PartyId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a Party.\",\"isNullable\":false,\"name\":\"PartyId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyCountryOfResidence.cdm.json/PartyCountryOfResidence\",\"name\":\"CountryId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of the Country.\",\"isNullable\":false,\"name\":\"CountryId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyCountryOfResidence.cdm.json/PartyCountryOfResidence\",\"name\":\"PeriodStartDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The period start date for which the associated D&B data is effective or 'as-of'.\",\"isNullable\":false,\"name\":\"PeriodStartDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyCountryOfResidence.cdm.json/PartyCountryOfResidence\",\"name\":\"PeriodEndDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The period end date for which the associated D&B data is effective or 'as-of'.\",\"isNullable\":true,\"name\":\"PeriodEndDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyCountryOfResidence.cdm.json/PartyCountryOfResidence\",\"name\":\"CountryResidencyStatusId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Country Residency Status.\",\"isNullable\":true,\"name\":\"CountryResidencyStatusId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyCountryOfResidence.cdm.json/PartyCountryOfResidence\",\"name\":\"PartyCountryOfResidencyNote\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"A note, comment or additional information regarding the party country of residency.\",\"isNullable\":true,\"name\":\"PartyCountryOfResidencyNote\"}]}}}",
+			"Description": "The country of residence of the individual as of the associated time.\n\nThis answers the question \"What country(s) does the individual have residence for?\"",
+			"DisplayFolderInfo": "{\"name\":\"Party\",\"colorCode\":\"#7D0F6C\"}",
+			"PrimaryKeys": "PartyId,CountryId,PeriodStartDate",
+			"spark.sql.sources.provider": "csv",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"PartyId\",\"type\":\"long\",\"nullable\":false,\"metadata\":{}},{\"name\":\"CountryId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PeriodStartDate\",\"type\":\"date\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PeriodEndDate\",\"type\":\"date\",\"nullable\":true,\"metadata\":{}},{\"name\":\"CountryResidencyStatusId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"PartyCountryOfResidencyNote\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "226dc2ea-f662-4324-abc0-5e3fb55b3d16",
+		"Description": "The country of residence of the individual as of the associated time.\n\nThis answers the question \"What country(s) does the individual have residence for?\""
+	},
+	"type": "TABLE"
+}

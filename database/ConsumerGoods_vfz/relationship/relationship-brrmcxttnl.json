@@ -1,0 +1,29 @@
+{
+	"name": "relationship-brrmcxttnl",
+	"properties": {
+		"Name": "relationship-brrmcxttnl",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "ChurnRiskRating",
+		"ToTableName": "PartyChurnPropensity",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "ChurnRiskRatingId",
+				"ToColumnName": "ChurnRiskRatingId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"ChurnRiskRating.cdm.json/ChurnRiskRating\",\"toEntity\":\"PartyChurnPropensity.cdm.json/PartyChurnPropensity\",\"joinPairs\":[{\"fromAttribute\":\"ChurnRiskRatingId\",\"toAttribute\":\"ChurnRiskRatingId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "06acea44-973b-4707-9404-9f347bd0c413"
+	},
+	"type": "RELATIONSHIP"
+}

@@ -1,0 +1,29 @@
+{
+	"name": "relationship-djpqiiwlkr",
+	"properties": {
+		"Name": "relationship-djpqiiwlkr",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "TaxBasis",
+		"ToTableName": "LegalEntityAccountingPolicy",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "TaxBasisId",
+				"ToColumnName": "TaxBasisId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"TaxBasis.cdm.json/TaxBasis\",\"toEntity\":\"LegalEntityAccountingPolicy.cdm.json/LegalEntityAccountingPolicy\",\"joinPairs\":[{\"fromAttribute\":\"TaxBasisId\",\"toAttribute\":\"TaxBasisId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 2,
+		"ObjectId": "879a960f-4d23-4b47-88f7-0b2702a25e27"
+	},
+	"type": "RELATIONSHIP"
+}

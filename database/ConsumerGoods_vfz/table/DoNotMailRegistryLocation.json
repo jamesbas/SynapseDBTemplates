@@ -1,0 +1,137 @@
+{
+	"name": "DoNotMailRegistryLocation",
+	"properties": {
+		"Name": "DoNotMailRegistryLocation",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "DoNotContactRegistryId",
+					"Description": "The unique identifier of an Do Not Contact Registry.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "DoNotMailRegistryLocation.cdm.json/DoNotMailRegistryLocation",
+						"Name": "DoNotContactRegistryId"
+					}
+				},
+				{
+					"Name": "LocationId",
+					"Description": "The unique identifier of a Location.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "DoNotMailRegistryLocation.cdm.json/DoNotMailRegistryLocation",
+						"Name": "LocationId"
+					}
+				},
+				{
+					"Name": "DoNotMailRegistryLocationNote",
+					"Description": "A note, comment or additional information regarding the Do Not Contact Registry Location.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "DoNotMailRegistryLocation.cdm.json/DoNotMailRegistryLocation",
+						"Name": "DoNotMailRegistryLocationNote"
+					}
+				}
+			],
+			"ColumnSetEntityName": "b29a35c1-d2aa-43f1-b474-adf66a2f8f19",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/DoNotMailRegistryLocation",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/DoNotMailRegistryLocation",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"DoNotContactRegistryId\":{\"entity\":\"DoNotMailRegistryLocation.cdm.json/DoNotMailRegistryLocation\",\"name\":\"DoNotContactRegistryId\"},\"LocationId\":{\"entity\":\"DoNotMailRegistryLocation.cdm.json/DoNotMailRegistryLocation\",\"name\":\"LocationId\"},\"DoNotMailRegistryLocationNote\":{\"entity\":\"DoNotMailRegistryLocation.cdm.json/DoNotMailRegistryLocation\",\"name\":\"DoNotMailRegistryLocationNote\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"DoNotMailRegistryLocation\",\"path\":\"DoNotMailRegistryLocation.cdm.json/DoNotMailRegistryLocation\"},\"description\":\"A location that is restricted by the Do Not Call Registry.\",\"primaryKey\":[\"DoNotContactRegistryId\",\"LocationId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"DoNotMailRegistryLocation.cdm.json/DoNotMailRegistryLocation\",\"name\":\"DoNotContactRegistryId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of an Do Not Contact Registry.\",\"isNullable\":false,\"name\":\"DoNotContactRegistryId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"DoNotMailRegistryLocation.cdm.json/DoNotMailRegistryLocation\",\"name\":\"LocationId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Location.\",\"isNullable\":false,\"name\":\"LocationId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"DoNotMailRegistryLocation.cdm.json/DoNotMailRegistryLocation\",\"name\":\"DoNotMailRegistryLocationNote\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"A note, comment or additional information regarding the Do Not Contact Registry Location.\",\"isNullable\":true,\"name\":\"DoNotMailRegistryLocationNote\"}]}}}",
+			"Description": "A location that is restricted by the Do Not Call Registry.",
+			"DisplayFolderInfo": "{\"name\":\"Party\",\"colorCode\":\"#7D0F6C\"}",
+			"PrimaryKeys": "DoNotContactRegistryId,LocationId",
+			"spark.sql.sources.provider": "csv",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"DoNotContactRegistryId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"LocationId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"DoNotMailRegistryLocationNote\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "1aa8c215-14e6-4576-9e35-b32ac5bde789",
+		"Description": "A location that is restricted by the Do Not Call Registry."
+	},
+	"type": "TABLE"
+}

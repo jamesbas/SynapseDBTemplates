@@ -1,0 +1,196 @@
+{
+	"name": "RelatedVendor",
+	"properties": {
+		"Name": "RelatedVendor",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "VendorId",
+					"Description": "The unique identifier of a Vendor.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "RelatedVendor.cdm.json/RelatedVendor",
+						"Name": "VendorId"
+					}
+				},
+				{
+					"Name": "RelatedVendorId",
+					"Description": "The unique identifier of a Vendor.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "RelatedVendor.cdm.json/RelatedVendor",
+						"Name": "RelatedVendorId"
+					}
+				},
+				{
+					"Name": "VendorRelationshipTypeId",
+					"Description": "The unique identifier of a Vendor relationship type.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "RelatedVendor.cdm.json/RelatedVendor",
+						"Name": "VendorRelationshipTypeId"
+					}
+				},
+				{
+					"Name": "PeriodStartDate",
+					"Description": "The period start date for which the associated Vendor relationship is valid or in-effect.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "RelatedVendor.cdm.json/RelatedVendor",
+						"Name": "PeriodStartDate"
+					}
+				},
+				{
+					"Name": "PeriodEndDate",
+					"Description": "The period end date for which the associated Vendor relationship is valid or in-effect.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "RelatedVendor.cdm.json/RelatedVendor",
+						"Name": "PeriodEndDate"
+					}
+				},
+				{
+					"Name": "VendorRelationshipNote",
+					"Description": "A note, comment or additional information regarding the Vendor relationship.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "RelatedVendor.cdm.json/RelatedVendor",
+						"Name": "VendorRelationshipNote"
+					}
+				}
+			],
+			"ColumnSetEntityName": "4a2ecba5-6326-42c4-92e0-3e83a2cc85f4",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/RelatedVendor",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/RelatedVendor",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"VendorId\":{\"entity\":\"RelatedVendor.cdm.json/RelatedVendor\",\"name\":\"VendorId\"},\"RelatedVendorId\":{\"entity\":\"RelatedVendor.cdm.json/RelatedVendor\",\"name\":\"RelatedVendorId\"},\"VendorRelationshipTypeId\":{\"entity\":\"RelatedVendor.cdm.json/RelatedVendor\",\"name\":\"VendorRelationshipTypeId\"},\"PeriodStartDate\":{\"entity\":\"RelatedVendor.cdm.json/RelatedVendor\",\"name\":\"PeriodStartDate\"},\"PeriodEndDate\":{\"entity\":\"RelatedVendor.cdm.json/RelatedVendor\",\"name\":\"PeriodEndDate\"},\"VendorRelationshipNote\":{\"entity\":\"RelatedVendor.cdm.json/RelatedVendor\",\"name\":\"VendorRelationshipNote\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"RelatedVendor\",\"path\":\"RelatedVendor.cdm.json/RelatedVendor\"},\"description\":\"A Vendor that has a relationship with another Vendor over the indicated period.\",\"primaryKey\":[\"VendorId\",\"RelatedVendorId\",\"VendorRelationshipTypeId\",\"PeriodStartDate\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"RelatedVendor.cdm.json/RelatedVendor\",\"name\":\"VendorId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a Vendor.\",\"isNullable\":false,\"name\":\"VendorId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"RelatedVendor.cdm.json/RelatedVendor\",\"name\":\"RelatedVendorId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a Vendor.\",\"isNullable\":false,\"name\":\"RelatedVendorId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"RelatedVendor.cdm.json/RelatedVendor\",\"name\":\"VendorRelationshipTypeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Vendor relationship type.\",\"isNullable\":false,\"name\":\"VendorRelationshipTypeId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"RelatedVendor.cdm.json/RelatedVendor\",\"name\":\"PeriodStartDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The period start date for which the associated Vendor relationship is valid or in-effect.\",\"isNullable\":false,\"name\":\"PeriodStartDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"RelatedVendor.cdm.json/RelatedVendor\",\"name\":\"PeriodEndDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The period end date for which the associated Vendor relationship is valid or in-effect.\",\"isNullable\":true,\"name\":\"PeriodEndDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"RelatedVendor.cdm.json/RelatedVendor\",\"name\":\"VendorRelationshipNote\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"A note, comment or additional information regarding the Vendor relationship.\",\"isNullable\":true,\"name\":\"VendorRelationshipNote\"}]}}}",
+			"Description": "A Vendor that has a relationship with another Vendor over the indicated period.",
+			"DisplayFolderInfo": "{\"name\":\"Vendor\",\"colorCode\":\"#1C508C\"}",
+			"PrimaryKeys": "VendorId,RelatedVendorId,VendorRelationshipTypeId,PeriodStartDate",
+			"spark.sql.sources.provider": "csv",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"VendorId\",\"type\":\"long\",\"nullable\":false,\"metadata\":{}},{\"name\":\"RelatedVendorId\",\"type\":\"long\",\"nullable\":false,\"metadata\":{}},{\"name\":\"VendorRelationshipTypeId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PeriodStartDate\",\"type\":\"date\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PeriodEndDate\",\"type\":\"date\",\"nullable\":true,\"metadata\":{}},{\"name\":\"VendorRelationshipNote\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "3dce9af7-0e18-49f9-b107-866d875fca11",
+		"Description": "A Vendor that has a relationship with another Vendor over the indicated period."
+	},
+	"type": "TABLE"
+}

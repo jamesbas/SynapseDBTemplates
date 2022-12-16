@@ -1,0 +1,196 @@
+{
+	"name": "PartyRole",
+	"properties": {
+		"Name": "PartyRole",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "PartyId",
+					"Description": "The unique identifier of a Party.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyRole.cdm.json/PartyRole",
+						"Name": "PartyId"
+					}
+				},
+				{
+					"Name": "RoleId",
+					"Description": "The unique identifier of a Role.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyRole.cdm.json/PartyRole",
+						"Name": "RoleId"
+					}
+				},
+				{
+					"Name": "PeriodStartTimestamp",
+					"Description": "The period start timestamp that the associated role is valid for performed by the associated Party.",
+					"OriginDataTypeName": {
+						"TypeName": "timestamp",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"TimestampFormat": "YYYY-MM-DD HH:MM:SS.fffffffff",
+							"HIVE_TYPE_STRING": "timestamp"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyRole.cdm.json/PartyRole",
+						"Name": "PeriodStartTimestamp"
+					}
+				},
+				{
+					"Name": "PeriodEndTimestamp",
+					"Description": "The period end timestamp that the associated role is valid for performed by the associated Party.",
+					"OriginDataTypeName": {
+						"TypeName": "timestamp",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"TimestampFormat": "YYYY-MM-DD HH:MM:SS.fffffffff",
+							"HIVE_TYPE_STRING": "timestamp"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyRole.cdm.json/PartyRole",
+						"Name": "PeriodEndTimestamp"
+					}
+				},
+				{
+					"Name": "GlobalServiceRelationshipNumber",
+					"Description": "The Global Service Relationship Number (GSRN) is part of the GS1 system of standards. It is used to identify the relationship between a service provider and a service recipient.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyRole.cdm.json/PartyRole",
+						"Name": "GlobalServiceRelationshipNumber"
+					}
+				},
+				{
+					"Name": "PartyRoleNote",
+					"Description": "A note, comment or additional information regarding the Party Role.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyRole.cdm.json/PartyRole",
+						"Name": "PartyRoleNote"
+					}
+				}
+			],
+			"ColumnSetEntityName": "f85f2547-5cff-4381-8b8f-644cf33af803",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/PartyRole",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/PartyRole",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"PartyId\":{\"entity\":\"PartyRole.cdm.json/PartyRole\",\"name\":\"PartyId\"},\"RoleId\":{\"entity\":\"PartyRole.cdm.json/PartyRole\",\"name\":\"RoleId\"},\"PeriodStartTimestamp\":{\"entity\":\"PartyRole.cdm.json/PartyRole\",\"name\":\"PeriodStartTimestamp\"},\"PeriodEndTimestamp\":{\"entity\":\"PartyRole.cdm.json/PartyRole\",\"name\":\"PeriodEndTimestamp\"},\"GlobalServiceRelationshipNumber\":{\"entity\":\"PartyRole.cdm.json/PartyRole\",\"name\":\"GlobalServiceRelationshipNumber\"},\"PartyRoleNote\":{\"entity\":\"PartyRole.cdm.json/PartyRole\",\"name\":\"PartyRoleNote\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"PartyRole\",\"path\":\"PartyRole.cdm.json/PartyRole\"},\"description\":\"The Role(s) performed by a party during the associated period.\\n\\nEx:\\nPARTY 1 = Bill Smith\\nROLE 1 = Customer\\nPERIOD START DATE = 04/15/92\\nPERIOD START DATE = 06/21/99\\nPARTY ROLE NOTE = Bill Smith was an active customer during the above period.\\n\\nPARTY 1 = Bill Smith\\nROLE 1 = Father\\nPERIOD START DATE = 04/15/92\\nPERIOD START DATE =  \\nPARTY ROLE NOTE = Bill Smith is a father for the period shown.\\n\\nPARTY 1 = Bill Smith\\nROLE 1 = Spouse\\nPERIOD START DATE = 04/15/92\\nPERIOD START DATE =  10/20/04\\nPARTY ROLE NOTE = Bill Smith was married during the period indicated.\",\"primaryKey\":[\"PartyId\",\"RoleId\",\"PeriodStartTimestamp\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyRole.cdm.json/PartyRole\",\"name\":\"PartyId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a Party.\",\"isNullable\":false,\"name\":\"PartyId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyRole.cdm.json/PartyRole\",\"name\":\"RoleId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Role.\",\"isNullable\":false,\"name\":\"RoleId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyRole.cdm.json/PartyRole\",\"name\":\"PeriodStartTimestamp\"},\"dataType\":\"timestamp\",\"description\":\"The period start timestamp that the associated role is valid for performed by the associated Party.\",\"isNullable\":false,\"name\":\"PeriodStartTimestamp\",\"timestampFormat\":\"YYYY-MM-DD HH:MM:SS.fffffffff\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyRole.cdm.json/PartyRole\",\"name\":\"PeriodEndTimestamp\"},\"dataType\":\"timestamp\",\"description\":\"The period end timestamp that the associated role is valid for performed by the associated Party.\",\"isNullable\":true,\"name\":\"PeriodEndTimestamp\",\"timestampFormat\":\"YYYY-MM-DD HH:MM:SS.fffffffff\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyRole.cdm.json/PartyRole\",\"name\":\"GlobalServiceRelationshipNumber\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"The Global Service Relationship Number (GSRN) is part of the GS1 system of standards. It is used to identify the relationship between a service provider and a service recipient.\",\"isNullable\":true,\"scale\":0,\"name\":\"GlobalServiceRelationshipNumber\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyRole.cdm.json/PartyRole\",\"name\":\"PartyRoleNote\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"A note, comment or additional information regarding the Party Role.\",\"isNullable\":true,\"name\":\"PartyRoleNote\"}]}}}",
+			"Description": "The Role(s) performed by a party during the associated period.\n\nEx:\nPARTY 1 = Bill Smith\nROLE 1 = Customer\nPERIOD START DATE = 04/15/92\nPERIOD START DATE = 06/21/99\nPARTY ROLE NOTE = Bill Smith was an active customer during the above period.\n\nPARTY 1 = Bill Smith\nROLE 1 = Father\nPERIOD START DATE = 04/15/92\nPERIOD START DATE =  \nPARTY ROLE NOTE = Bill Smith is a father for the period shown.\n\nPARTY 1 = Bill Smith\nROLE 1 = Spouse\nPERIOD START DATE = 04/15/92\nPERIOD START DATE =  10/20/04\nPARTY ROLE NOTE = Bill Smith was married during the period indicated.",
+			"DisplayFolderInfo": "{\"name\":\"Party\",\"colorCode\":\"#7D0F6C\"}",
+			"PrimaryKeys": "PartyId,RoleId,PeriodStartTimestamp",
+			"spark.sql.sources.provider": "csv",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"PartyId\",\"type\":\"long\",\"nullable\":false,\"metadata\":{}},{\"name\":\"RoleId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PeriodStartTimestamp\",\"type\":\"timestamp\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PeriodEndTimestamp\",\"type\":\"timestamp\",\"nullable\":true,\"metadata\":{}},{\"name\":\"GlobalServiceRelationshipNumber\",\"type\":\"decimal(18,0)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"PartyRoleNote\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "5f4d97cc-aa99-4a78-961b-842cea13e618",
+		"Description": "The Role(s) performed by a party during the associated period.\n\nEx:\nPARTY 1 = Bill Smith\nROLE 1 = Customer\nPERIOD START DATE = 04/15/92\nPERIOD START DATE = 06/21/99\nPARTY ROLE NOTE = Bill Smith was an active customer during the above period.\n\nPARTY 1 = Bill Smith\nROLE 1 = Father\nPERIOD START DATE = 04/15/92\nPERIOD START DATE =  \nPARTY ROLE NOTE = Bill Smith is a father for the period shown.\n\nPARTY 1 = Bill Smith\nROLE 1 = Spouse\nPERIOD START DATE = 04/15/92\nPERIOD START DATE =  10/20/04\nPARTY ROLE NOTE = Bill Smith was married during the period indicated."
+	},
+	"type": "TABLE"
+}

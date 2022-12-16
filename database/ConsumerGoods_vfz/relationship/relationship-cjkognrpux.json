@@ -1,0 +1,29 @@
+{
+	"name": "relationship-cjkognrpux",
+	"properties": {
+		"Name": "relationship-cjkognrpux",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "HouseholdRole",
+		"ToTableName": "HouseholdMemberRole",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "HouseholdRoleId",
+				"ToColumnName": "HouseholdRoleId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"HouseholdRole.cdm.json/HouseholdRole\",\"toEntity\":\"HouseholdMemberRole.cdm.json/HouseholdMemberRole\",\"joinPairs\":[{\"fromAttribute\":\"HouseholdRoleId\",\"toAttribute\":\"HouseholdRoleId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "679d8602-b4a1-4b39-a37d-48d29c7de3b2"
+	},
+	"type": "RELATIONSHIP"
+}

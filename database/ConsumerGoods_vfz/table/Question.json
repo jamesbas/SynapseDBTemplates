@@ -1,0 +1,175 @@
+{
+	"name": "Question",
+	"properties": {
+		"Name": "Question",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "QuestionId",
+					"Description": "The unique identifier of a Question.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Question.cdm.json/Question",
+						"Name": "QuestionId"
+					}
+				},
+				{
+					"Name": "QuestionText",
+					"Description": "The text of the question.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Question.cdm.json/Question",
+						"Name": "QuestionText"
+					}
+				},
+				{
+					"Name": "QuestionDescription",
+					"Description": "A description of the Question including the objectives to be attained as well as any assumptions pertaining to its response.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Question.cdm.json/Question",
+						"Name": "QuestionDescription"
+					}
+				},
+				{
+					"Name": "QuestionSubjectId",
+					"Description": "The unique identifier of a Question Subject.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Question.cdm.json/Question",
+						"Name": "QuestionSubjectId"
+					}
+				},
+				{
+					"Name": "QuestionCategoryId",
+					"Description": "The unique identifier of a question category.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Question.cdm.json/Question",
+						"Name": "QuestionCategoryId"
+					}
+				}
+			],
+			"ColumnSetEntityName": "479a2d8c-9663-4c1f-815c-ad49ecb25461",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/Question",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/Question",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"QuestionId\":{\"entity\":\"Question.cdm.json/Question\",\"name\":\"QuestionId\"},\"QuestionText\":{\"entity\":\"Question.cdm.json/Question\",\"name\":\"QuestionText\"},\"QuestionDescription\":{\"entity\":\"Question.cdm.json/Question\",\"name\":\"QuestionDescription\"},\"QuestionSubjectId\":{\"entity\":\"Question.cdm.json/Question\",\"name\":\"QuestionSubjectId\"},\"QuestionCategoryId\":{\"entity\":\"Question.cdm.json/Question\",\"name\":\"QuestionCategoryId\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"Question\",\"path\":\"Question.cdm.json/Question\"},\"description\":\"A specific Question or query that is asked upon a Survey(s).\\n\\nA Survey consists of one or more Questions.\\n\\nA Question may be included on one or more Surveys.\\n\\nEx:\\n- Are you satisfied with product 'x'?\\n- Rate your overall service experience?\\n- Would you purchase product 'y' again?\\n- How many products do you plan to purchase over the  next 2 years?\\n- Do you use Social Media?\\n- How frequently do you use social media?\\n- How likely is it that you would recommend our company/product/service to a friend or colleague? (Commonly used for NPS)\",\"primaryKey\":[\"QuestionId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Question.cdm.json/Question\",\"name\":\"QuestionId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Question.\",\"isNullable\":false,\"name\":\"QuestionId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Question.cdm.json/Question\",\"name\":\"QuestionText\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"The text of the question.\",\"isNullable\":true,\"name\":\"QuestionText\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Question.cdm.json/Question\",\"name\":\"QuestionDescription\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"A description of the Question including the objectives to be attained as well as any assumptions pertaining to its response.\",\"isNullable\":true,\"name\":\"QuestionDescription\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Question.cdm.json/Question\",\"name\":\"QuestionSubjectId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Question Subject.\",\"isNullable\":true,\"name\":\"QuestionSubjectId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Question.cdm.json/Question\",\"name\":\"QuestionCategoryId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a question category.\",\"isNullable\":true,\"name\":\"QuestionCategoryId\"}]}}}",
+			"Description": "A specific Question or query that is asked upon a Survey(s).\n\nA Survey consists of one or more Questions.\n\nA Question may be included on one or more Surveys.\n\nEx:\n- Are you satisfied with product 'x'?\n- Rate your overall service experience?\n- Would you purchase product 'y' again?\n- How many products do you plan to purchase over the  next 2 years?\n- Do you use Social Media?\n- How frequently do you use social media?\n- How likely is it that you would recommend our company/product/service to a friend or colleague? (Commonly used for NPS)",
+			"DisplayFolderInfo": "{\"name\":\"Customer Service & Contact Management\",\"colorCode\":\"#0064C1\"}",
+			"PrimaryKeys": "QuestionId",
+			"spark.sql.sources.provider": "csv",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"QuestionId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"QuestionText\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"QuestionDescription\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"QuestionSubjectId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"QuestionCategoryId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "f77f2bd4-55bb-451d-96b4-8fba8748f2ad",
+		"Description": "A specific Question or query that is asked upon a Survey(s).\n\nA Survey consists of one or more Questions.\n\nA Question may be included on one or more Surveys.\n\nEx:\n- Are you satisfied with product 'x'?\n- Rate your overall service experience?\n- Would you purchase product 'y' again?\n- How many products do you plan to purchase over the  next 2 years?\n- Do you use Social Media?\n- How frequently do you use social media?\n- How likely is it that you would recommend our company/product/service to a friend or colleague? (Commonly used for NPS)"
+	},
+	"type": "TABLE"
+}

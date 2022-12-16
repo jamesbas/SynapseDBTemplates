@@ -1,0 +1,157 @@
+{
+	"name": "RoyaltyOwed",
+	"properties": {
+		"Name": "RoyaltyOwed",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "FranchiseeId",
+					"Description": "The unique identifier of a Franchisee.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "RoyaltyOwed.cdm.json/RoyaltyOwed",
+						"Name": "FranchiseeId"
+					}
+				},
+				{
+					"Name": "PaymentTimestamp",
+					"Description": "The timestamp of the royalty payment.",
+					"OriginDataTypeName": {
+						"TypeName": "timestamp",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"TimestampFormat": "YYYY-MM-DD HH:MM:SS.fffffffff",
+							"HIVE_TYPE_STRING": "timestamp"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "RoyaltyOwed.cdm.json/RoyaltyOwed",
+						"Name": "PaymentTimestamp"
+					}
+				},
+				{
+					"Name": "RoyaltyOwedAmount",
+					"Description": "The amount of the royalty owed.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "RoyaltyOwed.cdm.json/RoyaltyOwed",
+						"Name": "RoyaltyOwedAmount"
+					}
+				},
+				{
+					"Name": "ContractId",
+					"Description": "The unique identifier of a Contract.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "RoyaltyOwed.cdm.json/RoyaltyOwed",
+						"Name": "ContractId"
+					}
+				}
+			],
+			"ColumnSetEntityName": "f72a0660-2570-433d-b3dc-a01799a0b6e6",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/RoyaltyOwed",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/RoyaltyOwed",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"FranchiseeId\":{\"entity\":\"RoyaltyOwed.cdm.json/RoyaltyOwed\",\"name\":\"FranchiseeId\"},\"PaymentTimestamp\":{\"entity\":\"RoyaltyOwed.cdm.json/RoyaltyOwed\",\"name\":\"PaymentTimestamp\"},\"RoyaltyOwedAmount\":{\"entity\":\"RoyaltyOwed.cdm.json/RoyaltyOwed\",\"name\":\"RoyaltyOwedAmount\"},\"ContractId\":{\"entity\":\"RoyaltyOwed.cdm.json/RoyaltyOwed\",\"name\":\"ContractId\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"RoyaltyOwed\",\"path\":\"RoyaltyOwed.cdm.json/RoyaltyOwed\"},\"description\":\"The outstanding royalty owed by the franchisee to the franchisor according to the terms of the franchise agreement.\",\"primaryKey\":[\"FranchiseeId\",\"PaymentTimestamp\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"RoyaltyOwed.cdm.json/RoyaltyOwed\",\"name\":\"FranchiseeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Franchisee.\",\"isNullable\":false,\"name\":\"FranchiseeId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"RoyaltyOwed.cdm.json/RoyaltyOwed\",\"name\":\"PaymentTimestamp\"},\"dataType\":\"timestamp\",\"description\":\"The timestamp of the royalty payment.\",\"isNullable\":false,\"name\":\"PaymentTimestamp\",\"timestampFormat\":\"YYYY-MM-DD HH:MM:SS.fffffffff\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"RoyaltyOwed.cdm.json/RoyaltyOwed\",\"name\":\"RoyaltyOwedAmount\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"The amount of the royalty owed.\",\"isNullable\":true,\"scale\":2,\"name\":\"RoyaltyOwedAmount\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"RoyaltyOwed.cdm.json/RoyaltyOwed\",\"name\":\"ContractId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Contract.\",\"isNullable\":true,\"name\":\"ContractId\"}]}}}",
+			"Description": "The outstanding royalty owed by the franchisee to the franchisor according to the terms of the franchise agreement.",
+			"DisplayFolderInfo": "{\"name\":\"Contract\",\"colorCode\":\"#000F5C\"}",
+			"PrimaryKeys": "FranchiseeId,PaymentTimestamp",
+			"spark.sql.sources.provider": "csv",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"FranchiseeId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PaymentTimestamp\",\"type\":\"timestamp\",\"nullable\":false,\"metadata\":{}},{\"name\":\"RoyaltyOwedAmount\",\"type\":\"decimal(18,2)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ContractId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "4d2a545b-2878-4903-a73a-4ff1a8ca208b",
+		"Description": "The outstanding royalty owed by the franchisee to the franchisor according to the terms of the franchise agreement."
+	},
+	"type": "TABLE"
+}

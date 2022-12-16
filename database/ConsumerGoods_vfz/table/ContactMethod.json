@@ -1,0 +1,137 @@
+{
+	"name": "ContactMethod",
+	"properties": {
+		"Name": "ContactMethod",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "ContactMethodId",
+					"Description": "The unique identifier of a Contact Method.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ContactMethod.cdm.json/ContactMethod",
+						"Name": "ContactMethodId"
+					}
+				},
+				{
+					"Name": "ContactMethodName",
+					"Description": "The name of the Contact Method.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 256,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ContactMethod.cdm.json/ContactMethod",
+						"Name": "ContactMethodName"
+					}
+				},
+				{
+					"Name": "ContactMethodDescription",
+					"Description": "The description of the Contact Method.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ContactMethod.cdm.json/ContactMethod",
+						"Name": "ContactMethodDescription"
+					}
+				}
+			],
+			"ColumnSetEntityName": "740c8245-e295-4565-acf3-5bf716c3107d",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/ContactMethod",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/ContactMethod",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"ContactMethodId\":{\"entity\":\"ContactMethod.cdm.json/ContactMethod\",\"name\":\"ContactMethodId\"},\"ContactMethodName\":{\"entity\":\"ContactMethod.cdm.json/ContactMethod\",\"name\":\"ContactMethodName\"},\"ContactMethodDescription\":{\"entity\":\"ContactMethod.cdm.json/ContactMethod\",\"name\":\"ContactMethodDescription\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"ContactMethod\",\"path\":\"ContactMethod.cdm.json/ContactMethod\"},\"description\":\"The means by which contact is initiated.\\n\\nEx:\\n- Telephone\\n- Email\\n- Mail to Location\\n- All\",\"primaryKey\":[\"ContactMethodId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ContactMethod.cdm.json/ContactMethod\",\"name\":\"ContactMethodId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Contact Method.\",\"isNullable\":false,\"name\":\"ContactMethodId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ContactMethod.cdm.json/ContactMethod\",\"name\":\"ContactMethodName\"},\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"The name of the Contact Method.\",\"isNullable\":true,\"name\":\"ContactMethodName\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ContactMethod.cdm.json/ContactMethod\",\"name\":\"ContactMethodDescription\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"The description of the Contact Method.\",\"isNullable\":true,\"name\":\"ContactMethodDescription\"}]}}}",
+			"Description": "The means by which contact is initiated.\n\nEx:\n- Telephone\n- Email\n- Mail to Location\n- All",
+			"DisplayFolderInfo": "{\"name\":\"Party\",\"colorCode\":\"#7D0F6C\"}",
+			"PrimaryKeys": "ContactMethodId",
+			"spark.sql.sources.provider": "csv",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"ContactMethodId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"ContactMethodName\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ContactMethodDescription\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate"
+		},
+		"ObjectVersion": 2,
+		"ObjectId": "37b65453-b81d-406f-b770-18c9d612b46d",
+		"Description": "The means by which contact is initiated.\n\nEx:\n- Telephone\n- Email\n- Mail to Location\n- All"
+	},
+	"type": "TABLE"
+}

@@ -1,0 +1,29 @@
+{
+	"name": "relationship-wswhymvsdg",
+	"properties": {
+		"Name": "relationship-wswhymvsdg",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "Survey",
+		"ToTableName": "SurveyQuestion",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "SurveyId",
+				"ToColumnName": "SurveyId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"Survey.cdm.json/Survey\",\"toEntity\":\"SurveyQuestion.cdm.json/SurveyQuestion\",\"joinPairs\":[{\"fromAttribute\":\"SurveyId\",\"toAttribute\":\"SurveyId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "d7feacb5-148b-4a07-9fe0-8c7ba017462d"
+	},
+	"type": "RELATIONSHIP"
+}

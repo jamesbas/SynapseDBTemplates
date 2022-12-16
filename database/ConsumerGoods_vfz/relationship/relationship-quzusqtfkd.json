@@ -1,0 +1,29 @@
+{
+	"name": "relationship-quzusqtfkd",
+	"properties": {
+		"Name": "relationship-quzusqtfkd",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "Franchisee",
+		"ToTableName": "RoyaltyOwed",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "FranchiseeId",
+				"ToColumnName": "FranchiseeId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"Franchisee.cdm.json/Franchisee\",\"toEntity\":\"RoyaltyOwed.cdm.json/RoyaltyOwed\",\"joinPairs\":[{\"fromAttribute\":\"FranchiseeId\",\"toAttribute\":\"FranchiseeId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "b06092cb-cb04-4cb4-92c2-8a9809ed1452"
+	},
+	"type": "RELATIONSHIP"
+}

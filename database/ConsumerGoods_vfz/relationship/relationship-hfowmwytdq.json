@@ -1,0 +1,29 @@
+{
+	"name": "relationship-hfowmwytdq",
+	"properties": {
+		"Name": "relationship-hfowmwytdq",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "HouseholdType",
+		"ToTableName": "Household",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "HouseholdTypeId",
+				"ToColumnName": "HouseholdTypeId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"HouseholdType.cdm.json/HouseholdType\",\"toEntity\":\"Household.cdm.json/Household\",\"joinPairs\":[{\"fromAttribute\":\"HouseholdTypeId\",\"toAttribute\":\"HouseholdTypeId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "5967d04b-04e2-42c4-9425-ac53dfbd55d2"
+	},
+	"type": "RELATIONSHIP"
+}

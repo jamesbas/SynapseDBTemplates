@@ -1,0 +1,29 @@
+{
+	"name": "relationship-hpzzjbgnsp",
+	"properties": {
+		"Name": "relationship-hpzzjbgnsp",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "EducationAttainmentLevel",
+		"ToTableName": "PartyEducation",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "EducationAttainmentLevelId",
+				"ToColumnName": "EducationAttainmentLevelId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"EducationAttainmentLevel.cdm.json/EducationAttainmentLevel\",\"toEntity\":\"PartyEducation.cdm.json/PartyEducation\",\"joinPairs\":[{\"fromAttribute\":\"EducationAttainmentLevelId\",\"toAttribute\":\"EducationAttainmentLevelId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "ac687356-737a-499d-b3ae-d6d4a9568757"
+	},
+	"type": "RELATIONSHIP"
+}

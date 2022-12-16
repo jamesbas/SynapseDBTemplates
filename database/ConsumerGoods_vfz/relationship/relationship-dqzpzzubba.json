@@ -1,0 +1,29 @@
+{
+	"name": "relationship-dqzpzzubba",
+	"properties": {
+		"Name": "relationship-dqzpzzubba",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "Contract",
+		"ToTableName": "SaleOfGoodsOnConsignmentAgreement",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "ContractId",
+				"ToColumnName": "ContractId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"Contract.cdm.json/Contract\",\"toEntity\":\"SaleOfGoodsOnConsignmentAgreement.cdm.json/SaleOfGoodsOnConsignmentAgreement\",\"joinPairs\":[{\"fromAttribute\":\"ContractId\",\"toAttribute\":\"ContractId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "6220c032-a652-4a59-86ef-a9e271080deb"
+	},
+	"type": "RELATIONSHIP"
+}

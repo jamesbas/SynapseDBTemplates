@@ -1,0 +1,29 @@
+{
+	"name": "relationship-uzmaxaarso",
+	"properties": {
+		"Name": "relationship-uzmaxaarso",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "DoNotContactRegistry",
+		"ToTableName": "DoNotEmailRegistryEmail",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "DoNotContactRegistryId",
+				"ToColumnName": "DoNotContactRegistryId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"DoNotContactRegistry.cdm.json/DoNotContactRegistry\",\"toEntity\":\"DoNotEmailRegistryEmail.cdm.json/DoNotEmailRegistryEmail\",\"joinPairs\":[{\"fromAttribute\":\"DoNotContactRegistryId\",\"toAttribute\":\"DoNotContactRegistryId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "a06e1801-ad94-4e4f-bd7e-f66b82dc220e"
+	},
+	"type": "RELATIONSHIP"
+}

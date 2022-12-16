@@ -1,0 +1,29 @@
+{
+	"name": "relationship-obnvuvgqct",
+	"properties": {
+		"Name": "relationship-obnvuvgqct",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "IdentificationComponentType",
+		"ToTableName": "IdentificationComponent",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "IdentificationComponentTypeId",
+				"ToColumnName": "IdentificationComponentTypeId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"IdentificationComponentType.cdm.json/IdentificationComponentType\",\"toEntity\":\"IdentificationComponent.cdm.json/IdentificationComponent\",\"joinPairs\":[{\"fromAttribute\":\"IdentificationComponentTypeId\",\"toAttribute\":\"IdentificationComponentTypeId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "45b7b8b0-4d8c-4e3c-b597-b1fbe50bc1b0"
+	},
+	"type": "RELATIONSHIP"
+}

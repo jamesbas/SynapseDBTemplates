@@ -1,0 +1,29 @@
+{
+	"name": "relationship-qkezaegrmk",
+	"properties": {
+		"Name": "relationship-qkezaegrmk",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "ActivityType",
+		"ToTableName": "Activity",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "ActivityTypeId",
+				"ToColumnName": "ActivityTypeId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"ActivityType.cdm.json/ActivityType\",\"toEntity\":\"Activity.cdm.json/Activity\",\"joinPairs\":[{\"fromAttribute\":\"ActivityTypeId\",\"toAttribute\":\"ActivityTypeId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "50564613-c830-4493-9ac7-adc21b0fdbbc"
+	},
+	"type": "RELATIONSHIP"
+}

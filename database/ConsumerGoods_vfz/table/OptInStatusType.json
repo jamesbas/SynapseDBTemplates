@@ -1,0 +1,137 @@
+{
+	"name": "OptInStatusType",
+	"properties": {
+		"Name": "OptInStatusType",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "OptInStatusTypeId",
+					"Description": "The unique identifier of an Opt-In Status Type.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "OptInStatusType.cdm.json/OptInStatusType",
+						"Name": "OptInStatusTypeId"
+					}
+				},
+				{
+					"Name": "OptInStatusTypeName",
+					"Description": "The name of the Opt-In Status Type.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 256,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "OptInStatusType.cdm.json/OptInStatusType",
+						"Name": "OptInStatusTypeName"
+					}
+				},
+				{
+					"Name": "OptInStatusTypeDescription",
+					"Description": "The description of the Opt-In Status Type.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "OptInStatusType.cdm.json/OptInStatusType",
+						"Name": "OptInStatusTypeDescription"
+					}
+				}
+			],
+			"ColumnSetEntityName": "e31e9e22-41e3-4ce0-8038-c4382437fc8a",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/OptInStatusType",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/OptInStatusType",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"OptInStatusTypeId\":{\"entity\":\"OptInStatusType.cdm.json/OptInStatusType\",\"name\":\"OptInStatusTypeId\"},\"OptInStatusTypeName\":{\"entity\":\"OptInStatusType.cdm.json/OptInStatusType\",\"name\":\"OptInStatusTypeName\"},\"OptInStatusTypeDescription\":{\"entity\":\"OptInStatusType.cdm.json/OptInStatusType\",\"name\":\"OptInStatusTypeDescription\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"OptInStatusType\",\"path\":\"OptInStatusType.cdm.json/OptInStatusType\"},\"description\":\"A type of Opt-in status that may be associated with contact.\\n\\nEx:\\n- Opt-In (default value)\\n- Opt-In (user selection)\\n- Opt-Out (default value)\\n- Opt-Out (user selection)\",\"primaryKey\":[\"OptInStatusTypeId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"OptInStatusType.cdm.json/OptInStatusType\",\"name\":\"OptInStatusTypeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of an Opt-In Status Type.\",\"isNullable\":false,\"name\":\"OptInStatusTypeId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"OptInStatusType.cdm.json/OptInStatusType\",\"name\":\"OptInStatusTypeName\"},\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"The name of the Opt-In Status Type.\",\"isNullable\":true,\"name\":\"OptInStatusTypeName\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"OptInStatusType.cdm.json/OptInStatusType\",\"name\":\"OptInStatusTypeDescription\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"The description of the Opt-In Status Type.\",\"isNullable\":true,\"name\":\"OptInStatusTypeDescription\"}]}}}",
+			"Description": "A type of Opt-in status that may be associated with contact.\n\nEx:\n- Opt-In (default value)\n- Opt-In (user selection)\n- Opt-Out (default value)\n- Opt-Out (user selection)",
+			"DisplayFolderInfo": "{\"name\":\"Party\",\"colorCode\":\"#7D0F6C\"}",
+			"PrimaryKeys": "OptInStatusTypeId",
+			"spark.sql.sources.provider": "csv",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"OptInStatusTypeId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"OptInStatusTypeName\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"OptInStatusTypeDescription\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "f8d8cea6-346e-45a7-8fd4-12c280bf68ad",
+		"Description": "A type of Opt-in status that may be associated with contact.\n\nEx:\n- Opt-In (default value)\n- Opt-In (user selection)\n- Opt-Out (default value)\n- Opt-Out (user selection)"
+	},
+	"type": "TABLE"
+}

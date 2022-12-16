@@ -1,0 +1,29 @@
+{
+	"name": "relationship-nlbgutqyof",
+	"properties": {
+		"Name": "relationship-nlbgutqyof",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "NameSuffix",
+		"ToTableName": "PartyNameSuffix",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "NameSuffixId",
+				"ToColumnName": "NameSuffixId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"NameSuffix.cdm.json/NameSuffix\",\"toEntity\":\"PartyNameSuffix.cdm.json/PartyNameSuffix\",\"joinPairs\":[{\"fromAttribute\":\"NameSuffixId\",\"toAttribute\":\"NameSuffixId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "4eac6a39-1c6c-42e0-85ff-6e0ca615872e"
+	},
+	"type": "RELATIONSHIP"
+}

@@ -1,0 +1,29 @@
+{
+	"name": "relationship-jguozyprvm",
+	"properties": {
+		"Name": "relationship-jguozyprvm",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "LegalEntityParty",
+		"ToTableName": "PartyCountryTaxStatus",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "PartyId",
+				"ToColumnName": "PartyId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"LegalEntityParty.cdm.json/LegalEntityParty\",\"toEntity\":\"PartyCountryTaxStatus.cdm.json/PartyCountryTaxStatus\",\"joinPairs\":[{\"fromAttribute\":\"PartyId\",\"toAttribute\":\"PartyId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 2,
+		"ObjectId": "be522c6d-33b5-4c34-baf6-12cf81f20ec9"
+	},
+	"type": "RELATIONSHIP"
+}

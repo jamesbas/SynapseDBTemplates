@@ -1,0 +1,29 @@
+{
+	"name": "relationship-buttgesfrs",
+	"properties": {
+		"Name": "relationship-buttgesfrs",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "Location",
+		"ToTableName": "ScheduledLearningEvent",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "LocationId",
+				"ToColumnName": "LocationId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"Location.cdm.json/Location\",\"toEntity\":\"ScheduledLearningEvent.cdm.json/ScheduledLearningEvent\",\"joinPairs\":[{\"fromAttribute\":\"LocationId\",\"toAttribute\":\"LocationId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "09b782e0-f31a-4eb8-8de6-390f2ce0e0b9"
+	},
+	"type": "RELATIONSHIP"
+}

@@ -1,0 +1,234 @@
+{
+	"name": "PartySurveyQuestionResponse",
+	"properties": {
+		"Name": "PartySurveyQuestionResponse",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "PartyId",
+					"Description": "The unique identifier of a Party.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartySurveyQuestionResponse.cdm.json/PartySurveyQuestionResponse",
+						"Name": "PartyId"
+					}
+				},
+				{
+					"Name": "SurveyId",
+					"Description": "The unique identifier of a Survey.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartySurveyQuestionResponse.cdm.json/PartySurveyQuestionResponse",
+						"Name": "SurveyId"
+					}
+				},
+				{
+					"Name": "SurveyProvidedTimestamp",
+					"Description": "The timestamp that the survey was provided to the party.",
+					"OriginDataTypeName": {
+						"TypeName": "timestamp",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"TimestampFormat": "YYYY-MM-DD HH:MM:SS.fffffffff",
+							"HIVE_TYPE_STRING": "timestamp"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartySurveyQuestionResponse.cdm.json/PartySurveyQuestionResponse",
+						"Name": "SurveyProvidedTimestamp"
+					}
+				},
+				{
+					"Name": "QuestionId",
+					"Description": "The unique identifier of a Question.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartySurveyQuestionResponse.cdm.json/PartySurveyQuestionResponse",
+						"Name": "QuestionId"
+					}
+				},
+				{
+					"Name": "ResponseTimestamp",
+					"Description": "The timestamp of the response to the Survey Question.",
+					"OriginDataTypeName": {
+						"TypeName": "timestamp",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"TimestampFormat": "YYYY-MM-DD HH:MM:SS.fffffffff",
+							"HIVE_TYPE_STRING": "timestamp"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartySurveyQuestionResponse.cdm.json/PartySurveyQuestionResponse",
+						"Name": "ResponseTimestamp"
+					}
+				},
+				{
+					"Name": "QuestionResponseText",
+					"Description": "An Individual response to the associated question that cannot be addressed by a simple Question Response Rating and requires some amount of text that must be individually interpreted.\n\nAn example is a statement made in response to a Question as opposed to a standard \"Yes/No\" or scaled rating.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartySurveyQuestionResponse.cdm.json/PartySurveyQuestionResponse",
+						"Name": "QuestionResponseText"
+					}
+				},
+				{
+					"Name": "QuestionResponseRatingId",
+					"Description": "The unique identifier of a Question Response Rating.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartySurveyQuestionResponse.cdm.json/PartySurveyQuestionResponse",
+						"Name": "QuestionResponseRatingId"
+					}
+				},
+				{
+					"Name": "CommunicationId",
+					"Description": "The unique identifier of a service request/contact Communication.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartySurveyQuestionResponse.cdm.json/PartySurveyQuestionResponse",
+						"Name": "CommunicationId"
+					}
+				}
+			],
+			"ColumnSetEntityName": "df540770-eee2-4c85-b615-7a8a629caf8b",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/PartySurveyQuestionResponse",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/PartySurveyQuestionResponse",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"PartyId\":{\"entity\":\"PartySurveyQuestionResponse.cdm.json/PartySurveyQuestionResponse\",\"name\":\"PartyId\"},\"SurveyId\":{\"entity\":\"PartySurveyQuestionResponse.cdm.json/PartySurveyQuestionResponse\",\"name\":\"SurveyId\"},\"SurveyProvidedTimestamp\":{\"entity\":\"PartySurveyQuestionResponse.cdm.json/PartySurveyQuestionResponse\",\"name\":\"SurveyProvidedTimestamp\"},\"QuestionId\":{\"entity\":\"PartySurveyQuestionResponse.cdm.json/PartySurveyQuestionResponse\",\"name\":\"QuestionId\"},\"ResponseTimestamp\":{\"entity\":\"PartySurveyQuestionResponse.cdm.json/PartySurveyQuestionResponse\",\"name\":\"ResponseTimestamp\"},\"QuestionResponseText\":{\"entity\":\"PartySurveyQuestionResponse.cdm.json/PartySurveyQuestionResponse\",\"name\":\"QuestionResponseText\"},\"QuestionResponseRatingId\":{\"entity\":\"PartySurveyQuestionResponse.cdm.json/PartySurveyQuestionResponse\",\"name\":\"QuestionResponseRatingId\"},\"CommunicationId\":{\"entity\":\"PartySurveyQuestionResponse.cdm.json/PartySurveyQuestionResponse\",\"name\":\"CommunicationId\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"PartySurveyQuestionResponse\",\"path\":\"PartySurveyQuestionResponse.cdm.json/PartySurveyQuestionResponse\"},\"description\":\"The response by the party to the survey question.\",\"primaryKey\":[\"PartyId\",\"SurveyId\",\"SurveyProvidedTimestamp\",\"QuestionId\",\"ResponseTimestamp\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartySurveyQuestionResponse.cdm.json/PartySurveyQuestionResponse\",\"name\":\"PartyId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a Party.\",\"isNullable\":false,\"name\":\"PartyId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartySurveyQuestionResponse.cdm.json/PartySurveyQuestionResponse\",\"name\":\"SurveyId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Survey.\",\"isNullable\":false,\"name\":\"SurveyId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartySurveyQuestionResponse.cdm.json/PartySurveyQuestionResponse\",\"name\":\"SurveyProvidedTimestamp\"},\"dataType\":\"timestamp\",\"description\":\"The timestamp that the survey was provided to the party.\",\"isNullable\":false,\"name\":\"SurveyProvidedTimestamp\",\"timestampFormat\":\"YYYY-MM-DD HH:MM:SS.fffffffff\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartySurveyQuestionResponse.cdm.json/PartySurveyQuestionResponse\",\"name\":\"QuestionId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Question.\",\"isNullable\":false,\"name\":\"QuestionId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartySurveyQuestionResponse.cdm.json/PartySurveyQuestionResponse\",\"name\":\"ResponseTimestamp\"},\"dataType\":\"timestamp\",\"description\":\"The timestamp of the response to the Survey Question.\",\"isNullable\":false,\"name\":\"ResponseTimestamp\",\"timestampFormat\":\"YYYY-MM-DD HH:MM:SS.fffffffff\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartySurveyQuestionResponse.cdm.json/PartySurveyQuestionResponse\",\"name\":\"QuestionResponseText\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"An Individual response to the associated question that cannot be addressed by a simple Question Response Rating and requires some amount of text that must be individually interpreted.\\n\\nAn example is a statement made in response to a Question as opposed to a standard \\\"Yes/No\\\" or scaled rating.\",\"isNullable\":true,\"name\":\"QuestionResponseText\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartySurveyQuestionResponse.cdm.json/PartySurveyQuestionResponse\",\"name\":\"QuestionResponseRatingId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Question Response Rating.\",\"isNullable\":true,\"name\":\"QuestionResponseRatingId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartySurveyQuestionResponse.cdm.json/PartySurveyQuestionResponse\",\"name\":\"CommunicationId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a service request/contact Communication.\",\"isNullable\":true,\"name\":\"CommunicationId\"}]}}}",
+			"Description": "The response by the party to the survey question.",
+			"DisplayFolderInfo": "{\"name\":\"Party\",\"colorCode\":\"#7D0F6C\"}",
+			"PrimaryKeys": "PartyId,SurveyId,SurveyProvidedTimestamp,QuestionId,ResponseTimestamp",
+			"spark.sql.sources.provider": "csv",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"PartyId\",\"type\":\"long\",\"nullable\":false,\"metadata\":{}},{\"name\":\"SurveyId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"SurveyProvidedTimestamp\",\"type\":\"timestamp\",\"nullable\":false,\"metadata\":{}},{\"name\":\"QuestionId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"ResponseTimestamp\",\"type\":\"timestamp\",\"nullable\":false,\"metadata\":{}},{\"name\":\"QuestionResponseText\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"QuestionResponseRatingId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"CommunicationId\",\"type\":\"long\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "bf094251-4a9c-4f8f-a574-ed03b526614c",
+		"Description": "The response by the party to the survey question."
+	},
+	"type": "TABLE"
+}

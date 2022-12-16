@@ -1,0 +1,156 @@
+{
+	"name": "Role",
+	"properties": {
+		"Name": "Role",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "RoleId",
+					"Description": "The unique identifier of a Role.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Role.cdm.json/Role",
+						"Name": "RoleId"
+					}
+				},
+				{
+					"Name": "RoleName",
+					"Description": "The name of a Role.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 256,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Role.cdm.json/Role",
+						"Name": "RoleName"
+					}
+				},
+				{
+					"Name": "RoleDescription",
+					"Description": "The description of a Role.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Role.cdm.json/Role",
+						"Name": "RoleDescription"
+					}
+				},
+				{
+					"Name": "RoleTypeId",
+					"Description": "The unique identifier of a Role Type.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Role.cdm.json/Role",
+						"Name": "RoleTypeId"
+					}
+				}
+			],
+			"ColumnSetEntityName": "e2184347-bada-4af6-9b3f-9c7fa0bb2f04",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/Role",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/Role",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"RoleId\":{\"entity\":\"Role.cdm.json/Role\",\"name\":\"RoleId\"},\"RoleName\":{\"entity\":\"Role.cdm.json/Role\",\"name\":\"RoleName\"},\"RoleDescription\":{\"entity\":\"Role.cdm.json/Role\",\"name\":\"RoleDescription\"},\"RoleTypeId\":{\"entity\":\"Role.cdm.json/Role\",\"name\":\"RoleTypeId\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"Role\",\"path\":\"Role.cdm.json/Role\"},\"description\":\"A specific role that a Party may perform.\\n\\nEx:\\n\\nINDIVIDUAL\\n- Employee\\n- Contractor\\n- Dependent\\n- Shareholder\\n- Spouse\\n- Customer\\n- Bill-To Customer\\n- Ship-To Customer\\n- Machine Operator\\n- Master Planner\\n- Scheduler\\n- Inventory Clerk\\n\\nORGANIZATION\\n- Employer\\n- Distributor\\n- Association\\n- Legal Entity Customer\\n- Government Organization\\n- Security Trading Organization\\n- Vendor\",\"primaryKey\":[\"RoleId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Role.cdm.json/Role\",\"name\":\"RoleId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Role.\",\"isNullable\":false,\"name\":\"RoleId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Role.cdm.json/Role\",\"name\":\"RoleName\"},\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"The name of a Role.\",\"isNullable\":true,\"name\":\"RoleName\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Role.cdm.json/Role\",\"name\":\"RoleDescription\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"The description of a Role.\",\"isNullable\":true,\"name\":\"RoleDescription\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Role.cdm.json/Role\",\"name\":\"RoleTypeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Role Type.\",\"isNullable\":true,\"name\":\"RoleTypeId\"}]}}}",
+			"Description": "A specific role that a Party may perform.\n\nEx:\n\nINDIVIDUAL\n- Employee\n- Contractor\n- Dependent\n- Shareholder\n- Spouse\n- Customer\n- Bill-To Customer\n- Ship-To Customer\n- Machine Operator\n- Master Planner\n- Scheduler\n- Inventory Clerk\n\nORGANIZATION\n- Employer\n- Distributor\n- Association\n- Legal Entity Customer\n- Government Organization\n- Security Trading Organization\n- Vendor",
+			"DisplayFolderInfo": "{\"name\":\"Party\",\"colorCode\":\"#7D0F6C\"}",
+			"PrimaryKeys": "RoleId",
+			"spark.sql.sources.provider": "csv",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"RoleId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"RoleName\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"RoleDescription\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"RoleTypeId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "b9d2f494-a2e2-46e2-a485-f7dadbb3283d",
+		"Description": "A specific role that a Party may perform.\n\nEx:\n\nINDIVIDUAL\n- Employee\n- Contractor\n- Dependent\n- Shareholder\n- Spouse\n- Customer\n- Bill-To Customer\n- Ship-To Customer\n- Machine Operator\n- Master Planner\n- Scheduler\n- Inventory Clerk\n\nORGANIZATION\n- Employer\n- Distributor\n- Association\n- Legal Entity Customer\n- Government Organization\n- Security Trading Organization\n- Vendor"
+	},
+	"type": "TABLE"
+}

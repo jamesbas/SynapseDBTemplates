@@ -1,0 +1,29 @@
+{
+	"name": "relationship-femgsssqto",
+	"properties": {
+		"Name": "relationship-femgsssqto",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "NaicsIndustryGroup",
+		"ToTableName": "NaicsIndustry",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "NaicsIndustryGroupCode",
+				"ToColumnName": "NaicsIndustryGroupCode"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"NaicsIndustryGroup.cdm.json/NaicsIndustryGroup\",\"toEntity\":\"NaicsIndustry.cdm.json/NaicsIndustry\",\"joinPairs\":[{\"fromAttribute\":\"NaicsIndustryGroupCode\",\"toAttribute\":\"NaicsIndustryGroupCode\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "64907714-9be6-497f-a5ff-078549cb806c"
+	},
+	"type": "RELATIONSHIP"
+}

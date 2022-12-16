@@ -1,0 +1,29 @@
+{
+	"name": "relationship-beukapgkco",
+	"properties": {
+		"Name": "relationship-beukapgkco",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "HouseholdMember",
+		"ToTableName": "HouseholdMemberRole",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "HouseholdId",
+				"ToColumnName": "HouseholdId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"HouseholdMember.cdm.json/HouseholdMember\",\"toEntity\":\"HouseholdMemberRole.cdm.json/HouseholdMemberRole\",\"joinPairs\":[{\"fromAttribute\":\"HouseholdId\",\"toAttribute\":\"HouseholdId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "31d80e34-7fcb-480a-a691-88e0e6bf9fe5"
+	},
+	"type": "RELATIONSHIP"
+}

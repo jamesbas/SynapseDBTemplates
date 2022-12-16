@@ -1,0 +1,29 @@
+{
+	"name": "relationship-ffvzpcknau",
+	"properties": {
+		"Name": "relationship-ffvzpcknau",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "EmploymentClassification",
+		"ToTableName": "PartyEmployment",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "EmploymentClassificationId",
+				"ToColumnName": "EmploymentClassificationId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"EmploymentClassification.cdm.json/EmploymentClassification\",\"toEntity\":\"PartyEmployment.cdm.json/PartyEmployment\",\"joinPairs\":[{\"fromAttribute\":\"EmploymentClassificationId\",\"toAttribute\":\"EmploymentClassificationId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "3d0e0e8b-a9a5-4517-a123-f9ca8aae078e"
+	},
+	"type": "RELATIONSHIP"
+}

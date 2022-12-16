@@ -1,0 +1,194 @@
+{
+	"name": "PartyNameComponent",
+	"properties": {
+		"Name": "PartyNameComponent",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "PartyId",
+					"Description": "The unique identifier of a Party.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyNameComponent.cdm.json/PartyNameComponent",
+						"Name": "PartyId"
+					}
+				},
+				{
+					"Name": "PartyNameId",
+					"Description": "The unique identifier of a Party Name.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyNameComponent.cdm.json/PartyNameComponent",
+						"Name": "PartyNameId"
+					}
+				},
+				{
+					"Name": "NameComponentOrderNumber",
+					"Description": "The order number associated with the customer name component.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyNameComponent.cdm.json/PartyNameComponent",
+						"Name": "NameComponentOrderNumber"
+					}
+				},
+				{
+					"Name": "NameComponent",
+					"Description": "The component name.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 256,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyNameComponent.cdm.json/PartyNameComponent",
+						"Name": "NameComponent"
+					}
+				},
+				{
+					"Name": "NameComponentTypeId",
+					"Description": "The unique identifier of a Name Component Type.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyNameComponent.cdm.json/PartyNameComponent",
+						"Name": "NameComponentTypeId"
+					}
+				},
+				{
+					"Name": "NameComponentNote",
+					"Description": "A note, comment or additional information regarding the component name.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyNameComponent.cdm.json/PartyNameComponent",
+						"Name": "NameComponentNote"
+					}
+				}
+			],
+			"ColumnSetEntityName": "ea94d2b9-047e-491e-9625-97f7070b723f",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/PartyNameComponent",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/PartyNameComponent",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"PartyId\":{\"entity\":\"PartyNameComponent.cdm.json/PartyNameComponent\",\"name\":\"PartyId\"},\"PartyNameId\":{\"entity\":\"PartyNameComponent.cdm.json/PartyNameComponent\",\"name\":\"PartyNameId\"},\"NameComponentOrderNumber\":{\"entity\":\"PartyNameComponent.cdm.json/PartyNameComponent\",\"name\":\"NameComponentOrderNumber\"},\"NameComponent\":{\"entity\":\"PartyNameComponent.cdm.json/PartyNameComponent\",\"name\":\"NameComponent\"},\"NameComponentTypeId\":{\"entity\":\"PartyNameComponent.cdm.json/PartyNameComponent\",\"name\":\"NameComponentTypeId\"},\"NameComponentNote\":{\"entity\":\"PartyNameComponent.cdm.json/PartyNameComponent\",\"name\":\"NameComponentNote\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"PartyNameComponent\",\"path\":\"PartyNameComponent.cdm.json/PartyNameComponent\"},\"description\":\"The individual name components of the party name and their ordering in the name.\",\"primaryKey\":[\"PartyId\",\"PartyNameId\",\"NameComponentOrderNumber\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyNameComponent.cdm.json/PartyNameComponent\",\"name\":\"PartyId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a Party.\",\"isNullable\":false,\"name\":\"PartyId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyNameComponent.cdm.json/PartyNameComponent\",\"name\":\"PartyNameId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Party Name.\",\"isNullable\":false,\"name\":\"PartyNameId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyNameComponent.cdm.json/PartyNameComponent\",\"name\":\"NameComponentOrderNumber\"},\"dataType\":\"integer\",\"description\":\"The order number associated with the customer name component.\",\"isNullable\":false,\"name\":\"NameComponentOrderNumber\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyNameComponent.cdm.json/PartyNameComponent\",\"name\":\"NameComponent\"},\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"The component name.\",\"isNullable\":true,\"name\":\"NameComponent\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyNameComponent.cdm.json/PartyNameComponent\",\"name\":\"NameComponentTypeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Name Component Type.\",\"isNullable\":false,\"name\":\"NameComponentTypeId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyNameComponent.cdm.json/PartyNameComponent\",\"name\":\"NameComponentNote\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"A note, comment or additional information regarding the component name.\",\"isNullable\":true,\"name\":\"NameComponentNote\"}]}}}",
+			"Description": "The individual name components of the party name and their ordering in the name.",
+			"DisplayFolderInfo": "{\"name\":\"Party\",\"colorCode\":\"#7D0F6C\"}",
+			"PrimaryKeys": "PartyId,PartyNameId,NameComponentOrderNumber",
+			"spark.sql.sources.provider": "csv",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"PartyId\",\"type\":\"long\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PartyNameId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"NameComponentOrderNumber\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"NameComponent\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"NameComponentTypeId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"NameComponentNote\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "d40d4555-6387-4e27-b50c-0a58ddaf1e13",
+		"Description": "The individual name components of the party name and their ordering in the name."
+	},
+	"type": "TABLE"
+}

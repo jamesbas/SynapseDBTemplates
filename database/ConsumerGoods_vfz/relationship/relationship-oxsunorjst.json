@@ -1,0 +1,29 @@
+{
+	"name": "relationship-oxsunorjst",
+	"properties": {
+		"Name": "relationship-oxsunorjst",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "Employee",
+		"ToTableName": "EmployeePhysicalCharacteristic",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "EmployeeId",
+				"ToColumnName": "EmployeeId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"Employee.cdm.json/Employee\",\"toEntity\":\"EmployeePhysicalCharacteristic.cdm.json/EmployeePhysicalCharacteristic\",\"joinPairs\":[{\"fromAttribute\":\"EmployeeId\",\"toAttribute\":\"EmployeeId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "eac454c8-6af8-4772-8241-b9384892c66b"
+	},
+	"type": "RELATIONSHIP"
+}

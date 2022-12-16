@@ -1,0 +1,29 @@
+{
+	"name": "relationship-kayraqhztr",
+	"properties": {
+		"Name": "relationship-kayraqhztr",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "LegalEntityParty",
+		"ToTableName": "PartyDunBradstreetReport",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "PartyId",
+				"ToColumnName": "PartyId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"LegalEntityParty.cdm.json/LegalEntityParty\",\"toEntity\":\"PartyDunBradstreetReport.cdm.json/PartyDunBradstreetReport\",\"joinPairs\":[{\"fromAttribute\":\"PartyId\",\"toAttribute\":\"PartyId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "02773222-8780-4747-b6b2-9aab44ee249f"
+	},
+	"type": "RELATIONSHIP"
+}

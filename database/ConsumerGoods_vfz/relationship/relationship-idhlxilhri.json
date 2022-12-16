@@ -1,0 +1,29 @@
+{
+	"name": "relationship-idhlxilhri",
+	"properties": {
+		"Name": "relationship-idhlxilhri",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "AnzsicSubdivision",
+		"ToTableName": "AnzsicGroup",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "AnzsicSubdivisionCode",
+				"ToColumnName": "AnzsicSubdivisionCode"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"AnzsicSubdivision.cdm.json/AnzsicSubdivision\",\"toEntity\":\"AnzsicGroup.cdm.json/AnzsicGroup\",\"joinPairs\":[{\"fromAttribute\":\"AnzsicSubdivisionCode\",\"toAttribute\":\"AnzsicSubdivisionCode\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "19766ff3-4696-4e11-bba8-97fa25704978"
+	},
+	"type": "RELATIONSHIP"
+}

@@ -1,0 +1,29 @@
+{
+	"name": "relationship-upswgjgwpg",
+	"properties": {
+		"Name": "relationship-upswgjgwpg",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "Document",
+		"ToTableName": "PartyConsent",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "DocumentId",
+				"ToColumnName": "ProofOfConsentDocumentId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"Document.cdm.json/Document\",\"toEntity\":\"PartyConsent.cdm.json/PartyConsent\",\"joinPairs\":[{\"fromAttribute\":\"DocumentId\",\"toAttribute\":\"ProofOfConsentDocumentId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "1ff504ff-f46b-41c5-96df-493a5b33d7fd"
+	},
+	"type": "RELATIONSHIP"
+}

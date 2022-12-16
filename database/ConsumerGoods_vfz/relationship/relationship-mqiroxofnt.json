@@ -1,0 +1,29 @@
+{
+	"name": "relationship-mqiroxofnt",
+	"properties": {
+		"Name": "relationship-mqiroxofnt",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "PartyContactPurpose",
+		"ToTableName": "PartyContactPurposeStatus",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "ContactPurposeId",
+				"ToColumnName": "ContactPurposeId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"PartyContactPurpose.cdm.json/PartyContactPurpose\",\"toEntity\":\"PartyContactPurposeStatus.cdm.json/PartyContactPurposeStatus\",\"joinPairs\":[{\"fromAttribute\":\"ContactPurposeId\",\"toAttribute\":\"ContactPurposeId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "af8edc2c-d708-4540-8cb3-167f74b9b241"
+	},
+	"type": "RELATIONSHIP"
+}

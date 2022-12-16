@@ -1,0 +1,175 @@
+{
+	"name": "PartyNameSuffix",
+	"properties": {
+		"Name": "PartyNameSuffix",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "PartyId",
+					"Description": "The unique identifier of a Party.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyNameSuffix.cdm.json/PartyNameSuffix",
+						"Name": "PartyId"
+					}
+				},
+				{
+					"Name": "PartyNameId",
+					"Description": "The unique identifier of a Party Name.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyNameSuffix.cdm.json/PartyNameSuffix",
+						"Name": "PartyNameId"
+					}
+				},
+				{
+					"Name": "NameSuffixId",
+					"Description": "The unique identifier of a Name Suffix.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyNameSuffix.cdm.json/PartyNameSuffix",
+						"Name": "NameSuffixId"
+					}
+				},
+				{
+					"Name": "SuffixOrderNumber",
+					"Description": "The ordering of the associated suffix.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyNameSuffix.cdm.json/PartyNameSuffix",
+						"Name": "SuffixOrderNumber"
+					}
+				},
+				{
+					"Name": "PartyNameSuffixNote",
+					"Description": "A note, comment or additional information regarding the party name suffix.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyNameSuffix.cdm.json/PartyNameSuffix",
+						"Name": "PartyNameSuffixNote"
+					}
+				}
+			],
+			"ColumnSetEntityName": "2259a8d7-3669-4395-84b9-791b627309d6",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/PartyNameSuffix",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/PartyNameSuffix",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"PartyId\":{\"entity\":\"PartyNameSuffix.cdm.json/PartyNameSuffix\",\"name\":\"PartyId\"},\"PartyNameId\":{\"entity\":\"PartyNameSuffix.cdm.json/PartyNameSuffix\",\"name\":\"PartyNameId\"},\"NameSuffixId\":{\"entity\":\"PartyNameSuffix.cdm.json/PartyNameSuffix\",\"name\":\"NameSuffixId\"},\"SuffixOrderNumber\":{\"entity\":\"PartyNameSuffix.cdm.json/PartyNameSuffix\",\"name\":\"SuffixOrderNumber\"},\"PartyNameSuffixNote\":{\"entity\":\"PartyNameSuffix.cdm.json/PartyNameSuffix\",\"name\":\"PartyNameSuffixNote\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"PartyNameSuffix\",\"path\":\"PartyNameSuffix.cdm.json/PartyNameSuffix\"},\"description\":\"The party name suffix and it's ordering.\",\"primaryKey\":[\"PartyId\",\"PartyNameId\",\"NameSuffixId\",\"SuffixOrderNumber\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyNameSuffix.cdm.json/PartyNameSuffix\",\"name\":\"PartyId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a Party.\",\"isNullable\":false,\"name\":\"PartyId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyNameSuffix.cdm.json/PartyNameSuffix\",\"name\":\"PartyNameId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Party Name.\",\"isNullable\":false,\"name\":\"PartyNameId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyNameSuffix.cdm.json/PartyNameSuffix\",\"name\":\"NameSuffixId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Name Suffix.\",\"isNullable\":false,\"name\":\"NameSuffixId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyNameSuffix.cdm.json/PartyNameSuffix\",\"name\":\"SuffixOrderNumber\"},\"dataType\":\"integer\",\"description\":\"The ordering of the associated suffix.\",\"isNullable\":false,\"name\":\"SuffixOrderNumber\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyNameSuffix.cdm.json/PartyNameSuffix\",\"name\":\"PartyNameSuffixNote\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"A note, comment or additional information regarding the party name suffix.\",\"isNullable\":true,\"name\":\"PartyNameSuffixNote\"}]}}}",
+			"Description": "The party name suffix and it's ordering.",
+			"DisplayFolderInfo": "{\"name\":\"Party\",\"colorCode\":\"#7D0F6C\"}",
+			"PrimaryKeys": "PartyId,PartyNameId,NameSuffixId,SuffixOrderNumber",
+			"spark.sql.sources.provider": "csv",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"PartyId\",\"type\":\"long\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PartyNameId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"NameSuffixId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"SuffixOrderNumber\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PartyNameSuffixNote\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "3cdb5e50-560b-42af-9305-54429abb346a",
+		"Description": "The party name suffix and it's ordering."
+	},
+	"type": "TABLE"
+}

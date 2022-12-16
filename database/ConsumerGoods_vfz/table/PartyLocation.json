@@ -1,0 +1,234 @@
+{
+	"name": "PartyLocation",
+	"properties": {
+		"Name": "PartyLocation",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "PartyId",
+					"Description": "The unique identifier of a Party.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyLocation.cdm.json/PartyLocation",
+						"Name": "PartyId"
+					}
+				},
+				{
+					"Name": "LocationTypeId",
+					"Description": "The unique identifier of a Location Type.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyLocation.cdm.json/PartyLocation",
+						"Name": "LocationTypeId"
+					}
+				},
+				{
+					"Name": "LocationId",
+					"Description": "The unique identifier of a Location.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyLocation.cdm.json/PartyLocation",
+						"Name": "LocationId"
+					}
+				},
+				{
+					"Name": "PeriodStartTimestamp",
+					"Description": "The period start timestamp associated with the information.",
+					"OriginDataTypeName": {
+						"TypeName": "timestamp",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"TimestampFormat": "YYYY-MM-DD HH:MM:SS.fffffffff",
+							"HIVE_TYPE_STRING": "timestamp"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyLocation.cdm.json/PartyLocation",
+						"Name": "PeriodStartTimestamp"
+					}
+				},
+				{
+					"Name": "PeriodEndTimestamp",
+					"Description": "The period end timestamp associated with the information.",
+					"OriginDataTypeName": {
+						"TypeName": "timestamp",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"TimestampFormat": "YYYY-MM-DD HH:MM:SS.fffffffff",
+							"HIVE_TYPE_STRING": "timestamp"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyLocation.cdm.json/PartyLocation",
+						"Name": "PeriodEndTimestamp"
+					}
+				},
+				{
+					"Name": "GlobalLocationNumber",
+					"Description": "The Global Location Number (GLN) is a simple tool used to uniquely identify locations. It can be used to identify physical locations such as a warehouse, legal entities, or a function / department within a legal entity. The GLN is part of the GS1 system of standards.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 13,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyLocation.cdm.json/PartyLocation",
+						"Name": "GlobalLocationNumber"
+					}
+				},
+				{
+					"Name": "PreferenceId",
+					"Description": "The unique identifier of a Preference.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyLocation.cdm.json/PartyLocation",
+						"Name": "PreferenceId"
+					}
+				},
+				{
+					"Name": "PartyLocationNote",
+					"Description": "A note, comment or additional information regarding a Party Location.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyLocation.cdm.json/PartyLocation",
+						"Name": "PartyLocationNote"
+					}
+				}
+			],
+			"ColumnSetEntityName": "a8752669-7282-4f7b-9954-2cadd9c1f6bd",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/PartyLocation",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/PartyLocation",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"PartyId\":{\"entity\":\"PartyLocation.cdm.json/PartyLocation\",\"name\":\"PartyId\"},\"LocationTypeId\":{\"entity\":\"PartyLocation.cdm.json/PartyLocation\",\"name\":\"LocationTypeId\"},\"LocationId\":{\"entity\":\"PartyLocation.cdm.json/PartyLocation\",\"name\":\"LocationId\"},\"PeriodStartTimestamp\":{\"entity\":\"PartyLocation.cdm.json/PartyLocation\",\"name\":\"PeriodStartTimestamp\"},\"PeriodEndTimestamp\":{\"entity\":\"PartyLocation.cdm.json/PartyLocation\",\"name\":\"PeriodEndTimestamp\"},\"GlobalLocationNumber\":{\"entity\":\"PartyLocation.cdm.json/PartyLocation\",\"name\":\"GlobalLocationNumber\"},\"PreferenceId\":{\"entity\":\"PartyLocation.cdm.json/PartyLocation\",\"name\":\"PreferenceId\"},\"PartyLocationNote\":{\"entity\":\"PartyLocation.cdm.json/PartyLocation\",\"name\":\"PartyLocationNote\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"PartyLocation\",\"path\":\"PartyLocation.cdm.json/PartyLocation\"},\"description\":\"The party(s) located at the associated Location.   \\n\\nThe intent of this relationship is to illustrate that based upon the relationship between a Party and a Location and the purpose of that location (LOCATION TYPE) then any number of geographic measurements can be added to LOCATION and used to provide or infer information about the Party at that Location.\\n\\nAdditional foreign key relationships can be added to LOCATION to extend and enhance the information therein.  In this model only the most significant relationships have been drawn, which show up as foreign key relationships in LOCATION.\\n\\nThis same concept can be applied to any geographic - Party - Location relationship.\",\"primaryKey\":[\"PartyId\",\"LocationTypeId\",\"LocationId\",\"PeriodStartTimestamp\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyLocation.cdm.json/PartyLocation\",\"name\":\"PartyId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a Party.\",\"isNullable\":false,\"name\":\"PartyId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyLocation.cdm.json/PartyLocation\",\"name\":\"LocationTypeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Location Type.\",\"isNullable\":false,\"name\":\"LocationTypeId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyLocation.cdm.json/PartyLocation\",\"name\":\"LocationId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Location.\",\"isNullable\":false,\"name\":\"LocationId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyLocation.cdm.json/PartyLocation\",\"name\":\"PeriodStartTimestamp\"},\"dataType\":\"timestamp\",\"description\":\"The period start timestamp associated with the information.\",\"isNullable\":false,\"name\":\"PeriodStartTimestamp\",\"timestampFormat\":\"YYYY-MM-DD HH:MM:SS.fffffffff\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyLocation.cdm.json/PartyLocation\",\"name\":\"PeriodEndTimestamp\"},\"dataType\":\"timestamp\",\"description\":\"The period end timestamp associated with the information.\",\"isNullable\":true,\"name\":\"PeriodEndTimestamp\",\"timestampFormat\":\"YYYY-MM-DD HH:MM:SS.fffffffff\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyLocation.cdm.json/PartyLocation\",\"name\":\"GlobalLocationNumber\"},\"dataType\":\"decimal\",\"dataTypeLength\":13,\"description\":\"The Global Location Number (GLN) is a simple tool used to uniquely identify locations. It can be used to identify physical locations such as a warehouse, legal entities, or a function / department within a legal entity. The GLN is part of the GS1 system of standards.\",\"isNullable\":true,\"scale\":0,\"name\":\"GlobalLocationNumber\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyLocation.cdm.json/PartyLocation\",\"name\":\"PreferenceId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Preference.\",\"isNullable\":true,\"name\":\"PreferenceId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyLocation.cdm.json/PartyLocation\",\"name\":\"PartyLocationNote\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"A note, comment or additional information regarding a Party Location.\",\"isNullable\":true,\"name\":\"PartyLocationNote\"}]}}}",
+			"Description": "The party(s) located at the associated Location.   \n\nThe intent of this relationship is to illustrate that based upon the relationship between a Party and a Location and the purpose of that location (LOCATION TYPE) then any number of geographic measurements can be added to LOCATION and used to provide or infer information about the Party at that Location.\n\nAdditional foreign key relationships can be added to LOCATION to extend and enhance the information therein.  In this model only the most significant relationships have been drawn, which show up as foreign key relationships in LOCATION.\n\nThis same concept can be applied to any geographic - Party - Location relationship.",
+			"DisplayFolderInfo": "{\"name\":\"Party\",\"colorCode\":\"#7D0F6C\"}",
+			"PrimaryKeys": "PartyId,LocationTypeId,LocationId,PeriodStartTimestamp",
+			"spark.sql.sources.provider": "csv",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"PartyId\",\"type\":\"long\",\"nullable\":false,\"metadata\":{}},{\"name\":\"LocationTypeId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"LocationId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PeriodStartTimestamp\",\"type\":\"timestamp\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PeriodEndTimestamp\",\"type\":\"timestamp\",\"nullable\":true,\"metadata\":{}},{\"name\":\"GlobalLocationNumber\",\"type\":\"decimal(13,0)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"PreferenceId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"PartyLocationNote\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "fca21549-27c0-4f9d-a9a9-c1cdbf574fd7",
+		"Description": "The party(s) located at the associated Location.   \n\nThe intent of this relationship is to illustrate that based upon the relationship between a Party and a Location and the purpose of that location (LOCATION TYPE) then any number of geographic measurements can be added to LOCATION and used to provide or infer information about the Party at that Location.\n\nAdditional foreign key relationships can be added to LOCATION to extend and enhance the information therein.  In this model only the most significant relationships have been drawn, which show up as foreign key relationships in LOCATION.\n\nThis same concept can be applied to any geographic - Party - Location relationship."
+	},
+	"type": "TABLE"
+}

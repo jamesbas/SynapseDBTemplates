@@ -1,0 +1,482 @@
+{
+	"name": "ValueAddedResellerAgreement",
+	"properties": {
+		"Name": "ValueAddedResellerAgreement",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "ContractId",
+					"Description": "The unique identifier of a Contract.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ValueAddedResellerAgreement.cdm.json/ValueAddedResellerAgreement",
+						"Name": "ContractId"
+					}
+				},
+				{
+					"Name": "AgreementEffectiveDate",
+					"Description": "The date that the agreement goes into effect.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ValueAddedResellerAgreement.cdm.json/ValueAddedResellerAgreement",
+						"Name": "AgreementEffectiveDate"
+					}
+				},
+				{
+					"Name": "NonexclusiveAppointmentSection",
+					"Description": "This section establishes whether the VAR is appointed an exclusive VAR agreement regarding the associated product(s) and where the VAR is authorized to sell the products.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ValueAddedResellerAgreement.cdm.json/ValueAddedResellerAgreement",
+						"Name": "NonexclusiveAppointmentSection"
+					}
+				},
+				{
+					"Name": "PricingAndDiscountsSection",
+					"Description": "This section establishes the prices for the product(s) covered by the VAR Agreement as well as any volume price discounts or discounts for prompt payment.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ValueAddedResellerAgreement.cdm.json/ValueAddedResellerAgreement",
+						"Name": "PricingAndDiscountsSection"
+					}
+				},
+				{
+					"Name": "ProductChangesSection",
+					"Description": "This section establishes what changes to the developer's products may be made by the VAR as well as a notice period by the developer to the VAR of upcoming changes to the product(s).",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ValueAddedResellerAgreement.cdm.json/ValueAddedResellerAgreement",
+						"Name": "ProductChangesSection"
+					}
+				},
+				{
+					"Name": "OrderDeliveryShipmentSection",
+					"Description": "This section establishes how the VAR will order, receive shipment from and deliver products, who has responsibility for the associated costs and any risk related to lost or damaged developer products.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ValueAddedResellerAgreement.cdm.json/ValueAddedResellerAgreement",
+						"Name": "OrderDeliveryShipmentSection"
+					}
+				},
+				{
+					"Name": "ChangesAndCancellationsSection",
+					"Description": "This section establishes the timing and time limits for canceling orders and any payments to be made by the VAR for these cancellations.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ValueAddedResellerAgreement.cdm.json/ValueAddedResellerAgreement",
+						"Name": "ChangesAndCancellationsSection"
+					}
+				},
+				{
+					"Name": "LicenseSection",
+					"Description": "This section establishes the VAR's rights in regard to the product(s).",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ValueAddedResellerAgreement.cdm.json/ValueAddedResellerAgreement",
+						"Name": "LicenseSection"
+					}
+				},
+				{
+					"Name": "ConfidentialitySection",
+					"Description": "This section establishes the obligations of each party to protect confidential information of the other party.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ValueAddedResellerAgreement.cdm.json/ValueAddedResellerAgreement",
+						"Name": "ConfidentialitySection"
+					}
+				},
+				{
+					"Name": "VarSalesActivitiesSection",
+					"Description": "This section establishes the VAR's obligation and duties regarding product sales activities such as providing financial information to the developer, maintaining and training sales and support staff and maintaining sales or service locations.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ValueAddedResellerAgreement.cdm.json/ValueAddedResellerAgreement",
+						"Name": "VarSalesActivitiesSection"
+					}
+				},
+				{
+					"Name": "DevelopersAssistanceSection",
+					"Description": "This section establishes the obligations of the developer to support, service and maintain product(s) licensed to the VAR as well as identifying support resources, materials and access to related products, goods or services.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ValueAddedResellerAgreement.cdm.json/ValueAddedResellerAgreement",
+						"Name": "DevelopersAssistanceSection"
+					}
+				},
+				{
+					"Name": "LimitedWarrantiesSection",
+					"Description": "This section warranties that the developers has the ability to license the product(s), that the media that the products are delivered on is free from defects and that the product(s) will function properly for some fixed time after delivery.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ValueAddedResellerAgreement.cdm.json/ValueAddedResellerAgreement",
+						"Name": "LimitedWarrantiesSection"
+					}
+				},
+				{
+					"Name": "DisclaimerSection",
+					"Description": "This section establishes any disclaimers regarding implied warranties, limit on damages that VAR may collect from developer and various other forms of damages such as consequential or special damages.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ValueAddedResellerAgreement.cdm.json/ValueAddedResellerAgreement",
+						"Name": "DisclaimerSection"
+					}
+				},
+				{
+					"Name": "IndemnificationSection",
+					"Description": "This section establishes the indemnification that each party assigns to the other for certain kinds of losses that may be suffered, what types of losses will be reimbursed and how reimbursement for losses will be paid.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ValueAddedResellerAgreement.cdm.json/ValueAddedResellerAgreement",
+						"Name": "IndemnificationSection"
+					}
+				},
+				{
+					"Name": "RelationshipOfPartiesSection",
+					"Description": "This section establishes that the relationship between the parties is that of a buyer and seller and there is no special relationship existing.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ValueAddedResellerAgreement.cdm.json/ValueAddedResellerAgreement",
+						"Name": "RelationshipOfPartiesSection"
+					}
+				},
+				{
+					"Name": "DevelopersMarksSection",
+					"Description": "This section establishes under what circumstances the VAR has access to developer's trade names, trademarks, titles or logos in advertising.    It may also define the quality control parameters to be applied to VAR products sold with such develop marks.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ValueAddedResellerAgreement.cdm.json/ValueAddedResellerAgreement",
+						"Name": "DevelopersMarksSection"
+					}
+				},
+				{
+					"Name": "TermAndTerminationSection",
+					"Description": "This section establishes the starting dates and ending dates of the agreement.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ValueAddedResellerAgreement.cdm.json/ValueAddedResellerAgreement",
+						"Name": "TermAndTerminationSection"
+					}
+				},
+				{
+					"Name": "AgreementStartDate",
+					"Description": "The starting date of the agreement.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ValueAddedResellerAgreement.cdm.json/ValueAddedResellerAgreement",
+						"Name": "AgreementStartDate"
+					}
+				},
+				{
+					"Name": "AgreementEndDate",
+					"Description": "The ending date of the agreement.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ValueAddedResellerAgreement.cdm.json/ValueAddedResellerAgreement",
+						"Name": "AgreementEndDate"
+					}
+				},
+				{
+					"Name": "SeverabilitySection",
+					"Description": "This section attempts to keep the agreement in effect even if a court rules that a portion is invalid.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ValueAddedResellerAgreement.cdm.json/ValueAddedResellerAgreement",
+						"Name": "SeverabilitySection"
+					}
+				},
+				{
+					"Name": "FinalAgreementSection",
+					"Description": "This section makes it clear that this is the final agreement between parties and replaces or supersedes any prior discussions or agreements.    Any amendments to this agreement must be made in writing.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ValueAddedResellerAgreement.cdm.json/ValueAddedResellerAgreement",
+						"Name": "FinalAgreementSection"
+					}
+				}
+			],
+			"ColumnSetEntityName": "6afbf71f-8e59-4393-807c-4783aec1a5fd",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/ValueAddedResellerAgreement",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/ValueAddedResellerAgreement",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"ContractId\":{\"entity\":\"ValueAddedResellerAgreement.cdm.json/ValueAddedResellerAgreement\",\"name\":\"ContractId\"},\"AgreementEffectiveDate\":{\"entity\":\"ValueAddedResellerAgreement.cdm.json/ValueAddedResellerAgreement\",\"name\":\"AgreementEffectiveDate\"},\"NonexclusiveAppointmentSection\":{\"entity\":\"ValueAddedResellerAgreement.cdm.json/ValueAddedResellerAgreement\",\"name\":\"NonexclusiveAppointmentSection\"},\"PricingAndDiscountsSection\":{\"entity\":\"ValueAddedResellerAgreement.cdm.json/ValueAddedResellerAgreement\",\"name\":\"PricingAndDiscountsSection\"},\"ProductChangesSection\":{\"entity\":\"ValueAddedResellerAgreement.cdm.json/ValueAddedResellerAgreement\",\"name\":\"ProductChangesSection\"},\"OrderDeliveryShipmentSection\":{\"entity\":\"ValueAddedResellerAgreement.cdm.json/ValueAddedResellerAgreement\",\"name\":\"OrderDeliveryShipmentSection\"},\"ChangesAndCancellationsSection\":{\"entity\":\"ValueAddedResellerAgreement.cdm.json/ValueAddedResellerAgreement\",\"name\":\"ChangesAndCancellationsSection\"},\"LicenseSection\":{\"entity\":\"ValueAddedResellerAgreement.cdm.json/ValueAddedResellerAgreement\",\"name\":\"LicenseSection\"},\"ConfidentialitySection\":{\"entity\":\"ValueAddedResellerAgreement.cdm.json/ValueAddedResellerAgreement\",\"name\":\"ConfidentialitySection\"},\"VarSalesActivitiesSection\":{\"entity\":\"ValueAddedResellerAgreement.cdm.json/ValueAddedResellerAgreement\",\"name\":\"VarSalesActivitiesSection\"},\"DevelopersAssistanceSection\":{\"entity\":\"ValueAddedResellerAgreement.cdm.json/ValueAddedResellerAgreement\",\"name\":\"DevelopersAssistanceSection\"},\"LimitedWarrantiesSection\":{\"entity\":\"ValueAddedResellerAgreement.cdm.json/ValueAddedResellerAgreement\",\"name\":\"LimitedWarrantiesSection\"},\"DisclaimerSection\":{\"entity\":\"ValueAddedResellerAgreement.cdm.json/ValueAddedResellerAgreement\",\"name\":\"DisclaimerSection\"},\"IndemnificationSection\":{\"entity\":\"ValueAddedResellerAgreement.cdm.json/ValueAddedResellerAgreement\",\"name\":\"IndemnificationSection\"},\"RelationshipOfPartiesSection\":{\"entity\":\"ValueAddedResellerAgreement.cdm.json/ValueAddedResellerAgreement\",\"name\":\"RelationshipOfPartiesSection\"},\"DevelopersMarksSection\":{\"entity\":\"ValueAddedResellerAgreement.cdm.json/ValueAddedResellerAgreement\",\"name\":\"DevelopersMarksSection\"},\"TermAndTerminationSection\":{\"entity\":\"ValueAddedResellerAgreement.cdm.json/ValueAddedResellerAgreement\",\"name\":\"TermAndTerminationSection\"},\"AgreementStartDate\":{\"entity\":\"ValueAddedResellerAgreement.cdm.json/ValueAddedResellerAgreement\",\"name\":\"AgreementStartDate\"},\"AgreementEndDate\":{\"entity\":\"ValueAddedResellerAgreement.cdm.json/ValueAddedResellerAgreement\",\"name\":\"AgreementEndDate\"},\"SeverabilitySection\":{\"entity\":\"ValueAddedResellerAgreement.cdm.json/ValueAddedResellerAgreement\",\"name\":\"SeverabilitySection\"},\"FinalAgreementSection\":{\"entity\":\"ValueAddedResellerAgreement.cdm.json/ValueAddedResellerAgreement\",\"name\":\"FinalAgreementSection\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"ValueAddedResellerAgreement\",\"path\":\"ValueAddedResellerAgreement.cdm.json/ValueAddedResellerAgreement\"},\"description\":\"The Value-Added Reseller Agreement assigns rights to a reseller to market a developer's product in combination with other products.\",\"primaryKey\":[\"ContractId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ValueAddedResellerAgreement.cdm.json/ValueAddedResellerAgreement\",\"name\":\"ContractId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Contract.\",\"isNullable\":false,\"name\":\"ContractId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ValueAddedResellerAgreement.cdm.json/ValueAddedResellerAgreement\",\"name\":\"AgreementEffectiveDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The date that the agreement goes into effect.\",\"isNullable\":true,\"name\":\"AgreementEffectiveDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ValueAddedResellerAgreement.cdm.json/ValueAddedResellerAgreement\",\"name\":\"NonexclusiveAppointmentSection\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"This section establishes whether the VAR is appointed an exclusive VAR agreement regarding the associated product(s) and where the VAR is authorized to sell the products.\",\"isNullable\":true,\"name\":\"NonexclusiveAppointmentSection\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ValueAddedResellerAgreement.cdm.json/ValueAddedResellerAgreement\",\"name\":\"PricingAndDiscountsSection\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"This section establishes the prices for the product(s) covered by the VAR Agreement as well as any volume price discounts or discounts for prompt payment.\",\"isNullable\":true,\"name\":\"PricingAndDiscountsSection\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ValueAddedResellerAgreement.cdm.json/ValueAddedResellerAgreement\",\"name\":\"ProductChangesSection\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"This section establishes what changes to the developer's products may be made by the VAR as well as a notice period by the developer to the VAR of upcoming changes to the product(s).\",\"isNullable\":true,\"name\":\"ProductChangesSection\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ValueAddedResellerAgreement.cdm.json/ValueAddedResellerAgreement\",\"name\":\"OrderDeliveryShipmentSection\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"This section establishes how the VAR will order, receive shipment from and deliver products, who has responsibility for the associated costs and any risk related to lost or damaged developer products.\",\"isNullable\":true,\"name\":\"OrderDeliveryShipmentSection\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ValueAddedResellerAgreement.cdm.json/ValueAddedResellerAgreement\",\"name\":\"ChangesAndCancellationsSection\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"This section establishes the timing and time limits for canceling orders and any payments to be made by the VAR for these cancellations.\",\"isNullable\":true,\"name\":\"ChangesAndCancellationsSection\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ValueAddedResellerAgreement.cdm.json/ValueAddedResellerAgreement\",\"name\":\"LicenseSection\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"This section establishes the VAR's rights in regard to the product(s).\",\"isNullable\":true,\"name\":\"LicenseSection\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ValueAddedResellerAgreement.cdm.json/ValueAddedResellerAgreement\",\"name\":\"ConfidentialitySection\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"This section establishes the obligations of each party to protect confidential information of the other party.\",\"isNullable\":true,\"name\":\"ConfidentialitySection\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ValueAddedResellerAgreement.cdm.json/ValueAddedResellerAgreement\",\"name\":\"VarSalesActivitiesSection\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"This section establishes the VAR's obligation and duties regarding product sales activities such as providing financial information to the developer, maintaining and training sales and support staff and maintaining sales or service locations.\",\"isNullable\":true,\"name\":\"VarSalesActivitiesSection\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ValueAddedResellerAgreement.cdm.json/ValueAddedResellerAgreement\",\"name\":\"DevelopersAssistanceSection\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"This section establishes the obligations of the developer to support, service and maintain product(s) licensed to the VAR as well as identifying support resources, materials and access to related products, goods or services.\",\"isNullable\":true,\"name\":\"DevelopersAssistanceSection\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ValueAddedResellerAgreement.cdm.json/ValueAddedResellerAgreement\",\"name\":\"LimitedWarrantiesSection\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"This section warranties that the developers has the ability to license the product(s), that the media that the products are delivered on is free from defects and that the product(s) will function properly for some fixed time after delivery.\",\"isNullable\":true,\"name\":\"LimitedWarrantiesSection\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ValueAddedResellerAgreement.cdm.json/ValueAddedResellerAgreement\",\"name\":\"DisclaimerSection\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"This section establishes any disclaimers regarding implied warranties, limit on damages that VAR may collect from developer and various other forms of damages such as consequential or special damages.\",\"isNullable\":true,\"name\":\"DisclaimerSection\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ValueAddedResellerAgreement.cdm.json/ValueAddedResellerAgreement\",\"name\":\"IndemnificationSection\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"This section establishes the indemnification that each party assigns to the other for certain kinds of losses that may be suffered, what types of losses will be reimbursed and how reimbursement for losses will be paid.\",\"isNullable\":true,\"name\":\"IndemnificationSection\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ValueAddedResellerAgreement.cdm.json/ValueAddedResellerAgreement\",\"name\":\"RelationshipOfPartiesSection\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"This section establishes that the relationship between the parties is that of a buyer and seller and there is no special relationship existing.\",\"isNullable\":true,\"name\":\"RelationshipOfPartiesSection\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ValueAddedResellerAgreement.cdm.json/ValueAddedResellerAgreement\",\"name\":\"DevelopersMarksSection\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"This section establishes under what circumstances the VAR has access to developer's trade names, trademarks, titles or logos in advertising.    It may also define the quality control parameters to be applied to VAR products sold with such develop marks.\",\"isNullable\":true,\"name\":\"DevelopersMarksSection\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ValueAddedResellerAgreement.cdm.json/ValueAddedResellerAgreement\",\"name\":\"TermAndTerminationSection\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"This section establishes the starting dates and ending dates of the agreement.\",\"isNullable\":true,\"name\":\"TermAndTerminationSection\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ValueAddedResellerAgreement.cdm.json/ValueAddedResellerAgreement\",\"name\":\"AgreementStartDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The starting date of the agreement.\",\"isNullable\":true,\"name\":\"AgreementStartDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ValueAddedResellerAgreement.cdm.json/ValueAddedResellerAgreement\",\"name\":\"AgreementEndDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The ending date of the agreement.\",\"isNullable\":true,\"name\":\"AgreementEndDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ValueAddedResellerAgreement.cdm.json/ValueAddedResellerAgreement\",\"name\":\"SeverabilitySection\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"This section attempts to keep the agreement in effect even if a court rules that a portion is invalid.\",\"isNullable\":true,\"name\":\"SeverabilitySection\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ValueAddedResellerAgreement.cdm.json/ValueAddedResellerAgreement\",\"name\":\"FinalAgreementSection\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"This section makes it clear that this is the final agreement between parties and replaces or supersedes any prior discussions or agreements.    Any amendments to this agreement must be made in writing.\",\"isNullable\":true,\"name\":\"FinalAgreementSection\"}]}}}",
+			"Description": "The Value-Added Reseller Agreement assigns rights to a reseller to market a developer's product in combination with other products.",
+			"DisplayFolderInfo": "{\"name\":\"Contract\",\"colorCode\":\"#000F5C\"}",
+			"PrimaryKeys": "ContractId",
+			"spark.sql.sources.provider": "csv",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"ContractId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"AgreementEffectiveDate\",\"type\":\"date\",\"nullable\":true,\"metadata\":{}},{\"name\":\"NonexclusiveAppointmentSection\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"PricingAndDiscountsSection\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ProductChangesSection\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"OrderDeliveryShipmentSection\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ChangesAndCancellationsSection\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"LicenseSection\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ConfidentialitySection\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"VarSalesActivitiesSection\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"DevelopersAssistanceSection\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"LimitedWarrantiesSection\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"DisclaimerSection\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"IndemnificationSection\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"RelationshipOfPartiesSection\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"DevelopersMarksSection\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"TermAndTerminationSection\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"AgreementStartDate\",\"type\":\"date\",\"nullable\":true,\"metadata\":{}},{\"name\":\"AgreementEndDate\",\"type\":\"date\",\"nullable\":true,\"metadata\":{}},{\"name\":\"SeverabilitySection\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"FinalAgreementSection\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "d9dd92ba-a0ce-4f0d-b325-7a3dda081aad",
+		"Description": "The Value-Added Reseller Agreement assigns rights to a reseller to market a developer's product in combination with other products."
+	},
+	"type": "TABLE"
+}

@@ -1,0 +1,137 @@
+{
+	"name": "EventCategory",
+	"properties": {
+		"Name": "EventCategory",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "EventCategoryId",
+					"Description": "The unique identifier of an event category.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "EventCategory.cdm.json/EventCategory",
+						"Name": "EventCategoryId"
+					}
+				},
+				{
+					"Name": "EventCategoryName",
+					"Description": "The name of an event category.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 256,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "EventCategory.cdm.json/EventCategory",
+						"Name": "EventCategoryName"
+					}
+				},
+				{
+					"Name": "EventCategoryDescription",
+					"Description": "The description of an event category.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "EventCategory.cdm.json/EventCategory",
+						"Name": "EventCategoryDescription"
+					}
+				}
+			],
+			"ColumnSetEntityName": "6d5fc251-6d6a-4492-bd14-9c7b0b6c4b67",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/EventCategory",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/EventCategory",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"EventCategoryId\":{\"entity\":\"EventCategory.cdm.json/EventCategory\",\"name\":\"EventCategoryId\"},\"EventCategoryName\":{\"entity\":\"EventCategory.cdm.json/EventCategory\",\"name\":\"EventCategoryName\"},\"EventCategoryDescription\":{\"entity\":\"EventCategory.cdm.json/EventCategory\",\"name\":\"EventCategoryDescription\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"EventCategory\",\"path\":\"EventCategory.cdm.json/EventCategory\"},\"description\":\"A categorization of event types.\\n\\nEx:\\nIndividual\\nEvent Type = Birth Of Child\\nEvent Category = Family Event\\n\\nEvent Type = Employment Layoff\\nEvent Category = Employment Event\\n\\nLegal Entity\\nEvent Type = Incorporation\\nEvent Category = Corporate Administration\\n\\nEvent Type = Annual Reports Filed\\nEvent Category = Corporate Administration\\n\\nEvent Type = Bankruptcy Filing\\nEvent Category = Corporate Administration\",\"primaryKey\":[\"EventCategoryId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"EventCategory.cdm.json/EventCategory\",\"name\":\"EventCategoryId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of an event category.\",\"isNullable\":false,\"name\":\"EventCategoryId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"EventCategory.cdm.json/EventCategory\",\"name\":\"EventCategoryName\"},\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"The name of an event category.\",\"isNullable\":true,\"name\":\"EventCategoryName\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"EventCategory.cdm.json/EventCategory\",\"name\":\"EventCategoryDescription\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"The description of an event category.\",\"isNullable\":true,\"name\":\"EventCategoryDescription\"}]}}}",
+			"Description": "A categorization of event types.\n\nEx:\nIndividual\nEvent Type = Birth Of Child\nEvent Category = Family Event\n\nEvent Type = Employment Layoff\nEvent Category = Employment Event\n\nLegal Entity\nEvent Type = Incorporation\nEvent Category = Corporate Administration\n\nEvent Type = Annual Reports Filed\nEvent Category = Corporate Administration\n\nEvent Type = Bankruptcy Filing\nEvent Category = Corporate Administration",
+			"DisplayFolderInfo": "{\"name\":\"Party\",\"colorCode\":\"#7D0F6C\"}",
+			"PrimaryKeys": "EventCategoryId",
+			"spark.sql.sources.provider": "csv",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"EventCategoryId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"EventCategoryName\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"EventCategoryDescription\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "168b6200-6fe7-4a11-8cca-61cb24889450",
+		"Description": "A categorization of event types.\n\nEx:\nIndividual\nEvent Type = Birth Of Child\nEvent Category = Family Event\n\nEvent Type = Employment Layoff\nEvent Category = Employment Event\n\nLegal Entity\nEvent Type = Incorporation\nEvent Category = Corporate Administration\n\nEvent Type = Annual Reports Filed\nEvent Category = Corporate Administration\n\nEvent Type = Bankruptcy Filing\nEvent Category = Corporate Administration"
+	},
+	"type": "TABLE"
+}

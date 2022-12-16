@@ -1,0 +1,177 @@
+{
+	"name": "BillOfSale",
+	"properties": {
+		"Name": "BillOfSale",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "ContractId",
+					"Description": "The unique identifier of a Contract.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "BillOfSale.cdm.json/BillOfSale",
+						"Name": "ContractId"
+					}
+				},
+				{
+					"Name": "DateOfSale",
+					"Description": "The date that the sale was finalized.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "BillOfSale.cdm.json/BillOfSale",
+						"Name": "DateOfSale"
+					}
+				},
+				{
+					"Name": "PropertyDescription",
+					"Description": "A description of the property being sold including serial numbers, manufacturer, model etc.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "BillOfSale.cdm.json/BillOfSale",
+						"Name": "PropertyDescription"
+					}
+				},
+				{
+					"Name": "EffectiveTransferDate",
+					"Description": "The date that the transfer of property is to take place between the Seller and Buyer.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "BillOfSale.cdm.json/BillOfSale",
+						"Name": "EffectiveTransferDate"
+					}
+				},
+				{
+					"Name": "BillOfSaleSection",
+					"Description": "The text of the Bill of Sale, which traditionally begins with \"Know All Men By These Presents...\".",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "BillOfSale.cdm.json/BillOfSale",
+						"Name": "BillOfSaleSection"
+					}
+				}
+			],
+			"ColumnSetEntityName": "9cd0b8a8-0fb5-41fd-882e-9ea3510afc6f",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/BillOfSale",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/BillOfSale",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"ContractId\":{\"entity\":\"BillOfSale.cdm.json/BillOfSale\",\"name\":\"ContractId\"},\"DateOfSale\":{\"entity\":\"BillOfSale.cdm.json/BillOfSale\",\"name\":\"DateOfSale\"},\"PropertyDescription\":{\"entity\":\"BillOfSale.cdm.json/BillOfSale\",\"name\":\"PropertyDescription\"},\"EffectiveTransferDate\":{\"entity\":\"BillOfSale.cdm.json/BillOfSale\",\"name\":\"EffectiveTransferDate\"},\"BillOfSaleSection\":{\"entity\":\"BillOfSale.cdm.json/BillOfSale\",\"name\":\"BillOfSaleSection\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"BillOfSale\",\"path\":\"BillOfSale.cdm.json/BillOfSale\"},\"description\":\"An agreement to sell a product or item to another party.\",\"primaryKey\":[\"ContractId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"BillOfSale.cdm.json/BillOfSale\",\"name\":\"ContractId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Contract.\",\"isNullable\":false,\"name\":\"ContractId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"BillOfSale.cdm.json/BillOfSale\",\"name\":\"DateOfSale\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The date that the sale was finalized.\",\"isNullable\":true,\"name\":\"DateOfSale\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"BillOfSale.cdm.json/BillOfSale\",\"name\":\"PropertyDescription\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"A description of the property being sold including serial numbers, manufacturer, model etc.\",\"isNullable\":true,\"name\":\"PropertyDescription\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"BillOfSale.cdm.json/BillOfSale\",\"name\":\"EffectiveTransferDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The date that the transfer of property is to take place between the Seller and Buyer.\",\"isNullable\":true,\"name\":\"EffectiveTransferDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"BillOfSale.cdm.json/BillOfSale\",\"name\":\"BillOfSaleSection\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"The text of the Bill of Sale, which traditionally begins with \\\"Know All Men By These Presents...\\\".\",\"isNullable\":true,\"name\":\"BillOfSaleSection\"}]}}}",
+			"Description": "An agreement to sell a product or item to another party.",
+			"DisplayFolderInfo": "{\"name\":\"Contract\",\"colorCode\":\"#000F5C\"}",
+			"PrimaryKeys": "ContractId",
+			"spark.sql.sources.provider": "csv",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"ContractId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"DateOfSale\",\"type\":\"date\",\"nullable\":true,\"metadata\":{}},{\"name\":\"PropertyDescription\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"EffectiveTransferDate\",\"type\":\"date\",\"nullable\":true,\"metadata\":{}},{\"name\":\"BillOfSaleSection\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "400fe7ba-fa9c-47b2-9042-40c7a5d9f732",
+		"Description": "An agreement to sell a product or item to another party."
+	},
+	"type": "TABLE"
+}

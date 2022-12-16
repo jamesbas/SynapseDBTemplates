@@ -1,0 +1,29 @@
+{
+	"name": "relationship-plykmvtody",
+	"properties": {
+		"Name": "relationship-plykmvtody",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "MarketSegment",
+		"ToTableName": "PartyMarketSegment",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "MarketSegmentId",
+				"ToColumnName": "MarketSegmentId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"MarketSegment.cdm.json/MarketSegment\",\"toEntity\":\"PartyMarketSegment.cdm.json/PartyMarketSegment\",\"joinPairs\":[{\"fromAttribute\":\"MarketSegmentId\",\"toAttribute\":\"MarketSegmentId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "44a36cfa-e52b-4b16-b6bb-ff2ae3008da4"
+	},
+	"type": "RELATIONSHIP"
+}

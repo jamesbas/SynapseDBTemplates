@@ -1,0 +1,215 @@
+{
+	"name": "PartyLearningEvent",
+	"properties": {
+		"Name": "PartyLearningEvent",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "PartyId",
+					"Description": "The unique identifier of a Party.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyLearningEvent.cdm.json/PartyLearningEvent",
+						"Name": "PartyId"
+					}
+				},
+				{
+					"Name": "LearningEventId",
+					"Description": "The unique identifier of a Learning Event.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyLearningEvent.cdm.json/PartyLearningEvent",
+						"Name": "LearningEventId"
+					}
+				},
+				{
+					"Name": "LearningEventStartTimestamp",
+					"Description": "The scheduled start timestamp for the Learning Event at the associated Location.",
+					"OriginDataTypeName": {
+						"TypeName": "timestamp",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"TimestampFormat": "YYYY-MM-DD HH:MM:SS.fffffffff",
+							"HIVE_TYPE_STRING": "timestamp"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyLearningEvent.cdm.json/PartyLearningEvent",
+						"Name": "LearningEventStartTimestamp"
+					}
+				},
+				{
+					"Name": "LearningEventEndTimestamp",
+					"Description": "The scheduled end timestamp for the Learning Event at the associated Location.",
+					"OriginDataTypeName": {
+						"TypeName": "timestamp",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"TimestampFormat": "YYYY-MM-DD HH:MM:SS.fffffffff",
+							"HIVE_TYPE_STRING": "timestamp"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyLearningEvent.cdm.json/PartyLearningEvent",
+						"Name": "LearningEventEndTimestamp"
+					}
+				},
+				{
+					"Name": "ScheduledLearningEventId",
+					"Description": "The unique identifier of a Scheduled Learning Event.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyLearningEvent.cdm.json/PartyLearningEvent",
+						"Name": "ScheduledLearningEventId"
+					}
+				},
+				{
+					"Name": "LearningEventFeeAmount",
+					"Description": "The amount of fees associated with the Learning Event.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyLearningEvent.cdm.json/PartyLearningEvent",
+						"Name": "LearningEventFeeAmount"
+					}
+				},
+				{
+					"Name": "PartyLearningEventNote",
+					"Description": "Note or additional information regarding the Party Learning Event.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyLearningEvent.cdm.json/PartyLearningEvent",
+						"Name": "PartyLearningEventNote"
+					}
+				}
+			],
+			"ColumnSetEntityName": "afb303fc-2719-4496-8737-57d54c246ce1",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/PartyLearningEvent",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/PartyLearningEvent",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"PartyId\":{\"entity\":\"PartyLearningEvent.cdm.json/PartyLearningEvent\",\"name\":\"PartyId\"},\"LearningEventId\":{\"entity\":\"PartyLearningEvent.cdm.json/PartyLearningEvent\",\"name\":\"LearningEventId\"},\"LearningEventStartTimestamp\":{\"entity\":\"PartyLearningEvent.cdm.json/PartyLearningEvent\",\"name\":\"LearningEventStartTimestamp\"},\"LearningEventEndTimestamp\":{\"entity\":\"PartyLearningEvent.cdm.json/PartyLearningEvent\",\"name\":\"LearningEventEndTimestamp\"},\"ScheduledLearningEventId\":{\"entity\":\"PartyLearningEvent.cdm.json/PartyLearningEvent\",\"name\":\"ScheduledLearningEventId\"},\"LearningEventFeeAmount\":{\"entity\":\"PartyLearningEvent.cdm.json/PartyLearningEvent\",\"name\":\"LearningEventFeeAmount\"},\"PartyLearningEventNote\":{\"entity\":\"PartyLearningEvent.cdm.json/PartyLearningEvent\",\"name\":\"PartyLearningEventNote\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"PartyLearningEvent\",\"path\":\"PartyLearningEvent.cdm.json/PartyLearningEvent\"},\"description\":\"The Learning Events that a Party has participated in.\",\"primaryKey\":[\"PartyId\",\"LearningEventId\",\"LearningEventStartTimestamp\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyLearningEvent.cdm.json/PartyLearningEvent\",\"name\":\"PartyId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a Party.\",\"isNullable\":false,\"name\":\"PartyId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyLearningEvent.cdm.json/PartyLearningEvent\",\"name\":\"LearningEventId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Learning Event.\",\"isNullable\":false,\"name\":\"LearningEventId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyLearningEvent.cdm.json/PartyLearningEvent\",\"name\":\"LearningEventStartTimestamp\"},\"dataType\":\"timestamp\",\"description\":\"The scheduled start timestamp for the Learning Event at the associated Location.\",\"isNullable\":false,\"name\":\"LearningEventStartTimestamp\",\"timestampFormat\":\"YYYY-MM-DD HH:MM:SS.fffffffff\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyLearningEvent.cdm.json/PartyLearningEvent\",\"name\":\"LearningEventEndTimestamp\"},\"dataType\":\"timestamp\",\"description\":\"The scheduled end timestamp for the Learning Event at the associated Location.\",\"isNullable\":true,\"name\":\"LearningEventEndTimestamp\",\"timestampFormat\":\"YYYY-MM-DD HH:MM:SS.fffffffff\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyLearningEvent.cdm.json/PartyLearningEvent\",\"name\":\"ScheduledLearningEventId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Scheduled Learning Event.\",\"isNullable\":true,\"name\":\"ScheduledLearningEventId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyLearningEvent.cdm.json/PartyLearningEvent\",\"name\":\"LearningEventFeeAmount\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"The amount of fees associated with the Learning Event.\",\"isNullable\":true,\"scale\":2,\"name\":\"LearningEventFeeAmount\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyLearningEvent.cdm.json/PartyLearningEvent\",\"name\":\"PartyLearningEventNote\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"Note or additional information regarding the Party Learning Event.\",\"isNullable\":true,\"name\":\"PartyLearningEventNote\"}]}}}",
+			"Description": "The Learning Events that a Party has participated in.",
+			"DisplayFolderInfo": "{\"name\":\"Party\",\"colorCode\":\"#7D0F6C\"}",
+			"PrimaryKeys": "PartyId,LearningEventId,LearningEventStartTimestamp",
+			"spark.sql.sources.provider": "csv",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"PartyId\",\"type\":\"long\",\"nullable\":false,\"metadata\":{}},{\"name\":\"LearningEventId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"LearningEventStartTimestamp\",\"type\":\"timestamp\",\"nullable\":false,\"metadata\":{}},{\"name\":\"LearningEventEndTimestamp\",\"type\":\"timestamp\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ScheduledLearningEventId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"LearningEventFeeAmount\",\"type\":\"decimal(18,2)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"PartyLearningEventNote\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "e9765c05-7294-4226-b948-3bf150c74a23",
+		"Description": "The Learning Events that a Party has participated in."
+	},
+	"type": "TABLE"
+}

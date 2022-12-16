@@ -1,0 +1,177 @@
+{
+	"name": "FocusGroupParty",
+	"properties": {
+		"Name": "FocusGroupParty",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "PartyId",
+					"Description": "The unique identifier of a Party.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "FocusGroupParty.cdm.json/FocusGroupParty",
+						"Name": "PartyId"
+					}
+				},
+				{
+					"Name": "FocusGroupId",
+					"Description": "The unique identifier of the Focus Group.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "FocusGroupParty.cdm.json/FocusGroupParty",
+						"Name": "FocusGroupId"
+					}
+				},
+				{
+					"Name": "MembershipStartDate",
+					"Description": "The starting date of the Party's membership or association with the Focus Group.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "FocusGroupParty.cdm.json/FocusGroupParty",
+						"Name": "MembershipStartDate"
+					}
+				},
+				{
+					"Name": "MembershipEndDate",
+					"Description": "The ending date of the Party's membership or association with the Focus Group.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "FocusGroupParty.cdm.json/FocusGroupParty",
+						"Name": "MembershipEndDate"
+					}
+				},
+				{
+					"Name": "Note",
+					"Description": "A note, comment or additional detail regarding the Focus Group membership.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "FocusGroupParty.cdm.json/FocusGroupParty",
+						"Name": "Note"
+					}
+				}
+			],
+			"ColumnSetEntityName": "1f8633a3-1471-45b4-a6f4-afb9913d8d05",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/FocusGroupParty",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/FocusGroupParty",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"PartyId\":{\"entity\":\"FocusGroupParty.cdm.json/FocusGroupParty\",\"name\":\"PartyId\"},\"FocusGroupId\":{\"entity\":\"FocusGroupParty.cdm.json/FocusGroupParty\",\"name\":\"FocusGroupId\"},\"MembershipStartDate\":{\"entity\":\"FocusGroupParty.cdm.json/FocusGroupParty\",\"name\":\"MembershipStartDate\"},\"MembershipEndDate\":{\"entity\":\"FocusGroupParty.cdm.json/FocusGroupParty\",\"name\":\"MembershipEndDate\"},\"Note\":{\"entity\":\"FocusGroupParty.cdm.json/FocusGroupParty\",\"name\":\"Note\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"FocusGroupParty\",\"path\":\"FocusGroupParty.cdm.json/FocusGroupParty\"},\"description\":\"The one of more Focus Groups that the Party is a member of.\\n\\nA special interest group that focuses upon a specific Product or Product usage.\\n\\nFocus Groups are most often marketing groups designed to provide feedback to the organization.\",\"primaryKey\":[\"PartyId\",\"FocusGroupId\",\"MembershipStartDate\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"FocusGroupParty.cdm.json/FocusGroupParty\",\"name\":\"PartyId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a Party.\",\"isNullable\":false,\"name\":\"PartyId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"FocusGroupParty.cdm.json/FocusGroupParty\",\"name\":\"FocusGroupId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of the Focus Group.\",\"isNullable\":false,\"name\":\"FocusGroupId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"FocusGroupParty.cdm.json/FocusGroupParty\",\"name\":\"MembershipStartDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The starting date of the Party's membership or association with the Focus Group.\",\"isNullable\":false,\"name\":\"MembershipStartDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"FocusGroupParty.cdm.json/FocusGroupParty\",\"name\":\"MembershipEndDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The ending date of the Party's membership or association with the Focus Group.\",\"isNullable\":false,\"name\":\"MembershipEndDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"FocusGroupParty.cdm.json/FocusGroupParty\",\"name\":\"Note\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"A note, comment or additional detail regarding the Focus Group membership.\",\"isNullable\":true,\"name\":\"Note\"}]}}}",
+			"Description": "The one of more Focus Groups that the Party is a member of.\n\nA special interest group that focuses upon a specific Product or Product usage.\n\nFocus Groups are most often marketing groups designed to provide feedback to the organization.",
+			"DisplayFolderInfo": "{\"name\":\"Party\",\"colorCode\":\"#7D0F6C\"}",
+			"PrimaryKeys": "PartyId,FocusGroupId,MembershipStartDate",
+			"spark.sql.sources.provider": "csv",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"PartyId\",\"type\":\"long\",\"nullable\":false,\"metadata\":{}},{\"name\":\"FocusGroupId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"MembershipStartDate\",\"type\":\"date\",\"nullable\":false,\"metadata\":{}},{\"name\":\"MembershipEndDate\",\"type\":\"date\",\"nullable\":false,\"metadata\":{}},{\"name\":\"Note\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "309c8edc-91dc-431f-ba33-0ec115138964",
+		"Description": "The one of more Focus Groups that the Party is a member of.\n\nA special interest group that focuses upon a specific Product or Product usage.\n\nFocus Groups are most often marketing groups designed to provide feedback to the organization."
+	},
+	"type": "TABLE"
+}

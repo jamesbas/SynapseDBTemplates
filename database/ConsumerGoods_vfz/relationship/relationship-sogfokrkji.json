@@ -1,0 +1,29 @@
+{
+	"name": "relationship-sogfokrkji",
+	"properties": {
+		"Name": "relationship-sogfokrkji",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "EventType",
+		"ToTableName": "PartyRelationshipEvent",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "EventTypeId",
+				"ToColumnName": "EventTypeId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"EventType.cdm.json/EventType\",\"toEntity\":\"PartyRelationshipEvent.cdm.json/PartyRelationshipEvent\",\"joinPairs\":[{\"fromAttribute\":\"EventTypeId\",\"toAttribute\":\"EventTypeId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "c2f78c4a-8dbb-4d28-bc94-0850ec5bfff7"
+	},
+	"type": "RELATIONSHIP"
+}

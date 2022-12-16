@@ -1,0 +1,196 @@
+{
+	"name": "LegalActionRelatedParty",
+	"properties": {
+		"Name": "LegalActionRelatedParty",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "LegalActionId",
+					"Description": "The unique identifier of a Legal Action.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "LegalActionRelatedParty.cdm.json/LegalActionRelatedParty",
+						"Name": "LegalActionId"
+					}
+				},
+				{
+					"Name": "PartyId",
+					"Description": "The unique identifier of a Party.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "LegalActionRelatedParty.cdm.json/LegalActionRelatedParty",
+						"Name": "PartyId"
+					}
+				},
+				{
+					"Name": "LegalActionPartyRelationshipTypeId",
+					"Description": "The unique identifier of a Legal Action Party Relationship Type.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "LegalActionRelatedParty.cdm.json/LegalActionRelatedParty",
+						"Name": "LegalActionPartyRelationshipTypeId"
+					}
+				},
+				{
+					"Name": "PeriodStartDate",
+					"Description": "The period start date for which the legal action party relationship is in effect.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "LegalActionRelatedParty.cdm.json/LegalActionRelatedParty",
+						"Name": "PeriodStartDate"
+					}
+				},
+				{
+					"Name": "PeriodEndDate",
+					"Description": "The period end date for which the legal action party relationship is in effect.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "LegalActionRelatedParty.cdm.json/LegalActionRelatedParty",
+						"Name": "PeriodEndDate"
+					}
+				},
+				{
+					"Name": "LegalActionPartyRelationshipNote",
+					"Description": "A note, comment or additional information regarding the Legal Action - Party relationship.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "LegalActionRelatedParty.cdm.json/LegalActionRelatedParty",
+						"Name": "LegalActionPartyRelationshipNote"
+					}
+				}
+			],
+			"ColumnSetEntityName": "3d80caf6-1adf-4c58-836f-4bae18433cbc",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/LegalActionRelatedParty",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/LegalActionRelatedParty",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"LegalActionId\":{\"entity\":\"LegalActionRelatedParty.cdm.json/LegalActionRelatedParty\",\"name\":\"LegalActionId\"},\"PartyId\":{\"entity\":\"LegalActionRelatedParty.cdm.json/LegalActionRelatedParty\",\"name\":\"PartyId\"},\"LegalActionPartyRelationshipTypeId\":{\"entity\":\"LegalActionRelatedParty.cdm.json/LegalActionRelatedParty\",\"name\":\"LegalActionPartyRelationshipTypeId\"},\"PeriodStartDate\":{\"entity\":\"LegalActionRelatedParty.cdm.json/LegalActionRelatedParty\",\"name\":\"PeriodStartDate\"},\"PeriodEndDate\":{\"entity\":\"LegalActionRelatedParty.cdm.json/LegalActionRelatedParty\",\"name\":\"PeriodEndDate\"},\"LegalActionPartyRelationshipNote\":{\"entity\":\"LegalActionRelatedParty.cdm.json/LegalActionRelatedParty\",\"name\":\"LegalActionPartyRelationshipNote\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"LegalActionRelatedParty\",\"path\":\"LegalActionRelatedParty.cdm.json/LegalActionRelatedParty\"},\"description\":\"A party having a relationship with the legal action.\\n\\nEx:\\n- Defendant\\n- Plaintiff\",\"primaryKey\":[\"LegalActionId\",\"PartyId\",\"LegalActionPartyRelationshipTypeId\",\"PeriodStartDate\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"LegalActionRelatedParty.cdm.json/LegalActionRelatedParty\",\"name\":\"LegalActionId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Legal Action.\",\"isNullable\":false,\"name\":\"LegalActionId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"LegalActionRelatedParty.cdm.json/LegalActionRelatedParty\",\"name\":\"PartyId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a Party.\",\"isNullable\":false,\"name\":\"PartyId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"LegalActionRelatedParty.cdm.json/LegalActionRelatedParty\",\"name\":\"LegalActionPartyRelationshipTypeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Legal Action Party Relationship Type.\",\"isNullable\":false,\"name\":\"LegalActionPartyRelationshipTypeId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"LegalActionRelatedParty.cdm.json/LegalActionRelatedParty\",\"name\":\"PeriodStartDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The period start date for which the legal action party relationship is in effect.\",\"isNullable\":false,\"name\":\"PeriodStartDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"LegalActionRelatedParty.cdm.json/LegalActionRelatedParty\",\"name\":\"PeriodEndDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The period end date for which the legal action party relationship is in effect.\",\"isNullable\":true,\"name\":\"PeriodEndDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"LegalActionRelatedParty.cdm.json/LegalActionRelatedParty\",\"name\":\"LegalActionPartyRelationshipNote\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"A note, comment or additional information regarding the Legal Action - Party relationship.\",\"isNullable\":true,\"name\":\"LegalActionPartyRelationshipNote\"}]}}}",
+			"Description": "A party having a relationship with the legal action.\n\nEx:\n- Defendant\n- Plaintiff",
+			"DisplayFolderInfo": "{\"name\":\"Party\",\"colorCode\":\"#7D0F6C\"}",
+			"PrimaryKeys": "LegalActionId,PartyId,LegalActionPartyRelationshipTypeId,PeriodStartDate",
+			"spark.sql.sources.provider": "csv",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"LegalActionId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PartyId\",\"type\":\"long\",\"nullable\":false,\"metadata\":{}},{\"name\":\"LegalActionPartyRelationshipTypeId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PeriodStartDate\",\"type\":\"date\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PeriodEndDate\",\"type\":\"date\",\"nullable\":true,\"metadata\":{}},{\"name\":\"LegalActionPartyRelationshipNote\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "58825573-2d64-4cc2-8f88-69a061cb3c70",
+		"Description": "A party having a relationship with the legal action.\n\nEx:\n- Defendant\n- Plaintiff"
+	},
+	"type": "TABLE"
+}

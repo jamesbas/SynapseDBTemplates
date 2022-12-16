@@ -1,0 +1,137 @@
+{
+	"name": "FranchiseAgreementTerm",
+	"properties": {
+		"Name": "FranchiseAgreementTerm",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "FranchiseAgreementTermTypeId",
+					"Description": "The unique identifier of a franchise agreement term type.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "FranchiseAgreementTerm.cdm.json/FranchiseAgreementTerm",
+						"Name": "FranchiseAgreementTermTypeId"
+					}
+				},
+				{
+					"Name": "ContractId",
+					"Description": "The unique identifier of a Contract.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "FranchiseAgreementTerm.cdm.json/FranchiseAgreementTerm",
+						"Name": "ContractId"
+					}
+				},
+				{
+					"Name": "FranchiseAgreementTermNote",
+					"Description": "A note, comment or additional information regarding the franchise agreement term.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "FranchiseAgreementTerm.cdm.json/FranchiseAgreementTerm",
+						"Name": "FranchiseAgreementTermNote"
+					}
+				}
+			],
+			"ColumnSetEntityName": "aab9054a-4c77-4ccf-ac2d-74dd46e02f4d",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/FranchiseAgreementTerm",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/FranchiseAgreementTerm",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"FranchiseAgreementTermTypeId\":{\"entity\":\"FranchiseAgreementTerm.cdm.json/FranchiseAgreementTerm\",\"name\":\"FranchiseAgreementTermTypeId\"},\"ContractId\":{\"entity\":\"FranchiseAgreementTerm.cdm.json/FranchiseAgreementTerm\",\"name\":\"ContractId\"},\"FranchiseAgreementTermNote\":{\"entity\":\"FranchiseAgreementTerm.cdm.json/FranchiseAgreementTerm\",\"name\":\"FranchiseAgreementTermNote\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"FranchiseAgreementTerm\",\"path\":\"FranchiseAgreementTerm.cdm.json/FranchiseAgreementTerm\"},\"description\":\"A specific term that is specified in the Franchise Agreement.\",\"primaryKey\":[\"FranchiseAgreementTermTypeId\",\"ContractId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"FranchiseAgreementTerm.cdm.json/FranchiseAgreementTerm\",\"name\":\"FranchiseAgreementTermTypeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a franchise agreement term type.\",\"isNullable\":false,\"name\":\"FranchiseAgreementTermTypeId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"FranchiseAgreementTerm.cdm.json/FranchiseAgreementTerm\",\"name\":\"ContractId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Contract.\",\"isNullable\":false,\"name\":\"ContractId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"FranchiseAgreementTerm.cdm.json/FranchiseAgreementTerm\",\"name\":\"FranchiseAgreementTermNote\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"A note, comment or additional information regarding the franchise agreement term.\",\"isNullable\":true,\"name\":\"FranchiseAgreementTermNote\"}]}}}",
+			"Description": "A specific term that is specified in the Franchise Agreement.",
+			"DisplayFolderInfo": "{\"name\":\"Contract\",\"colorCode\":\"#000F5C\"}",
+			"PrimaryKeys": "FranchiseAgreementTermTypeId,ContractId",
+			"spark.sql.sources.provider": "csv",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"FranchiseAgreementTermTypeId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"ContractId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"FranchiseAgreementTermNote\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "fb28db89-f328-4286-a7c6-d0d64d042a2a",
+		"Description": "A specific term that is specified in the Franchise Agreement."
+	},
+	"type": "TABLE"
+}

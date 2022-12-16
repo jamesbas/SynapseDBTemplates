@@ -1,0 +1,137 @@
+{
+	"name": "ItemType",
+	"properties": {
+		"Name": "ItemType",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "ItemTypeId",
+					"Description": "The unique identifier of an Item Type.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ItemType.cdm.json/ItemType",
+						"Name": "ItemTypeId"
+					}
+				},
+				{
+					"Name": "ItemTypeName",
+					"Description": "The name of an Item Type.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 256,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ItemType.cdm.json/ItemType",
+						"Name": "ItemTypeName"
+					}
+				},
+				{
+					"Name": "ItemTypeDescription",
+					"Description": "The description of an Item Type.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ItemType.cdm.json/ItemType",
+						"Name": "ItemTypeDescription"
+					}
+				}
+			],
+			"ColumnSetEntityName": "e8f21fd1-5a4a-4f2e-b6a5-45c36a95fb2f",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/ItemType",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/ItemType",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"ItemTypeId\":{\"entity\":\"ItemType.cdm.json/ItemType\",\"name\":\"ItemTypeId\"},\"ItemTypeName\":{\"entity\":\"ItemType.cdm.json/ItemType\",\"name\":\"ItemTypeName\"},\"ItemTypeDescription\":{\"entity\":\"ItemType.cdm.json/ItemType\",\"name\":\"ItemTypeDescription\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"ItemType\",\"path\":\"ItemType.cdm.json/ItemType\"},\"description\":\"A type of Item based on common characteristics, function or similar criteria.\\n\\nEx:\\nTOOL\\nAn inventory Item that is checked out to an employee and is to be returned.\\n\\nKIT\\nA consolidation or grouping of Item(s) that are packaged together by a later assembly.  A number of separate Stock Keeping Units that are supplied or used as one item under its own Part Number  Kitting is really an assembly operation.\\n\\nFINISHED GOOD (\\\"Product\\\")\\nInventory to which the final increments of value have been added through manufacturing, which equates to a 'product'.\\n\\nREPLACEMENT PART\\nReplacement parts are generally used as components in Products and are not considered 'Finished Goods'.    However, Replacement Parts that are sold are often considered Products and handled as such.\\n\\nRAW MATERIAL\\nItems purchased from a Vendor for assembly into a company's products.  Raw materials usually require some manufacturing operation to be performed upon them before they can be assembled.\\n\\nUNIT\\nOne inventoried piece such as a nut, bolt or washer.   Units are usually identified by an item number. By definition, all units are completely interchangeable.\",\"primaryKey\":[\"ItemTypeId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ItemType.cdm.json/ItemType\",\"name\":\"ItemTypeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of an Item Type.\",\"isNullable\":false,\"name\":\"ItemTypeId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ItemType.cdm.json/ItemType\",\"name\":\"ItemTypeName\"},\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"The name of an Item Type.\",\"isNullable\":true,\"name\":\"ItemTypeName\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ItemType.cdm.json/ItemType\",\"name\":\"ItemTypeDescription\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"The description of an Item Type.\",\"isNullable\":true,\"name\":\"ItemTypeDescription\"}]}}}",
+			"Description": "A type of Item based on common characteristics, function or similar criteria.\n\nEx:\nTOOL\nAn inventory Item that is checked out to an employee and is to be returned.\n\nKIT\nA consolidation or grouping of Item(s) that are packaged together by a later assembly.  A number of separate Stock Keeping Units that are supplied or used as one item under its own Part Number  Kitting is really an assembly operation.\n\nFINISHED GOOD (\"Product\")\nInventory to which the final increments of value have been added through manufacturing, which equates to a 'product'.\n\nREPLACEMENT PART\nReplacement parts are generally used as components in Products and are not considered 'Finished Goods'.    However, Replacement Parts that are sold are often considered Products and handled as such.\n\nRAW MATERIAL\nItems purchased from a Vendor for assembly into a company's products.  Raw materials usually require some manufacturing operation to be performed upon them before they can be assembled.\n\nUNIT\nOne inventoried piece such as a nut, bolt or washer.   Units are usually identified by an item number. By definition, all units are completely interchangeable.",
+			"DisplayFolderInfo": "{\"name\":\"Inventory\",\"colorCode\":\"#034736\"}",
+			"PrimaryKeys": "ItemTypeId",
+			"spark.sql.sources.provider": "csv",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"ItemTypeId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"ItemTypeName\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ItemTypeDescription\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "0714f4ba-ac53-47c2-a05b-8a3a5fdca680",
+		"Description": "A type of Item based on common characteristics, function or similar criteria.\n\nEx:\nTOOL\nAn inventory Item that is checked out to an employee and is to be returned.\n\nKIT\nA consolidation or grouping of Item(s) that are packaged together by a later assembly.  A number of separate Stock Keeping Units that are supplied or used as one item under its own Part Number  Kitting is really an assembly operation.\n\nFINISHED GOOD (\"Product\")\nInventory to which the final increments of value have been added through manufacturing, which equates to a 'product'.\n\nREPLACEMENT PART\nReplacement parts are generally used as components in Products and are not considered 'Finished Goods'.    However, Replacement Parts that are sold are often considered Products and handled as such.\n\nRAW MATERIAL\nItems purchased from a Vendor for assembly into a company's products.  Raw materials usually require some manufacturing operation to be performed upon them before they can be assembled.\n\nUNIT\nOne inventoried piece such as a nut, bolt or washer.   Units are usually identified by an item number. By definition, all units are completely interchangeable."
+	},
+	"type": "TABLE"
+}

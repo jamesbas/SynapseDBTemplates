@@ -1,0 +1,29 @@
+{
+	"name": "relationship-xxxsapieju",
+	"properties": {
+		"Name": "relationship-xxxsapieju",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "EmploymentStatus",
+		"ToTableName": "PartyEmployment",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "EmploymentStatusId",
+				"ToColumnName": "EmploymentStatusId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"EmploymentStatus.cdm.json/EmploymentStatus\",\"toEntity\":\"PartyEmployment.cdm.json/PartyEmployment\",\"joinPairs\":[{\"fromAttribute\":\"EmploymentStatusId\",\"toAttribute\":\"EmploymentStatusId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "6a7ec433-67fa-46e5-b74b-2d97d6349e11"
+	},
+	"type": "RELATIONSHIP"
+}

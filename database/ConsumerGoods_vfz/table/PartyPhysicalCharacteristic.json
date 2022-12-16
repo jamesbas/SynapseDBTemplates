@@ -1,0 +1,215 @@
+{
+	"name": "PartyPhysicalCharacteristic",
+	"properties": {
+		"Name": "PartyPhysicalCharacteristic",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "PartyId",
+					"Description": "The unique identifier of a Party.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyPhysicalCharacteristic.cdm.json/PartyPhysicalCharacteristic",
+						"Name": "PartyId"
+					}
+				},
+				{
+					"Name": "PhysicalCharacteristicId",
+					"Description": "The unique identifier of a physical characteristic.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyPhysicalCharacteristic.cdm.json/PartyPhysicalCharacteristic",
+						"Name": "PhysicalCharacteristicId"
+					}
+				},
+				{
+					"Name": "PeriodStartDate",
+					"Description": "The period start date for which the associated data is effective or 'as-of'.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyPhysicalCharacteristic.cdm.json/PartyPhysicalCharacteristic",
+						"Name": "PeriodStartDate"
+					}
+				},
+				{
+					"Name": "PeriodEndDate",
+					"Description": "The period end date for which the associated data is effective or 'as-of'.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyPhysicalCharacteristic.cdm.json/PartyPhysicalCharacteristic",
+						"Name": "PeriodEndDate"
+					}
+				},
+				{
+					"Name": "PartyPhysicalCharacteristicNumber",
+					"Description": "The numeric parameter associated with the biometric.\n\nEx:\n\nWeight = 175\nHeight = 5'10\"",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyPhysicalCharacteristic.cdm.json/PartyPhysicalCharacteristic",
+						"Name": "PartyPhysicalCharacteristicNumber"
+					}
+				},
+				{
+					"Name": "PartyPhysicalCharacteristicValue",
+					"Description": "The non-numeric parameter associated with the biometric.\n\nEx:\n\nEye color = blue",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyPhysicalCharacteristic.cdm.json/PartyPhysicalCharacteristic",
+						"Name": "PartyPhysicalCharacteristicValue"
+					}
+				},
+				{
+					"Name": "PartyPhysicalCharacteristicNote",
+					"Description": "A note, comment or additional information regarding the party physical characteristic.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyPhysicalCharacteristic.cdm.json/PartyPhysicalCharacteristic",
+						"Name": "PartyPhysicalCharacteristicNote"
+					}
+				}
+			],
+			"ColumnSetEntityName": "5a5be1e6-1cb0-4459-8b4c-c1beac3d496c",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/PartyPhysicalCharacteristic",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/PartyPhysicalCharacteristic",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"PartyId\":{\"entity\":\"PartyPhysicalCharacteristic.cdm.json/PartyPhysicalCharacteristic\",\"name\":\"PartyId\"},\"PhysicalCharacteristicId\":{\"entity\":\"PartyPhysicalCharacteristic.cdm.json/PartyPhysicalCharacteristic\",\"name\":\"PhysicalCharacteristicId\"},\"PeriodStartDate\":{\"entity\":\"PartyPhysicalCharacteristic.cdm.json/PartyPhysicalCharacteristic\",\"name\":\"PeriodStartDate\"},\"PeriodEndDate\":{\"entity\":\"PartyPhysicalCharacteristic.cdm.json/PartyPhysicalCharacteristic\",\"name\":\"PeriodEndDate\"},\"PartyPhysicalCharacteristicNumber\":{\"entity\":\"PartyPhysicalCharacteristic.cdm.json/PartyPhysicalCharacteristic\",\"name\":\"PartyPhysicalCharacteristicNumber\"},\"PartyPhysicalCharacteristicValue\":{\"entity\":\"PartyPhysicalCharacteristic.cdm.json/PartyPhysicalCharacteristic\",\"name\":\"PartyPhysicalCharacteristicValue\"},\"PartyPhysicalCharacteristicNote\":{\"entity\":\"PartyPhysicalCharacteristic.cdm.json/PartyPhysicalCharacteristic\",\"name\":\"PartyPhysicalCharacteristicNote\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"PartyPhysicalCharacteristic\",\"path\":\"PartyPhysicalCharacteristic.cdm.json/PartyPhysicalCharacteristic\"},\"description\":\"The physical characteristics that identify an individual.\",\"primaryKey\":[\"PartyId\",\"PhysicalCharacteristicId\",\"PeriodStartDate\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyPhysicalCharacteristic.cdm.json/PartyPhysicalCharacteristic\",\"name\":\"PartyId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a Party.\",\"isNullable\":false,\"name\":\"PartyId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyPhysicalCharacteristic.cdm.json/PartyPhysicalCharacteristic\",\"name\":\"PhysicalCharacteristicId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a physical characteristic.\",\"isNullable\":false,\"name\":\"PhysicalCharacteristicId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyPhysicalCharacteristic.cdm.json/PartyPhysicalCharacteristic\",\"name\":\"PeriodStartDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The period start date for which the associated data is effective or 'as-of'.\",\"isNullable\":false,\"name\":\"PeriodStartDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyPhysicalCharacteristic.cdm.json/PartyPhysicalCharacteristic\",\"name\":\"PeriodEndDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The period end date for which the associated data is effective or 'as-of'.\",\"isNullable\":true,\"name\":\"PeriodEndDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyPhysicalCharacteristic.cdm.json/PartyPhysicalCharacteristic\",\"name\":\"PartyPhysicalCharacteristicNumber\"},\"dataType\":\"integer\",\"description\":\"The numeric parameter associated with the biometric.\\n\\nEx:\\n\\nWeight = 175\\nHeight = 5'10\\\"\",\"isNullable\":true,\"name\":\"PartyPhysicalCharacteristicNumber\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyPhysicalCharacteristic.cdm.json/PartyPhysicalCharacteristic\",\"name\":\"PartyPhysicalCharacteristicValue\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"The non-numeric parameter associated with the biometric.\\n\\nEx:\\n\\nEye color = blue\",\"isNullable\":true,\"name\":\"PartyPhysicalCharacteristicValue\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyPhysicalCharacteristic.cdm.json/PartyPhysicalCharacteristic\",\"name\":\"PartyPhysicalCharacteristicNote\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"A note, comment or additional information regarding the party physical characteristic.\",\"isNullable\":true,\"name\":\"PartyPhysicalCharacteristicNote\"}]}}}",
+			"Description": "The physical characteristics that identify an individual.",
+			"DisplayFolderInfo": "{\"name\":\"Party\",\"colorCode\":\"#7D0F6C\"}",
+			"PrimaryKeys": "PartyId,PhysicalCharacteristicId,PeriodStartDate",
+			"spark.sql.sources.provider": "csv",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"PartyId\",\"type\":\"long\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PhysicalCharacteristicId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PeriodStartDate\",\"type\":\"date\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PeriodEndDate\",\"type\":\"date\",\"nullable\":true,\"metadata\":{}},{\"name\":\"PartyPhysicalCharacteristicNumber\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"PartyPhysicalCharacteristicValue\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"PartyPhysicalCharacteristicNote\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "73fa49ff-7dad-4c9e-a968-d3cb0d5b7460",
+		"Description": "The physical characteristics that identify an individual."
+	},
+	"type": "TABLE"
+}

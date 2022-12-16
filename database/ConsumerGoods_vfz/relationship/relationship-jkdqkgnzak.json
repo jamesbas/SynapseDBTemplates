@@ -1,0 +1,29 @@
+{
+	"name": "relationship-jkdqkgnzak",
+	"properties": {
+		"Name": "relationship-jkdqkgnzak",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "Contract",
+		"ToTableName": "NonCompetitionEmployeeAgreement",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "ContractId",
+				"ToColumnName": "ContractId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"Contract.cdm.json/Contract\",\"toEntity\":\"NonCompetitionEmployeeAgreement.cdm.json/NonCompetitionEmployeeAgreement\",\"joinPairs\":[{\"fromAttribute\":\"ContractId\",\"toAttribute\":\"ContractId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "bd8a6e54-b2d0-428f-b704-d26117d58950"
+	},
+	"type": "RELATIONSHIP"
+}

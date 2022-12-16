@@ -1,0 +1,29 @@
+{
+	"name": "relationship-giwcybnbuf",
+	"properties": {
+		"Name": "relationship-giwcybnbuf",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "BehavioralCriteria",
+		"ToTableName": "PartyBehavioralCriteria",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "BehavioralCriteriaId",
+				"ToColumnName": "BehavioralCriteriaId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"BehavioralCriteria.cdm.json/BehavioralCriteria\",\"toEntity\":\"PartyBehavioralCriteria.cdm.json/PartyBehavioralCriteria\",\"joinPairs\":[{\"fromAttribute\":\"BehavioralCriteriaId\",\"toAttribute\":\"BehavioralCriteriaId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "4ba44bf2-5f70-4f11-a554-cbfa7ce1b278"
+	},
+	"type": "RELATIONSHIP"
+}

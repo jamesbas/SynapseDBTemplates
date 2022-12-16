@@ -1,0 +1,29 @@
+{
+	"name": "relationship-edmxqmxbkm",
+	"properties": {
+		"Name": "relationship-edmxqmxbkm",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "DoNotContactRegistryType",
+		"ToTableName": "DoNotContactRegistry",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "DoNotContactRegistryTypeId",
+				"ToColumnName": "DoNotContactRegistryTypeId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"DoNotContactRegistryType.cdm.json/DoNotContactRegistryType\",\"toEntity\":\"DoNotContactRegistry.cdm.json/DoNotContactRegistry\",\"joinPairs\":[{\"fromAttribute\":\"DoNotContactRegistryTypeId\",\"toAttribute\":\"DoNotContactRegistryTypeId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "d48db03e-5545-40d4-95fc-f752f424581e"
+	},
+	"type": "RELATIONSHIP"
+}

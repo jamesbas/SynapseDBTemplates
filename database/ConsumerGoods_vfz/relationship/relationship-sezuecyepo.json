@@ -1,0 +1,29 @@
+{
+	"name": "relationship-sezuecyepo",
+	"properties": {
+		"Name": "relationship-sezuecyepo",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "DistributorshipAgreement",
+		"ToTableName": "DistributorshipAgreementProduct",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "ContractId",
+				"ToColumnName": "ContractId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"DistributorshipAgreement.cdm.json/DistributorshipAgreement\",\"toEntity\":\"DistributorshipAgreementProduct.cdm.json/DistributorshipAgreementProduct\",\"joinPairs\":[{\"fromAttribute\":\"ContractId\",\"toAttribute\":\"ContractId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "53b02e34-1740-4f57-8fe2-ff4d650be9ad"
+	},
+	"type": "RELATIONSHIP"
+}

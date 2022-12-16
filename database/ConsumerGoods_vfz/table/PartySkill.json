@@ -1,0 +1,215 @@
+{
+	"name": "PartySkill",
+	"properties": {
+		"Name": "PartySkill",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "PartyId",
+					"Description": "The unique identifier of a Party.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartySkill.cdm.json/PartySkill",
+						"Name": "PartyId"
+					}
+				},
+				{
+					"Name": "SkillId",
+					"Description": "The unique identifier of a Skill.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartySkill.cdm.json/PartySkill",
+						"Name": "SkillId"
+					}
+				},
+				{
+					"Name": "PeriodStartDate",
+					"Description": "The start date that the individual's skill is effective.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartySkill.cdm.json/PartySkill",
+						"Name": "PeriodStartDate"
+					}
+				},
+				{
+					"Name": "PeriodEndDate",
+					"Description": "The end date that the individual's skill is effective.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartySkill.cdm.json/PartySkill",
+						"Name": "PeriodEndDate"
+					}
+				},
+				{
+					"Name": "YearsExperience",
+					"Description": "The number of years of experience held by the party in regard to the skill.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartySkill.cdm.json/PartySkill",
+						"Name": "YearsExperience"
+					}
+				},
+				{
+					"Name": "SkillLevelId",
+					"Description": "The unique identifier of a Skill Level.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartySkill.cdm.json/PartySkill",
+						"Name": "SkillLevelId"
+					}
+				},
+				{
+					"Name": "PartySkillNote",
+					"Description": "A note, comment or additional information regarding the Party Skill.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartySkill.cdm.json/PartySkill",
+						"Name": "PartySkillNote"
+					}
+				}
+			],
+			"ColumnSetEntityName": "1563938f-2ad3-4067-81b6-1242c3faae45",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/PartySkill",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/PartySkill",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"PartyId\":{\"entity\":\"PartySkill.cdm.json/PartySkill\",\"name\":\"PartyId\"},\"SkillId\":{\"entity\":\"PartySkill.cdm.json/PartySkill\",\"name\":\"SkillId\"},\"PeriodStartDate\":{\"entity\":\"PartySkill.cdm.json/PartySkill\",\"name\":\"PeriodStartDate\"},\"PeriodEndDate\":{\"entity\":\"PartySkill.cdm.json/PartySkill\",\"name\":\"PeriodEndDate\"},\"YearsExperience\":{\"entity\":\"PartySkill.cdm.json/PartySkill\",\"name\":\"YearsExperience\"},\"SkillLevelId\":{\"entity\":\"PartySkill.cdm.json/PartySkill\",\"name\":\"SkillLevelId\"},\"PartySkillNote\":{\"entity\":\"PartySkill.cdm.json/PartySkill\",\"name\":\"PartySkillNote\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"PartySkill\",\"path\":\"PartySkill.cdm.json/PartySkill\"},\"description\":\"The Skill(s) held by the Party.\",\"primaryKey\":[\"PartyId\",\"SkillId\",\"PeriodStartDate\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartySkill.cdm.json/PartySkill\",\"name\":\"PartyId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a Party.\",\"isNullable\":false,\"name\":\"PartyId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartySkill.cdm.json/PartySkill\",\"name\":\"SkillId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Skill.\",\"isNullable\":false,\"name\":\"SkillId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartySkill.cdm.json/PartySkill\",\"name\":\"PeriodStartDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The start date that the individual's skill is effective.\",\"isNullable\":false,\"name\":\"PeriodStartDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartySkill.cdm.json/PartySkill\",\"name\":\"PeriodEndDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The end date that the individual's skill is effective.\",\"isNullable\":true,\"name\":\"PeriodEndDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartySkill.cdm.json/PartySkill\",\"name\":\"YearsExperience\"},\"dataType\":\"integer\",\"description\":\"The number of years of experience held by the party in regard to the skill.\",\"isNullable\":true,\"name\":\"YearsExperience\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartySkill.cdm.json/PartySkill\",\"name\":\"SkillLevelId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Skill Level.\",\"isNullable\":true,\"name\":\"SkillLevelId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartySkill.cdm.json/PartySkill\",\"name\":\"PartySkillNote\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"A note, comment or additional information regarding the Party Skill.\",\"isNullable\":true,\"name\":\"PartySkillNote\"}]}}}",
+			"Description": "The Skill(s) held by the Party.",
+			"DisplayFolderInfo": "{\"name\":\"Party\",\"colorCode\":\"#7D0F6C\"}",
+			"PrimaryKeys": "PartyId,SkillId,PeriodStartDate",
+			"spark.sql.sources.provider": "csv",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"PartyId\",\"type\":\"long\",\"nullable\":false,\"metadata\":{}},{\"name\":\"SkillId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PeriodStartDate\",\"type\":\"date\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PeriodEndDate\",\"type\":\"date\",\"nullable\":true,\"metadata\":{}},{\"name\":\"YearsExperience\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"SkillLevelId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"PartySkillNote\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "ee1d1931-2da6-4fa6-bffe-3ca9e9adbdd4",
+		"Description": "The Skill(s) held by the Party."
+	},
+	"type": "TABLE"
+}

@@ -1,0 +1,137 @@
+{
+	"name": "VarLicensedProduct",
+	"properties": {
+		"Name": "VarLicensedProduct",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "ContractId",
+					"Description": "The unique identifier of a Contract.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "VarLicensedProduct.cdm.json/VarLicensedProduct",
+						"Name": "ContractId"
+					}
+				},
+				{
+					"Name": "ProductId",
+					"Description": "The unique identifier of a Product.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "VarLicensedProduct.cdm.json/VarLicensedProduct",
+						"Name": "ProductId"
+					}
+				},
+				{
+					"Name": "LicenseRestriction",
+					"Description": "A statement regarding the restrictions that are applied to the licensing of the Product(s) by the VAR.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "VarLicensedProduct.cdm.json/VarLicensedProduct",
+						"Name": "LicenseRestriction"
+					}
+				}
+			],
+			"ColumnSetEntityName": "c5da66cf-3d2e-4d2b-9006-d6fec047c318",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/VarLicensedProduct",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/VarLicensedProduct",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"ContractId\":{\"entity\":\"VarLicensedProduct.cdm.json/VarLicensedProduct\",\"name\":\"ContractId\"},\"ProductId\":{\"entity\":\"VarLicensedProduct.cdm.json/VarLicensedProduct\",\"name\":\"ProductId\"},\"LicenseRestriction\":{\"entity\":\"VarLicensedProduct.cdm.json/VarLicensedProduct\",\"name\":\"LicenseRestriction\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"VarLicensedProduct\",\"path\":\"VarLicensedProduct.cdm.json/VarLicensedProduct\"},\"description\":\"The product(s) licensed in conjunction with the associated VAR agreement.\",\"primaryKey\":[\"ContractId\",\"ProductId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"VarLicensedProduct.cdm.json/VarLicensedProduct\",\"name\":\"ContractId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Contract.\",\"isNullable\":false,\"name\":\"ContractId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"VarLicensedProduct.cdm.json/VarLicensedProduct\",\"name\":\"ProductId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a Product.\",\"isNullable\":false,\"name\":\"ProductId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"VarLicensedProduct.cdm.json/VarLicensedProduct\",\"name\":\"LicenseRestriction\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"A statement regarding the restrictions that are applied to the licensing of the Product(s) by the VAR.\",\"isNullable\":true,\"name\":\"LicenseRestriction\"}]}}}",
+			"Description": "The product(s) licensed in conjunction with the associated VAR agreement.",
+			"DisplayFolderInfo": "{\"name\":\"Contract\",\"colorCode\":\"#000F5C\"}",
+			"PrimaryKeys": "ContractId,ProductId",
+			"spark.sql.sources.provider": "csv",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"ContractId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"ProductId\",\"type\":\"long\",\"nullable\":false,\"metadata\":{}},{\"name\":\"LicenseRestriction\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "78b37285-b6f3-4cb6-aa6c-1ee515784a1b",
+		"Description": "The product(s) licensed in conjunction with the associated VAR agreement."
+	},
+	"type": "TABLE"
+}

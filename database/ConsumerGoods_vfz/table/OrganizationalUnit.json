@@ -1,0 +1,137 @@
+{
+	"name": "OrganizationalUnit",
+	"properties": {
+		"Name": "OrganizationalUnit",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "PartyId",
+					"Description": "The unique identifier of a Party.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "OrganizationalUnit.cdm.json/OrganizationalUnit",
+						"Name": "PartyId"
+					}
+				},
+				{
+					"Name": "OrganizationUnitFunction",
+					"Description": "A statement of the organization units functional responsibility.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "OrganizationalUnit.cdm.json/OrganizationalUnit",
+						"Name": "OrganizationUnitFunction"
+					}
+				},
+				{
+					"Name": "GlobalLocationNumber",
+					"Description": "The Global Location Number (GLN) is a simple tool used to uniquely identify locations. It can be used to identify physical locations such as a warehouse, legal entities, or a function / department within a legal entity. The GLN is part of the GS1 system of standards.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 13,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "OrganizationalUnit.cdm.json/OrganizationalUnit",
+						"Name": "GlobalLocationNumber"
+					}
+				}
+			],
+			"ColumnSetEntityName": "4b5fdbf5-d753-4b49-9dac-cafc16b47c99",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/OrganizationalUnit",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/OrganizationalUnit",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"PartyId\":{\"entity\":\"OrganizationalUnit.cdm.json/OrganizationalUnit\",\"name\":\"PartyId\"},\"OrganizationUnitFunction\":{\"entity\":\"OrganizationalUnit.cdm.json/OrganizationalUnit\",\"name\":\"OrganizationUnitFunction\"},\"GlobalLocationNumber\":{\"entity\":\"OrganizationalUnit.cdm.json/OrganizationalUnit\",\"name\":\"GlobalLocationNumber\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"OrganizationalUnit\",\"path\":\"OrganizationalUnit.cdm.json/OrganizationalUnit\"},\"description\":\"A unit of a organization party that performs a specific function or pursues a common interest on behalf of the sponsoring organization.\\n\\nEx:\\n- Customs Department\",\"primaryKey\":[\"PartyId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"OrganizationalUnit.cdm.json/OrganizationalUnit\",\"name\":\"PartyId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a Party.\",\"isNullable\":false,\"name\":\"PartyId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"OrganizationalUnit.cdm.json/OrganizationalUnit\",\"name\":\"OrganizationUnitFunction\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"A statement of the organization units functional responsibility.\",\"isNullable\":true,\"name\":\"OrganizationUnitFunction\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"OrganizationalUnit.cdm.json/OrganizationalUnit\",\"name\":\"GlobalLocationNumber\"},\"dataType\":\"decimal\",\"dataTypeLength\":13,\"description\":\"The Global Location Number (GLN) is a simple tool used to uniquely identify locations. It can be used to identify physical locations such as a warehouse, legal entities, or a function / department within a legal entity. The GLN is part of the GS1 system of standards.\",\"isNullable\":true,\"scale\":0,\"name\":\"GlobalLocationNumber\"}]}}}",
+			"Description": "A unit of a organization party that performs a specific function or pursues a common interest on behalf of the sponsoring organization.\n\nEx:\n- Customs Department",
+			"DisplayFolderInfo": "{\"name\":\"Party\",\"colorCode\":\"#7D0F6C\"}",
+			"PrimaryKeys": "PartyId",
+			"spark.sql.sources.provider": "csv",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"PartyId\",\"type\":\"long\",\"nullable\":false,\"metadata\":{}},{\"name\":\"OrganizationUnitFunction\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"GlobalLocationNumber\",\"type\":\"decimal(13,0)\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "8c366e5f-cfd9-4f50-8f29-7ffda963166d",
+		"Description": "A unit of a organization party that performs a specific function or pursues a common interest on behalf of the sponsoring organization.\n\nEx:\n- Customs Department"
+	},
+	"type": "TABLE"
+}

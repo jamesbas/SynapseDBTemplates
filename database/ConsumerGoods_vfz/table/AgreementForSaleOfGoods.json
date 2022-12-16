@@ -1,0 +1,328 @@
+{
+	"name": "AgreementForSaleOfGoods",
+	"properties": {
+		"Name": "AgreementForSaleOfGoods",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "ContractId",
+					"Description": "The unique identifier of a Contract.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "AgreementForSaleOfGoods.cdm.json/AgreementForSaleOfGoods",
+						"Name": "ContractId"
+					}
+				},
+				{
+					"Name": "AgreementEffectiveDate",
+					"Description": "The effective date of the agreement.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "AgreementForSaleOfGoods.cdm.json/AgreementForSaleOfGoods",
+						"Name": "AgreementEffectiveDate"
+					}
+				},
+				{
+					"Name": "SaleSection",
+					"Description": "This section establishes that there is a sale of property between the seller and the buyer.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "AgreementForSaleOfGoods.cdm.json/AgreementForSaleOfGoods",
+						"Name": "SaleSection"
+					}
+				},
+				{
+					"Name": "PriceSection",
+					"Description": "This section establishes the purchase price of the goods and when payment must be made.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "AgreementForSaleOfGoods.cdm.json/AgreementForSaleOfGoods",
+						"Name": "PriceSection"
+					}
+				},
+				{
+					"Name": "ShippingSection",
+					"Description": "This section establishes which party will have responsibility for shipping the goods to the seller location as well as the point or location at which risk and liability for the goods are transferred to the other party.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "AgreementForSaleOfGoods.cdm.json/AgreementForSaleOfGoods",
+						"Name": "ShippingSection"
+					}
+				},
+				{
+					"Name": "RightOfInspectionSection",
+					"Description": "This section establishes that the buyer has the right to inspect the goods on arrival at the buyer's facility and the obligation to notify the seller about any problems with the goods within some period.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "AgreementForSaleOfGoods.cdm.json/AgreementForSaleOfGoods",
+						"Name": "RightOfInspectionSection"
+					}
+				},
+				{
+					"Name": "IdentificationOfGoodsSection",
+					"Description": "Within the Uniform Commercial Code (UCC) specific rights and obligations in an agreement become certain only when the goods are identified.   This section establishes that the goods are only 'identified' when both buyer and seller have specified the goods to be sold.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "AgreementForSaleOfGoods.cdm.json/AgreementForSaleOfGoods",
+						"Name": "IdentificationOfGoodsSection"
+					}
+				},
+				{
+					"Name": "WarrantySection",
+					"Description": "The type and details of the warranty provided the buyer by the seller for the associated products (goods).\n\nExamples:\n\n\"Warranty of Title\" - guarantees that the seller actually does own the goods to be sold\n\n\"Limited Warranty\" - provides a basic warranty with certain specific coverage exclusions\n\n\"Unlimited Warranty\" - covers all aspects of the products replacement upon failure",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "AgreementForSaleOfGoods.cdm.json/AgreementForSaleOfGoods",
+						"Name": "WarrantySection"
+					}
+				},
+				{
+					"Name": "TransferOfTitleSection",
+					"Description": "This section establishes whether the buyer has title and ownership of the products until the buyer has paid full purchase price to the seller (title has passed).",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "AgreementForSaleOfGoods.cdm.json/AgreementForSaleOfGoods",
+						"Name": "TransferOfTitleSection"
+					}
+				},
+				{
+					"Name": "LimitationOfLiabilitySection",
+					"Description": "This section limits the liability of the seller to the purchase price of the products.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "AgreementForSaleOfGoods.cdm.json/AgreementForSaleOfGoods",
+						"Name": "LimitationOfLiabilitySection"
+					}
+				},
+				{
+					"Name": "TaxesSection",
+					"Description": "This section establishes that the buyer shall pay applicable sales, use and excise taxes.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "AgreementForSaleOfGoods.cdm.json/AgreementForSaleOfGoods",
+						"Name": "TaxesSection"
+					}
+				},
+				{
+					"Name": "FinalAgreementSection",
+					"Description": "This section makes it clear that this is the final agreement between parties and replaces or supersedes any prior discussions or agreements.    Any amendments to this agreement must be made in writing.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "AgreementForSaleOfGoods.cdm.json/AgreementForSaleOfGoods",
+						"Name": "FinalAgreementSection"
+					}
+				},
+				{
+					"Name": "SeverabilitySection",
+					"Description": "This section attempts to keep the agreement in effect even if a court rules that a portion is invalid.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "AgreementForSaleOfGoods.cdm.json/AgreementForSaleOfGoods",
+						"Name": "SeverabilitySection"
+					}
+				}
+			],
+			"ColumnSetEntityName": "d2626611-c6f6-4357-94b6-1c777726856d",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/AgreementForSaleOfGoods",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/AgreementForSaleOfGoods",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"ContractId\":{\"entity\":\"AgreementForSaleOfGoods.cdm.json/AgreementForSaleOfGoods\",\"name\":\"ContractId\"},\"AgreementEffectiveDate\":{\"entity\":\"AgreementForSaleOfGoods.cdm.json/AgreementForSaleOfGoods\",\"name\":\"AgreementEffectiveDate\"},\"SaleSection\":{\"entity\":\"AgreementForSaleOfGoods.cdm.json/AgreementForSaleOfGoods\",\"name\":\"SaleSection\"},\"PriceSection\":{\"entity\":\"AgreementForSaleOfGoods.cdm.json/AgreementForSaleOfGoods\",\"name\":\"PriceSection\"},\"ShippingSection\":{\"entity\":\"AgreementForSaleOfGoods.cdm.json/AgreementForSaleOfGoods\",\"name\":\"ShippingSection\"},\"RightOfInspectionSection\":{\"entity\":\"AgreementForSaleOfGoods.cdm.json/AgreementForSaleOfGoods\",\"name\":\"RightOfInspectionSection\"},\"IdentificationOfGoodsSection\":{\"entity\":\"AgreementForSaleOfGoods.cdm.json/AgreementForSaleOfGoods\",\"name\":\"IdentificationOfGoodsSection\"},\"WarrantySection\":{\"entity\":\"AgreementForSaleOfGoods.cdm.json/AgreementForSaleOfGoods\",\"name\":\"WarrantySection\"},\"TransferOfTitleSection\":{\"entity\":\"AgreementForSaleOfGoods.cdm.json/AgreementForSaleOfGoods\",\"name\":\"TransferOfTitleSection\"},\"LimitationOfLiabilitySection\":{\"entity\":\"AgreementForSaleOfGoods.cdm.json/AgreementForSaleOfGoods\",\"name\":\"LimitationOfLiabilitySection\"},\"TaxesSection\":{\"entity\":\"AgreementForSaleOfGoods.cdm.json/AgreementForSaleOfGoods\",\"name\":\"TaxesSection\"},\"FinalAgreementSection\":{\"entity\":\"AgreementForSaleOfGoods.cdm.json/AgreementForSaleOfGoods\",\"name\":\"FinalAgreementSection\"},\"SeverabilitySection\":{\"entity\":\"AgreementForSaleOfGoods.cdm.json/AgreementForSaleOfGoods\",\"name\":\"SeverabilitySection\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"AgreementForSaleOfGoods\",\"path\":\"AgreementForSaleOfGoods.cdm.json/AgreementForSaleOfGoods\"},\"description\":\"This agreement is for the sale of goods (products) between two parties, a seller and a buyer.\",\"primaryKey\":[\"ContractId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"AgreementForSaleOfGoods.cdm.json/AgreementForSaleOfGoods\",\"name\":\"ContractId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Contract.\",\"isNullable\":false,\"name\":\"ContractId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"AgreementForSaleOfGoods.cdm.json/AgreementForSaleOfGoods\",\"name\":\"AgreementEffectiveDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The effective date of the agreement.\",\"isNullable\":true,\"name\":\"AgreementEffectiveDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"AgreementForSaleOfGoods.cdm.json/AgreementForSaleOfGoods\",\"name\":\"SaleSection\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"This section establishes that there is a sale of property between the seller and the buyer.\",\"isNullable\":true,\"name\":\"SaleSection\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"AgreementForSaleOfGoods.cdm.json/AgreementForSaleOfGoods\",\"name\":\"PriceSection\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"This section establishes the purchase price of the goods and when payment must be made.\",\"isNullable\":true,\"name\":\"PriceSection\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"AgreementForSaleOfGoods.cdm.json/AgreementForSaleOfGoods\",\"name\":\"ShippingSection\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"This section establishes which party will have responsibility for shipping the goods to the seller location as well as the point or location at which risk and liability for the goods are transferred to the other party.\",\"isNullable\":true,\"name\":\"ShippingSection\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"AgreementForSaleOfGoods.cdm.json/AgreementForSaleOfGoods\",\"name\":\"RightOfInspectionSection\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"This section establishes that the buyer has the right to inspect the goods on arrival at the buyer's facility and the obligation to notify the seller about any problems with the goods within some period.\",\"isNullable\":true,\"name\":\"RightOfInspectionSection\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"AgreementForSaleOfGoods.cdm.json/AgreementForSaleOfGoods\",\"name\":\"IdentificationOfGoodsSection\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"Within the Uniform Commercial Code (UCC) specific rights and obligations in an agreement become certain only when the goods are identified.   This section establishes that the goods are only 'identified' when both buyer and seller have specified the goods to be sold.\",\"isNullable\":true,\"name\":\"IdentificationOfGoodsSection\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"AgreementForSaleOfGoods.cdm.json/AgreementForSaleOfGoods\",\"name\":\"WarrantySection\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"The type and details of the warranty provided the buyer by the seller for the associated products (goods).\\n\\nExamples:\\n\\n\\\"Warranty of Title\\\" - guarantees that the seller actually does own the goods to be sold\\n\\n\\\"Limited Warranty\\\" - provides a basic warranty with certain specific coverage exclusions\\n\\n\\\"Unlimited Warranty\\\" - covers all aspects of the products replacement upon failure\",\"isNullable\":true,\"name\":\"WarrantySection\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"AgreementForSaleOfGoods.cdm.json/AgreementForSaleOfGoods\",\"name\":\"TransferOfTitleSection\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"This section establishes whether the buyer has title and ownership of the products until the buyer has paid full purchase price to the seller (title has passed).\",\"isNullable\":true,\"name\":\"TransferOfTitleSection\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"AgreementForSaleOfGoods.cdm.json/AgreementForSaleOfGoods\",\"name\":\"LimitationOfLiabilitySection\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"This section limits the liability of the seller to the purchase price of the products.\",\"isNullable\":true,\"name\":\"LimitationOfLiabilitySection\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"AgreementForSaleOfGoods.cdm.json/AgreementForSaleOfGoods\",\"name\":\"TaxesSection\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"This section establishes that the buyer shall pay applicable sales, use and excise taxes.\",\"isNullable\":true,\"name\":\"TaxesSection\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"AgreementForSaleOfGoods.cdm.json/AgreementForSaleOfGoods\",\"name\":\"FinalAgreementSection\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"This section makes it clear that this is the final agreement between parties and replaces or supersedes any prior discussions or agreements.    Any amendments to this agreement must be made in writing.\",\"isNullable\":true,\"name\":\"FinalAgreementSection\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"AgreementForSaleOfGoods.cdm.json/AgreementForSaleOfGoods\",\"name\":\"SeverabilitySection\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"This section attempts to keep the agreement in effect even if a court rules that a portion is invalid.\",\"isNullable\":true,\"name\":\"SeverabilitySection\"}]}}}",
+			"Description": "This agreement is for the sale of goods (products) between two parties, a seller and a buyer.",
+			"DisplayFolderInfo": "{\"name\":\"Contract\",\"colorCode\":\"#000F5C\"}",
+			"PrimaryKeys": "ContractId",
+			"spark.sql.sources.provider": "csv",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"ContractId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"AgreementEffectiveDate\",\"type\":\"date\",\"nullable\":true,\"metadata\":{}},{\"name\":\"SaleSection\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"PriceSection\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ShippingSection\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"RightOfInspectionSection\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"IdentificationOfGoodsSection\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"WarrantySection\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"TransferOfTitleSection\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"LimitationOfLiabilitySection\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"TaxesSection\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"FinalAgreementSection\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"SeverabilitySection\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "c21047a8-5d0e-42a2-8b59-15957111b859",
+		"Description": "This agreement is for the sale of goods (products) between two parties, a seller and a buyer."
+	},
+	"type": "TABLE"
+}

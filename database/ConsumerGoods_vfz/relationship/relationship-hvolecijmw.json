@@ -1,0 +1,29 @@
+{
+	"name": "relationship-hvolecijmw",
+	"properties": {
+		"Name": "relationship-hvolecijmw",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "AnzsicDivision",
+		"ToTableName": "AnzsicSubdivision",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "AnzsicDivisionCode",
+				"ToColumnName": "AnzsicDivisionCode"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"AnzsicDivision.cdm.json/AnzsicDivision\",\"toEntity\":\"AnzsicSubdivision.cdm.json/AnzsicSubdivision\",\"joinPairs\":[{\"fromAttribute\":\"AnzsicDivisionCode\",\"toAttribute\":\"AnzsicDivisionCode\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "9151d188-f95d-40de-bc63-ecf36ea81f6d"
+	},
+	"type": "RELATIONSHIP"
+}

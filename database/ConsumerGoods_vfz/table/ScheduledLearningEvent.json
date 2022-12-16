@@ -1,0 +1,599 @@
+{
+	"name": "ScheduledLearningEvent",
+	"properties": {
+		"Name": "ScheduledLearningEvent",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "ScheduledLearningEventId",
+					"Description": "The unique identifier of a Scheduled Learning Event.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ScheduledLearningEvent.cdm.json/ScheduledLearningEvent",
+						"Name": "ScheduledLearningEventId"
+					}
+				},
+				{
+					"Name": "LearningEventId",
+					"Description": "The unique identifier of a Learning Event.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ScheduledLearningEvent.cdm.json/ScheduledLearningEvent",
+						"Name": "LearningEventId"
+					}
+				},
+				{
+					"Name": "LearningEventScheduledStartDate",
+					"Description": "The scheduled start date for the Learning Event at the associated Training Site Location.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ScheduledLearningEvent.cdm.json/ScheduledLearningEvent",
+						"Name": "LearningEventScheduledStartDate"
+					}
+				},
+				{
+					"Name": "LearningEventScheduledStartTime",
+					"Description": "The scheduled first day start time for the Learning Event at the associated Training Site Location.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 256,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ScheduledLearningEvent.cdm.json/ScheduledLearningEvent",
+						"Name": "LearningEventScheduledStartTime"
+					}
+				},
+				{
+					"Name": "LearningEventScheduledEndDate",
+					"Description": "The scheduled end date for the Learning Event at the associated Training Site Location.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ScheduledLearningEvent.cdm.json/ScheduledLearningEvent",
+						"Name": "LearningEventScheduledEndDate"
+					}
+				},
+				{
+					"Name": "LearningEventScheduledEndTime",
+					"Description": "The scheduled last day ending time for the Learning Event at the associated Training Site Location.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 256,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ScheduledLearningEvent.cdm.json/ScheduledLearningEvent",
+						"Name": "LearningEventScheduledEndTime"
+					}
+				},
+				{
+					"Name": "LearningEventStartDate",
+					"Description": "The start date for the Learning Event at the associated Training Site Location.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ScheduledLearningEvent.cdm.json/ScheduledLearningEvent",
+						"Name": "LearningEventStartDate"
+					}
+				},
+				{
+					"Name": "LearningEventStartTime",
+					"Description": "The start time for the Learning Event at the associated Training Site Location.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 256,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ScheduledLearningEvent.cdm.json/ScheduledLearningEvent",
+						"Name": "LearningEventStartTime"
+					}
+				},
+				{
+					"Name": "LearningEventEndDate",
+					"Description": "The end date for the Learning Event at the associated Training Site Location.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ScheduledLearningEvent.cdm.json/ScheduledLearningEvent",
+						"Name": "LearningEventEndDate"
+					}
+				},
+				{
+					"Name": "LearningEventEndTime",
+					"Description": "The ending time for the Learning Event at the associated Training Site Location.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 256,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ScheduledLearningEvent.cdm.json/ScheduledLearningEvent",
+						"Name": "LearningEventEndTime"
+					}
+				},
+				{
+					"Name": "PlannedNumberAttendees",
+					"Description": "The planned for number of attendees for the Scheduled Learning Event.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ScheduledLearningEvent.cdm.json/ScheduledLearningEvent",
+						"Name": "PlannedNumberAttendees"
+					}
+				},
+				{
+					"Name": "ActualNumberAttendees",
+					"Description": "The actual for number of attendees for the Scheduled Learning Event.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ScheduledLearningEvent.cdm.json/ScheduledLearningEvent",
+						"Name": "ActualNumberAttendees"
+					}
+				},
+				{
+					"Name": "PlannedNumberOfInstructionHours",
+					"Description": "The planned number of instruction hours to be assigned to complete the Scheduled Learning Event.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ScheduledLearningEvent.cdm.json/ScheduledLearningEvent",
+						"Name": "PlannedNumberOfInstructionHours"
+					}
+				},
+				{
+					"Name": "ConfirmationByDate",
+					"Description": "The date by which confirmation must be received in order to be considered for the scheduled learning event.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ScheduledLearningEvent.cdm.json/ScheduledLearningEvent",
+						"Name": "ConfirmationByDate"
+					}
+				},
+				{
+					"Name": "DepositMustBeReceivedByDate",
+					"Description": "The date by which the deposit must be received in order to hold the position in the scheduled learning event.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ScheduledLearningEvent.cdm.json/ScheduledLearningEvent",
+						"Name": "DepositMustBeReceivedByDate"
+					}
+				},
+				{
+					"Name": "TotalCostToProduceLearningEvent",
+					"Description": "The total cost to produce the Scheduled Learning Event at the associated Learning Site Location.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ScheduledLearningEvent.cdm.json/ScheduledLearningEvent",
+						"Name": "TotalCostToProduceLearningEvent"
+					}
+				},
+				{
+					"Name": "TotalRevenueFromLearningEvent",
+					"Description": "The total revenues generated by presentation of the Scheduled Learning Event.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ScheduledLearningEvent.cdm.json/ScheduledLearningEvent",
+						"Name": "TotalRevenueFromLearningEvent"
+					}
+				},
+				{
+					"Name": "DeliveryChannelId",
+					"Description": "The unique identifier of a Delivery Channel.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ScheduledLearningEvent.cdm.json/ScheduledLearningEvent",
+						"Name": "DeliveryChannelId"
+					}
+				},
+				{
+					"Name": "TvLearningEventId",
+					"Description": "The unique identifier of an TV Learning Event.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ScheduledLearningEvent.cdm.json/ScheduledLearningEvent",
+						"Name": "TvLearningEventId"
+					}
+				},
+				{
+					"Name": "RadioLearningEventId",
+					"Description": "The unique identifier of an Advertising Event.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ScheduledLearningEvent.cdm.json/ScheduledLearningEvent",
+						"Name": "RadioLearningEventId"
+					}
+				},
+				{
+					"Name": "InternetLearningEventUrl",
+					"Description": "The webpage (URL) associated with the Internet Learning Event.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2083,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ScheduledLearningEvent.cdm.json/ScheduledLearningEvent",
+						"Name": "InternetLearningEventUrl"
+					}
+				},
+				{
+					"Name": "LearningEventStatusTypeId",
+					"Description": "The unique identifier of the Learning Event Status Type.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ScheduledLearningEvent.cdm.json/ScheduledLearningEvent",
+						"Name": "LearningEventStatusTypeId"
+					}
+				},
+				{
+					"Name": "LocationId",
+					"Description": "The unique identifier of a Location.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ScheduledLearningEvent.cdm.json/ScheduledLearningEvent",
+						"Name": "LocationId"
+					}
+				},
+				{
+					"Name": "VenueTypeId",
+					"Description": "The unique identifier of a Venue Type.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ScheduledLearningEvent.cdm.json/ScheduledLearningEvent",
+						"Name": "VenueTypeId"
+					}
+				},
+				{
+					"Name": "PublicationId",
+					"Description": "The unique identifier of a Publication.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ScheduledLearningEvent.cdm.json/ScheduledLearningEvent",
+						"Name": "PublicationId"
+					}
+				},
+				{
+					"Name": "IsoLanguageId",
+					"Description": "The unique identifier of an ISO Language.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ScheduledLearningEvent.cdm.json/ScheduledLearningEvent",
+						"Name": "IsoLanguageId"
+					}
+				},
+				{
+					"Name": "ItemSku",
+					"Description": "The Stock Keeping Unit identifier, which is typically used for inventory-related activities.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 40,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ScheduledLearningEvent.cdm.json/ScheduledLearningEvent",
+						"Name": "ItemSku"
+					}
+				}
+			],
+			"ColumnSetEntityName": "a7dcf242-0a82-449c-bcd0-0acd7f127a94",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/ScheduledLearningEvent",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/ScheduledLearningEvent",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"ScheduledLearningEventId\":{\"entity\":\"ScheduledLearningEvent.cdm.json/ScheduledLearningEvent\",\"name\":\"ScheduledLearningEventId\"},\"LearningEventId\":{\"entity\":\"ScheduledLearningEvent.cdm.json/ScheduledLearningEvent\",\"name\":\"LearningEventId\"},\"LearningEventScheduledStartDate\":{\"entity\":\"ScheduledLearningEvent.cdm.json/ScheduledLearningEvent\",\"name\":\"LearningEventScheduledStartDate\"},\"LearningEventScheduledStartTime\":{\"entity\":\"ScheduledLearningEvent.cdm.json/ScheduledLearningEvent\",\"name\":\"LearningEventScheduledStartTime\"},\"LearningEventScheduledEndDate\":{\"entity\":\"ScheduledLearningEvent.cdm.json/ScheduledLearningEvent\",\"name\":\"LearningEventScheduledEndDate\"},\"LearningEventScheduledEndTime\":{\"entity\":\"ScheduledLearningEvent.cdm.json/ScheduledLearningEvent\",\"name\":\"LearningEventScheduledEndTime\"},\"LearningEventStartDate\":{\"entity\":\"ScheduledLearningEvent.cdm.json/ScheduledLearningEvent\",\"name\":\"LearningEventStartDate\"},\"LearningEventStartTime\":{\"entity\":\"ScheduledLearningEvent.cdm.json/ScheduledLearningEvent\",\"name\":\"LearningEventStartTime\"},\"LearningEventEndDate\":{\"entity\":\"ScheduledLearningEvent.cdm.json/ScheduledLearningEvent\",\"name\":\"LearningEventEndDate\"},\"LearningEventEndTime\":{\"entity\":\"ScheduledLearningEvent.cdm.json/ScheduledLearningEvent\",\"name\":\"LearningEventEndTime\"},\"PlannedNumberAttendees\":{\"entity\":\"ScheduledLearningEvent.cdm.json/ScheduledLearningEvent\",\"name\":\"PlannedNumberAttendees\"},\"ActualNumberAttendees\":{\"entity\":\"ScheduledLearningEvent.cdm.json/ScheduledLearningEvent\",\"name\":\"ActualNumberAttendees\"},\"PlannedNumberOfInstructionHours\":{\"entity\":\"ScheduledLearningEvent.cdm.json/ScheduledLearningEvent\",\"name\":\"PlannedNumberOfInstructionHours\"},\"ConfirmationByDate\":{\"entity\":\"ScheduledLearningEvent.cdm.json/ScheduledLearningEvent\",\"name\":\"ConfirmationByDate\"},\"DepositMustBeReceivedByDate\":{\"entity\":\"ScheduledLearningEvent.cdm.json/ScheduledLearningEvent\",\"name\":\"DepositMustBeReceivedByDate\"},\"TotalCostToProduceLearningEvent\":{\"entity\":\"ScheduledLearningEvent.cdm.json/ScheduledLearningEvent\",\"name\":\"TotalCostToProduceLearningEvent\"},\"TotalRevenueFromLearningEvent\":{\"entity\":\"ScheduledLearningEvent.cdm.json/ScheduledLearningEvent\",\"name\":\"TotalRevenueFromLearningEvent\"},\"DeliveryChannelId\":{\"entity\":\"ScheduledLearningEvent.cdm.json/ScheduledLearningEvent\",\"name\":\"DeliveryChannelId\"},\"TvLearningEventId\":{\"entity\":\"ScheduledLearningEvent.cdm.json/ScheduledLearningEvent\",\"name\":\"TvLearningEventId\"},\"RadioLearningEventId\":{\"entity\":\"ScheduledLearningEvent.cdm.json/ScheduledLearningEvent\",\"name\":\"RadioLearningEventId\"},\"InternetLearningEventUrl\":{\"entity\":\"ScheduledLearningEvent.cdm.json/ScheduledLearningEvent\",\"name\":\"InternetLearningEventUrl\"},\"LearningEventStatusTypeId\":{\"entity\":\"ScheduledLearningEvent.cdm.json/ScheduledLearningEvent\",\"name\":\"LearningEventStatusTypeId\"},\"LocationId\":{\"entity\":\"ScheduledLearningEvent.cdm.json/ScheduledLearningEvent\",\"name\":\"LocationId\"},\"VenueTypeId\":{\"entity\":\"ScheduledLearningEvent.cdm.json/ScheduledLearningEvent\",\"name\":\"VenueTypeId\"},\"PublicationId\":{\"entity\":\"ScheduledLearningEvent.cdm.json/ScheduledLearningEvent\",\"name\":\"PublicationId\"},\"IsoLanguageId\":{\"entity\":\"ScheduledLearningEvent.cdm.json/ScheduledLearningEvent\",\"name\":\"IsoLanguageId\"},\"ItemSku\":{\"entity\":\"ScheduledLearningEvent.cdm.json/ScheduledLearningEvent\",\"name\":\"ItemSku\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"ScheduledLearningEvent\",\"path\":\"ScheduledLearningEvent.cdm.json/ScheduledLearningEvent\"},\"description\":\"A LEARNING EVENT performed at a specific location upon a scheduled date/time.\",\"primaryKey\":[\"ScheduledLearningEventId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ScheduledLearningEvent.cdm.json/ScheduledLearningEvent\",\"name\":\"ScheduledLearningEventId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Scheduled Learning Event.\",\"isNullable\":false,\"name\":\"ScheduledLearningEventId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ScheduledLearningEvent.cdm.json/ScheduledLearningEvent\",\"name\":\"LearningEventId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Learning Event.\",\"isNullable\":true,\"name\":\"LearningEventId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ScheduledLearningEvent.cdm.json/ScheduledLearningEvent\",\"name\":\"LearningEventScheduledStartDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The scheduled start date for the Learning Event at the associated Training Site Location.\",\"isNullable\":true,\"name\":\"LearningEventScheduledStartDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ScheduledLearningEvent.cdm.json/ScheduledLearningEvent\",\"name\":\"LearningEventScheduledStartTime\"},\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"The scheduled first day start time for the Learning Event at the associated Training Site Location.\",\"isNullable\":true,\"name\":\"LearningEventScheduledStartTime\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ScheduledLearningEvent.cdm.json/ScheduledLearningEvent\",\"name\":\"LearningEventScheduledEndDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The scheduled end date for the Learning Event at the associated Training Site Location.\",\"isNullable\":true,\"name\":\"LearningEventScheduledEndDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ScheduledLearningEvent.cdm.json/ScheduledLearningEvent\",\"name\":\"LearningEventScheduledEndTime\"},\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"The scheduled last day ending time for the Learning Event at the associated Training Site Location.\",\"isNullable\":true,\"name\":\"LearningEventScheduledEndTime\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ScheduledLearningEvent.cdm.json/ScheduledLearningEvent\",\"name\":\"LearningEventStartDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The start date for the Learning Event at the associated Training Site Location.\",\"isNullable\":true,\"name\":\"LearningEventStartDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ScheduledLearningEvent.cdm.json/ScheduledLearningEvent\",\"name\":\"LearningEventStartTime\"},\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"The start time for the Learning Event at the associated Training Site Location.\",\"isNullable\":true,\"name\":\"LearningEventStartTime\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ScheduledLearningEvent.cdm.json/ScheduledLearningEvent\",\"name\":\"LearningEventEndDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The end date for the Learning Event at the associated Training Site Location.\",\"isNullable\":true,\"name\":\"LearningEventEndDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ScheduledLearningEvent.cdm.json/ScheduledLearningEvent\",\"name\":\"LearningEventEndTime\"},\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"The ending time for the Learning Event at the associated Training Site Location.\",\"isNullable\":true,\"name\":\"LearningEventEndTime\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ScheduledLearningEvent.cdm.json/ScheduledLearningEvent\",\"name\":\"PlannedNumberAttendees\"},\"dataType\":\"integer\",\"description\":\"The planned for number of attendees for the Scheduled Learning Event.\",\"isNullable\":true,\"name\":\"PlannedNumberAttendees\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ScheduledLearningEvent.cdm.json/ScheduledLearningEvent\",\"name\":\"ActualNumberAttendees\"},\"dataType\":\"integer\",\"description\":\"The actual for number of attendees for the Scheduled Learning Event.\",\"isNullable\":true,\"name\":\"ActualNumberAttendees\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ScheduledLearningEvent.cdm.json/ScheduledLearningEvent\",\"name\":\"PlannedNumberOfInstructionHours\"},\"dataType\":\"integer\",\"description\":\"The planned number of instruction hours to be assigned to complete the Scheduled Learning Event.\",\"isNullable\":true,\"name\":\"PlannedNumberOfInstructionHours\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ScheduledLearningEvent.cdm.json/ScheduledLearningEvent\",\"name\":\"ConfirmationByDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The date by which confirmation must be received in order to be considered for the scheduled learning event.\",\"isNullable\":true,\"name\":\"ConfirmationByDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ScheduledLearningEvent.cdm.json/ScheduledLearningEvent\",\"name\":\"DepositMustBeReceivedByDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The date by which the deposit must be received in order to hold the position in the scheduled learning event.\",\"isNullable\":true,\"name\":\"DepositMustBeReceivedByDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ScheduledLearningEvent.cdm.json/ScheduledLearningEvent\",\"name\":\"TotalCostToProduceLearningEvent\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"The total cost to produce the Scheduled Learning Event at the associated Learning Site Location.\",\"isNullable\":true,\"scale\":2,\"name\":\"TotalCostToProduceLearningEvent\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ScheduledLearningEvent.cdm.json/ScheduledLearningEvent\",\"name\":\"TotalRevenueFromLearningEvent\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"The total revenues generated by presentation of the Scheduled Learning Event.\",\"isNullable\":true,\"scale\":2,\"name\":\"TotalRevenueFromLearningEvent\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ScheduledLearningEvent.cdm.json/ScheduledLearningEvent\",\"name\":\"DeliveryChannelId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Delivery Channel.\",\"isNullable\":true,\"name\":\"DeliveryChannelId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ScheduledLearningEvent.cdm.json/ScheduledLearningEvent\",\"name\":\"TvLearningEventId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of an TV Learning Event.\",\"isNullable\":true,\"name\":\"TvLearningEventId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ScheduledLearningEvent.cdm.json/ScheduledLearningEvent\",\"name\":\"RadioLearningEventId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of an Advertising Event.\",\"isNullable\":true,\"name\":\"RadioLearningEventId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ScheduledLearningEvent.cdm.json/ScheduledLearningEvent\",\"name\":\"InternetLearningEventUrl\"},\"dataType\":\"string\",\"dataTypeLength\":2083,\"description\":\"The webpage (URL) associated with the Internet Learning Event.\",\"isNullable\":true,\"name\":\"InternetLearningEventUrl\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ScheduledLearningEvent.cdm.json/ScheduledLearningEvent\",\"name\":\"LearningEventStatusTypeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of the Learning Event Status Type.\",\"isNullable\":true,\"name\":\"LearningEventStatusTypeId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ScheduledLearningEvent.cdm.json/ScheduledLearningEvent\",\"name\":\"LocationId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Location.\",\"isNullable\":true,\"name\":\"LocationId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ScheduledLearningEvent.cdm.json/ScheduledLearningEvent\",\"name\":\"VenueTypeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Venue Type.\",\"isNullable\":true,\"name\":\"VenueTypeId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ScheduledLearningEvent.cdm.json/ScheduledLearningEvent\",\"name\":\"PublicationId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Publication.\",\"isNullable\":true,\"name\":\"PublicationId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ScheduledLearningEvent.cdm.json/ScheduledLearningEvent\",\"name\":\"IsoLanguageId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of an ISO Language.\",\"isNullable\":true,\"name\":\"IsoLanguageId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ScheduledLearningEvent.cdm.json/ScheduledLearningEvent\",\"name\":\"ItemSku\"},\"dataType\":\"string\",\"dataTypeLength\":40,\"description\":\"The Stock Keeping Unit identifier, which is typically used for inventory-related activities.\",\"isNullable\":true,\"name\":\"ItemSku\"}]}}}",
+			"Description": "A LEARNING EVENT performed at a specific location upon a scheduled date/time.",
+			"DisplayFolderInfo": "{\"name\":\"Training & Education\",\"colorCode\":\"#F775C5\"}",
+			"PrimaryKeys": "ScheduledLearningEventId",
+			"spark.sql.sources.provider": "csv",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"ScheduledLearningEventId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"LearningEventId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"LearningEventScheduledStartDate\",\"type\":\"date\",\"nullable\":true,\"metadata\":{}},{\"name\":\"LearningEventScheduledStartTime\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"LearningEventScheduledEndDate\",\"type\":\"date\",\"nullable\":true,\"metadata\":{}},{\"name\":\"LearningEventScheduledEndTime\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"LearningEventStartDate\",\"type\":\"date\",\"nullable\":true,\"metadata\":{}},{\"name\":\"LearningEventStartTime\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"LearningEventEndDate\",\"type\":\"date\",\"nullable\":true,\"metadata\":{}},{\"name\":\"LearningEventEndTime\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"PlannedNumberAttendees\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ActualNumberAttendees\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"PlannedNumberOfInstructionHours\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ConfirmationByDate\",\"type\":\"date\",\"nullable\":true,\"metadata\":{}},{\"name\":\"DepositMustBeReceivedByDate\",\"type\":\"date\",\"nullable\":true,\"metadata\":{}},{\"name\":\"TotalCostToProduceLearningEvent\",\"type\":\"decimal(18,2)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"TotalRevenueFromLearningEvent\",\"type\":\"decimal(18,2)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"DeliveryChannelId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"TvLearningEventId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"RadioLearningEventId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"InternetLearningEventUrl\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"LearningEventStatusTypeId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"LocationId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"VenueTypeId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"PublicationId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"IsoLanguageId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ItemSku\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "dab96652-e35c-4857-b3ab-b966d70b0d5f",
+		"Description": "A LEARNING EVENT performed at a specific location upon a scheduled date/time."
+	},
+	"type": "TABLE"
+}

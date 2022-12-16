@@ -1,0 +1,196 @@
+{
+	"name": "PartyChurnPropensity",
+	"properties": {
+		"Name": "PartyChurnPropensity",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "PartyId",
+					"Description": "The unique identifier of a Party.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyChurnPropensity.cdm.json/PartyChurnPropensity",
+						"Name": "PartyId"
+					}
+				},
+				{
+					"Name": "ChurnReasonId",
+					"Description": "The unique identifier of a Churn Reason.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyChurnPropensity.cdm.json/PartyChurnPropensity",
+						"Name": "ChurnReasonId"
+					}
+				},
+				{
+					"Name": "PeriodStartDate",
+					"Description": "The date that the Customer Account was first recognized as being at risk of churning due to the Churn Reason.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyChurnPropensity.cdm.json/PartyChurnPropensity",
+						"Name": "PeriodStartDate"
+					}
+				},
+				{
+					"Name": "PeriodEndDate",
+					"Description": "The date that the Customer Account was no longer at risk of churning due to the Churn Reason.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyChurnPropensity.cdm.json/PartyChurnPropensity",
+						"Name": "PeriodEndDate"
+					}
+				},
+				{
+					"Name": "CustomerAtRiskNote",
+					"Description": "A note or comment regarding the Customer Account at Risk",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyChurnPropensity.cdm.json/PartyChurnPropensity",
+						"Name": "CustomerAtRiskNote"
+					}
+				},
+				{
+					"Name": "ChurnRiskRatingId",
+					"Description": "The unique identifier of a Churn Risk Rating.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyChurnPropensity.cdm.json/PartyChurnPropensity",
+						"Name": "ChurnRiskRatingId"
+					}
+				}
+			],
+			"ColumnSetEntityName": "3f06b9f4-357f-4cc3-8ced-9e9c682e7da3",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/PartyChurnPropensity",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/PartyChurnPropensity",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"PartyId\":{\"entity\":\"PartyChurnPropensity.cdm.json/PartyChurnPropensity\",\"name\":\"PartyId\"},\"ChurnReasonId\":{\"entity\":\"PartyChurnPropensity.cdm.json/PartyChurnPropensity\",\"name\":\"ChurnReasonId\"},\"PeriodStartDate\":{\"entity\":\"PartyChurnPropensity.cdm.json/PartyChurnPropensity\",\"name\":\"PeriodStartDate\"},\"PeriodEndDate\":{\"entity\":\"PartyChurnPropensity.cdm.json/PartyChurnPropensity\",\"name\":\"PeriodEndDate\"},\"CustomerAtRiskNote\":{\"entity\":\"PartyChurnPropensity.cdm.json/PartyChurnPropensity\",\"name\":\"CustomerAtRiskNote\"},\"ChurnRiskRatingId\":{\"entity\":\"PartyChurnPropensity.cdm.json/PartyChurnPropensity\",\"name\":\"ChurnRiskRatingId\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"PartyChurnPropensity\",\"path\":\"PartyChurnPropensity.cdm.json/PartyChurnPropensity\"},\"description\":\"Identifies whether a Party is at risk of churning due to a Churn Reason.\",\"primaryKey\":[\"PartyId\",\"ChurnReasonId\",\"PeriodStartDate\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyChurnPropensity.cdm.json/PartyChurnPropensity\",\"name\":\"PartyId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a Party.\",\"isNullable\":false,\"name\":\"PartyId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyChurnPropensity.cdm.json/PartyChurnPropensity\",\"name\":\"ChurnReasonId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Churn Reason.\",\"isNullable\":false,\"name\":\"ChurnReasonId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyChurnPropensity.cdm.json/PartyChurnPropensity\",\"name\":\"PeriodStartDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The date that the Customer Account was first recognized as being at risk of churning due to the Churn Reason.\",\"isNullable\":false,\"name\":\"PeriodStartDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyChurnPropensity.cdm.json/PartyChurnPropensity\",\"name\":\"PeriodEndDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The date that the Customer Account was no longer at risk of churning due to the Churn Reason.\",\"isNullable\":true,\"name\":\"PeriodEndDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyChurnPropensity.cdm.json/PartyChurnPropensity\",\"name\":\"CustomerAtRiskNote\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"A note or comment regarding the Customer Account at Risk\",\"isNullable\":true,\"name\":\"CustomerAtRiskNote\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyChurnPropensity.cdm.json/PartyChurnPropensity\",\"name\":\"ChurnRiskRatingId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Churn Risk Rating.\",\"isNullable\":true,\"name\":\"ChurnRiskRatingId\"}]}}}",
+			"Description": "Identifies whether a Party is at risk of churning due to a Churn Reason.",
+			"DisplayFolderInfo": "{\"name\":\"Party\",\"colorCode\":\"#7D0F6C\"}",
+			"PrimaryKeys": "PartyId,ChurnReasonId,PeriodStartDate",
+			"spark.sql.sources.provider": "csv",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"PartyId\",\"type\":\"long\",\"nullable\":false,\"metadata\":{}},{\"name\":\"ChurnReasonId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PeriodStartDate\",\"type\":\"date\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PeriodEndDate\",\"type\":\"date\",\"nullable\":true,\"metadata\":{}},{\"name\":\"CustomerAtRiskNote\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ChurnRiskRatingId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "8d52c70d-22a5-45fb-9fcd-c4becad08c40",
+		"Description": "Identifies whether a Party is at risk of churning due to a Churn Reason."
+	},
+	"type": "TABLE"
+}

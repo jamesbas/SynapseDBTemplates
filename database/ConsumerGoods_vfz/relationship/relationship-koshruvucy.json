@@ -1,0 +1,29 @@
+{
+	"name": "relationship-koshruvucy",
+	"properties": {
+		"Name": "relationship-koshruvucy",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "TelephoneNumberType",
+		"ToTableName": "PartyTelephoneNumber",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "TelephoneNumberTypeId",
+				"ToColumnName": "TelephoneNumberTypeId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"TelephoneNumberType.cdm.json/TelephoneNumberType\",\"toEntity\":\"PartyTelephoneNumber.cdm.json/PartyTelephoneNumber\",\"joinPairs\":[{\"fromAttribute\":\"TelephoneNumberTypeId\",\"toAttribute\":\"TelephoneNumberTypeId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "fee05904-0d90-42fb-839a-b573807aab20"
+	},
+	"type": "RELATIONSHIP"
+}

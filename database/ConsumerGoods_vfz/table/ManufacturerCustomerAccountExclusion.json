@@ -1,0 +1,137 @@
+{
+	"name": "ManufacturerCustomerAccountExclusion",
+	"properties": {
+		"Name": "ManufacturerCustomerAccountExclusion",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "ContractId",
+					"Description": "The unique identifier of a Contract.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ManufacturerCustomerAccountExclusion.cdm.json/ManufacturerCustomerAccountExclusion",
+						"Name": "ContractId"
+					}
+				},
+				{
+					"Name": "CustomerAccountId",
+					"Description": "The unique identifier of a Customer Account.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ManufacturerCustomerAccountExclusion.cdm.json/ManufacturerCustomerAccountExclusion",
+						"Name": "CustomerAccountId"
+					}
+				},
+				{
+					"Name": "Note",
+					"Description": "Comments, notes or additional information regarding the Customer Account exclusion from the Distributorship Agreements.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ManufacturerCustomerAccountExclusion.cdm.json/ManufacturerCustomerAccountExclusion",
+						"Name": "Note"
+					}
+				}
+			],
+			"ColumnSetEntityName": "932afef6-c698-4f18-9e2f-f4a37644a723",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/ManufacturerCustomerAccountExclusion",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/ManufacturerCustomerAccountExclusion",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"ContractId\":{\"entity\":\"ManufacturerCustomerAccountExclusion.cdm.json/ManufacturerCustomerAccountExclusion\",\"name\":\"ContractId\"},\"CustomerAccountId\":{\"entity\":\"ManufacturerCustomerAccountExclusion.cdm.json/ManufacturerCustomerAccountExclusion\",\"name\":\"CustomerAccountId\"},\"Note\":{\"entity\":\"ManufacturerCustomerAccountExclusion.cdm.json/ManufacturerCustomerAccountExclusion\",\"name\":\"Note\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"ManufacturerCustomerAccountExclusion\",\"path\":\"ManufacturerCustomerAccountExclusion.cdm.json/ManufacturerCustomerAccountExclusion\"},\"description\":\"Specific Customer Accounts that are excluded from the agreement and may be dealt with directly by the manufacturer.\",\"primaryKey\":[\"ContractId\",\"CustomerAccountId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ManufacturerCustomerAccountExclusion.cdm.json/ManufacturerCustomerAccountExclusion\",\"name\":\"ContractId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Contract.\",\"isNullable\":false,\"name\":\"ContractId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ManufacturerCustomerAccountExclusion.cdm.json/ManufacturerCustomerAccountExclusion\",\"name\":\"CustomerAccountId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a Customer Account.\",\"isNullable\":false,\"name\":\"CustomerAccountId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ManufacturerCustomerAccountExclusion.cdm.json/ManufacturerCustomerAccountExclusion\",\"name\":\"Note\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"Comments, notes or additional information regarding the Customer Account exclusion from the Distributorship Agreements.\",\"isNullable\":true,\"name\":\"Note\"}]}}}",
+			"Description": "Specific Customer Accounts that are excluded from the agreement and may be dealt with directly by the manufacturer.",
+			"DisplayFolderInfo": "{\"name\":\"Contract\",\"colorCode\":\"#000F5C\"}",
+			"PrimaryKeys": "ContractId,CustomerAccountId",
+			"spark.sql.sources.provider": "csv",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"ContractId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"CustomerAccountId\",\"type\":\"long\",\"nullable\":false,\"metadata\":{}},{\"name\":\"Note\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "9d0edee7-f48f-4b2a-bbee-29759e14667e",
+		"Description": "Specific Customer Accounts that are excluded from the agreement and may be dealt with directly by the manufacturer."
+	},
+	"type": "TABLE"
+}

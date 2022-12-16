@@ -1,0 +1,156 @@
+{
+	"name": "LeasePayment",
+	"properties": {
+		"Name": "LeasePayment",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "ContractId",
+					"Description": "The unique identifier of a Contract.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "LeasePayment.cdm.json/LeasePayment",
+						"Name": "ContractId"
+					}
+				},
+				{
+					"Name": "PaymentId",
+					"Description": "The unique identifier of a Payment.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "LeasePayment.cdm.json/LeasePayment",
+						"Name": "PaymentId"
+					}
+				},
+				{
+					"Name": "AmountAppliedToLease",
+					"Description": "The amount of the associated payment applied to the lease.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "LeasePayment.cdm.json/LeasePayment",
+						"Name": "AmountAppliedToLease"
+					}
+				},
+				{
+					"Name": "LeasePaymentNote",
+					"Description": "Notes, comments or additional information regarding the Lease Payment.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "LeasePayment.cdm.json/LeasePayment",
+						"Name": "LeasePaymentNote"
+					}
+				}
+			],
+			"ColumnSetEntityName": "9a4fea5e-bd6f-4042-893c-9d058af47491",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/LeasePayment",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/LeasePayment",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"ContractId\":{\"entity\":\"LeasePayment.cdm.json/LeasePayment\",\"name\":\"ContractId\"},\"PaymentId\":{\"entity\":\"LeasePayment.cdm.json/LeasePayment\",\"name\":\"PaymentId\"},\"AmountAppliedToLease\":{\"entity\":\"LeasePayment.cdm.json/LeasePayment\",\"name\":\"AmountAppliedToLease\"},\"LeasePaymentNote\":{\"entity\":\"LeasePayment.cdm.json/LeasePayment\",\"name\":\"LeasePaymentNote\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"LeasePayment\",\"path\":\"LeasePayment.cdm.json/LeasePayment\"},\"description\":\"The payments made in conjunction with the lease.\",\"primaryKey\":[\"ContractId\",\"PaymentId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"LeasePayment.cdm.json/LeasePayment\",\"name\":\"ContractId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Contract.\",\"isNullable\":false,\"name\":\"ContractId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"LeasePayment.cdm.json/LeasePayment\",\"name\":\"PaymentId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Payment.\",\"isNullable\":false,\"name\":\"PaymentId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"LeasePayment.cdm.json/LeasePayment\",\"name\":\"AmountAppliedToLease\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"The amount of the associated payment applied to the lease.\",\"isNullable\":true,\"scale\":2,\"name\":\"AmountAppliedToLease\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"LeasePayment.cdm.json/LeasePayment\",\"name\":\"LeasePaymentNote\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"Notes, comments or additional information regarding the Lease Payment.\",\"isNullable\":true,\"name\":\"LeasePaymentNote\"}]}}}",
+			"Description": "The payments made in conjunction with the lease.",
+			"DisplayFolderInfo": "{\"name\":\"Contract\",\"colorCode\":\"#000F5C\"}",
+			"PrimaryKeys": "ContractId,PaymentId",
+			"spark.sql.sources.provider": "csv",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"ContractId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PaymentId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"AmountAppliedToLease\",\"type\":\"decimal(18,2)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"LeasePaymentNote\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "4dc3397e-47bc-4051-a3fc-eb50127a5a31",
+		"Description": "The payments made in conjunction with the lease."
+	},
+	"type": "TABLE"
+}

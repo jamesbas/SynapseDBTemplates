@@ -1,0 +1,195 @@
+{
+	"name": "EmployeePhysicalCharacteristic",
+	"properties": {
+		"Name": "EmployeePhysicalCharacteristic",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "EmployeeId",
+					"Description": "The unique identifier of an Employee.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "EmployeePhysicalCharacteristic.cdm.json/EmployeePhysicalCharacteristic",
+						"Name": "EmployeeId"
+					}
+				},
+				{
+					"Name": "PhysicalCharacteristicId",
+					"Description": "The unique identifier of a physical characteristic.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "EmployeePhysicalCharacteristic.cdm.json/EmployeePhysicalCharacteristic",
+						"Name": "PhysicalCharacteristicId"
+					}
+				},
+				{
+					"Name": "Timestamp",
+					"Description": "The timestamp that the associated information is reported, recorded or effective as-of.",
+					"OriginDataTypeName": {
+						"TypeName": "timestamp",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"TimestampFormat": "YYYY-MM-DD HH:MM:SS.fffffffff",
+							"HIVE_TYPE_STRING": "timestamp"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "EmployeePhysicalCharacteristic.cdm.json/EmployeePhysicalCharacteristic",
+						"Name": "Timestamp"
+					}
+				},
+				{
+					"Name": "EmployeePhysicalCharacteristicNumber",
+					"Description": "The numeric parameter associated with the biometric.\n\nEx:\n\nWeight = 175\nHeight = 5'10\"",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "EmployeePhysicalCharacteristic.cdm.json/EmployeePhysicalCharacteristic",
+						"Name": "EmployeePhysicalCharacteristicNumber"
+					}
+				},
+				{
+					"Name": "EmployeePhysicalCharacteristicValue",
+					"Description": "The non-numeric parameter associated with the biometric.\n\nEx:\nEye color = blue",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "EmployeePhysicalCharacteristic.cdm.json/EmployeePhysicalCharacteristic",
+						"Name": "EmployeePhysicalCharacteristicValue"
+					}
+				},
+				{
+					"Name": "EmployeePhysicalCharacteristicNote",
+					"Description": "A note, comment or additional information regarding the employee physical characteristic.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "EmployeePhysicalCharacteristic.cdm.json/EmployeePhysicalCharacteristic",
+						"Name": "EmployeePhysicalCharacteristicNote"
+					}
+				}
+			],
+			"ColumnSetEntityName": "8a340413-816e-4c19-ac0d-c00b2b048b43",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/EmployeePhysicalCharacteristic",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/EmployeePhysicalCharacteristic",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"EmployeeId\":{\"entity\":\"EmployeePhysicalCharacteristic.cdm.json/EmployeePhysicalCharacteristic\",\"name\":\"EmployeeId\"},\"PhysicalCharacteristicId\":{\"entity\":\"EmployeePhysicalCharacteristic.cdm.json/EmployeePhysicalCharacteristic\",\"name\":\"PhysicalCharacteristicId\"},\"Timestamp\":{\"entity\":\"EmployeePhysicalCharacteristic.cdm.json/EmployeePhysicalCharacteristic\",\"name\":\"Timestamp\"},\"EmployeePhysicalCharacteristicNumber\":{\"entity\":\"EmployeePhysicalCharacteristic.cdm.json/EmployeePhysicalCharacteristic\",\"name\":\"EmployeePhysicalCharacteristicNumber\"},\"EmployeePhysicalCharacteristicValue\":{\"entity\":\"EmployeePhysicalCharacteristic.cdm.json/EmployeePhysicalCharacteristic\",\"name\":\"EmployeePhysicalCharacteristicValue\"},\"EmployeePhysicalCharacteristicNote\":{\"entity\":\"EmployeePhysicalCharacteristic.cdm.json/EmployeePhysicalCharacteristic\",\"name\":\"EmployeePhysicalCharacteristicNote\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"EmployeePhysicalCharacteristic\",\"path\":\"EmployeePhysicalCharacteristic.cdm.json/EmployeePhysicalCharacteristic\"},\"description\":\"The physical characteristics that identify an Employee\",\"primaryKey\":[\"EmployeeId\",\"PhysicalCharacteristicId\",\"Timestamp\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"EmployeePhysicalCharacteristic.cdm.json/EmployeePhysicalCharacteristic\",\"name\":\"EmployeeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of an Employee.\",\"isNullable\":false,\"name\":\"EmployeeId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"EmployeePhysicalCharacteristic.cdm.json/EmployeePhysicalCharacteristic\",\"name\":\"PhysicalCharacteristicId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a physical characteristic.\",\"isNullable\":false,\"name\":\"PhysicalCharacteristicId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"EmployeePhysicalCharacteristic.cdm.json/EmployeePhysicalCharacteristic\",\"name\":\"Timestamp\"},\"dataType\":\"timestamp\",\"description\":\"The timestamp that the associated information is reported, recorded or effective as-of.\",\"isNullable\":false,\"name\":\"Timestamp\",\"timestampFormat\":\"YYYY-MM-DD HH:MM:SS.fffffffff\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"EmployeePhysicalCharacteristic.cdm.json/EmployeePhysicalCharacteristic\",\"name\":\"EmployeePhysicalCharacteristicNumber\"},\"dataType\":\"integer\",\"description\":\"The numeric parameter associated with the biometric.\\n\\nEx:\\n\\nWeight = 175\\nHeight = 5'10\\\"\",\"isNullable\":true,\"name\":\"EmployeePhysicalCharacteristicNumber\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"EmployeePhysicalCharacteristic.cdm.json/EmployeePhysicalCharacteristic\",\"name\":\"EmployeePhysicalCharacteristicValue\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"The non-numeric parameter associated with the biometric.\\n\\nEx:\\nEye color = blue\",\"isNullable\":true,\"name\":\"EmployeePhysicalCharacteristicValue\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"EmployeePhysicalCharacteristic.cdm.json/EmployeePhysicalCharacteristic\",\"name\":\"EmployeePhysicalCharacteristicNote\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"A note, comment or additional information regarding the employee physical characteristic.\",\"isNullable\":true,\"name\":\"EmployeePhysicalCharacteristicNote\"}]}}}",
+			"Description": "The physical characteristics that identify an Employee",
+			"DisplayFolderInfo": "{\"name\":\"Human Resources & Payroll\",\"colorCode\":\"#EA279F\"}",
+			"PrimaryKeys": "EmployeeId,PhysicalCharacteristicId,Timestamp",
+			"spark.sql.sources.provider": "csv",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"EmployeeId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PhysicalCharacteristicId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"Timestamp\",\"type\":\"timestamp\",\"nullable\":false,\"metadata\":{}},{\"name\":\"EmployeePhysicalCharacteristicNumber\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"EmployeePhysicalCharacteristicValue\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"EmployeePhysicalCharacteristicNote\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "8a276ee0-9cf1-4f37-addb-fd8588444997",
+		"Description": "The physical characteristics that identify an Employee"
+	},
+	"type": "TABLE"
+}

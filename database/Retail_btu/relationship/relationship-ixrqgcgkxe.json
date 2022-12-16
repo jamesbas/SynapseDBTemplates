@@ -1,0 +1,29 @@
+{
+	"name": "relationship-ixrqgcgkxe",
+	"properties": {
+		"Name": "relationship-ixrqgcgkxe",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_btu"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "Warehouse",
+		"ToTableName": "Order",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "WarehouseId",
+				"ToColumnName": "WarehouseId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"Warehouse.cdm.json/Warehouse\",\"toEntity\":\"Order.cdm.json/Order\",\"joinPairs\":[{\"fromAttribute\":\"WarehouseId\",\"toAttribute\":\"WarehouseId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "05fad8f2-819b-481e-9834-f513d7028408"
+	},
+	"type": "RELATIONSHIP"
+}

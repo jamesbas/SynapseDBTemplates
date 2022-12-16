@@ -1,0 +1,156 @@
+{
+	"name": "ChurnReason",
+	"properties": {
+		"Name": "ChurnReason",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "ChurnReasonId",
+					"Description": "The unique identifier of a Churn Reason.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ChurnReason.cdm.json/ChurnReason",
+						"Name": "ChurnReasonId"
+					}
+				},
+				{
+					"Name": "ChurnReasonName",
+					"Description": "The name of a Churn Reason.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 256,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ChurnReason.cdm.json/ChurnReason",
+						"Name": "ChurnReasonName"
+					}
+				},
+				{
+					"Name": "ChurnReasonDescription",
+					"Description": "The description of a Churn Reason.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ChurnReason.cdm.json/ChurnReason",
+						"Name": "ChurnReasonDescription"
+					}
+				},
+				{
+					"Name": "ChurnReasonPreventableIndicator",
+					"Description": "Indicates whether the Churn Reason is considered to be preventable.",
+					"OriginDataTypeName": {
+						"TypeName": "boolean",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "boolean"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ChurnReason.cdm.json/ChurnReason",
+						"Name": "ChurnReasonPreventableIndicator"
+					}
+				}
+			],
+			"ColumnSetEntityName": "17b7498f-c7bc-4f19-aebb-22c43a46c8e6",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/ChurnReason",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/ChurnReason",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"ChurnReasonId\":{\"entity\":\"ChurnReason.cdm.json/ChurnReason\",\"name\":\"ChurnReasonId\"},\"ChurnReasonName\":{\"entity\":\"ChurnReason.cdm.json/ChurnReason\",\"name\":\"ChurnReasonName\"},\"ChurnReasonDescription\":{\"entity\":\"ChurnReason.cdm.json/ChurnReason\",\"name\":\"ChurnReasonDescription\"},\"ChurnReasonPreventableIndicator\":{\"entity\":\"ChurnReason.cdm.json/ChurnReason\",\"name\":\"ChurnReasonPreventableIndicator\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"ChurnReason\",\"path\":\"ChurnReason.cdm.json/ChurnReason\"},\"description\":\"The reason associated with a churn.\\n\\nEx:\\n- Customer Service\\n- Product/Service Quality\\n- Product Costs/Pricing\\n- Billing Accuracy\\n- Move To New Location\\n- Prior Complaints\",\"primaryKey\":[\"ChurnReasonId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ChurnReason.cdm.json/ChurnReason\",\"name\":\"ChurnReasonId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Churn Reason.\",\"isNullable\":false,\"name\":\"ChurnReasonId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ChurnReason.cdm.json/ChurnReason\",\"name\":\"ChurnReasonName\"},\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"The name of a Churn Reason.\",\"isNullable\":true,\"name\":\"ChurnReasonName\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ChurnReason.cdm.json/ChurnReason\",\"name\":\"ChurnReasonDescription\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"The description of a Churn Reason.\",\"isNullable\":true,\"name\":\"ChurnReasonDescription\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ChurnReason.cdm.json/ChurnReason\",\"name\":\"ChurnReasonPreventableIndicator\"},\"dataType\":\"boolean\",\"description\":\"Indicates whether the Churn Reason is considered to be preventable.\",\"isNullable\":true,\"name\":\"ChurnReasonPreventableIndicator\"}]}}}",
+			"Description": "The reason associated with a churn.\n\nEx:\n- Customer Service\n- Product/Service Quality\n- Product Costs/Pricing\n- Billing Accuracy\n- Move To New Location\n- Prior Complaints",
+			"DisplayFolderInfo": "{\"name\":\"Customer Account\",\"colorCode\":\"#Ef6950\"}",
+			"PrimaryKeys": "ChurnReasonId",
+			"spark.sql.sources.provider": "csv",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"ChurnReasonId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"ChurnReasonName\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ChurnReasonDescription\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ChurnReasonPreventableIndicator\",\"type\":\"boolean\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "7b68809e-b60d-42bc-b5cd-e900eecc70e4",
+		"Description": "The reason associated with a churn.\n\nEx:\n- Customer Service\n- Product/Service Quality\n- Product Costs/Pricing\n- Billing Accuracy\n- Move To New Location\n- Prior Complaints"
+	},
+	"type": "TABLE"
+}

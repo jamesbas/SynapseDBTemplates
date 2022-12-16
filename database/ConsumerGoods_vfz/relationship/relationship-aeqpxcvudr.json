@@ -1,0 +1,29 @@
+{
+	"name": "relationship-aeqpxcvudr",
+	"properties": {
+		"Name": "relationship-aeqpxcvudr",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "DoNotContactRegistry",
+		"ToTableName": "DoNotCallRegistryTelephone",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "DoNotContactRegistryId",
+				"ToColumnName": "DoNotContactRegistryId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"DoNotContactRegistry.cdm.json/DoNotContactRegistry\",\"toEntity\":\"DoNotCallRegistryTelephone.cdm.json/DoNotCallRegistryTelephone\",\"joinPairs\":[{\"fromAttribute\":\"DoNotContactRegistryId\",\"toAttribute\":\"DoNotContactRegistryId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "6c44557a-85fb-40a1-974f-045e6a91053e"
+	},
+	"type": "RELATIONSHIP"
+}

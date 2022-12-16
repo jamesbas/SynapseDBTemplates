@@ -1,0 +1,29 @@
+{
+	"name": "relationship-glajennvwy",
+	"properties": {
+		"Name": "relationship-glajennvwy",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "ProductCharacteristicType",
+		"ToTableName": "ProductGroupCharacteristic",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "ProductCharacteristicTypeId",
+				"ToColumnName": "ProductCharacteristicTypeId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"ProductCharacteristicType.cdm.json/ProductCharacteristicType\",\"toEntity\":\"ProductGroupCharacteristic.cdm.json/ProductGroupCharacteristic\",\"joinPairs\":[{\"fromAttribute\":\"ProductCharacteristicTypeId\",\"toAttribute\":\"ProductCharacteristicTypeId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "d6496ee6-6fc5-4989-bfac-c41e35ce0b23"
+	},
+	"type": "RELATIONSHIP"
+}

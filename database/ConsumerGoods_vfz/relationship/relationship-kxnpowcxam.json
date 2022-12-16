@@ -1,0 +1,29 @@
+{
+	"name": "relationship-kxnpowcxam",
+	"properties": {
+		"Name": "relationship-kxnpowcxam",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "FranchiseIdentityItemType",
+		"ToTableName": "FranchiseAgreementIdentityItem",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "FranchiseIdentityItemTypeId",
+				"ToColumnName": "FranchiseIdentityItemTypeId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"FranchiseIdentityItemType.cdm.json/FranchiseIdentityItemType\",\"toEntity\":\"FranchiseAgreementIdentityItem.cdm.json/FranchiseAgreementIdentityItem\",\"joinPairs\":[{\"fromAttribute\":\"FranchiseIdentityItemTypeId\",\"toAttribute\":\"FranchiseIdentityItemTypeId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "55eacf20-bc60-47aa-a6eb-57c1890893da"
+	},
+	"type": "RELATIONSHIP"
+}

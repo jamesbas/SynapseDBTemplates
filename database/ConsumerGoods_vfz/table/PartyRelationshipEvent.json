@@ -1,0 +1,233 @@
+{
+	"name": "PartyRelationshipEvent",
+	"properties": {
+		"Name": "PartyRelationshipEvent",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "Party1Id",
+					"Description": "The unique identifier of a Party.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyRelationshipEvent.cdm.json/PartyRelationshipEvent",
+						"Name": "Party1Id"
+					}
+				},
+				{
+					"Name": "Party1RoleId",
+					"Description": "The unique identifier of a Role.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyRelationshipEvent.cdm.json/PartyRelationshipEvent",
+						"Name": "Party1RoleId"
+					}
+				},
+				{
+					"Name": "Party2Id",
+					"Description": "The unique identifier of a Party.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyRelationshipEvent.cdm.json/PartyRelationshipEvent",
+						"Name": "Party2Id"
+					}
+				},
+				{
+					"Name": "Party2RoleId",
+					"Description": "The unique identifier of a Role.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyRelationshipEvent.cdm.json/PartyRelationshipEvent",
+						"Name": "Party2RoleId"
+					}
+				},
+				{
+					"Name": "EventTypeId",
+					"Description": "The unique identifier of a Event Type.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyRelationshipEvent.cdm.json/PartyRelationshipEvent",
+						"Name": "EventTypeId"
+					}
+				},
+				{
+					"Name": "PartyRelationshipTypeId",
+					"Description": "The unique identifier of a Party Relationship Type.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyRelationshipEvent.cdm.json/PartyRelationshipEvent",
+						"Name": "PartyRelationshipTypeId"
+					}
+				},
+				{
+					"Name": "EventTimestamp",
+					"Description": "The timestamp of the event.",
+					"OriginDataTypeName": {
+						"TypeName": "timestamp",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"TimestampFormat": "YYYY-MM-DD HH:MM:SS.fffffffff",
+							"HIVE_TYPE_STRING": "timestamp"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyRelationshipEvent.cdm.json/PartyRelationshipEvent",
+						"Name": "EventTimestamp"
+					}
+				},
+				{
+					"Name": "PartyRelationshipEventNote",
+					"Description": "A note, comment or additional information regarding the Party Relationship Event.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyRelationshipEvent.cdm.json/PartyRelationshipEvent",
+						"Name": "PartyRelationshipEventNote"
+					}
+				}
+			],
+			"ColumnSetEntityName": "fec4799c-ff29-418d-972c-f715a100bd33",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/PartyRelationshipEvent",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/PartyRelationshipEvent",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"Party1Id\":{\"entity\":\"PartyRelationshipEvent.cdm.json/PartyRelationshipEvent\",\"name\":\"Party1Id\"},\"Party1RoleId\":{\"entity\":\"PartyRelationshipEvent.cdm.json/PartyRelationshipEvent\",\"name\":\"Party1RoleId\"},\"Party2Id\":{\"entity\":\"PartyRelationshipEvent.cdm.json/PartyRelationshipEvent\",\"name\":\"Party2Id\"},\"Party2RoleId\":{\"entity\":\"PartyRelationshipEvent.cdm.json/PartyRelationshipEvent\",\"name\":\"Party2RoleId\"},\"EventTypeId\":{\"entity\":\"PartyRelationshipEvent.cdm.json/PartyRelationshipEvent\",\"name\":\"EventTypeId\"},\"PartyRelationshipTypeId\":{\"entity\":\"PartyRelationshipEvent.cdm.json/PartyRelationshipEvent\",\"name\":\"PartyRelationshipTypeId\"},\"EventTimestamp\":{\"entity\":\"PartyRelationshipEvent.cdm.json/PartyRelationshipEvent\",\"name\":\"EventTimestamp\"},\"PartyRelationshipEventNote\":{\"entity\":\"PartyRelationshipEvent.cdm.json/PartyRelationshipEvent\",\"name\":\"PartyRelationshipEventNote\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"PartyRelationshipEvent\",\"path\":\"PartyRelationshipEvent.cdm.json/PartyRelationshipEvent\"},\"description\":\"An event that affects two parties within a relationship each performing a specified role.\\n \\nEx:\\n\\nPARTY 1 = Kevin Bryson\\nROLE 1 = Employee\\nPARTY 2 = Davis Corp.\\nROLE 2 = Employer\\nPARTY RELATIONSHIP TYPE = Employment\\nEVENT TYPE = Employment Layoff\\n\\nPARTY 1 = Kevin Bryson\\nROLE 1 = Customer\\nPARTY 2 = Mary Bryson\\nROLE 2 = Customer\\nPARTY RELATIONSHIP TYPE = Marriage\\nEVENT TYPE = Birth of Child\\nPARTY RELATIONSHIP NOTE = Kevin Bryson and Mary Bryson who are customers recorded the birth of a child on the indicated date\",\"primaryKey\":[\"Party1Id\",\"Party1RoleId\",\"Party2Id\",\"Party2RoleId\",\"EventTypeId\",\"PartyRelationshipTypeId\",\"EventTimestamp\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyRelationshipEvent.cdm.json/PartyRelationshipEvent\",\"name\":\"Party1Id\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a Party.\",\"isNullable\":false,\"name\":\"Party1Id\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyRelationshipEvent.cdm.json/PartyRelationshipEvent\",\"name\":\"Party1RoleId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Role.\",\"isNullable\":false,\"name\":\"Party1RoleId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyRelationshipEvent.cdm.json/PartyRelationshipEvent\",\"name\":\"Party2Id\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a Party.\",\"isNullable\":false,\"name\":\"Party2Id\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyRelationshipEvent.cdm.json/PartyRelationshipEvent\",\"name\":\"Party2RoleId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Role.\",\"isNullable\":false,\"name\":\"Party2RoleId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyRelationshipEvent.cdm.json/PartyRelationshipEvent\",\"name\":\"EventTypeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Event Type.\",\"isNullable\":false,\"name\":\"EventTypeId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyRelationshipEvent.cdm.json/PartyRelationshipEvent\",\"name\":\"PartyRelationshipTypeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Party Relationship Type.\",\"isNullable\":false,\"name\":\"PartyRelationshipTypeId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyRelationshipEvent.cdm.json/PartyRelationshipEvent\",\"name\":\"EventTimestamp\"},\"dataType\":\"timestamp\",\"description\":\"The timestamp of the event.\",\"isNullable\":false,\"name\":\"EventTimestamp\",\"timestampFormat\":\"YYYY-MM-DD HH:MM:SS.fffffffff\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyRelationshipEvent.cdm.json/PartyRelationshipEvent\",\"name\":\"PartyRelationshipEventNote\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"A note, comment or additional information regarding the Party Relationship Event.\",\"isNullable\":true,\"name\":\"PartyRelationshipEventNote\"}]}}}",
+			"Description": "An event that affects two parties within a relationship each performing a specified role.\n \nEx:\n\nPARTY 1 = Kevin Bryson\nROLE 1 = Employee\nPARTY 2 = Davis Corp.\nROLE 2 = Employer\nPARTY RELATIONSHIP TYPE = Employment\nEVENT TYPE = Employment Layoff\n\nPARTY 1 = Kevin Bryson\nROLE 1 = Customer\nPARTY 2 = Mary Bryson\nROLE 2 = Customer\nPARTY RELATIONSHIP TYPE = Marriage\nEVENT TYPE = Birth of Child\nPARTY RELATIONSHIP NOTE = Kevin Bryson and Mary Bryson who are customers recorded the birth of a child on the indicated date",
+			"DisplayFolderInfo": "{\"name\":\"Party\",\"colorCode\":\"#7D0F6C\"}",
+			"PrimaryKeys": "Party1Id,Party1RoleId,Party2Id,Party2RoleId,EventTypeId,PartyRelationshipTypeId,EventTimestamp",
+			"spark.sql.sources.provider": "csv",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"Party1Id\",\"type\":\"long\",\"nullable\":false,\"metadata\":{}},{\"name\":\"Party1RoleId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"Party2Id\",\"type\":\"long\",\"nullable\":false,\"metadata\":{}},{\"name\":\"Party2RoleId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"EventTypeId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PartyRelationshipTypeId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"EventTimestamp\",\"type\":\"timestamp\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PartyRelationshipEventNote\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "db611f9c-2b11-467d-ac50-3ca80e71bc3f",
+		"Description": "An event that affects two parties within a relationship each performing a specified role.\n \nEx:\n\nPARTY 1 = Kevin Bryson\nROLE 1 = Employee\nPARTY 2 = Davis Corp.\nROLE 2 = Employer\nPARTY RELATIONSHIP TYPE = Employment\nEVENT TYPE = Employment Layoff\n\nPARTY 1 = Kevin Bryson\nROLE 1 = Customer\nPARTY 2 = Mary Bryson\nROLE 2 = Customer\nPARTY RELATIONSHIP TYPE = Marriage\nEVENT TYPE = Birth of Child\nPARTY RELATIONSHIP NOTE = Kevin Bryson and Mary Bryson who are customers recorded the birth of a child on the indicated date"
+	},
+	"type": "TABLE"
+}

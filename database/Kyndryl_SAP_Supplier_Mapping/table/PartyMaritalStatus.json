@@ -1,0 +1,177 @@
+{
+	"name": "PartyMaritalStatus",
+	"properties": {
+		"Name": "PartyMaritalStatus",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Kyndryl_SAP_Supplier_Mapping",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "PartyId",
+					"Description": "The unique identifier of a Party.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyMaritalStatus.cdm.json/PartyMaritalStatus",
+						"Name": "PartyId"
+					}
+				},
+				{
+					"Name": "MaritalStatusId",
+					"Description": "The unique identifier of the Individual's Marital Status.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyMaritalStatus.cdm.json/PartyMaritalStatus",
+						"Name": "MaritalStatusId"
+					}
+				},
+				{
+					"Name": "PeriodStartDate",
+					"Description": "The period start date for which the associated data is effective or 'as-of'.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyMaritalStatus.cdm.json/PartyMaritalStatus",
+						"Name": "PeriodStartDate"
+					}
+				},
+				{
+					"Name": "PeriodEndDate",
+					"Description": "The period end date for which the associated data is effective or 'as-of'.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyMaritalStatus.cdm.json/PartyMaritalStatus",
+						"Name": "PeriodEndDate"
+					}
+				},
+				{
+					"Name": "PartyMaritalStatusNote",
+					"Description": "A note, comment or additional information regarding the Individual's marital status.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyMaritalStatus.cdm.json/PartyMaritalStatus",
+						"Name": "PartyMaritalStatusNote"
+					}
+				}
+			],
+			"ColumnSetEntityName": "e8d13446-b371-41ec-af95-d529da6e5be2",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/Kyndryl_SAP_Supplier_Mapping/PartyMaritalStatus",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/Kyndryl_SAP_Supplier_Mapping/PartyMaritalStatus",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"PartyId\":{\"entity\":\"PartyMaritalStatus.cdm.json/PartyMaritalStatus\",\"name\":\"PartyId\"},\"MaritalStatusId\":{\"entity\":\"PartyMaritalStatus.cdm.json/PartyMaritalStatus\",\"name\":\"MaritalStatusId\"},\"PeriodStartDate\":{\"entity\":\"PartyMaritalStatus.cdm.json/PartyMaritalStatus\",\"name\":\"PeriodStartDate\"},\"PeriodEndDate\":{\"entity\":\"PartyMaritalStatus.cdm.json/PartyMaritalStatus\",\"name\":\"PeriodEndDate\"},\"PartyMaritalStatusNote\":{\"entity\":\"PartyMaritalStatus.cdm.json/PartyMaritalStatus\",\"name\":\"PartyMaritalStatusNote\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"PartyMaritalStatus\",\"path\":\"PartyMaritalStatus.cdm.json/PartyMaritalStatus\"},\"description\":\"The marital status of the Individual.\\n\\nThese criteria can change over a period of time and are represented with 'period start date/period end date' qualifications, which represented the best case for knowing this information. If the  data is only randomly sampled or recorded then you could use a single 'date' to identify its recording or effective as-of date.\",\"primaryKey\":[\"PartyId\",\"MaritalStatusId\",\"PeriodStartDate\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyMaritalStatus.cdm.json/PartyMaritalStatus\",\"name\":\"PartyId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a Party.\",\"isNullable\":false,\"name\":\"PartyId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyMaritalStatus.cdm.json/PartyMaritalStatus\",\"name\":\"MaritalStatusId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of the Individual's Marital Status.\",\"isNullable\":false,\"name\":\"MaritalStatusId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyMaritalStatus.cdm.json/PartyMaritalStatus\",\"name\":\"PeriodStartDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The period start date for which the associated data is effective or 'as-of'.\",\"isNullable\":false,\"name\":\"PeriodStartDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyMaritalStatus.cdm.json/PartyMaritalStatus\",\"name\":\"PeriodEndDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The period end date for which the associated data is effective or 'as-of'.\",\"isNullable\":true,\"name\":\"PeriodEndDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyMaritalStatus.cdm.json/PartyMaritalStatus\",\"name\":\"PartyMaritalStatusNote\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"A note, comment or additional information regarding the Individual's marital status.\",\"isNullable\":true,\"name\":\"PartyMaritalStatusNote\"}]}}}",
+			"Description": "The marital status of the Individual.\n\nThese criteria can change over a period of time and are represented with 'period start date/period end date' qualifications, which represented the best case for knowing this information. If the  data is only randomly sampled or recorded then you could use a single 'date' to identify its recording or effective as-of date.",
+			"DisplayFolderInfo": "{\"name\":\"Party\",\"colorCode\":\"#7D0F6C\"}",
+			"PrimaryKeys": "PartyId,MaritalStatusId,PeriodStartDate",
+			"spark.sql.sources.provider": "csv",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"PartyId\",\"type\":\"long\",\"nullable\":false,\"metadata\":{}},{\"name\":\"MaritalStatusId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PeriodStartDate\",\"type\":\"date\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PeriodEndDate\",\"type\":\"date\",\"nullable\":true,\"metadata\":{}},{\"name\":\"PartyMaritalStatusNote\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "5d7fddc7-2018-4108-bce9-72ba6a76e65c",
+		"Description": "The marital status of the Individual.\n\nThese criteria can change over a period of time and are represented with 'period start date/period end date' qualifications, which represented the best case for knowing this information. If the  data is only randomly sampled or recorded then you could use a single 'date' to identify its recording or effective as-of date."
+	},
+	"type": "TABLE"
+}

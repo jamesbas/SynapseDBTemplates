@@ -1,0 +1,29 @@
+{
+	"name": "relationship-loilupzqjb",
+	"properties": {
+		"Name": "relationship-loilupzqjb",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "LocationType",
+		"ToTableName": "PartyLocation",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "LocationTypeId",
+				"ToColumnName": "LocationTypeId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"LocationType.cdm.json/LocationType\",\"toEntity\":\"PartyLocation.cdm.json/PartyLocation\",\"joinPairs\":[{\"fromAttribute\":\"LocationTypeId\",\"toAttribute\":\"LocationTypeId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "166d16db-29e6-410f-8797-c38769dcd384"
+	},
+	"type": "RELATIONSHIP"
+}

@@ -1,0 +1,156 @@
+{
+	"name": "ConsignmentItem",
+	"properties": {
+		"Name": "ConsignmentItem",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "ContractId",
+					"Description": "The unique identifier of a Contract.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ConsignmentItem.cdm.json/ConsignmentItem",
+						"Name": "ContractId"
+					}
+				},
+				{
+					"Name": "ItemSku",
+					"Description": "The Stock Keeping Unit identifier, which is typically used for inventory-related activities.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 40,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ConsignmentItem.cdm.json/ConsignmentItem",
+						"Name": "ItemSku"
+					}
+				},
+				{
+					"Name": "Quantity",
+					"Description": "The quantity of Product consigned.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ConsignmentItem.cdm.json/ConsignmentItem",
+						"Name": "Quantity"
+					}
+				},
+				{
+					"Name": "DeclaredValue",
+					"Description": "The declared value by the Consignor of the goods consigned.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ConsignmentItem.cdm.json/ConsignmentItem",
+						"Name": "DeclaredValue"
+					}
+				}
+			],
+			"ColumnSetEntityName": "4f8eaa41-a7bd-434d-8e89-25319faec4c5",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/ConsignmentItem",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/ConsignmentItem",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"ContractId\":{\"entity\":\"ConsignmentItem.cdm.json/ConsignmentItem\",\"name\":\"ContractId\"},\"ItemSku\":{\"entity\":\"ConsignmentItem.cdm.json/ConsignmentItem\",\"name\":\"ItemSku\"},\"Quantity\":{\"entity\":\"ConsignmentItem.cdm.json/ConsignmentItem\",\"name\":\"Quantity\"},\"DeclaredValue\":{\"entity\":\"ConsignmentItem.cdm.json/ConsignmentItem\",\"name\":\"DeclaredValue\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"ConsignmentItem\",\"path\":\"ConsignmentItem.cdm.json/ConsignmentItem\"},\"description\":\"The products/items (goods) consigned by the Consignor to the Consignee.\",\"primaryKey\":[\"ContractId\",\"ItemSku\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ConsignmentItem.cdm.json/ConsignmentItem\",\"name\":\"ContractId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Contract.\",\"isNullable\":false,\"name\":\"ContractId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ConsignmentItem.cdm.json/ConsignmentItem\",\"name\":\"ItemSku\"},\"dataType\":\"string\",\"dataTypeLength\":40,\"description\":\"The Stock Keeping Unit identifier, which is typically used for inventory-related activities.\",\"isNullable\":false,\"name\":\"ItemSku\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ConsignmentItem.cdm.json/ConsignmentItem\",\"name\":\"Quantity\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"The quantity of Product consigned.\",\"isNullable\":true,\"scale\":2,\"name\":\"Quantity\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ConsignmentItem.cdm.json/ConsignmentItem\",\"name\":\"DeclaredValue\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"The declared value by the Consignor of the goods consigned.\",\"isNullable\":true,\"scale\":2,\"name\":\"DeclaredValue\"}]}}}",
+			"Description": "The products/items (goods) consigned by the Consignor to the Consignee.",
+			"DisplayFolderInfo": "{\"name\":\"Contract\",\"colorCode\":\"#000F5C\"}",
+			"PrimaryKeys": "ContractId,ItemSku",
+			"spark.sql.sources.provider": "csv",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"ContractId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"ItemSku\",\"type\":\"string\",\"nullable\":false,\"metadata\":{}},{\"name\":\"Quantity\",\"type\":\"decimal(18,2)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"DeclaredValue\",\"type\":\"decimal(18,2)\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "7b5a20a3-0a5e-4ac9-8060-0cf3e85779c2",
+		"Description": "The products/items (goods) consigned by the Consignor to the Consignee."
+	},
+	"type": "TABLE"
+}

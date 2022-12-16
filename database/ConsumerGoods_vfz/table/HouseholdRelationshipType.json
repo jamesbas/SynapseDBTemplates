@@ -1,0 +1,137 @@
+{
+	"name": "HouseholdRelationshipType",
+	"properties": {
+		"Name": "HouseholdRelationshipType",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "HouseholdRelationshipTypeId",
+					"Description": "The unique identifier of a Household Relationship Type.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "HouseholdRelationshipType.cdm.json/HouseholdRelationshipType",
+						"Name": "HouseholdRelationshipTypeId"
+					}
+				},
+				{
+					"Name": "HouseholdRelationshipTypeName",
+					"Description": "The name of a Household Relationship Type.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 256,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "HouseholdRelationshipType.cdm.json/HouseholdRelationshipType",
+						"Name": "HouseholdRelationshipTypeName"
+					}
+				},
+				{
+					"Name": "HouseholdRelationshipTypeDescription",
+					"Description": "The description of a Household Relationship Type.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "HouseholdRelationshipType.cdm.json/HouseholdRelationshipType",
+						"Name": "HouseholdRelationshipTypeDescription"
+					}
+				}
+			],
+			"ColumnSetEntityName": "63980eb0-894f-4df9-ba5d-cb35e0f29355",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/HouseholdRelationshipType",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/HouseholdRelationshipType",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"HouseholdRelationshipTypeId\":{\"entity\":\"HouseholdRelationshipType.cdm.json/HouseholdRelationshipType\",\"name\":\"HouseholdRelationshipTypeId\"},\"HouseholdRelationshipTypeName\":{\"entity\":\"HouseholdRelationshipType.cdm.json/HouseholdRelationshipType\",\"name\":\"HouseholdRelationshipTypeName\"},\"HouseholdRelationshipTypeDescription\":{\"entity\":\"HouseholdRelationshipType.cdm.json/HouseholdRelationshipType\",\"name\":\"HouseholdRelationshipTypeDescription\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"HouseholdRelationshipType\",\"path\":\"HouseholdRelationshipType.cdm.json/HouseholdRelationshipType\"},\"description\":\"The  type or nature of relationship between two households.\\n\\nEx:\\n- Related by marriage\\n- Related by geography\\n- Related by religion\\n- Related by employment\",\"primaryKey\":[\"HouseholdRelationshipTypeId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"HouseholdRelationshipType.cdm.json/HouseholdRelationshipType\",\"name\":\"HouseholdRelationshipTypeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Household Relationship Type.\",\"isNullable\":false,\"name\":\"HouseholdRelationshipTypeId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"HouseholdRelationshipType.cdm.json/HouseholdRelationshipType\",\"name\":\"HouseholdRelationshipTypeName\"},\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"The name of a Household Relationship Type.\",\"isNullable\":true,\"name\":\"HouseholdRelationshipTypeName\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"HouseholdRelationshipType.cdm.json/HouseholdRelationshipType\",\"name\":\"HouseholdRelationshipTypeDescription\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"The description of a Household Relationship Type.\",\"isNullable\":true,\"name\":\"HouseholdRelationshipTypeDescription\"}]}}}",
+			"Description": "The  type or nature of relationship between two households.\n\nEx:\n- Related by marriage\n- Related by geography\n- Related by religion\n- Related by employment",
+			"DisplayFolderInfo": "{\"name\":\"Party\",\"colorCode\":\"#7D0F6C\"}",
+			"PrimaryKeys": "HouseholdRelationshipTypeId",
+			"spark.sql.sources.provider": "csv",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"HouseholdRelationshipTypeId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"HouseholdRelationshipTypeName\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"HouseholdRelationshipTypeDescription\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "531b3ac2-7f0d-4037-a784-e2a1f8e71535",
+		"Description": "The  type or nature of relationship between two households.\n\nEx:\n- Related by marriage\n- Related by geography\n- Related by religion\n- Related by employment"
+	},
+	"type": "TABLE"
+}

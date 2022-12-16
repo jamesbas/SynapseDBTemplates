@@ -1,0 +1,158 @@
+{
+	"name": "PurchaseOrderStatus",
+	"properties": {
+		"Name": "PurchaseOrderStatus",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "PoNumber",
+					"Description": "The unique identifier of a Purchase Order.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 20,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PurchaseOrderStatus.cdm.json/PurchaseOrderStatus",
+						"Name": "PoNumber"
+					}
+				},
+				{
+					"Name": "PurchaseOrderStatusStartTimestamp",
+					"Description": "The start timestamp of the purchase order status.",
+					"OriginDataTypeName": {
+						"TypeName": "timestamp",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"TimestampFormat": "YYYY-MM-DD HH:MM:SS.fffffffff",
+							"HIVE_TYPE_STRING": "timestamp"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PurchaseOrderStatus.cdm.json/PurchaseOrderStatus",
+						"Name": "PurchaseOrderStatusStartTimestamp"
+					}
+				},
+				{
+					"Name": "PurchaseOrderStatusEndTimestamp",
+					"Description": "The end timestamp of the purchase order status.",
+					"OriginDataTypeName": {
+						"TypeName": "timestamp",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"TimestampFormat": "YYYY-MM-DD HH:MM:SS.fffffffff",
+							"HIVE_TYPE_STRING": "timestamp"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PurchaseOrderStatus.cdm.json/PurchaseOrderStatus",
+						"Name": "PurchaseOrderStatusEndTimestamp"
+					}
+				},
+				{
+					"Name": "PurchaseOrderStatusTypeId",
+					"Description": "The unique identifier of the Purchase Order Status Type.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PurchaseOrderStatus.cdm.json/PurchaseOrderStatus",
+						"Name": "PurchaseOrderStatusTypeId"
+					}
+				}
+			],
+			"ColumnSetEntityName": "d84106b4-871e-463e-aac9-29e29cfe3984",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/PurchaseOrderStatus",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/PurchaseOrderStatus",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"PoNumber\":{\"entity\":\"PurchaseOrderStatus.cdm.json/PurchaseOrderStatus\",\"name\":\"PoNumber\"},\"PurchaseOrderStatusStartTimestamp\":{\"entity\":\"PurchaseOrderStatus.cdm.json/PurchaseOrderStatus\",\"name\":\"PurchaseOrderStatusStartTimestamp\"},\"PurchaseOrderStatusEndTimestamp\":{\"entity\":\"PurchaseOrderStatus.cdm.json/PurchaseOrderStatus\",\"name\":\"PurchaseOrderStatusEndTimestamp\"},\"PurchaseOrderStatusTypeId\":{\"entity\":\"PurchaseOrderStatus.cdm.json/PurchaseOrderStatus\",\"name\":\"PurchaseOrderStatusTypeId\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"PurchaseOrderStatus\",\"path\":\"PurchaseOrderStatus.cdm.json/PurchaseOrderStatus\"},\"description\":\"The status of the associated Purchase Order.\",\"primaryKey\":[\"PoNumber\",\"PurchaseOrderStatusStartTimestamp\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PurchaseOrderStatus.cdm.json/PurchaseOrderStatus\",\"name\":\"PoNumber\"},\"dataType\":\"string\",\"dataTypeLength\":20,\"description\":\"The unique identifier of a Purchase Order.\",\"isNullable\":false,\"name\":\"PoNumber\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PurchaseOrderStatus.cdm.json/PurchaseOrderStatus\",\"name\":\"PurchaseOrderStatusStartTimestamp\"},\"dataType\":\"timestamp\",\"description\":\"The start timestamp of the purchase order status.\",\"isNullable\":false,\"name\":\"PurchaseOrderStatusStartTimestamp\",\"timestampFormat\":\"YYYY-MM-DD HH:MM:SS.fffffffff\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PurchaseOrderStatus.cdm.json/PurchaseOrderStatus\",\"name\":\"PurchaseOrderStatusEndTimestamp\"},\"dataType\":\"timestamp\",\"description\":\"The end timestamp of the purchase order status.\",\"isNullable\":true,\"name\":\"PurchaseOrderStatusEndTimestamp\",\"timestampFormat\":\"YYYY-MM-DD HH:MM:SS.fffffffff\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PurchaseOrderStatus.cdm.json/PurchaseOrderStatus\",\"name\":\"PurchaseOrderStatusTypeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of the Purchase Order Status Type.\",\"isNullable\":true,\"name\":\"PurchaseOrderStatusTypeId\"}]}}}",
+			"Description": "The status of the associated Purchase Order.",
+			"DisplayFolderInfo": "{\"name\":\"Purchasing\",\"colorCode\":\"#005A61\"}",
+			"PrimaryKeys": "PoNumber,PurchaseOrderStatusStartTimestamp",
+			"spark.sql.sources.provider": "csv",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"PoNumber\",\"type\":\"string\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PurchaseOrderStatusStartTimestamp\",\"type\":\"timestamp\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PurchaseOrderStatusEndTimestamp\",\"type\":\"timestamp\",\"nullable\":true,\"metadata\":{}},{\"name\":\"PurchaseOrderStatusTypeId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "b76add6a-5d49-4ff1-88fb-abb9122dd799",
+		"Description": "The status of the associated Purchase Order."
+	},
+	"type": "TABLE"
+}

@@ -1,0 +1,29 @@
+{
+	"name": "relationship-qvaueigpyj",
+	"properties": {
+		"Name": "relationship-qvaueigpyj",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "TaxStatus",
+		"ToTableName": "PartyCountryTaxStatus",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "TaxStatusId",
+				"ToColumnName": "TaxStatusId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"TaxStatus.cdm.json/TaxStatus\",\"toEntity\":\"PartyCountryTaxStatus.cdm.json/PartyCountryTaxStatus\",\"joinPairs\":[{\"fromAttribute\":\"TaxStatusId\",\"toAttribute\":\"TaxStatusId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 2,
+		"ObjectId": "d3fff2e3-e1e6-41b7-bf77-161e191a9a38"
+	},
+	"type": "RELATIONSHIP"
+}

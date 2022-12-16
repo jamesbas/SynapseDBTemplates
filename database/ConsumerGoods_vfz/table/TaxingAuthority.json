@@ -1,0 +1,156 @@
+{
+	"name": "TaxingAuthority",
+	"properties": {
+		"Name": "TaxingAuthority",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "TaxingAuthorityId",
+					"Description": "The unique identifier of a Taxing Authority.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "TaxingAuthority.cdm.json/TaxingAuthority",
+						"Name": "TaxingAuthorityId"
+					}
+				},
+				{
+					"Name": "TaxingAuthorityName",
+					"Description": "The name of a Taxing Authority.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 256,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "TaxingAuthority.cdm.json/TaxingAuthority",
+						"Name": "TaxingAuthorityName"
+					}
+				},
+				{
+					"Name": "TaxingAuthorityDescription",
+					"Description": "The description of a Taxing Authority.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "TaxingAuthority.cdm.json/TaxingAuthority",
+						"Name": "TaxingAuthorityDescription"
+					}
+				},
+				{
+					"Name": "PartyId",
+					"Description": "The unique identifier of a Party.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "TaxingAuthority.cdm.json/TaxingAuthority",
+						"Name": "PartyId"
+					}
+				}
+			],
+			"ColumnSetEntityName": "f1bc4ebc-0177-4eaa-b7bb-16530c51bcbb",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/TaxingAuthority",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/TaxingAuthority",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"TaxingAuthorityId\":{\"entity\":\"TaxingAuthority.cdm.json/TaxingAuthority\",\"name\":\"TaxingAuthorityId\"},\"TaxingAuthorityName\":{\"entity\":\"TaxingAuthority.cdm.json/TaxingAuthority\",\"name\":\"TaxingAuthorityName\"},\"TaxingAuthorityDescription\":{\"entity\":\"TaxingAuthority.cdm.json/TaxingAuthority\",\"name\":\"TaxingAuthorityDescription\"},\"PartyId\":{\"entity\":\"TaxingAuthority.cdm.json/TaxingAuthority\",\"name\":\"PartyId\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"TaxingAuthority\",\"path\":\"TaxingAuthority.cdm.json/TaxingAuthority\"},\"description\":\"The regulatory body, agency or government entity responsible for issuing the tax schedule and receiving tax payments.\\n\\nThe unique identifier of a Taxing Authority.\\n\\nEx:\\n- State of New York\\n- US Federal Government\",\"primaryKey\":[\"TaxingAuthorityId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"TaxingAuthority.cdm.json/TaxingAuthority\",\"name\":\"TaxingAuthorityId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Taxing Authority.\",\"isNullable\":false,\"name\":\"TaxingAuthorityId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"TaxingAuthority.cdm.json/TaxingAuthority\",\"name\":\"TaxingAuthorityName\"},\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"The name of a Taxing Authority.\",\"isNullable\":true,\"name\":\"TaxingAuthorityName\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"TaxingAuthority.cdm.json/TaxingAuthority\",\"name\":\"TaxingAuthorityDescription\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"The description of a Taxing Authority.\",\"isNullable\":true,\"name\":\"TaxingAuthorityDescription\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"TaxingAuthority.cdm.json/TaxingAuthority\",\"name\":\"PartyId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a Party.\",\"isNullable\":true,\"name\":\"PartyId\"}]}}}",
+			"Description": "The regulatory body, agency or government entity responsible for issuing the tax schedule and receiving tax payments.\n\nThe unique identifier of a Taxing Authority.\n\nEx:\n- State of New York\n- US Federal Government",
+			"DisplayFolderInfo": "{\"name\":\"Human Resources & Payroll\",\"colorCode\":\"#EA279F\"}",
+			"PrimaryKeys": "TaxingAuthorityId",
+			"spark.sql.sources.provider": "csv",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"TaxingAuthorityId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"TaxingAuthorityName\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"TaxingAuthorityDescription\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"PartyId\",\"type\":\"long\",\"nullable\":true,\"metadata\":{}}]}",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate"
+		},
+		"ObjectVersion": 2,
+		"ObjectId": "ad64a70f-bcd1-46ca-99c7-8c1005f39a64",
+		"Description": "The regulatory body, agency or government entity responsible for issuing the tax schedule and receiving tax payments.\n\nThe unique identifier of a Taxing Authority.\n\nEx:\n- State of New York\n- US Federal Government"
+	},
+	"type": "TABLE"
+}

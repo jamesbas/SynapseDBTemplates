@@ -1,0 +1,29 @@
+{
+	"name": "relationship-cxluzmxklz",
+	"properties": {
+		"Name": "relationship-cxluzmxklz",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "PartyEvent",
+		"ToTableName": "PartyEventRelatedParty",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "PartyId",
+				"ToColumnName": "PartyId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"PartyEvent.cdm.json/PartyEvent\",\"toEntity\":\"PartyEventRelatedParty.cdm.json/PartyEventRelatedParty\",\"joinPairs\":[{\"fromAttribute\":\"PartyId\",\"toAttribute\":\"PartyId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "805999fe-1666-4d18-8e83-aa861b3e5dc7"
+	},
+	"type": "RELATIONSHIP"
+}

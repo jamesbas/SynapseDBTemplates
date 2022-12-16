@@ -1,0 +1,29 @@
+{
+	"name": "relationship-znibvnhtbo",
+	"properties": {
+		"Name": "relationship-znibvnhtbo",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "ConsumerGoods_vfz"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "InterestType",
+		"ToTableName": "Interest",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "InterestTypeId",
+				"ToColumnName": "InterestTypeId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"InterestType.cdm.json/InterestType\",\"toEntity\":\"Interest.cdm.json/Interest\",\"joinPairs\":[{\"fromAttribute\":\"InterestTypeId\",\"toAttribute\":\"InterestTypeId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "770aec16-5f46-4011-a9ec-e0f407231347"
+	},
+	"type": "RELATIONSHIP"
+}

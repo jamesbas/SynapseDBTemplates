@@ -1,0 +1,137 @@
+{
+	"name": "SocialClass",
+	"properties": {
+		"Name": "SocialClass",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "SocialClassId",
+					"Description": "The unique identifier of a Social Class.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "SocialClass.cdm.json/SocialClass",
+						"Name": "SocialClassId"
+					}
+				},
+				{
+					"Name": "SocialClassName",
+					"Description": "The name of the Social Class.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 256,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "SocialClass.cdm.json/SocialClass",
+						"Name": "SocialClassName"
+					}
+				},
+				{
+					"Name": "SocialClassDescription",
+					"Description": "The description of the Social Class.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "SocialClass.cdm.json/SocialClass",
+						"Name": "SocialClassDescription"
+					}
+				}
+			],
+			"ColumnSetEntityName": "cba322d4-068e-4fb9-a4b0-bb0354840042",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/SocialClass",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/SocialClass",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"SocialClassId\":{\"entity\":\"SocialClass.cdm.json/SocialClass\",\"name\":\"SocialClassId\"},\"SocialClassName\":{\"entity\":\"SocialClass.cdm.json/SocialClass\",\"name\":\"SocialClassName\"},\"SocialClassDescription\":{\"entity\":\"SocialClass.cdm.json/SocialClass\",\"name\":\"SocialClassDescription\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"SocialClass\",\"path\":\"SocialClass.cdm.json/SocialClass\"},\"description\":\"Social classes are relatively homogeneous and enduring divisions within a society.\\n\\nMembers of a social class tend to attach importance to similar things, have similar pursuits and value similar types of behavior.\\n\\nSocial class members tend to share similar values, attitudes, interests and behavior.\\n\\nSociologists usually identify six social classes in US society:\\n\\n-  Upper-upper class\\n-  Lower-upper class\\n-  Upper-middle class\\n-  Lower-middle class\\n-  Upper-lower class\\n-  Lower-lower class\\n\\nLOWER-LOWER CLASS\\nThe Lower-Lower Class comprises about 20 % of the population and is characterized by:\\n-  Bottom of social hierarchy\\n-  Poorly educated\\n-  Unskilled laborers\\n-  Frequently reject middle-class values\\n-  Buy impulsively with little care for quality\\n-  Tend to buy on credit\\n-  Tend to pay too much\\n-  Large market for food, TV's, used automobiles\\n\\nLOWER-MIDDLE CLASS\\nThe Lower-Middle Class comprises about 30% of the population and is characterized by:\\n-  White collar professions\\n-  Small business owners\\n-  Foremen\\n-  Concerned with respectability\\n-  Conscientious work habits and ascribe to culturally defined norms\\n-  Maintain neat homes, buy conventional furnishings\\n-  Do own repairs\\n-  Avoid ostentatious styles\\n\\nLOWER-UPPER CLASS\\nThe Lower-Upper Class consists of about 2% of the population and is characterized by:\\n-  High incomes or wealth earned through exceptional business or professional practices\\n-  Socially active lifestyles\\n-  Purchase status products\\n-  Consumption pattern designed to impress classes above and below them\\n-  Primary ambition is to be accepted by Upper-Upper Class\\n\\nUPPER-LOWER CLASS\\nThe Upper-Lower Class comprises about 35% of the population and is characterized by:\\n-  Blue collar skills and trades\\n-  Seek respectability and security\\n-  'Macho' self-image for males\\n-  Heavy smoker\\n-  Beer drinker\\n-  Wives spend most time cooking, cleaning, caring for children\\n-  Little time for social activities or organizations\\n\\nUPPER-MIDDLE CLASS\\nThe Upper-Middle Class comprises about 12% of the population and is characterized by:\\n-  Professional or independent business professions\\n-  Possess neither family status or unusual wealth\\n-  Primarily concerned with careers and family\\n-  Civic-minder joiners\\n-  Entertain friends and clients at home\\n-  Quality market for clothes, homes, furniture, appliances and vacations\\n\\nUPPER-UPPER CLASS\\nThe Upper-Upper Class comprises less than 1% of the population and is characterized by:\\n-  Being of the socially elite\\n-  Having inherited wealth\\n-  Well-known family names and/or backgrounds\\n-  Donate large sums to charity\\n-  Maintain more than one home\\n-  Send children to best schools\\n-  Buy and dress conservatively\\n-  Spend lavishly on jewelry\\n-  Reference group for imitation by other social classes\",\"primaryKey\":[\"SocialClassId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"SocialClass.cdm.json/SocialClass\",\"name\":\"SocialClassId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Social Class.\",\"isNullable\":false,\"name\":\"SocialClassId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"SocialClass.cdm.json/SocialClass\",\"name\":\"SocialClassName\"},\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"The name of the Social Class.\",\"isNullable\":true,\"name\":\"SocialClassName\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"SocialClass.cdm.json/SocialClass\",\"name\":\"SocialClassDescription\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"The description of the Social Class.\",\"isNullable\":true,\"name\":\"SocialClassDescription\"}]}}}",
+			"Description": "Social classes are relatively homogeneous and enduring divisions within a society.\n\nMembers of a social class tend to attach importance to similar things, have similar pursuits and value similar types of behavior.\n\nSocial class members tend to share similar values, attitudes, interests and behavior.\n\nSociologists usually identify six social classes in US society:\n\n-  Upper-upper class\n-  Lower-upper class\n-  Upper-middle class\n-  Lower-middle class\n-  Upper-lower class\n-  Lower-lower class\n\nLOWER-LOWER CLASS\nThe Lower-Lower Class comprises about 20 % of the population and is characterized by:\n-  Bottom of social hierarchy\n-  Poorly educated\n-  Unskilled laborers\n-  Frequently reject middle-class values\n-  Buy impulsively with little care for quality\n-  Tend to buy on credit\n-  Tend to pay too much\n-  Large market for food, TV's, used automobiles\n\nLOWER-MIDDLE CLASS\nThe Lower-Middle Class comprises about 30% of the population and is characterized by:\n-  White collar professions\n-  Small business owners\n-  Foremen\n-  Concerned with respectability\n-  Conscientious work habits and ascribe to culturally defined norms\n-  Maintain neat homes, buy conventional furnishings\n-  Do own repairs\n-  Avoid ostentatious styles\n\nLOWER-UPPER CLASS\nThe Lower-Upper Class consists of about 2% of the population and is characterized by:\n-  High incomes or wealth earned through exceptional business or professional practices\n-  Socially active lifestyles\n-  Purchase status products\n-  Consumption pattern designed to impress classes above and below them\n-  Primary ambition is to be accepted by Upper-Upper Class\n\nUPPER-LOWER CLASS\nThe Upper-Lower Class comprises about 35% of the population and is characterized by:\n-  Blue collar skills and trades\n-  Seek respectability and security\n-  'Macho' self-image for males\n-  Heavy smoker\n-  Beer drinker\n-  Wives spend most time cooking, cleaning, caring for children\n-  Little time for social activities or organizations\n\nUPPER-MIDDLE CLASS\nThe Upper-Middle Class comprises about 12% of the population and is characterized by:\n-  Professional or independent business professions\n-  Possess neither family status or unusual wealth\n-  Primarily concerned with careers and family\n-  Civic-minder joiners\n-  Entertain friends and clients at home\n-  Quality market for clothes, homes, furniture, appliances and vacations\n\nUPPER-UPPER CLASS\nThe Upper-Upper Class comprises less than 1% of the population and is characterized by:\n-  Being of the socially elite\n-  Having inherited wealth\n-  Well-known family names and/or backgrounds\n-  Donate large sums to charity\n-  Maintain more than one home\n-  Send children to best schools\n-  Buy and dress conservatively\n-  Spend lavishly on jewelry\n-  Reference group for imitation by other social classes",
+			"DisplayFolderInfo": "{\"name\":\"Party\",\"colorCode\":\"#7D0F6C\"}",
+			"PrimaryKeys": "SocialClassId",
+			"spark.sql.sources.provider": "csv",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"SocialClassId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"SocialClassName\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"SocialClassDescription\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "4990e1c0-28da-4b87-80fc-fc56928085d4",
+		"Description": "Social classes are relatively homogeneous and enduring divisions within a society.\n\nMembers of a social class tend to attach importance to similar things, have similar pursuits and value similar types of behavior.\n\nSocial class members tend to share similar values, attitudes, interests and behavior.\n\nSociologists usually identify six social classes in US society:\n\n-  Upper-upper class\n-  Lower-upper class\n-  Upper-middle class\n-  Lower-middle class\n-  Upper-lower class\n-  Lower-lower class\n\nLOWER-LOWER CLASS\nThe Lower-Lower Class comprises about 20 % of the population and is characterized by:\n-  Bottom of social hierarchy\n-  Poorly educated\n-  Unskilled laborers\n-  Frequently reject middle-class values\n-  Buy impulsively with little care for quality\n-  Tend to buy on credit\n-  Tend to pay too much\n-  Large market for food, TV's, used automobiles\n\nLOWER-MIDDLE CLASS\nThe Lower-Middle Class comprises about 30% of the population and is characterized by:\n-  White collar professions\n-  Small business owners\n-  Foremen\n-  Concerned with respectability\n-  Conscientious work habits and ascribe to culturally defined norms\n-  Maintain neat homes, buy conventional furnishings\n-  Do own repairs\n-  Avoid ostentatious styles\n\nLOWER-UPPER CLASS\nThe Lower-Upper Class consists of about 2% of the population and is characterized by:\n-  High incomes or wealth earned through exceptional business or professional practices\n-  Socially active lifestyles\n-  Purchase status products\n-  Consumption pattern designed to impress classes above and below them\n-  Primary ambition is to be accepted by Upper-Upper Class\n\nUPPER-LOWER CLASS\nThe Upper-Lower Class comprises about 35% of the population and is characterized by:\n-  Blue collar skills and trades\n-  Seek respectability and security\n-  'Macho' self-image for males\n-  Heavy smoker\n-  Beer drinker\n-  Wives spend most time cooking, cleaning, caring for children\n-  Little time for social activities or organizations\n\nUPPER-MIDDLE CLASS\nThe Upper-Middle Class comprises about 12% of the population and is characterized by:\n-  Professional or independent business professions\n-  Possess neither family status or unusual wealth\n-  Primarily concerned with careers and family\n-  Civic-minder joiners\n-  Entertain friends and clients at home\n-  Quality market for clothes, homes, furniture, appliances and vacations\n\nUPPER-UPPER CLASS\nThe Upper-Upper Class comprises less than 1% of the population and is characterized by:\n-  Being of the socially elite\n-  Having inherited wealth\n-  Well-known family names and/or backgrounds\n-  Donate large sums to charity\n-  Maintain more than one home\n-  Send children to best schools\n-  Buy and dress conservatively\n-  Spend lavishly on jewelry\n-  Reference group for imitation by other social classes"
+	},
+	"type": "TABLE"
+}

@@ -1,0 +1,386 @@
+{
+	"name": "DunBradstreetReport",
+	"properties": {
+		"Name": "DunBradstreetReport",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "DunsNumber",
+					"Description": "Dun & Bradstreet (D&B) provides a D-U-N-S Number, a unique nine digit identification number, for each physical location of your business.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 9,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "DunBradstreetReport.cdm.json/DunBradstreetReport",
+						"Name": "DunsNumber"
+					}
+				},
+				{
+					"Name": "ReportPurchaseDate",
+					"Description": "The purchase date of the report.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "DunBradstreetReport.cdm.json/DunBradstreetReport",
+						"Name": "ReportPurchaseDate"
+					}
+				},
+				{
+					"Name": "CompanyStartedYear",
+					"Description": "The year that the company was started.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "DunBradstreetReport.cdm.json/DunBradstreetReport",
+						"Name": "CompanyStartedYear"
+					}
+				},
+				{
+					"Name": "ControlYear",
+					"Description": "The year that the company took control of the operations.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "DunBradstreetReport.cdm.json/DunBradstreetReport",
+						"Name": "ControlYear"
+					}
+				},
+				{
+					"Name": "NumberOfEmployees",
+					"Description": "The number of company employees.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "DunBradstreetReport.cdm.json/DunBradstreetReport",
+						"Name": "NumberOfEmployees"
+					}
+				},
+				{
+					"Name": "NumberOfEmployeesAtThisLocation",
+					"Description": "The number of employees at this location.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "DunBradstreetReport.cdm.json/DunBradstreetReport",
+						"Name": "NumberOfEmployeesAtThisLocation"
+					}
+				},
+				{
+					"Name": "WorkingCapitalAmount",
+					"Description": "The estimated amount of working capital associated with the business.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "DunBradstreetReport.cdm.json/DunBradstreetReport",
+						"Name": "WorkingCapitalAmount"
+					}
+				},
+				{
+					"Name": "SalesAmount",
+					"Description": "The amount of annual sales last reported.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "DunBradstreetReport.cdm.json/DunBradstreetReport",
+						"Name": "SalesAmount"
+					}
+				},
+				{
+					"Name": "NetWorthAmount",
+					"Description": "The estimated net worth amount.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "DunBradstreetReport.cdm.json/DunBradstreetReport",
+						"Name": "NetWorthAmount"
+					}
+				},
+				{
+					"Name": "AsOfDate",
+					"Description": "The as-of date that the information is provided.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "DunBradstreetReport.cdm.json/DunBradstreetReport",
+						"Name": "AsOfDate"
+					}
+				},
+				{
+					"Name": "FinancialDataAvailableIndicator",
+					"Description": "Indicates that financial data is available for the company.",
+					"OriginDataTypeName": {
+						"TypeName": "boolean",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "boolean"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "DunBradstreetReport.cdm.json/DunBradstreetReport",
+						"Name": "FinancialDataAvailableIndicator"
+					}
+				},
+				{
+					"Name": "TradePaymentsAvailableIndicator",
+					"Description": "Indicates that trade payments data is available for the business.",
+					"OriginDataTypeName": {
+						"TypeName": "boolean",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "boolean"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "DunBradstreetReport.cdm.json/DunBradstreetReport",
+						"Name": "TradePaymentsAvailableIndicator"
+					}
+				},
+				{
+					"Name": "CompanySize",
+					"Description": "The size of the company at the associated date.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "DunBradstreetReport.cdm.json/DunBradstreetReport",
+						"Name": "CompanySize"
+					}
+				},
+				{
+					"Name": "YearsInBusiness",
+					"Description": "The number of years the business has been in business.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "DunBradstreetReport.cdm.json/DunBradstreetReport",
+						"Name": "YearsInBusiness"
+					}
+				},
+				{
+					"Name": "SicIndustryCode",
+					"Description": "The unique identifier of the SIC Industry.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 4,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "DunBradstreetReport.cdm.json/DunBradstreetReport",
+						"Name": "SicIndustryCode"
+					}
+				},
+				{
+					"Name": "NaicsNationalIndustryCode",
+					"Description": "The unique identifier of a NAICS National Industry Code.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 6,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "DunBradstreetReport.cdm.json/DunBradstreetReport",
+						"Name": "NaicsNationalIndustryCode"
+					}
+				}
+			],
+			"ColumnSetEntityName": "bf6a908a-ac06-4cf3-8cf7-8db0524f910a",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/DunBradstreetReport",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/DunBradstreetReport",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"DunsNumber\":{\"entity\":\"DunBradstreetReport.cdm.json/DunBradstreetReport\",\"name\":\"DunsNumber\"},\"ReportPurchaseDate\":{\"entity\":\"DunBradstreetReport.cdm.json/DunBradstreetReport\",\"name\":\"ReportPurchaseDate\"},\"CompanyStartedYear\":{\"entity\":\"DunBradstreetReport.cdm.json/DunBradstreetReport\",\"name\":\"CompanyStartedYear\"},\"ControlYear\":{\"entity\":\"DunBradstreetReport.cdm.json/DunBradstreetReport\",\"name\":\"ControlYear\"},\"NumberOfEmployees\":{\"entity\":\"DunBradstreetReport.cdm.json/DunBradstreetReport\",\"name\":\"NumberOfEmployees\"},\"NumberOfEmployeesAtThisLocation\":{\"entity\":\"DunBradstreetReport.cdm.json/DunBradstreetReport\",\"name\":\"NumberOfEmployeesAtThisLocation\"},\"WorkingCapitalAmount\":{\"entity\":\"DunBradstreetReport.cdm.json/DunBradstreetReport\",\"name\":\"WorkingCapitalAmount\"},\"SalesAmount\":{\"entity\":\"DunBradstreetReport.cdm.json/DunBradstreetReport\",\"name\":\"SalesAmount\"},\"NetWorthAmount\":{\"entity\":\"DunBradstreetReport.cdm.json/DunBradstreetReport\",\"name\":\"NetWorthAmount\"},\"AsOfDate\":{\"entity\":\"DunBradstreetReport.cdm.json/DunBradstreetReport\",\"name\":\"AsOfDate\"},\"FinancialDataAvailableIndicator\":{\"entity\":\"DunBradstreetReport.cdm.json/DunBradstreetReport\",\"name\":\"FinancialDataAvailableIndicator\"},\"TradePaymentsAvailableIndicator\":{\"entity\":\"DunBradstreetReport.cdm.json/DunBradstreetReport\",\"name\":\"TradePaymentsAvailableIndicator\"},\"CompanySize\":{\"entity\":\"DunBradstreetReport.cdm.json/DunBradstreetReport\",\"name\":\"CompanySize\"},\"YearsInBusiness\":{\"entity\":\"DunBradstreetReport.cdm.json/DunBradstreetReport\",\"name\":\"YearsInBusiness\"},\"SicIndustryCode\":{\"entity\":\"DunBradstreetReport.cdm.json/DunBradstreetReport\",\"name\":\"SicIndustryCode\"},\"NaicsNationalIndustryCode\":{\"entity\":\"DunBradstreetReport.cdm.json/DunBradstreetReport\",\"name\":\"NaicsNationalIndustryCode\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"DunBradstreetReport\",\"path\":\"DunBradstreetReport.cdm.json/DunBradstreetReport\"},\"description\":\"A high level overview of the selected company, including contact and general company information, stock symbol, trade name, D&B D-U-N-S Number, and Domestic Ultimate name and address.\\n\\nThe Dun Bradstreet comprehensive report consists of basic sections.\\n\\n1.  Executive Summary\\n2.  Business Information\\n3.  Business History\\n4.  Business Registration\\n5.  Government Activity Summary\\n6.  Operations Data\\n7.  Industry Data\\n8.  Family Tree\\n9.  Financial Statements\\n10. Indicators\\n11. Full Filings\\n12. Commercial Credit Score\\n13. Financial Stress Score\\n14. Advanced Paydex + CLR\",\"primaryKey\":[\"DunsNumber\",\"ReportPurchaseDate\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"DunBradstreetReport.cdm.json/DunBradstreetReport\",\"name\":\"DunsNumber\"},\"dataType\":\"decimal\",\"dataTypeLength\":9,\"description\":\"Dun & Bradstreet (D&B) provides a D-U-N-S Number, a unique nine digit identification number, for each physical location of your business.\",\"isNullable\":false,\"scale\":0,\"name\":\"DunsNumber\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"DunBradstreetReport.cdm.json/DunBradstreetReport\",\"name\":\"ReportPurchaseDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The purchase date of the report.\",\"isNullable\":false,\"name\":\"ReportPurchaseDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"DunBradstreetReport.cdm.json/DunBradstreetReport\",\"name\":\"CompanyStartedYear\"},\"dataType\":\"integer\",\"description\":\"The year that the company was started.\",\"isNullable\":true,\"name\":\"CompanyStartedYear\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"DunBradstreetReport.cdm.json/DunBradstreetReport\",\"name\":\"ControlYear\"},\"dataType\":\"integer\",\"description\":\"The year that the company took control of the operations.\",\"isNullable\":true,\"name\":\"ControlYear\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"DunBradstreetReport.cdm.json/DunBradstreetReport\",\"name\":\"NumberOfEmployees\"},\"dataType\":\"integer\",\"description\":\"The number of company employees.\",\"isNullable\":true,\"name\":\"NumberOfEmployees\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"DunBradstreetReport.cdm.json/DunBradstreetReport\",\"name\":\"NumberOfEmployeesAtThisLocation\"},\"dataType\":\"integer\",\"description\":\"The number of employees at this location.\",\"isNullable\":true,\"name\":\"NumberOfEmployeesAtThisLocation\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"DunBradstreetReport.cdm.json/DunBradstreetReport\",\"name\":\"WorkingCapitalAmount\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"The estimated amount of working capital associated with the business.\",\"isNullable\":true,\"scale\":2,\"name\":\"WorkingCapitalAmount\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"DunBradstreetReport.cdm.json/DunBradstreetReport\",\"name\":\"SalesAmount\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"The amount of annual sales last reported.\",\"isNullable\":true,\"scale\":2,\"name\":\"SalesAmount\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"DunBradstreetReport.cdm.json/DunBradstreetReport\",\"name\":\"NetWorthAmount\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"The estimated net worth amount.\",\"isNullable\":true,\"scale\":2,\"name\":\"NetWorthAmount\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"DunBradstreetReport.cdm.json/DunBradstreetReport\",\"name\":\"AsOfDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The as-of date that the information is provided.\",\"isNullable\":true,\"name\":\"AsOfDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"DunBradstreetReport.cdm.json/DunBradstreetReport\",\"name\":\"FinancialDataAvailableIndicator\"},\"dataType\":\"boolean\",\"description\":\"Indicates that financial data is available for the company.\",\"isNullable\":true,\"name\":\"FinancialDataAvailableIndicator\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"DunBradstreetReport.cdm.json/DunBradstreetReport\",\"name\":\"TradePaymentsAvailableIndicator\"},\"dataType\":\"boolean\",\"description\":\"Indicates that trade payments data is available for the business.\",\"isNullable\":true,\"name\":\"TradePaymentsAvailableIndicator\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"DunBradstreetReport.cdm.json/DunBradstreetReport\",\"name\":\"CompanySize\"},\"dataType\":\"integer\",\"description\":\"The size of the company at the associated date.\",\"isNullable\":true,\"name\":\"CompanySize\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"DunBradstreetReport.cdm.json/DunBradstreetReport\",\"name\":\"YearsInBusiness\"},\"dataType\":\"integer\",\"description\":\"The number of years the business has been in business.\",\"isNullable\":true,\"name\":\"YearsInBusiness\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"DunBradstreetReport.cdm.json/DunBradstreetReport\",\"name\":\"SicIndustryCode\"},\"dataType\":\"decimal\",\"dataTypeLength\":4,\"description\":\"The unique identifier of the SIC Industry.\",\"isNullable\":true,\"scale\":0,\"name\":\"SicIndustryCode\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"DunBradstreetReport.cdm.json/DunBradstreetReport\",\"name\":\"NaicsNationalIndustryCode\"},\"dataType\":\"decimal\",\"dataTypeLength\":6,\"description\":\"The unique identifier of a NAICS National Industry Code.\",\"isNullable\":true,\"scale\":0,\"name\":\"NaicsNationalIndustryCode\"}]}}}",
+			"Description": "A high level overview of the selected company, including contact and general company information, stock symbol, trade name, D&B D-U-N-S Number, and Domestic Ultimate name and address.\n\nThe Dun Bradstreet comprehensive report consists of basic sections.\n\n1.  Executive Summary\n2.  Business Information\n3.  Business History\n4.  Business Registration\n5.  Government Activity Summary\n6.  Operations Data\n7.  Industry Data\n8.  Family Tree\n9.  Financial Statements\n10. Indicators\n11. Full Filings\n12. Commercial Credit Score\n13. Financial Stress Score\n14. Advanced Paydex + CLR",
+			"DisplayFolderInfo": "{\"name\":\"Customer Credit & Collections\",\"colorCode\":\"#0E3D73\"}",
+			"PrimaryKeys": "DunsNumber,ReportPurchaseDate",
+			"spark.sql.sources.provider": "csv",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"DunsNumber\",\"type\":\"decimal(9,0)\",\"nullable\":false,\"metadata\":{}},{\"name\":\"ReportPurchaseDate\",\"type\":\"date\",\"nullable\":false,\"metadata\":{}},{\"name\":\"CompanyStartedYear\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ControlYear\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"NumberOfEmployees\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"NumberOfEmployeesAtThisLocation\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"WorkingCapitalAmount\",\"type\":\"decimal(18,2)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"SalesAmount\",\"type\":\"decimal(18,2)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"NetWorthAmount\",\"type\":\"decimal(18,2)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"AsOfDate\",\"type\":\"date\",\"nullable\":true,\"metadata\":{}},{\"name\":\"FinancialDataAvailableIndicator\",\"type\":\"boolean\",\"nullable\":true,\"metadata\":{}},{\"name\":\"TradePaymentsAvailableIndicator\",\"type\":\"boolean\",\"nullable\":true,\"metadata\":{}},{\"name\":\"CompanySize\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"YearsInBusiness\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"SicIndustryCode\",\"type\":\"decimal(4,0)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"NaicsNationalIndustryCode\",\"type\":\"decimal(6,0)\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "bc81df2d-6807-4557-9d1f-b6c3a07e00d9",
+		"Description": "A high level overview of the selected company, including contact and general company information, stock symbol, trade name, D&B D-U-N-S Number, and Domestic Ultimate name and address.\n\nThe Dun Bradstreet comprehensive report consists of basic sections.\n\n1.  Executive Summary\n2.  Business Information\n3.  Business History\n4.  Business Registration\n5.  Government Activity Summary\n6.  Operations Data\n7.  Industry Data\n8.  Family Tree\n9.  Financial Statements\n10. Indicators\n11. Full Filings\n12. Commercial Credit Score\n13. Financial Stress Score\n14. Advanced Paydex + CLR"
+	},
+	"type": "TABLE"
+}

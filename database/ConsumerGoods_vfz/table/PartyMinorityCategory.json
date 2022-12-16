@@ -1,0 +1,177 @@
+{
+	"name": "PartyMinorityCategory",
+	"properties": {
+		"Name": "PartyMinorityCategory",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "ConsumerGoods_vfz",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "PartyId",
+					"Description": "The unique identifier of a Party.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyMinorityCategory.cdm.json/PartyMinorityCategory",
+						"Name": "PartyId"
+					}
+				},
+				{
+					"Name": "MinorityCategoryId",
+					"Description": "The unique identifier of a Minority Category.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyMinorityCategory.cdm.json/PartyMinorityCategory",
+						"Name": "MinorityCategoryId"
+					}
+				},
+				{
+					"Name": "PeriodStartDate",
+					"Description": "The period start date for which the associated D&B data is effective or 'as-of'.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyMinorityCategory.cdm.json/PartyMinorityCategory",
+						"Name": "PeriodStartDate"
+					}
+				},
+				{
+					"Name": "PeriodEndDate",
+					"Description": "The period end date for which the associated D&B data is effective or 'as-of'.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyMinorityCategory.cdm.json/PartyMinorityCategory",
+						"Name": "PeriodEndDate"
+					}
+				},
+				{
+					"Name": "MinorityCategoryNote",
+					"Description": "A note, comment or additional information regarding the party's minority category.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyMinorityCategory.cdm.json/PartyMinorityCategory",
+						"Name": "MinorityCategoryNote"
+					}
+				}
+			],
+			"ColumnSetEntityName": "d94b9aff-8e74-4844-a0ec-13f53ace12e3",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/PartyMinorityCategory",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://workspace@jam710adls.dfs.core.windows.net/ConsumerGoods_vfz/PartyMinorityCategory",
+				"Properties": {
+					"LinkedServiceName": "synapsedemojamesbas-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"PartyId\":{\"entity\":\"PartyMinorityCategory.cdm.json/PartyMinorityCategory\",\"name\":\"PartyId\"},\"MinorityCategoryId\":{\"entity\":\"PartyMinorityCategory.cdm.json/PartyMinorityCategory\",\"name\":\"MinorityCategoryId\"},\"PeriodStartDate\":{\"entity\":\"PartyMinorityCategory.cdm.json/PartyMinorityCategory\",\"name\":\"PeriodStartDate\"},\"PeriodEndDate\":{\"entity\":\"PartyMinorityCategory.cdm.json/PartyMinorityCategory\",\"name\":\"PeriodEndDate\"},\"MinorityCategoryNote\":{\"entity\":\"PartyMinorityCategory.cdm.json/PartyMinorityCategory\",\"name\":\"MinorityCategoryNote\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"PartyMinorityCategory\",\"path\":\"PartyMinorityCategory.cdm.json/PartyMinorityCategory\"},\"description\":\"The Minority Category(s) associated with the legal entity party for the associated range of dates.\\n\\nEx:\\n- Certified Small Disadvantaged Business \\n- SBA Certified HUB Zone Business \\n- SBA Certified 8(a) Program Participant \\n- DoT Certified Disadvantaged Business Enterprise - Black Owned\\n- Community Developed Corporation  \\n- Labor Surplus Area Firm  \\n- Alaskan Native Corporation Owned Firm  \\n- Native Hawaiian Organization Owned Firm  \\n- American Indian Owned  \\n- Service Disabled Veteran Owned \\n- Woman Owned\",\"primaryKey\":[\"PartyId\",\"MinorityCategoryId\",\"PeriodStartDate\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyMinorityCategory.cdm.json/PartyMinorityCategory\",\"name\":\"PartyId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a Party.\",\"isNullable\":false,\"name\":\"PartyId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyMinorityCategory.cdm.json/PartyMinorityCategory\",\"name\":\"MinorityCategoryId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Minority Category.\",\"isNullable\":false,\"name\":\"MinorityCategoryId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyMinorityCategory.cdm.json/PartyMinorityCategory\",\"name\":\"PeriodStartDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The period start date for which the associated D&B data is effective or 'as-of'.\",\"isNullable\":false,\"name\":\"PeriodStartDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyMinorityCategory.cdm.json/PartyMinorityCategory\",\"name\":\"PeriodEndDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The period end date for which the associated D&B data is effective or 'as-of'.\",\"isNullable\":true,\"name\":\"PeriodEndDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyMinorityCategory.cdm.json/PartyMinorityCategory\",\"name\":\"MinorityCategoryNote\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"A note, comment or additional information regarding the party's minority category.\",\"isNullable\":true,\"name\":\"MinorityCategoryNote\"}]}}}",
+			"Description": "The Minority Category(s) associated with the legal entity party for the associated range of dates.\n\nEx:\n- Certified Small Disadvantaged Business \n- SBA Certified HUB Zone Business \n- SBA Certified 8(a) Program Participant \n- DoT Certified Disadvantaged Business Enterprise - Black Owned\n- Community Developed Corporation  \n- Labor Surplus Area Firm  \n- Alaskan Native Corporation Owned Firm  \n- Native Hawaiian Organization Owned Firm  \n- American Indian Owned  \n- Service Disabled Veteran Owned \n- Woman Owned",
+			"DisplayFolderInfo": "{\"name\":\"Party\",\"colorCode\":\"#7D0F6C\"}",
+			"PrimaryKeys": "PartyId,MinorityCategoryId,PeriodStartDate",
+			"spark.sql.sources.provider": "csv",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"PartyId\",\"type\":\"long\",\"nullable\":false,\"metadata\":{}},{\"name\":\"MinorityCategoryId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PeriodStartDate\",\"type\":\"date\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PeriodEndDate\",\"type\":\"date\",\"nullable\":true,\"metadata\":{}},{\"name\":\"MinorityCategoryNote\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "169347db-c505-48c8-b996-1853afc2a233",
+		"Description": "The Minority Category(s) associated with the legal entity party for the associated range of dates.\n\nEx:\n- Certified Small Disadvantaged Business \n- SBA Certified HUB Zone Business \n- SBA Certified 8(a) Program Participant \n- DoT Certified Disadvantaged Business Enterprise - Black Owned\n- Community Developed Corporation  \n- Labor Surplus Area Firm  \n- Alaskan Native Corporation Owned Firm  \n- Native Hawaiian Organization Owned Firm  \n- American Indian Owned  \n- Service Disabled Veteran Owned \n- Woman Owned"
+	},
+	"type": "TABLE"
+}
