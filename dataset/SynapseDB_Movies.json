@@ -1,0 +1,45 @@
+{
+	"name": "SynapseDB_Movies",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSynapseDedPool_DemoDB",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlDWTable",
+		"schema": [
+			{
+				"name": "movie",
+				"type": "nvarchar"
+			},
+			{
+				"name": "title",
+				"type": "nvarchar"
+			},
+			{
+				"name": "genres",
+				"type": "nvarchar"
+			},
+			{
+				"name": "year",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Rating",
+				"type": "nvarchar"
+			},
+			{
+				"name": "RottenTomato",
+				"type": "nvarchar"
+			},
+			{
+				"name": "PrimaryGenre",
+				"type": "nvarchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "MovieAnalytics"
+		}
+	}
+}

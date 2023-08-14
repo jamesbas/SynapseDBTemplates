@@ -1,0 +1,22 @@
+{
+	"name": "ADLS_Movies_CSV",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "demostorage_jamesbas",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileSystem": "sample-data"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}
