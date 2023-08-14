@@ -1,0 +1,41 @@
+{
+	"name": "Run-Multiple-Pipelines",
+	"properties": {
+		"activities": [
+			{
+				"name": "Run JDE",
+				"type": "ExecutePipeline",
+				"dependsOn": [],
+				"userProperties": [],
+				"typeProperties": {
+					"pipeline": {
+						"referenceName": "ADLS_LoadToSQL_JDE_F0301",
+						"type": "PipelineReference"
+					},
+					"waitOnCompletion": true
+				}
+			},
+			{
+				"name": "Run Movies",
+				"type": "ExecutePipeline",
+				"dependsOn": [
+					{
+						"activity": "Run JDE",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"userProperties": [],
+				"typeProperties": {
+					"pipeline": {
+						"referenceName": "S3-ADLS-LoadToSynapse-Movies",
+						"type": "PipelineReference"
+					},
+					"waitOnCompletion": true
+				}
+			}
+		],
+		"annotations": []
+	}
+}
