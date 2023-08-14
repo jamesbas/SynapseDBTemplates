@@ -85,7 +85,17 @@
 				"     allowCopyCommand: true,",
 				"     skipDuplicateMapInputs: true,",
 				"     skipDuplicateMapOutputs: true,",
-				"     errorHandlingOption: 'stopOnFirstError') ~> SinkToSynapseDedPool"
+				"     errorHandlingOption: 'stopOnFirstError',",
+				"     mapColumn(",
+				"          movie,",
+				"          title,",
+				"          genres,",
+				"          year,",
+				"          Rating,",
+				"          RottenTomato,",
+				"          PrimaryGenre,",
+				"          RatingsRank",
+				"     )) ~> SinkToSynapseDedPool"
 			]
 		}
 	}
