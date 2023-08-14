@@ -1,0 +1,137 @@
+{
+	"name": "AzureSQLDB_JDE_F0301",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabase_JDE",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "AN8",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "ALPH",
+				"type": "varchar"
+			},
+			{
+				"name": "AT1",
+				"type": "varchar"
+			},
+			{
+				"name": "TAX",
+				"type": "varchar"
+			},
+			{
+				"name": "ABAC",
+				"type": "varchar"
+			},
+			{
+				"name": "ACO",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "AC01",
+				"type": "varchar"
+			},
+			{
+				"name": "AC02",
+				"type": "varchar"
+			},
+			{
+				"name": "AC03",
+				"type": "varchar"
+			},
+			{
+				"name": "AC04",
+				"type": "varchar"
+			},
+			{
+				"name": "AC05",
+				"type": "varchar"
+			},
+			{
+				"name": "AC06",
+				"type": "varchar"
+			},
+			{
+				"name": "AC07",
+				"type": "varchar"
+			},
+			{
+				"name": "AC08",
+				"type": "varchar"
+			},
+			{
+				"name": "AC09",
+				"type": "varchar"
+			},
+			{
+				"name": "AC10",
+				"type": "varchar"
+			},
+			{
+				"name": "AC11",
+				"type": "varchar"
+			},
+			{
+				"name": "AC12",
+				"type": "varchar"
+			},
+			{
+				"name": "AC13",
+				"type": "varchar"
+			},
+			{
+				"name": "AC14",
+				"type": "varchar"
+			},
+			{
+				"name": "AC15",
+				"type": "varchar"
+			},
+			{
+				"name": "LITM",
+				"type": "varchar"
+			},
+			{
+				"name": "DL01",
+				"type": "varchar"
+			},
+			{
+				"name": "DL02",
+				"type": "varchar"
+			},
+			{
+				"name": "UM",
+				"type": "varchar"
+			},
+			{
+				"name": "UORG",
+				"type": "decimal",
+				"precision": 15,
+				"scale": 2
+			},
+			{
+				"name": "UPRC",
+				"type": "decimal",
+				"precision": 15,
+				"scale": 4
+			},
+			{
+				"name": "AEXP",
+				"type": "decimal",
+				"precision": 15,
+				"scale": 2
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "F0301"
+		}
+	}
+}

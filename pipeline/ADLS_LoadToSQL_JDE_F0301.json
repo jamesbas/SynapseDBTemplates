@@ -1,6 +1,406 @@
 {
 	"name": "ADLS_LoadToSQL_JDE_F0301",
 	"properties": {
+		"activities": [
+			{
+				"name": "Load Data from CSV to Azure SQL for JDE F0301",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "DelimitedTextSource",
+						"storeSettings": {
+							"type": "AzureBlobFSReadSettings",
+							"recursive": true,
+							"enablePartitionDiscovery": false
+						},
+						"formatSettings": {
+							"type": "DelimitedTextReadSettings"
+						}
+					},
+					"sink": {
+						"type": "AzureSqlSink",
+						"preCopyScript": "truncate TABLE dbo.F0301",
+						"writeBehavior": "insert",
+						"sqlWriterUseTableLock": false,
+						"disableMetricsCollection": false
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"name": "an8",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "AN8",
+									"type": "Int32",
+									"physicalType": "int"
+								}
+							},
+							{
+								"source": {
+									"name": "alph",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "ALPH",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "at1",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "AT1",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "tax",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "TAX",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "abac",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "ABAC",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "aco",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "ACO",
+									"type": "Int32",
+									"physicalType": "int"
+								}
+							},
+							{
+								"source": {
+									"name": "ac01",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "AC01",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "ac02",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "AC02",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "ac03",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "AC03",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "ac04",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "AC04",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "ac05",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "AC05",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "ac06",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "AC06",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "ac07",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "AC07",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "ac08",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "AC08",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "ac09",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "AC09",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "ac10",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "AC10",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "ac11",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "AC11",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "ac12",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "AC12",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "ac13",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "AC13",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "ac14",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "AC14",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "ac15",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "AC15",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "litm",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "LITM",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "dl01",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "DL01",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "dl02",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "DL02",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "um",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "UM",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "uorg",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "UORG",
+									"type": "Decimal",
+									"physicalType": "decimal",
+									"scale": 2,
+									"precision": 15
+								}
+							},
+							{
+								"source": {
+									"name": "uprc",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "UPRC",
+									"type": "Decimal",
+									"physicalType": "decimal",
+									"scale": 4,
+									"precision": 15
+								}
+							},
+							{
+								"source": {
+									"name": "aexp",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "AEXP",
+									"type": "Decimal",
+									"physicalType": "decimal",
+									"scale": 2,
+									"precision": 15
+								}
+							}
+						],
+						"typeConversion": true,
+						"typeConversionSettings": {
+							"allowDataTruncation": true,
+							"treatBooleanAsNumber": false
+						}
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "ADLS_JDE_F0301",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "AzureSQLDB_JDE_F0301",
+						"type": "DatasetReference"
+					}
+				]
+			}
+		],
 		"annotations": []
 	}
 }
