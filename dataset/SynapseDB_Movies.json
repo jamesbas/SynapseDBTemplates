@@ -35,6 +35,10 @@
 			{
 				"name": "PrimaryGenre",
 				"type": "nvarchar"
+			},
+			{
+				"name": "RatingsRank",
+				"type": "nvarchar"
 			}
 		],
 		"typeProperties": {
