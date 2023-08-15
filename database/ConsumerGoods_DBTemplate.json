@@ -1,0 +1,24 @@
+{
+	"name": "ConsumerGoods_DBTemplate",
+	"properties": {
+		"Name": "ConsumerGoods_DBTemplate",
+		"EntityType": "DATABASE",
+		"Description": "",
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"Properties": {
+			"DerivedModelDBInfo": "{\"ModelDirectives\":{\"BaseModel\":{\"Name\":\"ConsumerGoods\",\"Version\":\"1.3.0\"}}}",
+			"IsSyMSCDMDatabase": true
+		},
+		"Source": {
+			"Provider": "ADLS",
+			"Location": "abfss://sample-data@demostoragejamesbas.dfs.core.windows.net/",
+			"Properties": {
+				"FormatType": "csv",
+				"LinkedServiceName": "demostorage_jamesbas"
+			}
+		}
+	},
+	"type": "DATABASE"
+}
